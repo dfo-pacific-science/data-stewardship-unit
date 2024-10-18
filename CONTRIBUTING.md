@@ -12,6 +12,7 @@ In order to make changes to the site, you must clone the repository and create a
 2. Install the required dependencies: `R -e "install.packages('quarto')"`
 3. Make a new branch using `git branch new-branch-name`. Please name the branch descriptively. 
 3. Make your changes to the website and preview them by running `quarto render`. Each time any file is changed, you will need to run `quarto render` to see the changes locally.
+4. Run `quarto publish gh-pages`
 
 # Contributing
 
