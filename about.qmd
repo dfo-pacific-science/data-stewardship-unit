@@ -1,0 +1,16 @@
+---
+title: About
+about:
+  template: jolla
+  image: images/logo.png
+---
+
+The DSU is a unit within the Fisheries and Assessment Data Section (FADS) in the Pacific Region of Fisheries and Oceans Canada (DFO).
+
+ 
+
+We are a dedicated team committed to enhancing data management and stewardship practices within DFO. Our primary focus is on data related to Pacific Salmon within the DFO Pacific Region, including biodata (e.g., fish weight, length, age, escapement statistics, genomic data), juvenile salmon, and associated ecological and environmental data.
+
+ 
+
+Our goal is to provide guidance and assistance throughout the entire lifecycle of data management—from planning to publication. We strive to ensure our practices align with modern data standards, such as those outlined in the DFO Data Strategy and the [Government of Canada’s digital data strategy](https://www.canada.ca/en/treasury-board-secretariat/corporate/reports/2023-2026-data-strategy.html). For instance, our work is guided by the principles of making data [findable, accessible, interoperable, and reusable (FAIR)](https://www.go-fair.org/fair-principles/). Additionally, we highly value the principles of Indigenous data governance, such as [ownership, control, access, and possession (OCAP)](https://fnigc.ca/ocap-training/), and we are committed to helping our collaborators respect and implement these principles in their work.

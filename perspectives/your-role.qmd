@@ -1,0 +1,40 @@
+---
+title: Your Role
+---
+
+## Data Steward
+
+- [Be Good Data Stewards - Government of Canada Digital Standards Playbook](https://www.canada.ca/en/government/system/digital-government/government-canada-digital-standards/be-good-data-stewards.html)
+- [Data Stewardship An Introduction (Video) - Statistics Canada](https://www.statcan.gc.ca/en/wtc/data-literacy/catalogue/892000062020013)
+- [Fundamentals of Data Stewardship: Frameworks and Responsibilities - Dataversity](https://www.dataversity.net/fundamentals-of-data-stewardship-frameworks-and-responsibilities/)
+- [Unveiling the Role of a Data Steward: Nurturing Data Integrity and Governance - Data Rosetta Stone](https://data-rosetta-stone.com/data-steward-role-guide/)
+- [Data Stewardship is Critical - iData](https://blog.idatainc.com/data-stewardship-resources)
+
+## Data Custodian
+
+- [Data Custodian Templates - Statistics Canada](https://www.statcan.gc.ca/en/about/accountability/receiving/obligation-duties#a4)
+- [Data Custodian: Role, missions and skills](https://datascientest.com/en/data-custodian-role-missions-and-skills)
+
+## Data Trustee
+
+- [Guidance for Data Trustees - University of Delaware](https://www1.udel.edu/security/framework/roles/datatrustee.html)
+
+## Data Contributor
+
+- [Using and publishing Open Data and Information](https://open.canada.ca/en/using-open-data)
+- [License Chooser](https://chooser-beta.creativecommons.org/)
+- [Sharing Data: What to do with Your Processed Data - The Engine Room](https://the-engine-room.github.io/responsible-data-handbook/chapters/chapter-02c-sharing-data.html)
+
+## Data Consumer
+
+- [Consumer's Guide to Data](https://dataqualitycampaign.org/resource/consumers-guide-to-data/)
+- [Getting Data: Collecting Data for Your Project - The Engine Room](https://the-engine-room.github.io/responsible-data-handbook/chapters/chapter-02a-getting-data.html)
+- [Understanding Data: Cleaning, Preparing, and Verifying Data - The Engine Room](https://the-engine-room.github.io/responsible-data-handbook/chapters/chapter-02b-understanding-data.html)
+
+## Continue exploring the other perspectives:
+
+- [Data Life Cycle](data-life-cycle.qmd)
+- [Data Domain](data-domain.qmd)
+- [Recommended Tool Stacks](recommended-tools.qmd)
+- [National and Regional Resources](national-and-regional-resources.qmd)
+- [Your Tasks](your-tasks.qmd)

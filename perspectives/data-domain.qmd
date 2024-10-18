@@ -1,0 +1,42 @@
+---
+title: Data Domain
+---
+
+
+This page provides information and resources related to different data domains in the Pacific Region Science Branch of Fisheries and Oceans Canada.
+
+## Salmon Stock Assessment and Enhancement
+
+- [Salmon Data Mobilization](https://osf.io/hk4gu)
+- [Data Mobilization Through the International Year of the Salmon Ocean Observing System](https://osf.io/preprints/osf/83x9a)
+- [Enhancing data mobilisation through a centralised data repository for Atlantic salmon (*Salmo salar L.*): Providing the resources to promote an ecosystem-based management framework.](https://www.sciencedirect.com/science/article/pii/S1574954122001960?via%3Dihub)
+- [Data system design alters meaning in ecological data: salmon habitat restoration across the U.S. Pacific Northwest](https://esajournals.onlinelibrary.wiley.com/doi/10.1002/ecs2.2920)
+
+## Ecosystem Science
+- [GBIF](https://www.gbif.org/what-is-gbif)
+
+## Ocean Science
+
+- [OBIS](https://manual.obis.org/)
+- [ERDDAP](https://opendap.co-ops.nos.noaa.gov/erddap/index.html)
+
+## Fisheries Management
+- [Introduction to Stock Assessment online course](https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/index-eng.html)
+
+## Diagnostics and Genomics
+- [EMBL Data Resourecs](https://www.ebi.ac.uk/services)
+- [NCBI](https://www.ncbi.nlm.nih.gov/)
+
+## Hydrographic Services
+
+## Misc.
+- [Pacific Science Data and Results](https://www.pac.dfo-mpo.gc.ca/science/fieldnotes-carnet-expeditions/results-resultats-eng.html#datasets)
+
+## Continue exploring the other perspectives:
+
+- [Data Life Cycle](data-life-cycle.qmd)
+- [Your Role](your-role.qmd)
+- [Data Domain](data-domain.qmd)
+- [Recommended Tool Stacks](recommended-tools.qmd)
+- [National and Regional Resources](national-and-regional-resources.qmd)
+- [Your Tasks](your-tasks.qmd)

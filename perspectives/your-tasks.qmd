@@ -1,0 +1,51 @@
+---
+title: Your Tasks
+---
+
+
+This page provides information and resources for various tasks in data stewardship. As an employee of Fisheries and Oceans Canada in the Pacific Region Science Branch, you have important responsibilities in managing and stewarding data. The following are some of the key tasks you may be involved in:
+
+## Publishing Data
+
+- [Publishing Open Data and Information - Government of Canada](https://open.canada.ca/en/registry-operations-guide/your-account)
+- [How to publish open data: a list of advice and tools](https://github.com/theodi/data-publish-list)
+
+## Storing Data
+
+- [Closing a Project: Archiving and Preservation of Content](https://the-engine-room.github.io/responsible-data-handbook/chapters/chapter-03-closing-a-project.html)
+
+## Standardizing to Data/Metadata Standards
+
+- [Fairsharing.org: searchable curated registry of data/metadata standards by journals/publishers and funders](https://fairsharing.org/)
+- [Harmonizing Canada’s Geospatial Metadata](https://www.dublincore.org/conferences/2020/presentations/harmonizing_canada_s_geospatial_metadata/slides/slides.pdf)
+
+## Accessing Other People's Data
+
+- [re3data.org: Registry of Research Data Repositories with detailed information about over 2000 research data repositories](https://www.re3data.org/)
+- [Working with Data and APIs](https://open.canada.ca/en/working-data-api/structured-data)
+
+## Planning for Data Management
+
+- [Managing Data: Setting up the 'Data Infrastructure'](https://the-engine-room.github.io/responsible-data-handbook/chapters/chapter-02-managing-data.html)
+
+## Submitting Research Proposals with Strong Data Management Aspects
+
+## Project Planning and Tracking
+- [https://zenhub.medium.com/how-to-use-github-for-agile-project-management-2c5b0ec1dad6](https://zenhub.medium.com/how-to-use-github-for-agile-project-management-2c5b0ec1dad6)
+
+## Data Analysis
+
+- [Python for Data Analysis](https://wesmckinney.com/book/)
+- [R for Data Science](https://r4ds.had.co.nz/)
+
+## Data/Information Product Creation
+
+- [Sharing Data: What to do with your Processed Data - The Engine Room](https://the-engine-room.github.io/responsible-data-handbook/chapters/chapter-02c-sharing-data.html)
+
+## Continue exploring the other perspectives:
+
+- [Data Life Cycle](data-life-cycle.qmd)
+- [Your Role](your-role.qmd)
+- [Data Domain](data-domain.qmd)
+- [Recommended Tool Stacks](recommended-tools.qmd)
+- [National and Regional Resources](national-and-regional-resources.qmd)

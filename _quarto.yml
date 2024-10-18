@@ -1,0 +1,41 @@
+project: 
+  type: website
+
+
+website: 
+  title: "Data Stewardship Unit"
+  announcement: 
+    icon: info-circle
+    dismissable: true
+    content: "This site is under construction. Bear with us!"
+    type: primary
+    position: below-navbar
+  navbar: 
+    left: 
+      - href: index.qmd
+        text: Home
+      - text: "Perspectives"
+        menu: 
+          - perspectives/data-life-cycle.qmd
+          - perspectives/your-role.qmd
+          - perspectives/data-domain.qmd
+          - perspectives/your-tasks.qmd
+          - perspectives/recommended-tools.qmd
+          - perspectives/national-and-regional-resources.qmd
+      - href: training-resources.qmd
+        text: Training
+      - href: the-team.qmd
+        text: Our Team
+      - href: about.qmd
+        text: About
+    search: true
+  repo-url: https://github.com/pbs-assess/data-stewardship-unit
+  repo-actions: [edit, source, issue]
+  page-footer: "This work is licensed under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). Built with 💖 and Quarto." 
+
+format:
+  html: 
+    theme: cosmo
+    toc: true
+execute:
+  freeze: auto

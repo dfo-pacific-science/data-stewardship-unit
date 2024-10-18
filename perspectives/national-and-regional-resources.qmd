@@ -1,0 +1,24 @@
+---
+title: National and Regional Resources
+---
+
+This page provides information and resources on national and regional resources related to data stewardship.
+
+## National Resources
+
+- [2023–2026 Data Strategy for the Federal Public Service - Government of Canada](https://www.canada.ca/en/treasury-board-secretariat/corporate/reports/2023-2026-data-strategy.html)
+- [Open Government​- Government of Canada](https://open.canada.ca/en) 
+- [Be Good Data Stewards - Government of Canada](https://www.canada.ca/en/government/system/digital-government/government-canada-digital-standards/be-good-data-stewards.html)
+
+
+## Regional Resources 
+
+- [CSAS Pacific](https://www.dfo-mpo.gc.ca/csas-sccs/index-eng.htm)
+
+## Continue exploring the other perspectives:
+
+- [Data Life Cycle](data-life-cycle.qmd)
+- [Your Role](your-role.qmd)
+- [Data Domain](data-domain.qmd)
+- [Recommended Tool Stacks](recommended-tools.qmd)
+- [Your Tasks](your-tasks.qmd)

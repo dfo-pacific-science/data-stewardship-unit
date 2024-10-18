@@ -1,3 +1,7 @@
+# Ignore hmtl files
+*.html
+
+
 # History files
 .Rhistory
 .Rapp.history
@@ -50,3 +54,5 @@ rsconnect/
 fabric/66c682a0-fdf3-49f5-b985-e8bd4dd14a70/SynapseNotebook/82de2f33-bfa0-409f-8a0c-6ddba7f01aed/conf/lighter-config.json
 fabric/66c682a0-fdf3-49f5-b985-e8bd4dd14a70/SynapseNotebook/82de2f33-bfa0-409f-8a0c-6ddba7f01aed/.resource-info
 fabric/66c682a0-fdf3-49f5-b985-e8bd4dd14a70/SynapseNotebook/82de2f33-bfa0-409f-8a0c-6ddba7f01aed/.artifact-info
+
+/.quarto/
