@@ -185,12 +185,6 @@ ul.task-list li input[type="checkbox"] {
 <section id="perspectives" class="level2">
 <h2 class="anchored" data-anchor-id="perspectives">Perspectives</h2>
 <p>Browse our resources by your perspective.</p>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>
-Tile Layout
-</title>
 <style>
         .container {
             display: flex;
@@ -212,6 +206,7 @@ Tile Layout
             color: inherit;
             transition: background-color 0.3s, transform 0.3s;
             border-radius: 15px;
+            flex-wrap: wrap;
         }
         .tile:hover {
             background-color: #e0e0e0;
@@ -223,7 +218,7 @@ Tile Layout
             margin: auto;
             transition: transform 0.3s;
         }
-        .tile:hover .image {
+        .image {
             transform: scale(1.1);
         }
         .title {
@@ -233,9 +228,7 @@ Tile Layout
             width: 100%;
             border-radius: 0px 0px 15px 15px; /* Rounded edges */
         }
-      </style>
-
-
+</style>
 <div class="container">
 <a href="./perspectives/data-life-cycle.html" class="tile"> <img src="images/icons/data-life-cycle.svg" alt="Data Life Cycle" class="image">
 <div class="title">
@@ -253,7 +246,7 @@ Your Domain
 <div class="title">
 Your Tasks
 </div>
-</a> <a href="./perspectives/recommended-tools.html" class="tile"> <img src="images/icons/recommended-tool-stacks.svg" alt="Recommended Tools" class="image">
+</a> <a href="./perspectives/recommended-tools.html" class="tile"> <img src="images/icons/recommended-tools.svg" alt="Recommended Tools" class="image">
 <div class="title">
 Recommended Tools
 </div>
@@ -263,7 +256,6 @@ National and Regional Resources
 </div>
 </a><p><a href="./perspectives/national-and-regional-resources.html" class="tile"></a></p>
 </div>
-
 </section>
 <section id="dashboard" class="level2">
 <h2 class="anchored" data-anchor-id="dashboard">Dashboard</h2>

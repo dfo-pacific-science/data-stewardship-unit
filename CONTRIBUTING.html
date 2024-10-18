@@ -153,7 +153,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#good-to-know" id="toc-good-to-know" class="nav-link active" data-scroll-target="#good-to-know">Good to Know</a></li>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link active" data-scroll-target="#requirements">Requirements</a></li>
+  <li><a href="#cloning-and-adding-a-branch" id="toc-cloning-and-adding-a-branch" class="nav-link" data-scroll-target="#cloning-and-adding-a-branch">Cloning and Adding a Branch</a></li>
+  <li><a href="#contributing" id="toc-contributing" class="nav-link" data-scroll-target="#contributing">Contributing</a></li>
   <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/pbs-assess/data-stewardship-unit/edit/main/CONTRIBUTING.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/pbs-assess/data-stewardship-unit/blob/main/CONTRIBUTING.md" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/pbs-assess/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -164,14 +166,26 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Welcome contributors to the DSU website! This document will host detailed instructions on working with the quarto repo and using Github Actions to the publish the site.</p>
-<section id="good-to-know" class="level1">
-<h1>Good to Know</h1>
-<ul>
-<li>Always have another team member review your pull request with site changes.</li>
-<li>They should render the changes on their local machine with <code>quarto_render("index.qmd")</code>.</li>
-<li>Each time the <code>_quarto.yml</code> is changed, you will need to run <code>quarto_render()</code> to see the changes locally.</li>
-</ul>
+<p>Welcome contributors to the DSU website! This document contains detailed instructions on working with the quarto repo and using Github Actions to the publish the site.</p>
+<section id="requirements" class="level1">
+<h1>Requirements</h1>
+<p>You must have a Github account and <a href="https://git-scm.com/">Git</a> downloaded on your machine to make changes to this repository.</p>
+</section>
+<section id="cloning-and-adding-a-branch" class="level1">
+<h1>Cloning and Adding a Branch</h1>
+<p>In order to make changes to the site, you must clone the repository and create a branch.</p>
+<ol type="1">
+<li>Clone the repository with git by running <code>git clone https://github.com/dfo-pacific-science/data-stewardship-unit.git</code> in terminal.</li>
+<li>Install the required dependencies: <code>R -e "install.packages('quarto')"</code></li>
+<li>Make a new branch using <code>git branch new-branch-name</code>. Please name the branch descriptively.</li>
+<li>Make your changes to the website and preview them by running <code>quarto render</code>. Each time any file is changed, you will need to run <code>quarto render</code> to see the changes locally.</li>
+</ol>
+</section>
+<section id="contributing" class="level1">
+<h1>Contributing</h1>
+<p>You may push your changes via the new branch. After pushing, you may make a pull request to merge the branch to main. Merguing to main will save your changes to the website and trigger a deployment via github actions. Deployment instructions are located in the .github/workflows/publish.yml file.</p>
+<p>Another team member review your pull request with site changes. They should render the changes on their local machine with <code>quarto render</code>.</p>
+<p>Check the deployment status after merging the new branch to main by looking at the Actions tab in Github. If succesful, a green checkmark will appear. It may take up to a few moments for the changes to be reflected on the site.</p>
 </section>
 <section id="resources" class="level1">
 <h1>Resources</h1>

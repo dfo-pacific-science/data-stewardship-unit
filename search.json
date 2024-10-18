@@ -46,35 +46,35 @@
     "href": "perspectives/your-tasks.html#publishing-data",
     "title": "Your Tasks",
     "section": "Publishing Data",
-    "text": "Publishing Data"
+    "text": "Publishing Data\n\nPublishing Open Data and Information - Government of Canada\nHow to publish open data: a list of advice and tools"
   },
   {
     "objectID": "perspectives/your-tasks.html#storing-data",
     "href": "perspectives/your-tasks.html#storing-data",
     "title": "Your Tasks",
     "section": "Storing Data",
-    "text": "Storing Data"
+    "text": "Storing Data\n\nClosing a Project: Archiving and Preservation of Content"
   },
   {
     "objectID": "perspectives/your-tasks.html#standardizing-to-datametadata-standards",
     "href": "perspectives/your-tasks.html#standardizing-to-datametadata-standards",
     "title": "Your Tasks",
     "section": "Standardizing to Data/Metadata Standards",
-    "text": "Standardizing to Data/Metadata Standards"
+    "text": "Standardizing to Data/Metadata Standards\n\nFairsharing.org: searchable curated registry of data/metadata standards by journals/publishers and funders\nHarmonizing Canada’s Geospatial Metadata"
   },
   {
     "objectID": "perspectives/your-tasks.html#accessing-other-peoples-data",
     "href": "perspectives/your-tasks.html#accessing-other-peoples-data",
     "title": "Your Tasks",
     "section": "Accessing Other People’s Data",
-    "text": "Accessing Other People’s Data"
+    "text": "Accessing Other People’s Data\n\nre3data.org: Registry of Research Data Repositories with detailed information about over 2000 research data repositories\nWorking with Data and APIs"
   },
   {
     "objectID": "perspectives/your-tasks.html#planning-for-data-management",
     "href": "perspectives/your-tasks.html#planning-for-data-management",
     "title": "Your Tasks",
     "section": "Planning for Data Management",
-    "text": "Planning for Data Management"
+    "text": "Planning for Data Management\n\nManaging Data: Setting up the ‘Data Infrastructure’"
   },
   {
     "objectID": "perspectives/your-tasks.html#submitting-research-proposals-with-strong-data-management-aspects",
@@ -88,21 +88,28 @@
     "href": "perspectives/your-tasks.html#project-planning-and-tracking",
     "title": "Your Tasks",
     "section": "Project Planning and Tracking",
-    "text": "Project Planning and Tracking"
+    "text": "Project Planning and Tracking\n\nhttps://zenhub.medium.com/how-to-use-github-for-agile-project-management-2c5b0ec1dad6"
   },
   {
     "objectID": "perspectives/your-tasks.html#data-analysis",
     "href": "perspectives/your-tasks.html#data-analysis",
     "title": "Your Tasks",
     "section": "Data Analysis",
-    "text": "Data Analysis"
+    "text": "Data Analysis\n\nPython for Data Analysis\nR for Data Science"
   },
   {
     "objectID": "perspectives/your-tasks.html#datainformation-product-creation",
     "href": "perspectives/your-tasks.html#datainformation-product-creation",
     "title": "Your Tasks",
     "section": "Data/Information Product Creation",
-    "text": "Data/Information Product Creation\nContinue exploring the other perspectives on data stewardship:\n\nData Life Cycle\nYour Role\nData Domain\nRecommended Tool Stacks\nNational and Regional Resources\nTraining Resources"
+    "text": "Data/Information Product Creation\n\nSharing Data: What to do with your Processed Data - The Engine Room"
+  },
+  {
+    "objectID": "perspectives/your-tasks.html#continue-exploring-the-other-perspectives",
+    "href": "perspectives/your-tasks.html#continue-exploring-the-other-perspectives",
+    "title": "Your Tasks",
+    "section": "Continue exploring the other perspectives:",
+    "text": "Continue exploring the other perspectives:\n\nData Life Cycle\nYour Role\nData Domain\nRecommended Tool Stacks\nNational and Regional Resources"
   },
   {
     "objectID": "perspectives/recommended-tools.html",
@@ -151,21 +158,28 @@
     "href": "perspectives/recommended-tools.html#github",
     "title": "Recommended Tools",
     "section": "GitHub",
-    "text": "GitHub\nGitHub is a web-based platform for version control and collaboration. It allows you to store and manage your code repositories, track changes, and collaborate with others on software development projects. GitHub also provides hosting for documentation and websites, making it a convenient platform for sharing data stewardship resources.\n\nImportant R Packages"
+    "text": "GitHub\nGitHub is a web-based platform for version control and collaboration. It allows you to store and manage your code repositories, track changes, and collaborate with others on software development projects. GitHub also provides hosting for documentation and websites, making it a convenient platform for sharing data stewardship resources."
   },
   {
     "objectID": "perspectives/data-life-cycle.html",
     "href": "perspectives/data-life-cycle.html",
     "title": "Data Life Cycle",
     "section": "",
-    "text": "The data life cycle refers to the stages that data goes through from its creation to its archival or disposal. Understanding the data life cycle is essential for effective data stewardship and management. This page provides an overview of the data life cycle stages and resources to support each stage.\n\n\n\nData Collection: This stage involves the collection of raw data from various sources, such as field observations, surveys, experiments, or sensors.\nData Organization: Once collected, data needs to be organized and structured in a way that facilitates storage, retrieval, and analysis. This stage includes data cleaning, formatting, and transformation.\nData Storage: Data needs to be stored in a secure and accessible manner. This stage involves selecting appropriate storage systems, such as databases or cloud storage, and implementing data backup and recovery strategies.\nData Analysis: Data analysis involves applying statistical and computational techniques to extract insights and knowledge from the data. This stage includes data exploration, modeling, and visualization.\nData Sharing: Sharing data with others is an important aspect of data stewardship. This stage involves preparing data for sharing, ensuring data privacy and security, and selecting appropriate data sharing platforms or repositories.\nData Preservation: Data preservation ensures the long-term accessibility and usability of data. This stage includes data documentation, metadata creation, and data archiving."
+    "text": "The data life cycle refers to the stages that data goes through from its creation to its archival or disposal. Understanding the data life cycle is essential for effective data stewardship and management. This page provides an overview of the data life cycle stages and resources to support each stage.\n\n\n\nData Collection: This stage involves the collection of raw data from various sources, such as field observations, surveys, experiments, or sensors.\n\nResources:\n\nre3data.org: Registry of Research Data Repositories with detailed information about over 2000 research data repositories\nWorking with Data and APIs\n\n\nData Organization: Once collected, data needs to be organized and structured in a way that facilitates storage, retrieval, and analysis. This stage includes data cleaning, formatting, and transformation.\nData Storage: Data needs to be stored in a secure and accessible manner. This stage involves selecting appropriate storage systems, such as databases or cloud storage, and implementing data backup and recovery strategies.\n\nResources:\n\nClosing a Project: Archiving and Preservation of Content\n\n\nData Analysis: Data analysis involves applying statistical and computational techniques to extract insights and knowledge from the data. This stage includes data exploration, modeling, and visualization.\n\nResources:\n\nPython for Data Analysis\nR for Data Science\n\n\nData Sharing: Sharing data with others is an important aspect of data stewardship. This stage involves preparing data for sharing, ensuring data privacy and security, and selecting appropriate data sharing platforms or repositories.\n\n\nSharing Data: What to do with your Processed Data - The Engine Room\n\n\nData Preservation: Data preservation ensures the long-term accessibility and usability of data. This stage includes data documentation, metadata creation, and data archiving.\n\n\nPublishing Open Data and Information - Government of Canada\nHow to publish open data: a list of advice and tools\n\n\n\n\n\nYour Role\nData Domain\nRecommended Tool Stacks\nNational and Regional Resources\nYour Tasks"
   },
   {
     "objectID": "perspectives/data-life-cycle.html#data-life-cycle-stages",
     "href": "perspectives/data-life-cycle.html#data-life-cycle-stages",
     "title": "Data Life Cycle",
     "section": "",
-    "text": "Data Collection: This stage involves the collection of raw data from various sources, such as field observations, surveys, experiments, or sensors.\nData Organization: Once collected, data needs to be organized and structured in a way that facilitates storage, retrieval, and analysis. This stage includes data cleaning, formatting, and transformation.\nData Storage: Data needs to be stored in a secure and accessible manner. This stage involves selecting appropriate storage systems, such as databases or cloud storage, and implementing data backup and recovery strategies.\nData Analysis: Data analysis involves applying statistical and computational techniques to extract insights and knowledge from the data. This stage includes data exploration, modeling, and visualization.\nData Sharing: Sharing data with others is an important aspect of data stewardship. This stage involves preparing data for sharing, ensuring data privacy and security, and selecting appropriate data sharing platforms or repositories.\nData Preservation: Data preservation ensures the long-term accessibility and usability of data. This stage includes data documentation, metadata creation, and data archiving."
+    "text": "Data Collection: This stage involves the collection of raw data from various sources, such as field observations, surveys, experiments, or sensors.\n\nResources:\n\nre3data.org: Registry of Research Data Repositories with detailed information about over 2000 research data repositories\nWorking with Data and APIs\n\n\nData Organization: Once collected, data needs to be organized and structured in a way that facilitates storage, retrieval, and analysis. This stage includes data cleaning, formatting, and transformation.\nData Storage: Data needs to be stored in a secure and accessible manner. This stage involves selecting appropriate storage systems, such as databases or cloud storage, and implementing data backup and recovery strategies.\n\nResources:\n\nClosing a Project: Archiving and Preservation of Content\n\n\nData Analysis: Data analysis involves applying statistical and computational techniques to extract insights and knowledge from the data. This stage includes data exploration, modeling, and visualization.\n\nResources:\n\nPython for Data Analysis\nR for Data Science\n\n\nData Sharing: Sharing data with others is an important aspect of data stewardship. This stage involves preparing data for sharing, ensuring data privacy and security, and selecting appropriate data sharing platforms or repositories.\n\n\nSharing Data: What to do with your Processed Data - The Engine Room\n\n\nData Preservation: Data preservation ensures the long-term accessibility and usability of data. This stage includes data documentation, metadata creation, and data archiving.\n\n\nPublishing Open Data and Information - Government of Canada\nHow to publish open data: a list of advice and tools"
+  },
+  {
+    "objectID": "perspectives/data-life-cycle.html#continue-exploring-the-other-perspectives",
+    "href": "perspectives/data-life-cycle.html#continue-exploring-the-other-perspectives",
+    "title": "Data Life Cycle",
+    "section": "",
+    "text": "Your Role\nData Domain\nRecommended Tool Stacks\nNational and Regional Resources\nYour Tasks"
   },
   {
     "objectID": "index.html",
@@ -179,7 +193,7 @@
     "href": "index.html#perspectives",
     "title": "Data Stewardship Unit",
     "section": "Perspectives",
-    "text": "Perspectives\nBrowse our resources by your perspective.\n\n\n\n\nTile Layout\n\n\n\n\n\n \n\nData Life Cycle\n\n  \n\nYour Role\n\n  \n\nYour Domain\n\n  \n\nYour Tasks\n\n  \n\nRecommended Tools\n\n  \n\nNational and Regional Resources"
+    "text": "Perspectives\nBrowse our resources by your perspective.\n\n\n \n\nData Life Cycle\n\n  \n\nYour Role\n\n  \n\nYour Domain\n\n  \n\nYour Tasks\n\n  \n\nRecommended Tools\n\n  \n\nNational and Regional Resources"
   },
   {
     "objectID": "index.html#dashboard",
@@ -200,14 +214,14 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "The Data Stewardship Unit (DSU) serves the Pacific Region Science Branch. The DSU is dedicated to supporting Fisheries and Oceans Canada employees working in the Pacific Region Science Branch with their data stewardship and management responsibilities. Our goal is to make data stewardship easier and aid in the creation of reproducible data products."
+    "text": "The DSU is a unit within the Fisheries and Assessment Data Section (FADS) in the Pacific Region of Fisheries and Oceans Canada (DFO).\nWe are a dedicated team committed to enhancing data management and stewardship practices within DFO. Our primary focus is on data related to Pacific Salmon within the DFO Pacific Region, including biodata (e.g., fish weight, length, age, escapement statistics, genomic data), juvenile salmon, and associated ecological and environmental data.\nOur goal is to provide guidance and assistance throughout the entire lifecycle of data management—from planning to publication. We strive to ensure our practices align with modern data standards, such as those outlined in the DFO Data Strategy and the Government of Canada’s digital data strategy. For instance, our work is guided by the principles of making data findable, accessible, interoperable, and reusable (FAIR). Additionally, we highly value the principles of Indigenous data governance, such as ownership, control, access, and possession (OCAP), and we are committed to helping our collaborators respect and implement these principles in their work."
   },
   {
     "objectID": "CONTRIBUTING.html",
     "href": "CONTRIBUTING.html",
-    "title": "Good to Know",
+    "title": "Requirements",
     "section": "",
-    "text": "Welcome contributors to the DSU website! This document will host detailed instructions on working with the quarto repo and using Github Actions to the publish the site.\n\nGood to Know\n\nAlways have another team member review your pull request with site changes.\nThey should render the changes on their local machine with quarto_render(\"index.qmd\").\nEach time the _quarto.yml is changed, you will need to run quarto_render() to see the changes locally.\n\n\n\nResources\n\nQuarto Website Documentation\nGithub Pages\nRendering for CI"
+    "text": "Welcome contributors to the DSU website! This document contains detailed instructions on working with the quarto repo and using Github Actions to the publish the site.\n\nRequirements\nYou must have a Github account and Git downloaded on your machine to make changes to this repository.\n\n\nCloning and Adding a Branch\nIn order to make changes to the site, you must clone the repository and create a branch.\n\nClone the repository with git by running git clone https://github.com/dfo-pacific-science/data-stewardship-unit.git in terminal.\nInstall the required dependencies: R -e \"install.packages('quarto')\"\nMake a new branch using git branch new-branch-name. Please name the branch descriptively.\nMake your changes to the website and preview them by running quarto render. Each time any file is changed, you will need to run quarto render to see the changes locally.\n\n\n\nContributing\nYou may push your changes via the new branch. After pushing, you may make a pull request to merge the branch to main. Merguing to main will save your changes to the website and trigger a deployment via github actions. Deployment instructions are located in the .github/workflows/publish.yml file.\nAnother team member review your pull request with site changes. They should render the changes on their local machine with quarto render.\nCheck the deployment status after merging the new branch to main by looking at the Actions tab in Github. If succesful, a green checkmark will appear. It may take up to a few moments for the changes to be reflected on the site.\n\n\nResources\n\nQuarto Website Documentation\nGithub Pages\nRendering for CI"
   },
   {
     "objectID": "perspectives/data-domain.html",
@@ -217,46 +231,39 @@
     "text": "This page provides information and resources related to different data domains in the Pacific Region Science Branch of Fisheries and Oceans Canada."
   },
   {
-    "objectID": "perspectives/data-domain.html#salmon-stock-assessment",
-    "href": "perspectives/data-domain.html#salmon-stock-assessment",
+    "objectID": "perspectives/data-domain.html#salmon-stock-assessment-and-enhancement",
+    "href": "perspectives/data-domain.html#salmon-stock-assessment-and-enhancement",
     "title": "Data Domain",
-    "section": "Salmon Stock Assessment",
-    "text": "Salmon Stock Assessment"
+    "section": "Salmon Stock Assessment and Enhancement",
+    "text": "Salmon Stock Assessment and Enhancement\n\nSalmon Data Mobilization\nData Mobilization Through the International Year of the Salmon Ocean Observing System\nEnhancing data mobilisation through a centralised data repository for Atlantic salmon (Salmo salar L.): Providing the resources to promote an ecosystem-based management framework.\nData system design alters meaning in ecological data: salmon habitat restoration across the U.S. Pacific Northwest"
   },
   {
     "objectID": "perspectives/data-domain.html#ecosystem-science",
     "href": "perspectives/data-domain.html#ecosystem-science",
     "title": "Data Domain",
     "section": "Ecosystem Science",
-    "text": "Ecosystem Science"
+    "text": "Ecosystem Science\n\nGBIF"
   },
   {
     "objectID": "perspectives/data-domain.html#ocean-science",
     "href": "perspectives/data-domain.html#ocean-science",
     "title": "Data Domain",
     "section": "Ocean Science",
-    "text": "Ocean Science"
+    "text": "Ocean Science\n\nOBIS\nERDDAP"
   },
   {
     "objectID": "perspectives/data-domain.html#fisheries-management",
     "href": "perspectives/data-domain.html#fisheries-management",
     "title": "Data Domain",
     "section": "Fisheries Management",
-    "text": "Fisheries Management"
-  },
-  {
-    "objectID": "perspectives/data-domain.html#salmon-enhancement-program",
-    "href": "perspectives/data-domain.html#salmon-enhancement-program",
-    "title": "Data Domain",
-    "section": "Salmon Enhancement Program",
-    "text": "Salmon Enhancement Program"
+    "text": "Fisheries Management\n\nIntroduction to Stock Assessment online course"
   },
   {
     "objectID": "perspectives/data-domain.html#diagnostics-and-genomics",
     "href": "perspectives/data-domain.html#diagnostics-and-genomics",
     "title": "Data Domain",
     "section": "Diagnostics and Genomics",
-    "text": "Diagnostics and Genomics"
+    "text": "Diagnostics and Genomics\n\nEMBL Data Resourecs\nNCBI"
   },
   {
     "objectID": "perspectives/data-domain.html#hydrographic-services",
@@ -266,39 +273,95 @@
     "text": "Hydrographic Services"
   },
   {
+    "objectID": "perspectives/data-domain.html#misc.",
+    "href": "perspectives/data-domain.html#misc.",
+    "title": "Data Domain",
+    "section": "Misc.",
+    "text": "Misc.\n\nPacific Science Data and Results"
+  },
+  {
+    "objectID": "perspectives/data-domain.html#continue-exploring-the-other-perspectives",
+    "href": "perspectives/data-domain.html#continue-exploring-the-other-perspectives",
+    "title": "Data Domain",
+    "section": "Continue exploring the other perspectives:",
+    "text": "Continue exploring the other perspectives:\n\nData Life Cycle\nYour Role\nData Domain\nRecommended Tool Stacks\nNational and Regional Resources\nYour Tasks"
+  },
+  {
     "objectID": "perspectives/national-and-regional-resources.html",
     "href": "perspectives/national-and-regional-resources.html",
     "title": "National and Regional Resources",
     "section": "",
-    "text": "National and Regional Resources\nThis page provides information and resources on national and regional resources related to data stewardship."
+    "text": "This page provides information and resources on national and regional resources related to data stewardship."
+  },
+  {
+    "objectID": "perspectives/national-and-regional-resources.html#national-resources",
+    "href": "perspectives/national-and-regional-resources.html#national-resources",
+    "title": "National and Regional Resources",
+    "section": "National Resources",
+    "text": "National Resources\n\n2023–2026 Data Strategy for the Federal Public Service - Government of Canada\nOpen Government​- Government of Canada\nBe Good Data Stewards - Government of Canada"
+  },
+  {
+    "objectID": "perspectives/national-and-regional-resources.html#regional-resources",
+    "href": "perspectives/national-and-regional-resources.html#regional-resources",
+    "title": "National and Regional Resources",
+    "section": "Regional Resources",
+    "text": "Regional Resources\n\nCSAS Pacific"
+  },
+  {
+    "objectID": "perspectives/national-and-regional-resources.html#continue-exploring-the-other-perspectives",
+    "href": "perspectives/national-and-regional-resources.html#continue-exploring-the-other-perspectives",
+    "title": "National and Regional Resources",
+    "section": "Continue exploring the other perspectives:",
+    "text": "Continue exploring the other perspectives:\n\nData Life Cycle\nYour Role\nData Domain\nRecommended Tool Stacks\nYour Tasks"
+  },
+  {
+    "objectID": "perspectives/your-role.html",
+    "href": "perspectives/your-role.html",
+    "title": "Your Role",
+    "section": "",
+    "text": "Be Good Data Stewards - Government of Canada Digital Standards Playbook\nData Stewardship An Introduction (Video) - Statistics Canada\nFundamentals of Data Stewardship: Frameworks and Responsibilities - Dataversity\nUnveiling the Role of a Data Steward: Nurturing Data Integrity and Governance - Data Rosetta Stone\nData Stewardship is Critical - iData"
+  },
+  {
+    "objectID": "perspectives/your-role.html#data-steward",
+    "href": "perspectives/your-role.html#data-steward",
+    "title": "Your Role",
+    "section": "",
+    "text": "Be Good Data Stewards - Government of Canada Digital Standards Playbook\nData Stewardship An Introduction (Video) - Statistics Canada\nFundamentals of Data Stewardship: Frameworks and Responsibilities - Dataversity\nUnveiling the Role of a Data Steward: Nurturing Data Integrity and Governance - Data Rosetta Stone\nData Stewardship is Critical - iData"
   },
   {
     "objectID": "perspectives/your-role.html#data-custodian",
     "href": "perspectives/your-role.html#data-custodian",
     "title": "Your Role",
     "section": "Data Custodian",
-    "text": "Data Custodian"
+    "text": "Data Custodian\n\nData Custodian Templates - Statistics Canada\nData Custodian: Role, missions and skills"
   },
   {
     "objectID": "perspectives/your-role.html#data-trustee",
     "href": "perspectives/your-role.html#data-trustee",
     "title": "Your Role",
     "section": "Data Trustee",
-    "text": "Data Trustee"
+    "text": "Data Trustee\n\nGuidance for Data Trustees - University of Delaware"
   },
   {
     "objectID": "perspectives/your-role.html#data-contributor",
     "href": "perspectives/your-role.html#data-contributor",
     "title": "Your Role",
     "section": "Data Contributor",
-    "text": "Data Contributor"
+    "text": "Data Contributor\n\nUsing and publishing Open Data and Information\nLicense Chooser\nSharing Data: What to do with Your Processed Data - The Engine Room"
   },
   {
     "objectID": "perspectives/your-role.html#data-consumer",
     "href": "perspectives/your-role.html#data-consumer",
     "title": "Your Role",
     "section": "Data Consumer",
-    "text": "Data Consumer"
+    "text": "Data Consumer\n\nConsumer’s Guide to Data\nGetting Data: Collecting Data for Your Project - The Engine Room\nUnderstanding Data: Cleaning, Preparing, and Verifying Data - The Engine Room"
+  },
+  {
+    "objectID": "perspectives/your-role.html#continue-exploring-the-other-perspectives",
+    "href": "perspectives/your-role.html#continue-exploring-the-other-perspectives",
+    "title": "Your Role",
+    "section": "Continue exploring the other perspectives:",
+    "text": "Continue exploring the other perspectives:\n\nData Life Cycle\nData Domain\nRecommended Tool Stacks\nNational and Regional Resources\nYour Tasks"
   },
   {
     "objectID": "the-team.html",
