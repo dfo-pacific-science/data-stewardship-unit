@@ -29,7 +29,7 @@ website:
       - href: about.qmd
         text: About
     search: true
-  repo-url: https://github.com/pbs-assess/data-stewardship-unit
+  repo-url: https://dfo-pacific-science.github.io/data-stewardship-unit/
   repo-actions: [edit, source, issue]
   page-footer: "This work is licensed under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). Built with 💖 and Quarto." 
 
