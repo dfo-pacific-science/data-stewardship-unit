@@ -1,42 +1,50 @@
 ---
 type: website
 ---
-# Data Life Cycle
 
+# Data Life Cycle
+  
 The data life cycle refers to the stages that data goes through from its creation to its archival or disposal. Understanding the data life cycle is essential for effective data stewardship and management. This page provides an overview of the data life cycle stages and resources to support each stage.
 
 ## Data Life Cycle Stages
 
-1. **Data Collection**: This stage involves the collection of raw data from various sources, such as field observations, surveys, experiments, or sensors.
+### 1. **Data Collection**
 
-Resources: 
+This stage involves the collection of raw data from various sources, such as field observations, surveys, experiments, or sensors.
 
 - [re3data.org: Registry of Research Data Repositories with detailed information about over 2000 research data repositories](https://www.re3data.org/)
 - [Working with Data and APIs](https://open.canada.ca/en/working-data-api/structured-data)
 
 
-2. **Data Organization**: Once collected, data needs to be organized and structured in a way that facilitates storage, retrieval, and analysis. This stage includes data cleaning, formatting, and transformation.
+### 2. **Data Organization**
+
+Once collected, data needs to be organized and structured in a way that facilitates storage, retrieval, and analysis. This stage includes data cleaning, formatting, and transformation.
 
 
 
-3. **Data Storage**: Data needs to be stored in a secure and accessible manner. This stage involves selecting appropriate storage systems, such as databases or cloud storage, and implementing data backup and recovery strategies.
+### 3. **Data Storage**
 
-Resources: 
+Data needs to be stored in a secure and accessible manner. This stage involves selecting appropriate storage systems, such as databases or cloud storage, and implementing data backup and recovery strategies.
 
 - [Closing a Project: Archiving and Preservation of Content](https://the-engine-room.github.io/responsible-data-handbook/chapters/chapter-03-closing-a-project.html)
 
-4. **Data Analysis**: Data analysis involves applying statistical and computational techniques to extract insights and knowledge from the data. This stage includes data exploration, modeling, and visualization.
+### 4. **Data Analysis**
 
-Resources: 
+Data analysis involves applying statistical and computational techniques to extract insights and knowledge from the data. This stage includes data exploration, modeling, and visualization.
+
 
 - [Python for Data Analysis](https://wesmckinney.com/book/)
 - [R for Data Science](https://r4ds.had.co.nz/)
 
-5. **Data Sharing**: Sharing data with others is an important aspect of data stewardship. This stage involves preparing data for sharing, ensuring data privacy and security, and selecting appropriate data sharing platforms or repositories.
+### 5. **Data Sharing**
+
+Sharing data with others is an important aspect of data stewardship. This stage involves preparing data for sharing, ensuring data privacy and security, and selecting appropriate data sharing platforms or repositories.
 
 - [Sharing Data: What to do with your Processed Data - The Engine Room](https://the-engine-room.github.io/responsible-data-handbook/chapters/chapter-02c-sharing-data.html)
 
-6. **Data Preservation**: Data preservation ensures the long-term accessibility and usability of data. This stage includes data documentation, metadata creation, and data archiving.
+### 6. **Data Preservation**
+
+Data preservation ensures the long-term accessibility and usability of data. This stage includes data documentation, metadata creation, and data archiving.
 
 - [Publishing Open Data and Information - Government of Canada](https://open.canada.ca/en/registry-operations-guide/your-account)
 - [How to publish open data: a list of advice and tools](https://github.com/theodi/data-publish-list)
