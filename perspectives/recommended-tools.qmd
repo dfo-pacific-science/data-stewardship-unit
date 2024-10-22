@@ -38,9 +38,6 @@ Python is a versatile programming language that is widely used in data science a
 - [seaborn](https://seaborn.pydata.org/)
 - [scikitlearn](https://scikit-learn.org/stable/index.html)
 
-## Python
-
-Python is a versatile programming language that is widely used in data science and machine learning. It offers a rich ecosystem of libraries and frameworks for data manipulation, analysis, and modeling. Python is known for its simplicity and readability, making it a popular choice among data scientists and analysts.
 
 ## GitHub
 
