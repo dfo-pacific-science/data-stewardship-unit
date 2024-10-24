@@ -10,6 +10,7 @@ website:
     content: "This site is under construction. Bear with us!"
     type: primary
     position: below-navbar
+  favicon: images/logo.png
   navbar: 
     left: 
       - href: index.qmd
