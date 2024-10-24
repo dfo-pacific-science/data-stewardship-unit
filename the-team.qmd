@@ -14,7 +14,7 @@ editor: visual
 ::: g-col-8
 ## Brett Johnson, DSU Program Head
 
-Brett’s experience includes management and research related to juvenile salmon before focusing his career on scientific data stewardship. Brett has worked closely with the North Pacific Anadromous Fish Commission, the North Pacific Marine Science Organization, and the Canadian Integrated Ocean Observing System on data stewardship during his tenure with the Hakai Institute. As program head, Brett delivers strategic plans foor the development of data solutions and data stewardship processes, implements project management plans, and develops frameworks for data standards.
+Brett’s experience includes management and research related to juvenile salmon before focusing his career on scientific data stewardship. Brett has worked closely with the North Pacific Anadromous Fish Commission, the North Pacific Marine Science Organization, and the Canadian Integrated Ocean Observing System on data stewardship during his tenure with the Hakai Institute. As program head, Brett delivers strategic plans for the development of data solutions and data stewardship processes, implements project management plans, and develops frameworks for data standards.
 :::
 :::::
 
@@ -28,7 +28,7 @@ Brett’s experience includes management and research related to juvenile salmon
 ::: g-col-8
 ## Anna Douglas-Morris, Data Integration Steward
 
-Anna has a BSc in Biodiversity and Conservation and a Master of Wildlife Management from Macquarie University. For the past 8 years, she has been working as a GIS consultant and Project Manager. She has also completed Advanced Diploma of GIS Applications from Vancouver Island University. Anna's role incolves coordinating regional data governance with linkages to national efforts, supports the implementation of FAIR practices, and guides staff to populate regional data repositories.
+Anna has a BSc in Biodiversity and Conservation and a Master of Wildlife Management from Macquarie University. For the past 8 years, she has been working as a GIS consultant and Project Manager. She has also completed the Advanced Diploma of GIS Applications from Vancouver Island University. Anna’s role involves coordinating regional data governance with linkages to national efforts, supports the implementation of FAIR practices, and guides staff to populate regional data repositories.
 :::
 :::::
 
@@ -44,7 +44,7 @@ Anna has a BSc in Biodiversity and Conservation and a Master of Wildlife Managem
 ::: g-col-8
 ## Shaorong Li, Biological Salmon Data Steward
 
-Sharong previously worked with the Molecular Genetics Lab at the Pacific Biological Station, where she has utilized cutting-edge technologies in genetics and genomics to study salmon stock identification, migration, fitness, and health. With approximately 25 years at DFO, Sharong understands the importance of standardizing how data is captured, stored, and analyzed to ensure consistent and reliable information, as well as effective data sharing. Sharong's role involves mapping business processes, developing regional solutions, and working with databases related to salmon biodata.
+Shaorong previously worked with the Molecular Genetics Lab at the Pacific Biological Station, where she has utilized cutting-edge technologies in genetics and genomics to study salmon stock identification, migration, fitness, and health. With approximately 25 years at DFO, Shaorong understands the importance of standardizing how data is captured, stored, and analyzed to ensure consistent and reliable information, as well as effective data sharing. Shaorong’s role involves mapping business processes, developing regional solutions, and working with databases related to salmon biodata.
 :::
 :::::
 
@@ -73,6 +73,6 @@ Stephen joined DFO in the Maritimes Region after graduating with an MSc in Ocean
 ::: g-col-8
 ## Albury C, Data Products Steward
 
-Albury has a BSc and MSc in Biology from Dalhousie University. Their research there focused on trace nutrient biogeochemistry. Since then, they've been a data scientist at various government departments, where they contributed to to the modernization of analytical workflows with open data science tools like R, Python, and Git. At the DSU, they develop reproducible data pipelines, support regional staff with data wrangling, derive unified data standards and more.
+Albury has a BSc and MSc in Biology from Dalhousie University. Their research there focused on trace nutrient biogeochemistry. Since then, they've been a data scientist at various government departments, where they contributed to the modernization of analytical workflows with open data science tools like R, Python, and Git. At the DSU, they develop reproducible data pipelines, support regional staff with data wrangling, derive unified data standards and more.
 :::
 :::::
