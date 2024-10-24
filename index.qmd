@@ -10,54 +10,52 @@ Welcome to the Data Stewardship Website for Fisheries and Oceans Canada employee
 
 Browse our resources by your perspective. 
 
+```{=html}
+
 <style>
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-        }
-        .tile {
-            width: 250px;
-            height: 250px;
-            border: 1px solid #ccc;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            cursor: pointer;
-            text-decoration: none;
-            color: inherit;
-            transition: background-color 0.3s, transform 0.3s;
-            border-radius: 15px;
-            flex-wrap: wrap;
-        }
-        .tile:hover {
-            background-color: #e0e0e0;
-            transform: scale(1.05);
-        }
-        .image {
-            width: 150px;
-            height: 150px;
-            margin: auto;
-            transition: transform 0.3s;
-        }
-        .image {
-            transform: scale(1.1);
-        }
-        .title {
-            margin-top: auto;
-            padding: 10px;
-            background-color: #f0f0f0;
-            width: 100%;
-            border-radius: 0px 0px 15px 15px; /* Rounded edges */
-        }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+    .tile {
+        width: 250px;
+        height: 250px;
+        border: 1px solid #ccc;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        cursor: pointer;
+        text-decoration: none;
+        color: inherit;
+        transition: background-color 0.3s, transform 0.3s;
+        border-radius: 15px;
+    }
+    .tile:hover {
+        background-color: #e0e0e0;
+        transform: scale(1.05);
+    }
+    .image {
+        width: 150px;
+        height: 150px;
+        margin: auto;
+        transition: transform 0.3s;
+        filter: invert(41%) sepia(37%) saturate(562%) hue-rotate(163deg) brightness(86%) contrast(86%);
+    }
+    .title {
+        margin-top: auto;
+        padding: 10px;
+        background-color: #f0f0f0;
+        width: 100%;
+        border-radius: 0px 0px 15px 15px; /* Rounded edges */
+    }
 </style>
 
-
 <div class="container">
-  <a href="perspectives/data-life-cycle.qmd" class="tile">
+  <a href="link1.com" class="tile">
     <img src="images/icons/data-life-cycle.svg" alt="Data Life Cycle" class="image">
     <div class="title">Data Life Cycle</div>
   </a>
@@ -79,10 +77,11 @@ Browse our resources by your perspective.
   </a>
   <a href="perspectives/national-and-regional-resources.qmd" class="tile"> 
     <img src="images/icons/national-and-regional-resources.svg" alt="National and Regional Resources" class="image">
-    <div class="title">National and Regional Resources</div>
+    <div class="title">National and Regional Resources</div> <!-- Removing these title lines fixes the issue. Why? -->
   </a>
 </div>
 
+```
 
 ## Dashboard
 
