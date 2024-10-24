@@ -212,7 +212,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="grid">
 <div class="g-col-4">
-<img src="images/team/Albury.jpg&quot;" alt="Albury" class="circle">
+<p><img src="images/logo.png" class="img-fluid"></p>
 </div>
 <section id="albury-c-data-products-steward" class="level2 g-col-8">
 <h2 class="anchored" data-anchor-id="albury-c-data-products-steward">Albury C, Data Products Steward</h2>
@@ -315,7 +315,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/dfo-pacific-science\.github\.io\/data-stewardship-unit\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
