@@ -4,78 +4,65 @@ format: html
 editor: visual
 ---
 
-::: {.grid}
-
-::: {.g-col-4}
+::::: grid
+::: g-col-4
 ![](images/logo.png)
-
 :::
 
-::: {.g-col-8}
+::: g-col-8
 ## Brett Johnson, DSU Program Head
 
-Brett’s experience includes management and research related to juvenile salmon before focusing his career on scientific data stewardship. Brett has worked closely with the North Pacific Anadromous Fish Commission, the North Pacific Marine Science Organization, and the Canadian Integrated Ocean Observing System on data stewardship during his tenure with the Hakai Institute. As program head, Brett delivers strategic plans foor the development of data solutions and data stewardship processes, implements project management plans, and develops frameworks for data standards. 
+Brett’s experience includes management and research related to juvenile salmon before focusing his career on scientific data stewardship. Brett has worked closely with the North Pacific Anadromous Fish Commission, the North Pacific Marine Science Organization, and the Canadian Integrated Ocean Observing System on data stewardship during his tenure with the Hakai Institute. As program head, Brett delivers strategic plans foor the development of data solutions and data stewardship processes, implements project management plans, and develops frameworks for data standards.
 :::
+:::::
 
-:::
-
-::: {.grid}
-
-::: {.g-col-4}
+::::: grid
+::: g-col-4
 ![](images/logo.png)
-
 :::
 
-::: {.g-col-8}
+::: g-col-8
 ## Anna Douglas-Morris, Data Integration Steward
 
 Anna has a BSc in Biodiversity and Conservation and a Master of Wildlife Management from Macquarie University. For the past 8 years, she has been working as a GIS consultant and Project Manager. She has also completed Advanced Diploma of GIS Applications from Vancouver Island University. Anna's role incolves coordinating regional data governance with linkages to national efforts, supports the implementation of FAIR practices, and guides staff to populate regional data repositories.
 :::
+:::::
 
+::::: grid
+::: g-col-4
+
+```{=html}
+<img src=images/team/Shaorong.jpg" alt="Shaorong" class="circle">
+```
 :::
 
-::: {.grid}
-
-::: {.g-col-4}
-![](images/logo.png)
-
-:::
-
-::: {.g-col-8}
+::: g-col-8
 ## Shaorong Li, Biological Salmon Data Steward
 
-Sharong previously worked with the Molecular Genetics Lab at the Pacific Biological Station, where she has utilized cutting-edge technologies in genetics and genomics to study salmon stock identification, migration, fitness, and health. With approximately 25 years at DFO, Sharong understands the importance of standardizing how data is captured, stored, and analyzed to ensure consistent and reliable information, as well as effective data sharing. Sharong's role involves mapping business processes, developing regional solutions, and working with databases related to salmon biodata.  
+Sharong previously worked with the Molecular Genetics Lab at the Pacific Biological Station, where she has utilized cutting-edge technologies in genetics and genomics to study salmon stock identification, migration, fitness, and health. With approximately 25 years at DFO, Sharong understands the importance of standardizing how data is captured, stored, and analyzed to ensure consistent and reliable information, as well as effective data sharing. Sharong's role involves mapping business processes, developing regional solutions, and working with databases related to salmon biodata.
 :::
+:::::
 
-:::
-
-::: {.grid}
-
-::: {.g-col-4}
-![](images/logo.png)
+::::: grid
+::: g-col-4
 
 :::
 
-::: {.g-col-8}
+::: g-col-8
 ## Stephen Finnis, Regional Data Steward
 
-Stephen joined DFO in the Maritimes Region after graduating with an MSc in Oceanography from Dalhousie University. His experience includes developing automated reports for Species at Risk in R Markdown, researching the potential effects of shellfish aquaculture on zooplankton communities, and assisting with the publication of CSAS documents. Stephen coordinates data governance linkages to national efforts, supports implementation of FAIR principles, and guides staff to populate data repositories in the regions. 
+Stephen joined DFO in the Maritimes Region after graduating with an MSc in Oceanography from Dalhousie University. His experience includes developing automated reports for Species at Risk in R Markdown, researching the potential effects of shellfish aquaculture on zooplankton communities, and assisting with the publication of CSAS documents. Stephen coordinates data governance linkages to national efforts, supports implementation of FAIR principles, and guides staff to populate data repositories in the regions.
 :::
+:::::
 
-:::
-
-::: {.grid}
-
-::: {.g-col-4}
+::::: grid
+::: g-col-4
 ![](images/logo.png)
-
 :::
 
-::: {.g-col-8}
+::: g-col-8
 ## Albury C, Data Products Steward
 
-Albury has a BSc and MSc in Biology from Dalhousie University. Their research there focused on trace nutrient biogeochemistry. Since then, they've been a data scientist at various government departments, where they contributed to to the modernization of analytical workflows with open data science tools like R, Python, and Git. At the DSU, they develop reproducible data pipelines, support regional staff with data wrangling, derive unified data standards and more. 
+Albury has a BSc and MSc in Biology from Dalhousie University. Their research there focused on trace nutrient biogeochemistry. Since then, they've been a data scientist at various government departments, where they contributed to to the modernization of analytical workflows with open data science tools like R, Python, and Git. At the DSU, they develop reproducible data pipelines, support regional staff with data wrangling, derive unified data standards and more.
 :::
-
-:::
-
+:::::
