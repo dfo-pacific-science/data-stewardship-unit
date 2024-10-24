@@ -37,5 +37,6 @@ format:
   html: 
     theme: cosmo
     toc: true
+    css: styles/custom.css
 execute:
   freeze: auto
