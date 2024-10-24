@@ -1,52 +1,38 @@
 [
   {
-    "objectID": "perspectives/recommended-tools.html",
-    "href": "perspectives/recommended-tools.html",
-    "title": "Recommended Tools",
+    "objectID": "training-resources.html",
+    "href": "training-resources.html",
+    "title": "Training Resources",
     "section": "",
-    "text": "In the field of data stewardship, there are several tools and technologies that can greatly assist in managing and analyzing data. Here are some recommended tool stacks that can enhance your data stewardship practices:"
+    "text": "Welcome to the Training Resources page of the Data Stewardship Unit website! Here, you will find a collection of training resources to enhance your skills and knowledge in data stewardship."
   },
   {
-    "objectID": "perspectives/recommended-tools.html#azure",
-    "href": "perspectives/recommended-tools.html#azure",
-    "title": "Recommended Tools",
-    "section": "Azure",
-    "text": "Azure\nAzure is a cloud computing platform that provides a wide range of services for data storage, processing, and analysis. With Azure, you can securely store and manage your data, run data-intensive applications, and leverage advanced analytics capabilities."
+    "objectID": "training-resources.html#online-courses",
+    "href": "training-resources.html#online-courses",
+    "title": "Training Resources",
+    "section": "Online Courses",
+    "text": "Online Courses"
   },
   {
-    "objectID": "perspectives/recommended-tools.html#ms-fabric",
-    "href": "perspectives/recommended-tools.html#ms-fabric",
-    "title": "Recommended Tools",
-    "section": "MS Fabric",
-    "text": "MS Fabric\nMS Fabric is a data management framework that enables seamless integration and interoperability between different data systems and applications. It provides a unified interface for accessing and manipulating data across various platforms and technologies."
+    "objectID": "training-resources.html#webinars-and-workshops",
+    "href": "training-resources.html#webinars-and-workshops",
+    "title": "Training Resources",
+    "section": "Webinars and Workshops",
+    "text": "Webinars and Workshops"
   },
   {
-    "objectID": "perspectives/recommended-tools.html#power-bi",
-    "href": "perspectives/recommended-tools.html#power-bi",
-    "title": "Recommended Tools",
-    "section": "Power BI",
-    "text": "Power BI\nPower BI is a business analytics tool that allows you to visualize and analyze data from multiple sources. With Power BI, you can create interactive dashboards, reports, and data visualizations to gain insights and make informed decisions."
+    "objectID": "training-resources.html#online-resources",
+    "href": "training-resources.html#online-resources",
+    "title": "Training Resources",
+    "section": "Online Resources",
+    "text": "Online Resources"
   },
   {
-    "objectID": "perspectives/recommended-tools.html#r",
-    "href": "perspectives/recommended-tools.html#r",
-    "title": "Recommended Tools",
-    "section": "R",
-    "text": "R\nR is a programming language and software environment for statistical computing and graphics. It provides a wide range of tools and packages for data manipulation, analysis, and visualization. R is widely used in the scientific community for reproducible research and data analysis.\n\nPackages\n\ndplyr\nApache Arrow\nggplot"
-  },
-  {
-    "objectID": "perspectives/recommended-tools.html#python",
-    "href": "perspectives/recommended-tools.html#python",
-    "title": "Recommended Tools",
-    "section": "Python",
-    "text": "Python\nPython is a versatile programming language that is widely used in data science and machine learning. It offers a rich ecosystem of libraries and frameworks for data manipulation, analysis, and modeling. Python is known for its simplicity and readability, making it a popular choice among data scientists and analysts.\n\nPackages\n\nmatplotlib\npandas\nseaborn\nscikitlearn"
-  },
-  {
-    "objectID": "perspectives/recommended-tools.html#github",
-    "href": "perspectives/recommended-tools.html#github",
-    "title": "Recommended Tools",
-    "section": "GitHub",
-    "text": "GitHub\nGitHub is a web-based platform for version control and collaboration. It allows you to store and manage your code repositories, track changes, and collaborate with others on software development projects. GitHub also provides hosting for documentation and websites, making it a convenient platform for sharing data stewardship resources."
+    "objectID": "training-resources.html#training-programs",
+    "href": "training-resources.html#training-programs",
+    "title": "Training Resources",
+    "section": "Training Programs",
+    "text": "Training Programs"
   },
   {
     "objectID": "perspectives/your-tasks.html",
@@ -126,6 +112,111 @@
     "text": "Continue exploring the other perspectives:\n\nData Life Cycle\nYour Role\nData Domain\nRecommended Tool Stacks\nNational and Regional Resources"
   },
   {
+    "objectID": "perspectives/recommended-tools.html",
+    "href": "perspectives/recommended-tools.html",
+    "title": "Recommended Tools",
+    "section": "",
+    "text": "In the field of data stewardship, there are several tools and technologies that can greatly assist in managing and analyzing data. Here are some recommended tool stacks that can enhance your data stewardship practices:"
+  },
+  {
+    "objectID": "perspectives/recommended-tools.html#azure",
+    "href": "perspectives/recommended-tools.html#azure",
+    "title": "Recommended Tools",
+    "section": "Azure",
+    "text": "Azure\nAzure is a cloud computing platform that provides a wide range of services for data storage, processing, and analysis. With Azure, you can securely store and manage your data, run data-intensive applications, and leverage advanced analytics capabilities."
+  },
+  {
+    "objectID": "perspectives/recommended-tools.html#ms-fabric",
+    "href": "perspectives/recommended-tools.html#ms-fabric",
+    "title": "Recommended Tools",
+    "section": "MS Fabric",
+    "text": "MS Fabric\nMS Fabric is a data management framework that enables seamless integration and interoperability between different data systems and applications. It provides a unified interface for accessing and manipulating data across various platforms and technologies."
+  },
+  {
+    "objectID": "perspectives/recommended-tools.html#power-bi",
+    "href": "perspectives/recommended-tools.html#power-bi",
+    "title": "Recommended Tools",
+    "section": "Power BI",
+    "text": "Power BI\nPower BI is a business analytics tool that allows you to visualize and analyze data from multiple sources. With Power BI, you can create interactive dashboards, reports, and data visualizations to gain insights and make informed decisions."
+  },
+  {
+    "objectID": "perspectives/recommended-tools.html#r",
+    "href": "perspectives/recommended-tools.html#r",
+    "title": "Recommended Tools",
+    "section": "R",
+    "text": "R\nR is a programming language and software environment for statistical computing and graphics. It provides a wide range of tools and packages for data manipulation, analysis, and visualization. R is widely used in the scientific community for reproducible research and data analysis.\n\nPackages\n\ndplyr\nApache Arrow\nggplot"
+  },
+  {
+    "objectID": "perspectives/recommended-tools.html#python",
+    "href": "perspectives/recommended-tools.html#python",
+    "title": "Recommended Tools",
+    "section": "Python",
+    "text": "Python\nPython is a versatile programming language that is widely used in data science and machine learning. It offers a rich ecosystem of libraries and frameworks for data manipulation, analysis, and modeling. Python is known for its simplicity and readability, making it a popular choice among data scientists and analysts.\n\nPackages\n\nmatplotlib\npandas\nseaborn\nscikitlearn"
+  },
+  {
+    "objectID": "perspectives/recommended-tools.html#github",
+    "href": "perspectives/recommended-tools.html#github",
+    "title": "Recommended Tools",
+    "section": "GitHub",
+    "text": "GitHub\nGitHub is a web-based platform for version control and collaboration. It allows you to store and manage your code repositories, track changes, and collaborate with others on software development projects. GitHub also provides hosting for documentation and websites, making it a convenient platform for sharing data stewardship resources."
+  },
+  {
+    "objectID": "perspectives/data-life-cycle.html",
+    "href": "perspectives/data-life-cycle.html",
+    "title": "Data Life Cycle",
+    "section": "",
+    "text": "The data life cycle refers to the stages that data goes through from its creation to its archival or disposal. Understanding the data life cycle is essential for effective data stewardship and management. This page provides an overview of the data life cycle stages and resources to support each stage.\n\n\n\n\nThis stage involves the collection of raw data from various sources, such as field observations, surveys, experiments, or sensors.\n\nre3data.org: Registry of Research Data Repositories with detailed information about over 2000 research data repositories\nWorking with Data and APIs\n\n\n\n\nOnce collected, data needs to be organized and structured in a way that facilitates storage, retrieval, and analysis. This stage includes data cleaning, formatting, and transformation.\n\n\n\nData needs to be stored in a secure and accessible manner. This stage involves selecting appropriate storage systems, such as databases or cloud storage, and implementing data backup and recovery strategies.\n\nClosing a Project: Archiving and Preservation of Content\n\n\n\n\nData analysis involves applying statistical and computational techniques to extract insights and knowledge from the data. This stage includes data exploration, modeling, and visualization.\n\nPython for Data Analysis\nR for Data Science\n\n\n\n\nSharing data with others is an important aspect of data stewardship. This stage involves preparing data for sharing, ensuring data privacy and security, and selecting appropriate data sharing platforms or repositories.\n\nSharing Data: What to do with your Processed Data - The Engine Room\n\n\n\n\nData preservation ensures the long-term accessibility and usability of data. This stage includes data documentation, metadata creation, and data archiving.\n\nPublishing Open Data and Information - Government of Canada\nHow to publish open data: a list of advice and tools\n\n\n\n\n\n\nYour Role\nData Domain\nRecommended Tool Stacks\nNational and Regional Resources\nYour Tasks"
+  },
+  {
+    "objectID": "perspectives/data-life-cycle.html#data-life-cycle-stages",
+    "href": "perspectives/data-life-cycle.html#data-life-cycle-stages",
+    "title": "Data Life Cycle",
+    "section": "",
+    "text": "This stage involves the collection of raw data from various sources, such as field observations, surveys, experiments, or sensors.\n\nre3data.org: Registry of Research Data Repositories with detailed information about over 2000 research data repositories\nWorking with Data and APIs\n\n\n\n\nOnce collected, data needs to be organized and structured in a way that facilitates storage, retrieval, and analysis. This stage includes data cleaning, formatting, and transformation.\n\n\n\nData needs to be stored in a secure and accessible manner. This stage involves selecting appropriate storage systems, such as databases or cloud storage, and implementing data backup and recovery strategies.\n\nClosing a Project: Archiving and Preservation of Content\n\n\n\n\nData analysis involves applying statistical and computational techniques to extract insights and knowledge from the data. This stage includes data exploration, modeling, and visualization.\n\nPython for Data Analysis\nR for Data Science\n\n\n\n\nSharing data with others is an important aspect of data stewardship. This stage involves preparing data for sharing, ensuring data privacy and security, and selecting appropriate data sharing platforms or repositories.\n\nSharing Data: What to do with your Processed Data - The Engine Room\n\n\n\n\nData preservation ensures the long-term accessibility and usability of data. This stage includes data documentation, metadata creation, and data archiving.\n\nPublishing Open Data and Information - Government of Canada\nHow to publish open data: a list of advice and tools"
+  },
+  {
+    "objectID": "perspectives/data-life-cycle.html#continue-exploring-the-other-perspectives",
+    "href": "perspectives/data-life-cycle.html#continue-exploring-the-other-perspectives",
+    "title": "Data Life Cycle",
+    "section": "",
+    "text": "Your Role\nData Domain\nRecommended Tool Stacks\nNational and Regional Resources\nYour Tasks"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Stewardship Unit",
+    "section": "",
+    "text": "Welcome to the Data Stewardship Website for Fisheries and Oceans Canada employees in the Pacific Region Science Branch. This website provides support for your data stewardship and management responsibilities."
+  },
+  {
+    "objectID": "index.html#perspectives",
+    "href": "index.html#perspectives",
+    "title": "Data Stewardship Unit",
+    "section": "Perspectives",
+    "text": "Perspectives\nBrowse our resources by your perspective.\n\n\n  \n    \n    Data Life Cycle\n  \n  \n      \n      Your Role\n  \n  \n      \n      Your Domain\n  \n  \n      \n      Your Tasks\n  \n  \n      \n      Recommended Tools\n  \n   \n    \n    National and Regional Resources"
+  },
+  {
+    "objectID": "index.html#about-this-site",
+    "href": "index.html#about-this-site",
+    "title": "Data Stewardship Unit",
+    "section": "About This Site",
+    "text": "About This Site\nThis site was created with Quarto by Brett Johnson and Albury C. and is hosted with Github Pages. The user perspectives were inspired by the ELIXIR RDMKit site. Icons from Font Awesome. For problems with the site, please create a Github issue or contact Albury C."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "The DSU is a unit within the Fisheries and Assessment Data Section (FADS) in the Pacific Region of Fisheries and Oceans Canada (DFO).\nWe are a dedicated team committed to enhancing data management and stewardship practices within DFO. Our primary focus is on data related to Pacific Salmon within the DFO Pacific Region, including biodata (e.g., fish weight, length, age, escapement statistics, genomic data), juvenile salmon, and associated ecological and environmental data.\nOur goal is to provide guidance and assistance throughout the entire lifecycle of data management—from planning to publication. We strive to ensure our practices align with modern data standards, such as those outlined in the DFO Data Strategy and the Government of Canada’s digital data strategy. For instance, our work is guided by the principles of making data findable, accessible, interoperable, and reusable (FAIR). Additionally, we highly value the principles of Indigenous data governance, such as ownership, control, access, and possession (OCAP), and we are committed to helping our collaborators respect and implement these principles in their work."
+  },
+  {
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "Requirements",
+    "section": "",
+    "text": "Welcome contributors to the DSU website! This document contains detailed instructions on working with the quarto repo and using Github Actions to the publish the site.\n\nRequirements\nYou must have a Github account and Git downloaded on your machine to make changes to this repository.\n\n\nCloning and Adding a Branch\nIn order to make changes to the site, you must clone the repository and create a branch.\n\nClone the repository with git by running git clone https://github.com/dfo-pacific-science/data-stewardship-unit.git in terminal.\nInstall the required dependencies: R -e \"install.packages('quarto')\"\nMake a new branch using git branch new-branch-name. Please name the branch descriptively.\nMake your changes to the website and preview them by running quarto render. Each time any file is changed, you will need to run quarto render to see the changes locally.\nRun quarto publish gh-pages\n\n\n\nContributing\nYou may push your changes via the new branch. After pushing, you may make a pull request to merge the branch to main. Merguing to main will save your changes to the website and trigger a deployment via github actions. Deployment instructions are located in the .github/workflows/publish.yml file.\nAnother team member review your pull request with site changes. They should render the changes on their local machine with quarto render.\nCheck the deployment status after merging the new branch to main by looking at the Actions tab in Github. If succesful, a green checkmark will appear. It may take up to a few moments for the changes to be reflected on the site.\n\n\nResources\n\nQuarto Website Documentation\nGithub Pages\nRendering for CI"
+  },
+  {
     "objectID": "perspectives/data-domain.html",
     "href": "perspectives/data-domain.html",
     "title": "Data Domain",
@@ -189,125 +280,6 @@
     "text": "Continue exploring the other perspectives:\n\nData Life Cycle\nYour Role\nData Domain\nRecommended Tool Stacks\nNational and Regional Resources\nYour Tasks"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Data Stewardship Unit",
-    "section": "",
-    "text": "Welcome to the Data Stewardship Website for Fisheries and Oceans Canada employees in the Pacific Region Science Branch. This website provides support for your data stewardship and management responsibilities."
-  },
-  {
-    "objectID": "index.html#perspectives",
-    "href": "index.html#perspectives",
-    "title": "Data Stewardship Unit",
-    "section": "Perspectives",
-    "text": "Perspectives\nBrowse our resources by your perspective.\n\n\n  \n    \n    Data Life Cycle\n  \n  \n      \n      Your Role\n  \n  \n      \n      Your Domain\n  \n  \n      \n      Your Tasks\n  \n  \n      \n      Recommended Tools\n  \n   \n    \n    National and Regional Resources"
-  },
-  {
-    "objectID": "index.html#dashboard",
-    "href": "index.html#dashboard",
-    "title": "Data Stewardship Unit",
-    "section": "Dashboard",
-    "text": "Dashboard\n\n\n\n\n\n\nNote\n\n\n\nThe dashboard is in construction ╰(°▽°)╯"
-  },
-  {
-    "objectID": "index.html#about-this-site",
-    "href": "index.html#about-this-site",
-    "title": "Data Stewardship Unit",
-    "section": "About This Site",
-    "text": "About This Site\nThis site was created with Quarto by Brett Johnson and Albury C. and is hosted with Github Pages. The user perspectives were inspired by the ELIXIR RDMKit site. Icons from Font Awesome. For problems with the site, please create a Github issue or contact Albury C."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "The DSU is a unit within the Fisheries and Assessment Data Section (FADS) in the Pacific Region of Fisheries and Oceans Canada (DFO).\nWe are a dedicated team committed to enhancing data management and stewardship practices within DFO. Our primary focus is on data related to Pacific Salmon within the DFO Pacific Region, including biodata (e.g., fish weight, length, age, escapement statistics, genomic data), juvenile salmon, and associated ecological and environmental data.\nOur goal is to provide guidance and assistance throughout the entire lifecycle of data management—from planning to publication. We strive to ensure our practices align with modern data standards, such as those outlined in the DFO Data Strategy and the Government of Canada’s digital data strategy. For instance, our work is guided by the principles of making data findable, accessible, interoperable, and reusable (FAIR). Additionally, we highly value the principles of Indigenous data governance, such as ownership, control, access, and possession (OCAP), and we are committed to helping our collaborators respect and implement these principles in their work."
-  },
-  {
-    "objectID": "the-team.html",
-    "href": "the-team.html",
-    "title": "Our Team",
-    "section": "",
-    "text": "Brett’s experience includes management and research related to juvenile salmon before focusing his career on scientific data stewardship. Brett has worked closely with the North Pacific Anadromous Fish Commission, the North Pacific Marine Science Organization, and the Canadian Integrated Ocean Observing System on data stewardship during his tenure with the Hakai Institute. As program head, Brett delivers strategic plans foor the development of data solutions and data stewardship processes, implements project management plans, and develops frameworks for data standards."
-  },
-  {
-    "objectID": "the-team.html#brett-johnson-dsu-program-head",
-    "href": "the-team.html#brett-johnson-dsu-program-head",
-    "title": "Our Team",
-    "section": "",
-    "text": "Brett’s experience includes management and research related to juvenile salmon before focusing his career on scientific data stewardship. Brett has worked closely with the North Pacific Anadromous Fish Commission, the North Pacific Marine Science Organization, and the Canadian Integrated Ocean Observing System on data stewardship during his tenure with the Hakai Institute. As program head, Brett delivers strategic plans foor the development of data solutions and data stewardship processes, implements project management plans, and develops frameworks for data standards."
-  },
-  {
-    "objectID": "the-team.html#anna-douglas-morris-data-integration-steward",
-    "href": "the-team.html#anna-douglas-morris-data-integration-steward",
-    "title": "Our Team",
-    "section": "Anna Douglas-Morris, Data Integration Steward",
-    "text": "Anna Douglas-Morris, Data Integration Steward\nAnna has a BSc in Biodiversity and Conservation and a Master of Wildlife Management from Macquarie University. For the past 8 years, she has been working as a GIS consultant and Project Manager. She has also completed Advanced Diploma of GIS Applications from Vancouver Island University. Anna’s role incolves coordinating regional data governance with linkages to national efforts, supports the implementation of FAIR practices, and guides staff to populate regional data repositories."
-  },
-  {
-    "objectID": "the-team.html#shaorong-li-biological-salmon-data-steward",
-    "href": "the-team.html#shaorong-li-biological-salmon-data-steward",
-    "title": "Our Team",
-    "section": "Shaorong Li, Biological Salmon Data Steward",
-    "text": "Shaorong Li, Biological Salmon Data Steward\nSharong previously worked with the Molecular Genetics Lab at the Pacific Biological Station, where she has utilized cutting-edge technologies in genetics and genomics to study salmon stock identification, migration, fitness, and health. With approximately 25 years at DFO, Sharong understands the importance of standardizing how data is captured, stored, and analyzed to ensure consistent and reliable information, as well as effective data sharing. Sharong’s role involves mapping business processes, developing regional solutions, and working with databases related to salmon biodata."
-  },
-  {
-    "objectID": "the-team.html#stephen-finnis-regional-data-steward",
-    "href": "the-team.html#stephen-finnis-regional-data-steward",
-    "title": "Our Team",
-    "section": "Stephen Finnis, Regional Data Steward",
-    "text": "Stephen Finnis, Regional Data Steward\nStephen joined DFO in the Maritimes Region after graduating with an MSc in Oceanography from Dalhousie University. His experience includes developing automated reports for Species at Risk in R Markdown, researching the potential effects of shellfish aquaculture on zooplankton communities, and assisting with the publication of CSAS documents. Stephen coordinates data governance linkages to national efforts, supports implementation of FAIR principles, and guides staff to populate data repositories in the regions."
-  },
-  {
-    "objectID": "the-team.html#albury-c-data-products-steward",
-    "href": "the-team.html#albury-c-data-products-steward",
-    "title": "Our Team",
-    "section": "Albury C, Data Products Steward",
-    "text": "Albury C, Data Products Steward\nAlbury has a BSc and MSc in Biology from Dalhousie University. Their research there focused on trace nutrient biogeochemistry. Since then, they’ve been a data scientist at various government departments, where they contributed to to the modernization of analytical workflows with open data science tools like R, Python, and Git. At the DSU, they develop reproducible data pipelines, support regional staff with data wrangling, derive unified data standards and more."
-  },
-  {
-    "objectID": "training-resources.html",
-    "href": "training-resources.html",
-    "title": "Training Resources",
-    "section": "",
-    "text": "Welcome to the Training Resources page of the Data Stewardship Unit website! Here, you will find a collection of training resources to enhance your skills and knowledge in data stewardship."
-  },
-  {
-    "objectID": "training-resources.html#online-courses",
-    "href": "training-resources.html#online-courses",
-    "title": "Training Resources",
-    "section": "Online Courses",
-    "text": "Online Courses"
-  },
-  {
-    "objectID": "training-resources.html#webinars-and-workshops",
-    "href": "training-resources.html#webinars-and-workshops",
-    "title": "Training Resources",
-    "section": "Webinars and Workshops",
-    "text": "Webinars and Workshops"
-  },
-  {
-    "objectID": "training-resources.html#online-resources",
-    "href": "training-resources.html#online-resources",
-    "title": "Training Resources",
-    "section": "Online Resources",
-    "text": "Online Resources"
-  },
-  {
-    "objectID": "training-resources.html#training-programs",
-    "href": "training-resources.html#training-programs",
-    "title": "Training Resources",
-    "section": "Training Programs",
-    "text": "Training Programs"
-  },
-  {
-    "objectID": "CONTRIBUTING.html",
-    "href": "CONTRIBUTING.html",
-    "title": "Requirements",
-    "section": "",
-    "text": "Welcome contributors to the DSU website! This document contains detailed instructions on working with the quarto repo and using Github Actions to the publish the site.\n\nRequirements\nYou must have a Github account and Git downloaded on your machine to make changes to this repository.\n\n\nCloning and Adding a Branch\nIn order to make changes to the site, you must clone the repository and create a branch.\n\nClone the repository with git by running git clone https://github.com/dfo-pacific-science/data-stewardship-unit.git in terminal.\nInstall the required dependencies: R -e \"install.packages('quarto')\"\nMake a new branch using git branch new-branch-name. Please name the branch descriptively.\nMake your changes to the website and preview them by running quarto render. Each time any file is changed, you will need to run quarto render to see the changes locally.\nRun quarto publish gh-pages\n\n\n\nContributing\nYou may push your changes via the new branch. After pushing, you may make a pull request to merge the branch to main. Merguing to main will save your changes to the website and trigger a deployment via github actions. Deployment instructions are located in the .github/workflows/publish.yml file.\nAnother team member review your pull request with site changes. They should render the changes on their local machine with quarto render.\nCheck the deployment status after merging the new branch to main by looking at the Actions tab in Github. If succesful, a green checkmark will appear. It may take up to a few moments for the changes to be reflected on the site.\n\n\nResources\n\nQuarto Website Documentation\nGithub Pages\nRendering for CI"
-  },
-  {
     "objectID": "perspectives/national-and-regional-resources.html",
     "href": "perspectives/national-and-regional-resources.html",
     "title": "National and Regional Resources",
@@ -334,27 +306,6 @@
     "title": "National and Regional Resources",
     "section": "Continue exploring the other perspectives:",
     "text": "Continue exploring the other perspectives:\n\nData Life Cycle\nYour Role\nData Domain\nRecommended Tool Stacks\nYour Tasks"
-  },
-  {
-    "objectID": "perspectives/data-life-cycle.html",
-    "href": "perspectives/data-life-cycle.html",
-    "title": "Data Life Cycle",
-    "section": "",
-    "text": "The data life cycle refers to the stages that data goes through from its creation to its archival or disposal. Understanding the data life cycle is essential for effective data stewardship and management. This page provides an overview of the data life cycle stages and resources to support each stage.\n\n\n\n\nThis stage involves the collection of raw data from various sources, such as field observations, surveys, experiments, or sensors.\n\nre3data.org: Registry of Research Data Repositories with detailed information about over 2000 research data repositories\nWorking with Data and APIs\n\n\n\n\nOnce collected, data needs to be organized and structured in a way that facilitates storage, retrieval, and analysis. This stage includes data cleaning, formatting, and transformation.\n\n\n\nData needs to be stored in a secure and accessible manner. This stage involves selecting appropriate storage systems, such as databases or cloud storage, and implementing data backup and recovery strategies.\n\nClosing a Project: Archiving and Preservation of Content\n\n\n\n\nData analysis involves applying statistical and computational techniques to extract insights and knowledge from the data. This stage includes data exploration, modeling, and visualization.\n\nPython for Data Analysis\nR for Data Science\n\n\n\n\nSharing data with others is an important aspect of data stewardship. This stage involves preparing data for sharing, ensuring data privacy and security, and selecting appropriate data sharing platforms or repositories.\n\nSharing Data: What to do with your Processed Data - The Engine Room\n\n\n\n\nData preservation ensures the long-term accessibility and usability of data. This stage includes data documentation, metadata creation, and data archiving.\n\nPublishing Open Data and Information - Government of Canada\nHow to publish open data: a list of advice and tools\n\n\n\n\n\n\nYour Role\nData Domain\nRecommended Tool Stacks\nNational and Regional Resources\nYour Tasks"
-  },
-  {
-    "objectID": "perspectives/data-life-cycle.html#data-life-cycle-stages",
-    "href": "perspectives/data-life-cycle.html#data-life-cycle-stages",
-    "title": "Data Life Cycle",
-    "section": "",
-    "text": "This stage involves the collection of raw data from various sources, such as field observations, surveys, experiments, or sensors.\n\nre3data.org: Registry of Research Data Repositories with detailed information about over 2000 research data repositories\nWorking with Data and APIs\n\n\n\n\nOnce collected, data needs to be organized and structured in a way that facilitates storage, retrieval, and analysis. This stage includes data cleaning, formatting, and transformation.\n\n\n\nData needs to be stored in a secure and accessible manner. This stage involves selecting appropriate storage systems, such as databases or cloud storage, and implementing data backup and recovery strategies.\n\nClosing a Project: Archiving and Preservation of Content\n\n\n\n\nData analysis involves applying statistical and computational techniques to extract insights and knowledge from the data. This stage includes data exploration, modeling, and visualization.\n\nPython for Data Analysis\nR for Data Science\n\n\n\n\nSharing data with others is an important aspect of data stewardship. This stage involves preparing data for sharing, ensuring data privacy and security, and selecting appropriate data sharing platforms or repositories.\n\nSharing Data: What to do with your Processed Data - The Engine Room\n\n\n\n\nData preservation ensures the long-term accessibility and usability of data. This stage includes data documentation, metadata creation, and data archiving.\n\nPublishing Open Data and Information - Government of Canada\nHow to publish open data: a list of advice and tools"
-  },
-  {
-    "objectID": "perspectives/data-life-cycle.html#continue-exploring-the-other-perspectives",
-    "href": "perspectives/data-life-cycle.html#continue-exploring-the-other-perspectives",
-    "title": "Data Life Cycle",
-    "section": "",
-    "text": "Your Role\nData Domain\nRecommended Tool Stacks\nNational and Regional Resources\nYour Tasks"
   },
   {
     "objectID": "perspectives/your-role.html",
@@ -404,5 +355,47 @@
     "title": "Your Role",
     "section": "Continue exploring the other perspectives:",
     "text": "Continue exploring the other perspectives:\n\nData Life Cycle\nData Domain\nRecommended Tool Stacks\nNational and Regional Resources\nYour Tasks"
+  },
+  {
+    "objectID": "the-team.html",
+    "href": "the-team.html",
+    "title": "Our Team",
+    "section": "",
+    "text": "Brett’s experience includes management and research related to juvenile salmon before focusing his career on scientific data stewardship. Brett has worked closely with the North Pacific Anadromous Fish Commission, the North Pacific Marine Science Organization, and the Canadian Integrated Ocean Observing System on data stewardship during his tenure with the Hakai Institute. As program head, Brett delivers strategic plans foor the development of data solutions and data stewardship processes, implements project management plans, and develops frameworks for data standards."
+  },
+  {
+    "objectID": "the-team.html#brett-johnson-dsu-program-head",
+    "href": "the-team.html#brett-johnson-dsu-program-head",
+    "title": "Our Team",
+    "section": "",
+    "text": "Brett’s experience includes management and research related to juvenile salmon before focusing his career on scientific data stewardship. Brett has worked closely with the North Pacific Anadromous Fish Commission, the North Pacific Marine Science Organization, and the Canadian Integrated Ocean Observing System on data stewardship during his tenure with the Hakai Institute. As program head, Brett delivers strategic plans foor the development of data solutions and data stewardship processes, implements project management plans, and develops frameworks for data standards."
+  },
+  {
+    "objectID": "the-team.html#anna-douglas-morris-data-integration-steward",
+    "href": "the-team.html#anna-douglas-morris-data-integration-steward",
+    "title": "Our Team",
+    "section": "Anna Douglas-Morris, Data Integration Steward",
+    "text": "Anna Douglas-Morris, Data Integration Steward\nAnna has a BSc in Biodiversity and Conservation and a Master of Wildlife Management from Macquarie University. For the past 8 years, she has been working as a GIS consultant and Project Manager. She has also completed Advanced Diploma of GIS Applications from Vancouver Island University. Anna’s role incolves coordinating regional data governance with linkages to national efforts, supports the implementation of FAIR practices, and guides staff to populate regional data repositories."
+  },
+  {
+    "objectID": "the-team.html#shaorong-li-biological-salmon-data-steward",
+    "href": "the-team.html#shaorong-li-biological-salmon-data-steward",
+    "title": "Our Team",
+    "section": "Shaorong Li, Biological Salmon Data Steward",
+    "text": "Shaorong Li, Biological Salmon Data Steward\nSharong previously worked with the Molecular Genetics Lab at the Pacific Biological Station, where she has utilized cutting-edge technologies in genetics and genomics to study salmon stock identification, migration, fitness, and health. With approximately 25 years at DFO, Sharong understands the importance of standardizing how data is captured, stored, and analyzed to ensure consistent and reliable information, as well as effective data sharing. Sharong’s role involves mapping business processes, developing regional solutions, and working with databases related to salmon biodata."
+  },
+  {
+    "objectID": "the-team.html#stephen-finnis-regional-data-steward",
+    "href": "the-team.html#stephen-finnis-regional-data-steward",
+    "title": "Our Team",
+    "section": "Stephen Finnis, Regional Data Steward",
+    "text": "Stephen Finnis, Regional Data Steward\nStephen joined DFO in the Maritimes Region after graduating with an MSc in Oceanography from Dalhousie University. His experience includes developing automated reports for Species at Risk in R Markdown, researching the potential effects of shellfish aquaculture on zooplankton communities, and assisting with the publication of CSAS documents. Stephen coordinates data governance linkages to national efforts, supports implementation of FAIR principles, and guides staff to populate data repositories in the regions."
+  },
+  {
+    "objectID": "the-team.html#albury-c-data-products-steward",
+    "href": "the-team.html#albury-c-data-products-steward",
+    "title": "Our Team",
+    "section": "Albury C, Data Products Steward",
+    "text": "Albury C, Data Products Steward\nAlbury has a BSc and MSc in Biology from Dalhousie University. Their research there focused on trace nutrient biogeochemistry. Since then, they’ve been a data scientist at various government departments, where they contributed to to the modernization of analytical workflows with open data science tools like R, Python, and Git. At the DSU, they develop reproducible data pipelines, support regional staff with data wrangling, derive unified data standards and more."
   }
 ]
