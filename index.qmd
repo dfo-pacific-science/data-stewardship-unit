@@ -41,12 +41,6 @@ Browse our resources by your perspective.
 
 ```
 
-## Dashboard
-
-::: {.callout-note}
-The dashboard is in construction ╰(*°▽°*)╯
-:::
-
 ## About This Site
 
 This site was created with [Quarto](https://quarto.org/) by Brett Johnson and Albury C. and is hosted with [Github Pages](https://pages.github.com/). The user perspectives were inspired by the [ELIXIR RDMKit site](https://rdmkit.elixir-europe.org/). Icons from [Font Awesome](https://fontawesome.com/). For problems with the site, please [create a Github issue](https://github.com/pbs-assess/data-stewardship-unit/issues/new) or contact [Albury C.](mailto:catalina.albury@dfo-mpo.gc.ca)

@@ -31,9 +31,6 @@ Anna has a BSc in Biodiversity and Conservation and a Master of Wildlife Managem
 ::::: grid
 ::: g-col-4
 
-```{=html}
-<img src=images/team/Shaorong.jpg" alt="Shaorong" class="circle">
-```
 :::
 
 ::: g-col-8
@@ -57,7 +54,7 @@ Stephen joined DFO in the Maritimes Region after graduating with an MSc in Ocean
 
 ::::: grid
 ::: g-col-4
-![](images/logo.png)
+
 :::
 
 ::: g-col-8
