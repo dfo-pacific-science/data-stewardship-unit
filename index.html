@@ -139,12 +139,10 @@ ul.task-list li input[type="checkbox"] {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+    <a href="./../fr" title="Francais" class="quarto-navigation-tool px-1" aria-label="Francais"><i class="bi bi-translate"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <div id="quarto-announcement" data-announcement-id="a8e28337796207e544de26403e72c469" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p>This site is under construction. Bear with us!</p>
-</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
@@ -155,40 +153,29 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#perspectives" id="toc-perspectives" class="nav-link active" data-scroll-target="#perspectives">Perspectives</a></li>
+  <li><a href="#data-stewardship-unit" id="toc-data-stewardship-unit" class="nav-link active" data-scroll-target="#data-stewardship-unit">Data Stewardship Unit</a>
+  <ul class="collapse">
+  <li><a href="#perspectives" id="toc-perspectives" class="nav-link" data-scroll-target="#perspectives">Perspectives</a></li>
   <li><a href="#about-this-site" id="toc-about-this-site" class="nav-link" data-scroll-target="#about-this-site">About This Site</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://dfo-pacific-science.github.io/data-stewardship-unit/edit/main/index.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="https://dfo-pacific-science.github.io/data-stewardship-unit/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://dfo-pacific-science.github.io/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Data Stewardship Unit</h1>
-</div>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
+<section id="data-stewardship-unit" class="level1">
+<h1>Data Stewardship Unit</h1>
 <p>Welcome to the Data Stewardship website for Fisheries and Oceans Canada employees in the Pacific Region Science Branch. This website provides support for your data stewardship and management responsibilities.</p>
 <section id="perspectives" class="level2">
 <h2 class="anchored" data-anchor-id="perspectives">Perspectives</h2>
 <p>Browse our resources by your perspective.</p>
 
 <div class="logocontainer">
-  <a href="link1.com" class="logotile">
+  <a href="./perspectives/data-life-cycle.html" class="logotile">
     <img src="images/icons/data-life-cycle.svg" alt="Data Life Cycle" class="logo">
     <div class="logotitle">Data Life Cycle</div>
   </a>
@@ -220,6 +207,7 @@ ul.task-list li input[type="checkbox"] {
 <p>This site was created with <a href="https://quarto.org/">Quarto</a> by Brett Johnson and Albury C. and is hosted with <a href="https://pages.github.com/">Github Pages</a>. The user perspectives were inspired by the <a href="https://rdmkit.elixir-europe.org/">ELIXIR RDMKit site</a>. Icons from <a href="https://fontawesome.com/">Font Awesome</a>. For problems with the site, please <a href="https://github.com/pbs-assess/data-stewardship-unit/issues/new">create a Github issue</a> or contact <a href="mailto:catalina.albury@dfo-mpo.gc.ca">Albury C.</a></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -315,7 +303,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/dfo-pacific-science\.github\.io\/data-stewardship-unit\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

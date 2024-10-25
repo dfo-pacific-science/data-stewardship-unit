@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Your Role – Data Stewardship Unit</title>
+<title>your-role – Data Stewardship Unit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -139,12 +139,10 @@ ul.task-list li input[type="checkbox"] {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+    <a href="../../fr" title="Francais" class="quarto-navigation-tool px-1" aria-label="Francais"><i class="bi bi-translate"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <div id="quarto-announcement" data-announcement-id="a8e28337796207e544de26403e72c469" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p>This site is under construction. Bear with us!</p>
-</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
@@ -155,37 +153,26 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#data-steward" id="toc-data-steward" class="nav-link active" data-scroll-target="#data-steward">Data Steward</a></li>
+  <li><a href="#your-role" id="toc-your-role" class="nav-link active" data-scroll-target="#your-role">Your Role</a>
+  <ul class="collapse">
+  <li><a href="#data-steward" id="toc-data-steward" class="nav-link" data-scroll-target="#data-steward">Data Steward</a></li>
   <li><a href="#data-custodian" id="toc-data-custodian" class="nav-link" data-scroll-target="#data-custodian">Data Custodian</a></li>
   <li><a href="#data-trustee" id="toc-data-trustee" class="nav-link" data-scroll-target="#data-trustee">Data Trustee</a></li>
   <li><a href="#data-contributor" id="toc-data-contributor" class="nav-link" data-scroll-target="#data-contributor">Data Contributor</a></li>
   <li><a href="#data-consumer" id="toc-data-consumer" class="nav-link" data-scroll-target="#data-consumer">Data Consumer</a></li>
   <li><a href="#continue-exploring-the-other-perspectives" id="toc-continue-exploring-the-other-perspectives" class="nav-link" data-scroll-target="#continue-exploring-the-other-perspectives">Continue exploring the other perspectives:</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://dfo-pacific-science.github.io/data-stewardship-unit/edit/main/perspectives/your-role.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="https://dfo-pacific-science.github.io/data-stewardship-unit/blob/main/perspectives/your-role.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://dfo-pacific-science.github.io/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Your Role</h1>
-</div>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
+<section id="your-role" class="level1">
+<h1>Your Role</h1>
 <section id="data-steward" class="level2">
 <h2 class="anchored" data-anchor-id="data-steward">Data Steward</h2>
 <ul>
@@ -236,6 +223,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -331,7 +319,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/dfo-pacific-science\.github\.io\/data-stewardship-unit\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

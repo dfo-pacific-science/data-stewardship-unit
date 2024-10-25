@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Domain – Data Stewardship Unit</title>
+<title>data-domain – Data Stewardship Unit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -139,12 +139,10 @@ ul.task-list li input[type="checkbox"] {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+    <a href="../../fr" title="Francais" class="quarto-navigation-tool px-1" aria-label="Francais"><i class="bi bi-translate"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <div id="quarto-announcement" data-announcement-id="a8e28337796207e544de26403e72c469" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p>This site is under construction. Bear with us!</p>
-</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
@@ -155,39 +153,27 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#salmon-stock-assessment-and-enhancement" id="toc-salmon-stock-assessment-and-enhancement" class="nav-link active" data-scroll-target="#salmon-stock-assessment-and-enhancement">Salmon Stock Assessment and Enhancement</a></li>
+  <li><a href="#data-domain" id="toc-data-domain" class="nav-link active" data-scroll-target="#data-domain">Data Domain</a>
+  <ul class="collapse">
+  <li><a href="#salmon-stock-assessment-and-enhancement" id="toc-salmon-stock-assessment-and-enhancement" class="nav-link" data-scroll-target="#salmon-stock-assessment-and-enhancement">Salmon Stock Assessment and Enhancement</a></li>
   <li><a href="#ecosystem-science" id="toc-ecosystem-science" class="nav-link" data-scroll-target="#ecosystem-science">Ecosystem Science</a></li>
   <li><a href="#ocean-science" id="toc-ocean-science" class="nav-link" data-scroll-target="#ocean-science">Ocean Science</a></li>
   <li><a href="#fisheries-management" id="toc-fisheries-management" class="nav-link" data-scroll-target="#fisheries-management">Fisheries Management</a></li>
   <li><a href="#diagnostics-and-genomics" id="toc-diagnostics-and-genomics" class="nav-link" data-scroll-target="#diagnostics-and-genomics">Diagnostics and Genomics</a></li>
-  <li><a href="#hydrographic-services" id="toc-hydrographic-services" class="nav-link" data-scroll-target="#hydrographic-services">Hydrographic Services</a></li>
   <li><a href="#misc." id="toc-misc." class="nav-link" data-scroll-target="#misc.">Misc.</a></li>
   <li><a href="#continue-exploring-the-other-perspectives" id="toc-continue-exploring-the-other-perspectives" class="nav-link" data-scroll-target="#continue-exploring-the-other-perspectives">Continue exploring the other perspectives:</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://dfo-pacific-science.github.io/data-stewardship-unit/edit/main/perspectives/data-domain.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="https://dfo-pacific-science.github.io/data-stewardship-unit/blob/main/perspectives/data-domain.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://dfo-pacific-science.github.io/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Data Domain</h1>
-</div>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
+<section id="data-domain" class="level1">
+<h1>Data Domain</h1>
 <p>This page provides information and resources related to different data domains in the Pacific Region Science Branch of Fisheries and Oceans Canada.</p>
 <section id="salmon-stock-assessment-and-enhancement" class="level2">
 <h2 class="anchored" data-anchor-id="salmon-stock-assessment-and-enhancement">Salmon Stock Assessment and Enhancement</h2>
@@ -224,9 +210,6 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://www.ncbi.nlm.nih.gov/">NCBI</a></li>
 </ul>
 </section>
-<section id="hydrographic-services" class="level2">
-<h2 class="anchored" data-anchor-id="hydrographic-services">Hydrographic Services</h2>
-</section>
 <section id="misc." class="level2">
 <h2 class="anchored" data-anchor-id="misc.">Misc.</h2>
 <ul>
@@ -245,6 +228,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -340,7 +324,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/dfo-pacific-science\.github\.io\/data-stewardship-unit\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

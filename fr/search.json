@@ -1,0 +1,366 @@
+[
+  {
+    "objectID": "perspectives/recommended-tools.html",
+    "href": "perspectives/recommended-tools.html",
+    "title": "Outils recommandés",
+    "section": "",
+    "text": "Dans le domaine de l’intendance des données, il existe plusieurs outils et technologies qui peuvent grandement contribuer à la gestion et à l’analyse des données. Voici quelques ensembles d’outils recommandés qui peuvent améliorer vos pratiques de gestion des données :\n\n\nAzure est une plateforme informatique en nuage qui fournit une large gamme de services pour le stockage, le traitement et l’analyse des données. Avec Azure, vous pouvez stocker et gérer vos données en toute sécurité, exécuter des applications à forte intensité de données et exploiter des capacités d’analyse avancées.\n\n\n\nMS Fabric est un cadre de gestion des données qui permet une intégration et une interopérabilité transparentes entre différents systèmes de données et applications. Il fournit une interface unifiée pour accéder aux données et les manipuler sur différentes plateformes et technologies.\n\n\n\nPower BI est un outil d’analyse commerciale qui vous permet de visualiser et d’analyser des données provenant de sources multiples. Avec Power BI, vous pouvez créer des tableaux de bord interactifs, des rapports et des visualisations de données pour obtenir des informations et prendre des décisions éclairées.\n\n\n\nR est un langage de programmation et un environnement logiciel pour le calcul statistique et les graphiques. Il fournit une large gamme d’outils et de progiciels pour la manipulation, l’analyse et la visualisation des données. R est largement utilisé dans la communauté scientifique pour la recherche reproductible et l’analyse des données.\n\n\n\ndplyr (en anglais seulement)\nApache Arrow(en anglais seulement)\nggplot (en anglais seulement)\n\n\n\n\n\nPython est un langage de programmation polyvalent largement utilisé dans les domaines de la science des données et de l’apprentissage automatique. Il offre un riche écosystème de bibliothèques et de cadres pour la manipulation, l’analyse et la modélisation des données. Python est connu pour sa simplicité et sa lisibilité, ce qui en fait un choix populaire parmi les scientifiques des données et les analystes.\n\n\n\nmatplotlib (en anglais seulement)\npandas (en anglais seulement)\nseaborn (en anglais seulement)\nscikitlearn (en anglais seulement)\n\n\n\n\n\nGitHub est une plateforme web de contrôle de version et de collaboration. Elle vous permet de stocker et de gérer vos dépôts de code, de suivre les modifications et de collaborer avec d’autres personnes sur des projets de développement de logiciels. GitHub fournit également un hébergement pour la documentation et les sites web, ce qui en fait une plateforme pratique pour le partage des ressources d’intendance des données."
+  },
+  {
+    "objectID": "perspectives/recommended-tools.html#azure-1",
+    "href": "perspectives/recommended-tools.html#azure-1",
+    "title": "Outils recommandés",
+    "section": "",
+    "text": "Azure est une plateforme informatique en nuage qui fournit une large gamme de services pour le stockage, le traitement et l’analyse des données. Avec Azure, vous pouvez stocker et gérer vos données en toute sécurité, exécuter des applications à forte intensité de données et exploiter des capacités d’analyse avancées."
+  },
+  {
+    "objectID": "perspectives/recommended-tools.html#ms-fabric-1",
+    "href": "perspectives/recommended-tools.html#ms-fabric-1",
+    "title": "Outils recommandés",
+    "section": "",
+    "text": "MS Fabric est un cadre de gestion des données qui permet une intégration et une interopérabilité transparentes entre différents systèmes de données et applications. Il fournit une interface unifiée pour accéder aux données et les manipuler sur différentes plateformes et technologies."
+  },
+  {
+    "objectID": "perspectives/recommended-tools.html#power-bi-1",
+    "href": "perspectives/recommended-tools.html#power-bi-1",
+    "title": "Outils recommandés",
+    "section": "",
+    "text": "Power BI est un outil d’analyse commerciale qui vous permet de visualiser et d’analyser des données provenant de sources multiples. Avec Power BI, vous pouvez créer des tableaux de bord interactifs, des rapports et des visualisations de données pour obtenir des informations et prendre des décisions éclairées."
+  },
+  {
+    "objectID": "perspectives/recommended-tools.html#r-1",
+    "href": "perspectives/recommended-tools.html#r-1",
+    "title": "Outils recommandés",
+    "section": "",
+    "text": "R est un langage de programmation et un environnement logiciel pour le calcul statistique et les graphiques. Il fournit une large gamme d’outils et de progiciels pour la manipulation, l’analyse et la visualisation des données. R est largement utilisé dans la communauté scientifique pour la recherche reproductible et l’analyse des données.\n\n\n\ndplyr (en anglais seulement)\nApache Arrow(en anglais seulement)\nggplot (en anglais seulement)"
+  },
+  {
+    "objectID": "perspectives/recommended-tools.html#python-1",
+    "href": "perspectives/recommended-tools.html#python-1",
+    "title": "Outils recommandés",
+    "section": "",
+    "text": "Python est un langage de programmation polyvalent largement utilisé dans les domaines de la science des données et de l’apprentissage automatique. Il offre un riche écosystème de bibliothèques et de cadres pour la manipulation, l’analyse et la modélisation des données. Python est connu pour sa simplicité et sa lisibilité, ce qui en fait un choix populaire parmi les scientifiques des données et les analystes.\n\n\n\nmatplotlib (en anglais seulement)\npandas (en anglais seulement)\nseaborn (en anglais seulement)\nscikitlearn (en anglais seulement)"
+  },
+  {
+    "objectID": "perspectives/recommended-tools.html#github-1",
+    "href": "perspectives/recommended-tools.html#github-1",
+    "title": "Outils recommandés",
+    "section": "",
+    "text": "GitHub est une plateforme web de contrôle de version et de collaboration. Elle vous permet de stocker et de gérer vos dépôts de code, de suivre les modifications et de collaborer avec d’autres personnes sur des projets de développement de logiciels. GitHub fournit également un hébergement pour la documentation et les sites web, ce qui en fait une plateforme pratique pour le partage des ressources d’intendance des données."
+  },
+  {
+    "objectID": "perspectives/your-tasks.html",
+    "href": "perspectives/your-tasks.html",
+    "title": "Vos tâches",
+    "section": "",
+    "text": "Cette page fournit des informations et des ressources pour diverses tâches liées à l’intendance des données. En tant qu’employé de Pêches et Océans Canada au sein de la Direction des sciences de la région du Pacifique, vous avez d’importantes responsabilités en matière de gestion et d’intendance des données. Voici quelques-unes des principales tâches auxquelles vous pourriez participer :\n\n\n\nPublication de données et d’informations ouvertes - Gouvernement du Canada\nComment publier des données ouvertes : une liste de conseils et d’outils (en anglais seulement)\n\n\n\n\n\nClôture d’un projet : archivage et préservation du contenu (en anglais seulement)\n\n\n\n\n\nFairsharing.org : registre curatif consultable des normes de données/métadonnées par les éditeurs de revues et les bailleurs de fonds (en anglais seulement)\nHarmonisation des métadonnées géospatiales du Canada (en anglais seulement)\n\n\n\n\n\nre3data.org : Registry of Research Data Repositories avec des informations détaillées sur plus de 2000 dépôts de données de recherche (en anglais seulement)\nTravailler avec des données et des API\n\n\n\n\n\nGestion des données : mise en place de l’« infrastructure de données » (en anglais seulement)\n\n\n\n\n\nGitHub pour la gestion de projet - Comment organiser et suivre vos processus agiles (en anglais seulement)\n\n\n\n\n\nPython pour l’analyse des données (en anglais seulement)\nR pour la science des données (en anglais seulement)\n\n\n\n\n\nPartage des données : Que faire de vos données traitées - La salle des machines (en anglais seulement)\n\n\n\n\n\nCycle de vie des données\nVotre rôle\nDomaine de données\nPiles d’outils recommandées\nRessources nationales et régionales"
+  },
+  {
+    "objectID": "perspectives/your-tasks.html#publication-de-données",
+    "href": "perspectives/your-tasks.html#publication-de-données",
+    "title": "Vos tâches",
+    "section": "",
+    "text": "Publication de données et d’informations ouvertes - Gouvernement du Canada\nComment publier des données ouvertes : une liste de conseils et d’outils (en anglais seulement)"
+  },
+  {
+    "objectID": "perspectives/your-tasks.html#stocker-des-données",
+    "href": "perspectives/your-tasks.html#stocker-des-données",
+    "title": "Vos tâches",
+    "section": "",
+    "text": "Clôture d’un projet : archivage et préservation du contenu (en anglais seulement)"
+  },
+  {
+    "objectID": "perspectives/your-tasks.html#standardisation-des-donnéesmétadonnées",
+    "href": "perspectives/your-tasks.html#standardisation-des-donnéesmétadonnées",
+    "title": "Vos tâches",
+    "section": "",
+    "text": "Fairsharing.org : registre curatif consultable des normes de données/métadonnées par les éditeurs de revues et les bailleurs de fonds (en anglais seulement)\nHarmonisation des métadonnées géospatiales du Canada (en anglais seulement)"
+  },
+  {
+    "objectID": "perspectives/your-tasks.html#accéder-aux-données-dautres-personnes",
+    "href": "perspectives/your-tasks.html#accéder-aux-données-dautres-personnes",
+    "title": "Vos tâches",
+    "section": "",
+    "text": "re3data.org : Registry of Research Data Repositories avec des informations détaillées sur plus de 2000 dépôts de données de recherche (en anglais seulement)\nTravailler avec des données et des API"
+  },
+  {
+    "objectID": "perspectives/your-tasks.html#planification-de-la-gestion-des-données",
+    "href": "perspectives/your-tasks.html#planification-de-la-gestion-des-données",
+    "title": "Vos tâches",
+    "section": "",
+    "text": "Gestion des données : mise en place de l’« infrastructure de données » (en anglais seulement)"
+  },
+  {
+    "objectID": "perspectives/your-tasks.html#planification-et-suivi-de-projet",
+    "href": "perspectives/your-tasks.html#planification-et-suivi-de-projet",
+    "title": "Vos tâches",
+    "section": "",
+    "text": "GitHub pour la gestion de projet - Comment organiser et suivre vos processus agiles (en anglais seulement)"
+  },
+  {
+    "objectID": "perspectives/your-tasks.html#analyse-des-données",
+    "href": "perspectives/your-tasks.html#analyse-des-données",
+    "title": "Vos tâches",
+    "section": "",
+    "text": "Python pour l’analyse des données (en anglais seulement)\nR pour la science des données (en anglais seulement)"
+  },
+  {
+    "objectID": "perspectives/your-tasks.html#création-de-produits-de-donnéesdinformations",
+    "href": "perspectives/your-tasks.html#création-de-produits-de-donnéesdinformations",
+    "title": "Vos tâches",
+    "section": "",
+    "text": "Partage des données : Que faire de vos données traitées - La salle des machines (en anglais seulement)"
+  },
+  {
+    "objectID": "perspectives/your-tasks.html#poursuivre-lexploration-des-autres-perspectives",
+    "href": "perspectives/your-tasks.html#poursuivre-lexploration-des-autres-perspectives",
+    "title": "Vos tâches",
+    "section": "",
+    "text": "Cycle de vie des données\nVotre rôle\nDomaine de données\nPiles d’outils recommandées\nRessources nationales et régionales"
+  },
+  {
+    "objectID": "perspectives/data-domain.html",
+    "href": "perspectives/data-domain.html",
+    "title": "Domaine de données",
+    "section": "",
+    "text": "Cette page fournit des informations et des ressources relatives aux différents domaines de données de la Direction des sciences de la région Pacifique de Pêches et Océans Canada.\n\n\n\nMobilisation des données sur le saumon (en anglais seulement)\nMobilisation des données dans le cadre de l’Année internationale du système d’observation des océans pour le saumon (en anglais seulement)\nAmélioration de la mobilisation des données grâce à un dépôt de données centralisé pour le saumon de l’Atlantique (Salmo salar L.) : Fournir les ressources pour promouvoir un cadre de gestion basé sur l’écosystème (en anglais seulement)\nLa conception du système de données modifie la signification des données écologiques : restauration de l’habitat du saumon dans le nord-ouest du Pacifique des États-Unis (en anglais seulement)\n\n\n\n\n\n[GBIF]https://www.gbif.org/fr/what-is-gbif)\n\n\n\n\n\nOBIS (en anglais seulement)\nERDDAP (en anglais seulement)\n\n\n\n\n\nCours en ligne sur l’introduction à l’évaluation des stocks\n\n\n\n\n\nEMBL Data Resourecs (en anglais seulement)\nNCBI](https://www.ncbi.nlm.nih.gov/)\n\n\n\n\n\nDonnées et résultats scientifiques du Pacifique\n\n\n\n\n\nCycle de vie des données\nVotre rôle\nDomaine de données\nPiles d’outils recommandées\nRessources nationales et régionales\nVos tâches"
+  },
+  {
+    "objectID": "perspectives/data-domain.html#évaluation-et-mise-en-valeur-des-stocks-de-saumon",
+    "href": "perspectives/data-domain.html#évaluation-et-mise-en-valeur-des-stocks-de-saumon",
+    "title": "Domaine de données",
+    "section": "",
+    "text": "Mobilisation des données sur le saumon (en anglais seulement)\nMobilisation des données dans le cadre de l’Année internationale du système d’observation des océans pour le saumon (en anglais seulement)\nAmélioration de la mobilisation des données grâce à un dépôt de données centralisé pour le saumon de l’Atlantique (Salmo salar L.) : Fournir les ressources pour promouvoir un cadre de gestion basé sur l’écosystème (en anglais seulement)\nLa conception du système de données modifie la signification des données écologiques : restauration de l’habitat du saumon dans le nord-ouest du Pacifique des États-Unis (en anglais seulement)"
+  },
+  {
+    "objectID": "perspectives/data-domain.html#science-des-écosystèmes",
+    "href": "perspectives/data-domain.html#science-des-écosystèmes",
+    "title": "Domaine de données",
+    "section": "",
+    "text": "[GBIF]https://www.gbif.org/fr/what-is-gbif)"
+  },
+  {
+    "objectID": "perspectives/data-domain.html#science-de-locéan",
+    "href": "perspectives/data-domain.html#science-de-locéan",
+    "title": "Domaine de données",
+    "section": "",
+    "text": "OBIS (en anglais seulement)\nERDDAP (en anglais seulement)"
+  },
+  {
+    "objectID": "perspectives/data-domain.html#gestion-des-pêches",
+    "href": "perspectives/data-domain.html#gestion-des-pêches",
+    "title": "Domaine de données",
+    "section": "",
+    "text": "Cours en ligne sur l’introduction à l’évaluation des stocks"
+  },
+  {
+    "objectID": "perspectives/data-domain.html#diagnostic-et-génomique",
+    "href": "perspectives/data-domain.html#diagnostic-et-génomique",
+    "title": "Domaine de données",
+    "section": "",
+    "text": "EMBL Data Resourecs (en anglais seulement)\nNCBI](https://www.ncbi.nlm.nih.gov/)"
+  },
+  {
+    "objectID": "perspectives/data-domain.html#divers.",
+    "href": "perspectives/data-domain.html#divers.",
+    "title": "Domaine de données",
+    "section": "",
+    "text": "Données et résultats scientifiques du Pacifique"
+  },
+  {
+    "objectID": "perspectives/data-domain.html#poursuivre-lexploration-des-autres-perspectives",
+    "href": "perspectives/data-domain.html#poursuivre-lexploration-des-autres-perspectives",
+    "title": "Domaine de données",
+    "section": "",
+    "text": "Cycle de vie des données\nVotre rôle\nDomaine de données\nPiles d’outils recommandées\nRessources nationales et régionales\nVos tâches"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "l’Unité de gestion des données",
+    "section": "",
+    "text": "Bienvenue sur le site Web de l’intendance des données destiné aux employés de Pêches et Océans Canada de la Direction des sciences de la région du Pacifique. Ce site Web vous aide à assumer vos responsabilités en matière d’intendance et de gestion des données.\n\n\nParcourez nos ressources en fonction de votre point de vue.\n\n\n  \n    \n    Cycle de vie des données\n  \n  \n      \n      Votre rôle\n  \n  \n      \n      Votre domaine\n  \n  \n      \n      Votre tâche\n  \n  \n      \n      Outils recommandés\n  \n   \n    \n    Ressources nationales et régionales\n  \n\n\n\n\n\nCe site a été créé avec Quarto par Brett Johnson et Albury C. et est hébergé avec Github Pages. Les perspectives de l’utilisateur ont été inspirées par le site ELIXIR RDMKit. Les icônes proviennent de Font Awesome. En cas de problème avec le site, veuillez créer un problème Github ou contacter Albury C.."
+  },
+  {
+    "objectID": "index.html#perspectives-1",
+    "href": "index.html#perspectives-1",
+    "title": "l’Unité de gestion des données",
+    "section": "",
+    "text": "Parcourez nos ressources en fonction de votre point de vue.\n\n\n  \n    \n    Cycle de vie des données\n  \n  \n      \n      Votre rôle\n  \n  \n      \n      Votre domaine\n  \n  \n      \n      Votre tâche\n  \n  \n      \n      Outils recommandés\n  \n   \n    \n    Ressources nationales et régionales"
+  },
+  {
+    "objectID": "index.html#à-propos-de-ce-site",
+    "href": "index.html#à-propos-de-ce-site",
+    "title": "l’Unité de gestion des données",
+    "section": "",
+    "text": "Ce site a été créé avec Quarto par Brett Johnson et Albury C. et est hébergé avec Github Pages. Les perspectives de l’utilisateur ont été inspirées par le site ELIXIR RDMKit. Les icônes proviennent de Font Awesome. En cas de problème avec le site, veuillez créer un problème Github ou contacter Albury C.."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "La DSU est une unité de la Section des données sur les pêches et les évaluations (FADS) de la Région Pacifique de Pêches et Océans Canada (MPO).\nNous sommes une équipe dévouée à l’amélioration des pratiques de gestion et d’intendance des données au sein du MPO. Nous nous concentrons principalement sur les données relatives au saumon du Pacifique dans la région Pacifique du MPO, y compris les données biologiques (par exemple, le poids du poisson, la longueur, l’âge, les statistiques d’échappement, les données génomiques), les saumons juvéniles et les données écologiques et environnementales associées.\nNotre objectif est de fournir des conseils et une assistance tout au long du cycle de vie de la gestion des données, de la planification à la publication. Nous nous efforçons de veiller à ce que nos pratiques soient conformes aux normes modernes en matière de données, telles que celles décrites dans la stratégie de données du MPO et la stratégie de données numériques du gouvernement du Canada. Par exemple, notre travail est guidé par les principes visant à rendre les données trouvables, accessibles, interopérables et réutilisables (FAIR, en anglais seulement). En outre, nous accordons une grande importance aux principes de gouvernance des données autochtones, tels que propriété, contrôle, accès et possession (PCAP), et nous nous engageons à aider nos collaborateurs à respecter et à mettre en œuvre ces principes dans le cadre de leur travail."
+  },
+  {
+    "objectID": "the-team.html",
+    "href": "the-team.html",
+    "title": "Notre équipe",
+    "section": "",
+    "text": "L’expérience de Brett comprend la gestion et la recherche liées au saumon juvénile avant de concentrer sa carrière sur l’intendance des données scientifiques. Brett a travaillé en étroite collaboration avec la Commission des poissons anadromes du Pacifique Nord, l’Organisation des sciences de la mer pour le Pacifique Nord et le Système canadien intégré d’observation de l’océan sur l’intendance des données au cours de son mandat à l’Institut Hakai. En tant que chef de programme, Brett fournit des plans stratégiques pour le développement de solutions de données et de processus d’intendance des données, met en œuvre des plans de gestion de projet et développe des cadres pour les normes de données.\n\n\n\n\n\n\n\n\nAnna est titulaire d’une licence en biodiversité et conservation et d’un master en gestion de la faune sauvage de l’université de Macquarie. Au cours des huit dernières années, elle a travaillé en tant que consultante SIG et chef de projet. Elle a également obtenu le diplôme avancé d’applications SIG de l’université de l’île de Vancouver. Le rôle d’Anna consiste à coordonner la gouvernance des données régionales en liaison avec les efforts nationaux, à soutenir la mise en œuvre des pratiques FAIR et à guider le personnel pour alimenter les référentiels de données régionaux.\n\n\n\n\n\n\n\n\nShaorong a travaillé auparavant au laboratoire de génétique moléculaire de la Station biologique du Pacifique, où elle a utilisé des technologies de pointe en génétique et en génomique pour étudier l’identification, la migration, la condition physique et la santé des stocks de saumon. Avec environ 25 ans d’expérience au MPO, Shaorong comprend l’importance de la normalisation de la saisie, du stockage et de l’analyse des données pour garantir la cohérence et la fiabilité des informations, ainsi qu’un partage efficace des données. Le rôle de Shaorong consiste à cartographier les processus opérationnels, à développer des solutions régionales et à travailler avec des bases de données relatives aux biodonnées du saumon.\n\n\n\n\n\n\n\n\nStephen a rejoint le MPO dans la Région des Maritimes après avoir obtenu une maîtrise en océanographie à l’Université Dalhousie. Son expérience comprend l’élaboration de rapports automatisés sur les espèces en péril en R Markdown, la recherche sur les effets potentiels de la conchyliculture sur les communautés de zooplancton et l’aide à la publication des documents du SCCS. Stephen coordonne les liens entre la gouvernance des données et les efforts nationaux, soutient la mise en œuvre des principes FAIR et guide le personnel pour alimenter les dépôts de données dans les régions.\n\n\n\n\n\n\n\n\nAlbury est titulaire d’une licence et d’une maîtrise en biologie de l’université de Dalhousie. Ses recherches ont porté sur la biogéochimie des éléments nutritifs à l’état de traces. Depuis, il a travaillé comme scientifique des données dans divers ministères, où il a contribué à la modernisation des flux de travail analytiques à l’aide d’outils de science des données ouverts tels que R, Python et Git. À la DSU, ils développent des pipelines de données reproductibles, soutiennent le personnel régional dans le traitement des données, élaborent des normes de données unifiées, etc."
+  },
+  {
+    "objectID": "the-team.html#brett-johnson-chef-de-programme-de-lunité-de-gestion-des-données",
+    "href": "the-team.html#brett-johnson-chef-de-programme-de-lunité-de-gestion-des-données",
+    "title": "Notre équipe",
+    "section": "",
+    "text": "L’expérience de Brett comprend la gestion et la recherche liées au saumon juvénile avant de concentrer sa carrière sur l’intendance des données scientifiques. Brett a travaillé en étroite collaboration avec la Commission des poissons anadromes du Pacifique Nord, l’Organisation des sciences de la mer pour le Pacifique Nord et le Système canadien intégré d’observation de l’océan sur l’intendance des données au cours de son mandat à l’Institut Hakai. En tant que chef de programme, Brett fournit des plans stratégiques pour le développement de solutions de données et de processus d’intendance des données, met en œuvre des plans de gestion de projet et développe des cadres pour les normes de données."
+  },
+  {
+    "objectID": "the-team.html#anna-douglas-morris-agent-de-lintégration-des-données",
+    "href": "the-team.html#anna-douglas-morris-agent-de-lintégration-des-données",
+    "title": "Notre équipe",
+    "section": "",
+    "text": "Anna est titulaire d’une licence en biodiversité et conservation et d’un master en gestion de la faune sauvage de l’université de Macquarie. Au cours des huit dernières années, elle a travaillé en tant que consultante SIG et chef de projet. Elle a également obtenu le diplôme avancé d’applications SIG de l’université de l’île de Vancouver. Le rôle d’Anna consiste à coordonner la gouvernance des données régionales en liaison avec les efforts nationaux, à soutenir la mise en œuvre des pratiques FAIR et à guider le personnel pour alimenter les référentiels de données régionaux."
+  },
+  {
+    "objectID": "the-team.html#shaorong-li-agent-de-la-gestion-des-donées-biologiques-sur-le-saumon",
+    "href": "the-team.html#shaorong-li-agent-de-la-gestion-des-donées-biologiques-sur-le-saumon",
+    "title": "Notre équipe",
+    "section": "",
+    "text": "Shaorong a travaillé auparavant au laboratoire de génétique moléculaire de la Station biologique du Pacifique, où elle a utilisé des technologies de pointe en génétique et en génomique pour étudier l’identification, la migration, la condition physique et la santé des stocks de saumon. Avec environ 25 ans d’expérience au MPO, Shaorong comprend l’importance de la normalisation de la saisie, du stockage et de l’analyse des données pour garantir la cohérence et la fiabilité des informations, ainsi qu’un partage efficace des données. Le rôle de Shaorong consiste à cartographier les processus opérationnels, à développer des solutions régionales et à travailler avec des bases de données relatives aux biodonnées du saumon."
+  },
+  {
+    "objectID": "the-team.html#stephen-finnis-agent-régional-de-la-gestion-des-donées",
+    "href": "the-team.html#stephen-finnis-agent-régional-de-la-gestion-des-donées",
+    "title": "Notre équipe",
+    "section": "",
+    "text": "Stephen a rejoint le MPO dans la Région des Maritimes après avoir obtenu une maîtrise en océanographie à l’Université Dalhousie. Son expérience comprend l’élaboration de rapports automatisés sur les espèces en péril en R Markdown, la recherche sur les effets potentiels de la conchyliculture sur les communautés de zooplancton et l’aide à la publication des documents du SCCS. Stephen coordonne les liens entre la gouvernance des données et les efforts nationaux, soutient la mise en œuvre des principes FAIR et guide le personnel pour alimenter les dépôts de données dans les régions."
+  },
+  {
+    "objectID": "the-team.html#albury-c-gestionnaire-de-produits-de-données",
+    "href": "the-team.html#albury-c-gestionnaire-de-produits-de-données",
+    "title": "Notre équipe",
+    "section": "",
+    "text": "Albury est titulaire d’une licence et d’une maîtrise en biologie de l’université de Dalhousie. Ses recherches ont porté sur la biogéochimie des éléments nutritifs à l’état de traces. Depuis, il a travaillé comme scientifique des données dans divers ministères, où il a contribué à la modernisation des flux de travail analytiques à l’aide d’outils de science des données ouverts tels que R, Python et Git. À la DSU, ils développent des pipelines de données reproductibles, soutiennent le personnel régional dans le traitement des données, élaborent des normes de données unifiées, etc."
+  },
+  {
+    "objectID": "training-resources.html",
+    "href": "training-resources.html",
+    "title": "Formation",
+    "section": "",
+    "text": "Bienvenue sur la page des ressources de formation du site web de l’unité d’intendance des données ! Vous y trouverez une collection de ressources de formation pour améliorer vos compétences et vos connaissances en matière d’intendance des données.\n\n\n\nContrôle de version avec Git : charpenterie logicielle](https://swcarpentry.github.io/git-novice/)\nAnalyse et visualisation de données en R pour les écologistes : charpenterie logicielle (en anglais seulement)\nAnalyse et visualisation de données en Python pour les écologistes(en anglais seulement)\n[Introduction à l’évaluation des stocks] (https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/index-fra.html)\nCatalogue de l’École de la fonction publique du Canada\nMicrosoft Learn"
+  },
+  {
+    "objectID": "training-resources.html#ressources-de-formation-en-ligne",
+    "href": "training-resources.html#ressources-de-formation-en-ligne",
+    "title": "Formation",
+    "section": "",
+    "text": "Contrôle de version avec Git : charpenterie logicielle](https://swcarpentry.github.io/git-novice/)\nAnalyse et visualisation de données en R pour les écologistes : charpenterie logicielle (en anglais seulement)\nAnalyse et visualisation de données en Python pour les écologistes(en anglais seulement)\n[Introduction à l’évaluation des stocks] (https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/index-fra.html)\nCatalogue de l’École de la fonction publique du Canada\nMicrosoft Learn"
+  },
+  {
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "Requirements",
+    "section": "",
+    "text": "Welcome contributors to the DSU website! This document contains detailed instructions on working with the quarto repo and using Github Actions to the publish the site.\n\nRequirements\nYou must have a Github account and Git downloaded on your machine to make changes to this repository.\n\n\nCloning and Adding a Branch\nIn order to make changes to the site, you must clone the repository and create a branch.\n\nClone the repository with git by running git clone https://github.com/dfo-pacific-science/data-stewardship-unit.git in terminal.\nInstall the required dependencies: R -e \"install.packages('quarto')\"\nMake a new branch using git branch new-branch-name. Please name the branch descriptively.\nMake your changes to the website and preview them by running quarto render. Each time any file is changed, you will need to run quarto render to see the changes locally.\nRun quarto publish gh-pages\n\n\n\nContributing\nYou may push your changes via the new branch. After pushing, you may make a pull request to merge the branch to main. Merguing to main will save your changes to the website and trigger a deployment via github actions. Deployment instructions are located in the .github/workflows/publish.yml file.\nAnother team member review your pull request with site changes. They should render the changes on their local machine with quarto render.\nCheck the deployment status after merging the new branch to main by looking at the Actions tab in Github. If succesful, a green checkmark will appear. It may take up to a few moments for the changes to be reflected on the site.\n\n\nResources\n\nQuarto Website Documentation\nGithub Pages\nRendering for CI"
+  },
+  {
+    "objectID": "perspectives/national-and-regional-resources.html",
+    "href": "perspectives/national-and-regional-resources.html",
+    "title": "Ressources nationales et régionales",
+    "section": "",
+    "text": "Cette page fournit des informations et des ressources sur les ressources nationales et régionales liées à l’intendance des données.\n\n\n\nStratégie de données 2023-2026 pour la fonction publique fédérale - Gouvernement du Canada\nGouvernement ouvert - Gouvernement du Canada\nSoyez de bons gestionnaires de données - Gouvernement du Canada\n\n\n\n\n\nSCCS Pacifique\n\n\n\n\n\nCycle de vie des données\nVotre rôle](your-role.qmd)\nDomaine de données](data-domain.qmd)\nPiles d’outils recommandées\nVos tâches"
+  },
+  {
+    "objectID": "perspectives/national-and-regional-resources.html#ressources-nationales",
+    "href": "perspectives/national-and-regional-resources.html#ressources-nationales",
+    "title": "Ressources nationales et régionales",
+    "section": "",
+    "text": "Stratégie de données 2023-2026 pour la fonction publique fédérale - Gouvernement du Canada\nGouvernement ouvert - Gouvernement du Canada\nSoyez de bons gestionnaires de données - Gouvernement du Canada"
+  },
+  {
+    "objectID": "perspectives/national-and-regional-resources.html#ressources-régionales",
+    "href": "perspectives/national-and-regional-resources.html#ressources-régionales",
+    "title": "Ressources nationales et régionales",
+    "section": "",
+    "text": "SCCS Pacifique"
+  },
+  {
+    "objectID": "perspectives/national-and-regional-resources.html#continuez-à-explorer-les-autres-perspectives",
+    "href": "perspectives/national-and-regional-resources.html#continuez-à-explorer-les-autres-perspectives",
+    "title": "Ressources nationales et régionales",
+    "section": "",
+    "text": "Cycle de vie des données\nVotre rôle](your-role.qmd)\nDomaine de données](data-domain.qmd)\nPiles d’outils recommandées\nVos tâches"
+  },
+  {
+    "objectID": "perspectives/data-life-cycle.html",
+    "href": "perspectives/data-life-cycle.html",
+    "title": "Cycle de vie des données",
+    "section": "",
+    "text": "Le cycle de vie des données fait référence aux étapes que traversent les données depuis leur création jusqu’à leur archivage ou leur élimination. Comprendre le cycle de vie des données est essentiel pour une gestion et une intendance efficaces des données. Cette page présente une vue d’ensemble des étapes du cycle de vie des données et des ressources nécessaires à chacune d’entre elles.\n\n\n\n\nCette étape implique la collecte de données brutes provenant de diverses sources, telles que des observations sur le terrain, des enquêtes, des expériences ou des capteurs.\n\nre3data.org : Registry of Research Data Repositories avec des informations détaillées sur plus de 2000 dépôts de données de recherche (en anglais seulement)\nTravailler avec des données et des API\n\n\n\n\nUne fois collectées, les données doivent être organisées et structurées de manière à faciliter leur stockage, leur extraction et leur analyse. Cette étape comprend le nettoyage, le formatage et la transformation des données.\n\n\n\nLes données doivent être stockées de manière sécurisée et accessible. Cette étape implique la sélection de systèmes de stockage appropriés, tels que les bases de données ou le stockage en nuage, et la mise en œuvre de stratégies de sauvegarde et de récupération des données.\n\nClôture d’un projet : Archivage et préservation du contenu (en anglais seulement)\n\n\n\n\nL’analyse des données consiste à appliquer des techniques statistiques et informatiques pour extraire des informations et des connaissances des données. Cette étape comprend l’exploration des données, la modélisation et la visualisation.\n\nPython pour l’analyse des données (en anglais seulement)\nR pour la science des données (en anglais seulement)\n\n\n\n\nLe partage des données avec d’autres est un aspect important de la gestion des données. Cette étape implique de préparer les données pour le partage, de garantir la confidentialité et la sécurité des données et de sélectionner les plateformes de partage de données ou les référentiels appropriés.\n\nPartage des données : Que faire de vos données traitées - La salle des machines (en anglais seulement)\n\n\n\n\nLa conservation des données garantit l’accessibilité et l’utilisabilité à long terme des données. Cette étape comprend la documentation des données, la création de métadonnées et l’archivage des données.\n\nPublication de données et d’informations ouvertes - Gouvernement du Canada\nComment publier des données ouvertes : une liste de conseils et d’outils (en anglais seulement)\n\n\n\n\n\n\nVotre rôle\nDomaine de données\nPiles d’outils recommandés\nRessources nationales et régionales](national-and-regional-resources.qmd)\nVos tâches"
+  },
+  {
+    "objectID": "perspectives/data-life-cycle.html#étapes-du-cycle-de-vie-des-données",
+    "href": "perspectives/data-life-cycle.html#étapes-du-cycle-de-vie-des-données",
+    "title": "Cycle de vie des données",
+    "section": "",
+    "text": "Cette étape implique la collecte de données brutes provenant de diverses sources, telles que des observations sur le terrain, des enquêtes, des expériences ou des capteurs.\n\nre3data.org : Registry of Research Data Repositories avec des informations détaillées sur plus de 2000 dépôts de données de recherche (en anglais seulement)\nTravailler avec des données et des API\n\n\n\n\nUne fois collectées, les données doivent être organisées et structurées de manière à faciliter leur stockage, leur extraction et leur analyse. Cette étape comprend le nettoyage, le formatage et la transformation des données.\n\n\n\nLes données doivent être stockées de manière sécurisée et accessible. Cette étape implique la sélection de systèmes de stockage appropriés, tels que les bases de données ou le stockage en nuage, et la mise en œuvre de stratégies de sauvegarde et de récupération des données.\n\nClôture d’un projet : Archivage et préservation du contenu (en anglais seulement)\n\n\n\n\nL’analyse des données consiste à appliquer des techniques statistiques et informatiques pour extraire des informations et des connaissances des données. Cette étape comprend l’exploration des données, la modélisation et la visualisation.\n\nPython pour l’analyse des données (en anglais seulement)\nR pour la science des données (en anglais seulement)\n\n\n\n\nLe partage des données avec d’autres est un aspect important de la gestion des données. Cette étape implique de préparer les données pour le partage, de garantir la confidentialité et la sécurité des données et de sélectionner les plateformes de partage de données ou les référentiels appropriés.\n\nPartage des données : Que faire de vos données traitées - La salle des machines (en anglais seulement)\n\n\n\n\nLa conservation des données garantit l’accessibilité et l’utilisabilité à long terme des données. Cette étape comprend la documentation des données, la création de métadonnées et l’archivage des données.\n\nPublication de données et d’informations ouvertes - Gouvernement du Canada\nComment publier des données ouvertes : une liste de conseils et d’outils (en anglais seulement)"
+  },
+  {
+    "objectID": "perspectives/data-life-cycle.html#continuez-à-explorer-les-autres-perspectives",
+    "href": "perspectives/data-life-cycle.html#continuez-à-explorer-les-autres-perspectives",
+    "title": "Cycle de vie des données",
+    "section": "",
+    "text": "Votre rôle\nDomaine de données\nPiles d’outils recommandés\nRessources nationales et régionales](national-and-regional-resources.qmd)\nVos tâches"
+  },
+  {
+    "objectID": "perspectives/your-role.html",
+    "href": "perspectives/your-role.html",
+    "title": "Votre rôle",
+    "section": "",
+    "text": "Soyez de bons gestionnaires de données - Guide des normes numériques du gouvernement du Canada\nIntendance des données : introduction\nPrincipes fondamentaux de la gestion des données : Frameworks and Responsibilities - Dataversity (en anglais seulement)\nRévéler le rôle d’un gestionnaire de données : Favoriser l’intégrité et la gouvernance des données - Data Rosetta Stone (en anglais seulement)\nLa gestion des données est essentielle - iData (en anglais seulement)\n\n\n\n\n\nModèles de gardiens de données - Statistique Canada\nDépositaire de données : rôle, missions et compétences (en anglais seulement)\n\n\n\n\n\nGuide pour les administrateurs de données - Université du Delaware (en anglais seulement)\n\n\n\n\n\nUtilisation et publication de données et d’informations ouvertes\nChoix de licence (en anglais seulement)\nPartage des données : Que faire de vos données traitées - La salle des machines (en anglais seulement)\n\n\n\n\n\nGuide du consommateur de données (en anglais seulement)\nObtenir des données : Collecter des données pour votre projet - La salle des machines(en anglais seulement)\nComprendre les données : Nettoyer, préparer et vérifier les données - La salle des machines (en anglais seulement)\n\n\n\n\n\nCycle de vie des données\nDomaine de données](data-domain.qmd)\nPiles d’outils recommandés\nRessources nationales et régionales\nVos tâches"
+  },
+  {
+    "objectID": "perspectives/your-role.html#responsable-des-données",
+    "href": "perspectives/your-role.html#responsable-des-données",
+    "title": "Votre rôle",
+    "section": "",
+    "text": "Soyez de bons gestionnaires de données - Guide des normes numériques du gouvernement du Canada\nIntendance des données : introduction\nPrincipes fondamentaux de la gestion des données : Frameworks and Responsibilities - Dataversity (en anglais seulement)\nRévéler le rôle d’un gestionnaire de données : Favoriser l’intégrité et la gouvernance des données - Data Rosetta Stone (en anglais seulement)\nLa gestion des données est essentielle - iData (en anglais seulement)"
+  },
+  {
+    "objectID": "perspectives/your-role.html#dépositaire-des-données",
+    "href": "perspectives/your-role.html#dépositaire-des-données",
+    "title": "Votre rôle",
+    "section": "",
+    "text": "Modèles de gardiens de données - Statistique Canada\nDépositaire de données : rôle, missions et compétences (en anglais seulement)"
+  },
+  {
+    "objectID": "perspectives/your-role.html#administrateur-des-données",
+    "href": "perspectives/your-role.html#administrateur-des-données",
+    "title": "Votre rôle",
+    "section": "",
+    "text": "Guide pour les administrateurs de données - Université du Delaware (en anglais seulement)"
+  },
+  {
+    "objectID": "perspectives/your-role.html#contributeur-de-données",
+    "href": "perspectives/your-role.html#contributeur-de-données",
+    "title": "Votre rôle",
+    "section": "",
+    "text": "Utilisation et publication de données et d’informations ouvertes\nChoix de licence (en anglais seulement)\nPartage des données : Que faire de vos données traitées - La salle des machines (en anglais seulement)"
+  },
+  {
+    "objectID": "perspectives/your-role.html#consommateur-de-données",
+    "href": "perspectives/your-role.html#consommateur-de-données",
+    "title": "Votre rôle",
+    "section": "",
+    "text": "Guide du consommateur de données (en anglais seulement)\nObtenir des données : Collecter des données pour votre projet - La salle des machines(en anglais seulement)\nComprendre les données : Nettoyer, préparer et vérifier les données - La salle des machines (en anglais seulement)"
+  },
+  {
+    "objectID": "perspectives/your-role.html#poursuivre-lexploration-des-autres-perspectives",
+    "href": "perspectives/your-role.html#poursuivre-lexploration-des-autres-perspectives",
+    "title": "Votre rôle",
+    "section": "",
+    "text": "Cycle de vie des données\nDomaine de données](data-domain.qmd)\nPiles d’outils recommandés\nRessources nationales et régionales\nVos tâches"
+  }
+]
