@@ -1,6 +1,7 @@
----
-title: Your Role
----
+
+::: {.content-visible when-profile="english"}
+
+# Your Role 
 
 ## Data Steward
 
@@ -18,6 +19,8 @@ title: Your Role
 ## Data Trustee
 
 - [Guidance for Data Trustees - University of Delaware](https://www1.udel.edu/security/framework/roles/datatrustee.html)
+
+
 
 ## Data Contributor
 
@@ -38,3 +41,49 @@ title: Your Role
 - [Recommended Tool Stacks](recommended-tools.qmd)
 - [National and Regional Resources](national-and-regional-resources.qmd)
 - [Your Tasks](your-tasks.qmd)
+
+::: 
+
+::: {.content-visible when-profile="french"}
+
+# Votre rôle 
+
+## Responsable des données
+
+- [Soyez de bons gestionnaires de données - Guide des normes numériques du gouvernement du Canada](https://www.canada.ca/fr/gouvernement/systeme/gouvernement-numerique/normes-numeriques-gouvernement-canada/etre-bons-utilisateurs-donnees.html)
+- [Intendance des données : introduction](https://www.statcan.gc.ca/fr/afc/litteratie-donnees/catalogue/892000062020013)
+- [Principes fondamentaux de la gestion des données : Frameworks and Responsibilities - Dataversity (en anglais seulement)](https://www.dataversity.net/fundamentals-of-data-stewardship-frameworks-and-responsibilities/)
+- [Révéler le rôle d'un gestionnaire de données : Favoriser l'intégrité et la gouvernance des données - Data Rosetta Stone (en anglais seulement)](https://data-rosetta-stone.com/data-steward-role-guide/)
+- [La gestion des données est essentielle - iData (en anglais seulement)](https://blog.idatainc.com/data-stewardship-resources)
+
+## Dépositaire des données
+
+- [Modèles de gardiens de données - Statistique Canada](https://www.statcan.gc.ca/fr/apercu/obligation/destinataires/obligation-devoirs)
+- [Dépositaire de données : rôle, missions et compétences (en anglais seulement)](https://datascientest.com/en/data-custodian-role-missions-and-skills)
+
+## Administrateur des données
+
+- [Guide pour les administrateurs de données - Université du Delaware (en anglais seulement)](https://www1.udel.edu/security/framework/roles/datatrustee.html)
+
+
+## Contributeur de données
+
+- [Utilisation et publication de données et d'informations ouvertes](https://ouvert.canada.ca/fr/utilisation-donnees-ouvertes)
+- [Choix de licence (en anglais seulement)](https://chooser-beta.creativecommons.org/)
+- [Partage des données : Que faire de vos données traitées - La salle des machines (en anglais seulement)](https://the-engine-room.github.io/responsible-data-handbook/chapters/chapter-02c-sharing-data.html)
+
+## Consommateur de données
+
+- [Guide du consommateur de données (en anglais seulement)](https://dataqualitycampaign.org/resource/consumers-guide-to-data/)
+- [Obtenir des données : Collecter des données pour votre projet - La salle des machines(en anglais seulement)](https://the-engine-room.github.io/responsible-data-handbook/chapters/chapter-02a-getting-data.html)
+- [Comprendre les données : Nettoyer, préparer et vérifier les données - La salle des machines (en anglais seulement)](https://the-engine-room.github.io/responsible-data-handbook/chapters/chapter-02b-understanding-data.html)
+
+## Poursuivre l'exploration des autres perspectives :
+
+- [Cycle de vie des données](data-life-cycle.qmd)
+- Domaine de données](data-domain.qmd)
+- [Piles d'outils recommandés](recommended-tools.qmd)
+- [Ressources nationales et régionales](national-and-regional-resources.qmd)
+- [Vos tâches](your-tasks.qmd)
+
+:::

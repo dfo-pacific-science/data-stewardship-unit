@@ -1,6 +1,7 @@
----
-title: Data Stewardship Unit
----
+
+::: {.content-visible when-profile="english"}
+
+# Data Stewardship Unit
 
 Welcome to the Data Stewardship website for Fisheries and Oceans Canada employees in the Pacific Region Science Branch. This website provides support for your data stewardship and management responsibilities.
 
@@ -13,7 +14,7 @@ Browse our resources by your perspective.
 ```{=html}
 
 <div class="logocontainer">
-  <a href="link1.com" class="logotile">
+  <a href="perspectives/data-life-cycle.qmd" class="logotile">
     <img src="images/icons/data-life-cycle.svg" alt="Data Life Cycle" class="logo">
     <div class="logotitle">Data Life Cycle</div>
   </a>
@@ -44,3 +45,56 @@ Browse our resources by your perspective.
 ## About This Site
 
 This site was created with [Quarto](https://quarto.org/) by Brett Johnson and Albury C. and is hosted with [Github Pages](https://pages.github.com/). The user perspectives were inspired by the [ELIXIR RDMKit site](https://rdmkit.elixir-europe.org/). Icons from [Font Awesome](https://fontawesome.com/). For problems with the site, please [create a Github issue](https://github.com/pbs-assess/data-stewardship-unit/issues/new) or contact [Albury C.](mailto:catalina.albury@dfo-mpo.gc.ca)
+
+:::
+
+
+::: {.content-visible when-profile="french"}
+
+# l'Unité de gestion des données
+
+Bienvenue sur le site Web de l'intendance des données destiné aux employés de Pêches et Océans Canada de la Direction des sciences de la région du Pacifique. Ce site Web vous aide à assumer vos responsabilités en matière d'intendance et de gestion des données.
+
+
+## Perspectives
+
+Parcourez nos ressources en fonction de votre point de vue. 
+
+```{=html}
+
+<div class="logocontainer">
+  <a href="data-life-cycle" class="logotile">
+    <img src="images/icons/data-life-cycle.svg" alt="Cycle de vie des données" class="logo">
+    <div class="logotitle">Cycle de vie des données</div>
+  </a>
+  <a href="perspectives/your-role.qmd" class="logotile">
+      <img src="images/icons/your-role.svg" alt="Votre rôle" class="logo">
+      <div class="logotitle">Votre rôle</div>
+  </a>
+  <a href="perspectives/data-domain.qmd" class="logotile">
+      <img src="images/icons/data-domain.svg" alt="Votre domaine" class="logo">
+      <div class="logotitle">Votre domaine</div>
+  </a>
+  <a href="perspectives/your-tasks.qmd" class="logotile">
+      <img src="images/icons/your-tasks.svg" alt="Votre tâche" class="logo">
+      <div class="logotitle">Votre tâche</div>
+  </a>
+  <a href="perspectives/recommended-tools.qmd" class="logotile">
+      <img src="images/icons/recommended-tools.svg" alt="Outils recommandés" class="logo">
+      <div class="logotitle">Outils recommandés</div>
+  </a>
+  <a href="perspectives/national-and-regional-resources.qmd" class="logotile"> 
+    <img src="images/icons/national-and-regional-resources.svg" alt="Ressources nationales et régionales" class="logo">
+    <div class="logotitle">Ressources nationales et régionales</div>
+  </a>
+</div>
+
+```
+
+## À propos de ce site
+
+Ce site a été créé avec [Quarto](https://quarto.org/) par Brett Johnson et Albury C. et est hébergé avec [Github Pages](https://pages.github.com/). Les perspectives de l'utilisateur ont été inspirées par le [site ELIXIR RDMKit](https://rdmkit.elixir-europe.org/). Les icônes proviennent de [Font Awesome](https://fontawesome.com/). En cas de problème avec le site, veuillez [créer un problème Github](https://github.com/pbs-assess/data-stewardship-unit/issues/new) ou contacter [Albury C.](mailto:catalina.albury@dfo-mpo.gc.ca).
+
+:::
+
+

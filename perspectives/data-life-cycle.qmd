@@ -1,6 +1,5 @@
----
-type: website
----
+
+::: {.content-visible when-profile="english"}
 
 # Data Life Cycle
   
@@ -46,7 +45,7 @@ Sharing data with others is an important aspect of data stewardship. This stage 
 
 Data preservation ensures the long-term accessibility and usability of data. This stage includes data documentation, metadata creation, and data archiving.
 
-- [Publishing Open Data and Information - Government of Canada](https://open.canada.ca/en/registry-operations-guide/your-account)
+- [Publishing Open Data and Information - Government of Canada](https://open.canada.ca/en/using-open-data)
 - [How to publish open data: a list of advice and tools](https://github.com/theodi/data-publish-list)
 
 ## Continue exploring the other perspectives:
@@ -56,3 +55,62 @@ Data preservation ensures the long-term accessibility and usability of data. Thi
 - [Recommended Tool Stacks](recommended-tools.qmd)
 - [National and Regional Resources](national-and-regional-resources.qmd)
 - [Your Tasks](your-tasks.qmd)
+
+:::
+
+::: {.content-visible when-profile="french"}
+
+# Cycle de vie des données
+  
+Le cycle de vie des données fait référence aux étapes que traversent les données depuis leur création jusqu'à leur archivage ou leur élimination. Comprendre le cycle de vie des données est essentiel pour une gestion et une intendance efficaces des données. Cette page présente une vue d'ensemble des étapes du cycle de vie des données et des ressources nécessaires à chacune d'entre elles.
+
+## Étapes du cycle de vie des données
+
+### 1. **Collecte des données**
+
+Cette étape implique la collecte de données brutes provenant de diverses sources, telles que des observations sur le terrain, des enquêtes, des expériences ou des capteurs.
+
+- [re3data.org : Registry of Research Data Repositories avec des informations détaillées sur plus de 2000 dépôts de données de recherche (en anglais seulement)](https://www.re3data.org/)
+- [Travailler avec des données et des API](https://ouvert.canada.ca/fr/utilisation-api/donnees-structurees)
+
+
+### 2. **Organisation des données**
+
+Une fois collectées, les données doivent être organisées et structurées de manière à faciliter leur stockage, leur extraction et leur analyse. Cette étape comprend le nettoyage, le formatage et la transformation des données.
+
+### 3. **Stockage des données**
+
+Les données doivent être stockées de manière sécurisée et accessible. Cette étape implique la sélection de systèmes de stockage appropriés, tels que les bases de données ou le stockage en nuage, et la mise en œuvre de stratégies de sauvegarde et de récupération des données.
+
+- [Clôture d'un projet : Archivage et préservation du contenu (en anglais seulement)](https://the-engine-room.github.io/responsible-data-handbook/chapters/chapter-03-closing-a-project.html)
+
+### 4. **Analyse des données**
+
+L'analyse des données consiste à appliquer des techniques statistiques et informatiques pour extraire des informations et des connaissances des données. Cette étape comprend l'exploration des données, la modélisation et la visualisation.
+
+
+- [Python pour l'analyse des données (en anglais seulement)](https://wesmckinney.com/book/)
+- [R pour la science des données (en anglais seulement)](https://r4ds.had.co.nz/)
+
+### 5. **Partage des données**
+
+Le partage des données avec d'autres est un aspect important de la gestion des données. Cette étape implique de préparer les données pour le partage, de garantir la confidentialité et la sécurité des données et de sélectionner les plateformes de partage de données ou les référentiels appropriés.
+
+- [Partage des données : Que faire de vos données traitées - La salle des machines (en anglais seulement)](https://the-engine-room.github.io/responsible-data-handbook/chapters/chapter-02c-sharing-data.html)
+
+### 6. **Préservation des données**
+
+La conservation des données garantit l'accessibilité et l'utilisabilité à long terme des données. Cette étape comprend la documentation des données, la création de métadonnées et l'archivage des données.
+
+- [Publication de données et d'informations ouvertes - Gouvernement du Canada](https://ouvert.canada.ca/fr/utilisation-donnees-ouvertes)
+- [Comment publier des données ouvertes : une liste de conseils et d'outils (en anglais seulement)](https://github.com/theodi/data-publish-list)
+
+## Continuez à explorer les autres perspectives :
+
+- [Votre rôle](your-role.qmd)
+- [Domaine de données](data-domain.qmd)
+- [Piles d'outils recommandés](recommended-tools.qmd)
+- Ressources nationales et régionales](national-and-regional-resources.qmd)
+- [Vos tâches](your-tasks.qmd)
+
+:::

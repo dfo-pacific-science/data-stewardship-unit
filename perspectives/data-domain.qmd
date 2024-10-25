@@ -1,7 +1,7 @@
----
-title: Data Domain
----
 
+::: {.content-visible when-profile="english"}
+
+# Data Domain
 
 This page provides information and resources related to different data domains in the Pacific Region Science Branch of Fisheries and Oceans Canada.
 
@@ -27,8 +27,6 @@ This page provides information and resources related to different data domains i
 - [EMBL Data Resourecs](https://www.ebi.ac.uk/services)
 - [NCBI](https://www.ncbi.nlm.nih.gov/)
 
-## Hydrographic Services
-
 ## Misc.
 - [Pacific Science Data and Results](https://www.pac.dfo-mpo.gc.ca/science/fieldnotes-carnet-expeditions/results-resultats-eng.html#datasets)
 
@@ -40,3 +38,47 @@ This page provides information and resources related to different data domains i
 - [Recommended Tool Stacks](recommended-tools.qmd)
 - [National and Regional Resources](national-and-regional-resources.qmd)
 - [Your Tasks](your-tasks.qmd)
+
+:::
+
+::: {.content-visible when-profile="french"}
+
+# Domaine de données
+
+Cette page fournit des informations et des ressources relatives aux différents domaines de données de la Direction des sciences de la région Pacifique de Pêches et Océans Canada.
+
+## Évaluation et mise en valeur des stocks de saumon
+
+- [Mobilisation des données sur le saumon (en anglais seulement)](https://osf.io/hk4gu)
+- [Mobilisation des données dans le cadre de l'Année internationale du système d'observation des océans pour le saumon (en anglais seulement)](https://osf.io/preprints/osf/83x9a)
+- [Amélioration de la mobilisation des données grâce à un dépôt de données centralisé pour le saumon de l'Atlantique (*Salmo salar L.*) : Fournir les ressources pour promouvoir un cadre de gestion basé sur l'écosystème (en anglais seulement)](https://www.sciencedirect.com/science/article/pii/S1574954122001960?via%3Dihub)
+- [La conception du système de données modifie la signification des données écologiques : restauration de l'habitat du saumon dans le nord-ouest du Pacifique des États-Unis (en anglais seulement)](https://esajournals.onlinelibrary.wiley.com/doi/10.1002/ecs2.2920)
+
+## Science des écosystèmes
+- [GBIF]https://www.gbif.org/fr/what-is-gbif)
+
+## Science de l'océan
+
+- [OBIS (en anglais seulement)](https://manual.obis.org/)
+- [ERDDAP (en anglais seulement)](https://opendap.co-ops.nos.noaa.gov/erddap/index.html)
+
+## Gestion des pêches
+- [Cours en ligne sur l'introduction à l'évaluation des stocks](https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/index-fra.html)
+
+## Diagnostic et génomique
+- [EMBL Data Resourecs (en anglais seulement)](https://www.ebi.ac.uk/services)
+- NCBI](https://www.ncbi.nlm.nih.gov/)
+
+## Divers.
+- [Données et résultats scientifiques du Pacifique](https://www.pac.dfo-mpo.gc.ca/science/fieldnotes-carnet-expeditions/results-resultats-fra.html)
+
+## Poursuivre l'exploration des autres perspectives :
+
+- [Cycle de vie des données](data-life-cycle.qmd)
+- [Votre rôle](your-role.qmd)
+- [Domaine de données](data-domain.qmd)
+- [Piles d'outils recommandées](recommended-tools.qmd)
+- [Ressources nationales et régionales](national-and-regional-resources.qmd)
+- [Vos tâches](your-tasks.qmd)
+
+:::
