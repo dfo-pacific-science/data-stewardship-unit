@@ -12,19 +12,15 @@ jobs:
       contents: write
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+        
 
-      - name: Render Quarto project with profile1
-        run: quarto render --profile english
-
-      - name: Render Quarto project with profile2
-        run: quarto render --profile french
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
