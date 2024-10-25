@@ -1,0 +1,42 @@
+project: 
+  title: "Data Stewardship Unit"
+  output-dir: ./_site
+
+website: 
+  favicon: images/logo.png
+  
+  navbar: 
+    left: 
+      - href: index.qmd
+        text: "Home"
+      - text: "Perspectives"
+        menu: 
+          - href: perspectives/data-life-cycle.qmd
+            text: "Data Life Cycle"
+          - href: perspectives/your-role.qmd
+            text: "Your Role"
+          - href: perspectives/data-domain.qmd
+            text: "Data Domain"
+          - href: perspectives/your-tasks.qmd
+            text: "Your Tasks"
+          - href: perspectives/recommended-tools.qmd
+            text: "Recommended Tools"
+          - href: perspectives/national-and-regional-resources.qmd
+            text: "National and Regional Resources"
+      - href: training-resources.qmd
+        text: "Training"
+      - href: the-team.qmd
+        text: "Our Team"
+      - href: about.qmd
+        text: "About"
+    search: true
+    tools:
+      - icon: translate
+        href: ../fr
+        text: "Francais"
+  repo-url: https://dfo-pacific-science.github.io/data-stewardship-unit/
+  repo-actions: [edit, source, issue]
+  page-footer: "This work is licensed under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). Built with 💖 and Quarto." 
+
+lang: en
+

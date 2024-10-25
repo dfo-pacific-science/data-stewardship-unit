@@ -1,7 +1,10 @@
 ---
-title: Training Resources
+format: html
 ---
 
+::: {.content-visible when-profile="english"}
+
+# Training Resources
 
 Welcome to the Training Resources page of the Data Stewardship Unit website! Here, you will find a collection of training resources to enhance your skills and knowledge in data stewardship.
 
@@ -11,6 +14,25 @@ Welcome to the Training Resources page of the Data Stewardship Unit website! Her
 - [Data Analysis and Visualization in R for Ecologists: Software Carpentry](https://datacarpentry.org/R-ecology-lesson/)
 - [Data Analysis and Visualization in Python for Ecologists](https://datacarpentry.org/python-ecology-lesson/)
 - [Introduction to stock assessment](https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/index-eng.html)
-- [Canada School of Public Service Catalog](https://catalogue.csps-efpc.gc.ca/catalog?cm_locale=en&reveal_topic=0&reveal_subtopic=0&reveal_competency=0&reveal_duration=0&reveal_type=0&reveal_delivery_method=0&query=&products_per_page=12&products_sort_order=product_name_asc&pagename=Catalog)
-- [Microsoft Lean](https://learn.microsoft.com/en-us/training/browse/)
+- [Canada School of Public Service Catalog](https://www.csps-efpc.gc.ca/catalogue/topics-eng.aspx)
+- [Microsoft Learn](https://learn.microsoft.com/en-us/training/browse/)
 
+:::
+
+::: {.content-visible when-profile="french"}
+
+# Formation
+
+Bienvenue sur la page des ressources de formation du site web de l'unité d'intendance des données ! Vous y trouverez une collection de ressources de formation pour améliorer vos compétences et vos connaissances en matière d'intendance des données.
+
+## Ressources de formation en ligne
+
+- Contrôle de version avec Git : charpenterie logicielle](https://swcarpentry.github.io/git-novice/)
+- [Analyse et visualisation de données en R pour les écologistes : charpenterie logicielle (en anglais seulement)](https://datacarpentry.org/R-ecology-lesson/)
+- [Analyse et visualisation de données en Python pour les écologistes(en anglais seulement)](https://datacarpentry.org/python-ecology-lesson/)
+- [Introduction à l'évaluation des stocks] (https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/index-fra.html)
+- [Catalogue de l'École de la fonction publique du Canada](https://www.csps-efpc.gc.ca/catalogue/topics-fra.aspx)
+- [Microsoft Learn](https://learn.microsoft.com/fr-ca/training/browse/)
+
+
+:::

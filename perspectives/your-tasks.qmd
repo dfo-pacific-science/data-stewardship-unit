@@ -1,7 +1,7 @@
----
-title: Your Tasks
----
 
+::: {.content-visible when-profile="english"}
+
+# Your Tasks
 
 This page provides information and resources for various tasks in data stewardship. As an employee of Fisheries and Oceans Canada in the Pacific Region Science Branch, you have important responsibilities in managing and stewarding data. The following are some of the key tasks you may be involved in:
 
@@ -28,10 +28,9 @@ This page provides information and resources for various tasks in data stewardsh
 
 - [Managing Data: Setting up the 'Data Infrastructure'](https://the-engine-room.github.io/responsible-data-handbook/chapters/chapter-02-managing-data.html)
 
-## Submitting Research Proposals with Strong Data Management Aspects
 
 ## Project Planning and Tracking
-- [https://zenhub.medium.com/how-to-use-github-for-agile-project-management-2c5b0ec1dad6](https://zenhub.medium.com/how-to-use-github-for-agile-project-management-2c5b0ec1dad6)
+- [GitHub for Project Management — How to Organize and Track Your Agile Processes](https://zenhub.medium.com/how-to-use-github-for-agile-project-management-2c5b0ec1dad6)
 
 ## Data Analysis
 
@@ -49,3 +48,59 @@ This page provides information and resources for various tasks in data stewardsh
 - [Data Domain](data-domain.qmd)
 - [Recommended Tool Stacks](recommended-tools.qmd)
 - [National and Regional Resources](national-and-regional-resources.qmd)
+
+::: 
+
+::: {.content-visible when-profile="french"}
+
+# Vos tâches
+
+Cette page fournit des informations et des ressources pour diverses tâches liées à l'intendance des données. En tant qu'employé de Pêches et Océans Canada au sein de la Direction des sciences de la région du Pacifique, vous avez d'importantes responsabilités en matière de gestion et d'intendance des données. Voici quelques-unes des principales tâches auxquelles vous pourriez participer :
+
+## Publication de données
+
+- [Publication de données et d'informations ouvertes - Gouvernement du Canada](https://ouvert.canada.ca/fr/utilisation-donnees-ouvertes)
+- [Comment publier des données ouvertes : une liste de conseils et d'outils (en anglais seulement)](https://github.com/theodi/data-publish-list)
+
+## Stocker des données
+
+- [Clôture d'un projet : archivage et préservation du contenu (en anglais seulement)](https://the-engine-room.github.io/responsible-data-handbook/chapters/chapter-03-closing-a-project.html)
+
+## Standardisation des données/métadonnées
+
+- [Fairsharing.org : registre curatif consultable des normes de données/métadonnées par les éditeurs de revues et les bailleurs de fonds (en anglais seulement)](https://fairsharing.org/)
+- [Harmonisation des métadonnées géospatiales du Canada (en anglais seulement)](https://www.dublincore.org/conferences/2020/presentations/harmonizing_canada_s_geospatial_metadata/slides/slides.pdf)
+
+## Accéder aux données d'autres personnes
+
+- [re3data.org : Registry of Research Data Repositories avec des informations détaillées sur plus de 2000 dépôts de données de recherche (en anglais seulement)](https://www.re3data.org/)
+- [Travailler avec des données et des API](https://ouvert.canada.ca/fr/utilisation-api/donnees-structurees)
+
+## Planification de la gestion des données
+
+- [Gestion des données : mise en place de l'« infrastructure de données » (en anglais seulement)](https://the-engine-room.github.io/responsible-data-handbook/chapters/chapter-02-managing-data.html)
+
+
+## Planification et suivi de projet
+
+- [GitHub pour la gestion de projet - Comment organiser et suivre vos processus agiles (en anglais seulement)](https://zenhub.medium.com/how-to-use-github-for-agile-project-management-2c5b0ec1dad6)
+
+## Analyse des données
+
+- [Python pour l'analyse des données (en anglais seulement)](https://wesmckinney.com/book/)
+- [R pour la science des données (en anglais seulement)](https://r4ds.had.co.nz/)
+
+## Création de produits de données/d'informations
+
+- [Partage des données : Que faire de vos données traitées - La salle des machines (en anglais seulement)](https://the-engine-room.github.io/responsible-data-handbook/chapters/chapter-02c-sharing-data.html)
+
+## Poursuivre l'exploration des autres perspectives :
+
+- [Cycle de vie des données](data-life-cycle.qmd)
+- [Votre rôle](your-role.qmd)
+- [Domaine de données](data-domain.qmd)
+- [Piles d'outils recommandées](recommended-tools.qmd)
+- [Ressources nationales et régionales](national-and-regional-resources.qmd)
+
+:::
+

@@ -1,0 +1,49 @@
+project: 
+  title: "l'Unité de gestion des données"
+  output-dir: ./_site/fr
+
+website: 
+  favicon: images/logo.png
+  navbar: 
+    left: 
+      - href: index.qmd
+        text: "Accueil"
+      - text: "Perspectives"
+        menu: 
+          - href: perspectives/data-life-cycle.qmd
+            text: "Cycle de vie des données"
+          - href: perspectives/your-role.qmd
+            text: "Votre rôle"
+          - href: perspectives/data-domain.qmd
+            text: "Votre domaine" 
+          - href: perspectives/your-tasks.qmd
+            text: "Votre tâche"
+          - href: perspectives/recommended-tools.qmd
+            text: "Outils recommandés"
+          - href: perspectives/national-and-regional-resources.qmd
+            text: "Ressources nationales et régionales"
+      - href: training-resources.qmd
+        text: "Formation"
+      - href: the-team.qmd
+        text: "Notre équipe"
+      - href: about.qmd
+        text: "Sur"
+    search: true
+    tools:
+      - icon: translate
+        href: ../
+        text: "English"
+  repo-url: https://dfo-pacific-science.github.io/data-stewardship-unit/
+  repo-actions: [edit, source, issue]
+  page-footer: "Cette œuvre est placée sous licence [CC BY 4.0 licence] (https://creativecommons.org/licenses/by/4.0/). Construit avec 💖 et Quarto." 
+
+lang: fr
+
+format:
+  html: 
+    theme: cosmo
+    toc: true
+    css: styles/custom.css
+    
+execute:
+  freeze: auto
