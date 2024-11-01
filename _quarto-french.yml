@@ -33,7 +33,7 @@ website:
       - icon: translate
         href: ../
         text: "English"
-  repo-url: https://dfo-pacific-science.github.io/data-stewardship-unit/
+  repo-url: https://github.com/dfo-pacific-science/data-stewardship-unit
   repo-actions: [edit, source, issue]
   page-footer: "Cette œuvre est placée sous licence [CC BY 4.0 licence] (https://creativecommons.org/licenses/by/4.0/). Construit avec 💖 et Quarto." 
 
