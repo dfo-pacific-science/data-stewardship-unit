@@ -1,9 +1,9 @@
 
 ::: {.content-visible when-profile="english"}
 
-# Data Stewardship Unit
+# Fisheries Assessment & Data Section (FADS)
 
-Welcome to the Data Stewardship website for Fisheries and Oceans Canada employees in the Pacific Region Science Branch. This website provides support for your data stewardship and management responsibilities.
+Welcome to the FADS website for Fisheries and Oceans Canada employees in the Pacific Region Science Branch. This website provides support for your data stewardship and management responsibilities.
 
 
 
