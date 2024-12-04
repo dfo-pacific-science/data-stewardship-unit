@@ -177,30 +177,44 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Data Stewardship Unit",
+    "title": "Fisheries Assessment & Data Section (FADS)",
     "section": "",
-    "text": "Welcome to the Data Stewardship website for Fisheries and Oceans Canada employees in the Pacific Region Science Branch. This website provides support for your data stewardship and management responsibilities.\n\n\nBrowse our resources by your perspective.\n\n\n  \n    \n    Data Life Cycle\n  \n  \n      \n      Your Role\n  \n  \n      \n      Your Domain\n  \n  \n      \n      Your Tasks\n  \n  \n      \n      Recommended Tools\n  \n   \n    \n    National and Regional Resources\n  \n\n\n\n\n\nThis site was created with Quarto by Brett Johnson and Albury C. and is hosted with Github Pages. The user perspectives were inspired by the ELIXIR RDMKit site. Icons from Font Awesome. For problems with the site, please create a Github issue or contact Albury C."
+    "text": "Welcome to the FADS website for Fisheries and Oceans Canada employees in the Pacific Region Science Branch. This website provides support for your data stewardship and management responsibilities.\n\n\nBrowse our resources by your perspective.\n\n\n  \n    \n    Data Life Cycle\n  \n  \n      \n      Your Role\n  \n  \n      \n      Your Domain\n  \n  \n      \n      Your Tasks\n  \n  \n      \n      Recommended Tools\n  \n   \n    \n    National and Regional Resources\n  \n\n\n\n\n\nThis site was created with Quarto by Brett Johnson and Albury C. and is hosted with Github Pages. The user perspectives were inspired by the ELIXIR RDMKit site. Icons from Font Awesome. For problems with the site, please create a Github issue or contact Albury C."
   },
   {
     "objectID": "index.html#perspectives",
     "href": "index.html#perspectives",
-    "title": "Data Stewardship Unit",
+    "title": "Fisheries Assessment & Data Section (FADS)",
     "section": "",
     "text": "Browse our resources by your perspective.\n\n\n  \n    \n    Data Life Cycle\n  \n  \n      \n      Your Role\n  \n  \n      \n      Your Domain\n  \n  \n      \n      Your Tasks\n  \n  \n      \n      Recommended Tools\n  \n   \n    \n    National and Regional Resources"
   },
   {
     "objectID": "index.html#about-this-site",
     "href": "index.html#about-this-site",
-    "title": "Data Stewardship Unit",
+    "title": "Fisheries Assessment & Data Section (FADS)",
     "section": "",
     "text": "This site was created with Quarto by Brett Johnson and Albury C. and is hosted with Github Pages. The user perspectives were inspired by the ELIXIR RDMKit site. Icons from Font Awesome. For problems with the site, please create a Github issue or contact Albury C."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "Requirements",
     "section": "",
-    "text": "The DSU is a unit within the Fisheries and Assessment Data Section (FADS) in the Pacific Region of Fisheries and Oceans Canada (DFO).\nWe are a dedicated team committed to enhancing data management and stewardship practices within DFO. Our primary focus is on data related to Pacific Salmon within the DFO Pacific Region, including biodata (e.g., fish weight, length, age, escapement statistics, genomic data), juvenile salmon, and associated ecological and environmental data.\nOur goal is to provide guidance and assistance throughout the entire lifecycle of data management—from planning to publication. We strive to ensure our practices align with modern data standards, such as those outlined in the DFO Data Strategy and the Government of Canada’s digital data strategy. For instance, our work is guided by the principles of making data findable, accessible, interoperable, and reusable (FAIR). Additionally, we highly value the principles of Indigenous data governance, such as ownership, control, access, and possession (OCAP), and we are committed to helping our collaborators respect and implement these principles in their work."
+    "text": "Welcome contributors to the DSU website! This document contains detailed instructions on working with the quarto repo and using Github Actions to the publish the site.\n\nRequirements\nYou must have a Github account and Git downloaded on your machine to make changes to this repository.\n\n\nCloning and Adding a Branch\nIn order to make changes to the site, you must clone the repository and create a branch.\n\nClone the repository with git by running git clone https://github.com/dfo-pacific-science/data-stewardship-unit.git in terminal.\nInstall the required dependencies: R -e \"install.packages('quarto')\"\nMake a new branch using git branch new-branch-name. Please name the branch descriptively.\nMake your changes to the website and preview them by running quarto render. Each time any file is changed, you will need to run quarto render to see the changes locally.\nRun quarto publish gh-pages\n\n\n\nContributing\nYou may push your changes via the new branch. After pushing, you may make a pull request to merge the branch to main. Merguing to main will save your changes to the website and trigger a deployment via github actions. Deployment instructions are located in the .github/workflows/publish.yml file.\nAnother team member review your pull request with site changes. They should render the changes on their local machine with quarto render.\nCheck the deployment status after merging the new branch to main by looking at the Actions tab in Github. If succesful, a green checkmark will appear. It may take up to a few moments for the changes to be reflected on the site.\n\n\nResources\n\nQuarto Website Documentation\nGithub Pages\nRendering for CI"
+  },
+  {
+    "objectID": "training-resources.html",
+    "href": "training-resources.html",
+    "title": "Training Resources",
+    "section": "",
+    "text": "Welcome to the Training Resources page of the Data Stewardship Unit website! Here, you will find a collection of training resources to enhance your skills and knowledge in data stewardship.\n\n\n\nVersion Control with Git: Software Carpentry\nData Analysis and Visualization in R for Ecologists: Software Carpentry\nData Analysis and Visualization in Python for Ecologists\nIntroduction to stock assessment\nCanada School of Public Service Catalog\nMicrosoft Learn"
+  },
+  {
+    "objectID": "training-resources.html#online-training-resources",
+    "href": "training-resources.html#online-training-resources",
+    "title": "Training Resources",
+    "section": "",
+    "text": "Version Control with Git: Software Carpentry\nData Analysis and Visualization in R for Ecologists: Software Carpentry\nData Analysis and Visualization in Python for Ecologists\nIntroduction to stock assessment\nCanada School of Public Service Catalog\nMicrosoft Learn"
   },
   {
     "objectID": "the-team.html",
@@ -245,25 +259,39 @@
     "text": "Albury has a BSc and MSc in Biology from Dalhousie University. Their research there focused on trace nutrient biogeochemistry. Since then, they’ve been a data scientist at various government departments, where they contributed to the modernization of analytical workflows with open data science tools like R, Python, and Git. At the DSU, they develop reproducible data pipelines, support regional staff with data wrangling, derive unified data standards and more."
   },
   {
-    "objectID": "training-resources.html",
-    "href": "training-resources.html",
-    "title": "Training Resources",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Welcome to the Training Resources page of the Data Stewardship Unit website! Here, you will find a collection of training resources to enhance your skills and knowledge in data stewardship.\n\n\n\nVersion Control with Git: Software Carpentry\nData Analysis and Visualization in R for Ecologists: Software Carpentry\nData Analysis and Visualization in Python for Ecologists\nIntroduction to stock assessment\nCanada School of Public Service Catalog\nMicrosoft Learn"
+    "text": "The Fisheries Assessment & Data Section (FADS) operates within the Pacific Region of Fisheries and Oceans Canada (DFO).\nFADS members act as stewards for fisheries, assessment and research data focused on QA/QC and data accessibility​ We provide data management advice, act as champions in national and regional science data initiatives, and support data publication. Our section is comprised of Groundfish, Salmon, Shellfish, and Spatial Data Units​"
   },
   {
-    "objectID": "training-resources.html#online-training-resources",
-    "href": "training-resources.html#online-training-resources",
-    "title": "Training Resources",
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
     "section": "",
-    "text": "Version Control with Git: Software Carpentry\nData Analysis and Visualization in R for Ecologists: Software Carpentry\nData Analysis and Visualization in Python for Ecologists\nIntroduction to stock assessment\nCanada School of Public Service Catalog\nMicrosoft Learn"
+    "text": "Here is a list of projects currently underway in FADS."
   },
   {
-    "objectID": "CONTRIBUTING.html",
-    "href": "CONTRIBUTING.html",
-    "title": "Requirements",
-    "section": "",
-    "text": "Welcome contributors to the DSU website! This document contains detailed instructions on working with the quarto repo and using Github Actions to the publish the site.\n\nRequirements\nYou must have a Github account and Git downloaded on your machine to make changes to this repository.\n\n\nCloning and Adding a Branch\nIn order to make changes to the site, you must clone the repository and create a branch.\n\nClone the repository with git by running git clone https://github.com/dfo-pacific-science/data-stewardship-unit.git in terminal.\nInstall the required dependencies: R -e \"install.packages('quarto')\"\nMake a new branch using git branch new-branch-name. Please name the branch descriptively.\nMake your changes to the website and preview them by running quarto render. Each time any file is changed, you will need to run quarto render to see the changes locally.\nRun quarto publish gh-pages\n\n\n\nContributing\nYou may push your changes via the new branch. After pushing, you may make a pull request to merge the branch to main. Merguing to main will save your changes to the website and trigger a deployment via github actions. Deployment instructions are located in the .github/workflows/publish.yml file.\nAnother team member review your pull request with site changes. They should render the changes on their local machine with quarto render.\nCheck the deployment status after merging the new branch to main by looking at the Actions tab in Github. If succesful, a green checkmark will appear. It may take up to a few moments for the changes to be reflected on the site.\n\n\nResources\n\nQuarto Website Documentation\nGithub Pages\nRendering for CI"
+    "objectID": "projects.html#salmon-population-summary-repository",
+    "href": "projects.html#salmon-population-summary-repository",
+    "title": "Projects",
+    "section": "Salmon Population Summary Repository",
+    "text": "Salmon Population Summary Repository\nObjective: Develop and populate a Salmon Population Summary Repository (SPSR) with salmon population data that support Fisheries Science Advisory Reports, Stock Assessment, and regional reporting with links to stock management unit (SMU) profiles, and conservation unit (CU) profiles."
+  },
+  {
+    "objectID": "projects.html#stock-management-unit-profiles",
+    "href": "projects.html#stock-management-unit-profiles",
+    "title": "Projects",
+    "section": "Stock Management Unit Profiles",
+    "text": "Stock Management Unit Profiles\nObjective: Compile and provide an accessible digital location for stock management unit profiles to ensure information is available to internal and external analysts and decision makers. This will ensure that decision and research results may be referenced against common and agreed context and definitions."
+  },
+  {
+    "objectID": "projects.html#stream",
+    "href": "projects.html#stream",
+    "title": "Projects",
+    "section": "STREAM",
+    "text": "STREAM\nThe STREAM platform project aims to support data collection, management, and display processes for escapement data by addressing the key technical pain points felt by data stakeholders such as data capture entry, validation, management, and sharing."
   },
   {
     "objectID": "perspectives/national-and-regional-resources.html",
