@@ -1,5 +1,5 @@
 project: 
-  title: "Data Stewardship Unit"
+  title: "Fisheries Assessment & Data Section (FADS)"
   output-dir: ./_site
 
 website: 
@@ -23,10 +23,10 @@ website:
             text: "Recommended Tools"
           - href: perspectives/national-and-regional-resources.qmd
             text: "National and Regional Resources"
+      - href: projects.qmd
+        text: "Projects"
       - href: training-resources.qmd
         text: "Training"
-      - href: the-team.qmd
-        text: "Our Team"
       - href: about.qmd
         text: "About"
     search: true

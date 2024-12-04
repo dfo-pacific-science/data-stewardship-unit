@@ -1,0 +1,22 @@
+---
+title: Projects
+---
+
+
+::: {.content-visible when-profile="english"}
+Here is a list of projects currently underway in FADS. 
+
+## Salmon Population Summary Repository
+
+Objective: Develop and populate a Salmon Population Summary Repository (SPSR) with salmon population data that support Fisheries Science Advisory Reports, Stock Assessment, and regional reporting with links to stock management unit (SMU) profiles, and conservation unit (CU) profiles.  
+
+## Stock Management Unit Profiles
+
+Objective: Compile and provide an accessible digital location for stock management unit profiles to ensure information is available to internal and external analysts and decision makers. This will ensure that decision and research results may be referenced against common and agreed context and definitions. 
+
+## STREAM
+
+The STREAM platform project aims to support data collection, management, and display processes for escapement data by addressing the key technical pain points felt by data stakeholders such as data capture entry, validation, management, and sharing.
+
+
+:::
