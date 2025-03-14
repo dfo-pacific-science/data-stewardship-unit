@@ -30,14 +30,6 @@ Browse our resources by your perspective.
       <img src="images/icons/your-tasks.svg" alt="Your Tasks" class="logo">
       <div class="logotitle">Your Tasks</div>
   </a>
-  <a href="perspectives/recommended-tools.qmd" class="logotile">
-      <img src="images/icons/recommended-tools.svg" alt="Recommended Tools" class="logo">
-      <div class="logotitle">Recommended Tools</div>
-  </a>
-  <a href="perspectives/national-and-regional-resources.qmd" class="logotile"> 
-    <img src="images/icons/national-and-regional-resources.svg" alt="National and Regional Resources" class="logo">
-    <div class="logotitle">National and Regional Resources</div>
-  </a>
 </div>
 
 ```
