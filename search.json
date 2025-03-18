@@ -1,157 +1,63 @@
 [
   {
-    "objectID": "the-team.html",
-    "href": "the-team.html",
-    "title": "Our Team",
+    "objectID": "how_to_guides/databricks_r_studio.html",
+    "href": "how_to_guides/databricks_r_studio.html",
+    "title": "databricks_r_studio",
     "section": "",
-    "text": "Brett’s experience includes management and research related to juvenile salmon before focusing his career on scientific data stewardship. Brett has worked closely with the North Pacific Anadromous Fish Commission, the North Pacific Marine Science Organization, and the Canadian Integrated Ocean Observing System on data stewardship during his tenure with the Hakai Institute. As program head, Brett delivers strategic plans for the development of data solutions and data stewardship processes, implements project management plans, and develops frameworks for data standards.\n\n\n\n\n\n\n\n\nAnna has a BSc in Biodiversity and Conservation and a Master of Wildlife Management from Macquarie University. For the past 8 years, she has been working as a GIS consultant and Project Manager. She has also completed the Advanced Diploma of GIS Applications from Vancouver Island University. Anna’s role involves coordinating regional data governance with linkages to national efforts, supports the implementation of FAIR practices, and guides staff to populate regional data repositories.\n\n\n\n\n\n\n\n\nShaorong previously worked with the Molecular Genetics Lab at the Pacific Biological Station, where she has utilized cutting-edge technologies in genetics and genomics to study salmon stock identification, migration, fitness, and health. With approximately 25 years at DFO, Shaorong understands the importance of standardizing how data is captured, stored, and analyzed to ensure consistent and reliable information, as well as effective data sharing. Shaorong’s role involves mapping business processes, developing regional solutions, and working with databases related to salmon biodata.\n\n\n\n\n\n\n\n\nStephen joined DFO in the Maritimes Region after graduating with an MSc in Oceanography from Dalhousie University. His experience includes developing automated reports for Species at Risk in R Markdown, researching the potential effects of shellfish aquaculture on zooplankton communities, and assisting with the publication of CSAS documents. Stephen coordinates data governance linkages to national efforts, supports implementation of FAIR principles, and guides staff to populate data repositories in the regions.\n\n\n\n\n\n\n\n\nAlbury has a BSc and MSc in Biology from Dalhousie University. Their research there focused on trace nutrient biogeochemistry. Since then, they’ve been a data scientist at various government departments, where they contributed to the modernization of analytical workflows with open data science tools like R, Python, and Git. At the DSU, they develop reproducible data pipelines, support regional staff with data wrangling, derive unified data standards and more."
+    "text": "DFO’s shift to the Azure Lakehouse model integrates Azure Databricks, Data Lake Storage, Delta Lake, and Synapse Analytics, replacing siloed data storage and scattered code repositories. This transition centralizes data, standardizes workflows, and improves access to shared datasets and intermediate data products.\nWith Personal Access Tokens (PATs), analysts can now connect directly to the Lakehouse from RStudio (or other IDEs like VSCode or PyCharm), working seamlessly with cloud-stored data in their preferred environment. This guide explains how to set up that connection using RStudio for analysis, GitHub for code management, and the Lakehouse for data storage and sharing.\n[[TOC]]",
+    "crumbs": [
+      "databricks_r_studio"
+    ]
   },
   {
-    "objectID": "the-team.html#brett-johnson-dsu-program-head",
-    "href": "the-team.html#brett-johnson-dsu-program-head",
-    "title": "Our Team",
+    "objectID": "how_to_guides/databricks_r_studio.html#tldr",
+    "href": "how_to_guides/databricks_r_studio.html#tldr",
+    "title": "databricks_r_studio",
     "section": "",
-    "text": "Brett’s experience includes management and research related to juvenile salmon before focusing his career on scientific data stewardship. Brett has worked closely with the North Pacific Anadromous Fish Commission, the North Pacific Marine Science Organization, and the Canadian Integrated Ocean Observing System on data stewardship during his tenure with the Hakai Institute. As program head, Brett delivers strategic plans for the development of data solutions and data stewardship processes, implements project management plans, and develops frameworks for data standards."
+    "text": "DFO’s shift to the Azure Lakehouse model integrates Azure Databricks, Data Lake Storage, Delta Lake, and Synapse Analytics, replacing siloed data storage and scattered code repositories. This transition centralizes data, standardizes workflows, and improves access to shared datasets and intermediate data products.\nWith Personal Access Tokens (PATs), analysts can now connect directly to the Lakehouse from RStudio (or other IDEs like VSCode or PyCharm), working seamlessly with cloud-stored data in their preferred environment. This guide explains how to set up that connection using RStudio for analysis, GitHub for code management, and the Lakehouse for data storage and sharing.\n[[TOC]]",
+    "crumbs": [
+      "databricks_r_studio"
+    ]
   },
   {
-    "objectID": "the-team.html#anna-douglas-morris-data-integration-steward",
-    "href": "the-team.html#anna-douglas-morris-data-integration-steward",
-    "title": "Our Team",
-    "section": "",
-    "text": "Anna has a BSc in Biodiversity and Conservation and a Master of Wildlife Management from Macquarie University. For the past 8 years, she has been working as a GIS consultant and Project Manager. She has also completed the Advanced Diploma of GIS Applications from Vancouver Island University. Anna’s role involves coordinating regional data governance with linkages to national efforts, supports the implementation of FAIR practices, and guides staff to populate regional data repositories."
+    "objectID": "how_to_guides/databricks_r_studio.html#azure-data-bricks-and-the-azure-lakehouse",
+    "href": "how_to_guides/databricks_r_studio.html#azure-data-bricks-and-the-azure-lakehouse",
+    "title": "databricks_r_studio",
+    "section": "Azure Data Bricks and the Azure Lakehouse",
+    "text": "Azure Data Bricks and the Azure Lakehouse\nAzure Databricks is a cloud-based analytics platform for big data processing, machine learning, and collaborative analysis. Built on Apache Spark, it integrates with Azure Data Lake Storage (ADLS), Delta Lake, and Synapse Analytics, the core components of the Azure Lakehouse.\nIn this model, Databricks acts as the compute engine, running code while Data Lake Storage and Delta Lake handle scalable, secure data storage. Synapse Analytics adds SQL-based analytics and data warehousing.\nFor DFO, adopting the Lakehouse model eliminates siloed data storage and fragmented code management. Previously, datasets were scattered across systems, and essential data cleaning and analysis code was split across multiple GitHub repositories, making it hard to track, reuse, or standardize. Valuable intermediate data products were often inaccessible. The Lakehouse consolidates data, transformations, and curated datasets, improving collaboration, reproducibility, and transparency.\nNow, analysts can connect directly to the Lakehouse from RStudio (or any IDE) using PATs, gaining seamless, secure access to centralized data with scalable compute. This shift removes past limitations on data access, permissions, and technology use, significantly enhancing DFO’s analytical capabilities.\nThis guide walks through the setup process, enabling you to connect to Azure Databricks and analyze Lakehouse-stored data using RStudio for code execution, GitHub for version control, and the Lakehouse for data storage and sharing.",
+    "crumbs": [
+      "databricks_r_studio"
+    ]
   },
   {
-    "objectID": "the-team.html#shaorong-li-biological-salmon-data-steward",
-    "href": "the-team.html#shaorong-li-biological-salmon-data-steward",
-    "title": "Our Team",
-    "section": "",
-    "text": "Shaorong previously worked with the Molecular Genetics Lab at the Pacific Biological Station, where she has utilized cutting-edge technologies in genetics and genomics to study salmon stock identification, migration, fitness, and health. With approximately 25 years at DFO, Shaorong understands the importance of standardizing how data is captured, stored, and analyzed to ensure consistent and reliable information, as well as effective data sharing. Shaorong’s role involves mapping business processes, developing regional solutions, and working with databases related to salmon biodata."
+    "objectID": "how_to_guides/databricks_r_studio.html#quick-start-guide-to-accessing-azure-lakehouse-from-r-studio",
+    "href": "how_to_guides/databricks_r_studio.html#quick-start-guide-to-accessing-azure-lakehouse-from-r-studio",
+    "title": "databricks_r_studio",
+    "section": "Quick Start Guide to Accessing Azure Lakehouse from R Studio",
+    "text": "Quick Start Guide to Accessing Azure Lakehouse from R Studio\n\nAccess Token\nCreate your user access token in Databricks WebUI. (IMPORTANT: Treat this token as your personal password and do not share with anybody)\n\nIn Databricks WebUI -&gt; go to your profile page and navigate to\nUser &gt; Developer\nAccess tokens &gt; Manage\nGenerate new token as required. Ensure to set the expiration of the token to a suitable date (1 year from now)\nCopy and save this token somewhere safe such as an encrypted password manager\n\n\n\n\n==image_0==.png\n\n\n\n\nJDBC Driver\n\nDownload JDBC (java database connectivity) driver from https://www.databricks.com/spark/jdbc-drivers-download. Save and extract the .jar file to an accessible location on your computer (C:Users\\Your username is fine).\nSet up your Databricks JDBC connection URL. You can copy this directly from databricks this way\nIn the Databricks Web UI, navigate to SQL Warehouses\nClick on the SQL Warehouse compute resource that you started  \nGo to ‘Connection details’ à JDBC URL and copy the string\n\n\n\n\n==image_0==.png\n\n\n\n\nEstablishing a Connection to Databricks from R Studio (or any other IDE)\n\nEnsure you are on the DFO VPN\n\n\nlibrary(RJDBC)\n\njdbc_driver &lt;- JDBC(\"com.databricks.client.jdbc.Driver\", \"C:/Users/JOHNSONBRE/DatabricksJDBC42.jar\", \"\")\n\nurlsql &lt;- \"jdbc:databricks://adb-553282681420861.1.azuredatabricks.net:443/default;transportMode=http;ssl=1;AuthMech=3;httpPath=/sql/1.0/warehouses/613056ec98d47d29;\"\n\n# Run the code below here once to store your personal access token in your R Environment. \n# IMPORTANT! Never hard code your PAT in directly in your code script since your script will likely be shared, exposing your secret personal access token \n\nfile.edit(\"~/.Renviron\") # add DATABRICKS_PAT=\"your_personal_access_token\" to your .Renviron file\n\npat &lt;- Sys.getenv(\"DATABRICKS_PAT\")\n\nconnsql &lt;- RJDBC::dbConnect(jdbc_driver, urlsql, \"token\", pat)\n\nTest your connection to Databricks by running the following code:\n\ndbGetQuery(connsql, \"SELECT 1\")\n\nIf you see a table with a single row and a single column with the value 1, then your connection is successful\n\n\nExploring the Lakehouse\nNext, we will query the available catalogs of databases, their schemas, and their tables in the Lakehouse.\n\nCatalogs\nExplore the available catalogs in the Databricks environment. Catalogs are the top-level containers in Databricks that store databases.\nIn the DFO Pacific Lakehouse, catalogs are used to organize the medallion architecture.\nYou may be able to see multiple catalogs in your Databricks environment.\n\n# see what catalog are available\n\ndbGetQuery(connsql, \"SHOW CATALOGS\")\n\n\n\nSchemas\nCheck available schemas in bronze catalogue\n\ndbGetQuery(connsql, \"SHOW SCHEMAS IN bronze_pacific_prod\")\n\n# check available schemas in bronze nuseds\ndbGetQuery(connsql, \"SHOW TABLES IN bronze_pacific_prod.nuseds_v2_0\")\n\n# Query bronze nuseds_v2_0 table\nnuseds_activity_types &lt;- dbGetQuery(connsql, \"SELECT * FROM bronze_pacific_prod.nuseds_v2_0.activity_types LIMIT 10\")\n\n\n\nTables\nCheck out the tables in FOS_v1_1\n\ndbGetQuery(connsql, \"SHOW TABLES IN bronze_pacific_prod.FOS_v1_1\")\n\n\n\n\nDescribe Tables\nDescribe a FOS_v1_1 table to extract metadata about a specific table, like what columns are available and their data types.\n\ndbGetQuery(connsql, \"DESCRIBE bronze_pacific_prod.FOS_v1_1.stock\")\n\n\n\nRunning Queries\nRun a query to extract data from a table in the Lakehouse.\n\n# Query bronze nuseds_v2_0 smu_cu_lookup table\nsmu_cu_lookup &lt;- dbGetQuery(connsql, \"SELECT * FROM bronze_pacific_prod.nuseds_v2_0.smu_cu_lookup LIMIT 10\")\n\nsmu_cu_lookup\n\nConnect to the FOS data and aggregrate:\n\n# Query bronze FOS_v1_1 stock table\nstock &lt;- dbGetQuery(connsql, \"SELECT * FROM bronze_pacific_prod.FOS_v1_1.stock\")\n\nTry using an aggregation function such as count and group by to get a count of the number of rows in the table.\n\n# Count the number of rows in the stock table\ndbGetQuery(connsql, \"SELECT COUNT(*) FROM bronze_pacific_prod.FOS_v1_1.stock\")",
+    "crumbs": [
+      "databricks_r_studio"
+    ]
   },
   {
-    "objectID": "the-team.html#stephen-finnis-regional-data-steward",
-    "href": "the-team.html#stephen-finnis-regional-data-steward",
-    "title": "Our Team",
-    "section": "",
-    "text": "Stephen joined DFO in the Maritimes Region after graduating with an MSc in Oceanography from Dalhousie University. His experience includes developing automated reports for Species at Risk in R Markdown, researching the potential effects of shellfish aquaculture on zooplankton communities, and assisting with the publication of CSAS documents. Stephen coordinates data governance linkages to national efforts, supports implementation of FAIR principles, and guides staff to populate data repositories in the regions."
+    "objectID": "how_to_guides/databricks_r_studio.html#local-computer-versus-databricks-compute",
+    "href": "how_to_guides/databricks_r_studio.html#local-computer-versus-databricks-compute",
+    "title": "databricks_r_studio",
+    "section": "Local Computer versus Databricks Compute",
+    "text": "Local Computer versus Databricks Compute\nUsing Databricks compute should be minimized to avoid unnecessary costs. Instead, use your local computer for data exploration and analysis. Only use Databricks compute when you need to access new data, write data back to the Lakehouse, or run large-scale computations.\n\nWhen Databricks Computer is Used vs. Local Computer\nDatabricks Compute:\n\nRunning SQL queries and data processing tasks on the data stored in the Azure Lakehouse.\nAny operations that involve querying the data, such as dbGetQuery(connsql, “SELECT * FROM …”), are executed on Databricks compute resources.\n\nLocal Compute:\n\nWriting and executing R scripts that establish the connection to Databricks.\nProcessing the results returned from Databricks.\nManaging code with Git and GitHub from your local machine.\n\n\n\nTips to Minimize Databricks Compute Costs\nOptimize Queries: Write efficient SQL queries to minimize the amount of data processed and transferred to your local machine.\nUse Caching: Save data locally and don’t run dbGetQuery commands unless you are intentionally trying to get new data. Cache intermediate results when performing complex transformations to avoid redundant computations.\nFor example in R:\n\n# Query the data and save it to a variable\ndata &lt;- dbGetQuery(connsql, \"SELECT * FROM ...\") # Run the query only once or as needed for new data\n \n# Perform transformations on the data\ntransformed_data &lt;- data %&gt;% ...\n\n# Cache the transformed data\nsaveRDS(transformed_data, \"transformed_data.rds\")\n\n# Next time you need the transformed data, don't run the query again, instead load it from the cache or from your local copy\n\n# Load the transformed data from the cache\ntransformed_data &lt;- readRDS(\"transformed_data.rds\")\n\n# Continue working with the transformed data",
+    "crumbs": [
+      "databricks_r_studio"
+    ]
   },
   {
-    "objectID": "the-team.html#albury-c-data-products-steward",
-    "href": "the-team.html#albury-c-data-products-steward",
-    "title": "Our Team",
-    "section": "",
-    "text": "Albury has a BSc and MSc in Biology from Dalhousie University. Their research there focused on trace nutrient biogeochemistry. Since then, they’ve been a data scientist at various government departments, where they contributed to the modernization of analytical workflows with open data science tools like R, Python, and Git. At the DSU, they develop reproducible data pipelines, support regional staff with data wrangling, derive unified data standards and more."
-  },
-  {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
-    "section": "",
-    "text": "Here is a list of projects currently underway in FADS."
-  },
-  {
-    "objectID": "projects.html#salmon-population-summary-repository",
-    "href": "projects.html#salmon-population-summary-repository",
-    "title": "Projects",
-    "section": "Salmon Population Summary Repository",
-    "text": "Salmon Population Summary Repository\nObjective: Develop and populate a Salmon Population Summary Repository (SPSR) with salmon population data that support Fisheries Science Advisory Reports, Stock Assessment, and regional reporting with links to stock management unit (SMU) profiles, and conservation unit (CU) profiles."
-  },
-  {
-    "objectID": "projects.html#stock-management-unit-profiles",
-    "href": "projects.html#stock-management-unit-profiles",
-    "title": "Projects",
-    "section": "Stock Management Unit Profiles",
-    "text": "Stock Management Unit Profiles\nObjective: Compile and provide an accessible digital location for stock management unit profiles to ensure information is available to internal and external analysts and decision makers. This will ensure that decision and research results may be referenced against common and agreed context and definitions."
-  },
-  {
-    "objectID": "projects.html#stream",
-    "href": "projects.html#stream",
-    "title": "Projects",
-    "section": "STREAM",
-    "text": "STREAM\nThe STREAM platform project aims to support data collection, management, and display processes for escapement data by addressing the key technical pain points felt by data stakeholders such as data capture entry, validation, management, and sharing."
-  },
-  {
-    "objectID": "perspectives/national-and-regional-resources.html",
-    "href": "perspectives/national-and-regional-resources.html",
-    "title": "National and Regional Resources",
-    "section": "",
-    "text": "This page provides information and resources on national and regional resources related to data stewardship.\n\n\n\n2023–2026 Data Strategy for the Federal Public Service - Government of Canada\nOpen Government​- Government of Canada\nBe Good Data Stewards - Government of Canada\n\n\n\n\n\nCSAS Pacific\n\n\n\n\n\nData Life Cycle\nYour Role\nData Domain\nRecommended Tool Stacks\nYour Tasks"
-  },
-  {
-    "objectID": "perspectives/national-and-regional-resources.html#national-resources",
-    "href": "perspectives/national-and-regional-resources.html#national-resources",
-    "title": "National and Regional Resources",
-    "section": "",
-    "text": "2023–2026 Data Strategy for the Federal Public Service - Government of Canada\nOpen Government​- Government of Canada\nBe Good Data Stewards - Government of Canada"
-  },
-  {
-    "objectID": "perspectives/national-and-regional-resources.html#regional-resources",
-    "href": "perspectives/national-and-regional-resources.html#regional-resources",
-    "title": "National and Regional Resources",
-    "section": "",
-    "text": "CSAS Pacific"
-  },
-  {
-    "objectID": "perspectives/national-and-regional-resources.html#continue-exploring-the-other-perspectives",
-    "href": "perspectives/national-and-regional-resources.html#continue-exploring-the-other-perspectives",
-    "title": "National and Regional Resources",
-    "section": "",
-    "text": "Data Life Cycle\nYour Role\nData Domain\nRecommended Tool Stacks\nYour Tasks"
-  },
-  {
-    "objectID": "perspectives/data-domain.html",
-    "href": "perspectives/data-domain.html",
-    "title": "Data Domain",
-    "section": "",
-    "text": "This page provides information and resources related to different data domains in the Pacific Region Science Branch of Fisheries and Oceans Canada.\n\n\n\nSalmon Data Mobilization\nData Mobilization Through the International Year of the Salmon Ocean Observing System\nEnhancing data mobilisation through a centralised data repository for Atlantic salmon (Salmo salar L.): Providing the resources to promote an ecosystem-based management framework.\nData system design alters meaning in ecological data: salmon habitat restoration across the U.S. Pacific Northwest\n\n\n\n\n\nGBIF\n\n\n\n\n\nOBIS\nERDDAP\n\n\n\n\n\nIntroduction to Stock Assessment online course\n\n\n\n\n\nEMBL Data Resourecs\nNCBI\n\n\n\n\n\nPacific Science Data and Results\n\n\n\n\n\nData Life Cycle\nYour Role\nData Domain\nRecommended Tool Stacks\nNational and Regional Resources\nYour Tasks"
-  },
-  {
-    "objectID": "perspectives/data-domain.html#salmon-stock-assessment-and-enhancement",
-    "href": "perspectives/data-domain.html#salmon-stock-assessment-and-enhancement",
-    "title": "Data Domain",
-    "section": "",
-    "text": "Salmon Data Mobilization\nData Mobilization Through the International Year of the Salmon Ocean Observing System\nEnhancing data mobilisation through a centralised data repository for Atlantic salmon (Salmo salar L.): Providing the resources to promote an ecosystem-based management framework.\nData system design alters meaning in ecological data: salmon habitat restoration across the U.S. Pacific Northwest"
-  },
-  {
-    "objectID": "perspectives/data-domain.html#ecosystem-science",
-    "href": "perspectives/data-domain.html#ecosystem-science",
-    "title": "Data Domain",
-    "section": "",
-    "text": "GBIF"
-  },
-  {
-    "objectID": "perspectives/data-domain.html#ocean-science",
-    "href": "perspectives/data-domain.html#ocean-science",
-    "title": "Data Domain",
-    "section": "",
-    "text": "OBIS\nERDDAP"
-  },
-  {
-    "objectID": "perspectives/data-domain.html#fisheries-management",
-    "href": "perspectives/data-domain.html#fisheries-management",
-    "title": "Data Domain",
-    "section": "",
-    "text": "Introduction to Stock Assessment online course"
-  },
-  {
-    "objectID": "perspectives/data-domain.html#diagnostics-and-genomics",
-    "href": "perspectives/data-domain.html#diagnostics-and-genomics",
-    "title": "Data Domain",
-    "section": "",
-    "text": "EMBL Data Resourecs\nNCBI"
-  },
-  {
-    "objectID": "perspectives/data-domain.html#misc.",
-    "href": "perspectives/data-domain.html#misc.",
-    "title": "Data Domain",
-    "section": "",
-    "text": "Pacific Science Data and Results"
-  },
-  {
-    "objectID": "perspectives/data-domain.html#continue-exploring-the-other-perspectives",
-    "href": "perspectives/data-domain.html#continue-exploring-the-other-perspectives",
-    "title": "Data Domain",
-    "section": "",
-    "text": "Data Life Cycle\nYour Role\nData Domain\nRecommended Tool Stacks\nNational and Regional Resources\nYour Tasks"
+    "objectID": "how_to_guides/databricks_r_studio.html#using-a-github-repo-in-databricks",
+    "href": "how_to_guides/databricks_r_studio.html#using-a-github-repo-in-databricks",
+    "title": "databricks_r_studio",
+    "section": "Using a GitHub Repo in Databricks",
+    "text": "Using a GitHub Repo in Databricks\nOne of the advantages of using GitHub with Databricks is that you can easily import code from a GitHub repository into a Databricks notebook. This allows you to leverage the version control and collaboration features of GitHub while working in Databricks.\nHowever, there are a few things to keep in mind when using a GitHub repo in Databricks:\n\nImporting Code: You can import code from a GitHub repository into a Databricks notebook by specifying the URL of the GitHub repository. Databricks will clone the repository and import the code into the notebook.\nCode Execution: When you import code from a GitHub repository into a Databricks notebook, the code is executed in the Databricks environment. This means that any data access or processing tasks will be performed on Databricks compute resources.\nCode Management: While you can import code from a GitHub repository into a Databricks notebook, you are not able to push code changes back to the repository directly from Databricks. If you need to make changes to the code, you will need to do so in the GitHub repository and then re-import the code into the Databricks notebook.",
+    "crumbs": [
+      "databricks_r_studio"
+    ]
   },
   {
     "objectID": "perspectives/data-life-cycle.html",
@@ -173,34 +79,6 @@
     "title": "Data Life Cycle",
     "section": "",
     "text": "Your Role\nData Domain\nRecommended Tool Stacks\nNational and Regional Resources\nYour Tasks"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "The Fisheries Assessment & Data Section (FADS) operates within the Pacific Region of Fisheries and Oceans Canada (DFO).\nFADS members act as stewards for fisheries, assessment and research data focused on QA/QC and data accessibility​ We provide data management advice, act as champions in national and regional science data initiatives, and support data publication. Our section is comprised of Groundfish, Salmon, Shellfish, and Spatial Data Units​"
-  },
-  {
-    "objectID": "CONTRIBUTING.html",
-    "href": "CONTRIBUTING.html",
-    "title": "Requirements",
-    "section": "",
-    "text": "Welcome contributors to the DSU website! This document contains detailed instructions on working with the quarto repo and using Github Actions to the publish the site.\n\nRequirements\nYou must have a Github account and Git downloaded on your machine to make changes to this repository.\n\n\nCloning and Adding a Branch\nIn order to make changes to the site, you must clone the repository and create a branch.\n\nClone the repository with git by running git clone https://github.com/dfo-pacific-science/data-stewardship-unit.git in terminal.\nInstall the required dependencies: R -e \"install.packages('quarto')\"\nMake a new branch using git branch new-branch-name. Please name the branch descriptively.\nMake your changes to the website and preview them by running quarto render. Each time any file is changed, you will need to run quarto render to see the changes locally.\nRun quarto publish gh-pages\n\n\n\nContributing\nYou may push your changes via the new branch. After pushing, you may make a pull request to merge the branch to main. Merguing to main will save your changes to the website and trigger a deployment via github actions. Deployment instructions are located in the .github/workflows/publish.yml file.\nAnother team member review your pull request with site changes. They should render the changes on their local machine with quarto render.\nCheck the deployment status after merging the new branch to main by looking at the Actions tab in Github. If succesful, a green checkmark will appear. It may take up to a few moments for the changes to be reflected on the site.\n\n\nResources\n\nQuarto Website Documentation\nGithub Pages\nRendering for CI"
-  },
-  {
-    "objectID": "training-resources.html",
-    "href": "training-resources.html",
-    "title": "Training Resources",
-    "section": "",
-    "text": "Welcome to the Training Resources page of the Data Stewardship Unit website! Here, you will find a collection of training resources to enhance your skills and knowledge in data stewardship.\n\n\n\nVersion Control with Git: Software Carpentry\nData Analysis and Visualization in R for Ecologists: Software Carpentry\nData Analysis and Visualization in Python for Ecologists\nIntroduction to stock assessment\nCanada School of Public Service Catalog\nMicrosoft Learn"
-  },
-  {
-    "objectID": "training-resources.html#online-training-resources",
-    "href": "training-resources.html#online-training-resources",
-    "title": "Training Resources",
-    "section": "",
-    "text": "Version Control with Git: Software Carpentry\nData Analysis and Visualization in R for Ecologists: Software Carpentry\nData Analysis and Visualization in Python for Ecologists\nIntroduction to stock assessment\nCanada School of Public Service Catalog\nMicrosoft Learn"
   },
   {
     "objectID": "perspectives/your-role.html",
@@ -252,53 +130,109 @@
     "text": "Data Life Cycle\nData Domain\nRecommended Tool Stacks\nNational and Regional Resources\nYour Tasks"
   },
   {
-    "objectID": "perspectives/recommended-tools.html",
-    "href": "perspectives/recommended-tools.html",
-    "title": "Recommended Tools",
+    "objectID": "perspectives/national-and-regional-resources.html",
+    "href": "perspectives/national-and-regional-resources.html",
+    "title": "National and Regional Resources",
     "section": "",
-    "text": "In the field of data stewardship, there are several tools and technologies that can greatly assist in managing and analyzing data. Here are some recommended tool stacks that can enhance your data stewardship practices:\n\n\nAzure is a cloud computing platform that provides a wide range of services for data storage, processing, and analysis. With Azure, you can securely store and manage your data, run data-intensive applications, and leverage advanced analytics capabilities.\n\n\n\nMS Fabric is a data management framework that enables seamless integration and interoperability between different data systems and applications. It provides a unified interface for accessing and manipulating data across various platforms and technologies.\n\n\n\nPower BI is a business analytics tool that allows you to visualize and analyze data from multiple sources. With Power BI, you can create interactive dashboards, reports, and data visualizations to gain insights and make informed decisions.\n\n\n\nR is a programming language and software environment for statistical computing and graphics. It provides a wide range of tools and packages for data manipulation, analysis, and visualization. R is widely used in the scientific community for reproducible research and data analysis.\n\n\n\ndplyr\nApache Arrow\nggplot\n\n\n\n\n\nPython is a versatile programming language that is widely used in data science and machine learning. It offers a rich ecosystem of libraries and frameworks for data manipulation, analysis, and modeling. Python is known for its simplicity and readability, making it a popular choice among data scientists and analysts.\n\n\n\nmatplotlib\npandas\nseaborn\nscikitlearn\n\n\n\n\n\nGitHub is a web-based platform for version control and collaboration. It allows you to store and manage your code repositories, track changes, and collaborate with others on software development projects. GitHub also provides hosting for documentation and websites, making it a convenient platform for sharing data stewardship resources."
+    "text": "This page provides information and resources on national and regional resources related to data stewardship.\n\n\n\n2023–2026 Data Strategy for the Federal Public Service - Government of Canada\nOpen Government​- Government of Canada\nBe Good Data Stewards - Government of Canada\n\n\n\n\n\nCSAS Pacific\n\n\n\n\n\nData Life Cycle\nYour Role\nData Domain\nRecommended Tool Stacks\nYour Tasks"
   },
   {
-    "objectID": "perspectives/recommended-tools.html#azure",
-    "href": "perspectives/recommended-tools.html#azure",
-    "title": "Recommended Tools",
+    "objectID": "perspectives/national-and-regional-resources.html#national-resources",
+    "href": "perspectives/national-and-regional-resources.html#national-resources",
+    "title": "National and Regional Resources",
     "section": "",
-    "text": "Azure is a cloud computing platform that provides a wide range of services for data storage, processing, and analysis. With Azure, you can securely store and manage your data, run data-intensive applications, and leverage advanced analytics capabilities."
+    "text": "2023–2026 Data Strategy for the Federal Public Service - Government of Canada\nOpen Government​- Government of Canada\nBe Good Data Stewards - Government of Canada"
   },
   {
-    "objectID": "perspectives/recommended-tools.html#ms-fabric",
-    "href": "perspectives/recommended-tools.html#ms-fabric",
-    "title": "Recommended Tools",
+    "objectID": "perspectives/national-and-regional-resources.html#regional-resources",
+    "href": "perspectives/national-and-regional-resources.html#regional-resources",
+    "title": "National and Regional Resources",
     "section": "",
-    "text": "MS Fabric is a data management framework that enables seamless integration and interoperability between different data systems and applications. It provides a unified interface for accessing and manipulating data across various platforms and technologies."
+    "text": "CSAS Pacific"
   },
   {
-    "objectID": "perspectives/recommended-tools.html#power-bi",
-    "href": "perspectives/recommended-tools.html#power-bi",
-    "title": "Recommended Tools",
+    "objectID": "perspectives/national-and-regional-resources.html#continue-exploring-the-other-perspectives",
+    "href": "perspectives/national-and-regional-resources.html#continue-exploring-the-other-perspectives",
+    "title": "National and Regional Resources",
     "section": "",
-    "text": "Power BI is a business analytics tool that allows you to visualize and analyze data from multiple sources. With Power BI, you can create interactive dashboards, reports, and data visualizations to gain insights and make informed decisions."
+    "text": "Data Life Cycle\nYour Role\nData Domain\nRecommended Tool Stacks\nYour Tasks"
   },
   {
-    "objectID": "perspectives/recommended-tools.html#r",
-    "href": "perspectives/recommended-tools.html#r",
-    "title": "Recommended Tools",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "R is a programming language and software environment for statistical computing and graphics. It provides a wide range of tools and packages for data manipulation, analysis, and visualization. R is widely used in the scientific community for reproducible research and data analysis.\n\n\n\ndplyr\nApache Arrow\nggplot"
+    "text": "The DSU is a unit within the Fisheries and Assessment Data Section (FADS) in the Pacific Region of Fisheries and Oceans Canada (DFO).\nWe are a dedicated team committed to enhancing data management and stewardship practices within DFO. Our primary focus is on data related to Pacific Salmon within the DFO Pacific Region, including biodata (e.g., fish weight, length, age, escapement statistics, genomic data), juvenile salmon, and associated ecological and environmental data.\nOur goal is to provide guidance and assistance throughout the entire lifecycle of data management—from planning to publication. We strive to ensure our practices align with modern data standards, such as those outlined in the DFO Data Strategy and the Government of Canada’s digital data strategy. For instance, our work is guided by the principles of making data findable, accessible, interoperable, and reusable (FAIR). Additionally, we highly value the principles of Indigenous data governance, such as ownership, control, access, and possession (OCAP), and we are committed to helping our collaborators respect and implement these principles in their work."
   },
   {
-    "objectID": "perspectives/recommended-tools.html#python",
-    "href": "perspectives/recommended-tools.html#python",
-    "title": "Recommended Tools",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Stewardship Unit",
     "section": "",
-    "text": "Python is a versatile programming language that is widely used in data science and machine learning. It offers a rich ecosystem of libraries and frameworks for data manipulation, analysis, and modeling. Python is known for its simplicity and readability, making it a popular choice among data scientists and analysts.\n\n\n\nmatplotlib\npandas\nseaborn\nscikitlearn"
+    "text": "Welcome to the Data Stewardship website for Fisheries and Oceans Canada employees in the Pacific Region Science Branch. This website provides support for your data stewardship and management responsibilities.\n\n\nBrowse our resources by your perspective.\n\n\n  \n    \n    Data Life Cycle\n  \n  \n      \n      Your Role\n  \n  \n      \n      Your Domain\n  \n  \n      \n      Your Tasks\n  \n\n\n\n\n\nThis site was created with Quarto by Brett Johnson and Albury C. and is hosted with Github Pages. The user perspectives were inspired by the ELIXIR RDMKit site. Icons from Font Awesome. For problems with the site, please create a Github issue or contact Albury C."
   },
   {
-    "objectID": "perspectives/recommended-tools.html#github",
-    "href": "perspectives/recommended-tools.html#github",
-    "title": "Recommended Tools",
+    "objectID": "index.html#perspectives",
+    "href": "index.html#perspectives",
+    "title": "Data Stewardship Unit",
     "section": "",
-    "text": "GitHub is a web-based platform for version control and collaboration. It allows you to store and manage your code repositories, track changes, and collaborate with others on software development projects. GitHub also provides hosting for documentation and websites, making it a convenient platform for sharing data stewardship resources."
+    "text": "Browse our resources by your perspective.\n\n\n  \n    \n    Data Life Cycle\n  \n  \n      \n      Your Role\n  \n  \n      \n      Your Domain\n  \n  \n      \n      Your Tasks"
+  },
+  {
+    "objectID": "index.html#about-this-site",
+    "href": "index.html#about-this-site",
+    "title": "Data Stewardship Unit",
+    "section": "",
+    "text": "This site was created with Quarto by Brett Johnson and Albury C. and is hosted with Github Pages. The user perspectives were inspired by the ELIXIR RDMKit site. Icons from Font Awesome. For problems with the site, please create a Github issue or contact Albury C."
+  },
+  {
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "Requirements",
+    "section": "",
+    "text": "Welcome contributors to the DSU website! This document contains detailed instructions on working with the quarto repo and using Github Actions to the publish the site.\n\nRequirements\nYou must have a Github account and Git downloaded on your machine to make changes to this repository.\n\n\nCloning and Adding a Branch\nIn order to make changes to the site, you must clone the repository and create a branch.\n\nClone the repository with git by running git clone https://github.com/dfo-pacific-science/data-stewardship-unit.git in terminal.\nInstall the required dependencies: R -e \"install.packages('quarto')\"\nMake a new branch using git branch new-branch-name. Please name the branch descriptively.\nMake your changes to the website and preview them by running quarto render. Each time any file is changed, you will need to run quarto render to see the changes locally.\nRun quarto publish gh-pages\n\n\n\nContributing\nYou may push your changes via the new branch. After pushing, you may make a pull request to merge the branch to main. Merguing to main will save your changes to the website and trigger a deployment via github actions. Deployment instructions are located in the .github/workflows/publish.yml file.\nAnother team member review your pull request with site changes. They should render the changes on their local machine with quarto render.\nCheck the deployment status after merging the new branch to main by looking at the Actions tab in Github. If succesful, a green checkmark will appear. It may take up to a few moments for the changes to be reflected on the site.\n\n\nResources\n\nQuarto Website Documentation\nGithub Pages\nRendering for CI"
+  },
+  {
+    "objectID": "the-team.html",
+    "href": "the-team.html",
+    "title": "Our Team",
+    "section": "",
+    "text": "Brett’s experience includes management and research related to juvenile salmon before focusing his career on scientific data stewardship. Brett has worked closely with the North Pacific Anadromous Fish Commission, the North Pacific Marine Science Organization, and the Canadian Integrated Ocean Observing System on data stewardship during his tenure with the Hakai Institute. As program head, Brett delivers strategic plans for the development of data solutions and data stewardship processes, implements project management plans, and develops frameworks for data standards.\n\n\n\n\n\n\n\n\nAnna has a BSc in Biodiversity and Conservation and a Master of Wildlife Management from Macquarie University. For the past 8 years, she has been working as a GIS consultant and Project Manager. She has also completed the Advanced Diploma of GIS Applications from Vancouver Island University. Anna’s role involves coordinating regional data governance with linkages to national efforts, supports the implementation of FAIR practices, and guides staff to populate regional data repositories.\n\n\n\n\n\n\n\n\nShaorong previously worked with the Molecular Genetics Lab at the Pacific Biological Station, where she has utilized cutting-edge technologies in genetics and genomics to study salmon stock identification, migration, fitness, and health. With approximately 25 years at DFO, Shaorong understands the importance of standardizing how data is captured, stored, and analyzed to ensure consistent and reliable information, as well as effective data sharing. Shaorong’s role involves mapping business processes, developing regional solutions, and working with databases related to salmon biodata.\n\n\n\n\n\n\n\n\nStephen joined DFO in the Maritimes Region after graduating with an MSc in Oceanography from Dalhousie University. His experience includes developing automated reports for Species at Risk in R Markdown, researching the potential effects of shellfish aquaculture on zooplankton communities, and assisting with the publication of CSAS documents. Stephen coordinates data governance linkages to national efforts, supports implementation of FAIR principles, and guides staff to populate data repositories in the regions.\n\n\n\n\n\n\n\n\nAlbury has a BSc and MSc in Biology from Dalhousie University. Their research there focused on trace nutrient biogeochemistry. Since then, they’ve been a data scientist at various government departments, where they contributed to the modernization of analytical workflows with open data science tools like R, Python, and Git. At the DSU, they develop reproducible data pipelines, support regional staff with data wrangling, derive unified data standards and more."
+  },
+  {
+    "objectID": "the-team.html#brett-johnson-dsu-program-head",
+    "href": "the-team.html#brett-johnson-dsu-program-head",
+    "title": "Our Team",
+    "section": "",
+    "text": "Brett’s experience includes management and research related to juvenile salmon before focusing his career on scientific data stewardship. Brett has worked closely with the North Pacific Anadromous Fish Commission, the North Pacific Marine Science Organization, and the Canadian Integrated Ocean Observing System on data stewardship during his tenure with the Hakai Institute. As program head, Brett delivers strategic plans for the development of data solutions and data stewardship processes, implements project management plans, and develops frameworks for data standards."
+  },
+  {
+    "objectID": "the-team.html#anna-douglas-morris-data-integration-steward",
+    "href": "the-team.html#anna-douglas-morris-data-integration-steward",
+    "title": "Our Team",
+    "section": "",
+    "text": "Anna has a BSc in Biodiversity and Conservation and a Master of Wildlife Management from Macquarie University. For the past 8 years, she has been working as a GIS consultant and Project Manager. She has also completed the Advanced Diploma of GIS Applications from Vancouver Island University. Anna’s role involves coordinating regional data governance with linkages to national efforts, supports the implementation of FAIR practices, and guides staff to populate regional data repositories."
+  },
+  {
+    "objectID": "the-team.html#shaorong-li-biological-salmon-data-steward",
+    "href": "the-team.html#shaorong-li-biological-salmon-data-steward",
+    "title": "Our Team",
+    "section": "",
+    "text": "Shaorong previously worked with the Molecular Genetics Lab at the Pacific Biological Station, where she has utilized cutting-edge technologies in genetics and genomics to study salmon stock identification, migration, fitness, and health. With approximately 25 years at DFO, Shaorong understands the importance of standardizing how data is captured, stored, and analyzed to ensure consistent and reliable information, as well as effective data sharing. Shaorong’s role involves mapping business processes, developing regional solutions, and working with databases related to salmon biodata."
+  },
+  {
+    "objectID": "the-team.html#stephen-finnis-regional-data-steward",
+    "href": "the-team.html#stephen-finnis-regional-data-steward",
+    "title": "Our Team",
+    "section": "",
+    "text": "Stephen joined DFO in the Maritimes Region after graduating with an MSc in Oceanography from Dalhousie University. His experience includes developing automated reports for Species at Risk in R Markdown, researching the potential effects of shellfish aquaculture on zooplankton communities, and assisting with the publication of CSAS documents. Stephen coordinates data governance linkages to national efforts, supports implementation of FAIR principles, and guides staff to populate data repositories in the regions."
+  },
+  {
+    "objectID": "the-team.html#albury-c-data-products-steward",
+    "href": "the-team.html#albury-c-data-products-steward",
+    "title": "Our Team",
+    "section": "",
+    "text": "Albury has a BSc and MSc in Biology from Dalhousie University. Their research there focused on trace nutrient biogeochemistry. Since then, they’ve been a data scientist at various government departments, where they contributed to the modernization of analytical workflows with open data science tools like R, Python, and Git. At the DSU, they develop reproducible data pipelines, support regional staff with data wrangling, derive unified data standards and more."
   },
   {
     "objectID": "perspectives/your-tasks.html",
@@ -371,24 +305,122 @@
     "text": "Data Life Cycle\nYour Role\nData Domain\nRecommended Tool Stacks\nNational and Regional Resources"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Fisheries Assessment & Data Section (FADS)",
+    "objectID": "perspectives/data-domain.html",
+    "href": "perspectives/data-domain.html",
+    "title": "Data Domain",
     "section": "",
-    "text": "Welcome to the FADS website for Fisheries and Oceans Canada employees in the Pacific Region Science Branch. This website provides support for your data stewardship and management responsibilities.\n\n\nBrowse our resources by your perspective.\n\n\n  \n    \n    Data Life Cycle\n  \n  \n      \n      Your Role\n  \n  \n      \n      Your Domain\n  \n  \n      \n      Your Tasks\n  \n  \n      \n      Recommended Tools\n  \n   \n    \n    National and Regional Resources\n  \n\n\n\n\n\nThis site was created with Quarto by Brett Johnson and Albury C. and is hosted with Github Pages. The user perspectives were inspired by the ELIXIR RDMKit site. Icons from Font Awesome. For problems with the site, please create a Github issue or contact Albury C."
+    "text": "This page provides information and resources related to different data domains in the Pacific Region Science Branch of Fisheries and Oceans Canada.\n\n\n\nSalmon Data Mobilization\nData Mobilization Through the International Year of the Salmon Ocean Observing System\nEnhancing data mobilisation through a centralised data repository for Atlantic salmon (Salmo salar L.): Providing the resources to promote an ecosystem-based management framework.\nData system design alters meaning in ecological data: salmon habitat restoration across the U.S. Pacific Northwest\n\n\n\n\n\nGBIF\n\n\n\n\n\nOBIS\nERDDAP\n\n\n\n\n\nIntroduction to Stock Assessment online course\n\n\n\n\n\nEMBL Data Resourecs\nNCBI\n\n\n\n\n\nPacific Science Data and Results\n\n\n\n\n\nData Life Cycle\nYour Role\nData Domain\nRecommended Tool Stacks\nNational and Regional Resources\nYour Tasks"
   },
   {
-    "objectID": "index.html#perspectives",
-    "href": "index.html#perspectives",
-    "title": "Fisheries Assessment & Data Section (FADS)",
+    "objectID": "perspectives/data-domain.html#salmon-stock-assessment-and-enhancement",
+    "href": "perspectives/data-domain.html#salmon-stock-assessment-and-enhancement",
+    "title": "Data Domain",
     "section": "",
-    "text": "Browse our resources by your perspective.\n\n\n  \n    \n    Data Life Cycle\n  \n  \n      \n      Your Role\n  \n  \n      \n      Your Domain\n  \n  \n      \n      Your Tasks\n  \n  \n      \n      Recommended Tools\n  \n   \n    \n    National and Regional Resources"
+    "text": "Salmon Data Mobilization\nData Mobilization Through the International Year of the Salmon Ocean Observing System\nEnhancing data mobilisation through a centralised data repository for Atlantic salmon (Salmo salar L.): Providing the resources to promote an ecosystem-based management framework.\nData system design alters meaning in ecological data: salmon habitat restoration across the U.S. Pacific Northwest"
   },
   {
-    "objectID": "index.html#about-this-site",
-    "href": "index.html#about-this-site",
-    "title": "Fisheries Assessment & Data Section (FADS)",
+    "objectID": "perspectives/data-domain.html#ecosystem-science",
+    "href": "perspectives/data-domain.html#ecosystem-science",
+    "title": "Data Domain",
     "section": "",
-    "text": "This site was created with Quarto by Brett Johnson and Albury C. and is hosted with Github Pages. The user perspectives were inspired by the ELIXIR RDMKit site. Icons from Font Awesome. For problems with the site, please create a Github issue or contact Albury C."
+    "text": "GBIF"
+  },
+  {
+    "objectID": "perspectives/data-domain.html#ocean-science",
+    "href": "perspectives/data-domain.html#ocean-science",
+    "title": "Data Domain",
+    "section": "",
+    "text": "OBIS\nERDDAP"
+  },
+  {
+    "objectID": "perspectives/data-domain.html#fisheries-management",
+    "href": "perspectives/data-domain.html#fisheries-management",
+    "title": "Data Domain",
+    "section": "",
+    "text": "Introduction to Stock Assessment online course"
+  },
+  {
+    "objectID": "perspectives/data-domain.html#diagnostics-and-genomics",
+    "href": "perspectives/data-domain.html#diagnostics-and-genomics",
+    "title": "Data Domain",
+    "section": "",
+    "text": "EMBL Data Resourecs\nNCBI"
+  },
+  {
+    "objectID": "perspectives/data-domain.html#misc.",
+    "href": "perspectives/data-domain.html#misc.",
+    "title": "Data Domain",
+    "section": "",
+    "text": "Pacific Science Data and Results"
+  },
+  {
+    "objectID": "perspectives/data-domain.html#continue-exploring-the-other-perspectives",
+    "href": "perspectives/data-domain.html#continue-exploring-the-other-perspectives",
+    "title": "Data Domain",
+    "section": "",
+    "text": "Data Life Cycle\nYour Role\nData Domain\nRecommended Tool Stacks\nNational and Regional Resources\nYour Tasks"
+  },
+  {
+    "objectID": "perspectives/recommended-tools.html",
+    "href": "perspectives/recommended-tools.html",
+    "title": "Recommended Tools",
+    "section": "",
+    "text": "In the field of data stewardship, there are several tools and technologies that can greatly assist in managing and analyzing data. Here are some recommended tool stacks that can enhance your data stewardship practices:\n\n\nAzure is a cloud computing platform that provides a wide range of services for data storage, processing, and analysis. With Azure, you can securely store and manage your data, run data-intensive applications, and leverage advanced analytics capabilities.\n\n\n\nMS Fabric is a data management framework that enables seamless integration and interoperability between different data systems and applications. It provides a unified interface for accessing and manipulating data across various platforms and technologies.\n\n\n\nPower BI is a business analytics tool that allows you to visualize and analyze data from multiple sources. With Power BI, you can create interactive dashboards, reports, and data visualizations to gain insights and make informed decisions.\n\n\n\nR is a programming language and software environment for statistical computing and graphics. It provides a wide range of tools and packages for data manipulation, analysis, and visualization. R is widely used in the scientific community for reproducible research and data analysis.\n\n\n\ndplyr\nApache Arrow\nggplot\n\n\n\n\n\nPython is a versatile programming language that is widely used in data science and machine learning. It offers a rich ecosystem of libraries and frameworks for data manipulation, analysis, and modeling. Python is known for its simplicity and readability, making it a popular choice among data scientists and analysts.\n\n\n\nmatplotlib\npandas\nseaborn\nscikitlearn\n\n\n\n\n\nGitHub is a web-based platform for version control and collaboration. It allows you to store and manage your code repositories, track changes, and collaborate with others on software development projects. GitHub also provides hosting for documentation and websites, making it a convenient platform for sharing data stewardship resources."
+  },
+  {
+    "objectID": "perspectives/recommended-tools.html#azure",
+    "href": "perspectives/recommended-tools.html#azure",
+    "title": "Recommended Tools",
+    "section": "",
+    "text": "Azure is a cloud computing platform that provides a wide range of services for data storage, processing, and analysis. With Azure, you can securely store and manage your data, run data-intensive applications, and leverage advanced analytics capabilities."
+  },
+  {
+    "objectID": "perspectives/recommended-tools.html#ms-fabric",
+    "href": "perspectives/recommended-tools.html#ms-fabric",
+    "title": "Recommended Tools",
+    "section": "",
+    "text": "MS Fabric is a data management framework that enables seamless integration and interoperability between different data systems and applications. It provides a unified interface for accessing and manipulating data across various platforms and technologies."
+  },
+  {
+    "objectID": "perspectives/recommended-tools.html#power-bi",
+    "href": "perspectives/recommended-tools.html#power-bi",
+    "title": "Recommended Tools",
+    "section": "",
+    "text": "Power BI is a business analytics tool that allows you to visualize and analyze data from multiple sources. With Power BI, you can create interactive dashboards, reports, and data visualizations to gain insights and make informed decisions."
+  },
+  {
+    "objectID": "perspectives/recommended-tools.html#r",
+    "href": "perspectives/recommended-tools.html#r",
+    "title": "Recommended Tools",
+    "section": "",
+    "text": "R is a programming language and software environment for statistical computing and graphics. It provides a wide range of tools and packages for data manipulation, analysis, and visualization. R is widely used in the scientific community for reproducible research and data analysis.\n\n\n\ndplyr\nApache Arrow\nggplot"
+  },
+  {
+    "objectID": "perspectives/recommended-tools.html#python",
+    "href": "perspectives/recommended-tools.html#python",
+    "title": "Recommended Tools",
+    "section": "",
+    "text": "Python is a versatile programming language that is widely used in data science and machine learning. It offers a rich ecosystem of libraries and frameworks for data manipulation, analysis, and modeling. Python is known for its simplicity and readability, making it a popular choice among data scientists and analysts.\n\n\n\nmatplotlib\npandas\nseaborn\nscikitlearn"
+  },
+  {
+    "objectID": "perspectives/recommended-tools.html#github",
+    "href": "perspectives/recommended-tools.html#github",
+    "title": "Recommended Tools",
+    "section": "",
+    "text": "GitHub is a web-based platform for version control and collaboration. It allows you to store and manage your code repositories, track changes, and collaborate with others on software development projects. GitHub also provides hosting for documentation and websites, making it a convenient platform for sharing data stewardship resources."
+  },
+  {
+    "objectID": "training-resources.html",
+    "href": "training-resources.html",
+    "title": "Training Resources",
+    "section": "",
+    "text": "Welcome to the Training Resources page of the Data Stewardship Unit website! Here, you will find a collection of training resources to enhance your skills and knowledge in data stewardship.\n\n\n\nVersion Control with Git: Software Carpentry\nData Analysis and Visualization in R for Ecologists: Software Carpentry\nData Analysis and Visualization in Python for Ecologists\nIntroduction to stock assessment\nCanada School of Public Service Catalog\nMicrosoft Learn"
+  },
+  {
+    "objectID": "training-resources.html#online-training-resources",
+    "href": "training-resources.html#online-training-resources",
+    "title": "Training Resources",
+    "section": "",
+    "text": "Version Control with Git: Software Carpentry\nData Analysis and Visualization in R for Ecologists: Software Carpentry\nData Analysis and Visualization in Python for Ecologists\nIntroduction to stock assessment\nCanada School of Public Service Catalog\nMicrosoft Learn"
   }
 ]
