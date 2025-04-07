@@ -160,11 +160,11 @@ dbGetQuery(connsql, "SELECT COUNT(*) FROM bronze_pacific_prod.FOS_v1_1.stock")
 
 
 
-## Local Computer versus Databricks Compute
+## Local Compute versus Databricks Compute
 
 Using Databricks compute should be minimized to avoid unnecessary costs. Instead, use your local computer for data exploration and analysis. Only use Databricks compute when you need to access new data, write data back to the Lakehouse, or run large-scale computations.
 
-#### When Databricks Computer is Used vs. Local Computer
+#### When Databricks Compute is Used vs. Local Compute
 
 Databricks Compute:
 
