@@ -158,39 +158,11 @@
     "text": "Data Life Cycle\nYour Role\nData Domain\nRecommended Tool Stacks\nYour Tasks"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "git_branching_strategy.html",
+    "href": "git_branching_strategy.html",
+    "title": "🔁 Git Branching Policy",
     "section": "",
-    "text": "The DSU is a unit within the Fisheries and Assessment Data Section (FADS) in the Pacific Region of Fisheries and Oceans Canada (DFO).\nWe are a dedicated team committed to enhancing data management and stewardship practices within DFO. Our primary focus is on data related to Pacific Salmon within the DFO Pacific Region, including biodata (e.g., fish weight, length, age, escapement statistics, genomic data), juvenile salmon, and associated ecological and environmental data.\nOur goal is to provide guidance and assistance throughout the entire lifecycle of data management—from planning to publication. We strive to ensure our practices align with modern data standards, such as those outlined in the DFO Data Strategy and the Government of Canada’s digital data strategy. For instance, our work is guided by the principles of making data findable, accessible, interoperable, and reusable (FAIR). Additionally, we highly value the principles of Indigenous data governance, such as ownership, control, access, and possession (OCAP), and we are committed to helping our collaborators respect and implement these principles in their work."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Data Stewardship Unit",
-    "section": "",
-    "text": "Welcome to the Data Stewardship website for Fisheries and Oceans Canada employees in the Pacific Region Science Branch. This website provides support for your data stewardship and management responsibilities.\n\n\nBrowse our resources by your perspective.\n\n\n  \n    \n    Data Life Cycle\n  \n  \n      \n      Your Role\n  \n  \n      \n      Your Domain\n  \n  \n      \n      Your Tasks\n  \n\n\n\n\n\nThis site was created with Quarto by Brett Johnson and Albury C. and is hosted with Github Pages. The user perspectives were inspired by the ELIXIR RDMKit site. Icons from Font Awesome. For problems with the site, please create a Github issue or contact Albury C."
-  },
-  {
-    "objectID": "index.html#perspectives",
-    "href": "index.html#perspectives",
-    "title": "Data Stewardship Unit",
-    "section": "",
-    "text": "Browse our resources by your perspective.\n\n\n  \n    \n    Data Life Cycle\n  \n  \n      \n      Your Role\n  \n  \n      \n      Your Domain\n  \n  \n      \n      Your Tasks"
-  },
-  {
-    "objectID": "index.html#about-this-site",
-    "href": "index.html#about-this-site",
-    "title": "Data Stewardship Unit",
-    "section": "",
-    "text": "This site was created with Quarto by Brett Johnson and Albury C. and is hosted with Github Pages. The user perspectives were inspired by the ELIXIR RDMKit site. Icons from Font Awesome. For problems with the site, please create a Github issue or contact Albury C."
-  },
-  {
-    "objectID": "CONTRIBUTING.html",
-    "href": "CONTRIBUTING.html",
-    "title": "Requirements",
-    "section": "",
-    "text": "Welcome contributors to the DSU website! This document contains detailed instructions on working with the quarto repo and using Github Actions to the publish the site.\n\nRequirements\nYou must have a Github account and Git downloaded on your machine to make changes to this repository.\n\n\nCloning and Adding a Branch\nIn order to make changes to the site, you must clone the repository and create a branch.\n\nClone the repository with git by running git clone https://github.com/dfo-pacific-science/data-stewardship-unit.git in terminal.\nInstall the required dependencies: R -e \"install.packages('quarto')\"\nMake a new branch using git branch new-branch-name. Please name the branch descriptively.\nMake your changes to the website and preview them by running quarto render. Each time any file is changed, you will need to run quarto render to see the changes locally.\nRun quarto publish gh-pages\n\n\n\nContributing\nYou may push your changes via the new branch. After pushing, you may make a pull request to merge the branch to main. Merguing to main will save your changes to the website and trigger a deployment via github actions. Deployment instructions are located in the .github/workflows/publish.yml file.\nAnother team member review your pull request with site changes. They should render the changes on their local machine with quarto render.\nCheck the deployment status after merging the new branch to main by looking at the Actions tab in Github. If succesful, a green checkmark will appear. It may take up to a few moments for the changes to be reflected on the site.\n\n\nResources\n\nQuarto Website Documentation\nGithub Pages\nRendering for CI"
+    "text": "🔁 Git Branching Policy\nWe use a feature-branch workflow off main to keep things simple and support live site previews on pull requests.\n\n📌 Main Branches\n\n\n\nBranch\nPurpose\nNotes\n\n\n\n\nmain\nProduction branch\nAuto-deploys to GitHub Pages\n\n\n\n\n\n🌿 Feature Branches\n\nStart a new branch from main using the naming pattern:\nfeature/your-topic or bugfix/fix-thing\nOpen a pull request targeting main as early as possible\nThe site will auto-build and deploy a preview of your changes\nWhere you think some review would be useful, request a review of your PR\nOnce approved, your branch is merged into main\n\n\n\n🔀 Pull Requests\n\nAlways open a PR for review and preview.\nUse draft PRs if your work isn’t ready for review but you want a preview.\nGitHub Actions will post a comment with a live preview URL.\nTry not to commit directly to main unless making minor updates not requiring review.\n\n\n\n🧼 Cleanup\n\nPreview branches are auto-generated (preview/pr-##) — don’t use them for development.\nYou can delete your feature branch after merging your PR."
   },
   {
     "objectID": "the-team.html",
@@ -233,6 +205,41 @@
     "title": "Our Team",
     "section": "",
     "text": "Albury has a BSc and MSc in Biology from Dalhousie University. Their research there focused on trace nutrient biogeochemistry. Since then, they’ve been a data scientist at various government departments, where they contributed to the modernization of analytical workflows with open data science tools like R, Python, and Git. At the DSU, they develop reproducible data pipelines, support regional staff with data wrangling, derive unified data standards and more."
+  },
+  {
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "Requirements",
+    "section": "",
+    "text": "Welcome contributors to the DSU website! This document contains detailed instructions on working with the quarto repo and using Github Actions to the publish the site.\n\nRequirements\nYou must have a Github account and Git downloaded on your machine to make changes to this repository.\n\n\nCloning and Adding a Branch\nIn order to make changes to the site, you must clone the repository and create a branch.\n\nClone the repository with git by running git clone https://github.com/dfo-pacific-science/data-stewardship-unit.git in terminal.\nInstall the required dependencies: R -e \"install.packages('quarto')\"\nMake a new branch using git branch new-branch-name. Please name the branch descriptively.\nMake your changes to the website and preview them by running quarto render. Each time any file is changed, you will need to run quarto render to see the changes locally.\nRun quarto publish gh-pages\n\n\n\nContributing\nYou may push your changes via the new branch. After pushing, you may make a pull request to merge the branch to main. Merguing to main will save your changes to the website and trigger a deployment via github actions. Deployment instructions are located in the .github/workflows/publish.yml file.\nAnother team member review your pull request with site changes. They should render the changes on their local machine with quarto render.\nCheck the deployment status after merging the new branch to main by looking at the Actions tab in Github. If succesful, a green checkmark will appear. It may take up to a few moments for the changes to be reflected on the site.\n\n\nResources\n\nQuarto Website Documentation\nGithub Pages\nRendering for CI"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Stewardship Unit",
+    "section": "",
+    "text": "Welcome to the Data Stewardship website for Fisheries and Oceans Canada employees in the Pacific Region Science Branch. This website provides support for your data stewardship and management responsibilities.\n\n\nBrowse our resources by your perspective.\n\n\n  \n    \n    Data Life Cycle\n  \n  \n      \n      Your Role\n  \n  \n      \n      Your Domain\n  \n  \n      \n      Your Tasks\n  \n\n\n\n\n\nThis site was created with Quarto by Brett Johnson and Albury C. and is hosted with Github Pages. The user perspectives were inspired by the ELIXIR RDMKit site. Icons from Font Awesome. For problems with the site, please create a Github issue or contact Albury C."
+  },
+  {
+    "objectID": "index.html#perspectives",
+    "href": "index.html#perspectives",
+    "title": "Data Stewardship Unit",
+    "section": "",
+    "text": "Browse our resources by your perspective.\n\n\n  \n    \n    Data Life Cycle\n  \n  \n      \n      Your Role\n  \n  \n      \n      Your Domain\n  \n  \n      \n      Your Tasks"
+  },
+  {
+    "objectID": "index.html#about-this-site",
+    "href": "index.html#about-this-site",
+    "title": "Data Stewardship Unit",
+    "section": "",
+    "text": "This site was created with Quarto by Brett Johnson and Albury C. and is hosted with Github Pages. The user perspectives were inspired by the ELIXIR RDMKit site. Icons from Font Awesome. For problems with the site, please create a Github issue or contact Albury C."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "The DSU is a unit within the Fisheries and Assessment Data Section (FADS) in the Pacific Region of Fisheries and Oceans Canada (DFO).\nWe are a dedicated team committed to enhancing data management and stewardship practices within DFO. Our primary focus is on data related to Pacific Salmon within the DFO Pacific Region, including biodata (e.g., fish weight, length, age, escapement statistics, genomic data), juvenile salmon, and associated ecological and environmental data.\nOur goal is to provide guidance and assistance throughout the entire lifecycle of data management—from planning to publication. We strive to ensure our practices align with modern data standards, such as those outlined in the DFO Data Strategy and the Government of Canada’s digital data strategy. For instance, our work is guided by the principles of making data findable, accessible, interoperable, and reusable (FAIR). Additionally, we highly value the principles of Indigenous data governance, such as ownership, control, access, and possession (OCAP), and we are committed to helping our collaborators respect and implement these principles in their work."
   },
   {
     "objectID": "perspectives/your-tasks.html",
