@@ -1,0 +1,55 @@
+name: Quarto PR Preview
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-deploy-comment:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libcurl4-openssl-dev
+          pip install -r requirements.txt || true
+          Rscript -e 'if (!requireNamespace("quarto")) install.packages("quarto")'
+
+      - name: Render Quarto site
+        run: quarto render
+
+      - name: Deploy preview to `preview/pr-<id>` branch
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          PREVIEW_BRANCH="preview/pr-${PR_NUMBER}"
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git fetch origin
+          git checkout --orphan "$PREVIEW_BRANCH"
+          git reset
+          mv _site/* .
+          rm -rf _site .github .gitignore
+          touch .nojekyll
+          git add .
+          git commit -m "Preview site for PR #${PR_NUMBER}"
+          git push -f origin "$PREVIEW_BRANCH"
+
+      - name: Comment with Preview URL
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            🚀 Preview your site here:  
+            👉 https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/preview/pr-${{ github.event.pull_request.number }}/
+

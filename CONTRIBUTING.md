@@ -1,29 +1,92 @@
-Welcome contributors to the DSU website! 
-This document contains detailed instructions on working with the quarto repo and using Github Actions to the publish the site. 
+# 🧠 Contributing to the DSU Website
 
-# Requirements 
-You must have a Github account and [Git](https://git-scm.com/) downloaded on your machine to make changes to this repository. 
+Welcome contributors to the Data Stewardship Unit website!  
+This document contains instructions for working with this [Quarto](https://quarto.org) site and contributing via GitHub.
 
-# Cloning and Adding a Branch
+## ✅ Requirements
 
-In order to make changes to the site, you must clone the repository and create a branch. 
+- A GitHub account
+- Git installed on your machine
+- Quarto installed (`install.packages("quarto")` in R or use [Quarto installation guide](https://quarto.org/docs/get-started/))
 
-1. Clone the repository with git by running `git clone https://github.com/dfo-pacific-science/data-stewardship-unit.git` in terminal. 
-2. Install the required dependencies: `R -e "install.packages('quarto')"`
-3. Make a new branch using `git branch new-branch-name`. Please name the branch descriptively. 
-3. Make your changes to the website and preview them by running `quarto render`. Each time any file is changed, you will need to run `quarto render` to see the changes locally.
-4. Run `quarto publish gh-pages`
+---
 
-# Contributing
+## 🚀 Getting Started
 
-You may push your changes via the new branch. After pushing, you may make a pull request to merge the branch to main. Merguing to main will save your changes to the website and trigger a deployment via github actions. Deployment instructions are located in the .github/workflows/publish.yml file.
+1. **Clone the repository**  
+   Open a terminal and run:
 
-Another team member review your pull request with site changes. They should render the changes on their local machine with `quarto render`. 
+   ```bash
+   git clone https://github.com/dfo-pacific-science/data-stewardship-unit.git
+   cd data-stewardship-unit
+   ```
 
-Check the deployment status after merging the new branch to main by looking at the Actions tab in Github. If succesful, a green checkmark will appear. It may take up to a few moments for the changes to be reflected on the site. 
+2. **Create a new feature branch off `main`**  
+   Use a short, descriptive name for your branch:
 
+   ```bash
+   git checkout -b feature/add-about-page
+   ```
 
-# Resources
-- [Quarto Website Documentation](https://quarto.org/docs/websites/)
-- [Github Pages](https://quarto.org/docs/publishing/github-pages.html)
-- [Rendering for CI](https://quarto.org/docs/publishing/ci.html#rendering-for-ci)
+3. **Install dependencies**  
+   In R, run:
+
+   ```r
+   install.packages("quarto")
+   ```
+
+4. **Make your changes**  
+   Edit files, add new content, etc.  
+   Preview locally with:
+
+   ```bash
+   quarto preview
+   ```
+
+---
+
+## 🔁 Contributing Your Work
+
+1. **Push your branch to GitHub**  
+   ```bash
+   git push -u origin feature/add-about-page
+   ```
+
+2. **Open a Pull Request (PR)**  
+   - Open a PR against `main`
+   - Use a **Draft PR** if your work is not yet ready for review
+   - GitHub Actions will automatically generate a **preview deployment** of your changes and post the link as a comment
+
+3. **Review and Collaborate**  
+   - Share the preview link with others for feedback
+   - Make changes as needed and push more commits — the preview auto-updates
+
+4. **Merge to Main**  
+   - Once approved, your PR is merged into `main`
+   - This triggers a GitHub Action to **build and publish the site** to GitHub Pages
+   - Check deployment status under the **Actions tab** (✅ = successful)
+
+5. **Cleanup**  
+   - Delete your branch after merging (GitHub will offer to do this)
+
+---
+
+## 🧪 Local Rendering (optional)
+
+If you want to render locally (not required for PR previews):
+
+```bash
+quarto render
+```
+
+This generates the site into the `_site/` folder.
+
+---
+
+## 📁 Notes
+
+- **Do not edit or work directly in the `main` branch.**
+- You do **not** need to run `quarto publish gh-pages` — deployment is fully handled by GitHub Actions.
+- All site deployments are defined in `.github/workflows/publish.yml` (main) and `.github/workflows/preview.yml` (PR previews).
+
+Thanks for helping improve the DSU site!
