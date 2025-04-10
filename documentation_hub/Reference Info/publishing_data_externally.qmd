@@ -1,39 +1,36 @@
 ---
-title: "DFO Pacific Science Branch: Reference Guide on External Data Platforms"
-author: "Data Stewardship Unit"
+title: "Hosting Data and Code on External Platforms"
 version: "v1.0"
 last_updated: "2025-04-04"
 ---
 
-# 📘 Reference Guide: Use of External Platforms for Data, Code, and Metadata
-
-This guide is intended for scientists and technical staff in the **DFO Pacific Region Science Branch**. It outlines what is **allowed, restricted, or prohibited** when using **external platforms** (e.g., GitHub, Zenodo, Google Drive) to manage and share **DFO Science data, code, and metadata**, including during **Fishery Science Advisory Report (FSAR)** workflows.
+This guide is intended for scientists and technical staff in the DFO Pacific Region Science Branch. It outlines what is allowed, restricted, or prohibited when using external platforms (e.g., GitHub, Zenodo, Google Drive) to manage and share DFO Science data, code, and metadata, including during Fishery Science Advisory Report (FSAR) workflows.
 
 ---
 
-## 🔖 1-Page Summary Table
+Table 1. **External Platform Use Guidelines** for three data classifications of both data and code: Unclassified, Protected A, and Protected B. Note that this table does not cover Protected C or Classified data which are not permitted on external platforms.
 
-| **Platform** | **Unclassified Data** | **Protected A** | **Protected B** | **Notes** |
+| **Platform** | **Unclassified** | **Protected A** | **Protected B** | **Notes** |
 |--------------|------------------------|------------------|------------------|----------|
-| **GitHub (public repo)** | ✅ Allowed (after internal release approval) | ❌ Prohibited | ❌ Prohibited | Only for non-sensitive code/data. Wait until FSAR is approved. |
-| **GitHub (private repo)** | ⚠️ Internal collaboration only (before approval) | ⚠️ Discouraged | ❌ Prohibited | Use only for prep; not for Protected data. |
-| **GitHub Codespaces** | ✅ for unclassified code only | ❌ | ❌ | Don't use for Protected data or model outputs. |
-| **GitHub Copilot** | ✅ if code is non-sensitive | ❌ | ❌ | Never input Protected code/data. |
-| **Google Drive / Sheets** | ⚠️ for internal drafts only | ❌ unless encrypted and approved | ❌ | Avoid as final storage. Not GC-authorized. |
-| **Zenodo / Figshare / Dryad** | ✅ after FSAR approval | ❌ | ❌ | Good for open datasets with DOIs. Must be approved first. |
+| **GitHub (public repo)** | Code: ✅ yes. Data:⚠️ only allowed after internal DFO release approval | ❌ Prohibited | ❌ Prohibited | Public GitHub repos are only for non-sensitive code or metadata. Must go through internal DFO public data release process even for unclassified data. |
+| **GitHub (private repo)** | ✅ Before release approval and sharing with specific collaborators | ⚠️ Discouraged | ❌ Prohibited | Useful for sharing non-sensitive (usally derived) data with external reviewers or CSAS participants; not for Protected data (ie. raw data). |
+| **GitHub Codespaces** | ✅  | ❌ | ❌ | Don't use for Protected data or model outputs. |
+| **GitHub Copilot** | ✅ | ❌ | ❌ | Never input Protected code/data. |
+| **Zenodo / Figshare / Dryad** | ✅ after FSAR approval | ❌ | ❌ | Good for quickly getting datasets published with DOIs. Must be followed up with publication to Open Government Portal |
 | **GC Data Portal (Open.Canada.ca)** | ✅ Required for final release | ❌ | ❌ | Official platform for open datasets. Requires release review. |
-| **GCcollab / GCshare / SharePoint** | ✅ Internal sharing | ✅ With care | ⚠️ Rare; PB sharing requires approval | Use for internal collaboration or controlled external access. |
+| **GCcollab / GCshare** | ✅ Internal sharing | ✅ With care | ⚠️ Rare; PB sharing requires approval | Use for internal collaboration |
+| **SharePoint** | ✅ | ✅ | ✅ | SharePoint can also be used to share protected data with external CSAS participants or reviewers by submitting a request for email approval from the Regional Director of Science. Attach approval email to [this Assystnet ticket](http://assystselfservice.ent.dfo-mpo.ca/assystnet/application.jsp#serviceOfferings/285)
 
 ---
 
 ## 🔐 Data Classification Quick Reference
 
-- **Unclassified (Public)**: No expected harm from disclosure. Includes open data, public metadata, and code that contains no sensitive logic or credentials.
-  - _Examples_: Published R packages, fish counts aggregated by region and year, habitat model source code without raw data.
+- **Unclassified**: No expected harm from disclosure. Includes open data, public metadata, and code that contains no sensitive logic or credentials.
+  - _Examples_: Published R packages, fish counts aggregated by region and year, habitat model source code without raw data. Note, however, even unclassified data has to be approved for release by the Regional Director of Science.
 - **Protected A**: Could cause low-level injury if disclosed (e.g., minor confidentiality breach, operational disruption).
   - _Examples_: Unpublished but non-sensitive biological metrics tied to location or project; fishing effort by vessel class if potentially re-identifiable; unreviewed site-specific model outputs.
 - **Protected B**: Could cause serious injury if disclosed (e.g., violation of legal obligations, significant economic harm).
-  - _Examples_: Commercial catch by vessel or license number; spatially explicit stock assessment results; sensitive species occurrences; data provided under confidentiality agreements.
+  - _Examples_: Commercial catch by vessel or license number; sensitive species occurrences; data provided under confidentiality agreements.
 
 > 🔗 Refer to the [Policy on Government Security](https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32611) for classification definitions and examples.  
 > 🔎 Unsure if data is protected? Consult your divisional data contact or ATIP office.
@@ -43,13 +40,13 @@ This guide is intended for scientists and technical staff in the **DFO Pacific R
 ## 🧭 Platform-by-Platform Guidance
 
 ### ✅ GitHub (Public and Private)
-- **Recommended for**: Open-source code, metadata schemas, documentation, workflows.
-- **Allowed**: Unclassified data/code only. Must be released after internal approval.
+- **Recommended for**: Non-sensitive, unclassified code, metadata schemas, documentation, workflows.
+- **Allowed**: Unclassified data/code only. Data must go through the Approvals and Internal publishing process before being posted anywhere public.
 - **Private repos**: Use for drafting and collaboration before public release. Do not use for long-term data storage.
-- **FSAR Rule**: No public posting of data/code before FSAR is formally approved.
+- **FSAR Guidance**: Posting of data in a public GitHub repo before FSAR is formally approved by CSAS and before the release has beeing approved by the Regional Director of Science is likely a breach of the Access to Information Act and/or Privacy Act.
 
 > 🔗 [TBS Directive on Open Government, Section 6.1](https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=28108#cha6) – Open information by default, subject to security/privacy.
-> 🔗 [DFO Science Data Policy](https://waves-vagues.dfo-mpo.gc.ca/Library/40890794.pdf) – Section 4.3: open access subject to classification review.
+> 🔗 [DFO Policy for Scientific Data](https://www.dfo-mpo.gc.ca/about-notre-sujet/publications/science/datapolicy-politiquedonnees/index-eng.html) - " t is the responsibility of the Regional Director of Science to designate specific Data as classified for preventing its open sharing."
 
 ---
 
@@ -57,25 +54,14 @@ This guide is intended for scientists and technical staff in the **DFO Pacific R
 - **Codespaces**: Cloud-hosted dev environments. Not GC-approved for sensitive data. Fine for non-sensitive code.
 - **Copilot**: Do not enter Protected data/code. Avoid unless using for generic logic.
 
-> 🔗 [TBS Guide on Generative AI](https://www.canada.ca/en/government/system/digital-government/digital-government-innovations/responsible-use-ai.html) – Do not input sensitive information into third-party tools.
+> 🔗 [TBS Guide on Generative AI](https://www.canada.ca/en/government/system/digital-government/digital-government-innovations/responsible-use-ai.html) 
 
 ---
 
-### 🟡 Google Drive / Sheets
-- **Only use internally**, for early collaboration.
-- **Never store Protected B data**.
-- **Not an approved final repository**.
-
-> 🔗 [TBS Policy on Service and Digital, Section 4.4.3.14](https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32603#cha4) – Sensitive data must reside on GC-managed infrastructure in Canada.
-
----
-
-### ✅ Zenodo, Dryad, Figshare
+### ✅ Canadian Integrated Ocean Observing System, Zenodo, Dryad, Figshare
 - Use **after FSAR or publication approval**.
-- Good for creating DOIs and enabling citation.
-- Data must be fully unclassified and reviewed.
-
-> 🔗 [Directive on Open Government, Section 6.2](https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=28108#cha6) – Public dissemination encouraged post-approval.
+- Good for creating DOIs and enabling citation and disseminating broadly.
+- Data must be fully unclassified, reviewed, and approved.
 
 ---
 
@@ -90,41 +76,18 @@ This guide is intended for scientists and technical staff in the **DFO Pacific R
 
 ## 🧾 Internal DFO Requirements
 
-### 📤 Even unclassified data must go through internal release process
-- Managed by DFO Science Branch (via Data Stewards and Divisional Leads)
-- Required steps:
-  - Classification check (Unclassified vs. Protected)
-  - Metadata form completion
-  - Assignment of Data Steward / Contact
-  - Quality and sensitivity review
-- Applies to all formats (e.g., CSV, netCDF, RDS)
+### 📤 Internal release process
+- Managed by the Marine Spatial Data Infrastructure System and the Enterprise Data Hub
+[Follow the official steps here](https://intranet.ent.dfo-mpo.ca/science/en/node/1478)
 
-> 🔗 [DFO Science Data Policy, Section 3.4](https://waves-vagues.dfo-mpo.gc.ca/Library/40890794.pdf#page=7) – All data must be reviewed before release, regardless of classification.
+FOr the steps specific to Approvals and Publishing see step 4 for the [Release Criteria Checklist](https://intranet.ent.dfo-mpo.ca/science/sites/science/files/release_criteria_checklist_open_government.pdf)  
+
 
 ### ⏳ When to Release?
 - **For FSAR-related data**: Only after advice is finalized and report is approved.
 - **For code/metadata tools**: May be shared publicly once confirmed to contain no sensitive content.
 
-> 🔗 [CSAS Procedural Manual](https://www.dfo-mpo.gc.ca/csas-sccs/process-processus/procedure-eng.html) – Supporting material must not be released until advice is finalized.
-
----
-
-## ❓FAQ
-
-### Can I work on FSAR code in GitHub before it's approved?
-> ✅ Yes, in a **private repo**. But do not share the repo publicly or link it in other outputs until the FSAR is finalized.
-
-### Can I publish a dataset to Zenodo that underpins a FSAR?
-> ⚠️ Only after the FSAR is **approved and cited**. Otherwise, it risks pre-empting the advice.
-
-### What if my data are aggregated and not obviously sensitive?
-> 🔎 If the data were derived from Protected B sources, they may **still be classified**. Check with your Data Steward.
-
-### Can I share FSAR data with external partners before the FSAR is done?
-> ⚠️ Only with explicit permission. Consider using SharePoint or GCcollab with restricted access. Not GitHub.
-
-### Are there any GC tools for sharing Protected B data with partners?
-> ✅ Yes, but these must be vetted by IT or Shared Services. Ask your program’s IM/IT contact.
+> 🔗 [CSAS Procedural Manuals](https://www.dfo-mpo.gc.ca/csas-sccs/process-processus/index-eng.html) – Supporting material must not be released until advice is finalized.
 
 ---
 
