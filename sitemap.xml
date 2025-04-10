@@ -1,59 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/publishing_data_externally.html</loc>
-    <lastmod>2025-04-07T14:27:35.852Z</lastmod>
-  </url>
-  <url>
     <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/training-resources.html</loc>
-    <lastmod>2025-04-07T14:27:35.856Z</lastmod>
+    <lastmod>2025-04-10T16:08:50.469Z</lastmod>
   </url>
   <url>
     <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/perspectives/recommended-tools.html</loc>
-    <lastmod>2025-04-07T14:27:35.856Z</lastmod>
+    <lastmod>2025-04-10T16:08:50.468Z</lastmod>
   </url>
   <url>
     <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/perspectives/data-domain.html</loc>
-    <lastmod>2025-04-07T14:27:35.856Z</lastmod>
+    <lastmod>2025-04-10T16:08:50.468Z</lastmod>
   </url>
   <url>
     <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/perspectives/your-tasks.html</loc>
-    <lastmod>2025-04-07T14:27:35.856Z</lastmod>
+    <lastmod>2025-04-10T16:08:50.468Z</lastmod>
   </url>
   <url>
-    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/about.html</loc>
-    <lastmod>2025-04-07T14:27:35.851Z</lastmod>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/documentation_hub/how_to_guides/databricks_r_studio.html</loc>
+    <lastmod>2025-04-10T16:08:50.465Z</lastmod>
   </url>
   <url>
-    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/index.html</loc>
-    <lastmod>2025-04-07T14:27:35.856Z</lastmod>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/documentation_hub/Reference Info/publishing_data_externally.html</loc>
+    <lastmod>2025-04-10T16:08:50.465Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/tools.html</loc>
+    <lastmod>2025-04-10T16:08:50.469Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/tools/r_packages.html</loc>
+    <lastmod>2025-04-10T16:08:50.469Z</lastmod>
   </url>
   <url>
     <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/CONTRIBUTING.html</loc>
-    <lastmod>2025-04-07T14:27:35.842Z</lastmod>
+    <lastmod>2025-04-10T16:08:50.458Z</lastmod>
   </url>
   <url>
-    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/the-team.html</loc>
-    <lastmod>2025-04-07T14:27:35.856Z</lastmod>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/index.html</loc>
+    <lastmod>2025-04-10T16:08:50.468Z</lastmod>
   </url>
   <url>
-    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/git_branching_strategy.html</loc>
-    <lastmod>2025-04-07T14:27:35.852Z</lastmod>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/about.html</loc>
+    <lastmod>2025-04-10T16:08:50.465Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/documentation_hub/how_to_guides/sharepoint_r.html</loc>
+    <lastmod>2025-04-10T16:08:50.465Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/dsu_documentation.html</loc>
+    <lastmod>2025-04-10T16:08:50.465Z</lastmod>
   </url>
   <url>
     <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/perspectives/national-and-regional-resources.html</loc>
-    <lastmod>2025-04-07T14:27:35.856Z</lastmod>
+    <lastmod>2025-04-10T16:08:50.468Z</lastmod>
   </url>
   <url>
     <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/perspectives/your-role.html</loc>
-    <lastmod>2025-04-07T14:27:35.856Z</lastmod>
+    <lastmod>2025-04-10T16:08:50.468Z</lastmod>
   </url>
   <url>
     <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/perspectives/data-life-cycle.html</loc>
-    <lastmod>2025-04-07T14:27:35.856Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/databricks_r_studio.html</loc>
-    <lastmod>2025-04-07T14:27:35.852Z</lastmod>
+    <lastmod>2025-04-10T16:08:50.468Z</lastmod>
   </url>
 </urlset>

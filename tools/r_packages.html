@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Data Stewardship Unit">
 
-<title>DFO Pacific Science Branch: Reference Guide on External Data Platforms – Data Stewardship Unit</title>
+<title>R Packages – Data Stewardship Unit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -91,54 +90,36 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="https://086gc.sharepoint.com/sites/FisheryAssessmentDataSectionWiki/SitePages/Data-Stewardship-Unit(1).aspx"> 
 <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-data-stewardship" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Data Stewardship</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-data-stewardship">    
-        <li>
-    <a class="dropdown-item" href="../perspectives/data-life-cycle.html">
- <span class="dropdown-text">Data Life Cycle</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../perspectives/your-role.html">
- <span class="dropdown-text">Your Role</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../perspectives/data-domain.html">
- <span class="dropdown-text">Data Domain</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../perspectives/your-tasks.html">
- <span class="dropdown-text">Your Tasks</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-knowledge-hub" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Knowledge Hub</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-knowledge-hub">    
-        <li class="dropdown-header">How to Guides</li>
-        <li class="dropdown-header">Need to Know</li>
-        <li class="dropdown-header">Key Resources</li>
-    </ul>
-  </li>
   <li class="nav-item">
-    <a class="nav-link" href="../the-team.html"> 
-<span class="menu-text">Our Team</span></a>
+    <a class="nav-link" href="../dsu_documentation.html"> 
+<span class="menu-text">Documentation Hub</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
-<span class="menu-text">About</span></a>
+    <a class="nav-link" href="../tools.html"> 
+<span class="menu-text">Tools (coming soon)</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
     <a href="../../fr" title="Francais" class="quarto-navigation-tool px-1" aria-label="Francais"><i class="bi bi-translate"></i></a>
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/dfo-pacific-science/data-stewardship-unit">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues">
+            Report a Bug
+            </a>
+          </li>
+      </ul>
+    </div>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -147,9 +128,12 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../how_to_guides/publishing_data_externally.html">DFO Pacific Science Branch: Reference Guide on External Data Platforms</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tools/r_packages.html">Tools</a></li><li class="breadcrumb-item"><a href="../tools/r_packages.html">R Packages</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
     </div>
   </nav>
 </header>
@@ -157,20 +141,81 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Documentation Hub</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">How to Guides</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../how_to_guides/databricks_r_studio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">databricks_r_studio</span></a>
+  <a href="../documentation_hub/how_to_guides/databricks_r_studio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Connect to the Azure Lakehouse from R</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../how_to_guides/publishing_data_externally.html" class="sidebar-item-text sidebar-link active">
+  <a href="../documentation_hub/how_to_guides/sharepoint_r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SharePoint in R</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Reference Info</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../documentation_hub/Reference Info/publishing_data_externally.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DFO Pacific Science Branch: Reference Guide on External Data Platforms</span></a>
   </div>
 </li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Tools</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tools/r_packages.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">R Packages</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -181,54 +226,25 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#reference-guide-use-of-external-platforms-for-data-code-and-metadata" id="toc-reference-guide-use-of-external-platforms-for-data-code-and-metadata" class="nav-link active" data-scroll-target="#reference-guide-use-of-external-platforms-for-data-code-and-metadata">📘 Reference Guide: Use of External Platforms for Data, Code, and Metadata</a>
+  <li><a href="#r-packages-for-data-stewardship" id="toc-r-packages-for-data-stewardship" class="nav-link active" data-scroll-target="#r-packages-for-data-stewardship">🧰 R Packages for Data Stewardship 📦</a>
   <ul class="collapse">
-  <li><a href="#page-summary-table" id="toc-page-summary-table" class="nav-link" data-scroll-target="#page-summary-table">🔖 1-Page Summary Table</a></li>
-  <li><a href="#data-classification-quick-reference" id="toc-data-classification-quick-reference" class="nav-link" data-scroll-target="#data-classification-quick-reference">🔐 Data Classification Quick Reference</a></li>
-  <li><a href="#platform-by-platform-guidance" id="toc-platform-by-platform-guidance" class="nav-link" data-scroll-target="#platform-by-platform-guidance">🧭 Platform-by-Platform Guidance</a>
-  <ul class="collapse">
-  <li><a href="#github-public-and-private" id="toc-github-public-and-private" class="nav-link" data-scroll-target="#github-public-and-private">✅ GitHub (Public and Private)</a></li>
-  <li><a href="#github-codespaces-copilot" id="toc-github-codespaces-copilot" class="nav-link" data-scroll-target="#github-codespaces-copilot">🚫 GitHub Codespaces / Copilot</a></li>
-  <li><a href="#google-drive-sheets" id="toc-google-drive-sheets" class="nav-link" data-scroll-target="#google-drive-sheets">🟡 Google Drive / Sheets</a></li>
-  <li><a href="#zenodo-dryad-figshare" id="toc-zenodo-dryad-figshare" class="nav-link" data-scroll-target="#zenodo-dryad-figshare">✅ Zenodo, Dryad, Figshare</a></li>
-  <li><a href="#gc-open-data-portal" id="toc-gc-open-data-portal" class="nav-link" data-scroll-target="#gc-open-data-portal">✅ GC Open Data Portal</a></li>
-  </ul></li>
-  <li><a href="#internal-dfo-requirements" id="toc-internal-dfo-requirements" class="nav-link" data-scroll-target="#internal-dfo-requirements">🧾 Internal DFO Requirements</a>
-  <ul class="collapse">
-  <li><a href="#even-unclassified-data-must-go-through-internal-release-process" id="toc-even-unclassified-data-must-go-through-internal-release-process" class="nav-link" data-scroll-target="#even-unclassified-data-must-go-through-internal-release-process">📤 Even unclassified data must go through internal release process</a></li>
-  <li><a href="#when-to-release" id="toc-when-to-release" class="nav-link" data-scroll-target="#when-to-release">⏳ When to Release?</a></li>
-  </ul></li>
-  <li><a href="#faq" id="toc-faq" class="nav-link" data-scroll-target="#faq">❓FAQ</a>
-  <ul class="collapse">
-  <li><a href="#can-i-work-on-fsar-code-in-github-before-its-approved" id="toc-can-i-work-on-fsar-code-in-github-before-its-approved" class="nav-link" data-scroll-target="#can-i-work-on-fsar-code-in-github-before-its-approved">Can I work on FSAR code in GitHub before it’s approved?</a></li>
-  <li><a href="#can-i-publish-a-dataset-to-zenodo-that-underpins-a-fsar" id="toc-can-i-publish-a-dataset-to-zenodo-that-underpins-a-fsar" class="nav-link" data-scroll-target="#can-i-publish-a-dataset-to-zenodo-that-underpins-a-fsar">Can I publish a dataset to Zenodo that underpins a FSAR?</a></li>
-  <li><a href="#what-if-my-data-are-aggregated-and-not-obviously-sensitive" id="toc-what-if-my-data-are-aggregated-and-not-obviously-sensitive" class="nav-link" data-scroll-target="#what-if-my-data-are-aggregated-and-not-obviously-sensitive">What if my data are aggregated and not obviously sensitive?</a></li>
-  <li><a href="#can-i-share-fsar-data-with-external-partners-before-the-fsar-is-done" id="toc-can-i-share-fsar-data-with-external-partners-before-the-fsar-is-done" class="nav-link" data-scroll-target="#can-i-share-fsar-data-with-external-partners-before-the-fsar-is-done">Can I share FSAR data with external partners before the FSAR is done?</a></li>
-  <li><a href="#are-there-any-gc-tools-for-sharing-protected-b-data-with-partners" id="toc-are-there-any-gc-tools-for-sharing-protected-b-data-with-partners" class="nav-link" data-scroll-target="#are-there-any-gc-tools-for-sharing-protected-b-data-with-partners">Are there any GC tools for sharing Protected B data with partners?</a></li>
-  </ul></li>
-  <li><a href="#need-help" id="toc-need-help" class="nav-link" data-scroll-target="#need-help">📬 Need Help?</a></li>
+  <li><a href="#this-page-is-under-construction" id="toc-this-page-is-under-construction" class="nav-link" data-scroll-target="#this-page-is-under-construction">🚧 This page is under construction! 🏗️</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/how_to_guides/publishing_data_externally.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/how_to_guides/publishing_data_externally.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/tools/r_packages.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/tools/r_packages.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tools/r_packages.html">Tools</a></li><li class="breadcrumb-item"><a href="../tools/r_packages.html">R Packages</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">DFO Pacific Science Branch: Reference Guide on External Data Platforms</h1>
+<h1 class="title">R Packages</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Data Stewardship Unit </p>
-          </div>
-  </div>
     
   
     
@@ -239,251 +255,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="reference-guide-use-of-external-platforms-for-data-code-and-metadata" class="level1">
-<h1>📘 Reference Guide: Use of External Platforms for Data, Code, and Metadata</h1>
-<p>This guide is intended for scientists and technical staff in the <strong>DFO Pacific Region Science Branch</strong>. It outlines what is <strong>allowed, restricted, or prohibited</strong> when using <strong>external platforms</strong> (e.g., GitHub, Zenodo, Google Drive) to manage and share <strong>DFO Science data, code, and metadata</strong>, including during <strong>Fishery Science Advisory Report (FSAR)</strong> workflows.</p>
-<hr>
-<section id="page-summary-table" class="level2">
-<h2 class="anchored" data-anchor-id="page-summary-table">🔖 1-Page Summary Table</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 16%">
-<col style="width: 28%">
-<col style="width: 21%">
-<col style="width: 21%">
-<col style="width: 11%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Platform</strong></th>
-<th><strong>Unclassified Data</strong></th>
-<th><strong>Protected A</strong></th>
-<th><strong>Protected B</strong></th>
-<th><strong>Notes</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>GitHub (public repo)</strong></td>
-<td>✅ Allowed (after internal release approval)</td>
-<td>❌ Prohibited</td>
-<td>❌ Prohibited</td>
-<td>Only for non-sensitive code/data. Wait until FSAR is approved.</td>
-</tr>
-<tr class="even">
-<td><strong>GitHub (private repo)</strong></td>
-<td>⚠️ Internal collaboration only (before approval)</td>
-<td>⚠️ Discouraged</td>
-<td>❌ Prohibited</td>
-<td>Use only for prep; not for Protected data.</td>
-</tr>
-<tr class="odd">
-<td><strong>GitHub Codespaces</strong></td>
-<td>✅ for unclassified code only</td>
-<td>❌</td>
-<td>❌</td>
-<td>Don’t use for Protected data or model outputs.</td>
-</tr>
-<tr class="even">
-<td><strong>GitHub Copilot</strong></td>
-<td>✅ if code is non-sensitive</td>
-<td>❌</td>
-<td>❌</td>
-<td>Never input Protected code/data.</td>
-</tr>
-<tr class="odd">
-<td><strong>Google Drive / Sheets</strong></td>
-<td>⚠️ for internal drafts only</td>
-<td>❌ unless encrypted and approved</td>
-<td>❌</td>
-<td>Avoid as final storage. Not GC-authorized.</td>
-</tr>
-<tr class="even">
-<td><strong>Zenodo / Figshare / Dryad</strong></td>
-<td>✅ after FSAR approval</td>
-<td>❌</td>
-<td>❌</td>
-<td>Good for open datasets with DOIs. Must be approved first.</td>
-</tr>
-<tr class="odd">
-<td><strong>GC Data Portal (Open.Canada.ca)</strong></td>
-<td>✅ Required for final release</td>
-<td>❌</td>
-<td>❌</td>
-<td>Official platform for open datasets. Requires release review.</td>
-</tr>
-<tr class="even">
-<td><strong>GCcollab / GCshare / SharePoint</strong></td>
-<td>✅ Internal sharing</td>
-<td>✅ With care</td>
-<td>⚠️ Rare; PB sharing requires approval</td>
-<td>Use for internal collaboration or controlled external access.</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="data-classification-quick-reference" class="level2">
-<h2 class="anchored" data-anchor-id="data-classification-quick-reference">🔐 Data Classification Quick Reference</h2>
-<ul>
-<li><strong>Unclassified (Public)</strong>: No expected harm from disclosure. Includes open data, public metadata, and code that contains no sensitive logic or credentials.
-<ul>
-<li><em>Examples</em>: Published R packages, fish counts aggregated by region and year, habitat model source code without raw data.</li>
-</ul></li>
-<li><strong>Protected A</strong>: Could cause low-level injury if disclosed (e.g., minor confidentiality breach, operational disruption).
-<ul>
-<li><em>Examples</em>: Unpublished but non-sensitive biological metrics tied to location or project; fishing effort by vessel class if potentially re-identifiable; unreviewed site-specific model outputs.</li>
-</ul></li>
-<li><strong>Protected B</strong>: Could cause serious injury if disclosed (e.g., violation of legal obligations, significant economic harm).
-<ul>
-<li><em>Examples</em>: Commercial catch by vessel or license number; spatially explicit stock assessment results; sensitive species occurrences; data provided under confidentiality agreements.</li>
-</ul></li>
-</ul>
-<blockquote class="blockquote">
-<p>🔗 Refer to the <a href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32611">Policy on Government Security</a> for classification definitions and examples.<br>
-🔎 Unsure if data is protected? Consult your divisional data contact or ATIP office.</p>
-</blockquote>
-<hr>
-</section>
-<section id="platform-by-platform-guidance" class="level2">
-<h2 class="anchored" data-anchor-id="platform-by-platform-guidance">🧭 Platform-by-Platform Guidance</h2>
-<section id="github-public-and-private" class="level3">
-<h3 class="anchored" data-anchor-id="github-public-and-private">✅ GitHub (Public and Private)</h3>
-<ul>
-<li><strong>Recommended for</strong>: Open-source code, metadata schemas, documentation, workflows.</li>
-<li><strong>Allowed</strong>: Unclassified data/code only. Must be released after internal approval.</li>
-<li><strong>Private repos</strong>: Use for drafting and collaboration before public release. Do not use for long-term data storage.</li>
-<li><strong>FSAR Rule</strong>: No public posting of data/code before FSAR is formally approved.</li>
-</ul>
-<blockquote class="blockquote">
-<p>🔗 <a href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=28108#cha6">TBS Directive on Open Government, Section 6.1</a> – Open information by default, subject to security/privacy. 🔗 <a href="https://waves-vagues.dfo-mpo.gc.ca/Library/40890794.pdf">DFO Science Data Policy</a> – Section 4.3: open access subject to classification review.</p>
-</blockquote>
-<hr>
-</section>
-<section id="github-codespaces-copilot" class="level3">
-<h3 class="anchored" data-anchor-id="github-codespaces-copilot">🚫 GitHub Codespaces / Copilot</h3>
-<ul>
-<li><strong>Codespaces</strong>: Cloud-hosted dev environments. Not GC-approved for sensitive data. Fine for non-sensitive code.</li>
-<li><strong>Copilot</strong>: Do not enter Protected data/code. Avoid unless using for generic logic.</li>
-</ul>
-<blockquote class="blockquote">
-<p>🔗 <a href="https://www.canada.ca/en/government/system/digital-government/digital-government-innovations/responsible-use-ai.html">TBS Guide on Generative AI</a> – Do not input sensitive information into third-party tools.</p>
-</blockquote>
-<hr>
-</section>
-<section id="google-drive-sheets" class="level3">
-<h3 class="anchored" data-anchor-id="google-drive-sheets">🟡 Google Drive / Sheets</h3>
-<ul>
-<li><strong>Only use internally</strong>, for early collaboration.</li>
-<li><strong>Never store Protected B data</strong>.</li>
-<li><strong>Not an approved final repository</strong>.</li>
-</ul>
-<blockquote class="blockquote">
-<p>🔗 <a href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32603#cha4">TBS Policy on Service and Digital, Section 4.4.3.14</a> – Sensitive data must reside on GC-managed infrastructure in Canada.</p>
-</blockquote>
-<hr>
-</section>
-<section id="zenodo-dryad-figshare" class="level3">
-<h3 class="anchored" data-anchor-id="zenodo-dryad-figshare">✅ Zenodo, Dryad, Figshare</h3>
-<ul>
-<li>Use <strong>after FSAR or publication approval</strong>.</li>
-<li>Good for creating DOIs and enabling citation.</li>
-<li>Data must be fully unclassified and reviewed.</li>
-</ul>
-<blockquote class="blockquote">
-<p>🔗 <a href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=28108#cha6">Directive on Open Government, Section 6.2</a> – Public dissemination encouraged post-approval.</p>
-</blockquote>
-<hr>
-</section>
-<section id="gc-open-data-portal" class="level3">
-<h3 class="anchored" data-anchor-id="gc-open-data-portal">✅ GC Open Data Portal</h3>
-<ul>
-<li><strong>Official repository</strong> for open DFO datasets.</li>
-<li>Requires metadata, data steward approval, and Open Government Licence.</li>
-</ul>
-<blockquote class="blockquote">
-<p>🔗 <a href="https://open.canada.ca/en/open-government-licence-canada">Open Government Licence</a><br>
-🔗 <a href="https://open.canada.ca/en/submit-data">Open Data Portal Submission Guide</a></p>
-</blockquote>
-<hr>
-</section>
-</section>
-<section id="internal-dfo-requirements" class="level2">
-<h2 class="anchored" data-anchor-id="internal-dfo-requirements">🧾 Internal DFO Requirements</h2>
-<section id="even-unclassified-data-must-go-through-internal-release-process" class="level3">
-<h3 class="anchored" data-anchor-id="even-unclassified-data-must-go-through-internal-release-process">📤 Even unclassified data must go through internal release process</h3>
-<ul>
-<li>Managed by DFO Science Branch (via Data Stewards and Divisional Leads)</li>
-<li>Required steps:
-<ul>
-<li>Classification check (Unclassified vs.&nbsp;Protected)</li>
-<li>Metadata form completion</li>
-<li>Assignment of Data Steward / Contact</li>
-<li>Quality and sensitivity review</li>
-</ul></li>
-<li>Applies to all formats (e.g., CSV, netCDF, RDS)</li>
-</ul>
-<blockquote class="blockquote">
-<p>🔗 <a href="https://waves-vagues.dfo-mpo.gc.ca/Library/40890794.pdf#page=7">DFO Science Data Policy, Section 3.4</a> – All data must be reviewed before release, regardless of classification.</p>
-</blockquote>
-</section>
-<section id="when-to-release" class="level3">
-<h3 class="anchored" data-anchor-id="when-to-release">⏳ When to Release?</h3>
-<ul>
-<li><strong>For FSAR-related data</strong>: Only after advice is finalized and report is approved.</li>
-<li><strong>For code/metadata tools</strong>: May be shared publicly once confirmed to contain no sensitive content.</li>
-</ul>
-<blockquote class="blockquote">
-<p>🔗 <a href="https://www.dfo-mpo.gc.ca/csas-sccs/process-processus/procedure-eng.html">CSAS Procedural Manual</a> – Supporting material must not be released until advice is finalized.</p>
-</blockquote>
-<hr>
-</section>
-</section>
-<section id="faq" class="level2">
-<h2 class="anchored" data-anchor-id="faq">❓FAQ</h2>
-<section id="can-i-work-on-fsar-code-in-github-before-its-approved" class="level3">
-<h3 class="anchored" data-anchor-id="can-i-work-on-fsar-code-in-github-before-its-approved">Can I work on FSAR code in GitHub before it’s approved?</h3>
-<blockquote class="blockquote">
-<p>✅ Yes, in a <strong>private repo</strong>. But do not share the repo publicly or link it in other outputs until the FSAR is finalized.</p>
-</blockquote>
-</section>
-<section id="can-i-publish-a-dataset-to-zenodo-that-underpins-a-fsar" class="level3">
-<h3 class="anchored" data-anchor-id="can-i-publish-a-dataset-to-zenodo-that-underpins-a-fsar">Can I publish a dataset to Zenodo that underpins a FSAR?</h3>
-<blockquote class="blockquote">
-<p>⚠️ Only after the FSAR is <strong>approved and cited</strong>. Otherwise, it risks pre-empting the advice.</p>
-</blockquote>
-</section>
-<section id="what-if-my-data-are-aggregated-and-not-obviously-sensitive" class="level3">
-<h3 class="anchored" data-anchor-id="what-if-my-data-are-aggregated-and-not-obviously-sensitive">What if my data are aggregated and not obviously sensitive?</h3>
-<blockquote class="blockquote">
-<p>🔎 If the data were derived from Protected B sources, they may <strong>still be classified</strong>. Check with your Data Steward.</p>
-</blockquote>
-</section>
-<section id="can-i-share-fsar-data-with-external-partners-before-the-fsar-is-done" class="level3">
-<h3 class="anchored" data-anchor-id="can-i-share-fsar-data-with-external-partners-before-the-fsar-is-done">Can I share FSAR data with external partners before the FSAR is done?</h3>
-<blockquote class="blockquote">
-<p>⚠️ Only with explicit permission. Consider using SharePoint or GCcollab with restricted access. Not GitHub.</p>
-</blockquote>
-</section>
-<section id="are-there-any-gc-tools-for-sharing-protected-b-data-with-partners" class="level3">
-<h3 class="anchored" data-anchor-id="are-there-any-gc-tools-for-sharing-protected-b-data-with-partners">Are there any GC tools for sharing Protected B data with partners?</h3>
-<blockquote class="blockquote">
-<p>✅ Yes, but these must be vetted by IT or Shared Services. Ask your program’s IM/IT contact.</p>
-</blockquote>
-<hr>
-</section>
-</section>
-<section id="need-help" class="level2">
-<h2 class="anchored" data-anchor-id="need-help">📬 Need Help?</h2>
-<ul>
-<li><strong>Data Classification or Release Questions</strong>: <code>DFO.PACIFIC.SCIENCE.DATA@dfo-mpo.gc.ca</code></li>
-<li><strong>CSAS Advice Process Questions</strong>: Contact your regional CSAS Coordinator</li>
-<li><strong>Open Science &amp; GitHub Use</strong>: Data Stewardship Unit</li>
-</ul>
-<hr>
-<blockquote class="blockquote">
-<p>ℹ️ This document will be updated periodically. Please check back for revised guidance as policies evolve.</p>
-</blockquote>
+<section id="r-packages-for-data-stewardship" class="level1">
+<h1>🧰 R Packages for Data Stewardship 📦</h1>
+<p>Welcome to the <strong>R Packages</strong> section of the DSU site! 🐟</p>
+<p>Here you’ll find a curated set of R packages that support your work as a data steward or data producer within the <strong>Pacific Region Science Branch</strong> of Fisheries and Oceans Canada. 🧪🌊</p>
+<section id="this-page-is-under-construction" class="level2">
+<h2 class="anchored" data-anchor-id="this-page-is-under-construction">🚧 This page is under construction! 🏗️</h2>
 
 
 </section>
@@ -914,8 +691,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0 license</a>. Built with 💖 and Quarto.</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/how_to_guides/publishing_data_externally.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/how_to_guides/publishing_data_externally.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<p>This site was created with <a href="https://quarto.org/">Quarto</a> by Brett Johnson and Albury C. and is hosted with <a href="https://pages.github.com/">Github Pages</a>. This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0 license</a>.</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/tools/r_packages.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/tools/r_packages.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
