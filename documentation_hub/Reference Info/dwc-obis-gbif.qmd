@@ -1,0 +1,98 @@
+---
+title: "Darwin Core, GBIF, and OBIS Reference Guide"
+format: html
+---
+
+# Reference Guide: Darwin Core, the Unified GBIF Data Model, and OBIS
+
+This guide introduces the **Darwin Core (DwC)** standard and its role in supporting data interoperability and publication for **Fisheries and Oceans Canada (DFO)**. It also provides an overview of the **Unified GBIF Data Model** and the **Ocean Biodiversity Information System (OBIS)**. The focus is on how commonly used fields in DFO fisheries datasets map to Darwin Core terms, enabling integration across internal and external systems.
+
+---
+
+## What is Darwin Core?
+
+**Darwin Core** is a biodiversity data standard maintained by [Biodiversity Information Standards (TDWG)](https://www.tdwg.org/). It provides a stable, referenceable set of terms designed to facilitate sharing information about biological diversity — particularly the **occurrence of taxa in nature**, along with associated metadata like location, time, method, and taxonomy.
+
+Darwin Core is **intentionally broad**, supporting data from natural history collections, ecological surveys, tagging programs, and more.
+
+---
+
+## Darwin Core as a Translation Layer
+
+In the DFO Pacific Region, diverse data formats and schemas are used across programs, divisions, and systems. Darwin Core provides a **shared vocabulary** that enables these internal formats to be mapped to:
+
+- Other DFO systems
+- National open data platforms
+- International biodiversity repositories (e.g., GBIF, OBIS)
+
+By treating Darwin Core as a **semantic translation layer**, we can harmonize our internal datasets for **interoperability, discoverability, and reuse**, without requiring all groups to adopt the same database design.
+
+---
+
+## The Unified GBIF Data Model
+
+The [GBIF Unified Data Model](https://www.gbif.org/news/3UyrmGQmVxF9exOEZo2N7c/the-unified-model-explained) extends Darwin Core to support **complex biodiversity datasets**, including:
+
+- **Events** (e.g., sampling campaigns, cruises, transects)
+- **Occurrences** (e.g., individual specimens, observations)
+- **Measurements or Facts** (e.g., biological measurements, environmental conditions)
+
+This model aligns with DFO data practices that involve nested relationships between surveys, gear deployments, catches, and individual biological samples.
+
+---
+
+## OBIS: Ocean Biodiversity Information System
+
+[OBIS](https://obis.org/) builds on Darwin Core and the GBIF model to support **marine biodiversity data**. It uses a **Darwin Core Archive** format with specific extensions for:
+
+- Sampling Effort
+- Environmental Parameters
+- Taxonomic Verification
+
+OBIS is the global node for **marine biodiversity** under the **UN Ocean Decade** and is highly relevant for DFO’s coastal and offshore research.
+
+---
+
+## Mapping DFO Fisheries Data to Darwin Core
+
+Below are examples of how commonly used columns in DFO data systems align with Darwin Core terms.
+
+| DFO Field / Concept                  | Darwin Core Term        | Notes |
+|--------------------------------------|--------------------------|-------|
+| `Species_Code` or `Species_Name`     | `scientificName`        | Can be resolved via WoRMS or NCBI |
+| `Sample_ID`                          | `occurrenceID`          | A globally unique identifier for the specimen or observation |
+| `Catch_Date`                         | `eventDate`             | Ideally formatted as ISO 8601 |
+| `Survey_Name`                        | `eventID`               | Use hierarchical `eventID`s for nested events (e.g., cruise → tow → sample) |
+| `Latitude`, `Longitude`              | `decimalLatitude`, `decimalLongitude` | Use WGS84 datum |
+| `Depth_m`                            | `minimumDepthInMeters`, `maximumDepthInMeters` | Use both where applicable |
+| `Sex`, `Maturity`, `Length`, `Weight`| `measurementType`, `measurementValue`, `measurementUnit` | Recorded under the MeasurementOrFact extension |
+| `Gear_Type`                          | `samplingProtocol`      | Use consistent terminology for methods |
+| `Area_Code`, `Subarea`               | `locationID`, `locality`| Align to spatial standards like NAFO/DFO zones |
+| `Data_Source`, `Project_Name`        | `datasetName`, `recordedBy` | Identify project or responsible team |
+
+---
+
+## Toward Controlled Vocabularies and Ontologies
+
+DFO’s long-term goal is to develop **controlled vocabularies and ontology modules** that align with:
+
+- **Darwin Core** term values
+- The **NERC Vocabulary Server (NVS)** for environmental parameters
+- **World Register of Marine Species (WoRMS)** for taxonomic resolution
+- **CF Conventions** for oceanographic and climate data
+- The **Salmon Ontology** developed by [NCEAS](https://bioportal.bioontology.org/ontologies/SALMON)
+
+These efforts will allow for **semantic alignment**, improving both machine-readability and clarity for analysts and stakeholders.
+
+---
+
+## Next Steps
+
+- We are actively building a **DFO metadata crosswalk** using Darwin Core as the central translation layer
+- Look for updates on **term definitions**, **controlled value lists**, and **validation tools**
+- Join our discussions on standardizing data fields and contributing to the controlled vocabulary development
+
+For questions, feedback, or help mapping your dataset, contact the Data Stewardship Unit.
+
+---
+```Darwin Core is not a database format. It’s a lingua franca for biodiversity data. Use it to describe, translate, and publish your data — not to force everything into the same structure.```
