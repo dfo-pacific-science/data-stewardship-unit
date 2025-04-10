@@ -8,45 +8,35 @@ website:
   navbar:
     search: true
     left: 
-      - href: index.qmd
-        text: "Home"
-      - text: "Data Stewardship"
-        menu: 
-          - href: perspectives/data-life-cycle.qmd
-            text: "Data Life Cycle"
-          - href: perspectives/your-role.qmd
-            text: "Your Role"
-          - href: perspectives/data-domain.qmd
-            text: "Data Domain"
-          - href: perspectives/your-tasks.qmd
-            text: "Your Tasks"
-      - text: "Knowledge Hub"
-        menu:
-          - text: "How to Guides"
-            href: ''
-          - text: "Need to Know"
-            href: ''
-          - text: "Key Resources"
-            href: ''
-
-      - href: the-team.qmd
-        text: "Our Team"
-      - href: about.qmd
-        text: "About"
+      - text: "Home"        
+        href: https://086gc.sharepoint.com/sites/FisheryAssessmentDataSectionWiki/SitePages/Data-Stewardship-Unit(1).aspx
+      - text: "Documentation Hub"
+        href: dsu_documentation.qmd
+      - text: "Tools (coming soon)"
+        href: tools.qmd
     tools:
       - icon: translate
         href: ../fr
         text: "Francais"
+      - icon: github
+        menu:
+          - text: Source Code
+            href:  https://github.com/dfo-pacific-science/data-stewardship-unit
+          - text: Report a Bug
+            href:  https://github.com/dfo-pacific-science/data-stewardship-unit/issues 
         
   sidebar:
-    - title: "How to Guides"
-      style: docked
+    - style: docked
       background: light
-      contents: how_to_guides/*
+      contents: 
+        - auto: documentation_hub
+          search: true
+        - auto: tools
+      search: true
     
   repo-url: https://github.com/dfo-pacific-science/data-stewardship-unit
   repo-actions: [edit, source, issue]
-  page-footer: "This work is licensed under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). Built with 💖 and Quarto." 
+  page-footer: "This site was created with [Quarto](https://quarto.org/) by Brett Johnson and Albury C. and is hosted with [Github Pages](https://pages.github.com/). This work is licensed under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/)."
 
 lang: en
 

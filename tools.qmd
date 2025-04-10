@@ -1,0 +1,36 @@
+---
+title: "tools"
+format: html
+---
+
+# 🧰 Tools for Data Stewardship ⚙️📦
+
+Welcome to the **Tools** section of the DSU site! 🐟  
+Here you'll find a curated set of apps, platforms, scripts, and templates that support your work as a data steward or data producer within the **Pacific Region Science Branch** of Fisheries and Oceans Canada. 🧪🌊
+
+---
+
+## 🚧 This page is under construction! 🏗️
+
+We're actively gathering, building, and documenting the most useful tools for the job — so stay tuned! In the meantime, here’s a sneak peek at what’s coming:
+
+### 🔧 What to Expect
+
+- 🗂 **Data Dictionary and Metadata Templates**  (Excel + JSON)
+- 🤝 **Data Management Agreement Templates**
+- 🧮 **R & Python Functions, Scripts, and Packages** for data cleaning and reporting
+- 🔗 **Links to External Tools** (See Internal [DSU SharePoint Wiki](https://086gc.sharepoint.com/sites/FisheryAssessmentDataSectionWiki/SitePages/Data-Stewardship-Unit(1).aspx) for internal tools)
+- 🧠 **Toolkits for Data Stewards** (checklists, walkthroughs, best practices)
+
+---
+
+### 📩 Got a Tool to Share?
+
+If you’ve built or used something you think could help others — whether it’s a handy Excel macro or a full-blown Shiny app — we’d love to include it here!  
+Send us a note and let’s make it easier for everyone to work smarter. 🤝💡
+
+---
+
+🧭 [Return to the Internal DSU Wiki](https://086gc.sharepoint.com/sites/FisheryAssessmentDataSectionWiki/SitePages/Data-Stewardship-Unit(1).aspx)
+
+> _Tools don't solve problems — people do. But the right tool helps a lot._ 🛠️🙂
