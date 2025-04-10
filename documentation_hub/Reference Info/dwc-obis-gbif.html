@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SharePoint in R – Data Stewardship Unit</title>
+<title>Darwin Core, GBIF, and OBIS Reference Guide – Data Stewardship Unit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -162,7 +128,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Documentation Hub</li><li class="breadcrumb-item"><a href="../../documentation_hub/how_to_guides/databricks_r_studio.html">How to Guides</a></li><li class="breadcrumb-item"><a href="../../documentation_hub/how_to_guides/sharepoint_r.html">SharePoint in R</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Documentation Hub</li><li class="breadcrumb-item"><a href="../../documentation_hub/Reference Info/dwc-obis-gbif.html">Reference Info</a></li><li class="breadcrumb-item"><a href="../../documentation_hub/Reference Info/dwc-obis-gbif.html">Darwin Core, GBIF, and OBIS Reference Guide</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -193,13 +159,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">How to Guides</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../documentation_hub/how_to_guides/databricks_r_studio.html" class="sidebar-item-text sidebar-link">
@@ -208,7 +174,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../documentation_hub/how_to_guides/sharepoint_r.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../documentation_hub/how_to_guides/sharepoint_r.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SharePoint in R</span></a>
   </div>
 </li>
@@ -216,16 +182,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Reference Info</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../documentation_hub/Reference Info/dwc-obis-gbif.html" class="sidebar-item-text sidebar-link">
+  <a href="../../documentation_hub/Reference Info/dwc-obis-gbif.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Darwin Core, GBIF, and OBIS Reference Guide</span></a>
   </div>
 </li>
@@ -266,19 +232,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#write-this-raw-data-file-to-bronze" id="toc-write-this-raw-data-file-to-bronze" class="nav-link active" data-scroll-target="#write-this-raw-data-file-to-bronze">Write this raw data file to Bronze</a></li>
-  <li><a href="#read-data-from-bronze" id="toc-read-data-from-bronze" class="nav-link" data-scroll-target="#read-data-from-bronze">Read data from Bronze</a></li>
-  <li><a href="#transform-data-to-meet-spsr-schema" id="toc-transform-data-to-meet-spsr-schema" class="nav-link" data-scroll-target="#transform-data-to-meet-spsr-schema">Transform data to meet SPSR schema</a></li>
-  <li><a href="#write-to-silver" id="toc-write-to-silver" class="nav-link" data-scroll-target="#write-to-silver">Write to silver</a></li>
+  <li><a href="#reference-guide-darwin-core-the-unified-gbif-data-model-and-obis" id="toc-reference-guide-darwin-core-the-unified-gbif-data-model-and-obis" class="nav-link active" data-scroll-target="#reference-guide-darwin-core-the-unified-gbif-data-model-and-obis">Reference Guide: Darwin Core, the Unified GBIF Data Model, and OBIS</a>
+  <ul class="collapse">
+  <li><a href="#what-is-darwin-core" id="toc-what-is-darwin-core" class="nav-link" data-scroll-target="#what-is-darwin-core">What is Darwin Core?</a></li>
+  <li><a href="#darwin-core-as-a-translation-layer" id="toc-darwin-core-as-a-translation-layer" class="nav-link" data-scroll-target="#darwin-core-as-a-translation-layer">Darwin Core as a Translation Layer</a></li>
+  <li><a href="#the-unified-gbif-data-model" id="toc-the-unified-gbif-data-model" class="nav-link" data-scroll-target="#the-unified-gbif-data-model">The Unified GBIF Data Model</a></li>
+  <li><a href="#obis-ocean-biodiversity-information-system" id="toc-obis-ocean-biodiversity-information-system" class="nav-link" data-scroll-target="#obis-ocean-biodiversity-information-system">OBIS: Ocean Biodiversity Information System</a></li>
+  <li><a href="#mapping-dfo-fisheries-data-to-darwin-core" id="toc-mapping-dfo-fisheries-data-to-darwin-core" class="nav-link" data-scroll-target="#mapping-dfo-fisheries-data-to-darwin-core">Mapping DFO Fisheries Data to Darwin Core</a></li>
+  <li><a href="#toward-controlled-vocabularies-and-ontologies" id="toc-toward-controlled-vocabularies-and-ontologies" class="nav-link" data-scroll-target="#toward-controlled-vocabularies-and-ontologies">Toward Controlled Vocabularies and Ontologies</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/documentation_hub/how_to_guides/sharepoint_r.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/documentation_hub/how_to_guides/sharepoint_r.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/documentation_hub/Reference Info/dwc-obis-gbif.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/documentation_hub/Reference Info/dwc-obis-gbif.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Documentation Hub</li><li class="breadcrumb-item"><a href="../../documentation_hub/how_to_guides/databricks_r_studio.html">How to Guides</a></li><li class="breadcrumb-item"><a href="../../documentation_hub/how_to_guides/sharepoint_r.html">SharePoint in R</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Documentation Hub</li><li class="breadcrumb-item"><a href="../../documentation_hub/Reference Info/dwc-obis-gbif.html">Reference Info</a></li><li class="breadcrumb-item"><a href="../../documentation_hub/Reference Info/dwc-obis-gbif.html">Darwin Core, GBIF, and OBIS Reference Guide</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">SharePoint in R</h1>
+<h1 class="title">Darwin Core, GBIF, and OBIS Reference Guide</h1>
 </div>
 
 
@@ -295,62 +267,146 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">'Microsoft365R'</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">list_sharepoint_sites</span>()</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Delete cached token manually if you get an error about MFA</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#unlink("~/.Microsoft365R", recursive = TRUE)</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>site <span class="ot">&lt;-</span> <span class="fu">get_sharepoint_site</span>(<span class="st">'Fishery &amp; Assessment Data Section Wiki'</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># document libraries</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>site<span class="sc">$</span><span class="fu">list_drives</span>()</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>drv <span class="ot">&lt;-</span> site<span class="sc">$</span><span class="fu">get_drive</span>()</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: I manually put this data into the FADS Wiki SharePoint to illustrate the workflow of FSAR authors uploading data here</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Download file from FADS Wiki SharePoint</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>drv<span class="sc">$</span><span class="fu">download_file</span>(<span class="st">"General/FSAR Data/Fraser Pinks/data/generated/benchmarks.csv"</span>, <span class="at">overwrite =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>fr_pk_bms <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"benchmarks.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<section id="write-this-raw-data-file-to-bronze" class="level1">
-<h1>Write this raw data file to Bronze</h1>
-<p>Just kidding this has to be done in a Databricks Notebook if I want to write a .csv. I can only write delta tables into a database schema from R locally using RJDBC. Which might also work. Using a Databrick notebook would be annoying because I can’t read from SharePoint in DataBricks. I could set up pipeline in Azure Data Factory to read from SharePoint, transform, and write to Lakehouse but it seems complicated and maybe overkill.</p>
-<p>We could also just read from SharePoint and write to SharePoint silver folder… Makes provisioning access to silver data easier perhaps…</p>
-<p>See miro diagram https://miro.com/app/board/uXjVIJyjBWk=/?share_link_id=763283318229</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RJDBC)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>jdbc_driver <span class="ot">&lt;-</span> <span class="fu">JDBC</span>(<span class="st">"com.databricks.client.jdbc.Driver"</span>, <span class="st">"C:/Users/JOHNSONBRE/DatabricksJDBC42.jar"</span>, <span class="st">""</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>urlsql <span class="ot">&lt;-</span> <span class="st">"jdbc:databricks://adb-553282681420861.1.azuredatabricks.net:443/default;transportMode=http;ssl=1;AuthMech=3;httpPath=/sql/1.0/warehouses/613056ec98d47d29;"</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>pat <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">"DATABRICKS_PAT"</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>connsql <span class="ot">&lt;-</span> RJDBC<span class="sc">::</span><span class="fu">dbConnect</span>(jdbc_driver, urlsql, <span class="st">"token"</span>, pat)</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">dbGetQuery</span>(connsql, <span class="st">"SELECT 1"</span>)</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># see what catalog are available</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu">dbGetQuery</span>(connsql, <span class="st">"SHOW CATALOGS"</span>)</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">dbGetQuery</span>(connsql, <span class="st">"SHOW SCHEMAS IN bronze_pacific_prod"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="reference-guide-darwin-core-the-unified-gbif-data-model-and-obis" class="level1">
+<h1>Reference Guide: Darwin Core, the Unified GBIF Data Model, and OBIS</h1>
+<p>This guide introduces the <strong>Darwin Core (DwC)</strong> standard and its role in supporting data interoperability and publication for <strong>Fisheries and Oceans Canada (DFO)</strong>. It also provides an overview of the <strong>Unified GBIF Data Model</strong> and the <strong>Ocean Biodiversity Information System (OBIS)</strong>. The focus is on how commonly used fields in DFO fisheries datasets map to Darwin Core terms, enabling integration across internal and external systems.</p>
+<hr>
+<section id="what-is-darwin-core" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-darwin-core">What is Darwin Core?</h2>
+<p><strong>Darwin Core</strong> is a biodiversity data standard maintained by <a href="https://www.tdwg.org/">Biodiversity Information Standards (TDWG)</a>. It provides a stable, referenceable set of terms designed to facilitate sharing information about biological diversity — particularly the <strong>occurrence of taxa in nature</strong>, along with associated metadata like location, time, method, and taxonomy.</p>
+<p>Darwin Core is <strong>intentionally broad</strong>, supporting data from natural history collections, ecological surveys, tagging programs, and more.</p>
+<hr>
 </section>
-<section id="read-data-from-bronze" class="level1">
-<h1>Read data from Bronze</h1>
+<section id="darwin-core-as-a-translation-layer" class="level2">
+<h2 class="anchored" data-anchor-id="darwin-core-as-a-translation-layer">Darwin Core as a Translation Layer</h2>
+<p>In the DFO Pacific Region, diverse data formats and schemas are used across programs, divisions, and systems. Darwin Core provides a <strong>shared vocabulary</strong> that enables these internal formats to be mapped to:</p>
+<ul>
+<li>Other DFO systems</li>
+<li>National open data platforms</li>
+<li>International biodiversity repositories (e.g., GBIF, OBIS)</li>
+</ul>
+<p>By treating Darwin Core as a <strong>semantic translation layer</strong>, we can harmonize our internal datasets for <strong>interoperability, discoverability, and reuse</strong>, without requiring all groups to adopt the same database design.</p>
+<hr>
 </section>
-<section id="transform-data-to-meet-spsr-schema" class="level1">
-<h1>Transform data to meet SPSR schema</h1>
+<section id="the-unified-gbif-data-model" class="level2">
+<h2 class="anchored" data-anchor-id="the-unified-gbif-data-model">The Unified GBIF Data Model</h2>
+<p>The <a href="https://www.gbif.org/news/3UyrmGQmVxF9exOEZo2N7c/the-unified-model-explained">GBIF Unified Data Model</a> extends Darwin Core to support <strong>complex biodiversity datasets</strong>, including:</p>
+<ul>
+<li><strong>Events</strong> (e.g., sampling campaigns, cruises, transects)</li>
+<li><strong>Occurrences</strong> (e.g., individual specimens, observations)</li>
+<li><strong>Measurements or Facts</strong> (e.g., biological measurements, environmental conditions)</li>
+</ul>
+<p>This model aligns with DFO data practices that involve nested relationships between surveys, gear deployments, catches, and individual biological samples.</p>
+<hr>
 </section>
-<section id="write-to-silver" class="level1">
-<h1>Write to silver</h1>
+<section id="obis-ocean-biodiversity-information-system" class="level2">
+<h2 class="anchored" data-anchor-id="obis-ocean-biodiversity-information-system">OBIS: Ocean Biodiversity Information System</h2>
+<p><a href="https://obis.org/">OBIS</a> builds on Darwin Core and the GBIF model to support <strong>marine biodiversity data</strong>. It uses a <strong>Darwin Core Archive</strong> format with specific extensions for:</p>
+<ul>
+<li>Sampling Effort</li>
+<li>Environmental Parameters</li>
+<li>Taxonomic Verification</li>
+</ul>
+<p>OBIS is the global node for <strong>marine biodiversity</strong> under the <strong>UN Ocean Decade</strong> and is highly relevant for DFO’s coastal and offshore research.</p>
+<hr>
+</section>
+<section id="mapping-dfo-fisheries-data-to-darwin-core" class="level2">
+<h2 class="anchored" data-anchor-id="mapping-dfo-fisheries-data-to-darwin-core">Mapping DFO Fisheries Data to Darwin Core</h2>
+<p>Below are examples of how commonly used columns in DFO data systems align with Darwin Core terms.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 53%">
+<col style="width: 36%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>DFO Field / Concept</th>
+<th>Darwin Core Term</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Species_Code</code> or <code>Species_Name</code></td>
+<td><code>scientificName</code></td>
+<td>Can be resolved via WoRMS or NCBI</td>
+</tr>
+<tr class="even">
+<td><code>Sample_ID</code></td>
+<td><code>occurrenceID</code></td>
+<td>A globally unique identifier for the specimen or observation</td>
+</tr>
+<tr class="odd">
+<td><code>Catch_Date</code></td>
+<td><code>eventDate</code></td>
+<td>Ideally formatted as ISO 8601</td>
+</tr>
+<tr class="even">
+<td><code>Survey_Name</code></td>
+<td><code>eventID</code></td>
+<td>Use hierarchical <code>eventID</code>s for nested events (e.g., cruise → tow → sample)</td>
+</tr>
+<tr class="odd">
+<td><code>Latitude</code>, <code>Longitude</code></td>
+<td><code>decimalLatitude</code>, <code>decimalLongitude</code></td>
+<td>Use WGS84 datum</td>
+</tr>
+<tr class="even">
+<td><code>Depth_m</code></td>
+<td><code>minimumDepthInMeters</code>, <code>maximumDepthInMeters</code></td>
+<td>Use both where applicable</td>
+</tr>
+<tr class="odd">
+<td><code>Sex</code>, <code>Maturity</code>, <code>Length</code>, <code>Weight</code></td>
+<td><code>measurementType</code>, <code>measurementValue</code>, <code>measurementUnit</code></td>
+<td>Recorded under the MeasurementOrFact extension</td>
+</tr>
+<tr class="even">
+<td><code>Gear_Type</code></td>
+<td><code>samplingProtocol</code></td>
+<td>Use consistent terminology for methods</td>
+</tr>
+<tr class="odd">
+<td><code>Area_Code</code>, <code>Subarea</code></td>
+<td><code>locationID</code>, <code>locality</code></td>
+<td>Align to spatial standards like NAFO/DFO zones</td>
+</tr>
+<tr class="even">
+<td><code>Data_Source</code>, <code>Project_Name</code></td>
+<td><code>datasetName</code>, <code>recordedBy</code></td>
+<td>Identify project or responsible team</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="toward-controlled-vocabularies-and-ontologies" class="level2">
+<h2 class="anchored" data-anchor-id="toward-controlled-vocabularies-and-ontologies">Toward Controlled Vocabularies and Ontologies</h2>
+<p>DFO’s long-term goal is to develop <strong>controlled vocabularies and ontology modules</strong> that align with:</p>
+<ul>
+<li><strong>Darwin Core</strong> term values</li>
+<li>The <strong>NERC Vocabulary Server (NVS)</strong> for environmental parameters</li>
+<li><strong>World Register of Marine Species (WoRMS)</strong> for taxonomic resolution</li>
+<li><strong>CF Conventions</strong> for oceanographic and climate data</li>
+<li>The <strong>Salmon Ontology</strong> developed by <a href="https://bioportal.bioontology.org/ontologies/SALMON">NCEAS</a></li>
+</ul>
+<p>These efforts will allow for <strong>semantic alignment</strong>, improving both machine-readability and clarity for analysts and stakeholders.</p>
+<hr>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
+<ul>
+<li>We are actively building a <strong>DFO metadata crosswalk</strong> using Darwin Core as the central translation layer</li>
+<li>Look for updates on <strong>term definitions</strong>, <strong>controlled value lists</strong>, and <strong>validation tools</strong></li>
+<li>Join our discussions on standardizing data fields and contributing to the controlled vocabulary development</li>
+</ul>
+<p>For questions, feedback, or help mapping your dataset, contact the Data Stewardship Unit.</p>
+<hr>
+<p><code>Darwin Core is not a database format. It’s a lingua franca for biodiversity data. Use it to describe, translate, and publish your data — not to force everything into the same structure.</code></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -779,7 +835,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 <p>This site was created with <a href="https://quarto.org/">Quarto</a> by Brett Johnson and Albury C. and is hosted with <a href="https://pages.github.com/">Github Pages</a>. This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0 license</a>.</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/documentation_hub/how_to_guides/sharepoint_r.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/documentation_hub/how_to_guides/sharepoint_r.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/documentation_hub/Reference Info/dwc-obis-gbif.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/documentation_hub/Reference Info/dwc-obis-gbif.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
