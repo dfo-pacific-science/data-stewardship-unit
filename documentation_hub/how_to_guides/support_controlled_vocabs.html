@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SharePoint in R – Data Stewardship Unit</title>
+<title>Support Controlled Vocabularies – Data Stewardship Unit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -162,7 +128,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Documentation Hub</li><li class="breadcrumb-item"><a href="../../documentation_hub/how_to_guides/databricks_r_studio.html">How to Guides</a></li><li class="breadcrumb-item"><a href="../../documentation_hub/how_to_guides/sharepoint_r.html">SharePoint in R</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Documentation Hub</li><li class="breadcrumb-item"><a href="../../documentation_hub/how_to_guides/databricks_r_studio.html">How to Guides</a></li><li class="breadcrumb-item"><a href="../../documentation_hub/how_to_guides/support_controlled_vocabs.html">Support Controlled Vocabularies</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -208,13 +174,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../documentation_hub/how_to_guides/sharepoint_r.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../documentation_hub/how_to_guides/sharepoint_r.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SharePoint in R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../documentation_hub/how_to_guides/support_controlled_vocabs.html" class="sidebar-item-text sidebar-link">
+  <a href="../../documentation_hub/how_to_guides/support_controlled_vocabs.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Support Controlled Vocabularies</span></a>
   </div>
 </li>
@@ -289,19 +255,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#write-this-raw-data-file-to-bronze" id="toc-write-this-raw-data-file-to-bronze" class="nav-link active" data-scroll-target="#write-this-raw-data-file-to-bronze">Write this raw data file to Bronze</a></li>
-  <li><a href="#read-data-from-bronze" id="toc-read-data-from-bronze" class="nav-link" data-scroll-target="#read-data-from-bronze">Read data from Bronze</a></li>
-  <li><a href="#transform-data-to-meet-spsr-schema" id="toc-transform-data-to-meet-spsr-schema" class="nav-link" data-scroll-target="#transform-data-to-meet-spsr-schema">Transform data to meet SPSR schema</a></li>
-  <li><a href="#write-to-silver" id="toc-write-to-silver" class="nav-link" data-scroll-target="#write-to-silver">Write to silver</a></li>
+  <li><a href="#guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo" id="toc-guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo" class="nav-link active" data-scroll-target="#guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo">📘 Guide: End-to-End Process for Supporting Controlled Vocabularies in DFO</a>
+  <ul class="collapse">
+  <li><a href="#step-1-scientist-submits-a-data-dictionary" id="toc-step-1-scientist-submits-a-data-dictionary" class="nav-link" data-scroll-target="#step-1-scientist-submits-a-data-dictionary">🧾 Step 1: Scientist Submits a Data Dictionary</a></li>
+  <li><a href="#step-2-validate-against-dfo-vocabulary" id="toc-step-2-validate-against-dfo-vocabulary" class="nav-link" data-scroll-target="#step-2-validate-against-dfo-vocabulary">🔍 Step 2: Validate Against DFO Vocabulary</a></li>
+  <li><a href="#step-3-consider-alignment-to-nceas-salmon-ontology" id="toc-step-3-consider-alignment-to-nceas-salmon-ontology" class="nav-link" data-scroll-target="#step-3-consider-alignment-to-nceas-salmon-ontology">🧠 Step 3: Consider Alignment to NCEAS Salmon Ontology</a></li>
+  <li><a href="#step-4-curate-and-extend-dfo-controlled-vocabularies" id="toc-step-4-curate-and-extend-dfo-controlled-vocabularies" class="nav-link" data-scroll-target="#step-4-curate-and-extend-dfo-controlled-vocabularies">🧰 Step 4: Curate and Extend DFO-Controlled Vocabularies</a></li>
+  <li><a href="#step-5-build-dfo-specific-ontology-for-salmon" id="toc-step-5-build-dfo-specific-ontology-for-salmon" class="nav-link" data-scroll-target="#step-5-build-dfo-specific-ontology-for-salmon">🧱 Step 5: Build DFO-Specific Ontology for Salmon</a></li>
+  <li><a href="#step-6-publish-and-reuse" id="toc-step-6-publish-and-reuse" class="nav-link" data-scroll-target="#step-6-publish-and-reuse">🔁 Step 6: Publish and Reuse</a></li>
+  </ul></li>
+  <li><a href="#why-bother-with-controlled-vocabularies-and-ontologies" id="toc-why-bother-with-controlled-vocabularies-and-ontologies" class="nav-link" data-scroll-target="#why-bother-with-controlled-vocabularies-and-ontologies">🤔 Why Bother with Controlled Vocabularies and Ontologies?</a>
+  <ul class="collapse">
+  <li><a href="#enhanced-data-discovery" id="toc-enhanced-data-discovery" class="nav-link" data-scroll-target="#enhanced-data-discovery">🔍 1. Enhanced Data Discovery</a></li>
+  <li><a href="#semi-automated-data-integration" id="toc-semi-automated-data-integration" class="nav-link" data-scroll-target="#semi-automated-data-integration">🔄 2. Semi-Automated Data Integration</a></li>
+  <li><a href="#smarter-applications-ai-beyond" id="toc-smarter-applications-ai-beyond" class="nav-link" data-scroll-target="#smarter-applications-ai-beyond">🧠 3. Smarter Applications (AI &amp; Beyond)</a></li>
+  <li><a href="#future-proof-interoperability" id="toc-future-proof-interoperability" class="nav-link" data-scroll-target="#future-proof-interoperability">🔗 4. Future-Proof Interoperability</a></li>
+  <li><a href="#better-metadata-better-stewardship" id="toc-better-metadata-better-stewardship" class="nav-link" data-scroll-target="#better-metadata-better-stewardship">🧰 5. Better Metadata, Better Stewardship</a></li>
+  </ul></li>
+  <li><a href="#tldr" id="toc-tldr" class="nav-link" data-scroll-target="#tldr">🧭 TL;DR</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/documentation_hub/how_to_guides/sharepoint_r.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/documentation_hub/how_to_guides/sharepoint_r.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/documentation_hub/how_to_guides/support_controlled_vocabs.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/documentation_hub/how_to_guides/support_controlled_vocabs.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Documentation Hub</li><li class="breadcrumb-item"><a href="../../documentation_hub/how_to_guides/databricks_r_studio.html">How to Guides</a></li><li class="breadcrumb-item"><a href="../../documentation_hub/how_to_guides/sharepoint_r.html">SharePoint in R</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Documentation Hub</li><li class="breadcrumb-item"><a href="../../documentation_hub/how_to_guides/databricks_r_studio.html">How to Guides</a></li><li class="breadcrumb-item"><a href="../../documentation_hub/how_to_guides/support_controlled_vocabs.html">Support Controlled Vocabularies</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">SharePoint in R</h1>
+<h1 class="title">Support Controlled Vocabularies</h1>
 </div>
 
 
@@ -318,60 +298,171 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">'Microsoft365R'</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">list_sharepoint_sites</span>()</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Delete cached token manually if you get an error about MFA</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#unlink("~/.Microsoft365R", recursive = TRUE)</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>site <span class="ot">&lt;-</span> <span class="fu">get_sharepoint_site</span>(<span class="st">'Fishery &amp; Assessment Data Section Wiki'</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># document libraries</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>site<span class="sc">$</span><span class="fu">list_drives</span>()</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>drv <span class="ot">&lt;-</span> site<span class="sc">$</span><span class="fu">get_drive</span>()</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: I manually put this data into the FADS Wiki SharePoint to illustrate the workflow of FSAR authors uploading data here</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Download file from FADS Wiki SharePoint</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>drv<span class="sc">$</span><span class="fu">download_file</span>(<span class="st">"General/FSAR Data/Fraser Pinks/data/generated/benchmarks.csv"</span>, <span class="at">overwrite =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>fr_pk_bms <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"benchmarks.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<section id="write-this-raw-data-file-to-bronze" class="level1">
-<h1>Write this raw data file to Bronze</h1>
-<p>Just kidding this has to be done in a Databricks Notebook if I want to write a .csv. I can only write delta tables into a database schema from R locally using RJDBC. Which might also work. Using a Databrick notebook would be annoying because I can’t read from SharePoint in DataBricks. I could set up pipeline in Azure Data Factory to read from SharePoint, transform, and write to Lakehouse but it seems complicated and maybe overkill.</p>
-<p>We could also just read from SharePoint and write to SharePoint silver folder… Makes provisioning access to silver data easier perhaps…</p>
-<p>See miro diagram https://miro.com/app/board/uXjVIJyjBWk=/?share_link_id=763283318229</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RJDBC)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>jdbc_driver <span class="ot">&lt;-</span> <span class="fu">JDBC</span>(<span class="st">"com.databricks.client.jdbc.Driver"</span>, <span class="st">"C:/Users/JOHNSONBRE/DatabricksJDBC42.jar"</span>, <span class="st">""</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>urlsql <span class="ot">&lt;-</span> <span class="st">"jdbc:databricks://adb-553282681420861.1.azuredatabricks.net:443/default;transportMode=http;ssl=1;AuthMech=3;httpPath=/sql/1.0/warehouses/613056ec98d47d29;"</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>pat <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">"DATABRICKS_PAT"</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>connsql <span class="ot">&lt;-</span> RJDBC<span class="sc">::</span><span class="fu">dbConnect</span>(jdbc_driver, urlsql, <span class="st">"token"</span>, pat)</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">dbGetQuery</span>(connsql, <span class="st">"SELECT 1"</span>)</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># see what catalog are available</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu">dbGetQuery</span>(connsql, <span class="st">"SHOW CATALOGS"</span>)</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">dbGetQuery</span>(connsql, <span class="st">"SHOW SCHEMAS IN bronze_pacific_prod"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo" class="level2">
+<h2 class="anchored" data-anchor-id="guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo">📘 Guide: End-to-End Process for Supporting Controlled Vocabularies in DFO</h2>
+<section id="step-1-scientist-submits-a-data-dictionary" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-scientist-submits-a-data-dictionary">🧾 Step 1: Scientist Submits a Data Dictionary</h3>
+<ul>
+<li>The scientist downloads and completes the <strong>data dictionary template</strong> (Excel)
+<ul>
+<li>They describe each variable: name, definition, method, units, etc.</li>
+<li>They may include URIs from known vocabularies if possible</li>
+</ul></li>
+<li>The spreadsheet includes:
+<ul>
+<li>A <code>README</code> sheet with instructions</li>
+<li>A <code>Metadata</code> tab for project-level context</li>
+<li>A <code>Data Dictionary</code> tab with one row per variable</li>
+</ul></li>
+</ul>
 </section>
-<section id="read-data-from-bronze" class="level1">
-<h1>Read data from Bronze</h1>
+<section id="step-2-validate-against-dfo-vocabulary" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-validate-against-dfo-vocabulary">🔍 Step 2: Validate Against DFO Vocabulary</h3>
+<ul>
+<li>The data dictionary is passed into your <strong>R validation function</strong> (<code>validate_data_dictionary()</code>)</li>
+<li>It compares submitted variables to your <strong>reference vocabulary</strong>, hosted as JSON on GitHub Pages</li>
+<li>The validator returns:
+<ul>
+<li>Matched terms</li>
+<li>Unmatched terms</li>
+<li>Suggested mappings using fuzzy logic (e.g., <code>stringdist</code> or Jaro-Winkler)</li>
+</ul></li>
+<li>The scientist or steward reviews and adjusts terms as needed</li>
+</ul>
 </section>
-<section id="transform-data-to-meet-spsr-schema" class="level1">
-<h1>Transform data to meet SPSR schema</h1>
+<section id="step-3-consider-alignment-to-nceas-salmon-ontology" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-consider-alignment-to-nceas-salmon-ontology">🧠 Step 3: Consider Alignment to NCEAS Salmon Ontology</h3>
+<ul>
+<li>For each submitted or candidate term:
+<ul>
+<li>Use an automated lookup tool to check if a concept already exists in the <strong>NCEAS Salmon Ontology</strong>. Start by using the BioPortal Annotator or API to match term labels and definitions. Optionally, build a lightweight script that compares local vocabulary terms to the ontology by label, synonyms, or definition text using exact or fuzzy string matching. Consider integrating the result into your pipeline for batch validation.</li>
+<li>If it exists:
+<ul>
+<li>Use <code>skos:exactMatch</code> or <code>skos:closeMatch</code> in your <code>.ttl</code> (Turtle) or <code>.jsonld</code> RDF vocab files. These mappings are typically stored in the ontology files generated from your <code>.csv</code> source. Add a column like <code>exact_match_uri</code> or <code>close_match_uri</code> to your <code>.csv</code>, your export script can incorporate those values automatically during serialization to <code>.ttl</code> or <code>.jsonld</code>.</li>
+</ul></li>
+<li>If it doesn’t exist, but is broadly applicable:
+<ul>
+<li>Prepare a Pull Request or issue to suggest the term to the NCEAS maintainers</li>
+<li>Include:
+<ul>
+<li>Label, definition, synonyms</li>
+<li>Usage example or data sources</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
 </section>
-<section id="write-to-silver" class="level1">
-<h1>Write to silver</h1>
+<section id="step-4-curate-and-extend-dfo-controlled-vocabularies" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-curate-and-extend-dfo-controlled-vocabularies">🧰 Step 4: Curate and Extend DFO-Controlled Vocabularies</h3>
+<ul>
+<li>Maintain DFO vocabularies in GitHub as:
+<ul>
+<li><code>.csv</code> for editing</li>
+<li><code>.json</code> for R/python access and validation</li>
+<li><code>.jsonld</code> and <code>.ttl</code> for ontology use</li>
+</ul></li>
+<li>Assign <strong>persistent URIs</strong> using <code>https://w3id.org/dfo/spsi#term-id</code></li>
+<li>Organize vocabularies by data domain or project (e.g., monitoring, habitat, biology)</li>
+</ul>
+</section>
+<section id="step-5-build-dfo-specific-ontology-for-salmon" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-build-dfo-specific-ontology-for-salmon">🧱 Step 5: Build DFO-Specific Ontology for Salmon</h3>
+<ul>
+<li>Extend your vocabularies with relationships:
+<ul>
+<li><code>broader</code>, <code>narrower</code>, <code>related</code></li>
+<li><code>hasUnit</code>, <code>hasMethod</code>, <code>derivedFrom</code></li>
+</ul></li>
+<li>Use tools like <code>rdflib</code> or <code>skosify</code> to model in Turtle or OWL</li>
+<li>Add namespace info:
+<ul>
+<li><code>@prefix dfo-spsi: &lt;https://w3id.org/dfo/spsi#&gt;</code></li>
+</ul></li>
+<li>Over time, link this to:
+<ul>
+<li>NCEAS ontology</li>
+<li>NERC units</li>
+<li>ENVO/OBI for environment/sample methods</li>
+</ul></li>
+</ul>
+</section>
+<section id="step-6-publish-and-reuse" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-publish-and-reuse">🔁 Step 6: Publish and Reuse</h3>
+<ul>
+<li>Host vocab on GitHub Pages + register URIs at w3id.org</li>
+<li>Link from your Quarto site (<code>/data-standards/vocab-index.html</code>)</li>
+<li>Allow download in multiple formats (JSON, JSON-LD, TTL)</li>
+<li>Use vocab in:
+<ul>
+<li>Data validation tools</li>
+<li>Metadata editors</li>
+<li>APIs and dashboards</li>
+<li>AI pipelines (semantic RAG, search, integration)</li>
+</ul></li>
+</ul>
+<hr>
+<p>This workflow will enable DFO Pacific to build a structured, version-controlled, and interoperable vocabulary and ontology infrastructure for salmon data, with clear ties to domain-wide standards and extensibility for AI use cases.</p>
+</section>
+</section>
+<section id="why-bother-with-controlled-vocabularies-and-ontologies" class="level2">
+<h2 class="anchored" data-anchor-id="why-bother-with-controlled-vocabularies-and-ontologies">🤔 Why Bother with Controlled Vocabularies and Ontologies?</h2>
+<p>It’s a fair question. Why invest all this time defining terms, aligning with ontologies, and assigning URIs?</p>
+<p>Because it <strong>unlocks a future where your data works harder for you.</strong> Controlled vocabularies and ontologies aren’t just academic exercises — they’re the foundation for <strong>better discovery, smarter integration, and automation</strong> across the science lifecycle.</p>
+<p>Here are some tangible ways this work adds value:</p>
+<hr>
+<section id="enhanced-data-discovery" class="level3">
+<h3 class="anchored" data-anchor-id="enhanced-data-discovery">🔍 1. Enhanced Data Discovery</h3>
+<blockquote class="blockquote">
+<p>“I know someone collected salmon smolt data… but where do I find it?”</p>
+</blockquote>
+<p>By tagging datasets, columns, and metadata with <strong>terms from your SPSI vocabulary</strong>, you enable: - Keyword search that actually understands synonyms and related terms - Filters based on data type, units, methods, or ecological domain - Smart discovery interfaces (e.g., “Show me everything related to juvenile survival”)</p>
+<p>➡️ Example: A data catalog that lets users search by controlled term rather than inconsistent column names across spreadsheets.</p>
+<hr>
+</section>
+<section id="semi-automated-data-integration" class="level3">
+<h3 class="anchored" data-anchor-id="semi-automated-data-integration">🔄 2. Semi-Automated Data Integration</h3>
+<blockquote class="blockquote">
+<p>“These datasets report the same metric but use different terms, formats, or units.”</p>
+</blockquote>
+<p>Using controlled terms with defined relationships (e.g., <code>broader</code>, <code>exactMatch</code>, <code>hasUnit</code>), you can: - Detect overlapping fields across submissions automatically - Align columns and units across multiple datasets - Standardize value domains (e.g., <code>Red/Green/Amber</code> vs <code>Critical/Stable/Concerned</code>)</p>
+<p>➡️ Example: A script that reads in new FSAR data and automatically maps it to the SPSR schema for validation and loading into a database.</p>
+<hr>
+</section>
+<section id="smarter-applications-ai-beyond" class="level3">
+<h3 class="anchored" data-anchor-id="smarter-applications-ai-beyond">🧠 3. Smarter Applications (AI &amp; Beyond)</h3>
+<blockquote class="blockquote">
+<p>“Can’t AI just figure this stuff out?”</p>
+</blockquote>
+<p>Only if you feed it structure.</p>
+<p>Controlled vocabularies and ontologies allow you to: - Ground large language models (LLMs) in your domain’s specific terminology - Build Retrieval-Augmented Generation (RAG) systems for question answering - Use semantic search tools to find relevant variables, concepts, and datasets - Train AI to assist in metadata generation, anomaly detection, or dataset classification</p>
+<p>➡️ Example: A chatbot that helps scientists describe their data using your vocabulary, or recommends matching fields from existing standards.</p>
+<hr>
+</section>
+<section id="future-proof-interoperability" class="level3">
+<h3 class="anchored" data-anchor-id="future-proof-interoperability">🔗 4. Future-Proof Interoperability</h3>
+<blockquote class="blockquote">
+<p>“What if we want to share this with other agencies or join a broader platform?”</p>
+</blockquote>
+<p>Standardized vocabularies with persistent URIs and ontology alignments (e.g., with NCEAS, ENVO, OBO) make it easy to: - Share DFO terms with external partners - Convert metadata to international schemas (e.g., Darwin Core, ISO 19115) - Plug into federated data platforms without starting over</p>
+<p>➡️ Example: Publishing your vocabulary to w3id.org lets others reference and reuse your terms as global identifiers.</p>
+<hr>
+</section>
+<section id="better-metadata-better-stewardship" class="level3">
+<h3 class="anchored" data-anchor-id="better-metadata-better-stewardship">🧰 5. Better Metadata, Better Stewardship</h3>
+<blockquote class="blockquote">
+<p>“I just want people to fill out metadata that makes sense.”</p>
+</blockquote>
+<p>Controlled vocabularies: - Reduce ambiguity - Improve machine readability - Make metadata easier to validate and automate</p>
+<p>➡️ Example: A dropdown menu in a data intake form linked to your vocab that auto-fills units, definitions, and example values — while storing clean, machine-readable metadata under the hood.</p>
+<hr>
+</section>
+</section>
+<section id="tldr" class="level2">
+<h2 class="anchored" data-anchor-id="tldr">🧭 TL;DR</h2>
+<p>Controlled vocabularies and ontologies are not the end — they’re the beginning.</p>
+<p>They allow you to: - Find data more easily - Integrate it more reliably - Build tools more effectively - And use AI more meaningfully</p>
+<p>They turn your data into infrastructure.</p>
+<p>And they help ensure that knowledge created today can be used, re-used, and trusted — long into the future.</p>
 
 
 </section>
@@ -802,7 +893,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 <p>This site was created with <a href="https://quarto.org/">Quarto</a> and is hosted with <a href="https://pages.github.com/">Github Pages</a>. This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0 license</a>.</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/documentation_hub/how_to_guides/sharepoint_r.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/documentation_hub/how_to_guides/sharepoint_r.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/documentation_hub/how_to_guides/support_controlled_vocabs.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/documentation_hub/how_to_guides/support_controlled_vocabs.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
