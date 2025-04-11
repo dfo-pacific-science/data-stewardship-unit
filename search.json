@@ -384,6 +384,42 @@
     ]
   },
   {
+    "objectID": "data_standards/vocab-index.html",
+    "href": "data_standards/vocab-index.html",
+    "title": "Controlled Vocabularies",
+    "section": "",
+    "text": "This table lists machine-readable vocabularies curated by the Data Stewardship Unit to support standardization, integration, and automation across salmon-related research and management programs.\n\ndatatable(\n  vocab_index %&gt;%\n    select(name, theme, description, last_updated, browser, json_link, ttl_link, jsonld_link),\n  options = list(pageLength = 10, scrollX = TRUE),\n  rownames = FALSE,\n  escape = c(-5, -6, -7, -8), # Disable escaping for columns with HTML links\n  colnames = c(\"Name\", \"Theme\", \"Description\", \"Last Updated\", \"Viewer\", \"JSON\", \"TTL\", \"JSON-LD\")\n)",
+    "crumbs": [
+      "Home",
+      "Data Standards",
+      "Controlled Vocabularies"
+    ]
+  },
+  {
+    "objectID": "data_standards/vocab-index.html#dfo-pacific-science-vocabularies",
+    "href": "data_standards/vocab-index.html#dfo-pacific-science-vocabularies",
+    "title": "Controlled Vocabularies",
+    "section": "",
+    "text": "This table lists machine-readable vocabularies curated by the Data Stewardship Unit to support standardization, integration, and automation across salmon-related research and management programs.\n\ndatatable(\n  vocab_index %&gt;%\n    select(name, theme, description, last_updated, browser, json_link, ttl_link, jsonld_link),\n  options = list(pageLength = 10, scrollX = TRUE),\n  rownames = FALSE,\n  escape = c(-5, -6, -7, -8), # Disable escaping for columns with HTML links\n  colnames = c(\"Name\", \"Theme\", \"Description\", \"Last Updated\", \"Viewer\", \"JSON\", \"TTL\", \"JSON-LD\")\n)",
+    "crumbs": [
+      "Home",
+      "Data Standards",
+      "Controlled Vocabularies"
+    ]
+  },
+  {
+    "objectID": "data_standards/vocab-index.html#todos-for-improvement",
+    "href": "data_standards/vocab-index.html#todos-for-improvement",
+    "title": "Controlled Vocabularies",
+    "section": "🛠️ TODOs for Improvement",
+    "text": "🛠️ TODOs for Improvement\n\nLoad vocab metadata from CSV or YAML instead of inline code\nAdd filters by theme or program\nInclude persistent w3id URIs once registered\nAdd stats (e.g., number of terms, match rate with SPSR)\nGroup vocabularies by domain (e.g., Stock Assessment, Monitoring, Habitat)",
+    "crumbs": [
+      "Home",
+      "Data Standards",
+      "Controlled Vocabularies"
+    ]
+  },
+  {
     "objectID": "tools.html",
     "href": "tools.html",
     "title": "tools",
@@ -407,42 +443,6 @@
       "Home",
       "Tools",
       "R Packages"
-    ]
-  },
-  {
-    "objectID": "data-standards/vocab-index.html",
-    "href": "data-standards/vocab-index.html",
-    "title": "Controlled Vocabularies",
-    "section": "",
-    "text": "This table lists machine-readable vocabularies curated by the Data Stewardship Unit to support standardization, integration, and automation across salmon-related research and management programs.\n\n# Manual index of vocabularies with live GitHub links\nvocab_index &lt;- tribble(\n  ~id, ~name, ~description, ~theme, ~last_updated, ~viewer_url, ~json, ~ttl, ~jsonld,\n  \"spsr\", \"SPSR Vocabulary\", \"Summary indices for fisheries stock assessment (FSARs)\", \"Stock Assessment\", \"2025-04-10\",\n  \"https://dfo-pacific-science.github.io/data-stewardship-unit/data-standards/spsr-vocab-browser.html\",\n  \"https://raw.githubusercontent.com/dfo-pacific-science/data-stewardship-unit/refs/heads/main/data-standards/vocab/spsr_vocab.json\",\n  \"https://raw.githubusercontent.com/dfo-pacific-science/data-stewardship-unit/refs/heads/main/data-standards/vocab/spsr_vocab.ttl\",\n  \"https://raw.githubusercontent.com/dfo-pacific-science/data-stewardship-unit/refs/heads/main/data-standards/vocab/spsr_vocab.jsonld\"\n)\n\nvocab_index &lt;- vocab_index %&gt;%\n  mutate(\n    browser = paste0(\"[View](\", viewer_url, \")\"),\n    json_link = paste0(\"[JSON](\", json, \")\"),\n    ttl_link = paste0(\"[TTL](\", ttl, \")\"),\n    jsonld_link = paste0(\"[JSON-LD](\", jsonld, \")\")\n  )\n\ndatatable(\n  vocab_index %&gt;%\n    select(name, theme, description, last_updated, browser, json_link, ttl_link, jsonld_link),\n  options = list(pageLength = 10, scrollX = TRUE),\n  rownames = FALSE,\n  escape = FALSE,\n  colnames = c(\"Name\", \"Theme\", \"Description\", \"Last Updated\", \"Viewer\", \"JSON\", \"TTL\", \"JSON-LD\")\n)",
-    "crumbs": [
-      "Home",
-      "Data Standards",
-      "Controlled Vocabularies"
-    ]
-  },
-  {
-    "objectID": "data-standards/vocab-index.html#dfo-pacific-science-vocabularies",
-    "href": "data-standards/vocab-index.html#dfo-pacific-science-vocabularies",
-    "title": "Controlled Vocabularies",
-    "section": "",
-    "text": "This table lists machine-readable vocabularies curated by the Data Stewardship Unit to support standardization, integration, and automation across salmon-related research and management programs.\n\n# Manual index of vocabularies with live GitHub links\nvocab_index &lt;- tribble(\n  ~id, ~name, ~description, ~theme, ~last_updated, ~viewer_url, ~json, ~ttl, ~jsonld,\n  \"spsr\", \"SPSR Vocabulary\", \"Summary indices for fisheries stock assessment (FSARs)\", \"Stock Assessment\", \"2025-04-10\",\n  \"https://dfo-pacific-science.github.io/data-stewardship-unit/data-standards/spsr-vocab-browser.html\",\n  \"https://raw.githubusercontent.com/dfo-pacific-science/data-stewardship-unit/refs/heads/main/data-standards/vocab/spsr_vocab.json\",\n  \"https://raw.githubusercontent.com/dfo-pacific-science/data-stewardship-unit/refs/heads/main/data-standards/vocab/spsr_vocab.ttl\",\n  \"https://raw.githubusercontent.com/dfo-pacific-science/data-stewardship-unit/refs/heads/main/data-standards/vocab/spsr_vocab.jsonld\"\n)\n\nvocab_index &lt;- vocab_index %&gt;%\n  mutate(\n    browser = paste0(\"[View](\", viewer_url, \")\"),\n    json_link = paste0(\"[JSON](\", json, \")\"),\n    ttl_link = paste0(\"[TTL](\", ttl, \")\"),\n    jsonld_link = paste0(\"[JSON-LD](\", jsonld, \")\")\n  )\n\ndatatable(\n  vocab_index %&gt;%\n    select(name, theme, description, last_updated, browser, json_link, ttl_link, jsonld_link),\n  options = list(pageLength = 10, scrollX = TRUE),\n  rownames = FALSE,\n  escape = FALSE,\n  colnames = c(\"Name\", \"Theme\", \"Description\", \"Last Updated\", \"Viewer\", \"JSON\", \"TTL\", \"JSON-LD\")\n)",
-    "crumbs": [
-      "Home",
-      "Data Standards",
-      "Controlled Vocabularies"
-    ]
-  },
-  {
-    "objectID": "data-standards/vocab-index.html#todos-for-improvement",
-    "href": "data-standards/vocab-index.html#todos-for-improvement",
-    "title": "Controlled Vocabularies",
-    "section": "🛠️ TODOs for Improvement",
-    "text": "🛠️ TODOs for Improvement\n\nLoad vocab metadata from CSV or YAML instead of inline code\nAdd filters by theme or program\nInclude persistent w3id URIs once registered\nAdd stats (e.g., number of terms, match rate with SPSR)\nGroup vocabularies by domain (e.g., Stock Assessment, Monitoring, Habitat)",
-    "crumbs": [
-      "Home",
-      "Data Standards",
-      "Controlled Vocabularies"
     ]
   },
   {
@@ -500,6 +500,30 @@
     "title": "About",
     "section": "",
     "text": "The DSU is a unit within the Fisheries and Assessment Data Section (FADS) in the Pacific Region of Fisheries and Oceans Canada (DFO).\nWe are a dedicated team committed to enhancing data management and stewardship practices within DFO. Our primary focus is on data related to Pacific Salmon within the DFO Pacific Region, including biodata (e.g., fish weight, length, age, escapement statistics, genomic data), juvenile salmon, and associated ecological and environmental data.\nOur goal is to provide guidance and assistance throughout the entire lifecycle of data management—from planning to publication. We strive to ensure our practices align with modern data standards, such as those outlined in the DFO Data Strategy and the Government of Canada’s digital data strategy. For instance, our work is guided by the principles of making data findable, accessible, interoperable, and reusable (FAIR). Additionally, we highly value the principles of Indigenous data governance, such as ownership, control, access, and possession (OCAP), and we are committed to helping our collaborators respect and implement these principles in their work."
+  },
+  {
+    "objectID": "data_standards/spsr-vocab-browser.html",
+    "href": "data_standards/spsr-vocab-browser.html",
+    "title": "SPSR Vocabulary JSON Viewer",
+    "section": "",
+    "text": "This is the current version of the SPSR vocabulary as a raw JSON file. This view is a fallback until we add a searchable UI.",
+    "crumbs": [
+      "Home",
+      "Data Standards",
+      "SPSR Vocabulary JSON Viewer"
+    ]
+  },
+  {
+    "objectID": "data_standards/spsr-vocab-browser.html#raw-spsr-vocabulary-json",
+    "href": "data_standards/spsr-vocab-browser.html#raw-spsr-vocabulary-json",
+    "title": "SPSR Vocabulary JSON Viewer",
+    "section": "",
+    "text": "This is the current version of the SPSR vocabulary as a raw JSON file. This view is a fallback until we add a searchable UI.",
+    "crumbs": [
+      "Home",
+      "Data Standards",
+      "SPSR Vocabulary JSON Viewer"
+    ]
   },
   {
     "objectID": "documentation_hub/Reference Info/dwc-obis-gbif.html",

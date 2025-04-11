@@ -172,7 +172,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../data-standards/vocab-index.html">Data Standards</a></li><li class="breadcrumb-item"><a href="../data-standards/vocab-index.html">Controlled Vocabularies</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../data_standards/spsr-vocab-browser.html">Data Standards</a></li><li class="breadcrumb-item"><a href="../data_standards/vocab-index.html">Controlled Vocabularies</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -283,7 +283,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../data-standards/vocab-index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../data_standards/spsr-vocab-browser.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SPSR Vocabulary JSON Viewer</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../data_standards/vocab-index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Controlled Vocabularies</span></a>
   </div>
 </li>
@@ -302,12 +308,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#dfo-pacific-science-vocabularies" id="toc-dfo-pacific-science-vocabularies" class="nav-link active" data-scroll-target="#dfo-pacific-science-vocabularies">📚 DFO Pacific Science Vocabularies</a></li>
   <li><a href="#todos-for-improvement" id="toc-todos-for-improvement" class="nav-link" data-scroll-target="#todos-for-improvement">🛠️ TODOs for Improvement</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/data-standards/vocab-index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/data-standards/vocab-index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/data_standards/vocab-index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/data_standards/vocab-index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../data-standards/vocab-index.html">Data Standards</a></li><li class="breadcrumb-item"><a href="../data-standards/vocab-index.html">Controlled Vocabularies</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../data_standards/spsr-vocab-browser.html">Data Standards</a></li><li class="breadcrumb-item"><a href="../data_standards/vocab-index.html">Controlled Vocabularies</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Controlled Vocabularies</h1>
 </div>
@@ -330,35 +336,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="dfo-pacific-science-vocabularies">📚 DFO Pacific Science Vocabularies</h2>
 <p>This table lists machine-readable vocabularies curated by the Data Stewardship Unit to support standardization, integration, and automation across salmon-related research and management programs.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Manual index of vocabularies with live GitHub links</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>vocab_index <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>id, <span class="sc">~</span>name, <span class="sc">~</span>description, <span class="sc">~</span>theme, <span class="sc">~</span>last_updated, <span class="sc">~</span>viewer_url, <span class="sc">~</span>json, <span class="sc">~</span>ttl, <span class="sc">~</span>jsonld,</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"spsr"</span>, <span class="st">"SPSR Vocabulary"</span>, <span class="st">"Summary indices for fisheries stock assessment (FSARs)"</span>, <span class="st">"Stock Assessment"</span>, <span class="st">"2025-04-10"</span>,</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"https://dfo-pacific-science.github.io/data-stewardship-unit/data-standards/spsr-vocab-browser.html"</span>,</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"https://raw.githubusercontent.com/dfo-pacific-science/data-stewardship-unit/refs/heads/main/data-standards/vocab/spsr_vocab.json"</span>,</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"https://raw.githubusercontent.com/dfo-pacific-science/data-stewardship-unit/refs/heads/main/data-standards/vocab/spsr_vocab.ttl"</span>,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"https://raw.githubusercontent.com/dfo-pacific-science/data-stewardship-unit/refs/heads/main/data-standards/vocab/spsr_vocab.jsonld"</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>vocab_index <span class="ot">&lt;-</span> vocab_index <span class="sc">%&gt;%</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">browser =</span> <span class="fu">paste0</span>(<span class="st">"[View]("</span>, viewer_url, <span class="st">")"</span>),</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">json_link =</span> <span class="fu">paste0</span>(<span class="st">"[JSON]("</span>, json, <span class="st">")"</span>),</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">ttl_link =</span> <span class="fu">paste0</span>(<span class="st">"[TTL]("</span>, ttl, <span class="st">")"</span>),</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">jsonld_link =</span> <span class="fu">paste0</span>(<span class="st">"[JSON-LD]("</span>, jsonld, <span class="st">")"</span>)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">datatable</span>(</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  vocab_index <span class="sc">%&gt;%</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(name, theme, description, last_updated, browser, json_link, ttl_link, jsonld_link),</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">options =</span> <span class="fu">list</span>(<span class="at">pageLength =</span> <span class="dv">10</span>, <span class="at">scrollX =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">rownames =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="at">escape =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="at">colnames =</span> <span class="fu">c</span>(<span class="st">"Name"</span>, <span class="st">"Theme"</span>, <span class="st">"Description"</span>, <span class="st">"Last Updated"</span>, <span class="st">"Viewer"</span>, <span class="st">"JSON"</span>, <span class="st">"TTL"</span>, <span class="st">"JSON-LD"</span>)</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">datatable</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  vocab_index <span class="sc">%&gt;%</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(name, theme, description, last_updated, browser, json_link, ttl_link, jsonld_link),</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">options =</span> <span class="fu">list</span>(<span class="at">pageLength =</span> <span class="dv">10</span>, <span class="at">scrollX =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">rownames =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">escape =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="sc">-</span><span class="dv">6</span>, <span class="sc">-</span><span class="dv">7</span>, <span class="sc">-</span><span class="dv">8</span>), <span class="co"># Disable escaping for columns with HTML links</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">colnames =</span> <span class="fu">c</span>(<span class="st">"Name"</span>, <span class="st">"Theme"</span>, <span class="st">"Description"</span>, <span class="st">"Last Updated"</span>, <span class="st">"Viewer"</span>, <span class="st">"JSON"</span>, <span class="st">"TTL"</span>, <span class="st">"JSON-LD"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-7b312318d9afeb549f77" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-7b312318d9afeb549f77">{"x":{"filter":"none","vertical":false,"data":[["SPSR Vocabulary"],["Stock Assessment"],["Summary indices for fisheries stock assessment (FSARs)"],["2025-04-10"],["[View](https://dfo-pacific-science.github.io/data-stewardship-unit/data-standards/spsr-vocab-browser.html)"],["[JSON](https://raw.githubusercontent.com/dfo-pacific-science/data-stewardship-unit/refs/heads/main/data-standards/vocab/spsr_vocab.json)"],["[TTL](https://raw.githubusercontent.com/dfo-pacific-science/data-stewardship-unit/refs/heads/main/data-standards/vocab/spsr_vocab.ttl)"],["[JSON-LD](https://raw.githubusercontent.com/dfo-pacific-science/data-stewardship-unit/refs/heads/main/data-standards/vocab/spsr_vocab.jsonld)"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Name<\/th>\n      <th>Theme<\/th>\n      <th>Description<\/th>\n      <th>Last Updated<\/th>\n      <th>Viewer<\/th>\n      <th>JSON<\/th>\n      <th>TTL<\/th>\n      <th>JSON-LD<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"scrollX":true,"columnDefs":[{"name":"name","targets":0},{"name":"theme","targets":1},{"name":"description","targets":2},{"name":"last_updated","targets":3},{"name":"browser","targets":4},{"name":"json_link","targets":5},{"name":"ttl_link","targets":6},{"name":"jsonld_link","targets":7}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-1a71fbdc32b5e3790755" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-1a71fbdc32b5e3790755">{"x":{"filter":"none","vertical":false,"data":[["SPSR Vocabulary"],["Stock Assessment"],["Summary indices for fisheries stock assessment (FSARs)"],["2025-04-10"],["[View](https://dfo-pacific-science.github.io/data-stewardship-unit/data-standards/spsr-vocab-browser.html)"],["[JSON](https://raw.githubusercontent.com/dfo-pacific-science/data-stewardship-unit/refs/heads/main/data-standards/vocab/spsr_vocab.json)"],["[TTL](https://raw.githubusercontent.com/dfo-pacific-science/data-stewardship-unit/refs/heads/main/data-standards/vocab/spsr_vocab.ttl)"],["[JSON-LD](https://raw.githubusercontent.com/dfo-pacific-science/data-stewardship-unit/refs/heads/main/data-standards/vocab/spsr_vocab.jsonld)"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Name<\/th>\n      <th>Theme<\/th>\n      <th>Description<\/th>\n      <th>Last Updated<\/th>\n      <th>Viewer<\/th>\n      <th>JSON<\/th>\n      <th>TTL<\/th>\n      <th>JSON-LD<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"scrollX":true,"columnDefs":[{"name":"name","targets":0},{"name":"theme","targets":1},{"name":"description","targets":2},{"name":"last_updated","targets":3},{"name":"browser","targets":4},{"name":"json_link","targets":5},{"name":"ttl_link","targets":6},{"name":"jsonld_link","targets":7}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <hr>
@@ -802,7 +790,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 <p>This site was created with <a href="https://quarto.org/">Quarto</a> and is hosted with <a href="https://pages.github.com/">Github Pages</a>. This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0 license</a>.</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/data-standards/vocab-index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/data-standards/vocab-index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/data_standards/vocab-index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/data_standards/vocab-index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

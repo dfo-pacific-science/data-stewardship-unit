@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>data-life-cycle – Data Stewardship Unit</title>
+<title>SPSR Vocabulary JSON Viewer – Data Stewardship Unit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,6 +67,20 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link href="../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="../site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+<script src="../site_libs/datatables-binding-0.33/datatables.js"></script>
+<script src="../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="../site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+<link href="../site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet">
+<script src="../site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+<link href="../site_libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet">
+<script src="../site_libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+<link href="../site_libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet">
+<script src="../site_libs/selectize-0.12.0/selectize.min.js"></script>
+<link href="../site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+<script src="../site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
 
 
 <link rel="stylesheet" href="../styles/custom.css">
@@ -128,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../data_standards/spsr-vocab-browser.html">Data Standards</a></li><li class="breadcrumb-item"><a href="../data_standards/spsr-vocab-browser.html">SPSR Vocabulary JSON Viewer</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -239,7 +253,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../data_standards/spsr-vocab-browser.html" class="sidebar-item-text sidebar-link">
+  <a href="../data_standards/spsr-vocab-browser.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">SPSR Vocabulary JSON Viewer</span></a>
   </div>
 </li>
@@ -261,88 +275,37 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#data-life-cycle" id="toc-data-life-cycle" class="nav-link active" data-scroll-target="#data-life-cycle">Data Life Cycle</a>
-  <ul class="collapse">
-  <li><a href="#data-life-cycle-stages" id="toc-data-life-cycle-stages" class="nav-link" data-scroll-target="#data-life-cycle-stages">Data Life Cycle Stages</a>
-  <ul class="collapse">
-  <li><a href="#data-collection" id="toc-data-collection" class="nav-link" data-scroll-target="#data-collection">1. <strong>Data Collection</strong></a></li>
-  <li><a href="#data-organization" id="toc-data-organization" class="nav-link" data-scroll-target="#data-organization">2. <strong>Data Organization</strong></a></li>
-  <li><a href="#data-storage" id="toc-data-storage" class="nav-link" data-scroll-target="#data-storage">3. <strong>Data Storage</strong></a></li>
-  <li><a href="#data-analysis" id="toc-data-analysis" class="nav-link" data-scroll-target="#data-analysis">4. <strong>Data Analysis</strong></a></li>
-  <li><a href="#data-sharing" id="toc-data-sharing" class="nav-link" data-scroll-target="#data-sharing">5. <strong>Data Sharing</strong></a></li>
-  <li><a href="#data-preservation" id="toc-data-preservation" class="nav-link" data-scroll-target="#data-preservation">6. <strong>Data Preservation</strong></a></li>
-  </ul></li>
-  <li><a href="#continue-exploring-the-other-perspectives" id="toc-continue-exploring-the-other-perspectives" class="nav-link" data-scroll-target="#continue-exploring-the-other-perspectives">Continue exploring the other perspectives:</a></li>
-  </ul></li>
+  <li><a href="#raw-spsr-vocabulary-json" id="toc-raw-spsr-vocabulary-json" class="nav-link active" data-scroll-target="#raw-spsr-vocabulary-json">📄 Raw SPSR Vocabulary JSON</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/perspectives/data-life-cycle.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/perspectives/data-life-cycle.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/data_standards/spsr-vocab-browser.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/data_standards/spsr-vocab-browser.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../data_standards/spsr-vocab-browser.html">Data Standards</a></li><li class="breadcrumb-item"><a href="../data_standards/spsr-vocab-browser.html">SPSR Vocabulary JSON Viewer</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">SPSR Vocabulary JSON Viewer</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="data-life-cycle" class="level1">
-<h1>Data Life Cycle</h1>
-<p>The data life cycle refers to the stages that data goes through from its creation to its archival or disposal. Understanding the data life cycle is essential for effective data stewardship and management. This page provides an overview of the data life cycle stages and resources to support each stage.</p>
-<section id="data-life-cycle-stages" class="level2">
-<h2 class="anchored" data-anchor-id="data-life-cycle-stages">Data Life Cycle Stages</h2>
-<section id="data-collection" class="level3">
-<h3 class="anchored" data-anchor-id="data-collection">1. <strong>Data Collection</strong></h3>
-<p>This stage involves the collection of raw data from various sources, such as field observations, surveys, experiments, or sensors.</p>
-<ul>
-<li><a href="https://www.re3data.org/">re3data.org: Registry of Research Data Repositories with detailed information about over 2000 research data repositories</a></li>
-<li><a href="https://open.canada.ca/en/working-data-api/structured-data">Working with Data and APIs</a></li>
-</ul>
-</section>
-<section id="data-organization" class="level3">
-<h3 class="anchored" data-anchor-id="data-organization">2. <strong>Data Organization</strong></h3>
-<p>Once collected, data needs to be organized and structured in a way that facilitates storage, retrieval, and analysis. This stage includes data cleaning, formatting, and transformation.</p>
-</section>
-<section id="data-storage" class="level3">
-<h3 class="anchored" data-anchor-id="data-storage">3. <strong>Data Storage</strong></h3>
-<p>Data needs to be stored in a secure and accessible manner. This stage involves selecting appropriate storage systems, such as databases or cloud storage, and implementing data backup and recovery strategies.</p>
-<ul>
-<li><a href="https://the-engine-room.github.io/responsible-data-handbook/chapters/chapter-03-closing-a-project.html">Closing a Project: Archiving and Preservation of Content</a></li>
-</ul>
-</section>
-<section id="data-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="data-analysis">4. <strong>Data Analysis</strong></h3>
-<p>Data analysis involves applying statistical and computational techniques to extract insights and knowledge from the data. This stage includes data exploration, modeling, and visualization.</p>
-<ul>
-<li><a href="https://wesmckinney.com/book/">Python for Data Analysis</a></li>
-<li><a href="https://r4ds.had.co.nz/">R for Data Science</a></li>
-</ul>
-</section>
-<section id="data-sharing" class="level3">
-<h3 class="anchored" data-anchor-id="data-sharing">5. <strong>Data Sharing</strong></h3>
-<p>Sharing data with others is an important aspect of data stewardship. This stage involves preparing data for sharing, ensuring data privacy and security, and selecting appropriate data sharing platforms or repositories.</p>
-<ul>
-<li><a href="https://the-engine-room.github.io/responsible-data-handbook/chapters/chapter-02c-sharing-data.html">Sharing Data: What to do with your Processed Data - The Engine Room</a></li>
-</ul>
-</section>
-<section id="data-preservation" class="level3">
-<h3 class="anchored" data-anchor-id="data-preservation">6. <strong>Data Preservation</strong></h3>
-<p>Data preservation ensures the long-term accessibility and usability of data. This stage includes data documentation, metadata creation, and data archiving.</p>
-<ul>
-<li><a href="https://open.canada.ca/en/using-open-data">Publishing Open Data and Information - Government of Canada</a></li>
-<li><a href="https://github.com/theodi/data-publish-list">How to publish open data: a list of advice and tools</a></li>
-</ul>
-</section>
-</section>
-<section id="continue-exploring-the-other-perspectives" class="level2">
-<h2 class="anchored" data-anchor-id="continue-exploring-the-other-perspectives">Continue exploring the other perspectives:</h2>
-<ul>
-<li><a href="../perspectives/your-role.html">Your Role</a></li>
-<li><a href="../perspectives/data-domain.html">Data Domain</a></li>
-<li><a href="../perspectives/recommended-tools.html">Recommended Tool Stacks</a></li>
-<li><a href="../perspectives/national-and-regional-resources.html">National and Regional Resources</a></li>
-<li><a href="../perspectives/your-tasks.html">Your Tasks</a></li>
-</ul>
+    
+  
+    
+  </div>
+  
 
 
-</section>
+</header>
+
+
+<section id="raw-spsr-vocabulary-json" class="level2">
+<h2 class="anchored" data-anchor-id="raw-spsr-vocabulary-json">📄 Raw SPSR Vocabulary JSON</h2>
+<p>This is the current version of the SPSR vocabulary as a raw JSON file. This view is a fallback until we add a searchable UI.</p>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -771,7 +734,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 <p>This site was created with <a href="https://quarto.org/">Quarto</a> and is hosted with <a href="https://pages.github.com/">Github Pages</a>. This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0 license</a>.</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/perspectives/data-life-cycle.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/perspectives/data-life-cycle.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/data_standards/spsr-vocab-browser.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/data_standards/spsr-vocab-browser.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
