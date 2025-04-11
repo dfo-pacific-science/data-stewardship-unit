@@ -1,7 +1,6 @@
 ---
 title: "Controlled Vocabularies"
 format: html
-editor: visual
 ---
 
 ```{r setup, include=FALSE}
@@ -14,7 +13,7 @@ library(DT)
 
 This table lists machine-readable vocabularies curated by the Data Stewardship Unit to support standardization, integration, and automation across salmon-related research and management programs.
 
-```{r}
+```{r include = FALSE}
 # Manual index of vocabularies with live GitHub links
 vocab_index <- tribble(
   ~id, ~name, ~description, ~theme, ~last_updated, ~viewer_url, ~json, ~ttl, ~jsonld,
@@ -32,17 +31,18 @@ vocab_index <- vocab_index %>%
     ttl_link = paste0("[TTL](", ttl, ")"),
     jsonld_link = paste0("[JSON-LD](", jsonld, ")")
   )
+```
 
+```{r}
 datatable(
   vocab_index %>%
     select(name, theme, description, last_updated, browser, json_link, ttl_link, jsonld_link),
   options = list(pageLength = 10, scrollX = TRUE),
   rownames = FALSE,
-  escape = FALSE,
+  escape = c(-5, -6, -7, -8), # Disable escaping for columns with HTML links
   colnames = c("Name", "Theme", "Description", "Last Updated", "Viewer", "JSON", "TTL", "JSON-LD")
 )
 ```
-
 ------------------------------------------------------------------------
 
 ## 🛠️ TODOs for Improvement

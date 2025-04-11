@@ -1,3 +1,6 @@
+# Serialize spsr_standardized_data_dictionary.csv to JSON, JSON-LD, and Turtle formats
+# This script reads a CSV file containing a data dictionary, cleans the data, and exports it to JSON, JSON-LD, and Turtle formats.
+
 import pandas as pd
 import json
 from rdflib import Graph, Namespace, URIRef, Literal

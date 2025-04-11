@@ -32,7 +32,7 @@ website:
         - auto: documentation_hub
           search: true
         - auto: tools
-        - auto: data-standards
+        - auto: data_standards
       search: true
 
   repo-url: https://github.com/dfo-pacific-science/data-stewardship-unit
