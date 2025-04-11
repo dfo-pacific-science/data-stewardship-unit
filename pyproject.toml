@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "data-stewardship-unit"
+version = "0.1.0"
+description = ""
+authors = ["Brett Johnson <brettthomasjohnson@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pandas = "^2.2.3"
+rdflib = "^7.1.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

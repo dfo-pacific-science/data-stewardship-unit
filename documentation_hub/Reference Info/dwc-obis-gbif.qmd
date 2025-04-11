@@ -19,7 +19,7 @@ Darwin Core is **intentionally broad**, supporting data from natural history col
 
 ## Darwin Core as a Translation Layer
 
-In the DFO Pacific Region, diverse data formats and schemas are used across programs, divisions, and systems. Darwin Core provides a **shared vocabulary** that enables these internal formats to be mapped to:
+In the DFO Pacific Region, diverse data formats and schemas are used across programs, divisions, and systems. Darwin Core provides a **common data standard** that enables these internal formats to be mapped to:
 
 - Other DFO systems
 - National open data platforms

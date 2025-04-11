@@ -1,0 +1,764 @@
+{
+  "@context": {
+    "term_id": "@id",
+    "label": "rdfs:label",
+    "definition": "skos:definition",
+    "definition_uri": {
+      "@id": "rdfs:isDefinedBy",
+      "@type": "@id"
+    },
+    "data_type": "spsr:dataType",
+    "method": "spsr:method",
+    "unit": "spsr:unit",
+    "unit_uri": {
+      "@id": "spsr:unitURI",
+      "@type": "@id"
+    },
+    "accepted_values": "spsr:acceptedValues",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "spsr": "http://example.org/spsr/"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org/spsr/smu_id",
+      "rdfs:label": "SMU ID",
+      "skos:definition": "Alphanumeric ID number for stock management unit (SMU) demographic unit. An official list of SMU ID's and corresponding names can be found in the SMU/CU crosswalk in NuSEDS",
+      "spsr:dataType": "string",
+      "spsr:method": "",
+      "spsr:unit": "",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/vernacularName",
+      "rdfs:label": "Species",
+      "skos:definition": "Fish species vernacular name. Permissible values are salmoniod or trout species as listed in bioportal salmon ontology",
+      "spsr:dataType": "string",
+      "spsr:method": "",
+      "spsr:unit": "",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": "http://purl.dataone.org/odo/SALMON_00000239, http://purl.dataone.org/odo/SALMON_00000240, http://purl.dataone.org/odo/SALMON_00000243, http://purl.dataone.org/odo/SALMON_00000840, http://purl.dataone.org/odo/SALMON_00000847, http://purl.dataone.org/odo/SALMON_00000900, http://purl.dataone.org/odo/SALMON_00000845, http://purl.dataone.org/odo/SALMON_00000241, http://purl.dataone.org/odo/SALMON_00000846, http://purl.dataone.org/odo/SALMON_00000242, http://purl.dataone.org/odo/SALMON_00000582, http://purl.dataone.org/odo/SALMON_00000569, http://purl.dataone.org/odo/SALMON_00000642, http://purl.dataone.org/odo/SALMON_00000570"
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/eventDate",
+      "rdfs:label": "Start Year",
+      "skos:definition": "The start year the salmon unit (i.e., population, CU, SMU, PMFA) became active. Generally active unit's are labelled as current.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Year",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/eventDate",
+      "rdfs:label": "End Year",
+      "skos:definition": "The year the unit (i.e., population, CU, SMU, PMFA) ends being active.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Year",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/samplingProtocol",
+      "rdfs:label": "Data Collection Methods",
+      "skos:definition": "Notes on data collection methds (data sources, type of count) that apply to the entire timeseries. 1-2 sentences from the authors",
+      "spsr:dataType": "string",
+      "spsr:method": "",
+      "spsr:unit": "",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/method_data_analysis",
+      "rdfs:label": "Data Analysis Methods",
+      "skos:definition": "Notes on data analysis (infill methods, analytical framework) that apply to the entire timeseries. 1-2 sentences from the authors",
+      "spsr:dataType": "string",
+      "spsr:method": "",
+      "spsr:unit": "",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/year_type",
+      "rdfs:label": "Year Method",
+      "skos:definition": "The type of year definition that is used in the timeseries (ex: return year, catch year, brood year)",
+      "spsr:dataType": "varchar(100)",
+      "spsr:method": "The aim of this column will be to eventually develop categorical variables for this data type after looking at common types from authors",
+      "spsr:unit": "",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/age_type",
+      "rdfs:label": "Age Method",
+      "skos:definition": "The type of age definition that is used in the timeseries(ex: Gilbert-Rich, European)",
+      "spsr:dataType": "varchar(100)",
+      "spsr:method": "",
+      "spsr:unit": "",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/information_quality",
+      "rdfs:label": "Information Quality",
+      "skos:definition": "Quality of the dataset quantified from 1-5 based on the data quality framework in Ogden 2015, section 2.3",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/lrp",
+      "rdfs:label": "Limit Reference Point",
+      "skos:definition": "The limit reference point (LRP)represents the stock status, usually in terms of biomass (or abundance), below which serious to the stock may be incurred. In Canada and elsewhere, serious harm is considered to include recruitment overfishing or other impairment to productive capacity. When the stock falls below LRP, urgent management actions are required to rebuild the population and prevent further depletion. It represents the minimum level needed to sustain a fish population over time. Under the Fish Stocks provisions, the LRP is determined solely by DFO Science based on biological considerations.",
+      "spsr:dataType": "integer",
+      "spsr:method": "Limit reference point, preference to display one table for all reference points below",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/40965715.pdf",
+      "rdfs:label": "Upper Stock Reference",
+      "skos:definition": "The upper stock reference (USR) is to serves as a threshold to progressive reduction of the fishing mortality rate to avoid stock status reaching the LRP. The USR is also assigned the role of delineating the threshold between what are termed the Cautious and Healthy Zones. When stock levels are above USR, they are considered healthy. However, if they drop below the USR but remain above the LRP, the stock enters the cautious zone, signaling a need for more conservative management measures to prevent further decline.",
+      "spsr:dataType": "integer",
+      "spsr:method": "Upper stock reference point if known",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/tr",
+      "rdfs:label": "Target Reference",
+      "skos:definition": "A management target reference point that represents a desired stock or exploitation level, often based on social, economic, and ecological considerations, in addition to biological ones.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/rr",
+      "rdfs:label": "Removal Reference",
+      "skos:definition": "Removal Reference (RR) represents the maximum proportion of the population that can be harvested without jeopardizing the stock's ability to replenish itself. It can be expressed in terms of Fishing mortality, Harvest rate or Fishing effort.",
+      "spsr:dataType": "decimal",
+      "spsr:method": "",
+      "spsr:unit": "Ratio",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/indicator_cwt",
+      "rdfs:label": "Coded Wire Tagging",
+      "skos:definition": "Refer to specific metrics or data derived from coded wire tags (CWTs) (like survival or exploitation rates). NA if no CWT was used",
+      "spsr:dataType": "string",
+      "spsr:method": "",
+      "spsr:unit": "",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/reference",
+      "rdfs:label": "Reference",
+      "skos:definition": "Plain text reference for the report that the data was published or archived in.",
+      "spsr:dataType": "varchar(100)",
+      "spsr:method": "",
+      "spsr:unit": "",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/contact",
+      "rdfs:label": "Contact",
+      "skos:definition": "Name and email contact for a data steward or expert who is the correspondant for the dataset",
+      "spsr:dataType": "varchar(100)",
+      "spsr:method": "",
+      "spsr:unit": "",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/occurrenceRemarks",
+      "rdfs:label": "Comments",
+      "skos:definition": "Additional comments about the time series from the authors.",
+      "spsr:dataType": "string",
+      "spsr:method": "",
+      "spsr:unit": "",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/eventDate",
+      "rdfs:label": "Year",
+      "skos:definition": "The year measurements were captured (please see YEAR_TYPE)",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Year",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Mainstem (Age 1)",
+      "skos:definition": "Number of fish caught in mainstem at age 1.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Mainstem (Age 2)",
+      "skos:definition": "Number of fish caught in mainstem at age 2.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Maintsem (Age 3)",
+      "skos:definition": "Number of fish caught in mainstem at age 3.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Maintsem (Age 4)",
+      "skos:definition": "Number of fish caught in mainstem at age 4.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Maintsem (Age 5)",
+      "skos:definition": "Number of fish caught in mainstem at age 5.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Maintsem (Age 6)",
+      "skos:definition": "Number of fish caught in mainstem at age 6.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Maintsem (Age 7)",
+      "skos:definition": "Number of fish caught in mainstem at age 7.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/mainstem_mortality_rate",
+      "rdfs:label": "Mainstem Mortality Rate",
+      "skos:definition": "The proportion of fish that die while migrating through the mainstem of a river system, which is typically the primary, large river channel. It reduces the number of fish reaching their spawning ground.",
+      "spsr:dataType": "real",
+      "spsr:method": "",
+      "spsr:unit": "Ratio",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Ocean (Age 1)",
+      "skos:definition": "Number of fish caught in ocean at age 1.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Ocean (Age 2)",
+      "skos:definition": "Number of fish caught in ocean at age 2.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Ocean (Age 3)",
+      "skos:definition": "Number of fish caught in ocean at age 3.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Ocean (Age 4)",
+      "skos:definition": "Number of fish caught in ocean at age 4.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Ocean (Age 5)",
+      "skos:definition": "Number of fish caught in ocean at age 5.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Ocean (Age 6)",
+      "skos:definition": "Number of fish caught in ocean at age 6.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Ocean (Age 7)",
+      "skos:definition": "Number of fish caught in ocean at age 7.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/ocean_mortality_rate",
+      "rdfs:label": "Ocean Mortality Rate",
+      "skos:definition": "The proportion of fish that die while at sea, due to natural causes such as predation, disease, starvation, or unfavorable environmental conditions. It affects overall survival before returning to rivers",
+      "spsr:dataType": "real",
+      "spsr:method": "",
+      "spsr:unit": "Ratio",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Terminal (Age 1)",
+      "skos:definition": "Number of fish caught in terminal at age 1.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Terminal (Age 2)",
+      "skos:definition": "Number of fish caught in terminal at age 2.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Terminal (Age 3)",
+      "skos:definition": "Number of fish caught in terminal at age 3.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Terminal (Age 4)",
+      "skos:definition": "Number of fish caught in terminal at age 4.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Terminal (Age 5)",
+      "skos:definition": "Number of fish caught in terminal at age 5.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Terminal (Age 6)",
+      "skos:definition": "Number of fish caught in terminal at age 6.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Terminal (Age 7)",
+      "skos:definition": "Number of fish caught in terminal at age 7.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/terminal_mortality_rate",
+      "rdfs:label": "Terminal Mortality Rate",
+      "skos:definition": "The proportion of fish that die in the terminal area (near or at their spawning grounds) before they can spawn. Terminal areas are typically in rivers or estuaries. This rate affects the spawning population and recruitment success, directly impacting the stock's ability to replenish.",
+      "spsr:dataType": "real",
+      "spsr:method": "",
+      "spsr:unit": "Ratio",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Spawners (Age 1)",
+      "skos:definition": "Number of age 1 spawners.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Spawners (Age 2)",
+      "skos:definition": "Number of age 2 spawners.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Spawners (Age 3)",
+      "skos:definition": "Number of age 3 spawners.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Spawners (Age 4)",
+      "skos:definition": "Number of age 4 spawners.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Spawners (Age 5)",
+      "skos:definition": "Number of age 5 spawners.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Spawners (Age 6)",
+      "skos:definition": "Number of age 6 spawners.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Spawners (Age 7)",
+      "skos:definition": "Number of age 7 spawners.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Total Spawners",
+      "skos:definition": "Total number of spawners for the year.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwc/terms/individualCount",
+      "rdfs:label": "Total Catch",
+      "skos:definition": "This includes harvest numbers from commercial, recreational, and First Nations fisheries.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/total_mortality_rate",
+      "rdfs:label": "Total Mortality",
+      "skos:definition": "Thee proportion of a population that dies during a specific time period, regardless of the cause.",
+      "spsr:dataType": "real",
+      "spsr:method": "",
+      "spsr:unit": "Ratio",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/total_exploitation_rate",
+      "rdfs:label": "Total Exploitation",
+      "skos:definition": "The proportion of a fish population that is harvested or removed through fishing activities in a given period, typically over a season or year. It is expressed as a percentage of the total population or run size of the species being managed.",
+      "spsr:dataType": "real",
+      "spsr:method": "",
+      "spsr:unit": "Ratio",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/full_cu_in",
+      "rdfs:label": "CU ID",
+      "skos:definition": "Alphanumeric ID number for conservation unit (CU) demographic unit. An official list of CU ID's and corresponding names can be found in the SMU/CU crosswalk in NuSEDS",
+      "spsr:dataType": "string",
+      "spsr:method": "",
+      "spsr:unit": "",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/lower_ci_lower",
+      "rdfs:label": "Lower CI Lower Limit",
+      "skos:definition": "The lower bound of the confidence interval (CI) for the lower limit of a stock-related metric.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/upper_ci_lower",
+      "rdfs:label": "Uper CI Lower Limit",
+      "skos:definition": "The lower bound of the confidence interval (CI) for the upper limit of a stock-related metric.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/lower_ci_upper",
+      "rdfs:label": "Lower CI Upper Limit",
+      "skos:definition": "The upper bound of the confidence interval (CI) for the lower limit of a stock-related metric.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/upper_ci_upper",
+      "rdfs:label": "Upper CI Upper Limit",
+      "skos:definition": "The upper bound of the confidence interval (CI) for the upper limit of a stock-related metric.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/range_lower",
+      "rdfs:label": "Lower Range CI",
+      "skos:definition": "The lower range of a Confidence Interval (CI)",
+      "spsr:dataType": "real",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/range_upper",
+      "rdfs:label": "Upper Ranger CI",
+      "skos:definition": "The upper range of a Confidence Interval (CI)",
+      "spsr:dataType": "real",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/pfma_id",
+      "rdfs:label": "PFMA ID",
+      "skos:definition": "Numeric ID corresponding to a Pacific Fishery Management Area (PFMA). PFMA's are a division of Canadian fisheries waters as enumerated and described in Schedule 2 and includes the portion of any stream that flows into that division and that is seaward of the mean high water mark near the mouth of that stream. The areas in the Canadian fisheries waters of the Pacific Ocean described in Schedule 2 are hereby prescribed as management areas.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/upper_management_level",
+      "rdfs:label": "Upper Management Level",
+      "skos:definition": "Upper reference point for the PFMA",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/lower_management_level",
+      "rdfs:label": "Lower Management Level",
+      "skos:definition": "Mgmt Level - can represent either escapement targets or inflection points on HCR or removal reference for the PFMA",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/pop_id",
+      "rdfs:label": "Population ID",
+      "skos:definition": "Numeric code identifying the population",
+      "spsr:dataType": "string",
+      "spsr:method": "",
+      "spsr:unit": "",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/enhancement_objective",
+      "rdfs:label": "Enhancement Objective",
+      "skos:definition": "The specific goal or purpose of a fish enhancement program, often aimed at increasing the productivity, survival, or abundance of a fish population to support conservation, fisheries, or ecosystem needs.",
+      "spsr:dataType": "varchar(100)",
+      "spsr:method": "",
+      "spsr:unit": "",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/enhancement_target",
+      "rdfs:label": "Enhancement Target",
+      "skos:definition": "A quantitative or qualitative benchmark set within an enhancement program that defines the desired outcome, such as the number of fish released, survival rates, or spawner returns.",
+      "spsr:dataType": "real",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/marine_survival_index",
+      "rdfs:label": "Marine Survival Index",
+      "skos:definition": "A measure or metric used to evaluate the survival rate of fish during their time in the ocean, often expressed as a percentage of juveniles that survive to return as adults.",
+      "spsr:dataType": "real",
+      "spsr:method": "",
+      "spsr:unit": "Ratio",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/expansion_factor",
+      "rdfs:label": "Expansion Factor",
+      "skos:definition": "Expansion factor for run reconstruction if catch at PFMA, is a tool to estimate the total run size of fish in a specific Pacific Fisheries Management Area, scaling up from observed catch numbers to account for unobserved components of the population.",
+      "spsr:dataType": "real",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/is_enhanced",
+      "rdfs:label": "Enhanced",
+      "skos:definition": "Boolean response to if the population is enhanced (Y/N/NA)",
+      "spsr:dataType": "string",
+      "spsr:method": "",
+      "spsr:unit": "",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/phos",
+      "rdfs:label": "Proportion Hatchery Origin Spawners",
+      "skos:definition": "The proportion of hatchery-origin spawners",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Ratio",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://purl.dataone.org/odo/SALMON_00000782",
+      "rdfs:label": "Recruits",
+      "skos:definition": "The number of juvenile fish (recruits) that survive to join the adult population, crucial for understanding population dynamics. Recruitment is typically inferred from the number of spawners, environmental conditions, and population dynamics models. It is not measured directly by test fisheries or spawner surveys. Instead, recruitment is estimated using spawner-recruit models, which predict future population sizes based on the number of spawners, environmental conditions, and historical data.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/total_broodstock_removed",
+      "rdfs:label": "Total Broodstock Removed",
+      "skos:definition": "Refers to the number of fish that are deliberately taken from a population, typically from a river or hatchery, to be used as broodstock for artificial propagation in hatcheries or other enhancement programs.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/hatchery_origin_broodstock",
+      "rdfs:label": "Hatchery Origin Broodstock",
+      "skos:definition": "Refers to broodstock fish that were born or reared in a hatchery and later selected for breeding purposes within the hatchery system., It's also called \"Enhanced Salmon\", originating from hatchery production.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    },
+    {
+      "@id": "http://example.org/spsr/natural_origin_broodstock",
+      "rdfs:label": "Natural Origin Broodstock",
+      "skos:definition": "Refers to broodstock fish that are born and reared in the wild (natural environment) but are later collected and used in hatchery breeding programs.",
+      "spsr:dataType": "integer",
+      "spsr:method": "",
+      "spsr:unit": "Number of fish",
+      "spsr:unitURI": "",
+      "spsr:acceptedValues": ""
+    }
+  ]
+}
