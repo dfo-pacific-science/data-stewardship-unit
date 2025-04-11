@@ -1,0 +1,4 @@
+data_file,variable_name,label,data_type,definition_uri,definition,method,unit,unit_uri,accepted_values
+fsar_data_2025.csv,Spwaner_Count,Spawner Count,integer,,Number of fish observed during surveys,counted during stream walks,number of fish,,
+fsar_data_2025.csv,Status,Status,categorical,,Biological status of the CU,,,,"Red, Green, Yellow"
+fsar_data_2025.csv,Stock_Rec_Index,Stock Recruit Index,float,,Derived from recruits/spawner data,modeled from run reconstructions,,,

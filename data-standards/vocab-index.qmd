@@ -1,0 +1,54 @@
+---
+title: "Controlled Vocabularies"
+format: html
+editor: visual
+---
+
+```{r setup, include=FALSE}
+library(tibble)
+library(dplyr)
+library(DT)
+```
+
+## 📚 DFO Pacific Science Vocabularies
+
+This table lists machine-readable vocabularies curated by the Data Stewardship Unit to support standardization, integration, and automation across salmon-related research and management programs.
+
+```{r}
+# Manual index of vocabularies with live GitHub links
+vocab_index <- tribble(
+  ~id, ~name, ~description, ~theme, ~last_updated, ~viewer_url, ~json, ~ttl, ~jsonld,
+  "spsr", "SPSR Vocabulary", "Summary indices for fisheries stock assessment (FSARs)", "Stock Assessment", "2025-04-10",
+  "https://dfo-pacific-science.github.io/data-stewardship-unit/data-standards/spsr-vocab-browser.html",
+  "https://raw.githubusercontent.com/dfo-pacific-science/data-stewardship-unit/refs/heads/main/data-standards/vocab/spsr_vocab.json",
+  "https://raw.githubusercontent.com/dfo-pacific-science/data-stewardship-unit/refs/heads/main/data-standards/vocab/spsr_vocab.ttl",
+  "https://raw.githubusercontent.com/dfo-pacific-science/data-stewardship-unit/refs/heads/main/data-standards/vocab/spsr_vocab.jsonld"
+)
+
+vocab_index <- vocab_index %>%
+  mutate(
+    browser = paste0("[View](", viewer_url, ")"),
+    json_link = paste0("[JSON](", json, ")"),
+    ttl_link = paste0("[TTL](", ttl, ")"),
+    jsonld_link = paste0("[JSON-LD](", jsonld, ")")
+  )
+
+datatable(
+  vocab_index %>%
+    select(name, theme, description, last_updated, browser, json_link, ttl_link, jsonld_link),
+  options = list(pageLength = 10, scrollX = TRUE),
+  rownames = FALSE,
+  escape = FALSE,
+  colnames = c("Name", "Theme", "Description", "Last Updated", "Viewer", "JSON", "TTL", "JSON-LD")
+)
+```
+
+------------------------------------------------------------------------
+
+## 🛠️ TODOs for Improvement
+
+-   [ ] Load vocab metadata from CSV or YAML instead of inline code
+-   [ ] Add filters by theme or program
+-   [ ] Include persistent w3id URIs once registered
+-   [ ] Add stats (e.g., number of terms, match rate with SPSR)
+-   [ ] Group vocabularies by domain (e.g., Stock Assessment, Monitoring, Habitat)

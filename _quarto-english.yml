@@ -37,6 +37,6 @@ website:
 
   repo-url: https://github.com/dfo-pacific-science/data-stewardship-unit
   repo-actions: [edit, source, issue]
-  page-footer: "This site was created with [Quarto](https://quarto.org/) by Brett Johnson and Albury C. and is hosted with [Github Pages](https://pages.github.com/). This work is licensed under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/)."
+  page-footer: "This site was created with [Quarto](https://quarto.org/) and is hosted with [Github Pages](https://pages.github.com/). This work is licensed under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/)."
 
 lang: en
