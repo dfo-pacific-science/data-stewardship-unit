@@ -5,8 +5,9 @@ execute:
   eval: false
 ---
 
+# 🚧 This page is under construction 🚧
 
-```{r}
+```{r, include = FALSE}
 library('Microsoft365R')
 
 list_sharepoint_sites()
@@ -31,7 +32,7 @@ fr_pk_bms <- readr::read_csv("benchmarks.csv")
 
 ```
 
-# 🚧 This page is under construction 🚧
+
 
 <!-- # Write this raw data file to Bronze
 
