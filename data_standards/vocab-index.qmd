@@ -13,7 +13,7 @@ library(DT)
 
 This table lists machine-readable vocabularies curated by the Data Stewardship Unit to support standardization, integration, and automation across salmon-related research and management programs.
 
-```{r include = FALSE}
+```{r, include = FALSE}
 # Manual index of vocabularies with live GitHub links
 vocab_index <- tribble(
   ~id, ~name, ~description, ~theme, ~last_updated, ~viewer_url, ~json, ~ttl, ~jsonld,
@@ -26,29 +26,37 @@ vocab_index <- tribble(
 
 vocab_index <- vocab_index %>%
   mutate(
-    browser = paste0("[View](", viewer_url, ")"),
-    json_link = paste0("[JSON](", json, ")"),
-    ttl_link = paste0("[TTL](", ttl, ")"),
-    jsonld_link = paste0("[JSON-LD](", jsonld, ")")
+    browser = paste0("<a href =", viewer_url, ">
+                     View
+                     </a>"),
+    json_link = paste0("<a href =", json, ">
+                     JSON
+                     </a>"),
+    ttl_link = paste0("<a href =", ttl, ">
+                     TTL
+                     </a>"),
+    jsonld_link = paste0("<a href =", jsonld, ">
+                     JSON-LD
+                     </a>")
   )
 ```
 
-```{r}
+```{r echo = FALSE}
 datatable(
   vocab_index %>%
     select(name, theme, description, last_updated, browser, json_link, ttl_link, jsonld_link),
   options = list(pageLength = 10, scrollX = TRUE),
   rownames = FALSE,
-  escape = c(-5, -6, -7, -8), # Disable escaping for columns with HTML links
+  escape = FALSE, # Disable escaping for columns with HTML links
   colnames = c("Name", "Theme", "Description", "Last Updated", "Viewer", "JSON", "TTL", "JSON-LD")
 )
 ```
 ------------------------------------------------------------------------
 
-## 🛠️ TODOs for Improvement
+<!-- ## 🛠️ TODOs for Improvement
 
 -   [ ] Load vocab metadata from CSV or YAML instead of inline code
 -   [ ] Add filters by theme or program
 -   [ ] Include persistent w3id URIs once registered
 -   [ ] Add stats (e.g., number of terms, match rate with SPSR)
--   [ ] Group vocabularies by domain (e.g., Stock Assessment, Monitoring, Habitat)
+-   [ ] Group vocabularies by domain (e.g., Stock Assessment, Monitoring, Habitat) -->

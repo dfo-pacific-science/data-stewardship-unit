@@ -1,12 +1,13 @@
 ---
-title: "SharePoint in R"
+title: "SharePoint in R (Under construction 🚧)"
 format: html
 execute:
   eval: false
 ---
 
+# 🚧 This page is under construction 🚧
 
-```{r}
+```{r, include = FALSE}
 library('Microsoft365R')
 
 list_sharepoint_sites()
@@ -32,7 +33,8 @@ fr_pk_bms <- readr::read_csv("benchmarks.csv")
 ```
 
 
-# Write this raw data file to Bronze
+
+<!-- # Write this raw data file to Bronze
 
 Just kidding this has to be done in a Databricks Notebook if I want to write a .csv. I can only write delta tables into a database schema from R locally using RJDBC. Which might also work. Using a Databrick notebook would be annoying because I can't read from SharePoint in DataBricks. I could set up pipeline in Azure Data Factory to read from SharePoint, transform, and write to Lakehouse but it seems complicated and maybe overkill.
 
@@ -62,5 +64,5 @@ dbGetQuery(connsql, "SHOW SCHEMAS IN bronze_pacific_prod")
 
 # Transform data to meet SPSR schema
 
-# Write to silver
+# Write to silver  -->
 
