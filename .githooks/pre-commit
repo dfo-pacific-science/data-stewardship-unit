@@ -1,0 +1,12 @@
+#!/bin/sh
+poetry export -f requirements.txt --without-hashes -o requirements.txt
+git add requirements.txt#!/bin/sh
+
+echo "🛠  Exporting requirements.txt from poetry..."
+
+poetry export -f requirements.txt --without-hashes -o requirements.txt
+
+# Add it to the commit automatically (optional)
+git add requirements.txt
+
+echo "✅ requirements.txt updated and staged."
