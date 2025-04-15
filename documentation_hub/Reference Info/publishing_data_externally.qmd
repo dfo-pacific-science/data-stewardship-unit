@@ -1,10 +1,13 @@
 ---
-title: "Hosting Data and Code on External Platforms"
+title: "Hosting Data and Code"
 version: "v1.0"
 last_updated: "2025-04-04"
 ---
 
-This guide is intended for scientists and technical staff in the DFO Pacific Region Science Branch. It outlines what is allowed, restricted, or prohibited when using external platforms (e.g., GitHub, Zenodo, Google Drive) to manage and share DFO Science data, code, and metadata, including during Fishery Science Advisory Report (FSAR) workflows.
+This guide is intended for scientists and technical staff in the DFO Pacific Region Science Branch. It outlines what is allowed, restricted, or prohibited when using internal and external platforms (e.g., Sharepoint, GitHub, Zenodo, Google Drive) to manage and share DFO Science data, code, and metadata, including during Fishery Science Advisory Report (FSAR) workflows.
+
+For FSAR workflows, we recommend authors save their data in the Sharepoint for the Pacific Salmon Data MS Team. All data should be accompanied by a data dictionary with a README. For resources on creating a data dictionary, please see [our blurb on data standards](https://github.com/dfo-pacific-science/data-stewardship-unit/tree/main/data_standards).
+Github can be used to host the code associated with analyses. 
 
 ---
 
@@ -12,14 +15,15 @@ Table 1. **External Platform Use Guidelines** for three data classifications of 
 
 | **Platform** | **Unclassified** | **Protected A** | **Protected B** | **Notes** |
 |--------------|------------------------|------------------|------------------|----------|
+| **SharePoint** | ✅ | ✅ | ✅ | SharePoint can also be used to share protected data with external CSAS participants or reviewers by submitting a request for email approval from the Regional Director of Science. Attach approval email to [this Assystnet ticket](http://assystselfservice.ent.dfo-mpo.ca/assystnet/application.jsp#serviceOfferings/285) |
 | **GitHub (public repo)** | Code: ✅ yes. Data:⚠️ only allowed after internal DFO release approval | ❌ Prohibited | ❌ Prohibited | Public GitHub repos are only for non-sensitive code or metadata. Must go through internal DFO public data release process even for unclassified data. |
 | **GitHub (private repo)** | ✅ Before release approval and sharing with specific collaborators | ⚠️ Discouraged | ❌ Prohibited | Useful for sharing non-sensitive (usally derived) data with external reviewers or CSAS participants; not for Protected data (ie. raw data). |
 | **GitHub Codespaces** | ✅  | ❌ | ❌ | Don't use for Protected data or model outputs. |
 | **GitHub Copilot** | ✅ | ❌ | ❌ | Never input Protected code/data. |
 | **Zenodo / Figshare / Dryad** | ✅ after FSAR approval | ❌ | ❌ | Good for quickly getting datasets published with DOIs. Must be followed up with publication to Open Government Portal |
 | **GC Data Portal (Open.Canada.ca)** | ✅ Required for final release | ❌ | ❌ | Official platform for open datasets. Requires release review. |
-| **GCcollab / GCshare** | ✅ Internal sharing | ✅ With care | ⚠️ Rare; PB sharing requires approval | Use for internal collaboration |
-| **SharePoint** | ✅ | ✅ | ✅ | SharePoint can also be used to share protected data with external CSAS participants or reviewers by submitting a request for email approval from the Regional Director of Science. Attach approval email to [this Assystnet ticket](http://assystselfservice.ent.dfo-mpo.ca/assystnet/application.jsp#serviceOfferings/285)
+| **GCcollab / GCshare** | ✅ Internal sharing | ✅ With care | ⚠️ Rare; PB sharing requires approval | Use for internal collaboration
+
 
 ---
 

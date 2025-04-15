@@ -27,9 +27,11 @@ This guide walks through the setup process, enabling you to connect to Azure Dat
 ## Quick Start Guide to Accessing Azure Lakehouse  from R Studio
 
 ### Access Token
-Create your user access token in Databricks WebUI. (IMPORTANT: Treat this token as your personal password and do not share with anybody)
+Create your user access token in Databricks WebUI. 
 
-1. In Databricks WebUI -> go to your profile page and navigate to
+**IMPORTANT: Treat this token as your personal password and do not share with anybody**
+
+1. In [Databricks Web UI](https://adb-553282681420861.1.azuredatabricks.net/) > go to your profile page and navigate to
 
 2. User > Developer
 
@@ -39,14 +41,13 @@ Create your user access token in Databricks WebUI. (IMPORTANT: Treat this token 
 
 5. Copy and save this token somewhere safe such as an encrypted password manager
 
-![==image_0==.png](/.attachments/==image_0==-f5aa0b19-8612-4f7a-9900-e645687edc77.png) 
-
+![Databricks Token](images/databricks_rstudio/databricks_token.jpg) 
 
 ### JDBC Driver
 
-1. Download `JDBC` (java database connectivity) driver from https://www.databricks.com/spark/jdbc-drivers-download. Save and extract the .jar file to an accessible location on your computer (`C:Users\Your username` is fine).
+1. Download `JDBC` (java database connectivity) driver from  https://www.databricks.com/spark/jdbc-drivers-download. Save and extract the .jar file to an accessible location on your computer (`C:Users\Your username` is fine).
 
-2. Set up your Databricks JDBC connection URL. You can copy this directly from databricks this way
+2. Set up your Databricks JDBC connection URL. You can copy this directly from Databricks this way
 
 3. In the [Databricks Web UI](https://adb-553282681420861.1.azuredatabricks.net/), navigate to SQL Warehouses
 
@@ -54,7 +55,7 @@ Create your user access token in Databricks WebUI. (IMPORTANT: Treat this token 
 
 5. Go to ‘Connection details’ à JDBC URL and copy the string
 
-![==image_0==.png](/.attachments/==image_0==-e98e9f5f-3ee9-4749-bb1e-d173e005524f.png) 
+![JDBC Driver](images/databricks_rstudio/JDBC_URL.jpg)
   
 
 ### Establishing a Connection to Databricks from R Studio (or any other IDE)  
