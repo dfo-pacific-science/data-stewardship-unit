@@ -7,7 +7,7 @@ execute:
 
 # 🚧 This page is under construction 🚧
 
-```{r, include = FALSE}
+```{r, echo = FALSE}
 library('Microsoft365R')
 
 list_sharepoint_sites()
