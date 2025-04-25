@@ -274,7 +274,7 @@
     "href": "documentation_hub/how_to_guides/sharepoint_r.html",
     "title": "SharePoint in R (Under construction 🚧)",
     "section": "",
-    "text": "🚧 This page is under construction 🚧\nlibrary('Microsoft365R')\n\nlist_sharepoint_sites()\n\n# Delete cached token manually if you get an error about MFA\n#unlink(\"~/.Microsoft365R\", recursive = TRUE)\n\nsite &lt;- get_sharepoint_site('Fishery & Assessment Data Section Wiki')\n\n\n# document libraries\nsite$list_drives()\n\ndrv &lt;- site$get_drive()\n\n# Note: I manually put this data into the FADS Wiki SharePoint to illustrate the workflow of FSAR authors uploading data here\n\n# Download file from FADS Wiki SharePoint\ndrv$download_file(\"General/FSAR Data/Fraser Pinks/data/generated/benchmarks.csv\", overwrite = TRUE)\n\nfr_pk_bms &lt;- readr::read_csv(\"benchmarks.csv\")\n\n\n–&gt;",
+    "text": "🚧 This page is under construction 🚧",
     "crumbs": [
       "Home",
       "Documentation Hub",
