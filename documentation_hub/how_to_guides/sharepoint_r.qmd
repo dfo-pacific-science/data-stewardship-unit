@@ -7,7 +7,7 @@ execute:
 
 # 🚧 This page is under construction 🚧
 
-```{r, include = FALSE}
+```
 library('Microsoft365R')
 
 list_sharepoint_sites()
@@ -42,7 +42,7 @@ We could also just read from SharePoint and write to SharePoint silver folder...
 
 See miro diagram https://miro.com/app/board/uXjVIJyjBWk=/?share_link_id=763283318229
 
-```{r}
+```
 library(RJDBC)
 
 jdbc_driver <- JDBC("com.databricks.client.jdbc.Driver", "C:/Users/JOHNSONBRE/DatabricksJDBC42.jar", "")
