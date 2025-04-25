@@ -1,0 +1,49 @@
+/* Custom CSS styles for the data stewardship website */
+
+/* css for tiles in index.qmd and image formatting in the-team.qmd*/
+.logocontainer { /* create containers that are centered on the page*/
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.logotile { /* create tiles with rounded edges*/
+    width: 250px;
+    height: 250px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 15px;
+}
+.logotile:hover {  /* make it so that tiles get larger when the user's hovers over it*/
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+.logo { /* add images and change color to */
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    transition: transform 0.3s;
+    filter: invert(41%) sepia(37%) saturate(562%) hue-rotate(163deg) brightness(86%) contrast(86%);
+} /* https://stackoverflow.com/questions/22252472/how-can-i-change-the-color-of-an-svg-element for info on generating color filters*/
+.logotitle { /* add cenetered title with rounded edges and a background*/
+    margin-top: auto;
+    padding: 10px;
+    background-color: #f0f0f0;
+    width: 100%;
+    border-radius: 0px 0px 15px 15px; /* Rounded edges */
+} /* crop images to circle*/
+.circle { 
+  width: 200px; /* Adjust the size as needed */
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
