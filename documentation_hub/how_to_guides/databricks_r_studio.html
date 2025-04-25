@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.43">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -70,10 +70,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-44d8862ff5335838008e1d1029e4056f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-f4c375a91ce00478be648ea0fef57694.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -209,7 +209,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../documentation_hub/how_to_guides/sharepoint_r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">SharePoint in R</span></a>
+ <span class="menu-text">SharePoint in R (Under construction 🚧)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -238,7 +238,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../documentation_hub/Reference Info/publishing_data_externally.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hosting Data and Code on External Platforms</span></a>
+ <span class="menu-text">Hosting Data and Code</span></a>
   </div>
 </li>
       </ul>
@@ -354,9 +354,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="quick-start-guide-to-accessing-azure-lakehouse-from-r-studio">Quick Start Guide to Accessing Azure Lakehouse from R Studio</h2>
 <section id="access-token" class="level3">
 <h3 class="anchored" data-anchor-id="access-token">Access Token</h3>
-<p>Create your user access token in Databricks WebUI. (IMPORTANT: Treat this token as your personal password and do not share with anybody)</p>
+<p>Create your user access token in Databricks WebUI.</p>
+<p><strong>IMPORTANT: Treat this token as your personal password and do not share with anybody</strong></p>
 <ol type="1">
-<li><p>In Databricks WebUI -&gt; go to your profile page and navigate to</p></li>
+<li><p>In <a href="https://adb-553282681420861.1.azuredatabricks.net/">Databricks Web UI</a> &gt; go to your profile page and navigate to</p></li>
 <li><p>User &gt; Developer</p></li>
 <li><p>Access tokens &gt; Manage</p></li>
 <li><p>Generate new token as required. Ensure to set the expiration of the token to a suitable date (1 year from now)</p></li>
@@ -364,8 +365,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../../.attachments/==image_0==-f5aa0b19-8612-4f7a-9900-e645687edc77.png" class="img-fluid figure-img"></p>
-<figcaption>==image_0==.png</figcaption>
+<p><img src="images/databricks_rstudio/databricks_token.jpg" class="img-fluid figure-img"></p>
+<figcaption>Databricks Token</figcaption>
 </figure>
 </div>
 </section>
@@ -373,15 +374,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="jdbc-driver">JDBC Driver</h3>
 <ol type="1">
 <li><p>Download <code>JDBC</code> (java database connectivity) driver from https://www.databricks.com/spark/jdbc-drivers-download. Save and extract the .jar file to an accessible location on your computer (<code>C:Users\Your username</code> is fine).</p></li>
-<li><p>Set up your Databricks JDBC connection URL. You can copy this directly from databricks this way</p></li>
+<li><p>Set up your Databricks JDBC connection URL. You can copy this directly from Databricks this way</p></li>
 <li><p>In the <a href="https://adb-553282681420861.1.azuredatabricks.net/">Databricks Web UI</a>, navigate to SQL Warehouses</p></li>
 <li><p>Click on the SQL Warehouse compute resource that you started &nbsp;</p></li>
 <li><p>Go to ‘Connection details’ à JDBC URL and copy the string</p></li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../../.attachments/==image_0==-e98e9f5f-3ee9-4749-bb1e-d173e005524f.png" class="img-fluid figure-img"></p>
-<figcaption>==image_0==.png</figcaption>
+<p><img src="images/databricks_rstudio/JDBC_URL.jpg" class="img-fluid figure-img"></p>
+<figcaption>JDBC Driver</figcaption>
 </figure>
 </div>
 </section>
