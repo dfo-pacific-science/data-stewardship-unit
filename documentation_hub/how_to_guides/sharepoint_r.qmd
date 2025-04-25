@@ -7,7 +7,7 @@ execute:
 
 # 🚧 This page is under construction 🚧
 
-```
+``` {r, echo = FALSE}
 library('Microsoft365R')
 
 list_sharepoint_sites()
@@ -66,5 +66,4 @@ dbGetQuery(connsql, "SHOW SCHEMAS IN bronze_pacific_prod")
 
 # Write to silver  -->
 
---> 
 

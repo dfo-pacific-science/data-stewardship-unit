@@ -7,10 +7,13 @@ format: html
 
 This is the current version of the SPSR vocabulary as a raw JSON file. This view is a fallback until we add a searchable UI.
 
-```{r include = FALSE}
+```{r, echo = FALSE, warning= FALSE, message= FALSE}
+
+# load required libraries
 library(jsonlite)
 library(dplyr)
 library(DT)
+
 # Load vocabulary from the data-standards/vocab folder
 vocab <- fromJSON("vocab/spsr_vocab.json", flatten = TRUE)
 
@@ -20,7 +23,14 @@ datatable(
   rownames = FALSE,
   filter = "top",
   escape = FALSE
+) |> 
+  formatStyle(columns = c(1:ncol(vocab)), # Apply to all columns
+              whiteSpace = "nowrap",
+              overflow = "hidden",
+              textOverflow = "ellipsis"
 )
+
+
 ```
 
 
