@@ -31,7 +31,7 @@ By treating Darwin Core as a **semantic translation layer**, we can harmonize ou
 
 ## The Unified GBIF Data Model
 
-The [GBIF Unified Data Model](https://www.gbif.org/news/3UyrmGQmVxF9exOEZo2N7c/the-unified-model-explained) extends Darwin Core to support **complex biodiversity datasets**, including:
+The [GBIF Unified Data Model](https://docs.google.com/document/d/1QpXwole_j32QZAg6ddqOrAB5OOdqVJKdoKKzz06CK-o/edit?usp=sharing) extends Darwin Core to support **complex biodiversity datasets**, including:
 
 - **Events** (e.g., sampling campaigns, cruises, transects)
 - **Occurrences** (e.g., individual specimens, observations)
