@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SharePoint in R (Under construction 🚧) – Data Stewardship Unit</title>
+<title>Access Data in SharePoint from R – Data Stewardship Unit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -36,10 +70,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-f4c375a91ce00478be648ea0fef57694.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -128,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Documentation Hub</li><li class="breadcrumb-item"><a href="../../documentation_hub/how_to_guides/databricks_r_studio.html">How to Guides</a></li><li class="breadcrumb-item"><a href="../../documentation_hub/how_to_guides/sharepoint_r.html">SharePoint in R (Under construction 🚧)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Documentation Hub</li><li class="breadcrumb-item"><a href="../../documentation_hub/how_to_guides/databricks_r_studio.html">How to Guides</a></li><li class="breadcrumb-item"><a href="../../documentation_hub/how_to_guides/sharepoint_r.html">Access Data in SharePoint from R</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -175,7 +209,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../documentation_hub/how_to_guides/sharepoint_r.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">SharePoint in R (Under construction 🚧)</span></a>
+ <span class="menu-text">Access Data in SharePoint from R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -261,16 +295,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#this-page-is-under-construction" id="toc-this-page-is-under-construction" class="nav-link active" data-scroll-target="#this-page-is-under-construction">🚧 This page is under construction 🚧</a></li>
+  <li><a href="#example-accessing-sharepoint-data" id="toc-example-accessing-sharepoint-data" class="nav-link active" data-scroll-target="#example-accessing-sharepoint-data">Example: Accessing SharePoint Data</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/documentation_hub/how_to_guides/sharepoint_r.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/documentation_hub/how_to_guides/sharepoint_r.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Documentation Hub</li><li class="breadcrumb-item"><a href="../../documentation_hub/how_to_guides/databricks_r_studio.html">How to Guides</a></li><li class="breadcrumb-item"><a href="../../documentation_hub/how_to_guides/sharepoint_r.html">SharePoint in R (Under construction 🚧)</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Documentation Hub</li><li class="breadcrumb-item"><a href="../../documentation_hub/how_to_guides/databricks_r_studio.html">How to Guides</a></li><li class="breadcrumb-item"><a href="../../documentation_hub/how_to_guides/sharepoint_r.html">Access Data in SharePoint from R</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">SharePoint in R (Under construction 🚧)</h1>
+<h1 class="title">Access Data in SharePoint from R</h1>
 </div>
 
 
@@ -287,39 +323,74 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="this-page-is-under-construction" class="level1">
-<h1>🚧 This page is under construction 🚧</h1>
-<!-- # Write this raw data file to Bronze
-
-Just kidding this has to be done in a Databricks Notebook if I want to write a .csv. I can only write delta tables into a database schema from R locally using RJDBC. Which might also work. Using a Databrick notebook would be annoying because I can't read from SharePoint in DataBricks. I could set up pipeline in Azure Data Factory to read from SharePoint, transform, and write to Lakehouse but it seems complicated and maybe overkill.
-
-We could also just read from SharePoint and write to SharePoint silver folder... Makes provisioning access to silver data easier perhaps...
-
-See miro diagram https://miro.com/app/board/uXjVIJyjBWk=/?share_link_id=763283318229
-
-```
-library(RJDBC)
-
-jdbc_driver <- JDBC("com.databricks.client.jdbc.Driver", "C:/Users/JOHNSONBRE/DatabricksJDBC42.jar", "")
-
-urlsql <- "jdbc:databricks://adb-553282681420861.1.azuredatabricks.net:443/default;transportMode=http;ssl=1;AuthMech=3;httpPath=/sql/1.0/warehouses/613056ec98d47d29;"
-
-pat <- Sys.getenv("DATABRICKS_PAT")
-
-connsql <- RJDBC::dbConnect(jdbc_driver, urlsql, "token", pat)
-dbGetQuery(connsql, "SELECT 1")
-
-# see what catalog are available
-dbGetQuery(connsql, "SHOW CATALOGS")
-
-dbGetQuery(connsql, "SHOW SCHEMAS IN bronze_pacific_prod")
-
-```
-# Read data from Bronze
-
-# Transform data to meet SPSR schema
-
-# Write to silver  -->
+<p>It’s possible to access data in SharePoint, including DFO’s SharePoint and others, from R using the <code>Microsoft365R</code> package. This package allows you to authenticate and interact with SharePoint sites, document libraries, and files. This enables secure, programmatic data access for reproducible analysis workflows.</p>
+<p>Keep in mind, to access the DFO Sharepoint from R using the methods below you need to be on the DFO network or using the VPN.</p>
+<p>This can be useful for data stewards and scientists who want to move away from email and personal hard-drive based data storage and sharing and instead use SharePoint as a central repository for data.</p>
+<p>Using R, you can automate the process of downloading, uploading, and managing files in SharePoint. This is particularly useful for data management tasks, such as: - Downloading data files for analysis - Uploading processed data files to SharePoint - Managing document libraries and folders - Automating data workflows</p>
+<section id="example-accessing-sharepoint-data" class="level2">
+<h2 class="anchored" data-anchor-id="example-accessing-sharepoint-data">Example: Accessing SharePoint Data</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install the Microsoft365R package if you haven't already</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("Microsoft365R")</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the Microsoft365R package</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">'Microsoft365R'</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">'dplyr'</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Clear you cache of authentication tokens if you have issues</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Comment this out if you don't want to clear your tokens</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">#AzureAuth::clean_token_directory()</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the SharePoint site you want to work with using either the name of the SharePoint site or id or URL</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>site <span class="ot">&lt;-</span> <span class="fu">get_sharepoint_site</span>(<span class="st">'Fishery &amp; Assessment Data Section Wiki'</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># list the document libraries in the SharePoint site</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>site<span class="sc">$</span><span class="fu">list_drives</span>()</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># get the default document library for the SharePoint site</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>drv <span class="ot">&lt;-</span> site<span class="sc">$</span><span class="fu">get_drive</span>() </span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Download file from FADS Wiki SharePoint</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>drv<span class="sc">$</span><span class="fu">download_file</span>(<span class="st">"General/FSAR Data/Fraser Pinks/data/generated/benchmarks.csv"</span>, <span class="at">overwrite =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Alernatively, you can load data from SharePoint directly as an R dataframe without downloading it locally. This is useful for large files or when you want to avoid cluttering your local storage.</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co"># This will load the file as a dataframe directly into R</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>fr_pk_bms_not_downloaded <span class="ot">&lt;-</span> drv<span class="sc">$</span><span class="fu">load_dataframe</span>(<span class="st">"General/FSAR Data/Fraser Pinks/data/generated/benchmarks.csv"</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>fr_pk_bms <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"benchmarks.csv"</span>)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Now do whatever data wrangling you need to do with the data! </span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co"># For example, let's add a column just for demonstration</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>fr_pk_bms <span class="ot">&lt;-</span> fr_pk_bms <span class="sc">%&gt;%</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">new_column =</span> <span class="st">"This is a new column"</span>)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the modified data to a new CSV file</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(fr_pk_bms, <span class="st">"benchmarks_modified.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You will also want to upload data to SharePoint, whether it’s an updated file or a new output. This can be done using the <code>save_dataframe</code> function.</p>
+<p>Lets upload the modified file we just created to the SharePoint site.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Upload and update a file to the SharePoint site</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>drv<span class="sc">$</span><span class="fu">save_dataframe</span>(fr_pk_bms, <span class="st">"General/FSAR Data/Fraser Pinks/data/generated/benchmarks.csv"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if the file was uploaded successfully</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>uploaded_file <span class="ot">&lt;-</span> drv<span class="sc">$</span><span class="fu">load_dataframe</span>(<span class="st">"General/FSAR Data/Fraser Pinks/data/generated/benchmarks.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the file details</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(uploaded_file)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>This enables secure, programmatic data access for reproducible analysis workflows. Using the <code>Microsoft365R</code> package, you can easily access and manage data in SharePoint from R. This allows for a more streamlined and efficient workflow, especially for data stewards and scientists who work with large datasets and need to collaborate with others.</p>
+<p>This approach can help you automate data management tasks, reduce reliance on email and personal storage, and improve collaboration within your team.</p>
+</section>
+<section id="additional-resources" class="level2">
+<h2 class="anchored" data-anchor-id="additional-resources">Additional Resources</h2>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/Microsoft365R/Microsoft365R.pdf">Microsoft365R Documentation</a></li>
+</ul>
 
 
 </section>
@@ -407,8 +478,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -519,7 +588,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
