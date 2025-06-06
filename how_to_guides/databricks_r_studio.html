@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -352,22 +387,26 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li><strong>Ensure you are on the DFO VPN</strong></li>
 </ol>
-<pre><code>library(RJDBC)
-
-jdbc_driver &lt;- JDBC("com.databricks.client.jdbc.Driver", "C:/Users/JOHNSONBRE/DatabricksJDBC42.jar", "")
-
-urlsql &lt;- "jdbc:databricks://adb-553282681420861.1.azuredatabricks.net:443/default;transportMode=http;ssl=1;AuthMech=3;httpPath=/sql/1.0/warehouses/613056ec98d47d29;"
-
-# Run the code below here once to store your personal access token in your R Environment. 
-# IMPORTANT! Never hard code your PAT in directly in your code script since your script will likely be shared, exposing your secret personal access token&nbsp;
-
-file.edit("~/.Renviron") # add DATABRICKS_PAT="your_personal_access_token" to your .Renviron file
-
-pat &lt;- Sys.getenv("DATABRICKS_PAT")
-
-connsql &lt;- RJDBC::dbConnect(jdbc_driver, urlsql, "token", pat)</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RJDBC)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>jdbc_driver <span class="ot">&lt;-</span> <span class="fu">JDBC</span>(<span class="st">"com.databricks.client.jdbc.Driver"</span>, <span class="st">"C:/Users/JOHNSONBRE/DatabricksJDBC42.jar"</span>, <span class="st">""</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>urlsql <span class="ot">&lt;-</span> <span class="st">"jdbc:databricks://adb-553282681420861.1.azuredatabricks.net:443/default;transportMode=http;ssl=1;AuthMech=3;httpPath=/sql/1.0/warehouses/613056ec98d47d29;"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the code below here once to store your personal access token in your R Environment. </span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># IMPORTANT! Never hard code your PAT in directly in your code script since your script will likely be shared, exposing your secret personal access token&nbsp;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">file.edit</span>(<span class="st">"~/.Renviron"</span>) <span class="co"># add DATABRICKS_PAT="your_personal_access_token" to your .Renviron file</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>pat <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">"DATABRICKS_PAT"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>connsql <span class="ot">&lt;-</span> RJDBC<span class="sc">::</span><span class="fu">dbConnect</span>(jdbc_driver, urlsql, <span class="st">"token"</span>, pat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Test your connection to Databricks by running the following code:</p>
-<pre><code>dbGetQuery(connsql, "SELECT 1")</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbGetQuery</span>(connsql, <span class="st">"SELECT 1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>If you see a table with a single row and a single column with the value 1, then your connection is successful</p>
 </section>
 <section id="exploring-the-lakehouse" class="level3">
@@ -378,46 +417,58 @@ connsql &lt;- RJDBC::dbConnect(jdbc_driver, urlsql, "token", pat)</code></pre>
 <p>Explore the available catalogs in the Databricks environment. Catalogs are the top-level containers in Databricks that store databases.</p>
 <p>In the DFO Pacific Lakehouse, catalogs are used to organize the medallion architecture.</p>
 <p>You may be able to see multiple catalogs in your Databricks environment.</p>
-<pre><code># see what catalog are available
-
-dbGetQuery(connsql, "SHOW CATALOGS")</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># See what catalogs are available</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dbGetQuery</span>(connsql, <span class="st">"SHOW CATALOGS"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="schemas" class="level4">
 <h4 class="anchored" data-anchor-id="schemas">Schemas</h4>
 <p>Check available schemas in bronze catalogue</p>
-<pre><code>dbGetQuery(connsql, "SHOW SCHEMAS IN bronze_pacific_prod")
-
-# check available schemas in bronze nuseds
-dbGetQuery(connsql, "SHOW TABLES IN bronze_pacific_prod.nuseds_v2_0")
-
-# Query bronze nuseds_v2_0 table
-nuseds_activity_types &lt;- dbGetQuery(connsql, "SELECT * FROM bronze_pacific_prod.nuseds_v2_0.activity_types LIMIT 10")</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbGetQuery</span>(connsql, <span class="st">"SHOW SCHEMAS IN bronze_pacific_prod"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># check available schemas in bronze nuseds</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">dbGetQuery</span>(connsql, <span class="st">"SHOW TABLES IN bronze_pacific_prod.nuseds_v2_0"</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Query bronze nuseds_v2_0 table</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>nuseds_activity_types <span class="ot">&lt;-</span> <span class="fu">dbGetQuery</span>(connsql, <span class="st">"SELECT * FROM bronze_pacific_prod.nuseds_v2_0.activity_types LIMIT 10"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="tables" class="level4">
 <h4 class="anchored" data-anchor-id="tables">Tables</h4>
 <p>Check out the tables in FOS_v1_1</p>
-<pre><code>dbGetQuery(connsql, "SHOW TABLES IN bronze_pacific_prod.FOS_v1_1")</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbGetQuery</span>(connsql, <span class="st">"SHOW TABLES IN bronze_pacific_prod.FOS_v1_1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 </section>
 <section id="describe-tables" class="level3">
 <h3 class="anchored" data-anchor-id="describe-tables">Describe Tables</h3>
 <p>Describe a FOS_v1_1 table to extract metadata about a specific table, like what columns are available and their data types.</p>
-<pre><code>dbGetQuery(connsql, "DESCRIBE bronze_pacific_prod.FOS_v1_1.stock")
-</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbGetQuery</span>(connsql, <span class="st">"DESCRIBE bronze_pacific_prod.FOS_v1_1.stock"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="running-queries" class="level3">
 <h3 class="anchored" data-anchor-id="running-queries">Running Queries</h3>
 <p>Run a query to extract data from a table in the Lakehouse.</p>
-<pre><code># Query bronze nuseds_v2_0 smu_cu_lookup table
-smu_cu_lookup &lt;- dbGetQuery(connsql, "SELECT * FROM bronze_pacific_prod.nuseds_v2_0.smu_cu_lookup LIMIT 10")
-
-smu_cu_lookup</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Query bronze nuseds_v2_0 smu_cu_lookup table</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>smu_cu_lookup <span class="ot">&lt;-</span> <span class="fu">dbGetQuery</span>(connsql, <span class="st">"SELECT * FROM bronze_pacific_prod.nuseds_v2_0.smu_cu_lookup LIMIT 10"</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>smu_cu_lookup</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Connect to the FOS data and aggregrate:</p>
-<pre><code># Query bronze FOS_v1_1 stock table
-stock &lt;- dbGetQuery(connsql, "SELECT * FROM bronze_pacific_prod.FOS_v1_1.stock")</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Query bronze FOS_v1_1 stock table</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>stock <span class="ot">&lt;-</span> <span class="fu">dbGetQuery</span>(connsql, <span class="st">"SELECT * FROM bronze_pacific_prod.FOS_v1_1.stock"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Try using an aggregation function such as count and group by to get a count of the number of rows in the table.</p>
-<pre><code># Count the number of rows in the stock table
-dbGetQuery(connsql, "SELECT COUNT(*) FROM bronze_pacific_prod.FOS_v1_1.stock")</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Count the number of rows in the stock table</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dbGetQuery</span>(connsql, <span class="st">"SELECT COUNT(*) FROM bronze_pacific_prod.FOS_v1_1.stock"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 </section>
 <section id="local-compute-versus-databricks-compute" class="level2">
@@ -442,21 +493,23 @@ dbGetQuery(connsql, "SELECT COUNT(*) FROM bronze_pacific_prod.FOS_v1_1.stock")</
 <p><strong>Optimize Queries:</strong> Write efficient SQL queries to minimize the amount of data processed and transferred to your local machine.</p>
 <p><strong>Use Caching:</strong> Save data locally and don’t run <code>dbGetQuery</code> commands unless you are intentionally trying to get new data. Cache intermediate results when performing complex transformations to avoid redundant computations.</p>
 <p>For example in R:</p>
-<pre><code># Query the data and save it to a variable
-data &lt;- dbGetQuery(connsql, "SELECT * FROM ...") # Run the query only once or as needed for new data
- 
-# Perform transformations on the data
-transformed_data &lt;- data %&gt;% ...
-
-# Cache the transformed data
-saveRDS(transformed_data, "transformed_data.rds")
-
-# Next time you need the transformed data, don't run the query again, instead load it from the cache or from your local copy
-
-# Load the transformed data from the cache
-transformed_data &lt;- readRDS("transformed_data.rds")
-
-# Continue working with the transformed data</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Query the data and save it to a variable</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">dbGetQuery</span>(connsql, <span class="st">"SELECT * FROM ..."</span>) <span class="co"># Run the query only once or as needed for new data</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform transformations on the data</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>transformed_data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> ...</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Cache the transformed data</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(transformed_data, <span class="st">"transformed_data.rds"</span>)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Next time you need the transformed data, don't run the query again, instead load it from the cache or from your local copy</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the transformed data from the cache</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>transformed_data <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"transformed_data.rds"</span>)</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Continue working with the transformed data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 </section>
 <section id="using-github-with-r-studio-azure-databricks-and-lakehouse" class="level1">
