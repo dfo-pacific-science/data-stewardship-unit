@@ -1,26 +1,13 @@
 ---
-title: About
+title: "Meet the DSU"
 about:
   template: jolla
   image: images/logo.png
 ---
 
-::: {.content-visible when-profile="english"}
 
 The DSU is a unit within the Fisheries and Assessment Data Section (FADS) in the Pacific Region of Fisheries and Oceans Canada (DFO).
 
 We are a dedicated team committed to enhancing data management and stewardship practices within DFO. Our primary focus is on data related to Pacific Salmon within the DFO Pacific Region, including biodata (e.g., fish weight, length, age, escapement statistics, genomic data), juvenile salmon, and associated ecological and environmental data.
 
 Our goal is to provide guidance and assistance throughout the entire lifecycle of data management—from planning to publication. We strive to ensure our practices align with modern data standards, such as those outlined in the DFO Data Strategy and the [Government of Canada’s digital data strategy](https://www.canada.ca/en/treasury-board-secretariat/corporate/reports/2023-2026-data-strategy.html). For instance, our work is guided by the principles of making data [findable, accessible, interoperable, and reusable (FAIR)](https://www.go-fair.org/fair-principles/). Additionally, we highly value the principles of Indigenous data governance, such as [ownership, control, access, and possession (OCAP)](https://fnigc.ca/ocap-training/), and we are committed to helping our collaborators respect and implement these principles in their work.
-
-:::
-
-::: {.content-visible when-profile="french"}
-
-La DSU est une unité de la Section des données sur les pêches et les évaluations (FADS) de la Région Pacifique de Pêches et Océans Canada (MPO).
-
-Nous sommes une équipe dévouée à l'amélioration des pratiques de gestion et d'intendance des données au sein du MPO. Nous nous concentrons principalement sur les données relatives au saumon du Pacifique dans la région Pacifique du MPO, y compris les données biologiques (par exemple, le poids du poisson, la longueur, l'âge, les statistiques d'échappement, les données génomiques), les saumons juvéniles et les données écologiques et environnementales associées.
-
-Notre objectif est de fournir des conseils et une assistance tout au long du cycle de vie de la gestion des données, de la planification à la publication. Nous nous efforçons de veiller à ce que nos pratiques soient conformes aux normes modernes en matière de données, telles que celles décrites dans la stratégie de données du MPO et la [stratégie de données numériques du gouvernement du Canada](https://www.canada.ca/fr/secretariat-conseil-tresor/organisation/rapports/strategie-relative-aux-donnees-2023-2026.html). Par exemple, notre travail est guidé par les principes visant à rendre les données [trouvables, accessibles, interopérables et réutilisables (FAIR, en anglais seulement)](https://www.go-fair.org/fair-principles/). En outre, nous accordons une grande importance aux principes de gouvernance des données autochtones, tels que [propriété, contrôle, accès et possession (PCAP)](https://fnigc.ca/fr/les-principes-de-pcap-des-premieres-nations/), et nous nous engageons à aider nos collaborateurs à respecter et à mettre en œuvre ces principes dans le cadre de leur travail.
-
-:::

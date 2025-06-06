@@ -7,7 +7,6 @@ format:
   html: 
     theme: cosmo
     toc: true
-    css: styles/custom.css
     grid:
       sidebar-width: 300px
     linkcolor: "#446c8a"
@@ -22,6 +21,8 @@ website:
         href: dsu_documentation.qmd
       - text: "FADS Home"
         href: https://086gc.sharepoint.com/sites/FisheryAssessmentDataSectionWiki/SitePages/Data-Stewardship-Unit(1).aspx
+      - text: "Meet the DSU"
+        href: about.qmd
         
     tools:
       - icon: github
