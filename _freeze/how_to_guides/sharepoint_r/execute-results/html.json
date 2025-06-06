@@ -1,0 +1,15 @@
+{
+  "hash": "25201e9d2505f8351e58761bdfa2b561",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"SharePoint in R (Under construction 🚧)\"\nformat: html\nexecute:\n  eval: false\n---\n\n\n\n\n\n# 🚧 This page is under construction 🚧\n\n\n\n\n\n::: {.cell}\n\n:::\n\n\n\n\n\n\n\n<!-- # Write this raw data file to Bronze\n\nJust kidding this has to be done in a Databricks Notebook if I want to write a .csv. I can only write delta tables into a database schema from R locally using RJDBC. Which might also work. Using a Databrick notebook would be annoying because I can't read from SharePoint in DataBricks. I could set up pipeline in Azure Data Factory to read from SharePoint, transform, and write to Lakehouse but it seems complicated and maybe overkill.\n\nWe could also just read from SharePoint and write to SharePoint silver folder... Makes provisioning access to silver data easier perhaps...\n\nSee miro diagram https://miro.com/app/board/uXjVIJyjBWk=/?share_link_id=763283318229\n\n```\nlibrary(RJDBC)\n\njdbc_driver <- JDBC(\"com.databricks.client.jdbc.Driver\", \"C:/Users/JOHNSONBRE/DatabricksJDBC42.jar\", \"\")\n\nurlsql <- \"jdbc:databricks://adb-553282681420861.1.azuredatabricks.net:443/default;transportMode=http;ssl=1;AuthMech=3;httpPath=/sql/1.0/warehouses/613056ec98d47d29;\"\n\npat <- Sys.getenv(\"DATABRICKS_PAT\")\n\nconnsql <- RJDBC::dbConnect(jdbc_driver, urlsql, \"token\", pat)\ndbGetQuery(connsql, \"SELECT 1\")\n\n# see what catalog are available\ndbGetQuery(connsql, \"SHOW CATALOGS\")\n\ndbGetQuery(connsql, \"SHOW SCHEMAS IN bronze_pacific_prod\")\n\n```\n# Read data from Bronze\n\n# Transform data to meet SPSR schema\n\n# Write to silver  -->\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
