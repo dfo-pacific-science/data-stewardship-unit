@@ -28,7 +28,7 @@ It's possible to access data in SharePoint, including DFO's SharePoint and other
 ### Example: Accessing SharePoint Data
 
 
-``` {r, echo = TRUE, message= FALSE, warning= FALSE, error= FALSE, cache= FALSE, results='hide'}
+``` {r, eval = FALSE, echo = TRUE, message= FALSE, warning= FALSE, error= FALSE, cache= FALSE, results='hide'}
 # Install the Microsoft365R package if you haven't already
 install.packages("Microsoft365R")
 
@@ -51,7 +51,7 @@ site$list_drives()
 Running the above code will prompt an authentication process with Azure Active Directory. You may be prompted to sign in with your browser. After signing in successfully, you will see the message `Authenticated with Azure Active Directory. Please close this page and return to R.`
 
 
-``` {r, echo = TRUE, message= FALSE, warning= FALSE, error= FALSE, cache= FALSE, results='hide'}
+``` {r, eval = FALSE, echo = TRUE, message= FALSE, warning= FALSE, error= FALSE, cache= FALSE, results='hide'}
 # get the default document library for the SharePoint site
 drv <- site$get_drive() 
 
@@ -78,7 +78,7 @@ You will also want to upload data to SharePoint, whether it's an updated file or
 
 Lets upload the modified file we just created to the SharePoint site.
 
-``` {r, echo = TRUE, message= FALSE, warning= FALSE, results = 'hide'}
+``` {r, eval = FALSE, echo = TRUE, message= FALSE, warning= FALSE, results = 'hide'}
 # Upload and update a file to the SharePoint site
 drv$save_dataframe(fr_pk_bms, "General/FSAR Data/Fraser Pinks/data/generated/benchmarks.csv")
 
@@ -86,7 +86,7 @@ drv$save_dataframe(fr_pk_bms, "General/FSAR Data/Fraser Pinks/data/generated/ben
 uploaded_file <- drv$load_dataframe("General/FSAR Data/Fraser Pinks/data/generated/benchmarks.csv")
 ```
 
-```{r}
+```{r, eval = FALSE}
 # Print the file details
 print(uploaded_file)
 ```
