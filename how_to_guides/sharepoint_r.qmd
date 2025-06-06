@@ -30,21 +30,21 @@ It's possible to access data in SharePoint, including DFO's SharePoint and other
 
 ``` {r, eval = FALSE, echo = TRUE, message= FALSE, warning= FALSE, error= FALSE, cache= FALSE, results='hide'}
 # Install the Microsoft365R package if you haven't already
-install.packages("Microsoft365R")
+# install.packages("Microsoft365R")
 
 # Load the Microsoft365R package
-library('Microsoft365R')
-library('dplyr')
+# library('Microsoft365R')
+# library('dplyr')
 
 # Clear you cache of authentication tokens if you have issues
 # Comment this out if you don't want to clear your tokens
 #AzureAuth::clean_token_directory()
 
 # Get the SharePoint site you want to work with using either the name of the SharePoint site or id or URL
-site <- get_sharepoint_site('Fishery & Assessment Data Section Wiki')
+# site <- get_sharepoint_site('Fishery & Assessment Data Section Wiki')
 
 # list the document libraries in the SharePoint site
-site$list_drives()
+# site$list_drives()
 
 ```
 
@@ -53,24 +53,24 @@ Running the above code will prompt an authentication process with Azure Active D
 
 ``` {r, eval = FALSE, echo = TRUE, message= FALSE, warning= FALSE, error= FALSE, cache= FALSE, results='hide'}
 # get the default document library for the SharePoint site
-drv <- site$get_drive() 
+# drv <- site$get_drive() 
 
 # Download file from FADS Wiki SharePoint
-drv$download_file("General/FSAR Data/Fraser Pinks/data/generated/benchmarks.csv", overwrite = TRUE)
+# drv$download_file("General/FSAR Data/Fraser Pinks/data/generated/benchmarks.csv", overwrite = TRUE)
 
 # Alernatively, you can load data from SharePoint directly as an R dataframe without downloading it locally. This is useful for large files or when you want to avoid cluttering your local storage.
 # This will load the file as a dataframe directly into R
-fr_pk_bms_not_downloaded <- drv$load_dataframe("General/FSAR Data/Fraser Pinks/data/generated/benchmarks.csv")
+# fr_pk_bms_not_downloaded <- drv$load_dataframe("General/FSAR Data/Fraser Pinks/data/generated/benchmarks.csv")
 
-fr_pk_bms <- readr::read_csv("benchmarks.csv")
+# fr_pk_bms <- readr::read_csv("benchmarks.csv")
 
 # Now do whatever data wrangling you need to do with the data! 
 
 # For example, let's add a column just for demonstration
-fr_pk_bms <- fr_pk_bms |> 
-  mutate(new_column = "This is a new column")
+# fr_pk_bms <- fr_pk_bms |> 
+  #mutate(new_column = "This is a new column")
 # Save the modified data to a new CSV file
-write.csv(fr_pk_bms, "benchmarks_modified.csv", row.names = FALSE)
+# write.csv(fr_pk_bms, "benchmarks_modified.csv", row.names = FALSE)
 
 ```
 
@@ -80,15 +80,15 @@ Lets upload the modified file we just created to the SharePoint site.
 
 ``` {r, eval = FALSE, echo = TRUE, message= FALSE, warning= FALSE, results = 'hide'}
 # Upload and update a file to the SharePoint site
-drv$save_dataframe(fr_pk_bms, "General/FSAR Data/Fraser Pinks/data/generated/benchmarks.csv")
+# drv$save_dataframe(fr_pk_bms, "General/FSAR Data/Fraser Pinks/data/generated/benchmarks.csv")
 
 # Check if the file was uploaded successfully
-uploaded_file <- drv$load_dataframe("General/FSAR Data/Fraser Pinks/data/generated/benchmarks.csv")
+# uploaded_file <- drv$load_dataframe("General/FSAR Data/Fraser Pinks/data/generated/benchmarks.csv")
 ```
 
 ```{r, eval = FALSE}
 # Print the file details
-print(uploaded_file)
+# print(uploaded_file)
 ```
 
 
