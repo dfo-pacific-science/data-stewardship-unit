@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.40">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Darwin Core, GBIF, and OBIS Reference Guide – Data Stewardship Unit</title>
+<title>Darwin Core, GBIF, and OBIS Reference Guide – FADS Documentation Hub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -36,10 +36,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-f4c375a91ce00478be648ea0fef57694.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Data Stewardship Unit</span>
+    <span class="navbar-title">FADS Documentation Hub</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -175,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../documentation_hub/how_to_guides/sharepoint_r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Access Data in SharePoint from R</span></a>
+ <span class="menu-text">SharePoint in R (Under construction 🚧)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -299,7 +299,6 @@ ul.task-list li input[type="checkbox"] {
 <section id="reference-guide-darwin-core-the-unified-gbif-data-model-and-obis" class="level1">
 <h1>Reference Guide: Darwin Core, the Unified GBIF Data Model, and OBIS</h1>
 <p>This guide introduces the <strong>Darwin Core (DwC)</strong> standard and its role in supporting data interoperability and publication for <strong>Fisheries and Oceans Canada (DFO)</strong>. It also provides an overview of the <strong>Unified GBIF Data Model</strong> and the <strong>Ocean Biodiversity Information System (OBIS)</strong>. The focus is on how commonly used fields in DFO fisheries datasets map to Darwin Core terms, enabling integration across internal and external systems.</p>
-<pre><code>Darwin Core is not a database format. It’s a lingua franca for biodiversity data. Use it to describe, translate, and publish your data — not to force everything into the same structure.</code></pre>
 <hr>
 <section id="what-is-darwin-core" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-darwin-core">What is Darwin Core?</h2>
@@ -338,7 +337,6 @@ ul.task-list li input[type="checkbox"] {
 <li>Taxonomic Verification</li>
 </ul>
 <p>OBIS is the global node for <strong>marine biodiversity</strong> under the <strong>UN Ocean Decade</strong> and is highly relevant for DFO’s coastal and offshore research.</p>
-<p>OBIS suggests organizing Darwin Core Terms in using the <a href="https://manual.obis.org/data_format.html#obis-holds-more-than-just-species-occurrences-the-env-data-approach">ENV-DATA Format</a>. This format is flexible and is an implementation of the GBIF Unified Data Model. It allows for the inclusion of <strong>environmental data</strong> alongside biological observations, making it ideal for marine datasets. This approach is particularly useful for DFO datasets that often include both biological and environmental measurements.</p>
 <hr>
 </section>
 <section id="mapping-dfo-fisheries-data-to-darwin-core" class="level2">
@@ -365,8 +363,8 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td><code>Sample_ID</code></td>
-<td><code>materialSampleID</code></td>
-<td>An identifier for the dwc:MaterialSample (as opposed to a particular digital record of the dwc:MaterialSample).</td>
+<td><code>occurrenceID</code></td>
+<td>A globally unique identifier for the specimen or observation</td>
 </tr>
 <tr class="odd">
 <td><code>Catch_Date</code></td>
@@ -434,6 +432,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>For questions, feedback, or help mapping your dataset, contact the Data Stewardship Unit.</p>
 <hr>
+<p><code>Darwin Core is not a database format. It’s a lingua franca for biodiversity data. Use it to describe, translate, and publish your data — not to force everything into the same structure.</code></p>
 
 
 </section>
@@ -522,6 +521,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -530,7 +531,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/dfo-pacific-science\.github\.io\/data-stewardship-unit\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -632,6 +633,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

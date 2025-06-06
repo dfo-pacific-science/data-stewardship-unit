@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>dsu_documentation – FADS Documentation Hub</title>
+<title>Access Data in SharePoint from R – FADS Documentation Hub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d14c8809771e4ebfa19b30ff1e45b1a9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-d14c8809771e4ebfa19b30ff1e45b1a9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles/custom.css">
+<link rel="stylesheet" href="../styles/custom.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -80,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">FADS Documentation Hub</span>
     </a>
   </div>
@@ -91,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./dsu_documentation.html" aria-current="page"> 
+    <a class="nav-link" href="../dsu_documentation.html"> 
 <span class="menu-text">About the Documentation Hub</span></a>
   </li>  
   <li class="nav-item">
@@ -124,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../how_to_guides/databricks_r_studio.html">How to Guides</a></li><li class="breadcrumb-item"><a href="../how_to_guides/sharepoint_r.html">Access Data in SharePoint from R</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -138,8 +173,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -160,13 +195,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./how_to_guides/databricks_r_studio.html" class="sidebar-item-text sidebar-link">
+  <a href="../how_to_guides/databricks_r_studio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Connect to the Azure Lakehouse from R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./how_to_guides/sharepoint_r.html" class="sidebar-item-text sidebar-link">
+  <a href="../how_to_guides/sharepoint_r.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Access Data in SharePoint from R</span></a>
   </div>
 </li>
@@ -183,13 +218,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference_info/dwc-obis-gbif.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference_info/dwc-obis-gbif.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Darwin Core, GBIF, and OBIS Reference Guide</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference_info/publishing_data_externally.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference_info/publishing_data_externally.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hosting Data and Code</span></a>
   </div>
 </li>
@@ -204,13 +239,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference_info/data_standards/spsr-vocab-browser.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference_info/data_standards/spsr-vocab-browser.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SPSR Vocabulary JSON Viewer</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference_info/data_standards/vocab-index.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference_info/data_standards/vocab-index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Controlled Vocabularies</span></a>
   </div>
 </li>
@@ -227,7 +262,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference_info/tools/r_packages.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference_info/tools/r_packages.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">R Packages</span></a>
   </div>
 </li>
@@ -246,7 +281,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorials/support_controlled_vocabs.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorials/support_controlled_vocabs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Support Controlled Vocabularies</span></a>
   </div>
 </li>
@@ -262,89 +297,132 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#about-the-dsu-documentation-hub" id="toc-about-the-dsu-documentation-hub" class="nav-link active" data-scroll-target="#about-the-dsu-documentation-hub">📚 About the DSU Documentation Hub 🐟💾</a>
-  <ul class="collapse">
-  <li><a href="#how-to-guides" id="toc-how-to-guides" class="nav-link" data-scroll-target="#how-to-guides">️1. How-to Guides 🛠</a></li>
-  <li><a href="#reference-info" id="toc-reference-info" class="nav-link" data-scroll-target="#reference-info">2. Reference Info 📘</a></li>
-  <li><a href="#tutorials" id="toc-tutorials" class="nav-link" data-scroll-target="#tutorials">3. Tutorials 🎓</a></li>
-  <li><a href="#topic-explanations" id="toc-topic-explanations" class="nav-link" data-scroll-target="#topic-explanations">4. Topic Explanations 🧠</a></li>
-  <li><a href="#contribute-collaborate" id="toc-contribute-collaborate" class="nav-link" data-scroll-target="#contribute-collaborate">🛠️ Contribute &amp; Collaborate! 🤝</a></li>
-  </ul></li>
+  <li><a href="#why-connect-to-sharepoint" id="toc-why-connect-to-sharepoint" class="nav-link active" data-scroll-target="#why-connect-to-sharepoint">Why Connect to Sharepoint?</a></li>
+  <li><a href="#using-the-microsoft365-package" id="toc-using-the-microsoft365-package" class="nav-link" data-scroll-target="#using-the-microsoft365-package">Using the Microsoft365 Package</a></li>
+  <li><a href="#example-accessing-sharepoint-data" id="toc-example-accessing-sharepoint-data" class="nav-link" data-scroll-target="#example-accessing-sharepoint-data">Example: Accessing SharePoint Data</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/dsu_documentation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/dsu_documentation.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/how_to_guides/sharepoint_r.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/how_to_guides/sharepoint_r.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../how_to_guides/databricks_r_studio.html">How to Guides</a></li><li class="breadcrumb-item"><a href="../how_to_guides/sharepoint_r.html">Access Data in SharePoint from R</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Access Data in SharePoint from R</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="about-the-dsu-documentation-hub" class="level1">
-<h1>📚 About the DSU Documentation Hub 🐟💾</h1>
-<p>The <strong>Data Stewardship Unit (DSU)</strong> is committed to making it easier for you to find, understand, and use the resources you need to support your data stewardship and management responsibilities. Our documentation isn’t just a bunch of PDFs in a folder — it’s your sidekick 🦸‍♂️ for all things data.</p>
-<p>We follow the <a href="https://diataxis.fr"><strong>Diátaxis Framework</strong></a> to keep things organized, useful, and easy to navigate. The docs are grouped into four clear categories:</p>
-<hr>
-<section id="how-to-guides" class="level3">
-<h3 class="anchored" data-anchor-id="how-to-guides">️1. How-to Guides 🛠</h3>
-<p>Quick, practical instructions for specific tasks.<br>
-Perfect for when you’re asking:<br>
-&gt; <em>“How do I do this specific thing?”</em></p>
-<p>Examples:</p>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="why-connect-to-sharepoint" class="level3">
+<h3 class="anchored" data-anchor-id="why-connect-to-sharepoint">Why Connect to Sharepoint?</h3>
+<p>Connecting R to Sharepoint enables secure, programmatic data access for reproducible analysis workflows. This is especially useful to data stewards and scientists who want to move away from email and personal hard-drive based data storage and sharing and instead use a cloud service as a central repository for data.</p>
+<p>This is particularly useful for data management tasks in Sharepoint, such as:</p>
 <ul>
-<li>How to request access to a dataset 🔐<br>
-</li>
-<li>How to submit a metadata record 📤<br>
-</li>
-<li>How to clean up an Excel file before uploading 🧼</li>
+<li>Downloading data files for analysis</li>
+<li>Uploading processed data files</li>
+<li>Managing document libraries and folders</li>
+<li>Automating data workflows</li>
 </ul>
-<hr>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Keep in mind, to access the DFO Sharepoint from R using the methods below you need to be on the DFO network or using the VPN.</p>
+</div>
+</div>
 </section>
-<section id="reference-info" class="level3">
-<h3 class="anchored" data-anchor-id="reference-info">2. Reference Info 📘</h3>
-<p>The deep, detailed, no-fluff facts about tools, terms, and standards.<br>
-Use these when you need precision or technical definitions.</p>
-<p>Examples:</p>
+<section id="using-the-microsoft365-package" class="level3">
+<h3 class="anchored" data-anchor-id="using-the-microsoft365-package">Using the Microsoft365 Package</h3>
+<p>It’s possible to access data in SharePoint, including DFO’s SharePoint and others, from R using the <code>Microsoft365R</code> package. This package allows you to authenticate and interact with SharePoint sites, document libraries, and files.</p>
+</section>
+<section id="example-accessing-sharepoint-data" class="level3">
+<h3 class="anchored" data-anchor-id="example-accessing-sharepoint-data">Example: Accessing SharePoint Data</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install the Microsoft365R package if you haven't already</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"Microsoft365R"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the Microsoft365R package</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">'Microsoft365R'</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">'dplyr'</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Clear you cache of authentication tokens if you have issues</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Comment this out if you don't want to clear your tokens</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">#AzureAuth::clean_token_directory()</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the SharePoint site you want to work with using either the name of the SharePoint site or id or URL</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>site <span class="ot">&lt;-</span> <span class="fu">get_sharepoint_site</span>(<span class="st">'Fishery &amp; Assessment Data Section Wiki'</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># list the document libraries in the SharePoint site</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>site<span class="sc">$</span><span class="fu">list_drives</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Running the above code will prompt an authentication process with Azure Active Directory. You may be prompted to sign in with your browser. After signing in successfully, you will see the message <code>Authenticated with Azure Active Directory. Please close this page and return to R.</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get the default document library for the SharePoint site</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>drv <span class="ot">&lt;-</span> site<span class="sc">$</span><span class="fu">get_drive</span>() </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Download file from FADS Wiki SharePoint</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>drv<span class="sc">$</span><span class="fu">download_file</span>(<span class="st">"General/FSAR Data/Fraser Pinks/data/generated/benchmarks.csv"</span>, <span class="at">overwrite =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Alernatively, you can load data from SharePoint directly as an R dataframe without downloading it locally. This is useful for large files or when you want to avoid cluttering your local storage.</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># This will load the file as a dataframe directly into R</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>fr_pk_bms_not_downloaded <span class="ot">&lt;-</span> drv<span class="sc">$</span><span class="fu">load_dataframe</span>(<span class="st">"General/FSAR Data/Fraser Pinks/data/generated/benchmarks.csv"</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>fr_pk_bms <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"benchmarks.csv"</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Now do whatever data wrangling you need to do with the data! </span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># For example, let's add a column just for demonstration</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>fr_pk_bms <span class="ot">&lt;-</span> fr_pk_bms <span class="sc">|&gt;</span> </span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">new_column =</span> <span class="st">"This is a new column"</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the modified data to a new CSV file</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(fr_pk_bms, <span class="st">"benchmarks_modified.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You will also want to upload data to SharePoint, whether it’s an updated file or a new output. This can be done using the <code>save_dataframe</code> function.</p>
+<p>Lets upload the modified file we just created to the SharePoint site.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Upload and update a file to the SharePoint site</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>drv<span class="sc">$</span><span class="fu">save_dataframe</span>(fr_pk_bms, <span class="st">"General/FSAR Data/Fraser Pinks/data/generated/benchmarks.csv"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if the file was uploaded successfully</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>uploaded_file <span class="ot">&lt;-</span> drv<span class="sc">$</span><span class="fu">load_dataframe</span>(<span class="st">"General/FSAR Data/Fraser Pinks/data/generated/benchmarks.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the file details</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(uploaded_file)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>This enables secure, programmatic data access for reproducible analysis workflows. Using the <code>Microsoft365R</code> package, you can easily access and manage data in SharePoint from R. This allows for a more streamlined and efficient workflow, especially for data stewards and scientists who work with large datasets and need to collaborate with others.</p>
+<p>This approach can help you automate data management tasks, reduce reliance on email and personal storage, and improve collaboration within your team.</p>
+</section>
+<section id="additional-resources" class="level2">
+<h2 class="anchored" data-anchor-id="additional-resources">Additional Resources</h2>
 <ul>
-<li>SQL cheat sheets 🧾</li>
-<li>Metadata profile field definitions 🧬</li>
-<li>Controlled vocabulary lists 📑</li>
+<li><a href="https://cran.r-project.org/web/packages/Microsoft365R/Microsoft365R.pdf">Microsoft365R Documentation</a></li>
 </ul>
-<hr>
-</section>
-<section id="tutorials" class="level3">
-<h3 class="anchored" data-anchor-id="tutorials">3. Tutorials 🎓</h3>
-<p>Structured, step-by-step lessons that help you <strong>learn</strong> by doing.<br>
-Ideal for onboarding or skill-building.</p>
-<p>Examples:</p>
-<ul>
-<li>A walkthrough on using Power BI with our datasets 📊</li>
-<li>Intro to working with Synapse Notebooks 🧠</li>
-<li>Creating data visualizations from CSVs with Python 🐍</li>
-</ul>
-<hr>
-</section>
-<section id="topic-explanations" class="level3">
-<h3 class="anchored" data-anchor-id="topic-explanations">4. Topic Explanations 🧠</h3>
-<p>Deep dives and thoughtful writeups on the <strong>why</strong> behind the work.<br>
-Great for context, decision-making, or just satisfying your inner data philosopher.</p>
-<p>Examples:</p>
-<ul>
-<li>Why metadata quality matters 🧼</li>
-<li>Data lifecycle management explained 🌱➡️🌳</li>
-<li>The theory behind our access protocols 🚦</li>
-</ul>
-<hr>
-</section>
-<section id="contribute-collaborate" class="level2">
-<h2 class="anchored" data-anchor-id="contribute-collaborate">🛠️ Contribute &amp; Collaborate! 🤝</h2>
-<p>This documentation is a <strong>living resource</strong> — always evolving and improving.<br>
-We’d love your feedback, suggestions, and ideas! 🗣️</p>
-<p>You can even contribute directly to the documentation! See our Contributing Guide for more details. Spotted something confusing? Missing a topic? Got an awesome tip to share?<br>
-➡️ Reach out to us anytime — we’re listening 👂 and always happy to help!</p>
-<p>Happy stewarding! 🐟✨</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -755,7 +833,7 @@ We’d love your feedback, suggestions, and ideas! 🗣️</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/dsu_documentation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/dsu_documentation.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/how_to_guides/sharepoint_r.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/how_to_guides/sharepoint_r.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This site was created with <a href="https://quarto.org/">Quarto</a> and is hosted with <a href="https://pages.github.com/">Github Pages</a>.</p>
 </div>
