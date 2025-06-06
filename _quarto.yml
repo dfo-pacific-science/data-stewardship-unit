@@ -8,6 +8,9 @@ format:
     theme: cosmo
     toc: true
     css: styles/custom.css
+    grid:
+      sidebar-width: 300px
+    linkcolor: "#446c8a"
 
 website:
   favicon: images/logo.png
@@ -15,12 +18,11 @@ website:
   navbar:
     search: true
     left:
-      - text: "FADS Home"
-        href: https://086gc.sharepoint.com/sites/FisheryAssessmentDataSectionWiki/SitePages/Data-Stewardship-Unit(1).aspx
       - text: "About the Documentation Hub"
         href: dsu_documentation.qmd
-      - text: "Tools (coming soon)"
-        href: tools.qmd
+      - text: "FADS Home"
+        href: https://086gc.sharepoint.com/sites/FisheryAssessmentDataSectionWiki/SitePages/Data-Stewardship-Unit(1).aspx
+        
     tools:
       - icon: github
         menu:
@@ -28,21 +30,24 @@ website:
             href: https://github.com/dfo-pacific-science/data-stewardship-unit
           - text: Report a Bug
             href: https://github.com/dfo-pacific-science/data-stewardship-unit/issues
-
+    background: "#dae2e8"
+    
   sidebar:
     - style: docked
       background: light
       contents:
         - auto: how_to_guides
         - auto: reference_info
-        - auto: tools
-        - auto: data_standards
+        - auto: tutorials
+      logo: images/logo.png
       search: true
-
+    
   repo-url: https://github.com/dfo-pacific-science/data-stewardship-unit
   repo-actions: [edit, source, issue]
-  page-footer: "This site was created with [Quarto](https://quarto.org/) and is hosted with [Github Pages](https://pages.github.com/). This work is licensed under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/)."
-
+  page-footer: 
+    right: "This site was created with [Quarto](https://quarto.org/) and is hosted with [Github Pages](https://pages.github.com/)."
+    left: "Last updated: June 6, 2025"
+    
 lang: en
 
 execute:
