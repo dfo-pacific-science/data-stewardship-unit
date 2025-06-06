@@ -1,18 +1,14 @@
-# Data Stewardship Website
+# FADS Documentation Hub Site
 
 This website serves as a resource for Fisheries and Oceans Canada employees working in the Pacific Region Science Branch, providing support for their data stewardship and management responsibilities.
 
 ## Project Structure
 
-The project has the following files and directories:
+This repository has some the following files and directories of note:
 
 - `_quarto.yml`: The configuration file for the Quarto package.
 - `index.qmd`: The home page of the website.
-- `training-resources.qmd`: A page with our list of training resources. 
-- `about.qmd`: The About page describing the Data Stewardship Unit serving the Pacific Region Science Branch.
-- `perspectives/`: Directory containing pages related to different perspectives on data stewardship.
-- `images/icons/`: Directory containing image icons for the pages.
-- `styles/custom.css`: Custom CSS styles for the website.
+- `images/`: holds logos and images for the site 
 - `README.md`: Documentation for the project.
 - `CONTRIBUTING.md`: Instructions for contributing to the website. 
 - `.github`: Files for Github Actions workflows
