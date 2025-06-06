@@ -15,16 +15,13 @@ website:
   navbar:
     search: true
     left:
-      - text: "Home"
+      - text: "FADS Home"
         href: https://086gc.sharepoint.com/sites/FisheryAssessmentDataSectionWiki/SitePages/Data-Stewardship-Unit(1).aspx
-      - text: "Documentation Hub"
+      - text: "About the Documentation Hub"
         href: dsu_documentation.qmd
       - text: "Tools (coming soon)"
         href: tools.qmd
     tools:
-      - icon: translate
-        href: ../fr
-        text: "Francais"
       - icon: github
         menu:
           - text: Source Code
@@ -36,8 +33,8 @@ website:
     - style: docked
       background: light
       contents:
-        - auto: documentation_hub
-          search: true
+        - auto: how_to_guides
+        - auto: reference_info
         - auto: tools
         - auto: data_standards
       search: true
