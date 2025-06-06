@@ -1,160 +1,5 @@
 [
   {
-    "objectID": "tutorials/support_controlled_vocabs.html",
-    "href": "tutorials/support_controlled_vocabs.html",
-    "title": "Support Controlled Vocabularies",
-    "section": "",
-    "text": "The scientist downloads and completes the data dictionary template (Excel)\n\nThey describe each variable: name, definition, method, units, etc.\nThey may include URIs from known vocabularies if possible\n\nThe spreadsheet includes:\n\nA README sheet with instructions\nA Metadata tab for project-level context\nA Data Dictionary tab with one row per variable\n\n\n\n\n\n\nThe data dictionary is passed into your R validation function (validate_data_dictionary())\nIt compares submitted variables to your reference vocabulary, hosted as JSON on GitHub Pages\nThe validator returns:\n\nMatched terms\nUnmatched terms\nSuggested mappings using fuzzy logic (e.g., stringdist or Jaro-Winkler)\n\nThe scientist or steward reviews and adjusts terms as needed\n\n\n\n\n\nFor each submitted or candidate term:\n\nUse an automated lookup tool to check if a concept already exists in the NCEAS Salmon Ontology. Start by using the BioPortal Annotator or API to match term labels and definitions. Optionally, build a lightweight script that compares local vocabulary terms to the ontology by label, synonyms, or definition text using exact or fuzzy string matching. Consider integrating the result into your pipeline for batch validation.\nIf it exists:\n\nUse skos:exactMatch or skos:closeMatch in your .ttl (Turtle) or .jsonld RDF vocab files. These mappings are typically stored in the ontology files generated from your .csv source. Add a column like exact_match_uri or close_match_uri to your .csv, your export script can incorporate those values automatically during serialization to .ttl or .jsonld.\n\nIf it doesn’t exist, but is broadly applicable:\n\nPrepare a Pull Request or issue to suggest the term to the NCEAS maintainers\nInclude:\n\nLabel, definition, synonyms\nUsage example or data sources\n\n\n\n\n\n\n\n\nMaintain DFO vocabularies in GitHub as:\n\n.csv for editing\n.json for R/python access and validation\n.jsonld and .ttl for ontology use\n\nAssign persistent URIs using https://w3id.org/dfo/spsi#term-id\nOrganize vocabularies by data domain or project (e.g., monitoring, habitat, biology)\n\n\n\n\n\nExtend your vocabularies with relationships:\n\nbroader, narrower, related\nhasUnit, hasMethod, derivedFrom\n\nUse tools like rdflib or skosify to model in Turtle or OWL\nAdd namespace info:\n\n@prefix dfo-spsi: &lt;https://w3id.org/dfo/spsi#&gt;\n\nOver time, link this to:\n\nNCEAS ontology\nNERC units\nENVO/OBI for environment/sample methods\n\n\n\n\n\n\nHost vocab on GitHub Pages + register URIs at w3id.org\nLink from your Quarto site (/data-standards/vocab-index.html)\nAllow download in multiple formats (JSON, JSON-LD, TTL)\nUse vocab in:\n\nData validation tools\nMetadata editors\nAPIs and dashboards\nAI pipelines (semantic RAG, search, integration)\n\n\n\nThis workflow will enable DFO Pacific to build a structured, version-controlled, and interoperable vocabulary and ontology infrastructure for salmon data, with clear ties to domain-wide standards and extensibility for AI use cases.",
-    "crumbs": [
-      "About the Documentation Hub",
-      "Tutorials",
-      "Support Controlled Vocabularies"
-    ]
-  },
-  {
-    "objectID": "tutorials/support_controlled_vocabs.html#guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo",
-    "href": "tutorials/support_controlled_vocabs.html#guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo",
-    "title": "Support Controlled Vocabularies",
-    "section": "",
-    "text": "The scientist downloads and completes the data dictionary template (Excel)\n\nThey describe each variable: name, definition, method, units, etc.\nThey may include URIs from known vocabularies if possible\n\nThe spreadsheet includes:\n\nA README sheet with instructions\nA Metadata tab for project-level context\nA Data Dictionary tab with one row per variable\n\n\n\n\n\n\nThe data dictionary is passed into your R validation function (validate_data_dictionary())\nIt compares submitted variables to your reference vocabulary, hosted as JSON on GitHub Pages\nThe validator returns:\n\nMatched terms\nUnmatched terms\nSuggested mappings using fuzzy logic (e.g., stringdist or Jaro-Winkler)\n\nThe scientist or steward reviews and adjusts terms as needed\n\n\n\n\n\nFor each submitted or candidate term:\n\nUse an automated lookup tool to check if a concept already exists in the NCEAS Salmon Ontology. Start by using the BioPortal Annotator or API to match term labels and definitions. Optionally, build a lightweight script that compares local vocabulary terms to the ontology by label, synonyms, or definition text using exact or fuzzy string matching. Consider integrating the result into your pipeline for batch validation.\nIf it exists:\n\nUse skos:exactMatch or skos:closeMatch in your .ttl (Turtle) or .jsonld RDF vocab files. These mappings are typically stored in the ontology files generated from your .csv source. Add a column like exact_match_uri or close_match_uri to your .csv, your export script can incorporate those values automatically during serialization to .ttl or .jsonld.\n\nIf it doesn’t exist, but is broadly applicable:\n\nPrepare a Pull Request or issue to suggest the term to the NCEAS maintainers\nInclude:\n\nLabel, definition, synonyms\nUsage example or data sources\n\n\n\n\n\n\n\n\nMaintain DFO vocabularies in GitHub as:\n\n.csv for editing\n.json for R/python access and validation\n.jsonld and .ttl for ontology use\n\nAssign persistent URIs using https://w3id.org/dfo/spsi#term-id\nOrganize vocabularies by data domain or project (e.g., monitoring, habitat, biology)\n\n\n\n\n\nExtend your vocabularies with relationships:\n\nbroader, narrower, related\nhasUnit, hasMethod, derivedFrom\n\nUse tools like rdflib or skosify to model in Turtle or OWL\nAdd namespace info:\n\n@prefix dfo-spsi: &lt;https://w3id.org/dfo/spsi#&gt;\n\nOver time, link this to:\n\nNCEAS ontology\nNERC units\nENVO/OBI for environment/sample methods\n\n\n\n\n\n\nHost vocab on GitHub Pages + register URIs at w3id.org\nLink from your Quarto site (/data-standards/vocab-index.html)\nAllow download in multiple formats (JSON, JSON-LD, TTL)\nUse vocab in:\n\nData validation tools\nMetadata editors\nAPIs and dashboards\nAI pipelines (semantic RAG, search, integration)\n\n\n\nThis workflow will enable DFO Pacific to build a structured, version-controlled, and interoperable vocabulary and ontology infrastructure for salmon data, with clear ties to domain-wide standards and extensibility for AI use cases.",
-    "crumbs": [
-      "About the Documentation Hub",
-      "Tutorials",
-      "Support Controlled Vocabularies"
-    ]
-  },
-  {
-    "objectID": "tutorials/support_controlled_vocabs.html#why-bother-with-controlled-vocabularies-and-ontologies",
-    "href": "tutorials/support_controlled_vocabs.html#why-bother-with-controlled-vocabularies-and-ontologies",
-    "title": "Support Controlled Vocabularies",
-    "section": "🤔 Why Bother with Controlled Vocabularies and Ontologies?",
-    "text": "🤔 Why Bother with Controlled Vocabularies and Ontologies?\nIt’s a fair question. Why invest all this time defining terms, aligning with ontologies, and assigning URIs?\nBecause it unlocks a future where your data works harder for you. Controlled vocabularies and ontologies aren’t just academic exercises — they’re the foundation for better discovery, smarter integration, and automation across the science lifecycle.\nHere are some tangible ways this work adds value:\n\n\n🔍 1. Enhanced Data Discovery\n\n“I know someone collected salmon smolt data… but where do I find it?”\n\nBy tagging datasets, columns, and metadata with terms from your SPSI vocabulary, you enable: - Keyword search that actually understands synonyms and related terms - Filters based on data type, units, methods, or ecological domain - Smart discovery interfaces (e.g., “Show me everything related to juvenile survival”)\n➡️ Example: A data catalog that lets users search by controlled term rather than inconsistent column names across spreadsheets.\n\n\n\n🔄 2. Semi-Automated Data Integration\n\n“These datasets report the same metric but use different terms, formats, or units.”\n\nUsing controlled terms with defined relationships (e.g., broader, exactMatch, hasUnit), you can: - Detect overlapping fields across submissions automatically - Align columns and units across multiple datasets - Standardize value domains (e.g., Red/Green/Amber vs Critical/Stable/Concerned)\n➡️ Example: A script that reads in new FSAR data and automatically maps it to the SPSR schema for validation and loading into a database.\n\n\n\n🧠 3. Smarter Applications (AI & Beyond)\n\n“Can’t AI just figure this stuff out?”\n\nOnly if you feed it structure.\nControlled vocabularies and ontologies allow you to: - Ground large language models (LLMs) in your domain’s specific terminology - Build Retrieval-Augmented Generation (RAG) systems for question answering - Use semantic search tools to find relevant variables, concepts, and datasets - Train AI to assist in metadata generation, anomaly detection, or dataset classification\n➡️ Example: A chatbot that helps scientists describe their data using your vocabulary, or recommends matching fields from existing standards.\n\n\n\n🔗 4. Future-Proof Interoperability\n\n“What if we want to share this with other agencies or join a broader platform?”\n\nStandardized vocabularies with persistent URIs and ontology alignments (e.g., with NCEAS, ENVO, OBO) make it easy to: - Share DFO terms with external partners - Convert metadata to international schemas (e.g., Darwin Core, ISO 19115) - Plug into federated data platforms without starting over\n➡️ Example: Publishing your vocabulary to w3id.org lets others reference and reuse your terms as global identifiers.\n\n\n\n🧰 5. Better Metadata, Better Stewardship\n\n“I just want people to fill out metadata that makes sense.”\n\nControlled vocabularies: - Reduce ambiguity - Improve machine readability - Make metadata easier to validate and automate\n➡️ Example: A dropdown menu in a data intake form linked to your vocab that auto-fills units, definitions, and example values — while storing clean, machine-readable metadata under the hood.",
-    "crumbs": [
-      "About the Documentation Hub",
-      "Tutorials",
-      "Support Controlled Vocabularies"
-    ]
-  },
-  {
-    "objectID": "tutorials/support_controlled_vocabs.html#tldr",
-    "href": "tutorials/support_controlled_vocabs.html#tldr",
-    "title": "Support Controlled Vocabularies",
-    "section": "🧭 TL;DR",
-    "text": "🧭 TL;DR\nControlled vocabularies and ontologies are not the end — they’re the beginning.\nThey allow you to: - Find data more easily - Integrate it more reliably - Build tools more effectively - And use AI more meaningfully\nThey turn your data into infrastructure.\nAnd they help ensure that knowledge created today can be used, re-used, and trusted — long into the future.",
-    "crumbs": [
-      "About the Documentation Hub",
-      "Tutorials",
-      "Support Controlled Vocabularies"
-    ]
-  },
-  {
-    "objectID": "tools.html",
-    "href": "tools.html",
-    "title": "🧰 Tools for Data Stewardship ⚙️📦",
-    "section": "",
-    "text": "Welcome to the Tools section of the DSU site! 🐟\nHere you’ll find a curated set of apps, platforms, scripts, and templates that support your work as a data steward or data producer within the Pacific Region Science Branch of Fisheries and Oceans Canada. 🧪🌊\n\n\n\nWe’re actively gathering, building, and documenting the most useful tools for the job — so stay tuned! In the meantime, here’s a sneak peek at what’s coming:\n\n\n\n🗂 Data Dictionary and Metadata Templates (Excel + JSON)\n🤝 Data Management Agreement Templates\n🧮 R & Python Functions, Scripts, and Packages for data cleaning and reporting\n🔗 Links to External Tools (See Internal DSU SharePoint Wiki for internal tools)\n🧠 Toolkits for Data Stewards (checklists, walkthroughs, best practices)\n\n\n\n\n\nIf you’ve built or used something you think could help others — whether it’s a handy Excel macro or a full-blown Shiny app — we’d love to include it here!\nSend us a note and let’s make it easier for everyone to work smarter. 🤝💡\n\n🧭 Return to the Internal DSU Wiki\n\nTools don’t solve problems — people do. But the right tool helps a lot. 🛠️🙂"
-  },
-  {
-    "objectID": "tools.html#this-page-is-under-construction",
-    "href": "tools.html#this-page-is-under-construction",
-    "title": "🧰 Tools for Data Stewardship ⚙️📦",
-    "section": "",
-    "text": "We’re actively gathering, building, and documenting the most useful tools for the job — so stay tuned! In the meantime, here’s a sneak peek at what’s coming:\n\n\n\n🗂 Data Dictionary and Metadata Templates (Excel + JSON)\n🤝 Data Management Agreement Templates\n🧮 R & Python Functions, Scripts, and Packages for data cleaning and reporting\n🔗 Links to External Tools (See Internal DSU SharePoint Wiki for internal tools)\n🧠 Toolkits for Data Stewards (checklists, walkthroughs, best practices)\n\n\n\n\n\nIf you’ve built or used something you think could help others — whether it’s a handy Excel macro or a full-blown Shiny app — we’d love to include it here!\nSend us a note and let’s make it easier for everyone to work smarter. 🤝💡\n\n🧭 Return to the Internal DSU Wiki\n\nTools don’t solve problems — people do. But the right tool helps a lot. 🛠️🙂"
-  },
-  {
-    "objectID": "reference_info/publishing_data_externally.html",
-    "href": "reference_info/publishing_data_externally.html",
-    "title": "Hosting Data and Code",
-    "section": "",
-    "text": "This guide is intended for scientists and technical staff in the DFO Pacific Region Science Branch. It outlines what is allowed, restricted, or prohibited when using internal and external platforms (e.g., Sharepoint, GitHub, Zenodo, Google Drive) to manage and share DFO Science data, code, and metadata, including during Fishery Science Advisory Report (FSAR) workflows.\nFor FSAR workflows, we recommend authors save their data in the Sharepoint for the Pacific Salmon Data MS Team. All data should be accompanied by a data dictionary with a README. For resources on creating a data dictionary, please see our blurb on data standards. Github can be used to host the code associated with analyses.\nTable 1. External Platform Use Guidelines for three data classifications of both data and code: Unclassified, Protected A, and Protected B. Note that this table does not cover Protected C or Classified data which are not permitted on external platforms.",
-    "crumbs": [
-      "About the Documentation Hub",
-      "Reference Info",
-      "Hosting Data and Code"
-    ]
-  },
-  {
-    "objectID": "reference_info/publishing_data_externally.html#data-classification-quick-reference",
-    "href": "reference_info/publishing_data_externally.html#data-classification-quick-reference",
-    "title": "Hosting Data and Code",
-    "section": "🔐 Data Classification Quick Reference",
-    "text": "🔐 Data Classification Quick Reference\n\nUnclassified: No expected harm from disclosure. Includes open data, public metadata, and code that contains no sensitive logic or credentials.\n\nExamples: Published R packages, fish counts aggregated by region and year, habitat model source code without raw data. Note, however, even unclassified data has to be approved for release by the Regional Director of Science.\n\nProtected A: Could cause low-level injury if disclosed (e.g., minor confidentiality breach, operational disruption).\n\nExamples: Unpublished but non-sensitive biological metrics tied to location or project; fishing effort by vessel class if potentially re-identifiable; unreviewed site-specific model outputs.\n\nProtected B: Could cause serious injury if disclosed (e.g., violation of legal obligations, significant economic harm).\n\nExamples: Commercial catch by vessel or license number; sensitive species occurrences; data provided under confidentiality agreements.\n\n\n\n🔗 Refer to the Policy on Government Security for classification definitions and examples.\n🔎 Unsure if data is protected? Consult your divisional data contact or ATIP office.",
-    "crumbs": [
-      "About the Documentation Hub",
-      "Reference Info",
-      "Hosting Data and Code"
-    ]
-  },
-  {
-    "objectID": "reference_info/publishing_data_externally.html#platform-by-platform-guidance",
-    "href": "reference_info/publishing_data_externally.html#platform-by-platform-guidance",
-    "title": "Hosting Data and Code",
-    "section": "🧭 Platform-by-Platform Guidance",
-    "text": "🧭 Platform-by-Platform Guidance\n\n✅ GitHub (Public and Private)\n\nRecommended for: Non-sensitive, unclassified code, metadata schemas, documentation, workflows.\nAllowed: Unclassified data/code only. Data must go through the Approvals and Internal publishing process before being posted anywhere public.\nPrivate repos: Use for drafting and collaboration before public release. Do not use for long-term data storage.\nFSAR Guidance: Posting of data in a public GitHub repo before FSAR is formally approved by CSAS and before the release has beeing approved by the Regional Director of Science is likely a breach of the Access to Information Act and/or Privacy Act.\n\n\n🔗 TBS Directive on Open Government, Section 6.1 – Open information by default, subject to security/privacy. 🔗 DFO Policy for Scientific Data - ” t is the responsibility of the Regional Director of Science to designate specific Data as classified for preventing its open sharing.”\n\n\n\n\n🚫 GitHub Codespaces / Copilot\n\nCodespaces: Cloud-hosted dev environments. Not GC-approved for sensitive data. Fine for non-sensitive code.\nCopilot: Do not enter Protected data/code. Avoid unless using for generic logic.\n\n\n🔗 TBS Guide on Generative AI\n\n\n\n\n✅ Canadian Integrated Ocean Observing System, Zenodo, Dryad, Figshare\n\nUse after FSAR or publication approval.\nGood for creating DOIs and enabling citation and disseminating broadly.\nData must be fully unclassified, reviewed, and approved.\n\n\n\n\n✅ GC Open Data Portal\n\nOfficial repository for open DFO datasets.\nRequires metadata, data steward approval, and Open Government Licence.\n\n\n🔗 Open Government Licence\n🔗 Open Data Portal Submission Guide",
-    "crumbs": [
-      "About the Documentation Hub",
-      "Reference Info",
-      "Hosting Data and Code"
-    ]
-  },
-  {
-    "objectID": "reference_info/publishing_data_externally.html#internal-dfo-requirements",
-    "href": "reference_info/publishing_data_externally.html#internal-dfo-requirements",
-    "title": "Hosting Data and Code",
-    "section": "🧾 Internal DFO Requirements",
-    "text": "🧾 Internal DFO Requirements\n\n📤 Internal release process\n\nManaged by the Marine Spatial Data Infrastructure System and the Enterprise Data Hub Follow the official steps here\n\nFOr the steps specific to Approvals and Publishing see step 4 for the Release Criteria Checklist\n\n\n⏳ When to Release?\n\nFor FSAR-related data: Only after advice is finalized and report is approved.\nFor code/metadata tools: May be shared publicly once confirmed to contain no sensitive content.\n\n\n🔗 CSAS Procedural Manuals – Supporting material must not be released until advice is finalized.",
-    "crumbs": [
-      "About the Documentation Hub",
-      "Reference Info",
-      "Hosting Data and Code"
-    ]
-  },
-  {
-    "objectID": "reference_info/publishing_data_externally.html#need-help",
-    "href": "reference_info/publishing_data_externally.html#need-help",
-    "title": "Hosting Data and Code",
-    "section": "📬 Need Help?",
-    "text": "📬 Need Help?\n\nData Classification or Release Questions: DFO.PACIFIC.SCIENCE.DATA@dfo-mpo.gc.ca\nCSAS Advice Process Questions: Contact your regional CSAS Coordinator\nOpen Science & GitHub Use: Data Stewardship Unit\n\n\n\nℹ️ This document will be updated periodically. Please check back for revised guidance as policies evolve.",
-    "crumbs": [
-      "About the Documentation Hub",
-      "Reference Info",
-      "Hosting Data and Code"
-    ]
-  },
-  {
-    "objectID": "reference_info/data_standards/vocab-index.html",
-    "href": "reference_info/data_standards/vocab-index.html",
-    "title": "Controlled Vocabularies",
-    "section": "",
-    "text": "This table lists machine-readable vocabularies curated by the Data Stewardship Unit to support standardization, integration, and automation across salmon-related research and management programs.",
-    "crumbs": [
-      "About the Documentation Hub",
-      "Reference Info",
-      "Data Standards",
-      "Controlled Vocabularies"
-    ]
-  },
-  {
-    "objectID": "reference_info/data_standards/vocab-index.html#dfo-pacific-science-vocabularies",
-    "href": "reference_info/data_standards/vocab-index.html#dfo-pacific-science-vocabularies",
-    "title": "Controlled Vocabularies",
-    "section": "",
-    "text": "This table lists machine-readable vocabularies curated by the Data Stewardship Unit to support standardization, integration, and automation across salmon-related research and management programs.",
-    "crumbs": [
-      "About the Documentation Hub",
-      "Reference Info",
-      "Data Standards",
-      "Controlled Vocabularies"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome 👋",
-    "section": "",
-    "text": "Welcome 👋\nWelcome to the Fishery & Assessment Data Section (FADS) Documentation Hub!\n\nThe Documentation hub is created by the Data Stewardship Unit and hosts resources for Fisheries and Oceans Canada (DFO) employees in the Pacific Region Science Branch. 🌊🔬🌲\nThis site is your go-to resource for everything related to data stewardship and data management. Whether you’re wrangling spreadsheets, designing a database, writing metadata, or just trying to figure out where to start — we’ve got you covered. 💪📊\n\nOn This Site\n\n🔍 Find practical guides and templates\n📚 Learn about tools, standards, and best practices\n🧠 Explore deeper topics and strategies\n🤝 Connect with your DSU team for help and advice\n\n\n\n\nGetting Started\n🧭 Start exploring using the navigation menu on your left to dive in!\n❔ Learn more about what resources are available on the About page.\n🔍 Use the search bar at the top right to find specific topics or resources.\n↩︎️ Return to the Internal DSU SharePoint Wiki"
-  },
-  {
     "objectID": "how_to_guides/databricks_r_studio.html",
     "href": "how_to_guides/databricks_r_studio.html",
     "title": "Connect to the Azure Lakehouse from R",
@@ -227,6 +72,164 @@
     ]
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome 👋",
+    "section": "",
+    "text": "Welcome 👋\nWelcome to the Fishery & Assessment Data Section (FADS) Documentation Hub!\n\nThe Documentation hub is created by the Data Stewardship Unit and hosts resources for Fisheries and Oceans Canada (DFO) employees in the Pacific Region Science Branch. 🌊🔬🌲\nThis site is your go-to resource for everything related to data stewardship and data management. Whether you’re wrangling spreadsheets, designing a database, writing metadata, or just trying to figure out where to start — we’ve got you covered. 💪📊\n\nOn This Site\n\n🔍 Find practical guides and templates\n📚 Learn about tools, standards, and best practices\n🧠 Explore deeper topics and strategies\n🤝 Connect with your DSU team for help and advice\n\n\n\n\nGetting Started\n🧭 Start exploring using the navigation menu on your left to dive in!\n❔ Learn more about what resources are available on the About page.\n🔍 Use the search bar at the top right to find specific topics or resources.\n↩︎️ Return to the Internal DSU SharePoint Wiki"
+  },
+  {
+    "objectID": "reference_info/tools/r_packages.html",
+    "href": "reference_info/tools/r_packages.html",
+    "title": "R Packages",
+    "section": "",
+    "text": "Welcome to the R Packages section of the DSU site! 🐟\nHere you’ll find a curated set of R packages that support your work as a data steward or data producer within the Pacific Region Science Branch of Fisheries and Oceans Canada. 🧪🌊\n\n\ntidyr, an offering from the tidyverse is the speedy Swiffer mop to your messy data. It provides tools for following the ethos of tidy data, which holds the following tenets:\n\nEach variable is a column; each column is a variable.\nEach observation is a row; each row is an observation.\nEach value is a cell; each cell is a single value.\n\nFor example, make your wide formatted data more tidy with pivot_longer() or deal with missing values with drop_na().\n\n\n\n\n\n\nWant to load all the tidyverse packages at once?\n\n\n\nTry library(tidyverse) to load all of those amazing tools in one line\n\n\n\n\n\nggplot2 is a powerful tool for data visualization offered under the tidyverse umbrella.\nAs any scientist knows, visualizing your data is just as important as generating it. After all, how can you communicate your results if they’re hidden away in a table?\nThe R graph gallery has countless of great examples of plots created with ggplot2. Check them out!\n\n\n\nAnother tidyverse offering, dplyr is an essential package for data manipulation. Try out generating summary stats in a breeze with group_by() |&gt; summarise() or join two datasets with a left_join().\n\n\n\narrow is an amazing tool for working with larger than memory data. R usually performs computations in RAM (your computer’s short term memory), but this can pose a problem for larger datasets. Arrow moves computations onto disk (your computer’s long term memory) to avoid this.\nFor a tutorial, see here",
+    "crumbs": [
+      "About the Documentation Hub",
+      "Reference Info",
+      "Tools",
+      "R Packages"
+    ]
+  },
+  {
+    "objectID": "reference_info/tools/r_packages.html#tidyr",
+    "href": "reference_info/tools/r_packages.html#tidyr",
+    "title": "R Packages",
+    "section": "",
+    "text": "tidyr, an offering from the tidyverse is the speedy Swiffer mop to your messy data. It provides tools for following the ethos of tidy data, which holds the following tenets:\n\nEach variable is a column; each column is a variable.\nEach observation is a row; each row is an observation.\nEach value is a cell; each cell is a single value.\n\nFor example, make your wide formatted data more tidy with pivot_longer() or deal with missing values with drop_na().\n\n\n\n\n\n\nWant to load all the tidyverse packages at once?\n\n\n\nTry library(tidyverse) to load all of those amazing tools in one line",
+    "crumbs": [
+      "About the Documentation Hub",
+      "Reference Info",
+      "Tools",
+      "R Packages"
+    ]
+  },
+  {
+    "objectID": "reference_info/tools/r_packages.html#ggplot2",
+    "href": "reference_info/tools/r_packages.html#ggplot2",
+    "title": "R Packages",
+    "section": "",
+    "text": "ggplot2 is a powerful tool for data visualization offered under the tidyverse umbrella.\nAs any scientist knows, visualizing your data is just as important as generating it. After all, how can you communicate your results if they’re hidden away in a table?\nThe R graph gallery has countless of great examples of plots created with ggplot2. Check them out!",
+    "crumbs": [
+      "About the Documentation Hub",
+      "Reference Info",
+      "Tools",
+      "R Packages"
+    ]
+  },
+  {
+    "objectID": "reference_info/tools/r_packages.html#dplyr",
+    "href": "reference_info/tools/r_packages.html#dplyr",
+    "title": "R Packages",
+    "section": "",
+    "text": "Another tidyverse offering, dplyr is an essential package for data manipulation. Try out generating summary stats in a breeze with group_by() |&gt; summarise() or join two datasets with a left_join().",
+    "crumbs": [
+      "About the Documentation Hub",
+      "Reference Info",
+      "Tools",
+      "R Packages"
+    ]
+  },
+  {
+    "objectID": "reference_info/tools/r_packages.html#arrow",
+    "href": "reference_info/tools/r_packages.html#arrow",
+    "title": "R Packages",
+    "section": "",
+    "text": "arrow is an amazing tool for working with larger than memory data. R usually performs computations in RAM (your computer’s short term memory), but this can pose a problem for larger datasets. Arrow moves computations onto disk (your computer’s long term memory) to avoid this.\nFor a tutorial, see here",
+    "crumbs": [
+      "About the Documentation Hub",
+      "Reference Info",
+      "Tools",
+      "R Packages"
+    ]
+  },
+  {
+    "objectID": "reference_info/data_standards/spsr-vocab-browser.html",
+    "href": "reference_info/data_standards/spsr-vocab-browser.html",
+    "title": "SPSR Vocabulary JSON Viewer",
+    "section": "",
+    "text": "This is the current version of the SPSR vocabulary as a raw JSON file. This view is a fallback until we add a searchable UI.",
+    "crumbs": [
+      "About the Documentation Hub",
+      "Reference Info",
+      "Data Standards",
+      "SPSR Vocabulary JSON Viewer"
+    ]
+  },
+  {
+    "objectID": "reference_info/data_standards/spsr-vocab-browser.html#raw-spsr-vocabulary-json",
+    "href": "reference_info/data_standards/spsr-vocab-browser.html#raw-spsr-vocabulary-json",
+    "title": "SPSR Vocabulary JSON Viewer",
+    "section": "",
+    "text": "This is the current version of the SPSR vocabulary as a raw JSON file. This view is a fallback until we add a searchable UI.",
+    "crumbs": [
+      "About the Documentation Hub",
+      "Reference Info",
+      "Data Standards",
+      "SPSR Vocabulary JSON Viewer"
+    ]
+  },
+  {
+    "objectID": "reference_info/publishing_data_externally.html",
+    "href": "reference_info/publishing_data_externally.html",
+    "title": "Hosting Data and Code",
+    "section": "",
+    "text": "This guide is intended for scientists and technical staff in the DFO Pacific Region Science Branch. It outlines what is allowed, restricted, or prohibited when using internal and external platforms (e.g., Sharepoint, GitHub, Zenodo, Google Drive) to manage and share DFO Science data, code, and metadata, including during Fishery Science Advisory Report (FSAR) workflows.\nFor FSAR workflows, we recommend authors save their data in the Sharepoint for the Pacific Salmon Data MS Team. All data should be accompanied by a data dictionary with a README. For resources on creating a data dictionary, please see our blurb on data standards. Github can be used to host the code associated with analyses.\nTable 1. External Platform Use Guidelines for three data classifications of both data and code: Unclassified, Protected A, and Protected B. Note that this table does not cover Protected C or Classified data which are not permitted on external platforms.",
+    "crumbs": [
+      "About the Documentation Hub",
+      "Reference Info",
+      "Hosting Data and Code"
+    ]
+  },
+  {
+    "objectID": "reference_info/publishing_data_externally.html#data-classification-quick-reference",
+    "href": "reference_info/publishing_data_externally.html#data-classification-quick-reference",
+    "title": "Hosting Data and Code",
+    "section": "🔐 Data Classification Quick Reference",
+    "text": "🔐 Data Classification Quick Reference\n\nUnclassified: No expected harm from disclosure. Includes open data, public metadata, and code that contains no sensitive logic or credentials.\n\nExamples: Published R packages, fish counts aggregated by region and year, habitat model source code without raw data. Note, however, even unclassified data has to be approved for release by the Regional Director of Science.\n\nProtected A: Could cause low-level injury if disclosed (e.g., minor confidentiality breach, operational disruption).\n\nExamples: Unpublished but non-sensitive biological metrics tied to location or project; fishing effort by vessel class if potentially re-identifiable; unreviewed site-specific model outputs.\n\nProtected B: Could cause serious injury if disclosed (e.g., violation of legal obligations, significant economic harm).\n\nExamples: Commercial catch by vessel or license number; sensitive species occurrences; data provided under confidentiality agreements.\n\n\n\n🔗 Refer to the Policy on Government Security for classification definitions and examples.\n🔎 Unsure if data is protected? Consult your divisional data contact or ATIP office.",
+    "crumbs": [
+      "About the Documentation Hub",
+      "Reference Info",
+      "Hosting Data and Code"
+    ]
+  },
+  {
+    "objectID": "reference_info/publishing_data_externally.html#platform-by-platform-guidance",
+    "href": "reference_info/publishing_data_externally.html#platform-by-platform-guidance",
+    "title": "Hosting Data and Code",
+    "section": "🧭 Platform-by-Platform Guidance",
+    "text": "🧭 Platform-by-Platform Guidance\n\n✅ GitHub (Public and Private)\n\nRecommended for: Non-sensitive, unclassified code, metadata schemas, documentation, workflows.\nAllowed: Unclassified data/code only. Data must go through the Approvals and Internal publishing process before being posted anywhere public.\nPrivate repos: Use for drafting and collaboration before public release. Do not use for long-term data storage.\nFSAR Guidance: Posting of data in a public GitHub repo before FSAR is formally approved by CSAS and before the release has beeing approved by the Regional Director of Science is likely a breach of the Access to Information Act and/or Privacy Act.\n\n\n🔗 TBS Directive on Open Government, Section 6.1 – Open information by default, subject to security/privacy. 🔗 DFO Policy for Scientific Data - ” t is the responsibility of the Regional Director of Science to designate specific Data as classified for preventing its open sharing.”\n\n\n\n\n🚫 GitHub Codespaces / Copilot\n\nCodespaces: Cloud-hosted dev environments. Not GC-approved for sensitive data. Fine for non-sensitive code.\nCopilot: Do not enter Protected data/code. Avoid unless using for generic logic.\n\n\n🔗 TBS Guide on Generative AI\n\n\n\n\n✅ Canadian Integrated Ocean Observing System, Zenodo, Dryad, Figshare\n\nUse after FSAR or publication approval.\nGood for creating DOIs and enabling citation and disseminating broadly.\nData must be fully unclassified, reviewed, and approved.\n\n\n\n\n✅ GC Open Data Portal\n\nOfficial repository for open DFO datasets.\nRequires metadata, data steward approval, and Open Government Licence.\n\n\n🔗 Open Government Licence\n🔗 Open Data Portal Submission Guide",
+    "crumbs": [
+      "About the Documentation Hub",
+      "Reference Info",
+      "Hosting Data and Code"
+    ]
+  },
+  {
+    "objectID": "reference_info/publishing_data_externally.html#internal-dfo-requirements",
+    "href": "reference_info/publishing_data_externally.html#internal-dfo-requirements",
+    "title": "Hosting Data and Code",
+    "section": "🧾 Internal DFO Requirements",
+    "text": "🧾 Internal DFO Requirements\n\n📤 Internal release process\n\nManaged by the Marine Spatial Data Infrastructure System and the Enterprise Data Hub Follow the official steps here\n\nFOr the steps specific to Approvals and Publishing see step 4 for the Release Criteria Checklist\n\n\n⏳ When to Release?\n\nFor FSAR-related data: Only after advice is finalized and report is approved.\nFor code/metadata tools: May be shared publicly once confirmed to contain no sensitive content.\n\n\n🔗 CSAS Procedural Manuals – Supporting material must not be released until advice is finalized.",
+    "crumbs": [
+      "About the Documentation Hub",
+      "Reference Info",
+      "Hosting Data and Code"
+    ]
+  },
+  {
+    "objectID": "reference_info/publishing_data_externally.html#need-help",
+    "href": "reference_info/publishing_data_externally.html#need-help",
+    "title": "Hosting Data and Code",
+    "section": "📬 Need Help?",
+    "text": "📬 Need Help?\n\nData Classification or Release Questions: DFO.PACIFIC.SCIENCE.DATA@dfo-mpo.gc.ca\nCSAS Advice Process Questions: Contact your regional CSAS Coordinator\nOpen Science & GitHub Use: Data Stewardship Unit\n\n\n\nℹ️ This document will be updated periodically. Please check back for revised guidance as policies evolve.",
+    "crumbs": [
+      "About the Documentation Hub",
+      "Reference Info",
+      "Hosting Data and Code"
+    ]
+  },
+  {
     "objectID": "CONTRIBUTING.html",
     "href": "CONTRIBUTING.html",
     "title": "🤝 Contributing to the DSU Docs & Tools",
@@ -269,80 +272,18 @@
     "text": "Open an issue, ping someone on the DSU team, or check the README for more guidance. We’re here to help!\nThanks again for contributing — every little improvement adds up. 🧼📈\nLet’s make our data stewardship tools and documentation ✨awesome✨ together."
   },
   {
-    "objectID": "dsu_documentation.html",
-    "href": "dsu_documentation.html",
-    "title": "📚 About the DSU Documentation Hub 🐟💾",
+    "objectID": "tools.html",
+    "href": "tools.html",
+    "title": "🧰 Tools for Data Stewardship ⚙️📦",
     "section": "",
-    "text": "The Data Stewardship Unit (DSU) is committed to making it easier for you to find, understand, and use the resources you need to support your data stewardship and management responsibilities. Our documentation isn’t just a bunch of PDFs in a folder — it’s your sidekick 🦸‍♂️ for all things data.\nWe follow the Diátaxis Framework to keep things organized, useful, and easy to navigate. The docs are grouped into four clear categories:\n\n\n\nQuick, practical instructions for specific tasks.\nPerfect for when you’re asking:\n&gt; “How do I do this specific thing?”\nExamples:\n\nHow to request access to a dataset 🔐\n\nHow to submit a metadata record 📤\n\nHow to clean up an Excel file before uploading 🧼\n\n\n\n\n\nThe deep, detailed, no-fluff facts about tools, terms, and standards.\nUse these when you need precision or technical definitions.\nExamples:\n\nSQL cheat sheets 🧾\nMetadata profile field definitions 🧬\nControlled vocabulary lists 📑\n\n\n\n\n\nStructured, step-by-step lessons that help you learn by doing.\nIdeal for onboarding or skill-building.\nExamples:\n\nA walkthrough on using Power BI with our datasets 📊\nIntro to working with Synapse Notebooks 🧠\nCreating data visualizations from CSVs with Python 🐍\n\n\n\n\n\nDeep dives and thoughtful writeups on the why behind the work.\nGreat for context, decision-making, or just satisfying your inner data philosopher.\nExamples:\n\nWhy metadata quality matters 🧼\nData lifecycle management explained 🌱➡️🌳\nThe theory behind our access protocols 🚦\n\n\n\n\n\nThis documentation is a living resource — always evolving and improving.\nWe’d love your feedback, suggestions, and ideas! 🗣️\nYou can even contribute directly to the documentation! See our Contributing Guide for more details. Spotted something confusing? Missing a topic? Got an awesome tip to share?\n➡️ Reach out to us anytime — we’re listening 👂 and always happy to help!\nHappy stewarding! 🐟✨"
+    "text": "Welcome to the Tools section of the DSU site! 🐟\nHere you’ll find a curated set of apps, platforms, scripts, and templates that support your work as a data steward or data producer within the Pacific Region Science Branch of Fisheries and Oceans Canada. 🧪🌊\n\n\n\nWe’re actively gathering, building, and documenting the most useful tools for the job — so stay tuned! In the meantime, here’s a sneak peek at what’s coming:\n\n\n\n🗂 Data Dictionary and Metadata Templates (Excel + JSON)\n🤝 Data Management Agreement Templates\n🧮 R & Python Functions, Scripts, and Packages for data cleaning and reporting\n🔗 Links to External Tools (See Internal DSU SharePoint Wiki for internal tools)\n🧠 Toolkits for Data Stewards (checklists, walkthroughs, best practices)\n\n\n\n\n\nIf you’ve built or used something you think could help others — whether it’s a handy Excel macro or a full-blown Shiny app — we’d love to include it here!\nSend us a note and let’s make it easier for everyone to work smarter. 🤝💡\n\n🧭 Return to the Internal DSU Wiki\n\nTools don’t solve problems — people do. But the right tool helps a lot. 🛠️🙂"
   },
   {
-    "objectID": "dsu_documentation.html#contribute-collaborate",
-    "href": "dsu_documentation.html#contribute-collaborate",
-    "title": "📚 About the DSU Documentation Hub 🐟💾",
+    "objectID": "tools.html#this-page-is-under-construction",
+    "href": "tools.html#this-page-is-under-construction",
+    "title": "🧰 Tools for Data Stewardship ⚙️📦",
     "section": "",
-    "text": "This documentation is a living resource — always evolving and improving.\nWe’d love your feedback, suggestions, and ideas! 🗣️\nYou can even contribute directly to the documentation! See our Contributing Guide for more details. Spotted something confusing? Missing a topic? Got an awesome tip to share?\n➡️ Reach out to us anytime — we’re listening 👂 and always happy to help!\nHappy stewarding! 🐟✨"
-  },
-  {
-    "objectID": "how_to_guides/sharepoint_r.html",
-    "href": "how_to_guides/sharepoint_r.html",
-    "title": "Access Data in SharePoint from R",
-    "section": "",
-    "text": "Connecting R to Sharepoint enables secure, programmatic data access for reproducible analysis workflows. This is especially useful to data stewards and scientists who want to move away from email and personal hard-drive based data storage and sharing and instead use a cloud service as a central repository for data.\nThis is particularly useful for data management tasks in Sharepoint, such as:\n\nDownloading data files for analysis\nUploading processed data files\nManaging document libraries and folders\nAutomating data workflows\n\n\n\n\n\n\n\nWarning\n\n\n\nKeep in mind, to access the DFO Sharepoint from R using the methods below you need to be on the DFO network or using the VPN.",
-    "crumbs": [
-      "About the Documentation Hub",
-      "How to Guides",
-      "Access Data in SharePoint from R"
-    ]
-  },
-  {
-    "objectID": "how_to_guides/sharepoint_r.html#conclusion",
-    "href": "how_to_guides/sharepoint_r.html#conclusion",
-    "title": "Access Data in SharePoint from R",
-    "section": "Conclusion",
-    "text": "Conclusion\nThis enables secure, programmatic data access for reproducible analysis workflows. Using the Microsoft365R package, you can easily access and manage data in SharePoint from R. This allows for a more streamlined and efficient workflow, especially for data stewards and scientists who work with large datasets and need to collaborate with others.\nThis approach can help you automate data management tasks, reduce reliance on email and personal storage, and improve collaboration within your team.",
-    "crumbs": [
-      "About the Documentation Hub",
-      "How to Guides",
-      "Access Data in SharePoint from R"
-    ]
-  },
-  {
-    "objectID": "how_to_guides/sharepoint_r.html#additional-resources",
-    "href": "how_to_guides/sharepoint_r.html#additional-resources",
-    "title": "Access Data in SharePoint from R",
-    "section": "Additional Resources",
-    "text": "Additional Resources\n\nMicrosoft365R Documentation",
-    "crumbs": [
-      "About the Documentation Hub",
-      "How to Guides",
-      "Access Data in SharePoint from R"
-    ]
-  },
-  {
-    "objectID": "reference_info/data_standards/spsr-vocab-browser.html",
-    "href": "reference_info/data_standards/spsr-vocab-browser.html",
-    "title": "SPSR Vocabulary JSON Viewer",
-    "section": "",
-    "text": "This is the current version of the SPSR vocabulary as a raw JSON file. This view is a fallback until we add a searchable UI.",
-    "crumbs": [
-      "About the Documentation Hub",
-      "Reference Info",
-      "Data Standards",
-      "SPSR Vocabulary JSON Viewer"
-    ]
-  },
-  {
-    "objectID": "reference_info/data_standards/spsr-vocab-browser.html#raw-spsr-vocabulary-json",
-    "href": "reference_info/data_standards/spsr-vocab-browser.html#raw-spsr-vocabulary-json",
-    "title": "SPSR Vocabulary JSON Viewer",
-    "section": "",
-    "text": "This is the current version of the SPSR vocabulary as a raw JSON file. This view is a fallback until we add a searchable UI.",
-    "crumbs": [
-      "About the Documentation Hub",
-      "Reference Info",
-      "Data Standards",
-      "SPSR Vocabulary JSON Viewer"
-    ]
+    "text": "We’re actively gathering, building, and documenting the most useful tools for the job — so stay tuned! In the meantime, here’s a sneak peek at what’s coming:\n\n\n\n🗂 Data Dictionary and Metadata Templates (Excel + JSON)\n🤝 Data Management Agreement Templates\n🧮 R & Python Functions, Scripts, and Packages for data cleaning and reporting\n🔗 Links to External Tools (See Internal DSU SharePoint Wiki for internal tools)\n🧠 Toolkits for Data Stewards (checklists, walkthroughs, best practices)\n\n\n\n\n\nIf you’ve built or used something you think could help others — whether it’s a handy Excel macro or a full-blown Shiny app — we’d love to include it here!\nSend us a note and let’s make it easier for everyone to work smarter. 🤝💡\n\n🧭 Return to the Internal DSU Wiki\n\nTools don’t solve problems — people do. But the right tool helps a lot. 🛠️🙂"
   },
   {
     "objectID": "reference_info/dwc-obis-gbif.html",
@@ -441,68 +382,91 @@
     ]
   },
   {
-    "objectID": "reference_info/tools/r_packages.html",
-    "href": "reference_info/tools/r_packages.html",
-    "title": "R Packages",
+    "objectID": "reference_info/data_standards/vocab-index.html",
+    "href": "reference_info/data_standards/vocab-index.html",
+    "title": "Controlled Vocabularies",
     "section": "",
-    "text": "Welcome to the R Packages section of the DSU site! 🐟\nHere you’ll find a curated set of R packages that support your work as a data steward or data producer within the Pacific Region Science Branch of Fisheries and Oceans Canada. 🧪🌊\n\n\ntidyr, an offering from the tidyverse is the speedy Swiffer mop to your messy data. It provides tools for following the ethos of tidy data, which holds the following tenets:\n\nEach variable is a column; each column is a variable.\nEach observation is a row; each row is an observation.\nEach value is a cell; each cell is a single value.\n\nFor example, make your wide formatted data more tidy with pivot_longer() or deal with missing values with drop_na().\n\n\n\n\n\n\nWant to load all the tidyverse packages at once?\n\n\n\nTry library(tidyverse) to load all of those amazing tools in one line\n\n\n\n\n\nggplot2 is a powerful tool for data visualization offered under the tidyverse umbrella.\nAs any scientist knows, visualizing your data is just as important as generating it. After all, how can you communicate your results if they’re hidden away in a table?\nThe R graph gallery has countless of great examples of plots created with ggplot2. Check them out!\n\n\n\nAnother tidyverse offering, dplyr is an essential package for data manipulation. Try out generating summary stats in a breeze with group_by() |&gt; summarise() or join two datasets with a left_join().\n\n\n\narrow is an amazing tool for working with larger than memory data. R usually performs computations in RAM (your computer’s short term memory), but this can pose a problem for larger datasets. Arrow moves computations onto disk (your computer’s long term memory) to avoid this.\nFor a tutorial, see here",
+    "text": "This table lists machine-readable vocabularies curated by the Data Stewardship Unit to support standardization, integration, and automation across salmon-related research and management programs.",
     "crumbs": [
       "About the Documentation Hub",
       "Reference Info",
-      "Tools",
-      "R Packages"
+      "Data Standards",
+      "Controlled Vocabularies"
     ]
   },
   {
-    "objectID": "reference_info/tools/r_packages.html#tidyr",
-    "href": "reference_info/tools/r_packages.html#tidyr",
-    "title": "R Packages",
+    "objectID": "reference_info/data_standards/vocab-index.html#dfo-pacific-science-vocabularies",
+    "href": "reference_info/data_standards/vocab-index.html#dfo-pacific-science-vocabularies",
+    "title": "Controlled Vocabularies",
     "section": "",
-    "text": "tidyr, an offering from the tidyverse is the speedy Swiffer mop to your messy data. It provides tools for following the ethos of tidy data, which holds the following tenets:\n\nEach variable is a column; each column is a variable.\nEach observation is a row; each row is an observation.\nEach value is a cell; each cell is a single value.\n\nFor example, make your wide formatted data more tidy with pivot_longer() or deal with missing values with drop_na().\n\n\n\n\n\n\nWant to load all the tidyverse packages at once?\n\n\n\nTry library(tidyverse) to load all of those amazing tools in one line",
+    "text": "This table lists machine-readable vocabularies curated by the Data Stewardship Unit to support standardization, integration, and automation across salmon-related research and management programs.",
     "crumbs": [
       "About the Documentation Hub",
       "Reference Info",
-      "Tools",
-      "R Packages"
+      "Data Standards",
+      "Controlled Vocabularies"
     ]
   },
   {
-    "objectID": "reference_info/tools/r_packages.html#ggplot2",
-    "href": "reference_info/tools/r_packages.html#ggplot2",
-    "title": "R Packages",
+    "objectID": "dsu_documentation.html",
+    "href": "dsu_documentation.html",
+    "title": "📚 About the DSU Documentation Hub 🐟💾",
     "section": "",
-    "text": "ggplot2 is a powerful tool for data visualization offered under the tidyverse umbrella.\nAs any scientist knows, visualizing your data is just as important as generating it. After all, how can you communicate your results if they’re hidden away in a table?\nThe R graph gallery has countless of great examples of plots created with ggplot2. Check them out!",
+    "text": "The Data Stewardship Unit (DSU) is committed to making it easier for you to find, understand, and use the resources you need to support your data stewardship and management responsibilities. Our documentation isn’t just a bunch of PDFs in a folder — it’s your sidekick 🦸‍♂️ for all things data.\nWe follow the Diátaxis Framework to keep things organized, useful, and easy to navigate. The docs are grouped into four clear categories:\n\n\n\nQuick, practical instructions for specific tasks.\nPerfect for when you’re asking:\n&gt; “How do I do this specific thing?”\nExamples:\n\nHow to request access to a dataset 🔐\n\nHow to submit a metadata record 📤\n\nHow to clean up an Excel file before uploading 🧼\n\n\n\n\n\nThe deep, detailed, no-fluff facts about tools, terms, and standards.\nUse these when you need precision or technical definitions.\nExamples:\n\nSQL cheat sheets 🧾\nMetadata profile field definitions 🧬\nControlled vocabulary lists 📑\n\n\n\n\n\nStructured, step-by-step lessons that help you learn by doing.\nIdeal for onboarding or skill-building.\nExamples:\n\nA walkthrough on using Power BI with our datasets 📊\nIntro to working with Synapse Notebooks 🧠\nCreating data visualizations from CSVs with Python 🐍\n\n\n\n\n\nDeep dives and thoughtful writeups on the why behind the work.\nGreat for context, decision-making, or just satisfying your inner data philosopher.\nExamples:\n\nWhy metadata quality matters 🧼\nData lifecycle management explained 🌱➡️🌳\nThe theory behind our access protocols 🚦\n\n\n\n\n\nThis documentation is a living resource — always evolving and improving.\nWe’d love your feedback, suggestions, and ideas! 🗣️\nYou can even contribute directly to the documentation! See our Contributing Guide for more details. Spotted something confusing? Missing a topic? Got an awesome tip to share?\n➡️ Reach out to us anytime — we’re listening 👂 and always happy to help!\nHappy stewarding! 🐟✨"
+  },
+  {
+    "objectID": "dsu_documentation.html#contribute-collaborate",
+    "href": "dsu_documentation.html#contribute-collaborate",
+    "title": "📚 About the DSU Documentation Hub 🐟💾",
+    "section": "",
+    "text": "This documentation is a living resource — always evolving and improving.\nWe’d love your feedback, suggestions, and ideas! 🗣️\nYou can even contribute directly to the documentation! See our Contributing Guide for more details. Spotted something confusing? Missing a topic? Got an awesome tip to share?\n➡️ Reach out to us anytime — we’re listening 👂 and always happy to help!\nHappy stewarding! 🐟✨"
+  },
+  {
+    "objectID": "tutorials/support_controlled_vocabs.html",
+    "href": "tutorials/support_controlled_vocabs.html",
+    "title": "Support Controlled Vocabularies",
+    "section": "",
+    "text": "The scientist downloads and completes the data dictionary template (Excel)\n\nThey describe each variable: name, definition, method, units, etc.\nThey may include URIs from known vocabularies if possible\n\nThe spreadsheet includes:\n\nA README sheet with instructions\nA Metadata tab for project-level context\nA Data Dictionary tab with one row per variable\n\n\n\n\n\n\nThe data dictionary is passed into your R validation function (validate_data_dictionary())\nIt compares submitted variables to your reference vocabulary, hosted as JSON on GitHub Pages\nThe validator returns:\n\nMatched terms\nUnmatched terms\nSuggested mappings using fuzzy logic (e.g., stringdist or Jaro-Winkler)\n\nThe scientist or steward reviews and adjusts terms as needed\n\n\n\n\n\nFor each submitted or candidate term:\n\nUse an automated lookup tool to check if a concept already exists in the NCEAS Salmon Ontology. Start by using the BioPortal Annotator or API to match term labels and definitions. Optionally, build a lightweight script that compares local vocabulary terms to the ontology by label, synonyms, or definition text using exact or fuzzy string matching. Consider integrating the result into your pipeline for batch validation.\nIf it exists:\n\nUse skos:exactMatch or skos:closeMatch in your .ttl (Turtle) or .jsonld RDF vocab files. These mappings are typically stored in the ontology files generated from your .csv source. Add a column like exact_match_uri or close_match_uri to your .csv, your export script can incorporate those values automatically during serialization to .ttl or .jsonld.\n\nIf it doesn’t exist, but is broadly applicable:\n\nPrepare a Pull Request or issue to suggest the term to the NCEAS maintainers\nInclude:\n\nLabel, definition, synonyms\nUsage example or data sources\n\n\n\n\n\n\n\n\nMaintain DFO vocabularies in GitHub as:\n\n.csv for editing\n.json for R/python access and validation\n.jsonld and .ttl for ontology use\n\nAssign persistent URIs using https://w3id.org/dfo/spsi#term-id\nOrganize vocabularies by data domain or project (e.g., monitoring, habitat, biology)\n\n\n\n\n\nExtend your vocabularies with relationships:\n\nbroader, narrower, related\nhasUnit, hasMethod, derivedFrom\n\nUse tools like rdflib or skosify to model in Turtle or OWL\nAdd namespace info:\n\n@prefix dfo-spsi: &lt;https://w3id.org/dfo/spsi#&gt;\n\nOver time, link this to:\n\nNCEAS ontology\nNERC units\nENVO/OBI for environment/sample methods\n\n\n\n\n\n\nHost vocab on GitHub Pages + register URIs at w3id.org\nLink from your Quarto site (/data-standards/vocab-index.html)\nAllow download in multiple formats (JSON, JSON-LD, TTL)\nUse vocab in:\n\nData validation tools\nMetadata editors\nAPIs and dashboards\nAI pipelines (semantic RAG, search, integration)\n\n\n\nThis workflow will enable DFO Pacific to build a structured, version-controlled, and interoperable vocabulary and ontology infrastructure for salmon data, with clear ties to domain-wide standards and extensibility for AI use cases.",
     "crumbs": [
       "About the Documentation Hub",
-      "Reference Info",
-      "Tools",
-      "R Packages"
+      "Tutorials",
+      "Support Controlled Vocabularies"
     ]
   },
   {
-    "objectID": "reference_info/tools/r_packages.html#dplyr",
-    "href": "reference_info/tools/r_packages.html#dplyr",
-    "title": "R Packages",
+    "objectID": "tutorials/support_controlled_vocabs.html#guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo",
+    "href": "tutorials/support_controlled_vocabs.html#guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo",
+    "title": "Support Controlled Vocabularies",
     "section": "",
-    "text": "Another tidyverse offering, dplyr is an essential package for data manipulation. Try out generating summary stats in a breeze with group_by() |&gt; summarise() or join two datasets with a left_join().",
+    "text": "The scientist downloads and completes the data dictionary template (Excel)\n\nThey describe each variable: name, definition, method, units, etc.\nThey may include URIs from known vocabularies if possible\n\nThe spreadsheet includes:\n\nA README sheet with instructions\nA Metadata tab for project-level context\nA Data Dictionary tab with one row per variable\n\n\n\n\n\n\nThe data dictionary is passed into your R validation function (validate_data_dictionary())\nIt compares submitted variables to your reference vocabulary, hosted as JSON on GitHub Pages\nThe validator returns:\n\nMatched terms\nUnmatched terms\nSuggested mappings using fuzzy logic (e.g., stringdist or Jaro-Winkler)\n\nThe scientist or steward reviews and adjusts terms as needed\n\n\n\n\n\nFor each submitted or candidate term:\n\nUse an automated lookup tool to check if a concept already exists in the NCEAS Salmon Ontology. Start by using the BioPortal Annotator or API to match term labels and definitions. Optionally, build a lightweight script that compares local vocabulary terms to the ontology by label, synonyms, or definition text using exact or fuzzy string matching. Consider integrating the result into your pipeline for batch validation.\nIf it exists:\n\nUse skos:exactMatch or skos:closeMatch in your .ttl (Turtle) or .jsonld RDF vocab files. These mappings are typically stored in the ontology files generated from your .csv source. Add a column like exact_match_uri or close_match_uri to your .csv, your export script can incorporate those values automatically during serialization to .ttl or .jsonld.\n\nIf it doesn’t exist, but is broadly applicable:\n\nPrepare a Pull Request or issue to suggest the term to the NCEAS maintainers\nInclude:\n\nLabel, definition, synonyms\nUsage example or data sources\n\n\n\n\n\n\n\n\nMaintain DFO vocabularies in GitHub as:\n\n.csv for editing\n.json for R/python access and validation\n.jsonld and .ttl for ontology use\n\nAssign persistent URIs using https://w3id.org/dfo/spsi#term-id\nOrganize vocabularies by data domain or project (e.g., monitoring, habitat, biology)\n\n\n\n\n\nExtend your vocabularies with relationships:\n\nbroader, narrower, related\nhasUnit, hasMethod, derivedFrom\n\nUse tools like rdflib or skosify to model in Turtle or OWL\nAdd namespace info:\n\n@prefix dfo-spsi: &lt;https://w3id.org/dfo/spsi#&gt;\n\nOver time, link this to:\n\nNCEAS ontology\nNERC units\nENVO/OBI for environment/sample methods\n\n\n\n\n\n\nHost vocab on GitHub Pages + register URIs at w3id.org\nLink from your Quarto site (/data-standards/vocab-index.html)\nAllow download in multiple formats (JSON, JSON-LD, TTL)\nUse vocab in:\n\nData validation tools\nMetadata editors\nAPIs and dashboards\nAI pipelines (semantic RAG, search, integration)\n\n\n\nThis workflow will enable DFO Pacific to build a structured, version-controlled, and interoperable vocabulary and ontology infrastructure for salmon data, with clear ties to domain-wide standards and extensibility for AI use cases.",
     "crumbs": [
       "About the Documentation Hub",
-      "Reference Info",
-      "Tools",
-      "R Packages"
+      "Tutorials",
+      "Support Controlled Vocabularies"
     ]
   },
   {
-    "objectID": "reference_info/tools/r_packages.html#arrow",
-    "href": "reference_info/tools/r_packages.html#arrow",
-    "title": "R Packages",
-    "section": "",
-    "text": "arrow is an amazing tool for working with larger than memory data. R usually performs computations in RAM (your computer’s short term memory), but this can pose a problem for larger datasets. Arrow moves computations onto disk (your computer’s long term memory) to avoid this.\nFor a tutorial, see here",
+    "objectID": "tutorials/support_controlled_vocabs.html#why-bother-with-controlled-vocabularies-and-ontologies",
+    "href": "tutorials/support_controlled_vocabs.html#why-bother-with-controlled-vocabularies-and-ontologies",
+    "title": "Support Controlled Vocabularies",
+    "section": "🤔 Why Bother with Controlled Vocabularies and Ontologies?",
+    "text": "🤔 Why Bother with Controlled Vocabularies and Ontologies?\nIt’s a fair question. Why invest all this time defining terms, aligning with ontologies, and assigning URIs?\nBecause it unlocks a future where your data works harder for you. Controlled vocabularies and ontologies aren’t just academic exercises — they’re the foundation for better discovery, smarter integration, and automation across the science lifecycle.\nHere are some tangible ways this work adds value:\n\n\n🔍 1. Enhanced Data Discovery\n\n“I know someone collected salmon smolt data… but where do I find it?”\n\nBy tagging datasets, columns, and metadata with terms from your SPSI vocabulary, you enable: - Keyword search that actually understands synonyms and related terms - Filters based on data type, units, methods, or ecological domain - Smart discovery interfaces (e.g., “Show me everything related to juvenile survival”)\n➡️ Example: A data catalog that lets users search by controlled term rather than inconsistent column names across spreadsheets.\n\n\n\n🔄 2. Semi-Automated Data Integration\n\n“These datasets report the same metric but use different terms, formats, or units.”\n\nUsing controlled terms with defined relationships (e.g., broader, exactMatch, hasUnit), you can: - Detect overlapping fields across submissions automatically - Align columns and units across multiple datasets - Standardize value domains (e.g., Red/Green/Amber vs Critical/Stable/Concerned)\n➡️ Example: A script that reads in new FSAR data and automatically maps it to the SPSR schema for validation and loading into a database.\n\n\n\n🧠 3. Smarter Applications (AI & Beyond)\n\n“Can’t AI just figure this stuff out?”\n\nOnly if you feed it structure.\nControlled vocabularies and ontologies allow you to: - Ground large language models (LLMs) in your domain’s specific terminology - Build Retrieval-Augmented Generation (RAG) systems for question answering - Use semantic search tools to find relevant variables, concepts, and datasets - Train AI to assist in metadata generation, anomaly detection, or dataset classification\n➡️ Example: A chatbot that helps scientists describe their data using your vocabulary, or recommends matching fields from existing standards.\n\n\n\n🔗 4. Future-Proof Interoperability\n\n“What if we want to share this with other agencies or join a broader platform?”\n\nStandardized vocabularies with persistent URIs and ontology alignments (e.g., with NCEAS, ENVO, OBO) make it easy to: - Share DFO terms with external partners - Convert metadata to international schemas (e.g., Darwin Core, ISO 19115) - Plug into federated data platforms without starting over\n➡️ Example: Publishing your vocabulary to w3id.org lets others reference and reuse your terms as global identifiers.\n\n\n\n🧰 5. Better Metadata, Better Stewardship\n\n“I just want people to fill out metadata that makes sense.”\n\nControlled vocabularies: - Reduce ambiguity - Improve machine readability - Make metadata easier to validate and automate\n➡️ Example: A dropdown menu in a data intake form linked to your vocab that auto-fills units, definitions, and example values — while storing clean, machine-readable metadata under the hood.",
     "crumbs": [
       "About the Documentation Hub",
-      "Reference Info",
-      "Tools",
-      "R Packages"
+      "Tutorials",
+      "Support Controlled Vocabularies"
+    ]
+  },
+  {
+    "objectID": "tutorials/support_controlled_vocabs.html#tldr",
+    "href": "tutorials/support_controlled_vocabs.html#tldr",
+    "title": "Support Controlled Vocabularies",
+    "section": "🧭 TL;DR",
+    "text": "🧭 TL;DR\nControlled vocabularies and ontologies are not the end — they’re the beginning.\nThey allow you to: - Find data more easily - Integrate it more reliably - Build tools more effectively - And use AI more meaningfully\nThey turn your data into infrastructure.\nAnd they help ensure that knowledge created today can be used, re-used, and trusted — long into the future.",
+    "crumbs": [
+      "About the Documentation Hub",
+      "Tutorials",
+      "Support Controlled Vocabularies"
     ]
   }
 ]
