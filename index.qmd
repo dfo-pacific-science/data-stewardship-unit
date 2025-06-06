@@ -3,30 +3,33 @@ format: html
 profile: english
 ---
 
-::: {.content-visible when-profile="english"}
+# Welcome 👋 
 
-# 👋 Welcome 🐟
-
-Welcome to the Documentation Hub for the [Fishery & Assessment Data Section's](https://086gc.sharepoint.com/sites/FisheryAssessmentDataSectionWiki/SitePages/CollabHome.aspx) Data Stewardship Unit for Fisheries and Oceans Canada (DFO) employees in the Pacific Region Science Branch! 🌊🔬🌲
+Welcome to the [Fishery & Assessment Data Section (FADS)](https://086gc.sharepoint.com/sites/FisheryAssessmentDataSectionWiki/SitePages/CollabHome.aspx) Documentation Hub! \
+\
+The Documentation hub is created by the **Data Stewardship Unit** and hosts resources for Fisheries and Oceans Canada (DFO) employees in the Pacific Region Science Branch. 🌊🔬🌲
 
 This site is your go-to resource for everything related to data stewardship and data management. Whether you're wrangling spreadsheets, designing a database, writing metadata, or just trying to figure out where to start — we’ve got you covered. 💪📊
 
-**Use this site to:**
+### On This Site
 
-- 🔍 Find practical guides and templates
-- 📚 Learn about tools, standards, and best practices
-- 🧠 Explore deeper topics and strategies
-- 🤝 Connect with your DSU team for help and advice
+-   🔍 Find practical guides and templates
+-   📚 Learn about tools, standards, and best practices
+-   🧠 Explore deeper topics and strategies
+-   🤝 Connect with your DSU team for help and advice
 
+------------------------------------------------------------------------
 
----
+### Getting Started
+
+🧭 Start exploring using the navigation menu on your left to dive in!
+
+❔ Learn more about what resources are available on the [About page](dsu_documentation.qmd).
 
 🔍 Use the search bar at the top right to find specific topics or resources.
 
-🧭 Or start exploring using the navigation menu on your left to dive in!
+
+
+
 
 ↩️ [Return to the Internal DSU SharePoint Wiki](https://086gc.sharepoint.com/sites/FisheryAssessmentDataSectionWiki/SitePages/Data-Stewardship-Unit(1).aspx)
-
-:::
-
-

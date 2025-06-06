@@ -1,0 +1,46 @@
+---
+title: "R Packages"
+format: html
+---
+
+# 🧰 R Packages for Data Stewardship 📦
+
+Welcome to the **R Packages** section of the DSU site! 🐟
+
+Here you'll find a curated set of R packages that support your work as a data steward or data producer within the **Pacific Region Science Branch** of Fisheries and Oceans Canada. 🧪🌊
+
+## tidyr
+
+[`tidyr`](https://tidyr.tidyverse.org/index.html), an offering from the [`tidyverse`](https://www.tidyverse.org/) is the speedy Swiffer mop to your messy data. It provides tools for following the ethos of tidy data, which holds the following tenets:
+
+1. Each variable is a column; each column is a variable.
+2. Each observation is a row; each row is an observation.
+3. Each value is a cell; each cell is a single value.
+
+For example, make your wide formatted data more tidy with `pivot_longer()` or deal with missing values with `drop_na()`. 
+
+::: {.callout-tip}
+## Want to load **all** the [`tidyverse`](https://www.tidyverse.org/) packages at once?
+
+Try `library(tidyverse)` to load all of those amazing tools in one line
+:::
+
+## ggplot2
+
+[`ggplot2`](https://ggplot2.tidyverse.org/) is a powerful tool for data visualization offered under the [`tidyverse`](https://www.tidyverse.org/) umbrella. 
+
+As any scientist knows, visualizing your data is just as important as generating it. After all, how can you communicate your results if they're hidden away in a table? 
+
+The [R graph gallery](https://r-graph-gallery.com/ggplot2-package.html) has countless of great examples of plots created with ggplot2. Check them out!
+
+## dplyr
+
+Another tidyverse offering, [`dplyr`](https://dplyr.tidyverse.org/) is an essential package for data manipulation. Try out generating summary stats in a breeze with `group_by() |> summarise()` or join two datasets with a `left_join()`. 
+
+
+## arrow
+
+[arrow](https://arrow.apache.org/docs/r/) is an amazing tool for working with larger than memory data. R usually performs computations in RAM (your computer's short term memory), but this can pose a problem for larger datasets. Arrow moves computations onto disk (your computer's long term memory) to avoid this.
+
+For a tutorial, [see here](https://www.r-bloggers.com/2022/11/handling-larger-than-memory-data-with-arrow-and-duckdb/)
+

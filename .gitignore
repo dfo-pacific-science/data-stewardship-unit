@@ -1,6 +1,6 @@
-# Ignore hmtl files
-*.html
-
+# quarto and site folders
+/.quarto/
+/_site/
 
 # History files
 .Rhistory
