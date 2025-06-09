@@ -15,7 +15,7 @@ We follow the [**Diátaxis Framework**](https://diataxis.fr) to keep things orga
 
 ------------------------------------------------------------------------
 
-### ️1. How-to Guides 🛠
+#### ️1. How-to Guides 🛠
 
 Quick, practical instructions for specific tasks.\
 Perfect for when you're asking:\
@@ -29,7 +29,7 @@ Examples:
 
 ------------------------------------------------------------------------
 
-### 2. Reference Info 📘
+#### 2. Reference Info 📘
 
 The deep, detailed, no-fluff facts about tools, terms, and standards.\
 Use these when you need precision or technical definitions.
@@ -42,7 +42,7 @@ Examples:
 
 ------------------------------------------------------------------------
 
-### 3. Tutorials 🎓
+#### 3. Tutorials 🎓
 
 Structured, step-by-step lessons that help you **learn** by doing.\
 Ideal for onboarding or skill-building.
@@ -55,9 +55,9 @@ Examples:
 
 ------------------------------------------------------------------------
 
-### 4. Topic Explanations 🧠
+#### 4. Deep dives 🧠
 
-Deep dives and thoughtful writeups on the **why** behind the work.\
+Thoughtful writeups and explanations on the **why** behind the work.\
 Great for context, decision-making, or just satisfying your inner data philosopher.
 
 Examples:
@@ -68,7 +68,7 @@ Examples:
 
 ------------------------------------------------------------------------
 
-## Getting Started
+### Getting Started 🛠️
 
 🧭 Start exploring using the navigation menu on your left to dive in!
 
@@ -78,7 +78,7 @@ Examples:
 
 -----------------------------------------------------------------------
 
-## 🛠️ Contribute & Collaborate! 🤝
+### Contribute & Collaborate! 🤝
 
 This documentation is a **living resource** — always evolving and improving.\
 We'd love your feedback, suggestions, and ideas! 🗣️
