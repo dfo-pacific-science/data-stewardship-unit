@@ -2,7 +2,7 @@
 title: "Connect to the Azure Lakehouse from R"
 format: html
 redirect_from:
-  - /documentation_hub/how_to_guides/databricks_r_studio.html
+  - /documentation_hub/how_to_guides/databricks_r_studio
 execute: 
   eval: false
 ---
