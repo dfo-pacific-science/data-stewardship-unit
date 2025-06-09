@@ -1,6 +1,8 @@
 ---
 title: "Access Data in SharePoint from R"
 format: html
+redirect_from:
+  - /documentation_hub/how_to_guides/sharepoint_r.qmd
 execute:
   eval: false
 ---
