@@ -2,73 +2,10 @@
 format: html
 ---
 
-# 📚 About the DSU Documentation Hub 🐟💾
-
-The **Data Stewardship Unit (DSU)** is committed to making it easier for you to find, understand, and use the resources you need to support your data stewardship and management responsibilities. Our documentation isn't just a bunch of PDFs in a folder — it's your sidekick 🦸‍♂️ for all things data.
-
-We follow the [**Diátaxis Framework**](https://diataxis.fr) to keep things organized, useful, and easy to navigate. The docs are grouped into four clear categories:
-
-------------------------------------------------------------------------
-
-### ️1. How-to Guides 🛠
-
-Quick, practical instructions for specific tasks.\
-Perfect for when you're asking:\
-\> *"How do I do this specific thing?"*
-
-Examples:
-
--   How to request access to a dataset 🔐\
--   How to submit a metadata record 📤\
--   How to clean up an Excel file before uploading 🧼
-
-------------------------------------------------------------------------
-
-### 2. Reference Info 📘
-
-The deep, detailed, no-fluff facts about tools, terms, and standards.\
-Use these when you need precision or technical definitions.
-
-Examples:
-
--   SQL cheat sheets 🧾
--   Metadata profile field definitions 🧬
--   Controlled vocabulary lists 📑
-
-------------------------------------------------------------------------
-
-### 3. Tutorials 🎓
-
-Structured, step-by-step lessons that help you **learn** by doing.\
-Ideal for onboarding or skill-building.
-
-Examples:
-
--   A walkthrough on using Power BI with our datasets 📊
--   Intro to working with Synapse Notebooks 🧠
--   Creating data visualizations from CSVs with Python 🐍
-
-------------------------------------------------------------------------
-
-### 4. Topic Explanations 🧠
-
-Deep dives and thoughtful writeups on the **why** behind the work.\
-Great for context, decision-making, or just satisfying your inner data philosopher.
-
-Examples:
-
--   Why metadata quality matters 🧼
--   Data lifecycle management explained 🌱➡️🌳
--   The theory behind our access protocols 🚦
-
------------------------------------------------------------------------
-
-## 🛠️ Contribute & Collaborate! 🤝
-
-This documentation is a **living resource** — always evolving and improving.\
-We'd love your feedback, suggestions, and ideas! 🗣️
-
-You can even contribute directly to the documentation! See our Contributing Guide for more details. Spotted something confusing? Missing a topic? Got an awesome tip to share?\
-➡️ Reach out to us anytime — we're listening 👂 and always happy to help!
-
-Happy stewarding! 🐟✨
+```{=html}
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Redirecting to https://dfo-pacific-science.github.io/data-stewardship-unit/index.html</title>
+<meta http-equiv="refresh" content="0; URL=https://dfo-pacific-science.github.io/data-stewardship-unit/index.html">
+<link rel="canonical" href="https://dfo-pacific-science.github.io/data-stewardship-unit/index.html">
+```

@@ -17,11 +17,9 @@ website:
   navbar:
     search: true
     left:
-      - text: "About the Documentation Hub"
-        href: dsu_documentation.qmd
-      - text: "FADS Home"
-        href: https://086gc.sharepoint.com/sites/FisheryAssessmentDataSectionWiki/SitePages/Data-Stewardship-Unit(1).aspx
-      - text: "Meet the DSU"
+      - text: "FADS Home (Internal)"
+        href: https://086gc.sharepoint.com/:u:/r/sites/FisheryAssessmentDataSectionWiki/SitePages/CollabHome.aspx?csf=1&web=1&e=tkJJk4
+      - text: "About the DSU"
         href: about.qmd
         
     tools:
@@ -40,6 +38,7 @@ website:
         - auto: how_to_guides
         - auto: reference_info
         - auto: tutorials
+        - text: "Deep Dives (Coming soon)"
       logo: images/logo.png
       search: true
     
@@ -47,7 +46,7 @@ website:
   repo-actions: [edit, source, issue]
   page-footer: 
     right: "This site was created with [Quarto](https://quarto.org/) and is hosted with [Github Pages](https://pages.github.com/)."
-    left: "Last updated: June 6, 2025"
+    left: "Last updated: June 9, 2025"
     
 lang: en
 

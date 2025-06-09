@@ -3,24 +3,72 @@ format: html
 profile: english
 ---
 
-# Welcome 👋 
+# 📚 Welcome to the DSU Documentation Hub 🐟💾
 
 Welcome to the [Fishery & Assessment Data Section (FADS)](https://086gc.sharepoint.com/sites/FisheryAssessmentDataSectionWiki/SitePages/CollabHome.aspx) Documentation Hub! \
 \
-The Documentation hub is created by the **Data Stewardship Unit** and hosts resources for Fisheries and Oceans Canada (DFO) employees in the Pacific Region Science Branch. 🌊🔬🌲
+The Documentation hub is created by the [**Data Stewardship Unit**](about.qmd) and hosts resources for Fisheries and Oceans Canada (DFO) employees in the Pacific Region Science Branch. 🌊🔬🌲
 
 This site is your go-to resource for everything related to data stewardship and data management. Whether you're wrangling spreadsheets, designing a database, writing metadata, or just trying to figure out where to start — we’ve got you covered. 💪📊
 
-### On This Site
-
--   🔍 Find practical guides and templates
--   📚 Learn about tools, standards, and best practices
--   🧠 Explore deeper topics and strategies
--   🤝 Connect with your DSU team for help and advice
+We follow the [**Diátaxis Framework**](https://diataxis.fr) to keep things organized, useful, and easy to navigate. The docs are grouped into four clear categories:
 
 ------------------------------------------------------------------------
 
-### Getting Started
+### ️1. How-to Guides 🛠
+
+Quick, practical instructions for specific tasks.\
+Perfect for when you're asking:\
+\> *"How do I do this specific thing?"*
+
+Examples:
+
+-   How to request access to datasets stored in the cloud 🔐\
+-   How to submit a metadata record 📤\
+-   How to clean up an Excel file before uploading 🧼
+
+------------------------------------------------------------------------
+
+### 2. Reference Info 📘
+
+The deep, detailed, no-fluff facts about tools, terms, and standards.\
+Use these when you need precision or technical definitions.
+
+Examples:
+
+-   Using terms from controlled vocabularies like Darwin Core 🧾
+-   On hosting data and code 🫙
+-   Tools, including reccomended R packages 🧑🏾‍💻
+
+------------------------------------------------------------------------
+
+### 3. Tutorials 🎓
+
+Structured, step-by-step lessons that help you **learn** by doing.\
+Ideal for onboarding or skill-building.
+
+Examples:
+
+-   A walk through on using Power BI with our datasets 📊
+-   Intro to working with Synapse Notebooks 🧠
+-   How to support controlled vocabularies 🔤
+
+------------------------------------------------------------------------
+
+### 4. Topic Explanations 🧠
+
+Deep dives and thoughtful writeups on the **why** behind the work.\
+Great for context, decision-making, or just satisfying your inner data philosopher.
+
+Examples:
+
+-   Why metadata quality matters 🧼
+-   Data lifecycle management explained 🌱➡️🌳
+-   The theory behind our access protocols 🚦
+
+------------------------------------------------------------------------
+
+## Getting Started
 
 🧭 Start exploring using the navigation menu on your left to dive in!
 
@@ -28,8 +76,19 @@ This site is your go-to resource for everything related to data stewardship and 
 
 🔍 Use the search bar at the top right to find specific topics or resources.
 
+-----------------------------------------------------------------------
+
+## 🛠️ Contribute & Collaborate! 🤝
+
+This documentation is a **living resource** — always evolving and improving.\
+We'd love your feedback, suggestions, and ideas! 🗣️
+
+You can even contribute directly to the documentation! See our Contributing Guide for more details. Spotted something confusing? Missing a topic? Got an awesome tip to share?\
+➡️ Reach out to us anytime — we're listening 👂 and always happy to help!
+
+Happy stewarding! 🐟✨
+
+-----------------------------------------------------------------------
 
 
-
-
-↩️ [Return to the Internal DSU SharePoint Wiki](https://086gc.sharepoint.com/sites/FisheryAssessmentDataSectionWiki/SitePages/Data-Stewardship-Unit(1).aspx)
+↩️ [Return to the Internal FADS SharePoint Wiki](https://086gc.sharepoint.com/:u:/r/sites/FisheryAssessmentDataSectionWiki/SitePages/CollabHome.aspx?csf=1&web=1&e=tkJJk4)

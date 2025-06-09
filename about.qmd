@@ -1,5 +1,5 @@
 ---
-title: "Meet the DSU"
+title: "About the DSU"
 about:
   template: jolla
   image: images/logo.png
