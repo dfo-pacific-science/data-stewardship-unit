@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "documentation_hub/how_to_guides/sharepoint_r.html",
+    "href": "documentation_hub/how_to_guides/sharepoint_r.html",
+    "title": "FADS Documentation Hub",
+    "section": "",
+    "text": "Redirecting to https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/sharepoint_r.html"
+  },
+  {
     "objectID": "how_to_guides/sharepoint_r.html",
     "href": "how_to_guides/sharepoint_r.html",
     "title": "Access Data in SharePoint from R",
@@ -511,5 +518,12 @@
       "How to Guides",
       "Connect to the Azure Lakehouse from R"
     ]
+  },
+  {
+    "objectID": "documentation_hub/how_to_guides/databricks_r_studio.html",
+    "href": "documentation_hub/how_to_guides/databricks_r_studio.html",
+    "title": "FADS Documentation Hub",
+    "section": "",
+    "text": "Redirecting to https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/databricks_r_studio.html"
   }
 ]
