@@ -3,7 +3,7 @@ format: html
 profile: english
 ---
 
-# 📚 Welcome to the DSU Documentation Hub 🐟💾
+# FADS Documentation Hub 🐟💾
 
 Welcome to the [Fishery & Assessment Data Section (FADS)](https://086gc.sharepoint.com/sites/FisheryAssessmentDataSectionWiki/SitePages/CollabHome.aspx) Documentation Hub! \
 \
