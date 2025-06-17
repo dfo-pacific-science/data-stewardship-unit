@@ -10,24 +10,19 @@ library(dplyr)
 library(DT)
 ```
 
-## Background
+A growing challenge in salmon research, management, and data stewardship is the proliferation of inconsistent terms, acronyms, and definitions across documents, programs, and even within the same organization—leading to confusion, miscommunication, and inefficiencies in analysis and reporting.
 
-A growing challenge in salmon research, management, and data stewardship is the proliferation of terms, acronyms, and definitions that can vary across documents, programs, and even within the same organization. This can lead to confusion, miscommunication, and inefficiencies in data analysis and reporting.
+To address this, the Data Stewardship Unit (DSU) has initiated the DFO Salmon Data Controlled Vocabulary—a standardized, community-curated list of key terms and definitions related to salmon data collection, analysis, and policy within Fisheries and Oceans Canada (DFO) Pacific Region.
 
-To address this, the Data Stewardship Unit (DSU) has initiated a **DFO Salmon Data Controlled Vocabulary**. This is a comprehensive, standardized list of terms and definitions related to salmon data and policy used within Fisheries and Oceans Canada (DFO) Pacific Region.
+The table below consolidates definitions from regulatory documents, scientific literature, internal guidelines, and other sources into a single, searchable, and filterable reference designed to improve semantic clarity across DFO Pacific.
 
-The table below is meant to evolve into an authoritative, community-curated list of salmon data and policy terms used throughout DFO Pacific. It draws on definitions from regulatory documents, scientific literature, internal guidelines, and other sources—consolidating the ones critical for scienctific clarity and data analysis into a single, searchable, filterable reference.
-
-However, this is not a simple list of terms or glossary, under the hood it follows protocols established by the World Wide Web Consortium (W3C) for controlled vocabularies, specifically the [Simple Knowledge Organization System (SKOS)](https://www.w3.org/2004/02/skos/) standard. This allows us to share the vocabulary in a machine-readable format that can be easily integrated into data systems, APIs, and web applications.
-
+The table is more than a simple glossary: it is a formally structured controlled vocabulary that uses the W3C-endorsed Simple Knowledge Organization System (SKOS), enabling machine-readable formats for integration into data systems, APIs, and web applications.For a deep-dive on the how and why of controlled vocabularies, see our guide: [Support Controlled Vocabularies](https://dfo-pacific-science.github.io/data-stewardship-unit/tutorials/support_controlled_vocabs.html).
 
 ## 🗂️DFO Salmon -- Controlled Vocabulary Terms (🚧Under Construction🚧)
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # Load the vocabulary data from the .csv file
 vocab <- read_csv("vocab/salmon_terms.csv")
-
-
 
 # Create a datatable with search and filter capabilities ordered by term column
 vocab <- vocab %>%
@@ -49,31 +44,29 @@ datatable(
 
 ```
 
-
 Under the hood, the vocabulary is formatted in SKOS (Simple Knowledge Organization System), a W3C-recommended framework for representing controlled vocabularies and thesauri. By modeling terms and their relationships (broader, narrower, related), SKOS makes it easy to:
 
-- Maintain consistent labels, definitions, and concept hierarchies.
+-   Maintain consistent labels, definitions, and concept hierarchies.
 
-- Share and integrate the vocabulary with other systems that understand RDF.
+-   Share and integrate the vocabulary with other systems that understand RDF.
 
 The vocabulary is intended to be a living document that evolves with the needs of the community. It is maintained by the Data Stewardship Unit (DSU) within the Fisheries and Assessment Data Section (FADS) in the Pacific Region of Fisheries and Oceans Canada (DFO).
 
 To maximize accessibility, we publish three serializations:
 
-- JSON – A lightweight format ideal for most web and desktop applications that need to load term lists and definitions without RDF tooling.
+-   JSON – A lightweight format ideal for most web and desktop applications that need to load term lists and definitions without RDF tooling.
 
-- JSON-LD – Embeds linked-data context so that terms become addressable URIs; perfect for web pages, APIs, and any environment where you want automatic context resolution and richer interoperability.
+-   JSON-LD – Embeds linked-data context so that terms become addressable URIs; perfect for web pages, APIs, and any environment where you want automatic context resolution and richer interoperability.
 
-- Turtle (.ttl) – A compact, human-readable RDF syntax for semantic-web tools, triple stores, and SPARQL queries, enabling advanced semantic reasoning or integration into broader data ecosystems.
+-   Turtle (.ttl) – A compact, human-readable RDF syntax for semantic-web tools, triple stores, and SPARQL queries, enabling advanced semantic reasoning or integration into broader data ecosystems.
 
 You can download or query any of these formats directly from our GitHub repo for programmatic access, metadata validation, integration, or automated workflows.
 
-
-File a GitHub Issue at
-https://github.com/dfo-pacific-science/data-stewardship-unit/issues
+File a GitHub Issue at https://github.com/dfo-pacific-science/data-stewardship-unit/issues
 
 Or contact the Data Stewardship Unit.
 
+```{=html}
 <!-- ## 🛠️ TODOs for Improvement
 
 -   [ ] Load vocab metadata from CSV or YAML instead of inline code
@@ -81,3 +74,4 @@ Or contact the Data Stewardship Unit.
 -   [ ] Include persistent w3id URIs once registered
 -   [ ] Add stats (e.g., number of terms, match rate with SPSR)
 -   [ ] Group vocabularies by domain (e.g., Stock Assessment, Monitoring, Habitat) -->
+```
