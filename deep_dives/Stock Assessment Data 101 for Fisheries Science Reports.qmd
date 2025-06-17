@@ -1,0 +1,115 @@
+---
+title: "Stock Assessment Data and Stats 101 for Fisheries Science Reports.qmd"
+format: html
+---
+
+## **1. High-Level Overview: Stock Assessment and Policy Alignment**
+
+The 2025 Salmon Spring Week meetings reviewing the biological status of three stocks underscored the complex convergence of three frameworks: **Canada's Fish Stock Provisions (FSP)**, the **Wild Salmon Policy (WSP)**, and the **Precautionary Approach (PA)**.
+
+### **Fish Stock Provisions**
+
+Under the Fisheries Act, the Fish Stock Provisions mandate the identification of Limit Reference Points (LRPs) and the assignment of status (healthy, cautious, critical) for major stocks. This legal obligation ties directly into harvest control rules and rebuilding plan requirements when stocks fall below LRPs.
+
+### **Wild Salmon Policy (WSP)**
+
+The WSP focuses on maintaining **biological diversity** and **genetic distinctiveness** by assessing stocks at the level of **Conservation Units (CUs)**. It relies on the identification of **biological benchmarks**, including lower and upper benchmarks derived from stock-recruitment or percentile approaches, to classify CU status into red, amber, or green zones.
+
+### **Precautionary Approach**
+
+The PA emphasizes erring on the side of caution in the face of uncertainty. In assessments, this is operationalized via conservative assumptions (e.g., using lower bounds of estimates, assigning "data deficient" status) and requires clearly articulated risk statements and uncertainty quantification.
+
+### **Integration Across Frameworks**
+
+Key terms---**Limit Reference Point (LRP)** under FSP and **Lower Benchmark** under WSP---are conceptually aligned but contextually distinct (Table 1). Likewise, **USR (Upper Stock Reference)** in PA guidance shares conceptual space with the WSP **Upper Benchmark**. The challenge is reconciling population-specific CUs with stock management units (SMUs) required by FSP, especially when CUs differ in status or data availability. Several inconsistencies, such as those seen in Stikine, highlight the need for an integrated data architecture and harmonized terminology.
+
+Table 1. Relation of Terms Across Frameworks
+
+| WSP Term | PA/Fisheries Act Equivalent | Purpose | Statistical Approach Used | Eg. Quantitative Benchmarks / Model |
+|----|----|----|----|----|
+| Lower Benchmark | Limit Reference Point (LRP) | Avoid serious harm | SR-based (Ricker), Risk-based, Percentile | $S_{GEN}$, 40% $S_{MSY}$, 25th percentile |
+| Upper Benchmark | Upper Stock Reference (USR) | Trigger caution, reduce removals | SR-based (Ricker), Percentile | 80% $S_{MSY}$, 50th/75th percentile |
+| Green Zone | Healthy Zone | Full exploitation allowed | Composite scoring, quantitative SR input | Status $\geq$ USR or Upper Benchmark |
+| Amber Zone | Cautious Zone | Management action to avoid critical | Composite integration, trend analysis | Between LRP and USR |
+| Red Zone | Critical Zone | Minimize removals, enable rebuilding | Escapement + trend + SR benchmarks | Status \< LRP or Lower Benchmark |
+| Status Assessment | Stock Assessment | Determine location relative to LRP/USR | Integrated Indicators + SR + Escapement | Combined benchmark comparison |
+
+## **2. Deep Dive into Reference Points and Benchmarks in Stock Assessment**
+
+### Benchmarks vs Reference Points
+
+-   **WSP Benchmarks (UBM, LBM):** Derived from productivity models or empirical data. They are biological in nature and specific to a *Conservation Unit* (CU).
+
+    -   **UBM** often corresponds to spawner abundance giving *Maximum Sustainable Yield (MSY)* or similar.
+
+    -   **LBM** often relates to serious harm thresholds, such as a 50% probability of recovery under management actionHolt et al. 2009 Indica....
+
+-   **Precautionary Approach Reference Points (USR, LRP):** Defined at the *Stock Management Unit (SMU)* level, which aggregates multiple CUs. The **LRP** is legally required under the amended *Fisheries Act*.
+
+The SMU-level LRP is often derived using the probability that all component CUs are above their respective LBM---commonly at ≥50% probability (Holt et al. 2023)....
+
+**How a Lower Benchmark Relates to the LRP**
+
+The **CU-level LBM** becomes the statistical input for deriving the **SMU-level LRP**. Specifically:
+
+-   LRPs can be derived via logistic regression models estimating the probability that all CUs within an SMU exceed their LBMs given a level of aggregate abundance (Holt et al. 2023)
+
+-   This integrates the WSP framework into the Fisheries Act mandate for setting LRPs.
+
+In essence, LRP ≈ aggregate abundance where there's ≥50% chance all CUs are above their LBM (Holt et al. 2023)
+
+### **Spawner-Recruitment (SR) Based Approaches**
+
+The gold standard for benchmark estimation when sufficient data are available.
+
+#### a. **Ricker Model**
+
+The most commonly used model for Pacific salmon: - **Equation**:\
+$$
+R = S \cdot e^{(a - bS + \varepsilon)}
+$$\
+
+Where...
+
+-   $R$: Number of recruits (offspring that survive to a specific life stage)
+-   $S$: Number of spawners (parents that produced the recruits)
+-   $a$: Log-scale productivity parameter; reflects the average number of recruits per spawner at low population density
+-   $b$: Density-dependence parameter; determines how rapidly recruitment decreases as spawner abundance increases
+-   $\varepsilon$: Process error term accounting for environmental or stochastic variation not explained by the model
+
+#### b. **Benchmarks Derived From SR Models**
+
+-   **Lower Benchmark (LRP)**:
+    -   Often set at ( S\_{GEN} ): spawner abundance that leads to the LRP (e.g., ( S\_{MSY} )) in one generation.
+    -   Or, alternatively, a % of ( S\_{MSY} ) (e.g., 40%).
+-   **Upper Benchmark (USR)**:
+    -   Often set at 80% of ( S\_{MSY} ) or similar.
+-   **Target (TRP)**:
+    -   Usually near ( S\_{MSY} ), or the escapement yielding maximum sustainable yield.
+
+### Alternative Methods
+
+#### c. **Percentile-Based Approaches**
+
+Used when data is limited:
+- **Lower Benchmark**: 25th percentile historical abundance.
+- **Upper Benchmark**: 50th or 75th percentile historical abundance.
+
+
+#### d. Risk-Based Approaches
+
+- Use Monte Carlo or stochastic simulations to assess risk thresholds by repeatedly sampling from uncertainty distributions.
+- Simulations quantify the likelihood of stocks falling below defined critical thresholds (LRP).
+- Benchmarks are selected to ensure a low probability (e.g., ≤5%) of breaching critical thresholds under various plausible scenarios.
+
+#### e. Closed-Loop Simulations (Management Strategy Evaluation - MSE)
+
+- Utilize simulation frameworks to test effectiveness and robustness of different management strategies and Harvest Control Rules (HCRs).
+- Incorporate uncertainties explicitly:
+  - **Observation errors**: uncertainties in monitoring and data collection.
+  - **Implementation variability**: differences between planned and actual management actions.
+  - **Environmental stochasticity**: variability due to environmental factors and climate change.
+- Outcomes evaluated include biological sustainability, economic viability, and compliance with conservation objectives.
+
+
+
