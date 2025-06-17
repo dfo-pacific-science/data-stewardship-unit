@@ -1,0 +1,97 @@
+Term,Definition,Definition Source,Definition Accepted?,Context,Acceptable Values,Description,Abrreviation or Acronym,Unit,Definition uri,Broader Term,Narrower Term,Related Terms,Comments
+80% sMSY,80% of the spawner abundance at sMSY,,,,,,,,,,,"sMSY, Upper Stock Reference Point",
+BMSY,Biomass at MSY,,,,,,,,,,,,
+Brood Year," The year in which an individual fish was spawned (Michelsens and Martens 2009). 
+The parental year for a group of returning salmon, i.e. the calendar year when the majority of parents of these fish spawned (Pacific Salmon Glossary). ","readme_for_FSRR_StikineSockeye_08May2025_v2.pdf , https://www.pac.dfo-mpo.gc.ca/fm-gp/salmon-saumon/gloss-eng.html",,,,,,,,,,,
+Cautious Stock Status Zone,"The stock is considered to be in the “cautious zone” if the biomass, or its index, is higher than 40% of BMSY but lower than 80% of BMSY. In other words:  40% BMSY < Biomass < 80% BMSY.",,,,,,,,,,,,
+Conservation Unit," CU is a group of wild salmon sufficiently isolated from other groups that, if lost, is very unlikely to recolonize naturally within an acceptable timeframe (e.g., a human lifetime or a specified number of salmon generations)",Wild Salmon Policy https://www.pac.dfo-mpo.gc.ca/fm-gp/salmon-saumon/wsp-pss/policy-politique-eng.html,,,,"From intro to stock assessment course: ""a group of fish sufficiently isolated from other groups that, if it goes locally extinct, is very unlikely to recolonize naturally"". The delineation of CUs in all species will be based on biological information including genetic variation,phenotypic traits (e.g.,run timing,life history traits, ocean distribution,etc.),and aboriginal traditional knowledge (ATK) if available. Delineations of CUs are expected to change over time as more information and experience is gained.",,,,Stock Management Unit,Population,,
+Critical Stock Status Zone,"The stock is considered to be in “the critical zone” if the mature biomass, or its index, is less than or equal to 40% of BMSY. In other words:  Biomass ≤ 40% BMSY.",https://www.dfo-mpo.gc.ca/reports-rapports/regs/sff-cpd/precaution-eng.htm,,,,,,,,,,,
+Deme,"	A group of salmon at a persistent spawning site or within a stream comprised of individuals that are likely to breed with each other (i.e., well mixed). A single population may include more than one deme.",Wild Salmon Policy https://www.pac.dfo-mpo.gc.ca/fm-gp/salmon-saumon/wsp-pss/policy-politique-eng.html,,,,The basic level of genetic organization in Pacific salmon. Could be a group of salmon that consistenly and persistently spawn at a specific spawning location. ,,,,Population,,,
+Designatable Unit,,,,,,The demographic unit that the Committee on the Status of Endangered Wildlife in Canada (COSEWIC) uses to determine status,,,,,,,
+En-route Mortality,"Estimate of the number of salmon migrating up the river that die en 
+route to the spawning grounds",,,,,,,,,,,,
+Escapement,"
+The number of salmon returning to the spawning grounds. In the absence of other sources of mortality, the total run-size to a system is the total catch plus the total escapement. ",https://www.pac.dfo-mpo.gc.ca/fm-gp/salmon-saumon/gloss-eng.html ,,,,,,,,,,,
+Exploitation Rate,"Expressed as a percentage, the proportion of the total return of adult salmon in a given year that die as a result of fishing activity.",https://www.pac.dfo-mpo.gc.ca/fm-gp/salmon-saumon/gloss-eng.html,,,,,,,,,,,
+Fisheries Reference Point,,,,,,,,,,,,,
+Fisheries Reference Point-Lower,,,,,,,,,,,,,
+Fisheries Reference Point-Upper,,,,,,,,,,,,,
+Fisheries Science Advisory Report,,,,,,"provide timely, nationally consistent and streamlined fisheries science advice
+that meets the requirements under the Fish Stock Provisions",,,,,,,
+Fisheries Science Review Report,,,,,,,,,,,,,
+Fishing Mortality,"Measure of deaths in a stock due to all fishing activities, including: targeted fishing, bycatch and discards, other incidental mortality in other fisheries",https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/glossary-glossaire/index-eng.html,,,,,,,,,,,
+FMSY,Fishing mortality at Maximum Sustainable Yield,,,,,,,,,,,,
+Freshwater Age,B18B20,,,,,,,,,,,,
+"Measure of deaths in a stock due to all fishing activities, including: targeted fishing, bycatch and discards, B20other incidental mortality in other fisheries",,,,,,"Method to describe the age of a salmon, Na, where N is the total age of the 
+fish and a is the fresh-water age, also known as the age of ocean entrance. ",,,,,,,
+Harvest,,,,,,,,,,,,,
+Harvest Control Rules,"Operational component of a harvest strategy that conveys the pre-agreed 
+rules that determine how much fishing can take place",,,,,,,,,,,,
+Harvest Rate,"the proportion of the recruited or vulnerable biomass that is caught during a certain period, usually a fishing year (also referred to as exploitation rate)",,,,,,,,,,,exploitation rate,
+Healthy Stock Status Zone,"The stock is considered to be “healthy” if the biomass, or its index, is higher than 80% of BMSY. In other words:  Biomass ≥ 80% BMSY.",https://www.dfo-mpo.gc.ca/reports-rapports/regs/sff-cpd/precaution-eng.htm,,,,,,,,,,,
+Indicators,measurements that provide information on the state of a stock attribute of interest. A series of indicators over time creates an index.,https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/glossary-glossaire/index-eng.html,,,,,,,,,,index,
+Integrated Fisheries Management Plan,,,,,,"A tool of Fisheries and Oceans Canada's Fisheries Management branch that guides the conservation and sustainable use of marine resources, supports the management of sustainable fisheries, combining science and indigenous knowledge.",,,,,,,
+Limit Reference Point,the stock status below which serious harm is occurring to the stock.,https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/glossary-glossaire/index-eng.html,,Limit Reference Point demarcates Critical and Cautious Stock Status Zones. Conservation Unit status-based Limit Reference Points are the recommended approach for Pacific Salmon. The CU status-based LRP is defined as 100% of CUs in an SMU being better than red status as per Holt et al. 2023. SMUs below the LRP trigger the need for 'Rebuilding Plans' under the FIsheries Act. ,,Determined by Science. Marks the boundary between the cautios and critical zones. Based on the best available scientific information,LRP,,,,,,
+Major stock,,,,,,,,,,,,,
+Maximum Sustainable Yield,the maximum average annual catch that can be removed from a stock over an indefinite period of time under current environmental conditions,https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/glossary-glossaire/index-eng.html,,,,,,,,,,,
+Maximum Sustainable Yield Biomass,the stock biomass that produces the maximum sustainable yield.,https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/glossary-glossaire/index-eng.html,,,,,BMSY,,,,,,
+Natural Spawners,,,,,,Combination of marked and unmarked fish that produce unmarked fish,,,,,,,
+Operational Control Point,,,,,,,,,,,,,
+Origin,,,,,,,,,,,,,
+PFMA,,,,,,Pacific Fisheries Management Area,,,,,,,
+Population,A group of interbreeding organisms that is relatively isolated (i.e. demographically uncoupled) from other such groups and is likely adapted to the local habitat.,Wild Salmon Policy https://www.pac.dfo-mpo.gc.ca/fm-gp/salmon-saumon/wsp-pss/policy-politique-eng.html,,,,,,,,Conservation Unit,Deme,,
+Precautionary Approach,"being cautious when scientific information is uncertain, unreliable, or inadequate and not using the absence of adequate scientific information as a reason to postpone or fail to take action to avoid serious harm to a resource.",https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/glossary-glossaire/index-eng.html,,,,,,,,,,,
+Pre-spawn Mortality,Females that reach the spawning grounds but die without releasing their eggs.,https://www.psc.org/wp-content/uploads/wpfd/preview_files/PSC-Technical-Report-No.-49(ac2ef27277eab81da1d8dea067dd80c1).pdf,,,,,,,,,,,
+Productivity,the rate at which biomass is generated in a stock.,https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/glossary-glossaire/index-eng.html,,,,,,,,,,,
+Proportion Natural Influence,,,,,,,,,,,,,
+Rebuilding Plan,,,,,,A legislated requirement under the Fish Stock Provisions in the Fisheries Act if the 'major stock' is below it's limit reference point,,,,,,,
+Recruitment,occurs when new fish are added to a population. It is commonly measured when small or young fish grow large or old enough to be caught in a fishery (which may be affected by catch limits or gear type) or scientific survey.,https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/glossary-glossaire/index-eng.html,,,,,,,,,,,
+Recruits per Spawner,"
+Number of adult returns or ""recruits"" per brood year spawner. The average number of adult salmon produced from one salmon spawner. A measure of productivity of a population or stock.",,,,,,,,,,,,
+Reference Point,"a benchmark against which the biomass or abundance of the stock or the fishing mortality rate (or exploitation rate) can be measured in order to determine its status. These reference points can be targets, thresholds or limits depending on their intended use.",https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/glossary-glossaire/index-eng.html,,,,,,,,,,,
+Removal Reference,the maximum removal rate of a fish stock,https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/glossary-glossaire/index-eng.html,,,,,RR,,,,,UMSY,
+Return Year,The year in which an individual salmon returns to freshwater with intent to spawn.,,,,,,,,,,,,
+Run Reconstruction,,,,,,,,,,,,,
+Run Size,"
+1) The number of salmon returning to a given system in a given year. 2) The total number of returning adult salmon prior to being impacted by fisheries en-route to the spawning grounds. ","1) Pacific Salmon - Glossary | Pacific Region | Fisheries and Oceans Canada
+2) https://www.psc.org/wp-content/uploads/wpfd/preview_files/PSC-Technical-Report-No.-49(ac2ef27277eab81da1d8dea067dd80c1).pdf",,,,,,,,,,,
+Run Year,,,,,,,,,,,,,
+sGen,"Spawners that would 
+result in recovery to 
+SMSY in one 
+generation in the 
+absence of fishing","Holt, C., Cass, A., Holtby, B., and Riddell, B. 2009. Indicators of status and benchmarks for conservation units in Canada’s Wild Salmon Policy. Can. Sci. Advis. Secr. Res. Doc. 2009/058: viii + 74 p. Available from https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/339096.pdf. ",,,,"Recommended by Holt et al 2009, 2023) as the lower biological benchmarks aka Limit Reference Point.",,,,Reference Point,,Limit Reference Point,
+sMSY,Spawner abundance at Maximum Sustainable Yield,,,,,"""embraced by many 
+as a ""target reference point"" for management"""" Holt et al 2009.",,,,,,,
+Spawning Escapement,"1) The number adult salmon that escape all fisheries and other forms of mortality and make it to the spawning grounds. 2)  Spawning escapement of adult male and female spawners and jack spawners 
+(precocious age 3 males) as estimated through assessment programs conducted on the spawning 
+grounds or projected from other data when such programs are not conducted. ","1.https://www.pac.dfo-mpo.gc.ca/fm-gp/salmon-saumon/gloss-eng.html
+2. https://www.psc.org/wp-content/uploads/wpfd/preview_files/PSC-Technical-Report-No.-49(ac2ef27277eab81da1d8dea067dd80c1).pdf",,,,,,,,,,,
+Spawning Stock Biomass,the total weight of all fish in a stock that have reached reproductive maturity.,https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/glossary-glossaire/index-eng.html,,,,,SSB,,,,,,
+sREF,,,,,,"combines three CUs, basically should be sGEN. ",,,,,,,
+Stock,"1) roups of the same species with a shared characteristic(s) of interest to managers. 2) A genetically distinct population of salmon, spawning at similar times and location.","1) https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/glossary-glossaire/index-eng.html
+2) https://www.psc.org/wp-content/uploads/wpfd/preview_files/PSC-Technical-Report-No.-49(ac2ef27277eab81da1d8dea067dd80c1).pdf",,,,,,,,,,,
+Stock Assessment Approach,,,,,,,,,,,,,
+Stock Management Unit,Collections of stocks that are managed together with a joint stock status,https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/glossary-glossaire/index-eng.html,,,,,,,,,Conservation Unit,,
+Stock Status,"Refers to a determination made, on the basis of stock assessment results, about the current condition of the stock",https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/glossary-glossaire/index-eng.html,,,,,,,,,,,
+Stock Status Zone,"Limit Reference Point demarcates Critical and Cautious Zone, Upper Stock Reference demarcates Cautious and Healthy Zone.",A fishery decision-making framework incorporating the precautionary approach,,,Healthy; Cautious; Critical,"Supports the ""General Decision Framework"" of the Precautionary Approach. ",,,,,,,
+Target Reference Point,the overall stock level target,https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/glossary-glossaire/index-eng.html,,,,"Usually 80 % probability of achieving 80% of MSY (mentioned in Stikine presentation). ""A TRP (Target Reference Point) is a required element under
+UNFA and in the FAO guidance on the application of the PA (Precautionary
+Approach), as well as ecocertification standards based on it, such those of
+the Marine Stewardship Council and may also be desirable in other
+situations. The threshold point below which removals must be reduced to avoid serious harm (USR (Upper Stock Reference Point)) can be different
+than the TRP (Target Reference Point). However, it is essential that while
+socio-economic factors may influence the location of the USR (Upper Stock
+Reference Point), these factors must not diminish its minimum function in
+guiding management of the risk of approaching the LRP (Limit Reference
+Point).""",TRP,,,,,,
+Terminal Run,,,,,,,,,,,,,
+Total Age,,,,,,,,,,,,,
+Total Allowable Catch,a catch limit set for a particular fishery,https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/glossary-glossaire/index-eng.html,,,,,,,,,,,
+Total Run,,,,,,,,,,,,,
+Transboundary Stock,,,,,,"Pacific Salmon Commission Transboundary Technical Committee manages this stock in coordination with US, Canadian and Indigenous groups",,,,,,,
+UMSY,,,,,,the exploitation rate—the proportion of a fish population removed by fishing—that achieves the Maximum Sustainable Yield (MSY),,,,,,,
+Upper Stock Reference,A threshold below which fishing must be reduced to avoid reaching the limit reference point. 80% of sMSY is recommended by Holt at al. 2009,https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/glossary-glossaire/index-eng.html,,,,,USR,,,Reference Point,,80% sMSY,
+Upper Stock Reference Point,In accordance with SAR 2006-023 the USR (Upper Stock Reference Point) is the stock level threshold below which removals must be progressively reduced in order to avoid reaching the LRP (Limit Reference Point).,,," In Precautionary Approach Framework, the USR (Upper Stock Reference Point), at minimum, must be set at an appropriate distance above the LRP (Limit Reference Point) to provide sufficient opportunity for the management system to recognize a declining stock status and sufficient time for management actions to have effect. Secondly, the USR (Upper Stock Reference Point) can be a target reference point (TRP (Target Reference Point)) determined by productivity objectives for the stock, broader biological considerations and social and economic objectives for the fishery.",,,,,,,,,
+Wild Salmon,"Salmon are considered ""wild"" if they have spent their entire life cycle in the wild and originate from parents that were also produced by natural spawning and continuously lived in the wild.",https://www.pac.dfo-mpo.gc.ca/fm-gp/salmon-saumon/gloss-eng.html,,,,,,,,,,,
+Wsp Status Zone,,,,,Red; Amber; Green; Data Deficient,,,,,,,,
