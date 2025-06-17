@@ -1,57 +1,71 @@
 ---
-title: "Controlled Vocabularies"
+title: "DFO Salmon Data Controlled Vocabulary"
 format: html
 ---
 
 ```{r setup, include=FALSE}
+library(readr)
 library(tibble)
 library(dplyr)
 library(DT)
 ```
 
-## 📚 DFO Pacific Science Vocabularies
+## 📚 DFO Pacific Salmon Data Vocabularies
 
-This table lists machine-readable vocabularies curated by the Data Stewardship Unit to support standardization, integration, and automation across salmon-related research and management programs.
+This table is meant to evolve into an authoritative, community-curated list of salmon data and policy terms used throughout DFO Pacific. It draws on definitions from regulatory documents, scientific literature, internal guidelines, and other sources—consolidating the ones critical for scienctific clarity and data analysis into a single, searchable, filterable reference.
 
-```{r, include = FALSE}
-# Manual index of vocabularies with live GitHub links
-vocab_index <- tribble(
-  ~id, ~name, ~description, ~theme, ~last_updated, ~viewer_url, ~json, ~ttl, ~jsonld,
-  "spsr", "SPSR Vocabulary", "Summary indices for fisheries stock assessment (FSARs)", "Stock Assessment", "2025-04-10",
-  "https://dfo-pacific-science.github.io/data-stewardship-unit/data-standards/spsr-vocab-browser.html",
-  "https://raw.githubusercontent.com/dfo-pacific-science/data-stewardship-unit/refs/heads/main/data-standards/vocab/spsr_vocab.json",
-  "https://raw.githubusercontent.com/dfo-pacific-science/data-stewardship-unit/refs/heads/main/data-standards/vocab/spsr_vocab.ttl",
-  "https://raw.githubusercontent.com/dfo-pacific-science/data-stewardship-unit/refs/heads/main/data-standards/vocab/spsr_vocab.jsonld"
-)
+Under the hood, the vocabulary is encoded in SKOS (Simple Knowledge Organization System), a W3C-recommended framework for representing controlled vocabularies and thesauri. By modeling terms and their relationships (broader, narrower, related), SKOS makes it easy to:
 
-vocab_index <- vocab_index %>%
-  mutate(
-    browser = paste0("<a href =", viewer_url, ">
-                     View
-                     </a>"),
-    json_link = paste0("<a href =", json, ">
-                     JSON
-                     </a>"),
-    ttl_link = paste0("<a href =", ttl, ">
-                     TTL
-                     </a>"),
-    jsonld_link = paste0("<a href =", jsonld, ">
-                     JSON-LD
-                     </a>")
-  )
-```
+- Maintain consistent labels, definitions, and concept hierarchies.
 
-```{r echo = FALSE}
+- Share and integrate the vocabulary with other systems that understand RDF.
+
+The vocabulary is intended to be a living document that evolves with the needs of the community. It is maintained by the Data Stewardship Unit (DSU) within the Fisheries and Assessment Data Section (FADS) in the Pacific Region of Fisheries and Oceans Canada (DFO).
+
+## 🗂️DFO Salmon -- Controlled Vocabulary Terms (🚧Under Construction🚧)
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Load the vocabulary data from the .csv file
+vocab <- read_csv("vocab/salmon_terms.csv")
+
+
+
+# Create a datatable with search and filter capabilities ordered by term column
+vocab <- vocab %>%
+  arrange(Term) %>% # Sort by term for better usability
+  mutate(Term = paste0("<b>", Term, "</b>")) # Bold the term for emphasis
 datatable(
-  vocab_index %>%
-    select(name, theme, description, last_updated, browser, json_link, ttl_link, jsonld_link),
-  options = list(pageLength = 10, scrollX = TRUE),
+  vocab,
+  options = list(pageLength = 15, scrollX = TRUE),
   rownames = FALSE,
-  escape = FALSE, # Disable escaping for columns with HTML links
-  colnames = c("Name", "Theme", "Description", "Last Updated", "Viewer", "JSON", "TTL", "JSON-LD")
+  filter = "top",
+  escape = FALSE,
+) |> 
+  formatStyle(columns = c(1:ncol(vocab)), # Apply to all columns
+              whiteSpace = "nowrap",
+              overflow = "hidden",
+              textOverflow = "ellipsis"
 )
+
+
 ```
-------------------------------------------------------------------------
+
+
+To maximize accessibility, we publish three serializations:
+
+- JSON – A lightweight format ideal for most web and desktop applications that need to load term lists and definitions without RDF tooling.
+
+- JSON-LD – Embeds linked-data context so that terms become addressable URIs; perfect for web pages, APIs, and any environment where you want automatic context resolution and richer interoperability.
+
+- Turtle (.ttl) – A compact, human-readable RDF syntax for semantic-web tools, triple stores, and SPARQL queries, enabling advanced semantic reasoning or integration into broader data ecosystems.
+
+You can download or query any of these formats directly from our GitHub repo for programmatic access, metadata validation, integration, or automated workflows.
+
+
+File a GitHub Issue at
+https://github.com/dfo-pacific-science/data-stewardship-unit/issues
+
+Or contact the Data Stewardship Unit.
 
 <!-- ## 🛠️ TODOs for Improvement
 
