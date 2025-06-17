@@ -19,7 +19,7 @@ website:
     left:
       - text: "FADS Wiki Home (Internal)"
         href: https://086gc.sharepoint.com/:u:/r/sites/FisheryAssessmentDataSectionWiki/SitePages/CollabHome.aspx?csf=1&web=1&e=tkJJk4
-      - text: "About the DSU"
+      - text: "About"
         href: about.qmd
         
     tools:
@@ -45,8 +45,7 @@ website:
   repo-url: https://github.com/dfo-pacific-science/data-stewardship-unit
   repo-actions: [edit, source, issue]
   page-footer: 
-    right: "This site was created with [Quarto](https://quarto.org/) and is hosted with [Github Pages](https://pages.github.com/)."
-    left: "Last updated: June 9, 2025"
+    right: "This site was created with [Quarto](https://quarto.org/) and is hosted with [GitHub Pages](https://pages.github.com/)."
     
 lang: en
 

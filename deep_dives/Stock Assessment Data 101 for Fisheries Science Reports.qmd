@@ -1,5 +1,5 @@
 ---
-title: "Fisheries Sceience Reports Data and Stats 101"
+title: "Fisheries Science Reports -- Data and Stats 101"
 format: html
 ---
 

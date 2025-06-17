@@ -10,17 +10,16 @@ library(dplyr)
 library(DT)
 ```
 
-## 📚 DFO Pacific Salmon Data Vocabularies
+## Background
 
-This table is meant to evolve into an authoritative, community-curated list of salmon data and policy terms used throughout DFO Pacific. It draws on definitions from regulatory documents, scientific literature, internal guidelines, and other sources—consolidating the ones critical for scienctific clarity and data analysis into a single, searchable, filterable reference.
+A growing challenge in salmon research, management, and data stewardship is the proliferation of terms, acronyms, and definitions that can vary across documents, programs, and even within the same organization. This can lead to confusion, miscommunication, and inefficiencies in data analysis and reporting.
 
-Under the hood, the vocabulary is encoded in SKOS (Simple Knowledge Organization System), a W3C-recommended framework for representing controlled vocabularies and thesauri. By modeling terms and their relationships (broader, narrower, related), SKOS makes it easy to:
+To address this, the Data Stewardship Unit (DSU) has initiated a **DFO Salmon Data Controlled Vocabulary**. This is a comprehensive, standardized list of terms and definitions related to salmon data and policy used within Fisheries and Oceans Canada (DFO) Pacific Region.
 
-- Maintain consistent labels, definitions, and concept hierarchies.
+The table below is meant to evolve into an authoritative, community-curated list of salmon data and policy terms used throughout DFO Pacific. It draws on definitions from regulatory documents, scientific literature, internal guidelines, and other sources—consolidating the ones critical for scienctific clarity and data analysis into a single, searchable, filterable reference.
 
-- Share and integrate the vocabulary with other systems that understand RDF.
+However, this is not a simple list of terms or glossary, under the hood it follows protocols established by the World Wide Web Consortium (W3C) for controlled vocabularies, specifically the [Simple Knowledge Organization System (SKOS)](https://www.w3.org/2004/02/skos/) standard. This allows us to share the vocabulary in a machine-readable format that can be easily integrated into data systems, APIs, and web applications.
 
-The vocabulary is intended to be a living document that evolves with the needs of the community. It is maintained by the Data Stewardship Unit (DSU) within the Fisheries and Assessment Data Section (FADS) in the Pacific Region of Fisheries and Oceans Canada (DFO).
 
 ## 🗂️DFO Salmon -- Controlled Vocabulary Terms (🚧Under Construction🚧)
 
@@ -50,6 +49,14 @@ datatable(
 
 ```
 
+
+Under the hood, the vocabulary is formatted in SKOS (Simple Knowledge Organization System), a W3C-recommended framework for representing controlled vocabularies and thesauri. By modeling terms and their relationships (broader, narrower, related), SKOS makes it easy to:
+
+- Maintain consistent labels, definitions, and concept hierarchies.
+
+- Share and integrate the vocabulary with other systems that understand RDF.
+
+The vocabulary is intended to be a living document that evolves with the needs of the community. It is maintained by the Data Stewardship Unit (DSU) within the Fisheries and Assessment Data Section (FADS) in the Pacific Region of Fisheries and Oceans Canada (DFO).
 
 To maximize accessibility, we publish three serializations:
 
