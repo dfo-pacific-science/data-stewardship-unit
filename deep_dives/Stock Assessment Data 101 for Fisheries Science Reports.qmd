@@ -1,5 +1,5 @@
 ---
-title: "Stock Assessment Data and Stats 101 for Fisheries Science Reports.qmd"
+title: "Fisheries Sceience Reports Data and Stats 101"
 format: html
 ---
 
