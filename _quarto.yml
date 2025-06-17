@@ -38,7 +38,7 @@ website:
         - auto: how_to_guides
         - auto: reference_info
         - auto: tutorials
-        - text: "Deep Dives (Coming soon)"
+        - auto: deep_dives
       logo: images/logo.png
       search: true
     
