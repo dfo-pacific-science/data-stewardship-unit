@@ -214,7 +214,7 @@
     "href": "how_to_guides/databricks_r_studio.html",
     "title": "Connect to the Azure Lakehouse from R",
     "section": "",
-    "text": "DFO’s shift to the Azure Lakehouse model integrates Azure Databricks, Data Lake Storage, Delta Lake, and Synapse Analytics, replacing siloed data storage and scattered code repositories. This transition centralizes data, standardizes workflows, and improves access to shared datasets and intermediate data products.\nWith Personal Access Tokens (PATs), analysts can now connect directly to the Lakehouse from RStudio (or other IDEs like VSCode or PyCharm), working seamlessly with cloud-stored data in their preferred environment. This guide explains how to set up that connection using RStudio for analysis, GitHub for code management, and the Lakehouse for data storage and sharing.\n[[TOC]]",
+    "text": "DFO’s shift to the Azure Lakehouse model integrates Azure Databricks, Data Lake Storage, Delta Lake, and Synapse Analytics, replacing siloed data storage and scattered code repositories. This transition centralizes data, standardizes workflows, and improves access to shared datasets and intermediate data products.\nWith Personal Access Tokens (PATs), analysts can now connect directly to the Lakehouse from RStudio (or other IDEs like VSCode or PyCharm), working seamlessly with cloud-stored data in their preferred environment. This guide explains how to set up that connection using RStudio for analysis, GitHub for code management, and the Lakehouse for data storage and sharing.",
     "crumbs": [
       "FADS Wiki Home (Internal)",
       "How to Guides",
@@ -226,7 +226,7 @@
     "href": "how_to_guides/databricks_r_studio.html#tldr",
     "title": "Connect to the Azure Lakehouse from R",
     "section": "",
-    "text": "DFO’s shift to the Azure Lakehouse model integrates Azure Databricks, Data Lake Storage, Delta Lake, and Synapse Analytics, replacing siloed data storage and scattered code repositories. This transition centralizes data, standardizes workflows, and improves access to shared datasets and intermediate data products.\nWith Personal Access Tokens (PATs), analysts can now connect directly to the Lakehouse from RStudio (or other IDEs like VSCode or PyCharm), working seamlessly with cloud-stored data in their preferred environment. This guide explains how to set up that connection using RStudio for analysis, GitHub for code management, and the Lakehouse for data storage and sharing.\n[[TOC]]",
+    "text": "DFO’s shift to the Azure Lakehouse model integrates Azure Databricks, Data Lake Storage, Delta Lake, and Synapse Analytics, replacing siloed data storage and scattered code repositories. This transition centralizes data, standardizes workflows, and improves access to shared datasets and intermediate data products.\nWith Personal Access Tokens (PATs), analysts can now connect directly to the Lakehouse from RStudio (or other IDEs like VSCode or PyCharm), working seamlessly with cloud-stored data in their preferred environment. This guide explains how to set up that connection using RStudio for analysis, GitHub for code management, and the Lakehouse for data storage and sharing.",
     "crumbs": [
       "FADS Wiki Home (Internal)",
       "How to Guides",
