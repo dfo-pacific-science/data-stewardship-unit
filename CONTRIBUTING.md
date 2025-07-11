@@ -9,71 +9,44 @@ Whether you're adding a how-to guide, writing up a tutorial, or sharing a helpfu
 
 If you're already a member of the `dfo-pacific-science` organization, you can edit the repo directly. If not, you can still contribute by creating a pull request (PR) from your forked copy of the repo or creating an issue to request a change.
 
-Want to add a new documentation or tools page? Here's the easy way — no terminal required!
+Want to add a new documentation or tools page? Here's how!
 
-### 🧑‍💻 Option A: Use GitHub's Web Interface
+You can open the repo after cloning it in an IDE like RStudio or VSCode depending on your preference. 
 
-1. Navigate to the appropriate folder from https://github.com/dfo-pacific-science/data-stewardship-unit/tree/main:
-   - For documentation: `docs/`
-   - For tools: `tools/`
+### Requirements
+1. An IDE ([RStudio](https://posit.co/download/rstudio-desktop/) or [VSCode](https://code.visualstudio.com/Download)
+2. [Git SCM](https://git-scm.com/downloads)
+3. [Quarto](https://quarto.org/docs/download/index.html)
 
-2. Click **`Add file` > `Create new file`**
+### 1. Clone the Repo
+To open the website locally, clone the repository with git by running `git clone https://github.com/dfo-pacific-science/data-stewardship-unit.git` in terminal in your IDE. 
 
-3. Name your file something like `my-awesome-guide.qmd  
-   (`.qmd` file extension = [Quarto](https://quarto.org) markdown file!)
+### 2. Create a new branch
+Make a new branch so that you can test things out without messing things up in the main branch. Run `git branch {branchName}` in the terminal in your IDE to make a new branch and `git switch {branchName}` to switch to it. 
 
-4. Paste in your content (use [Markdown](https://www.markdownguide.org/cheat-sheet/) formatting!)
+### 3. Make a new .qmd file
+You can create a new .qmd file in one of the four folders (how_to_guides, reference_info, tutorials, deep_dives) to get it displayed under the navbar menu, which grabs .qmd files automatically. 
 
-5. Once your ready to save, scroll down and give your change a **brief commit message**, and choose:
-   - Commit directly to `main` if it’s a tiny fix (spelling, typo, etc.)
-   - **Or**, select **"Create a new branch"** if it’s a new page or major edit.
+### 4. Preview the website 
+In terminal, run `quarto preview`. A browser window will pop up with a locally-hosted version of the website. Make sure your changes look good and progress to the next step. Make edits if needed. 
 
-6. Hit **"Propose changes"** — GitHub will create a **pull request (PR)** for you automatically which DSU staff will review! 🚀
+### 5. Render the website
+In terminal, run `quarto render`. The complete site will be rendered in the `_site` folder for Github actions to deploy. 
 
----
+### 6. Push Changes (Add, Commit, Push)
+Run `git add {fileName}` for all of the files you want to stage. Make sure to not forget the `_free` folder, which contains all of the information related to R code that runs in some of the .qmd's. 
 
-### 💻 Option B: Use GitHub Codespaces (Recommended for Full Previews of Rendered Content)
+Run `git commit -m "commit message here"`. 
 
-Codespaces gives you a ready-to-go dev environment right in your browser — no setup required!
+Run `git push`. If you've never pushed on your current branch, git will prompt you to use something like `git push --set-upstream origin {branchName}`. 
 
-1. Go to the repo homepage  
-2. Click the green **`<> Code`** button → Select **`Codespaces`** → Click **`+ Create codespace on main`**  
-   🧙‍♀️ Magic! A fully configured VS Code environment opens in your browser.
+### 7. Create a Pull Request
 
-3. Navigate to the `docs/` or `tools/` folder  
-4. Create a new `.qmd` file and write your content  
-5. Open a terminal (in Codespaces: `Terminal > New Terminal`) and run:
-
-   ```bash
-   quarto preview
-   ```
-
-   This launches a local preview so you can **see your page rendered live** in a browser tab! 🌐✨
-
-6. When you’re ready, commit your changes:
-   - Use **Source Control** (sidebar tab) to write a commit message
-   - Either push to a new branch and open a PR, or push to `main` if it's a tiny fix
-
-✅ **Bonus**: You’re working in the exact same environment the GitHub Action uses to render your PR — what you see is what will ship.
-
-📝 **Note**: Using Codespaces uses your personal credits on GitHub, but it’s free for public repositories up to 120 minutes a month. If you run out of credits, you can still use the web interface to create PRs.
+Create a pull request from your branch and assign a team member to review it. There are protections on the main branch that caution you away from pushing without a review. Once the PR has been merged to main, the Github Action will be automatically triggered. Check the actions tab to see the deployment progress. 
 
 ---
 
 ## 🚀 Pull Request Tips
-
-### ✨ What Happens When You Open a PR?
-
-Thanks to our [GitHub Actions](https://github.com/dfo-pacific-science/data-stewardship-unit/tree/main/.github/workflows), every pull request gets a **live preview** of the updated site!  
-You’ll get a comment like this automatically on your PR:
-
-> 🚀 Preview your site here:  
-> 👉 https://**your-username**.github.io/**repo-name**/preview/pr-123/
-
-This lets you:
-- ✅ Check formatting
-- 🧪 Test links and images
-- 👀 Review the full look before merging
 
 ### 👯 Best Practices
 
@@ -82,7 +55,7 @@ This lets you:
 - Group related changes into one PR
 - If you're fixing an Issue, mention it in your PR:  
   `Closes #42` will auto-link and close the issue on merge
-- Keep commit messages short but clear (`"Add how-to for bulk metadata upload"`)
+- Keep commit messages short but clear and in present tense (`"Add how-to for bulk metadata upload"`)
 
 ---
 
@@ -97,20 +70,6 @@ We tag and triage regularly — feel free to assign yourself or ask for help!
 
 ---
 
-## 🧪 Preview Like a Pro
-
-Here’s how our **Quarto PR Preview GitHub Action** works:
-
-1. Every time you open or update a PR to `main`, it renders the site with your changes.
-2. It creates a special branch like `preview/pr-123` with the rendered site.
-3. A bot drops a link on your PR so you can view the live preview in your browser.
-4. Once merged, your changes go live on the main site!
-
----
-
 ## 🙌 Need Help?
 
-Open an issue, ping someone on the DSU team, or check the [README](./README.md) for more guidance. We're here to help!
-
-Thanks again for contributing — every little improvement adds up. 🧼📈  
-Let’s make our data stewardship tools and documentation ✨awesome✨ together.
+Open an issue, ping someone on the DSU team, or check the [README](./README.md) for more guidance. We're here to help! Thanks again for contributing — every little improvement adds up.
