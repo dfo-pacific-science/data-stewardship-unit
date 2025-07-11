@@ -14,7 +14,7 @@ Want to add a new documentation or tools page? Here's how!
 You can open the repo after cloning it in an IDE like RStudio or VSCode depending on your preference. 
 
 ### Requirements
-1. An IDE ([RStudio](https://posit.co/download/rstudio-desktop/) or [VSCode](https://code.visualstudio.com/Download)
+1. An IDE ([RStudio](https://posit.co/download/rstudio-desktop/) or [VSCode](https://code.visualstudio.com/Download))
 2. [Git SCM](https://git-scm.com/downloads)
 3. [Quarto](https://quarto.org/docs/download/index.html)
 
