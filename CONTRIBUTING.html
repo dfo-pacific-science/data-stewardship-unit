@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -311,16 +276,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#how-to-write-a-new-page" id="toc-how-to-write-a-new-page" class="nav-link" data-scroll-target="#how-to-write-a-new-page">✍️ How to Write a New Page</a>
   <ul class="collapse">
-  <li><a href="#option-a-use-githubs-web-interface" id="toc-option-a-use-githubs-web-interface" class="nav-link" data-scroll-target="#option-a-use-githubs-web-interface">🧑‍💻 Option A: Use GitHub’s Web Interface</a></li>
-  <li><a href="#option-b-use-github-codespaces-recommended-for-full-previews-of-rendered-content" id="toc-option-b-use-github-codespaces-recommended-for-full-previews-of-rendered-content" class="nav-link" data-scroll-target="#option-b-use-github-codespaces-recommended-for-full-previews-of-rendered-content">💻 Option B: Use GitHub Codespaces (Recommended for Full Previews of Rendered Content)</a></li>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a></li>
+  <li><a href="#clone-the-repo" id="toc-clone-the-repo" class="nav-link" data-scroll-target="#clone-the-repo">1. Clone the Repo</a></li>
+  <li><a href="#create-a-new-branch" id="toc-create-a-new-branch" class="nav-link" data-scroll-target="#create-a-new-branch">2. Create a new branch</a></li>
+  <li><a href="#make-a-new-.qmd-file" id="toc-make-a-new-.qmd-file" class="nav-link" data-scroll-target="#make-a-new-.qmd-file">3. Make a new .qmd file</a></li>
+  <li><a href="#preview-the-website" id="toc-preview-the-website" class="nav-link" data-scroll-target="#preview-the-website">4. Preview the website</a></li>
+  <li><a href="#render-the-website" id="toc-render-the-website" class="nav-link" data-scroll-target="#render-the-website">5. Render the website</a></li>
+  <li><a href="#push-changes-add-commit-push" id="toc-push-changes-add-commit-push" class="nav-link" data-scroll-target="#push-changes-add-commit-push">6. Push Changes (Add, Commit, Push)</a></li>
+  <li><a href="#create-a-pull-request" id="toc-create-a-pull-request" class="nav-link" data-scroll-target="#create-a-pull-request">7. Create a Pull Request</a></li>
   </ul></li>
   <li><a href="#pull-request-tips" id="toc-pull-request-tips" class="nav-link" data-scroll-target="#pull-request-tips">🚀 Pull Request Tips</a>
   <ul class="collapse">
-  <li><a href="#what-happens-when-you-open-a-pr" id="toc-what-happens-when-you-open-a-pr" class="nav-link" data-scroll-target="#what-happens-when-you-open-a-pr">✨ What Happens When You Open a PR?</a></li>
   <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices">👯 Best Practices</a></li>
   </ul></li>
   <li><a href="#working-with-issues" id="toc-working-with-issues" class="nav-link" data-scroll-target="#working-with-issues">📝 Working with Issues</a></li>
-  <li><a href="#preview-like-a-pro" id="toc-preview-like-a-pro" class="nav-link" data-scroll-target="#preview-like-a-pro">🧪 Preview Like a Pro</a></li>
   <li><a href="#need-help" id="toc-need-help" class="nav-link" data-scroll-target="#need-help">🙌 Need Help?</a></li>
   </ul></li>
   </ul>
@@ -340,65 +309,50 @@ Whether you’re adding a how-to guide, writing up a tutorial, or sharing a help
 <section id="how-to-write-a-new-page" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-write-a-new-page">✍️ How to Write a New Page</h2>
 <p>If you’re already a member of the <code>dfo-pacific-science</code> organization, you can edit the repo directly. If not, you can still contribute by creating a pull request (PR) from your forked copy of the repo or creating an issue to request a change.</p>
-<p>Want to add a new documentation or tools page? Here’s the easy way — no terminal required!</p>
-<section id="option-a-use-githubs-web-interface" class="level3">
-<h3 class="anchored" data-anchor-id="option-a-use-githubs-web-interface">🧑‍💻 Option A: Use GitHub’s Web Interface</h3>
+<p>Want to add a new documentation or tools page? Here’s how!</p>
+<p>You can open the repo after cloning it in an IDE like RStudio or VSCode depending on your preference.</p>
+<section id="requirements" class="level3">
+<h3 class="anchored" data-anchor-id="requirements">Requirements</h3>
 <ol type="1">
-<li><p>Navigate to the appropriate folder from https://github.com/dfo-pacific-science/data-stewardship-unit/tree/main:</p>
-<ul>
-<li>For documentation: <code>docs/</code></li>
-<li>For tools: <code>tools/</code></li>
-</ul></li>
-<li><p>Click <strong><code>Add file</code> &gt; <code>Create new file</code></strong></p></li>
-<li><p>Name your file something like <code>my-awesome-guide.qmd      (</code>.qmd` file extension = <a href="https://quarto.org">Quarto</a> markdown file!)</p></li>
-<li><p>Paste in your content (use <a href="https://www.markdownguide.org/cheat-sheet/">Markdown</a> formatting!)</p></li>
-<li><p>Once your ready to save, scroll down and give your change a <strong>brief commit message</strong>, and choose:</p>
-<ul>
-<li>Commit directly to <code>main</code> if it’s a tiny fix (spelling, typo, etc.)</li>
-<li><strong>Or</strong>, select <strong>“Create a new branch”</strong> if it’s a new page or major edit.</li>
-</ul></li>
-<li><p>Hit <strong>“Propose changes”</strong> — GitHub will create a <strong>pull request (PR)</strong> for you automatically which DSU staff will review! 🚀</p></li>
+<li>An IDE (<a href="https://posit.co/download/rstudio-desktop/">RStudio</a> or <a href="https://code.visualstudio.com/Download">VSCode</a></li>
+<li><a href="https://git-scm.com/downloads">Git SCM</a></li>
+<li><a href="https://quarto.org/docs/download/index.html">Quarto</a></li>
 </ol>
-<hr>
 </section>
-<section id="option-b-use-github-codespaces-recommended-for-full-previews-of-rendered-content" class="level3">
-<h3 class="anchored" data-anchor-id="option-b-use-github-codespaces-recommended-for-full-previews-of-rendered-content">💻 Option B: Use GitHub Codespaces (Recommended for Full Previews of Rendered Content)</h3>
-<p>Codespaces gives you a ready-to-go dev environment right in your browser — no setup required!</p>
-<ol type="1">
-<li><p>Go to the repo homepage<br>
-</p></li>
-<li><p>Click the green <strong><code>&lt;&gt; Code</code></strong> button → Select <strong><code>Codespaces</code></strong> → Click <strong><code>+ Create codespace on main</code></strong><br>
-🧙‍♀️ Magic! A fully configured VS Code environment opens in your browser.</p></li>
-<li><p>Navigate to the <code>docs/</code> or <code>tools/</code> folder<br>
-</p></li>
-<li><p>Create a new <code>.qmd</code> file and write your content<br>
-</p></li>
-<li><p>Open a terminal (in Codespaces: <code>Terminal &gt; New Terminal</code>) and run:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This launches a local preview so you can <strong>see your page rendered live</strong> in a browser tab! 🌐✨</p></li>
-<li><p>When you’re ready, commit your changes:</p>
-<ul>
-<li>Use <strong>Source Control</strong> (sidebar tab) to write a commit message</li>
-<li>Either push to a new branch and open a PR, or push to <code>main</code> if it’s a tiny fix</li>
-</ul></li>
-</ol>
-<p>✅ <strong>Bonus</strong>: You’re working in the exact same environment the GitHub Action uses to render your PR — what you see is what will ship.</p>
-<p>📝 <strong>Note</strong>: Using Codespaces uses your personal credits on GitHub, but it’s free for public repositories up to 120 minutes a month. If you run out of credits, you can still use the web interface to create PRs.</p>
+<section id="clone-the-repo" class="level3">
+<h3 class="anchored" data-anchor-id="clone-the-repo">1. Clone the Repo</h3>
+<p>To open the website locally, clone the repository with git by running <code>git clone https://github.com/dfo-pacific-science/data-stewardship-unit.git</code> in terminal in your IDE.</p>
+</section>
+<section id="create-a-new-branch" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-new-branch">2. Create a new branch</h3>
+<p>Make a new branch so that you can test things out without messing things up in the main branch. Run <code>git branch {branchName}</code> in the terminal in your IDE to make a new branch and <code>git switch {branchName}</code> to switch to it.</p>
+</section>
+<section id="make-a-new-.qmd-file" class="level3">
+<h3 class="anchored" data-anchor-id="make-a-new-.qmd-file">3. Make a new .qmd file</h3>
+<p>You can create a new .qmd file in one of the four folders (how_to_guides, reference_info, tutorials, deep_dives) to get it displayed under the navbar menu, which grabs .qmd files automatically.</p>
+</section>
+<section id="preview-the-website" class="level3">
+<h3 class="anchored" data-anchor-id="preview-the-website">4. Preview the website</h3>
+<p>In terminal, run <code>quarto preview</code>. A browser window will pop up with a locally-hosted version of the website. Make sure your changes look good and progress to the next step. Make edits if needed.</p>
+</section>
+<section id="render-the-website" class="level3">
+<h3 class="anchored" data-anchor-id="render-the-website">5. Render the website</h3>
+<p>In terminal, run <code>quarto render</code>. The complete site will be rendered in the <code>_site</code> folder for Github actions to deploy.</p>
+</section>
+<section id="push-changes-add-commit-push" class="level3">
+<h3 class="anchored" data-anchor-id="push-changes-add-commit-push">6. Push Changes (Add, Commit, Push)</h3>
+<p>Run <code>git add {fileName}</code> for all of the files you want to stage. Make sure to not forget the <code>_free</code> folder, which contains all of the information related to R code that runs in some of the .qmd’s.</p>
+<p>Run <code>git commit -m "commit message here"</code>.</p>
+<p>Run <code>git push</code>. If you’ve never pushed on your current branch, git will prompt you to use something like <code>git push --set-upstream origin {branchName}</code>.</p>
+</section>
+<section id="create-a-pull-request" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-pull-request">7. Create a Pull Request</h3>
+<p>Create a pull request from your branch and assign a team member to review it. There are protections on the main branch that caution you away from pushing without a review. Once the PR has been merged to main, the Github Action will be automatically triggered. Check the actions tab to see the deployment progress.</p>
 <hr>
 </section>
 </section>
 <section id="pull-request-tips" class="level2">
 <h2 class="anchored" data-anchor-id="pull-request-tips">🚀 Pull Request Tips</h2>
-<section id="what-happens-when-you-open-a-pr" class="level3">
-<h3 class="anchored" data-anchor-id="what-happens-when-you-open-a-pr">✨ What Happens When You Open a PR?</h3>
-<p>Thanks to our <a href="https://github.com/dfo-pacific-science/data-stewardship-unit/tree/main/.github/workflows">GitHub Actions</a>, every pull request gets a <strong>live preview</strong> of the updated site!<br>
-You’ll get a comment like this automatically on your PR:</p>
-<blockquote class="blockquote">
-<p>🚀 Preview your site here:<br>
-👉 https://<strong>your-username</strong>.github.io/<strong>repo-name</strong>/preview/pr-123/</p>
-</blockquote>
-<p>This lets you: - ✅ Check formatting - 🧪 Test links and images - 👀 Review the full look before merging</p>
-</section>
 <section id="best-practices" class="level3">
 <h3 class="anchored" data-anchor-id="best-practices">👯 Best Practices</h3>
 <ul>
@@ -407,7 +361,7 @@ You’ll get a comment like this automatically on your PR:</p>
 <li>Group related changes into one PR</li>
 <li>If you’re fixing an Issue, mention it in your PR:<br>
 <code>Closes #42</code> will auto-link and close the issue on merge</li>
-<li>Keep commit messages short but clear (<code>"Add how-to for bulk metadata upload"</code>)</li>
+<li>Keep commit messages short but clear and in present tense (<code>"Add how-to for bulk metadata upload"</code>)</li>
 </ul>
 <hr>
 </section>
@@ -418,22 +372,9 @@ You’ll get a comment like this automatically on your PR:</p>
 <p>We tag and triage regularly — feel free to assign yourself or ask for help!</p>
 <hr>
 </section>
-<section id="preview-like-a-pro" class="level2">
-<h2 class="anchored" data-anchor-id="preview-like-a-pro">🧪 Preview Like a Pro</h2>
-<p>Here’s how our <strong>Quarto PR Preview GitHub Action</strong> works:</p>
-<ol type="1">
-<li>Every time you open or update a PR to <code>main</code>, it renders the site with your changes.</li>
-<li>It creates a special branch like <code>preview/pr-123</code> with the rendered site.</li>
-<li>A bot drops a link on your PR so you can view the live preview in your browser.</li>
-<li>Once merged, your changes go live on the main site!</li>
-</ol>
-<hr>
-</section>
 <section id="need-help" class="level2">
 <h2 class="anchored" data-anchor-id="need-help">🙌 Need Help?</h2>
-<p>Open an issue, ping someone on the DSU team, or check the <a href="./README.md">README</a> for more guidance. We’re here to help!</p>
-<p>Thanks again for contributing — every little improvement adds up. 🧼📈<br>
-Let’s make our data stewardship tools and documentation ✨awesome✨ together.</p>
+<p>Open an issue, ping someone on the DSU team, or check the <a href="./README.md">README</a> for more guidance. We’re here to help! Thanks again for contributing — every little improvement adds up.</p>
 
 
 </section>
