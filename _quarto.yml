@@ -32,7 +32,8 @@ website:
     background: "#dae2e8"
     
   sidebar:
-    - style: docked
+      collapse-level: 1
+      style: docked
       background: light
       contents:
         - auto: how_to_guides
