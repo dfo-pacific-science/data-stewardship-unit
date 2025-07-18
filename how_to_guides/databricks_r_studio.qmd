@@ -12,7 +12,6 @@ DFO’s shift to the Azure Lakehouse model integrates Azure Databricks, Data Lak
 
 With Personal Access Tokens (PATs), analysts can now connect directly to the Lakehouse from RStudio (or other IDEs like VSCode or PyCharm), working seamlessly with cloud-stored data in their preferred environment. This guide explains how to set up that connection using RStudio for analysis, GitHub for code management, and the Lakehouse for data storage and sharing.
 
-[[_TOC_]]
 
 ## Azure Data Bricks and the Azure Lakehouse 
 
@@ -43,7 +42,7 @@ Create your user access token in Databricks WebUI.
 
 5. Copy and save this token somewhere safe such as an encrypted password manager
 
-![Databricks Token](images/databricks_rstudio/databricks_token.jpg) 
+![Databricks Token](../images/databricks_rstudio/databricks_token.jpg) 
 
 ### JDBC Driver
 
@@ -57,7 +56,7 @@ Create your user access token in Databricks WebUI.
 
 5. Go to ‘Connection details’ > JDBC URL and copy the string
 
-![JDBC Driver](images/databricks_rstudio/JDBC_URL.jpg)
+![JDBC Driver](../images/databricks_rstudio/JDBC_URL.jpg)
   
 
 ### Establishing a Connection to Databricks from R Studio (or any other IDE)  
