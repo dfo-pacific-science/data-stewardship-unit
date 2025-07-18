@@ -1,5 +1,33 @@
 [
   {
+    "objectID": "tools.html",
+    "href": "tools.html",
+    "title": "🧰 Tools for Data Stewardship ⚙️📦",
+    "section": "",
+    "text": "Welcome to the Tools section of the DSU site! 🐟\nHere you’ll find a curated set of apps, platforms, scripts, and templates that support your work as a data steward or data producer within the Pacific Region Science Branch of Fisheries and Oceans Canada. 🧪🌊\n\n\n\nWe’re actively gathering, building, and documenting the most useful tools for the job — so stay tuned! In the meantime, here’s a sneak peek at what’s coming:\n\n\n\n🗂 Data Dictionary and Metadata Templates (Excel + JSON)\n🤝 Data Management Agreement Templates\n🧮 R & Python Functions, Scripts, and Packages for data cleaning and reporting\n🔗 Links to External Tools (See Internal DSU SharePoint Wiki for internal tools)\n🧠 Toolkits for Data Stewards (checklists, walkthroughs, best practices)\n\n\n\n\n\nIf you’ve built or used something you think could help others — whether it’s a handy Excel macro or a full-blown Shiny app — we’d love to include it here!\nSend us a note and let’s make it easier for everyone to work smarter. 🤝💡\n\n🧭 Return to the Internal DSU Wiki\n\nTools don’t solve problems — people do. But the right tool helps a lot. 🛠️🙂"
+  },
+  {
+    "objectID": "tools.html#this-page-is-under-construction",
+    "href": "tools.html#this-page-is-under-construction",
+    "title": "🧰 Tools for Data Stewardship ⚙️📦",
+    "section": "",
+    "text": "We’re actively gathering, building, and documenting the most useful tools for the job — so stay tuned! In the meantime, here’s a sneak peek at what’s coming:\n\n\n\n🗂 Data Dictionary and Metadata Templates (Excel + JSON)\n🤝 Data Management Agreement Templates\n🧮 R & Python Functions, Scripts, and Packages for data cleaning and reporting\n🔗 Links to External Tools (See Internal DSU SharePoint Wiki for internal tools)\n🧠 Toolkits for Data Stewards (checklists, walkthroughs, best practices)\n\n\n\n\n\nIf you’ve built or used something you think could help others — whether it’s a handy Excel macro or a full-blown Shiny app — we’d love to include it here!\nSend us a note and let’s make it easier for everyone to work smarter. 🤝💡\n\n🧭 Return to the Internal DSU Wiki\n\nTools don’t solve problems — people do. But the right tool helps a lot. 🛠️🙂"
+  },
+  {
+    "objectID": "documentation_hub/how_to_guides/databricks_r_studio.html",
+    "href": "documentation_hub/how_to_guides/databricks_r_studio.html",
+    "title": "FADS Documentation Hub",
+    "section": "",
+    "text": "Redirecting to https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/databricks_r_studio.html"
+  },
+  {
+    "objectID": "documentation_hub/how_to_guides/sharepoint_r.html",
+    "href": "documentation_hub/how_to_guides/sharepoint_r.html",
+    "title": "FADS Documentation Hub",
+    "section": "",
+    "text": "Redirecting to https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/sharepoint_r.html"
+  },
+  {
     "objectID": "dsu_documentation.html",
     "href": "dsu_documentation.html",
     "title": "FADS Documentation Hub",
@@ -7,11 +35,64 @@
     "text": "Redirecting to https://dfo-pacific-science.github.io/data-stewardship-unit/index.html"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "FADS Documentation Hub 🐟💾",
+    "objectID": "reference_info/publishing_data_externally.html",
+    "href": "reference_info/publishing_data_externally.html",
+    "title": "Hosting Data and Code",
     "section": "",
-    "text": "FADS Documentation Hub 🐟💾\nWelcome to the Fishery & Assessment Data Section (FADS) Documentation Hub!\nHere, we work in the open and share our knowledge to enable open data science collaboration with a broad community not only within DFO but also externally with academics, NGOs, and Indigenous groups. The FADS Wiki is for internal access by DFO employees while this Documentation Hub is openly accessible.\nWhether you’re a seasoned data steward or just starting out, this hub is designed to provide you with the resources you need to navigate the world of salmon data stewardship and management 📚✨\nWe follow the Diátaxis Framework to keep documentation organized, useful, and easy to navigate. The docs are grouped into four clear categories:\n\n\n️1. How-to Guides 🛠\nQuick, practical instructions for specific tasks.\nPerfect for when you’re asking:\n&gt; “How do I do this specific thing?”\nExamples:\n\nHow to request access to datasets stored in the cloud 🔐\n\nHow to submit a metadata record 📤\n\nHow to clean up an Excel file before uploading 🧼\n\n\n\n\n2. Reference Info 📘\nThe deep, detailed, no-fluff facts about tools, terms, and standards.\nUse these when you need precision or technical definitions.\nExamples:\n\nUsing terms from controlled vocabularies like Darwin Core 🧾\nOn hosting data and code 🫙\nTools, including reccomended R packages 🧑🏾‍💻\n\n\n\n\n3. Tutorials 🎓\nStructured, step-by-step lessons that help you learn by doing.\nIdeal for onboarding or skill-building.\nExamples:\n\nA walk through on using Power BI with our datasets 📊\nIntro to working with Synapse Notebooks 🧠\nHow to support controlled vocabularies 🔤\n\n\n\n\n4. Deep dives 🧠\nThoughtful writeups and explanations on the why behind the work.\nGreat for context, decision-making, or just satisfying your inner data philosopher.\nExamples:\n\nWhy metadata quality matters 🧼\nData lifecycle management explained 🌱➡️🌳\nThe theory behind our access protocols 🚦\n\n\n\n\nGetting Started 🛠️\n🧭 Start exploring using the navigation menu on your left to dive in!\n❔ Learn more about what resources are available on the About page.\n🔍 Use the search bar at the top right to find specific topics or resources.\n\n\n\nContribute & Collaborate! 🤝\nThis documentation is a living resource — always evolving and improving.\nWe’d love your feedback, suggestions, and ideas! 🗣️\nYou can even contribute directly to the documentation! See our Contributing Guide for more details. Spotted something confusing? Missing a topic? Got an awesome tip to share?\n➡️ Reach out to us anytime — we’re listening 👂 and always happy to help!\nHappy stewarding! 🐟✨\n\n↩︎️ Return to the Internal FADS SharePoint Wiki"
+    "text": "This guide is intended for scientists and technical staff in the DFO Pacific Region Science Branch. It outlines what is allowed, restricted, or prohibited when using internal and external platforms (e.g., Sharepoint, GitHub, Zenodo, Google Drive) to manage and share DFO Science data, code, and metadata, including during Fishery Science Advisory Report (FSAR) workflows.\nFor FSAR workflows, we recommend authors save their data in the Sharepoint for the Pacific Salmon Data MS Team. All data should be accompanied by a data dictionary with a README. For resources on creating a data dictionary, please see our blurb on data standards. Github can be used to host the code associated with analyses.\nTable 1. External Platform Use Guidelines for three data classifications of both data and code: Unclassified, Protected A, and Protected B. Note that this table does not cover Protected C or Classified data which are not permitted on external platforms.",
+    "crumbs": [
+      "FADS Wiki Home (Internal)",
+      "Reference Info",
+      "Hosting Data and Code"
+    ]
+  },
+  {
+    "objectID": "reference_info/publishing_data_externally.html#data-classification-quick-reference",
+    "href": "reference_info/publishing_data_externally.html#data-classification-quick-reference",
+    "title": "Hosting Data and Code",
+    "section": "🔐 Data Classification Quick Reference",
+    "text": "🔐 Data Classification Quick Reference\n\nUnclassified: No expected harm from disclosure. Includes open data, public metadata, and code that contains no sensitive logic or credentials.\n\nExamples: Published R packages, fish counts aggregated by region and year, habitat model source code without raw data. Note, however, even unclassified data has to be approved for release by the Regional Director of Science.\n\nProtected A: Could cause low-level injury if disclosed (e.g., minor confidentiality breach, operational disruption).\n\nExamples: Unpublished but non-sensitive biological metrics tied to location or project; fishing effort by vessel class if potentially re-identifiable; unreviewed site-specific model outputs.\n\nProtected B: Could cause serious injury if disclosed (e.g., violation of legal obligations, significant economic harm).\n\nExamples: Commercial catch by vessel or license number; sensitive species occurrences; data provided under confidentiality agreements.\n\n\n\n🔗 Refer to the Policy on Government Security for classification definitions and examples.\n🔎 Unsure if data is protected? Consult your divisional data contact or ATIP office.",
+    "crumbs": [
+      "FADS Wiki Home (Internal)",
+      "Reference Info",
+      "Hosting Data and Code"
+    ]
+  },
+  {
+    "objectID": "reference_info/publishing_data_externally.html#platform-by-platform-guidance",
+    "href": "reference_info/publishing_data_externally.html#platform-by-platform-guidance",
+    "title": "Hosting Data and Code",
+    "section": "🧭 Platform-by-Platform Guidance",
+    "text": "🧭 Platform-by-Platform Guidance\n\n✅ GitHub (Public and Private)\n\nRecommended for: Non-sensitive, unclassified code, metadata schemas, documentation, workflows.\nAllowed: Unclassified data/code only. Data must go through the Approvals and Internal publishing process before being posted anywhere public.\nPrivate repos: Use for drafting and collaboration before public release. Do not use for long-term data storage.\nFSAR Guidance: Posting of data in a public GitHub repo before FSAR is formally approved by CSAS and before the release has beeing approved by the Regional Director of Science is likely a breach of the Access to Information Act and/or Privacy Act.\n\n\n🔗 TBS Directive on Open Government, Section 6.1 – Open information by default, subject to security/privacy. 🔗 DFO Policy for Scientific Data - ” t is the responsibility of the Regional Director of Science to designate specific Data as classified for preventing its open sharing.”\n\n\n\n\n🚫 GitHub Codespaces / Copilot\n\nCodespaces: Cloud-hosted dev environments. Not GC-approved for sensitive data. Fine for non-sensitive code.\nCopilot: Do not enter Protected data/code. Avoid unless using for generic logic.\n\n\n🔗 TBS Guide on Generative AI\n\n\n\n\n✅ Canadian Integrated Ocean Observing System, Zenodo, Dryad, Figshare\n\nUse after FSAR or publication approval.\nGood for creating DOIs and enabling citation and disseminating broadly.\nData must be fully unclassified, reviewed, and approved.\n\n\n\n\n✅ GC Open Data Portal\n\nOfficial repository for open DFO datasets.\nRequires metadata, data steward approval, and Open Government Licence.\n\n\n🔗 Open Government Licence\n🔗 Open Data Portal Submission Guide",
+    "crumbs": [
+      "FADS Wiki Home (Internal)",
+      "Reference Info",
+      "Hosting Data and Code"
+    ]
+  },
+  {
+    "objectID": "reference_info/publishing_data_externally.html#internal-dfo-requirements",
+    "href": "reference_info/publishing_data_externally.html#internal-dfo-requirements",
+    "title": "Hosting Data and Code",
+    "section": "🧾 Internal DFO Requirements",
+    "text": "🧾 Internal DFO Requirements\n\n📤 Internal release process\n\nManaged by the Marine Spatial Data Infrastructure System and the Enterprise Data Hub Follow the official steps here\n\nFOr the steps specific to Approvals and Publishing see step 4 for the Release Criteria Checklist\n\n\n⏳ When to Release?\n\nFor FSAR-related data: Only after advice is finalized and report is approved.\nFor code/metadata tools: May be shared publicly once confirmed to contain no sensitive content.\n\n\n🔗 CSAS Procedural Manuals – Supporting material must not be released until advice is finalized.",
+    "crumbs": [
+      "FADS Wiki Home (Internal)",
+      "Reference Info",
+      "Hosting Data and Code"
+    ]
+  },
+  {
+    "objectID": "reference_info/publishing_data_externally.html#need-help",
+    "href": "reference_info/publishing_data_externally.html#need-help",
+    "title": "Hosting Data and Code",
+    "section": "📬 Need Help?",
+    "text": "📬 Need Help?\n\nData Classification or Release Questions: DFO.PACIFIC.SCIENCE.DATA@dfo-mpo.gc.ca\nCSAS Advice Process Questions: Contact your regional CSAS Coordinator\nOpen Science & GitHub Use: Data Stewardship Unit\n\n\n\nℹ️ This document will be updated periodically. Please check back for revised guidance as policies evolve.",
+    "crumbs": [
+      "FADS Wiki Home (Internal)",
+      "Reference Info",
+      "Hosting Data and Code"
+    ]
   },
   {
     "objectID": "reference_info/data_standards/vocab-index.html",
@@ -37,176 +118,6 @@
       "Reference Info",
       "Data Standards",
       "DFO Salmon Data Controlled Vocabulary"
-    ]
-  },
-  {
-    "objectID": "reference_info/tools/r_packages.html",
-    "href": "reference_info/tools/r_packages.html",
-    "title": "R Packages",
-    "section": "",
-    "text": "Welcome to the R Packages section of the DSU site! 🐟\nHere you’ll find a curated set of R packages that support your work as a data steward or data producer within the Pacific Region Science Branch of Fisheries and Oceans Canada. 🧪🌊\n\n\ntidyr, an offering from the tidyverse is the speedy Swiffer mop to your messy data. It provides tools for following the ethos of tidy data, which holds the following tenets:\n\nEach variable is a column; each column is a variable.\nEach observation is a row; each row is an observation.\nEach value is a cell; each cell is a single value.\n\nFor example, make your wide formatted data more tidy with pivot_longer() or deal with missing values with drop_na().\n\n\n\n\n\n\nWant to load all the tidyverse packages at once?\n\n\n\nTry library(tidyverse) to load all of those amazing tools in one line\n\n\n\n\n\nggplot2 is a powerful tool for data visualization offered under the tidyverse umbrella.\nAs any scientist knows, visualizing your data is just as important as generating it. After all, how can you communicate your results if they’re hidden away in a table?\nThe R graph gallery has countless of great examples of plots created with ggplot2. Check them out!\n\n\n\nAnother tidyverse offering, dplyr is an essential package for data manipulation. Try out generating summary stats in a breeze with group_by() |&gt; summarise() or join two datasets with a left_join().\n\n\n\narrow is an amazing tool for working with larger than memory data. R usually performs computations in RAM (your computer’s short term memory), but this can pose a problem for larger datasets. Arrow moves computations onto disk (your computer’s long term memory) to avoid this.\nFor a tutorial, see here",
-    "crumbs": [
-      "FADS Wiki Home (Internal)",
-      "Reference Info",
-      "Tools",
-      "R Packages"
-    ]
-  },
-  {
-    "objectID": "reference_info/tools/r_packages.html#tidyr",
-    "href": "reference_info/tools/r_packages.html#tidyr",
-    "title": "R Packages",
-    "section": "",
-    "text": "tidyr, an offering from the tidyverse is the speedy Swiffer mop to your messy data. It provides tools for following the ethos of tidy data, which holds the following tenets:\n\nEach variable is a column; each column is a variable.\nEach observation is a row; each row is an observation.\nEach value is a cell; each cell is a single value.\n\nFor example, make your wide formatted data more tidy with pivot_longer() or deal with missing values with drop_na().\n\n\n\n\n\n\nWant to load all the tidyverse packages at once?\n\n\n\nTry library(tidyverse) to load all of those amazing tools in one line",
-    "crumbs": [
-      "FADS Wiki Home (Internal)",
-      "Reference Info",
-      "Tools",
-      "R Packages"
-    ]
-  },
-  {
-    "objectID": "reference_info/tools/r_packages.html#ggplot2",
-    "href": "reference_info/tools/r_packages.html#ggplot2",
-    "title": "R Packages",
-    "section": "",
-    "text": "ggplot2 is a powerful tool for data visualization offered under the tidyverse umbrella.\nAs any scientist knows, visualizing your data is just as important as generating it. After all, how can you communicate your results if they’re hidden away in a table?\nThe R graph gallery has countless of great examples of plots created with ggplot2. Check them out!",
-    "crumbs": [
-      "FADS Wiki Home (Internal)",
-      "Reference Info",
-      "Tools",
-      "R Packages"
-    ]
-  },
-  {
-    "objectID": "reference_info/tools/r_packages.html#dplyr",
-    "href": "reference_info/tools/r_packages.html#dplyr",
-    "title": "R Packages",
-    "section": "",
-    "text": "Another tidyverse offering, dplyr is an essential package for data manipulation. Try out generating summary stats in a breeze with group_by() |&gt; summarise() or join two datasets with a left_join().",
-    "crumbs": [
-      "FADS Wiki Home (Internal)",
-      "Reference Info",
-      "Tools",
-      "R Packages"
-    ]
-  },
-  {
-    "objectID": "reference_info/tools/r_packages.html#arrow",
-    "href": "reference_info/tools/r_packages.html#arrow",
-    "title": "R Packages",
-    "section": "",
-    "text": "arrow is an amazing tool for working with larger than memory data. R usually performs computations in RAM (your computer’s short term memory), but this can pose a problem for larger datasets. Arrow moves computations onto disk (your computer’s long term memory) to avoid this.\nFor a tutorial, see here",
-    "crumbs": [
-      "FADS Wiki Home (Internal)",
-      "Reference Info",
-      "Tools",
-      "R Packages"
-    ]
-  },
-  {
-    "objectID": "tools.html",
-    "href": "tools.html",
-    "title": "🧰 Tools for Data Stewardship ⚙️📦",
-    "section": "",
-    "text": "Welcome to the Tools section of the DSU site! 🐟\nHere you’ll find a curated set of apps, platforms, scripts, and templates that support your work as a data steward or data producer within the Pacific Region Science Branch of Fisheries and Oceans Canada. 🧪🌊\n\n\n\nWe’re actively gathering, building, and documenting the most useful tools for the job — so stay tuned! In the meantime, here’s a sneak peek at what’s coming:\n\n\n\n🗂 Data Dictionary and Metadata Templates (Excel + JSON)\n🤝 Data Management Agreement Templates\n🧮 R & Python Functions, Scripts, and Packages for data cleaning and reporting\n🔗 Links to External Tools (See Internal DSU SharePoint Wiki for internal tools)\n🧠 Toolkits for Data Stewards (checklists, walkthroughs, best practices)\n\n\n\n\n\nIf you’ve built or used something you think could help others — whether it’s a handy Excel macro or a full-blown Shiny app — we’d love to include it here!\nSend us a note and let’s make it easier for everyone to work smarter. 🤝💡\n\n🧭 Return to the Internal DSU Wiki\n\nTools don’t solve problems — people do. But the right tool helps a lot. 🛠️🙂"
-  },
-  {
-    "objectID": "tools.html#this-page-is-under-construction",
-    "href": "tools.html#this-page-is-under-construction",
-    "title": "🧰 Tools for Data Stewardship ⚙️📦",
-    "section": "",
-    "text": "We’re actively gathering, building, and documenting the most useful tools for the job — so stay tuned! In the meantime, here’s a sneak peek at what’s coming:\n\n\n\n🗂 Data Dictionary and Metadata Templates (Excel + JSON)\n🤝 Data Management Agreement Templates\n🧮 R & Python Functions, Scripts, and Packages for data cleaning and reporting\n🔗 Links to External Tools (See Internal DSU SharePoint Wiki for internal tools)\n🧠 Toolkits for Data Stewards (checklists, walkthroughs, best practices)\n\n\n\n\n\nIf you’ve built or used something you think could help others — whether it’s a handy Excel macro or a full-blown Shiny app — we’d love to include it here!\nSend us a note and let’s make it easier for everyone to work smarter. 🤝💡\n\n🧭 Return to the Internal DSU Wiki\n\nTools don’t solve problems — people do. But the right tool helps a lot. 🛠️🙂"
-  },
-  {
-    "objectID": "documentation_hub/how_to_guides/sharepoint_r.html",
-    "href": "documentation_hub/how_to_guides/sharepoint_r.html",
-    "title": "FADS Documentation Hub",
-    "section": "",
-    "text": "Redirecting to https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/sharepoint_r.html"
-  },
-  {
-    "objectID": "tutorials/support_controlled_vocabs.html",
-    "href": "tutorials/support_controlled_vocabs.html",
-    "title": "Support Controlled Vocabularies",
-    "section": "",
-    "text": "The scientist downloads and completes the data dictionary template (Excel)\n\nThey describe each variable: name, definition, method, units, etc.\nThey may include URIs from known vocabularies if possible\n\nThe spreadsheet includes:\n\nA README sheet with instructions\nA Metadata tab for project-level context\nA Data Dictionary tab with one row per variable\n\n\n\n\n\n\nThe data dictionary is passed into your R validation function (validate_data_dictionary())\nIt compares submitted variables to your reference vocabulary, hosted as JSON on GitHub Pages\nThe validator returns:\n\nMatched terms\nUnmatched terms\nSuggested mappings using fuzzy logic (e.g., stringdist or Jaro-Winkler)\n\nThe scientist or steward reviews and adjusts terms as needed\n\n\n\n\n\nFor each submitted or candidate term:\n\nUse an automated lookup tool to check if a concept already exists in the NCEAS Salmon Ontology. Start by using the BioPortal Annotator or API to match term labels and definitions. Optionally, build a lightweight script that compares local vocabulary terms to the ontology by label, synonyms, or definition text using exact or fuzzy string matching. Consider integrating the result into your pipeline for batch validation.\nIf it exists:\n\nUse skos:exactMatch or skos:closeMatch in your .ttl (Turtle) or .jsonld RDF vocab files. These mappings are typically stored in the ontology files generated from your .csv source. Add a column like exact_match_uri or close_match_uri to your .csv, your export script can incorporate those values automatically during serialization to .ttl or .jsonld.\n\nIf it doesn’t exist, but is broadly applicable:\n\nPrepare a Pull Request or issue to suggest the term to the NCEAS maintainers\nInclude:\n\nLabel, definition, synonyms\nUsage example or data sources\n\n\n\n\n\n\n\n\nMaintain DFO vocabularies in GitHub as:\n\n.csv for editing\n.json for R/python access and validation\n.jsonld and .ttl for ontology use\n\nAssign persistent URIs using https://w3id.org/dfo/spsi#term-id\nOrganize vocabularies by data domain or project (e.g., monitoring, habitat, biology)\n\n\n\n\n\nExtend your vocabularies with relationships:\n\nbroader, narrower, related\nhasUnit, hasMethod, derivedFrom\n\nUse tools like rdflib or skosify to model in Turtle or OWL\nAdd namespace info:\n\n@prefix dfo-spsi: &lt;https://w3id.org/dfo/spsi#&gt;\n\nOver time, link this to:\n\nNCEAS ontology\nNERC units\nENVO/OBI for environment/sample methods\n\n\n\n\n\n\nHost vocab on GitHub Pages + register URIs at w3id.org\nLink from your Quarto site (/data-standards/vocab-index.html)\nAllow download in multiple formats (JSON, JSON-LD, TTL)\nUse vocab in:\n\nData validation tools\nMetadata editors\nAPIs and dashboards\nAI pipelines (semantic RAG, search, integration)\n\n\n\nThis workflow will enable DFO Pacific to build a structured, version-controlled, and interoperable vocabulary and ontology infrastructure for salmon data, with clear ties to domain-wide standards and extensibility for AI use cases.",
-    "crumbs": [
-      "FADS Wiki Home (Internal)",
-      "Tutorials",
-      "Support Controlled Vocabularies"
-    ]
-  },
-  {
-    "objectID": "tutorials/support_controlled_vocabs.html#guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo",
-    "href": "tutorials/support_controlled_vocabs.html#guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo",
-    "title": "Support Controlled Vocabularies",
-    "section": "",
-    "text": "The scientist downloads and completes the data dictionary template (Excel)\n\nThey describe each variable: name, definition, method, units, etc.\nThey may include URIs from known vocabularies if possible\n\nThe spreadsheet includes:\n\nA README sheet with instructions\nA Metadata tab for project-level context\nA Data Dictionary tab with one row per variable\n\n\n\n\n\n\nThe data dictionary is passed into your R validation function (validate_data_dictionary())\nIt compares submitted variables to your reference vocabulary, hosted as JSON on GitHub Pages\nThe validator returns:\n\nMatched terms\nUnmatched terms\nSuggested mappings using fuzzy logic (e.g., stringdist or Jaro-Winkler)\n\nThe scientist or steward reviews and adjusts terms as needed\n\n\n\n\n\nFor each submitted or candidate term:\n\nUse an automated lookup tool to check if a concept already exists in the NCEAS Salmon Ontology. Start by using the BioPortal Annotator or API to match term labels and definitions. Optionally, build a lightweight script that compares local vocabulary terms to the ontology by label, synonyms, or definition text using exact or fuzzy string matching. Consider integrating the result into your pipeline for batch validation.\nIf it exists:\n\nUse skos:exactMatch or skos:closeMatch in your .ttl (Turtle) or .jsonld RDF vocab files. These mappings are typically stored in the ontology files generated from your .csv source. Add a column like exact_match_uri or close_match_uri to your .csv, your export script can incorporate those values automatically during serialization to .ttl or .jsonld.\n\nIf it doesn’t exist, but is broadly applicable:\n\nPrepare a Pull Request or issue to suggest the term to the NCEAS maintainers\nInclude:\n\nLabel, definition, synonyms\nUsage example or data sources\n\n\n\n\n\n\n\n\nMaintain DFO vocabularies in GitHub as:\n\n.csv for editing\n.json for R/python access and validation\n.jsonld and .ttl for ontology use\n\nAssign persistent URIs using https://w3id.org/dfo/spsi#term-id\nOrganize vocabularies by data domain or project (e.g., monitoring, habitat, biology)\n\n\n\n\n\nExtend your vocabularies with relationships:\n\nbroader, narrower, related\nhasUnit, hasMethod, derivedFrom\n\nUse tools like rdflib or skosify to model in Turtle or OWL\nAdd namespace info:\n\n@prefix dfo-spsi: &lt;https://w3id.org/dfo/spsi#&gt;\n\nOver time, link this to:\n\nNCEAS ontology\nNERC units\nENVO/OBI for environment/sample methods\n\n\n\n\n\n\nHost vocab on GitHub Pages + register URIs at w3id.org\nLink from your Quarto site (/data-standards/vocab-index.html)\nAllow download in multiple formats (JSON, JSON-LD, TTL)\nUse vocab in:\n\nData validation tools\nMetadata editors\nAPIs and dashboards\nAI pipelines (semantic RAG, search, integration)\n\n\n\nThis workflow will enable DFO Pacific to build a structured, version-controlled, and interoperable vocabulary and ontology infrastructure for salmon data, with clear ties to domain-wide standards and extensibility for AI use cases.",
-    "crumbs": [
-      "FADS Wiki Home (Internal)",
-      "Tutorials",
-      "Support Controlled Vocabularies"
-    ]
-  },
-  {
-    "objectID": "tutorials/support_controlled_vocabs.html#why-bother-with-controlled-vocabularies-and-ontologies",
-    "href": "tutorials/support_controlled_vocabs.html#why-bother-with-controlled-vocabularies-and-ontologies",
-    "title": "Support Controlled Vocabularies",
-    "section": "🤔 Why Bother with Controlled Vocabularies and Ontologies?",
-    "text": "🤔 Why Bother with Controlled Vocabularies and Ontologies?\nIt’s a fair question. Why invest all this time defining terms, aligning with ontologies, and assigning URIs?\nBecause it unlocks a future where your data works harder for you. Controlled vocabularies and ontologies aren’t just academic exercises — they’re the foundation for better discovery, smarter integration, and automation across the science lifecycle.\nHere are some tangible ways this work adds value:\n\n\n🔍 1. Enhanced Data Discovery\n\n“I know someone collected salmon smolt data… but where do I find it?”\n\nBy tagging datasets, columns, and metadata with terms from your SPSI vocabulary, you enable: - Keyword search that actually understands synonyms and related terms - Filters based on data type, units, methods, or ecological domain - Smart discovery interfaces (e.g., “Show me everything related to juvenile survival”)\n➡️ Example: A data catalog that lets users search by controlled term rather than inconsistent column names across spreadsheets.\n\n\n\n🔄 2. Semi-Automated Data Integration\n\n“These datasets report the same metric but use different terms, formats, or units.”\n\nUsing controlled terms with defined relationships (e.g., broader, exactMatch, hasUnit), you can: - Detect overlapping fields across submissions automatically - Align columns and units across multiple datasets - Standardize value domains (e.g., Red/Green/Amber vs Critical/Stable/Concerned)\n➡️ Example: A script that reads in new FSAR data and automatically maps it to the SPSR schema for validation and loading into a database.\n\n\n\n🧠 3. Smarter Applications (AI & Beyond)\n\n“Can’t AI just figure this stuff out?”\n\nOnly if you feed it structure.\nControlled vocabularies and ontologies allow you to: - Ground large language models (LLMs) in your domain’s specific terminology - Build Retrieval-Augmented Generation (RAG) systems for question answering - Use semantic search tools to find relevant variables, concepts, and datasets - Train AI to assist in metadata generation, anomaly detection, or dataset classification\n➡️ Example: A chatbot that helps scientists describe their data using your vocabulary, or recommends matching fields from existing standards.\n\n\n\n🔗 4. Future-Proof Interoperability\n\n“What if we want to share this with other agencies or join a broader platform?”\n\nStandardized vocabularies with persistent URIs and ontology alignments (e.g., with NCEAS, ENVO, OBO) make it easy to: - Share DFO terms with external partners - Convert metadata to international schemas (e.g., Darwin Core, ISO 19115) - Plug into federated data platforms without starting over\n➡️ Example: Publishing your vocabulary to w3id.org lets others reference and reuse your terms as global identifiers.\n\n\n\n🧰 5. Better Metadata, Better Stewardship\n\n“I just want people to fill out metadata that makes sense.”\n\nControlled vocabularies: - Reduce ambiguity - Improve machine readability - Make metadata easier to validate and automate\n➡️ Example: A dropdown menu in a data intake form linked to your vocab that auto-fills units, definitions, and example values — while storing clean, machine-readable metadata under the hood.",
-    "crumbs": [
-      "FADS Wiki Home (Internal)",
-      "Tutorials",
-      "Support Controlled Vocabularies"
-    ]
-  },
-  {
-    "objectID": "tutorials/support_controlled_vocabs.html#tldr",
-    "href": "tutorials/support_controlled_vocabs.html#tldr",
-    "title": "Support Controlled Vocabularies",
-    "section": "🧭 TL;DR",
-    "text": "🧭 TL;DR\nControlled vocabularies and ontologies are not the end — they’re the beginning.\nThey allow you to: - Find data more easily - Integrate it more reliably - Build tools more effectively - And use AI more meaningfully\nThey turn your data into infrastructure.\nAnd they help ensure that knowledge created today can be used, re-used, and trusted — long into the future.",
-    "crumbs": [
-      "FADS Wiki Home (Internal)",
-      "Tutorials",
-      "Support Controlled Vocabularies"
-    ]
-  },
-  {
-    "objectID": "how_to_guides/sharepoint_r.html",
-    "href": "how_to_guides/sharepoint_r.html",
-    "title": "Access Data in SharePoint from R",
-    "section": "",
-    "text": "Connecting R to Sharepoint enables secure, programmatic data access for reproducible analysis workflows. This is especially useful to data stewards and scientists who want to move away from email and personal hard-drive based data storage and sharing and instead use a cloud service as a central repository for data.\nThis is particularly useful for data management tasks in Sharepoint, such as:\n\nDownloading data files for analysis\nUploading processed data files\nManaging document libraries and folders\nAutomating data workflows\n\n\n\n\n\n\n\nWarning\n\n\n\nKeep in mind, to access the DFO Sharepoint from R using the methods below you need to be on the DFO network or using the VPN.",
-    "crumbs": [
-      "FADS Wiki Home (Internal)",
-      "How to Guides",
-      "Access Data in SharePoint from R"
-    ]
-  },
-  {
-    "objectID": "how_to_guides/sharepoint_r.html#conclusion",
-    "href": "how_to_guides/sharepoint_r.html#conclusion",
-    "title": "Access Data in SharePoint from R",
-    "section": "Conclusion",
-    "text": "Conclusion\nThis enables secure, programmatic data access for reproducible analysis workflows. Using the Microsoft365R package, you can easily access and manage data in SharePoint from R. This allows for a more streamlined and efficient workflow, especially for data stewards and scientists who work with large datasets and need to collaborate with others.\nThis approach can help you automate data management tasks, reduce reliance on email and personal storage, and improve collaboration within your team.",
-    "crumbs": [
-      "FADS Wiki Home (Internal)",
-      "How to Guides",
-      "Access Data in SharePoint from R"
-    ]
-  },
-  {
-    "objectID": "how_to_guides/sharepoint_r.html#additional-resources",
-    "href": "how_to_guides/sharepoint_r.html#additional-resources",
-    "title": "Access Data in SharePoint from R",
-    "section": "Additional Resources",
-    "text": "Additional Resources\n\nMicrosoft365R Documentation",
-    "crumbs": [
-      "FADS Wiki Home (Internal)",
-      "How to Guides",
-      "Access Data in SharePoint from R"
     ]
   },
   {
@@ -282,75 +193,54 @@
     ]
   },
   {
-    "objectID": "documentation_hub/how_to_guides/support_controlled_vocabs.html",
-    "href": "documentation_hub/how_to_guides/support_controlled_vocabs.html",
-    "title": "Support Controlled Vocabularies",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About the DSU",
     "section": "",
-    "text": "The scientist downloads and completes the data dictionary template (Excel)\n\nThey describe each variable: name, definition, method, units, etc.\nThey may include URIs from known vocabularies if possible\n\nThe spreadsheet includes:\n\nA README sheet with instructions\nA Metadata tab for project-level context\nA Data Dictionary tab with one row per variable\n\n\n\n\n\n\nThe data dictionary is passed into your R validation function (validate_data_dictionary())\nIt compares submitted variables to your reference vocabulary, hosted as JSON on GitHub Pages\nThe validator returns:\n\nMatched terms\nUnmatched terms\nSuggested mappings using fuzzy logic (e.g., stringdist or Jaro-Winkler)\n\nThe scientist or steward reviews and adjusts terms as needed\n\n\n\n\n\nFor each submitted or candidate term:\n\nUse an automated lookup tool to check if a concept already exists in the NCEAS Salmon Ontology. Start by using the BioPortal Annotator or API to match term labels and definitions. Optionally, build a lightweight script that compares local vocabulary terms to the ontology by label, synonyms, or definition text using exact or fuzzy string matching. Consider integrating the result into your pipeline for batch validation.\nIf it exists:\n\nUse skos:exactMatch or skos:closeMatch in your .ttl (Turtle) or .jsonld RDF vocab files. These mappings are typically stored in the ontology files generated from your .csv source. Add a column like exact_match_uri or close_match_uri to your .csv, your export script can incorporate those values automatically during serialization to .ttl or .jsonld.\n\nIf it doesn’t exist, but is broadly applicable:\n\nPrepare a Pull Request or issue to suggest the term to the NCEAS maintainers\nInclude:\n\nLabel, definition, synonyms\nUsage example or data sources\n\n\n\n\n\n\n\n\nMaintain DFO vocabularies in GitHub as:\n\n.csv for editing\n.json for R/python access and validation\n.jsonld and .ttl for ontology use\n\nAssign persistent URIs using https://w3id.org/dfo/spsi#term-id\nOrganize vocabularies by data domain or project (e.g., monitoring, habitat, biology)\n\n\n\n\n\nExtend your vocabularies with relationships:\n\nbroader, narrower, related\nhasUnit, hasMethod, derivedFrom\n\nUse tools like rdflib or skosify to model in Turtle or OWL\nAdd namespace info:\n\n@prefix dfo-spsi: &lt;https://w3id.org/dfo/spsi#&gt;\n\nOver time, link this to:\n\nNCEAS ontology\nNERC units\nENVO/OBI for environment/sample methods\n\n\n\n\n\n\nHost vocab on GitHub Pages + register URIs at w3id.org\nLink from your Quarto site (/data-standards/vocab-index.html)\nAllow download in multiple formats (JSON, JSON-LD, TTL)\nUse vocab in:\n\nData validation tools\nMetadata editors\nAPIs and dashboards\nAI pipelines (semantic RAG, search, integration)\n\n\n\nThis workflow will enable DFO Pacific to build a structured, version-controlled, and interoperable vocabulary and ontology infrastructure for salmon data, with clear ties to domain-wide standards and extensibility for AI use cases."
+    "text": "The Data Stewardship Unit (DSU) is situated within the Fisheries and Assessment Data Section (FADS), of the Stock Assessment and Research Division of the Pacific Region Science Branch of Fisheries and Oceans Canada (DFO).\nWe are a dedicated team committed to enhancing data management and stewardship practices within DFO. Our primary focus is on data related to Pacific Salmon within the DFO Pacific Region.\nOur goal is to provide guidance and assistance throughout the entire lifecycle of data management—from planning to publication. We strive to ensure our practices align with modern data standards, such as those outlined in the DFO Data Strategy and the Government of Canada’s digital data strategy. Our work is guided by the principles of making data findable, accessible, interoperable, and reusable (FAIR). Additionally, we highly value the principles of Indigenous data governance, such as ownership, control, access, and possession (OCAP), and we are committed to helping our collaborators respect and implement these principles in their work."
   },
   {
-    "objectID": "documentation_hub/how_to_guides/support_controlled_vocabs.html#guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo",
-    "href": "documentation_hub/how_to_guides/support_controlled_vocabs.html#guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo",
-    "title": "Support Controlled Vocabularies",
+    "objectID": "how_to_guides/sharepoint_r.html",
+    "href": "how_to_guides/sharepoint_r.html",
+    "title": "Access Data in SharePoint from R",
     "section": "",
-    "text": "The scientist downloads and completes the data dictionary template (Excel)\n\nThey describe each variable: name, definition, method, units, etc.\nThey may include URIs from known vocabularies if possible\n\nThe spreadsheet includes:\n\nA README sheet with instructions\nA Metadata tab for project-level context\nA Data Dictionary tab with one row per variable\n\n\n\n\n\n\nThe data dictionary is passed into your R validation function (validate_data_dictionary())\nIt compares submitted variables to your reference vocabulary, hosted as JSON on GitHub Pages\nThe validator returns:\n\nMatched terms\nUnmatched terms\nSuggested mappings using fuzzy logic (e.g., stringdist or Jaro-Winkler)\n\nThe scientist or steward reviews and adjusts terms as needed\n\n\n\n\n\nFor each submitted or candidate term:\n\nUse an automated lookup tool to check if a concept already exists in the NCEAS Salmon Ontology. Start by using the BioPortal Annotator or API to match term labels and definitions. Optionally, build a lightweight script that compares local vocabulary terms to the ontology by label, synonyms, or definition text using exact or fuzzy string matching. Consider integrating the result into your pipeline for batch validation.\nIf it exists:\n\nUse skos:exactMatch or skos:closeMatch in your .ttl (Turtle) or .jsonld RDF vocab files. These mappings are typically stored in the ontology files generated from your .csv source. Add a column like exact_match_uri or close_match_uri to your .csv, your export script can incorporate those values automatically during serialization to .ttl or .jsonld.\n\nIf it doesn’t exist, but is broadly applicable:\n\nPrepare a Pull Request or issue to suggest the term to the NCEAS maintainers\nInclude:\n\nLabel, definition, synonyms\nUsage example or data sources\n\n\n\n\n\n\n\n\nMaintain DFO vocabularies in GitHub as:\n\n.csv for editing\n.json for R/python access and validation\n.jsonld and .ttl for ontology use\n\nAssign persistent URIs using https://w3id.org/dfo/spsi#term-id\nOrganize vocabularies by data domain or project (e.g., monitoring, habitat, biology)\n\n\n\n\n\nExtend your vocabularies with relationships:\n\nbroader, narrower, related\nhasUnit, hasMethod, derivedFrom\n\nUse tools like rdflib or skosify to model in Turtle or OWL\nAdd namespace info:\n\n@prefix dfo-spsi: &lt;https://w3id.org/dfo/spsi#&gt;\n\nOver time, link this to:\n\nNCEAS ontology\nNERC units\nENVO/OBI for environment/sample methods\n\n\n\n\n\n\nHost vocab on GitHub Pages + register URIs at w3id.org\nLink from your Quarto site (/data-standards/vocab-index.html)\nAllow download in multiple formats (JSON, JSON-LD, TTL)\nUse vocab in:\n\nData validation tools\nMetadata editors\nAPIs and dashboards\nAI pipelines (semantic RAG, search, integration)\n\n\n\nThis workflow will enable DFO Pacific to build a structured, version-controlled, and interoperable vocabulary and ontology infrastructure for salmon data, with clear ties to domain-wide standards and extensibility for AI use cases."
-  },
-  {
-    "objectID": "documentation_hub/how_to_guides/support_controlled_vocabs.html#why-bother-with-controlled-vocabularies-and-ontologies",
-    "href": "documentation_hub/how_to_guides/support_controlled_vocabs.html#why-bother-with-controlled-vocabularies-and-ontologies",
-    "title": "Support Controlled Vocabularies",
-    "section": "🤔 Why Bother with Controlled Vocabularies and Ontologies?",
-    "text": "🤔 Why Bother with Controlled Vocabularies and Ontologies?\nIt’s a fair question. Why invest all this time defining terms, aligning with ontologies, and assigning URIs?\nBecause it unlocks a future where your data works harder for you. Controlled vocabularies and ontologies aren’t just academic exercises — they’re the foundation for better discovery, smarter integration, and automation across the science lifecycle.\nHere are some tangible ways this work adds value:\n\n\n🔍 1. Enhanced Data Discovery\n\n“I know someone collected salmon smolt data… but where do I find it?”\n\nBy tagging datasets, columns, and metadata with terms from your SPSI vocabulary, you enable: - Keyword search that actually understands synonyms and related terms - Filters based on data type, units, methods, or ecological domain - Smart discovery interfaces (e.g., “Show me everything related to juvenile survival”)\n➡️ Example: A data catalog that lets users search by controlled term rather than inconsistent column names across spreadsheets.\n\n\n\n🔄 2. Semi-Automated Data Integration\n\n“These datasets report the same metric but use different terms, formats, or units.”\n\nUsing controlled terms with defined relationships (e.g., broader, exactMatch, hasUnit), you can: - Detect overlapping fields across submissions automatically - Align columns and units across multiple datasets - Standardize value domains (e.g., Red/Green/Amber vs Critical/Stable/Concerned)\n➡️ Example: A script that reads in new FSAR data and automatically maps it to the SPSR schema for validation and loading into a database.\n\n\n\n🧠 3. Smarter Applications (AI & Beyond)\n\n“Can’t AI just figure this stuff out?”\n\nOnly if you feed it structure.\nControlled vocabularies and ontologies allow you to: - Ground large language models (LLMs) in your domain’s specific terminology - Build Retrieval-Augmented Generation (RAG) systems for question answering - Use semantic search tools to find relevant variables, concepts, and datasets - Train AI to assist in metadata generation, anomaly detection, or dataset classification\n➡️ Example: A chatbot that helps scientists describe their data using your vocabulary, or recommends matching fields from existing standards.\n\n\n\n🔗 4. Future-Proof Interoperability\n\n“What if we want to share this with other agencies or join a broader platform?”\n\nStandardized vocabularies with persistent URIs and ontology alignments (e.g., with NCEAS, ENVO, OBO) make it easy to: - Share DFO terms with external partners - Convert metadata to international schemas (e.g., Darwin Core, ISO 19115) - Plug into federated data platforms without starting over\n➡️ Example: Publishing your vocabulary to w3id.org lets others reference and reuse your terms as global identifiers.\n\n\n\n🧰 5. Better Metadata, Better Stewardship\n\n“I just want people to fill out metadata that makes sense.”\n\nControlled vocabularies: - Reduce ambiguity - Improve machine readability - Make metadata easier to validate and automate\n➡️ Example: A dropdown menu in a data intake form linked to your vocab that auto-fills units, definitions, and example values — while storing clean, machine-readable metadata under the hood."
-  },
-  {
-    "objectID": "documentation_hub/how_to_guides/support_controlled_vocabs.html#tldr",
-    "href": "documentation_hub/how_to_guides/support_controlled_vocabs.html#tldr",
-    "title": "Support Controlled Vocabularies",
-    "section": "🧭 TL;DR",
-    "text": "🧭 TL;DR\nControlled vocabularies and ontologies are not the end — they’re the beginning.\nThey allow you to: - Find data more easily - Integrate it more reliably - Build tools more effectively - And use AI more meaningfully\nThey turn your data into infrastructure.\nAnd they help ensure that knowledge created today can be used, re-used, and trusted — long into the future."
-  },
-  {
-    "objectID": "documentation_hub/how_to_guides/databricks_r_studio.html",
-    "href": "documentation_hub/how_to_guides/databricks_r_studio.html",
-    "title": "FADS Documentation Hub",
-    "section": "",
-    "text": "Redirecting to https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/databricks_r_studio.html"
-  },
-  {
-    "objectID": "deep_dives/Stock Assessment Data 101 for Fisheries Science Reports.html",
-    "href": "deep_dives/Stock Assessment Data 101 for Fisheries Science Reports.html",
-    "title": "Fisheries Science Reports – Data and Stats 101",
-    "section": "",
-    "text": "The 2025 Salmon Spring Week meetings reviewing the biological status of three stocks underscored the complex convergence of three frameworks: Canada’s Fish Stock Provisions (FSP), the Wild Salmon Policy (WSP), and the Precautionary Approach (PA).\n\n\nUnder the Fisheries Act, the Fish Stock Provisions mandate the identification of Limit Reference Points (LRPs) and the assignment of status (healthy, cautious, critical) for major stocks. This legal obligation ties directly into harvest control rules and rebuilding plan requirements when stocks fall below LRPs.\n\n\n\nThe WSP focuses on maintaining biological diversity and genetic distinctiveness by assessing stocks at the level of Conservation Units (CUs). It relies on the identification of biological benchmarks, including lower and upper benchmarks derived from stock-recruitment or percentile approaches, to classify CU status into red, amber, or green zones.\n\n\n\nThe PA emphasizes erring on the side of caution in the face of uncertainty. In assessments, this is operationalized via conservative assumptions (e.g., using lower bounds of estimates, assigning “data deficient” status) and requires clearly articulated risk statements and uncertainty quantification.\n\n\n\nKey terms—Limit Reference Point (LRP) under FSP and Lower Benchmark under WSP—are conceptually aligned but contextually distinct (Table 1). Likewise, USR (Upper Stock Reference) in PA guidance shares conceptual space with the WSP Upper Benchmark. The challenge is reconciling population-specific CUs with stock management units (SMUs) required by FSP, especially when CUs differ in status or data availability. Several inconsistencies, such as those seen in Stikine, highlight the need for an integrated data architecture and harmonized terminology.\nTable 1. Relation of Terms Across Frameworks\n\n\n\n\n\n\n\n\n\n\nWSP Term\nPA/Fisheries Act Equivalent\nPurpose\nStatistical Approach Used\nEg. Quantitative Benchmarks / Model\n\n\n\n\nLower Benchmark\nLimit Reference Point (LRP)\nAvoid serious harm\nSR-based (Ricker), Risk-based, Percentile\n\\(S_{GEN}\\), 40% \\(S_{MSY}\\), 25th percentile\n\n\nUpper Benchmark\nUpper Stock Reference (USR)\nTrigger caution, reduce removals\nSR-based (Ricker), Percentile\n80% \\(S_{MSY}\\), 50th/75th percentile\n\n\nGreen Zone\nHealthy Zone\nFull exploitation allowed\nComposite scoring, quantitative SR input\nStatus \\(\\geq\\) USR or Upper Benchmark\n\n\nAmber Zone\nCautious Zone\nManagement action to avoid critical\nComposite integration, trend analysis\nBetween LRP and USR\n\n\nRed Zone\nCritical Zone\nMinimize removals, enable rebuilding\nEscapement + trend + SR benchmarks\nStatus &lt; LRP or Lower Benchmark\n\n\nStatus Assessment\nStock Assessment\nDetermine location relative to LRP/USR\nIntegrated Indicators + SR + Escapement\nCombined benchmark comparison",
+    "text": "Connecting R to Sharepoint enables secure, programmatic data access for reproducible analysis workflows. This is especially useful to data stewards and scientists who want to move away from email and personal hard-drive based data storage and sharing and instead use a cloud service as a central repository for data.\nThis is particularly useful for data management tasks in Sharepoint, such as:\n\nDownloading data files for analysis\nUploading processed data files\nManaging document libraries and folders\nAutomating data workflows\n\n\n\n\n\n\n\nWarning\n\n\n\nKeep in mind, to access the DFO Sharepoint from R using the methods below you need to be on the DFO network or using the VPN.",
     "crumbs": [
       "FADS Wiki Home (Internal)",
-      "Deep Dives",
-      "Fisheries Science Reports -- Data and Stats 101"
+      "How to Guides",
+      "Access Data in SharePoint from R"
     ]
   },
   {
-    "objectID": "deep_dives/Stock Assessment Data 101 for Fisheries Science Reports.html#high-level-overview-stock-assessment-and-policy-alignment",
-    "href": "deep_dives/Stock Assessment Data 101 for Fisheries Science Reports.html#high-level-overview-stock-assessment-and-policy-alignment",
-    "title": "Fisheries Science Reports – Data and Stats 101",
-    "section": "",
-    "text": "The 2025 Salmon Spring Week meetings reviewing the biological status of three stocks underscored the complex convergence of three frameworks: Canada’s Fish Stock Provisions (FSP), the Wild Salmon Policy (WSP), and the Precautionary Approach (PA).\n\n\nUnder the Fisheries Act, the Fish Stock Provisions mandate the identification of Limit Reference Points (LRPs) and the assignment of status (healthy, cautious, critical) for major stocks. This legal obligation ties directly into harvest control rules and rebuilding plan requirements when stocks fall below LRPs.\n\n\n\nThe WSP focuses on maintaining biological diversity and genetic distinctiveness by assessing stocks at the level of Conservation Units (CUs). It relies on the identification of biological benchmarks, including lower and upper benchmarks derived from stock-recruitment or percentile approaches, to classify CU status into red, amber, or green zones.\n\n\n\nThe PA emphasizes erring on the side of caution in the face of uncertainty. In assessments, this is operationalized via conservative assumptions (e.g., using lower bounds of estimates, assigning “data deficient” status) and requires clearly articulated risk statements and uncertainty quantification.\n\n\n\nKey terms—Limit Reference Point (LRP) under FSP and Lower Benchmark under WSP—are conceptually aligned but contextually distinct (Table 1). Likewise, USR (Upper Stock Reference) in PA guidance shares conceptual space with the WSP Upper Benchmark. The challenge is reconciling population-specific CUs with stock management units (SMUs) required by FSP, especially when CUs differ in status or data availability. Several inconsistencies, such as those seen in Stikine, highlight the need for an integrated data architecture and harmonized terminology.\nTable 1. Relation of Terms Across Frameworks\n\n\n\n\n\n\n\n\n\n\nWSP Term\nPA/Fisheries Act Equivalent\nPurpose\nStatistical Approach Used\nEg. Quantitative Benchmarks / Model\n\n\n\n\nLower Benchmark\nLimit Reference Point (LRP)\nAvoid serious harm\nSR-based (Ricker), Risk-based, Percentile\n\\(S_{GEN}\\), 40% \\(S_{MSY}\\), 25th percentile\n\n\nUpper Benchmark\nUpper Stock Reference (USR)\nTrigger caution, reduce removals\nSR-based (Ricker), Percentile\n80% \\(S_{MSY}\\), 50th/75th percentile\n\n\nGreen Zone\nHealthy Zone\nFull exploitation allowed\nComposite scoring, quantitative SR input\nStatus \\(\\geq\\) USR or Upper Benchmark\n\n\nAmber Zone\nCautious Zone\nManagement action to avoid critical\nComposite integration, trend analysis\nBetween LRP and USR\n\n\nRed Zone\nCritical Zone\nMinimize removals, enable rebuilding\nEscapement + trend + SR benchmarks\nStatus &lt; LRP or Lower Benchmark\n\n\nStatus Assessment\nStock Assessment\nDetermine location relative to LRP/USR\nIntegrated Indicators + SR + Escapement\nCombined benchmark comparison",
+    "objectID": "how_to_guides/sharepoint_r.html#conclusion",
+    "href": "how_to_guides/sharepoint_r.html#conclusion",
+    "title": "Access Data in SharePoint from R",
+    "section": "Conclusion",
+    "text": "Conclusion\nThis enables secure, programmatic data access for reproducible analysis workflows. Using the Microsoft365R package, you can easily access and manage data in SharePoint from R. This allows for a more streamlined and efficient workflow, especially for data stewards and scientists who work with large datasets and need to collaborate with others.\nThis approach can help you automate data management tasks, reduce reliance on email and personal storage, and improve collaboration within your team.",
     "crumbs": [
       "FADS Wiki Home (Internal)",
-      "Deep Dives",
-      "Fisheries Science Reports -- Data and Stats 101"
+      "How to Guides",
+      "Access Data in SharePoint from R"
     ]
   },
   {
-    "objectID": "deep_dives/Stock Assessment Data 101 for Fisheries Science Reports.html#deep-dive-into-reference-points-and-benchmarks-in-stock-assessment",
-    "href": "deep_dives/Stock Assessment Data 101 for Fisheries Science Reports.html#deep-dive-into-reference-points-and-benchmarks-in-stock-assessment",
-    "title": "Fisheries Science Reports – Data and Stats 101",
-    "section": "2. Deep Dive into Reference Points and Benchmarks in Stock Assessment",
-    "text": "2. Deep Dive into Reference Points and Benchmarks in Stock Assessment\n\nBenchmarks vs Reference Points\n\nWSP Benchmarks (UBM, LBM): Derived from productivity models or empirical data. They are biological in nature and specific to a Conservation Unit (CU).\n\nUBM often corresponds to spawner abundance giving Maximum Sustainable Yield (MSY) or similar.\nLBM often relates to serious harm thresholds, such as a 50% probability of recovery under management actionHolt et al. 2009 Indica….\n\nPrecautionary Approach Reference Points (USR, LRP): Defined at the Stock Management Unit (SMU) level, which aggregates multiple CUs. The LRP is legally required under the amended Fisheries Act.\n\nThe SMU-level LRP is often derived using the probability that all component CUs are above their respective LBM—commonly at ≥50% probability (Holt et al. 2023)….\nHow a Lower Benchmark Relates to the LRP\nThe CU-level LBM becomes the statistical input for deriving the SMU-level LRP. Specifically:\n\nLRPs can be derived via logistic regression models estimating the probability that all CUs within an SMU exceed their LBMs given a level of aggregate abundance (Holt et al. 2023)\nThis integrates the WSP framework into the Fisheries Act mandate for setting LRPs.\n\nIn essence, LRP ≈ aggregate abundance where there’s ≥50% chance all CUs are above their LBM (Holt et al. 2023)\n\n\nSpawner-Recruitment (SR) Based Approaches\nThe gold standard for benchmark estimation when sufficient data are available.\n\na. Ricker Model\nThe most commonly used model for Pacific salmon: - Equation:\n\\[\nR = S \\cdot e^{(a - bS + \\varepsilon)}\n\\]\n\nWhere…\n\n\\(R\\): Number of recruits (offspring that survive to a specific life stage)\n\\(S\\): Number of spawners (parents that produced the recruits)\n\\(a\\): Log-scale productivity parameter; reflects the average number of recruits per spawner at low population density\n\\(b\\): Density-dependence parameter; determines how rapidly recruitment decreases as spawner abundance increases\n\\(\\varepsilon\\): Process error term accounting for environmental or stochastic variation not explained by the model\n\n\n\nb. Benchmarks Derived From SR Models\n\nLower Benchmark (LRP):\n\nOften set at ( S_{GEN} ): spawner abundance that leads to the LRP (e.g., ( S_{MSY} )) in one generation.\nOr, alternatively, a % of ( S_{MSY} ) (e.g., 40%).\n\nUpper Benchmark (USR):\n\nOften set at 80% of ( S_{MSY} ) or similar.\n\nTarget (TRP):\n\nUsually near ( S_{MSY} ), or the escapement yielding maximum sustainable yield.\n\n\n\n\n\nAlternative Methods\n\nc. Percentile-Based Approaches\nUsed when data is limited: - Lower Benchmark: 25th percentile historical abundance. - Upper Benchmark: 50th or 75th percentile historical abundance.\n\n\nd. Risk-Based Approaches\n\nUse Monte Carlo or stochastic simulations to assess risk thresholds by repeatedly sampling from uncertainty distributions.\nSimulations quantify the likelihood of stocks falling below defined critical thresholds (LRP).\nBenchmarks are selected to ensure a low probability (e.g., ≤5%) of breaching critical thresholds under various plausible scenarios.\n\n\n\ne. Closed-Loop Simulations (Management Strategy Evaluation - MSE)\n\nUtilize simulation frameworks to test effectiveness and robustness of different management strategies and Harvest Control Rules (HCRs).\nIncorporate uncertainties explicitly:\n\nObservation errors: uncertainties in monitoring and data collection.\nImplementation variability: differences between planned and actual management actions.\nEnvironmental stochasticity: variability due to environmental factors and climate change.\n\nOutcomes evaluated include biological sustainability, economic viability, and compliance with conservation objectives.",
+    "objectID": "how_to_guides/sharepoint_r.html#additional-resources",
+    "href": "how_to_guides/sharepoint_r.html#additional-resources",
+    "title": "Access Data in SharePoint from R",
+    "section": "Additional Resources",
+    "text": "Additional Resources\n\nMicrosoft365R Documentation",
     "crumbs": [
       "FADS Wiki Home (Internal)",
-      "Deep Dives",
-      "Fisheries Science Reports -- Data and Stats 101"
+      "How to Guides",
+      "Access Data in SharePoint from R"
     ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "FADS Documentation Hub 🐟💾",
+    "section": "",
+    "text": "FADS Documentation Hub 🐟💾\nWelcome to the Fishery & Assessment Data Section (FADS) Documentation Hub!\nHere, we work in the open and share our knowledge to enable open data science collaboration with a broad community not only within DFO but also externally with academics, NGOs, and Indigenous groups. The FADS Wiki is for internal access by DFO employees while this Documentation Hub is openly accessible.\nWhether you’re a seasoned data steward or just starting out, this hub is designed to provide you with the resources you need to navigate the world of salmon data stewardship and management 📚✨\nWe follow the Diátaxis Framework to keep documentation organized, useful, and easy to navigate. The docs are grouped into four clear categories:\n\n\n️1. How-to Guides 🛠\nQuick, practical instructions for specific tasks.\nPerfect for when you’re asking:\n&gt; “How do I do this specific thing?”\nExamples:\n\nHow to request access to datasets stored in the cloud 🔐\n\nHow to submit a metadata record 📤\n\nHow to clean up an Excel file before uploading 🧼\n\n\n\n\n2. Reference Info 📘\nThe deep, detailed, no-fluff facts about tools, terms, and standards.\nUse these when you need precision or technical definitions.\nExamples:\n\nUsing terms from controlled vocabularies like Darwin Core 🧾\nOn hosting data and code 🫙\nTools, including reccomended R packages 🧑🏾‍💻\n\n\n\n\n3. Tutorials 🎓\nStructured, step-by-step lessons that help you learn by doing.\nIdeal for onboarding or skill-building.\nExamples:\n\nA walk through on using Power BI with our datasets 📊\nIntro to working with Synapse Notebooks 🧠\nHow to support controlled vocabularies 🔤\n\n\n\n\n4. Deep dives 🧠\nThoughtful writeups and explanations on the why behind the work.\nGreat for context, decision-making, or just satisfying your inner data philosopher.\nExamples:\n\nWhy metadata quality matters 🧼\nData lifecycle management explained 🌱➡️🌳\nThe theory behind our access protocols 🚦\n\n\n\n\nGetting Started 🛠️\n🧭 Start exploring using the navigation menu on your left to dive in!\n❔ Learn more about what resources are available on the About page.\n🔍 Use the search bar at the top right to find specific topics or resources.\n\n\n\nContribute & Collaborate! 🤝\nThis documentation is a living resource — always evolving and improving.\nWe’d love your feedback, suggestions, and ideas! 🗣️\nYou can even contribute directly to the documentation! See our Contributing Guide for more details. Spotted something confusing? Missing a topic? Got an awesome tip to share?\n➡️ Reach out to us anytime — we’re listening 👂 and always happy to help!\nHappy stewarding! 🐟✨\n\n↩︎️ Return to the Internal FADS SharePoint Wiki"
   },
   {
     "objectID": "reference_info/dwc-obis-gbif.html",
@@ -449,71 +339,69 @@
     ]
   },
   {
-    "objectID": "reference_info/publishing_data_externally.html",
-    "href": "reference_info/publishing_data_externally.html",
-    "title": "Hosting Data and Code",
+    "objectID": "reference_info/tools/r_packages.html",
+    "href": "reference_info/tools/r_packages.html",
+    "title": "R Packages",
     "section": "",
-    "text": "This guide is intended for scientists and technical staff in the DFO Pacific Region Science Branch. It outlines what is allowed, restricted, or prohibited when using internal and external platforms (e.g., Sharepoint, GitHub, Zenodo, Google Drive) to manage and share DFO Science data, code, and metadata, including during Fishery Science Advisory Report (FSAR) workflows.\nFor FSAR workflows, we recommend authors save their data in the Sharepoint for the Pacific Salmon Data MS Team. All data should be accompanied by a data dictionary with a README. For resources on creating a data dictionary, please see our blurb on data standards. Github can be used to host the code associated with analyses.\nTable 1. External Platform Use Guidelines for three data classifications of both data and code: Unclassified, Protected A, and Protected B. Note that this table does not cover Protected C or Classified data which are not permitted on external platforms.",
+    "text": "Welcome to the R Packages section of the DSU site! 🐟\nHere you’ll find a curated set of R packages that support your work as a data steward or data producer within the Pacific Region Science Branch of Fisheries and Oceans Canada. 🧪🌊\n\n\ntidyr, an offering from the tidyverse is the speedy Swiffer mop to your messy data. It provides tools for following the ethos of tidy data, which holds the following tenets:\n\nEach variable is a column; each column is a variable.\nEach observation is a row; each row is an observation.\nEach value is a cell; each cell is a single value.\n\nFor example, make your wide formatted data more tidy with pivot_longer() or deal with missing values with drop_na().\n\n\n\n\n\n\nWant to load all the tidyverse packages at once?\n\n\n\nTry library(tidyverse) to load all of those amazing tools in one line\n\n\n\n\n\nggplot2 is a powerful tool for data visualization offered under the tidyverse umbrella.\nAs any scientist knows, visualizing your data is just as important as generating it. After all, how can you communicate your results if they’re hidden away in a table?\nThe R graph gallery has countless of great examples of plots created with ggplot2. Check them out!\n\n\n\nAnother tidyverse offering, dplyr is an essential package for data manipulation. Try out generating summary stats in a breeze with group_by() |&gt; summarise() or join two datasets with a left_join().\n\n\n\narrow is an amazing tool for working with larger than memory data. R usually performs computations in RAM (your computer’s short term memory), but this can pose a problem for larger datasets. Arrow moves computations onto disk (your computer’s long term memory) to avoid this.\nFor a tutorial, see here",
     "crumbs": [
       "FADS Wiki Home (Internal)",
       "Reference Info",
-      "Hosting Data and Code"
+      "Tools",
+      "R Packages"
     ]
   },
   {
-    "objectID": "reference_info/publishing_data_externally.html#data-classification-quick-reference",
-    "href": "reference_info/publishing_data_externally.html#data-classification-quick-reference",
-    "title": "Hosting Data and Code",
-    "section": "🔐 Data Classification Quick Reference",
-    "text": "🔐 Data Classification Quick Reference\n\nUnclassified: No expected harm from disclosure. Includes open data, public metadata, and code that contains no sensitive logic or credentials.\n\nExamples: Published R packages, fish counts aggregated by region and year, habitat model source code without raw data. Note, however, even unclassified data has to be approved for release by the Regional Director of Science.\n\nProtected A: Could cause low-level injury if disclosed (e.g., minor confidentiality breach, operational disruption).\n\nExamples: Unpublished but non-sensitive biological metrics tied to location or project; fishing effort by vessel class if potentially re-identifiable; unreviewed site-specific model outputs.\n\nProtected B: Could cause serious injury if disclosed (e.g., violation of legal obligations, significant economic harm).\n\nExamples: Commercial catch by vessel or license number; sensitive species occurrences; data provided under confidentiality agreements.\n\n\n\n🔗 Refer to the Policy on Government Security for classification definitions and examples.\n🔎 Unsure if data is protected? Consult your divisional data contact or ATIP office.",
-    "crumbs": [
-      "FADS Wiki Home (Internal)",
-      "Reference Info",
-      "Hosting Data and Code"
-    ]
-  },
-  {
-    "objectID": "reference_info/publishing_data_externally.html#platform-by-platform-guidance",
-    "href": "reference_info/publishing_data_externally.html#platform-by-platform-guidance",
-    "title": "Hosting Data and Code",
-    "section": "🧭 Platform-by-Platform Guidance",
-    "text": "🧭 Platform-by-Platform Guidance\n\n✅ GitHub (Public and Private)\n\nRecommended for: Non-sensitive, unclassified code, metadata schemas, documentation, workflows.\nAllowed: Unclassified data/code only. Data must go through the Approvals and Internal publishing process before being posted anywhere public.\nPrivate repos: Use for drafting and collaboration before public release. Do not use for long-term data storage.\nFSAR Guidance: Posting of data in a public GitHub repo before FSAR is formally approved by CSAS and before the release has beeing approved by the Regional Director of Science is likely a breach of the Access to Information Act and/or Privacy Act.\n\n\n🔗 TBS Directive on Open Government, Section 6.1 – Open information by default, subject to security/privacy. 🔗 DFO Policy for Scientific Data - ” t is the responsibility of the Regional Director of Science to designate specific Data as classified for preventing its open sharing.”\n\n\n\n\n🚫 GitHub Codespaces / Copilot\n\nCodespaces: Cloud-hosted dev environments. Not GC-approved for sensitive data. Fine for non-sensitive code.\nCopilot: Do not enter Protected data/code. Avoid unless using for generic logic.\n\n\n🔗 TBS Guide on Generative AI\n\n\n\n\n✅ Canadian Integrated Ocean Observing System, Zenodo, Dryad, Figshare\n\nUse after FSAR or publication approval.\nGood for creating DOIs and enabling citation and disseminating broadly.\nData must be fully unclassified, reviewed, and approved.\n\n\n\n\n✅ GC Open Data Portal\n\nOfficial repository for open DFO datasets.\nRequires metadata, data steward approval, and Open Government Licence.\n\n\n🔗 Open Government Licence\n🔗 Open Data Portal Submission Guide",
-    "crumbs": [
-      "FADS Wiki Home (Internal)",
-      "Reference Info",
-      "Hosting Data and Code"
-    ]
-  },
-  {
-    "objectID": "reference_info/publishing_data_externally.html#internal-dfo-requirements",
-    "href": "reference_info/publishing_data_externally.html#internal-dfo-requirements",
-    "title": "Hosting Data and Code",
-    "section": "🧾 Internal DFO Requirements",
-    "text": "🧾 Internal DFO Requirements\n\n📤 Internal release process\n\nManaged by the Marine Spatial Data Infrastructure System and the Enterprise Data Hub Follow the official steps here\n\nFOr the steps specific to Approvals and Publishing see step 4 for the Release Criteria Checklist\n\n\n⏳ When to Release?\n\nFor FSAR-related data: Only after advice is finalized and report is approved.\nFor code/metadata tools: May be shared publicly once confirmed to contain no sensitive content.\n\n\n🔗 CSAS Procedural Manuals – Supporting material must not be released until advice is finalized.",
-    "crumbs": [
-      "FADS Wiki Home (Internal)",
-      "Reference Info",
-      "Hosting Data and Code"
-    ]
-  },
-  {
-    "objectID": "reference_info/publishing_data_externally.html#need-help",
-    "href": "reference_info/publishing_data_externally.html#need-help",
-    "title": "Hosting Data and Code",
-    "section": "📬 Need Help?",
-    "text": "📬 Need Help?\n\nData Classification or Release Questions: DFO.PACIFIC.SCIENCE.DATA@dfo-mpo.gc.ca\nCSAS Advice Process Questions: Contact your regional CSAS Coordinator\nOpen Science & GitHub Use: Data Stewardship Unit\n\n\n\nℹ️ This document will be updated periodically. Please check back for revised guidance as policies evolve.",
-    "crumbs": [
-      "FADS Wiki Home (Internal)",
-      "Reference Info",
-      "Hosting Data and Code"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About the DSU",
+    "objectID": "reference_info/tools/r_packages.html#tidyr",
+    "href": "reference_info/tools/r_packages.html#tidyr",
+    "title": "R Packages",
     "section": "",
-    "text": "The Data Stewardship Unit (DSU) is situated within the Fisheries and Assessment Data Section (FADS), of the Stock Assessment and Research Division of the Pacific Region Science Branch of Fisheries and Oceans Canada (DFO).\nWe are a dedicated team committed to enhancing data management and stewardship practices within DFO. Our primary focus is on data related to Pacific Salmon within the DFO Pacific Region.\nOur goal is to provide guidance and assistance throughout the entire lifecycle of data management—from planning to publication. We strive to ensure our practices align with modern data standards, such as those outlined in the DFO Data Strategy and the Government of Canada’s digital data strategy. Our work is guided by the principles of making data findable, accessible, interoperable, and reusable (FAIR). Additionally, we highly value the principles of Indigenous data governance, such as ownership, control, access, and possession (OCAP), and we are committed to helping our collaborators respect and implement these principles in their work."
+    "text": "tidyr, an offering from the tidyverse is the speedy Swiffer mop to your messy data. It provides tools for following the ethos of tidy data, which holds the following tenets:\n\nEach variable is a column; each column is a variable.\nEach observation is a row; each row is an observation.\nEach value is a cell; each cell is a single value.\n\nFor example, make your wide formatted data more tidy with pivot_longer() or deal with missing values with drop_na().\n\n\n\n\n\n\nWant to load all the tidyverse packages at once?\n\n\n\nTry library(tidyverse) to load all of those amazing tools in one line",
+    "crumbs": [
+      "FADS Wiki Home (Internal)",
+      "Reference Info",
+      "Tools",
+      "R Packages"
+    ]
+  },
+  {
+    "objectID": "reference_info/tools/r_packages.html#ggplot2",
+    "href": "reference_info/tools/r_packages.html#ggplot2",
+    "title": "R Packages",
+    "section": "",
+    "text": "ggplot2 is a powerful tool for data visualization offered under the tidyverse umbrella.\nAs any scientist knows, visualizing your data is just as important as generating it. After all, how can you communicate your results if they’re hidden away in a table?\nThe R graph gallery has countless of great examples of plots created with ggplot2. Check them out!",
+    "crumbs": [
+      "FADS Wiki Home (Internal)",
+      "Reference Info",
+      "Tools",
+      "R Packages"
+    ]
+  },
+  {
+    "objectID": "reference_info/tools/r_packages.html#dplyr",
+    "href": "reference_info/tools/r_packages.html#dplyr",
+    "title": "R Packages",
+    "section": "",
+    "text": "Another tidyverse offering, dplyr is an essential package for data manipulation. Try out generating summary stats in a breeze with group_by() |&gt; summarise() or join two datasets with a left_join().",
+    "crumbs": [
+      "FADS Wiki Home (Internal)",
+      "Reference Info",
+      "Tools",
+      "R Packages"
+    ]
+  },
+  {
+    "objectID": "reference_info/tools/r_packages.html#arrow",
+    "href": "reference_info/tools/r_packages.html#arrow",
+    "title": "R Packages",
+    "section": "",
+    "text": "arrow is an amazing tool for working with larger than memory data. R usually performs computations in RAM (your computer’s short term memory), but this can pose a problem for larger datasets. Arrow moves computations onto disk (your computer’s long term memory) to avoid this.\nFor a tutorial, see here",
+    "crumbs": [
+      "FADS Wiki Home (Internal)",
+      "Reference Info",
+      "Tools",
+      "R Packages"
+    ]
   },
   {
     "objectID": "CONTRIBUTING.html",
@@ -549,5 +437,117 @@
     "title": "🤝 Contributing to the DSU Docs & Tools",
     "section": "",
     "text": "Open an issue, ping someone on the DSU team, or check the README for more guidance. We’re here to help! Thanks again for contributing — every little improvement adds up."
+  },
+  {
+    "objectID": "tutorials/support_controlled_vocabs.html",
+    "href": "tutorials/support_controlled_vocabs.html",
+    "title": "Support Controlled Vocabularies",
+    "section": "",
+    "text": "The scientist downloads and completes the data dictionary template (Excel)\n\nThey describe each variable: name, definition, method, units, etc.\nThey may include URIs from known vocabularies if possible\n\nThe spreadsheet includes:\n\nA README sheet with instructions\nA Metadata tab for project-level context\nA Data Dictionary tab with one row per variable\n\n\n\n\n\n\nThe data dictionary is passed into your R validation function (validate_data_dictionary())\nIt compares submitted variables to your reference vocabulary, hosted as JSON on GitHub Pages\nThe validator returns:\n\nMatched terms\nUnmatched terms\nSuggested mappings using fuzzy logic (e.g., stringdist or Jaro-Winkler)\n\nThe scientist or steward reviews and adjusts terms as needed\n\n\n\n\n\nFor each submitted or candidate term:\n\nUse an automated lookup tool to check if a concept already exists in the NCEAS Salmon Ontology. Start by using the BioPortal Annotator or API to match term labels and definitions. Optionally, build a lightweight script that compares local vocabulary terms to the ontology by label, synonyms, or definition text using exact or fuzzy string matching. Consider integrating the result into your pipeline for batch validation.\nIf it exists:\n\nUse skos:exactMatch or skos:closeMatch in your .ttl (Turtle) or .jsonld RDF vocab files. These mappings are typically stored in the ontology files generated from your .csv source. Add a column like exact_match_uri or close_match_uri to your .csv, your export script can incorporate those values automatically during serialization to .ttl or .jsonld.\n\nIf it doesn’t exist, but is broadly applicable:\n\nPrepare a Pull Request or issue to suggest the term to the NCEAS maintainers\nInclude:\n\nLabel, definition, synonyms\nUsage example or data sources\n\n\n\n\n\n\n\n\nMaintain DFO vocabularies in GitHub as:\n\n.csv for editing\n.json for R/python access and validation\n.jsonld and .ttl for ontology use\n\nAssign persistent URIs using https://w3id.org/dfo/spsi#term-id\nOrganize vocabularies by data domain or project (e.g., monitoring, habitat, biology)\n\n\n\n\n\nExtend your vocabularies with relationships:\n\nbroader, narrower, related\nhasUnit, hasMethod, derivedFrom\n\nUse tools like rdflib or skosify to model in Turtle or OWL\nAdd namespace info:\n\n@prefix dfo-spsi: &lt;https://w3id.org/dfo/spsi#&gt;\n\nOver time, link this to:\n\nNCEAS ontology\nNERC units\nENVO/OBI for environment/sample methods\n\n\n\n\n\n\nHost vocab on GitHub Pages + register URIs at w3id.org\nLink from your Quarto site (/data-standards/vocab-index.html)\nAllow download in multiple formats (JSON, JSON-LD, TTL)\nUse vocab in:\n\nData validation tools\nMetadata editors\nAPIs and dashboards\nAI pipelines (semantic RAG, search, integration)\n\n\n\nThis workflow will enable DFO Pacific to build a structured, version-controlled, and interoperable vocabulary and ontology infrastructure for salmon data, with clear ties to domain-wide standards and extensibility for AI use cases.",
+    "crumbs": [
+      "FADS Wiki Home (Internal)",
+      "Tutorials",
+      "Support Controlled Vocabularies"
+    ]
+  },
+  {
+    "objectID": "tutorials/support_controlled_vocabs.html#guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo",
+    "href": "tutorials/support_controlled_vocabs.html#guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo",
+    "title": "Support Controlled Vocabularies",
+    "section": "",
+    "text": "The scientist downloads and completes the data dictionary template (Excel)\n\nThey describe each variable: name, definition, method, units, etc.\nThey may include URIs from known vocabularies if possible\n\nThe spreadsheet includes:\n\nA README sheet with instructions\nA Metadata tab for project-level context\nA Data Dictionary tab with one row per variable\n\n\n\n\n\n\nThe data dictionary is passed into your R validation function (validate_data_dictionary())\nIt compares submitted variables to your reference vocabulary, hosted as JSON on GitHub Pages\nThe validator returns:\n\nMatched terms\nUnmatched terms\nSuggested mappings using fuzzy logic (e.g., stringdist or Jaro-Winkler)\n\nThe scientist or steward reviews and adjusts terms as needed\n\n\n\n\n\nFor each submitted or candidate term:\n\nUse an automated lookup tool to check if a concept already exists in the NCEAS Salmon Ontology. Start by using the BioPortal Annotator or API to match term labels and definitions. Optionally, build a lightweight script that compares local vocabulary terms to the ontology by label, synonyms, or definition text using exact or fuzzy string matching. Consider integrating the result into your pipeline for batch validation.\nIf it exists:\n\nUse skos:exactMatch or skos:closeMatch in your .ttl (Turtle) or .jsonld RDF vocab files. These mappings are typically stored in the ontology files generated from your .csv source. Add a column like exact_match_uri or close_match_uri to your .csv, your export script can incorporate those values automatically during serialization to .ttl or .jsonld.\n\nIf it doesn’t exist, but is broadly applicable:\n\nPrepare a Pull Request or issue to suggest the term to the NCEAS maintainers\nInclude:\n\nLabel, definition, synonyms\nUsage example or data sources\n\n\n\n\n\n\n\n\nMaintain DFO vocabularies in GitHub as:\n\n.csv for editing\n.json for R/python access and validation\n.jsonld and .ttl for ontology use\n\nAssign persistent URIs using https://w3id.org/dfo/spsi#term-id\nOrganize vocabularies by data domain or project (e.g., monitoring, habitat, biology)\n\n\n\n\n\nExtend your vocabularies with relationships:\n\nbroader, narrower, related\nhasUnit, hasMethod, derivedFrom\n\nUse tools like rdflib or skosify to model in Turtle or OWL\nAdd namespace info:\n\n@prefix dfo-spsi: &lt;https://w3id.org/dfo/spsi#&gt;\n\nOver time, link this to:\n\nNCEAS ontology\nNERC units\nENVO/OBI for environment/sample methods\n\n\n\n\n\n\nHost vocab on GitHub Pages + register URIs at w3id.org\nLink from your Quarto site (/data-standards/vocab-index.html)\nAllow download in multiple formats (JSON, JSON-LD, TTL)\nUse vocab in:\n\nData validation tools\nMetadata editors\nAPIs and dashboards\nAI pipelines (semantic RAG, search, integration)\n\n\n\nThis workflow will enable DFO Pacific to build a structured, version-controlled, and interoperable vocabulary and ontology infrastructure for salmon data, with clear ties to domain-wide standards and extensibility for AI use cases.",
+    "crumbs": [
+      "FADS Wiki Home (Internal)",
+      "Tutorials",
+      "Support Controlled Vocabularies"
+    ]
+  },
+  {
+    "objectID": "tutorials/support_controlled_vocabs.html#why-bother-with-controlled-vocabularies-and-ontologies",
+    "href": "tutorials/support_controlled_vocabs.html#why-bother-with-controlled-vocabularies-and-ontologies",
+    "title": "Support Controlled Vocabularies",
+    "section": "🤔 Why Bother with Controlled Vocabularies and Ontologies?",
+    "text": "🤔 Why Bother with Controlled Vocabularies and Ontologies?\nIt’s a fair question. Why invest all this time defining terms, aligning with ontologies, and assigning URIs?\nBecause it unlocks a future where your data works harder for you. Controlled vocabularies and ontologies aren’t just academic exercises — they’re the foundation for better discovery, smarter integration, and automation across the science lifecycle.\nHere are some tangible ways this work adds value:\n\n\n🔍 1. Enhanced Data Discovery\n\n“I know someone collected salmon smolt data… but where do I find it?”\n\nBy tagging datasets, columns, and metadata with terms from your SPSI vocabulary, you enable: - Keyword search that actually understands synonyms and related terms - Filters based on data type, units, methods, or ecological domain - Smart discovery interfaces (e.g., “Show me everything related to juvenile survival”)\n➡️ Example: A data catalog that lets users search by controlled term rather than inconsistent column names across spreadsheets.\n\n\n\n🔄 2. Semi-Automated Data Integration\n\n“These datasets report the same metric but use different terms, formats, or units.”\n\nUsing controlled terms with defined relationships (e.g., broader, exactMatch, hasUnit), you can: - Detect overlapping fields across submissions automatically - Align columns and units across multiple datasets - Standardize value domains (e.g., Red/Green/Amber vs Critical/Stable/Concerned)\n➡️ Example: A script that reads in new FSAR data and automatically maps it to the SPSR schema for validation and loading into a database.\n\n\n\n🧠 3. Smarter Applications (AI & Beyond)\n\n“Can’t AI just figure this stuff out?”\n\nOnly if you feed it structure.\nControlled vocabularies and ontologies allow you to: - Ground large language models (LLMs) in your domain’s specific terminology - Build Retrieval-Augmented Generation (RAG) systems for question answering - Use semantic search tools to find relevant variables, concepts, and datasets - Train AI to assist in metadata generation, anomaly detection, or dataset classification\n➡️ Example: A chatbot that helps scientists describe their data using your vocabulary, or recommends matching fields from existing standards.\n\n\n\n🔗 4. Future-Proof Interoperability\n\n“What if we want to share this with other agencies or join a broader platform?”\n\nStandardized vocabularies with persistent URIs and ontology alignments (e.g., with NCEAS, ENVO, OBO) make it easy to: - Share DFO terms with external partners - Convert metadata to international schemas (e.g., Darwin Core, ISO 19115) - Plug into federated data platforms without starting over\n➡️ Example: Publishing your vocabulary to w3id.org lets others reference and reuse your terms as global identifiers.\n\n\n\n🧰 5. Better Metadata, Better Stewardship\n\n“I just want people to fill out metadata that makes sense.”\n\nControlled vocabularies: - Reduce ambiguity - Improve machine readability - Make metadata easier to validate and automate\n➡️ Example: A dropdown menu in a data intake form linked to your vocab that auto-fills units, definitions, and example values — while storing clean, machine-readable metadata under the hood.",
+    "crumbs": [
+      "FADS Wiki Home (Internal)",
+      "Tutorials",
+      "Support Controlled Vocabularies"
+    ]
+  },
+  {
+    "objectID": "tutorials/support_controlled_vocabs.html#tldr",
+    "href": "tutorials/support_controlled_vocabs.html#tldr",
+    "title": "Support Controlled Vocabularies",
+    "section": "🧭 TL;DR",
+    "text": "🧭 TL;DR\nControlled vocabularies and ontologies are not the end — they’re the beginning.\nThey allow you to: - Find data more easily - Integrate it more reliably - Build tools more effectively - And use AI more meaningfully\nThey turn your data into infrastructure.\nAnd they help ensure that knowledge created today can be used, re-used, and trusted — long into the future.",
+    "crumbs": [
+      "FADS Wiki Home (Internal)",
+      "Tutorials",
+      "Support Controlled Vocabularies"
+    ]
+  },
+  {
+    "objectID": "documentation_hub/how_to_guides/support_controlled_vocabs.html",
+    "href": "documentation_hub/how_to_guides/support_controlled_vocabs.html",
+    "title": "Support Controlled Vocabularies",
+    "section": "",
+    "text": "The scientist downloads and completes the data dictionary template (Excel)\n\nThey describe each variable: name, definition, method, units, etc.\nThey may include URIs from known vocabularies if possible\n\nThe spreadsheet includes:\n\nA README sheet with instructions\nA Metadata tab for project-level context\nA Data Dictionary tab with one row per variable\n\n\n\n\n\n\nThe data dictionary is passed into your R validation function (validate_data_dictionary())\nIt compares submitted variables to your reference vocabulary, hosted as JSON on GitHub Pages\nThe validator returns:\n\nMatched terms\nUnmatched terms\nSuggested mappings using fuzzy logic (e.g., stringdist or Jaro-Winkler)\n\nThe scientist or steward reviews and adjusts terms as needed\n\n\n\n\n\nFor each submitted or candidate term:\n\nUse an automated lookup tool to check if a concept already exists in the NCEAS Salmon Ontology. Start by using the BioPortal Annotator or API to match term labels and definitions. Optionally, build a lightweight script that compares local vocabulary terms to the ontology by label, synonyms, or definition text using exact or fuzzy string matching. Consider integrating the result into your pipeline for batch validation.\nIf it exists:\n\nUse skos:exactMatch or skos:closeMatch in your .ttl (Turtle) or .jsonld RDF vocab files. These mappings are typically stored in the ontology files generated from your .csv source. Add a column like exact_match_uri or close_match_uri to your .csv, your export script can incorporate those values automatically during serialization to .ttl or .jsonld.\n\nIf it doesn’t exist, but is broadly applicable:\n\nPrepare a Pull Request or issue to suggest the term to the NCEAS maintainers\nInclude:\n\nLabel, definition, synonyms\nUsage example or data sources\n\n\n\n\n\n\n\n\nMaintain DFO vocabularies in GitHub as:\n\n.csv for editing\n.json for R/python access and validation\n.jsonld and .ttl for ontology use\n\nAssign persistent URIs using https://w3id.org/dfo/spsi#term-id\nOrganize vocabularies by data domain or project (e.g., monitoring, habitat, biology)\n\n\n\n\n\nExtend your vocabularies with relationships:\n\nbroader, narrower, related\nhasUnit, hasMethod, derivedFrom\n\nUse tools like rdflib or skosify to model in Turtle or OWL\nAdd namespace info:\n\n@prefix dfo-spsi: &lt;https://w3id.org/dfo/spsi#&gt;\n\nOver time, link this to:\n\nNCEAS ontology\nNERC units\nENVO/OBI for environment/sample methods\n\n\n\n\n\n\nHost vocab on GitHub Pages + register URIs at w3id.org\nLink from your Quarto site (/data-standards/vocab-index.html)\nAllow download in multiple formats (JSON, JSON-LD, TTL)\nUse vocab in:\n\nData validation tools\nMetadata editors\nAPIs and dashboards\nAI pipelines (semantic RAG, search, integration)\n\n\n\nThis workflow will enable DFO Pacific to build a structured, version-controlled, and interoperable vocabulary and ontology infrastructure for salmon data, with clear ties to domain-wide standards and extensibility for AI use cases."
+  },
+  {
+    "objectID": "documentation_hub/how_to_guides/support_controlled_vocabs.html#guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo",
+    "href": "documentation_hub/how_to_guides/support_controlled_vocabs.html#guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo",
+    "title": "Support Controlled Vocabularies",
+    "section": "",
+    "text": "The scientist downloads and completes the data dictionary template (Excel)\n\nThey describe each variable: name, definition, method, units, etc.\nThey may include URIs from known vocabularies if possible\n\nThe spreadsheet includes:\n\nA README sheet with instructions\nA Metadata tab for project-level context\nA Data Dictionary tab with one row per variable\n\n\n\n\n\n\nThe data dictionary is passed into your R validation function (validate_data_dictionary())\nIt compares submitted variables to your reference vocabulary, hosted as JSON on GitHub Pages\nThe validator returns:\n\nMatched terms\nUnmatched terms\nSuggested mappings using fuzzy logic (e.g., stringdist or Jaro-Winkler)\n\nThe scientist or steward reviews and adjusts terms as needed\n\n\n\n\n\nFor each submitted or candidate term:\n\nUse an automated lookup tool to check if a concept already exists in the NCEAS Salmon Ontology. Start by using the BioPortal Annotator or API to match term labels and definitions. Optionally, build a lightweight script that compares local vocabulary terms to the ontology by label, synonyms, or definition text using exact or fuzzy string matching. Consider integrating the result into your pipeline for batch validation.\nIf it exists:\n\nUse skos:exactMatch or skos:closeMatch in your .ttl (Turtle) or .jsonld RDF vocab files. These mappings are typically stored in the ontology files generated from your .csv source. Add a column like exact_match_uri or close_match_uri to your .csv, your export script can incorporate those values automatically during serialization to .ttl or .jsonld.\n\nIf it doesn’t exist, but is broadly applicable:\n\nPrepare a Pull Request or issue to suggest the term to the NCEAS maintainers\nInclude:\n\nLabel, definition, synonyms\nUsage example or data sources\n\n\n\n\n\n\n\n\nMaintain DFO vocabularies in GitHub as:\n\n.csv for editing\n.json for R/python access and validation\n.jsonld and .ttl for ontology use\n\nAssign persistent URIs using https://w3id.org/dfo/spsi#term-id\nOrganize vocabularies by data domain or project (e.g., monitoring, habitat, biology)\n\n\n\n\n\nExtend your vocabularies with relationships:\n\nbroader, narrower, related\nhasUnit, hasMethod, derivedFrom\n\nUse tools like rdflib or skosify to model in Turtle or OWL\nAdd namespace info:\n\n@prefix dfo-spsi: &lt;https://w3id.org/dfo/spsi#&gt;\n\nOver time, link this to:\n\nNCEAS ontology\nNERC units\nENVO/OBI for environment/sample methods\n\n\n\n\n\n\nHost vocab on GitHub Pages + register URIs at w3id.org\nLink from your Quarto site (/data-standards/vocab-index.html)\nAllow download in multiple formats (JSON, JSON-LD, TTL)\nUse vocab in:\n\nData validation tools\nMetadata editors\nAPIs and dashboards\nAI pipelines (semantic RAG, search, integration)\n\n\n\nThis workflow will enable DFO Pacific to build a structured, version-controlled, and interoperable vocabulary and ontology infrastructure for salmon data, with clear ties to domain-wide standards and extensibility for AI use cases."
+  },
+  {
+    "objectID": "documentation_hub/how_to_guides/support_controlled_vocabs.html#why-bother-with-controlled-vocabularies-and-ontologies",
+    "href": "documentation_hub/how_to_guides/support_controlled_vocabs.html#why-bother-with-controlled-vocabularies-and-ontologies",
+    "title": "Support Controlled Vocabularies",
+    "section": "🤔 Why Bother with Controlled Vocabularies and Ontologies?",
+    "text": "🤔 Why Bother with Controlled Vocabularies and Ontologies?\nIt’s a fair question. Why invest all this time defining terms, aligning with ontologies, and assigning URIs?\nBecause it unlocks a future where your data works harder for you. Controlled vocabularies and ontologies aren’t just academic exercises — they’re the foundation for better discovery, smarter integration, and automation across the science lifecycle.\nHere are some tangible ways this work adds value:\n\n\n🔍 1. Enhanced Data Discovery\n\n“I know someone collected salmon smolt data… but where do I find it?”\n\nBy tagging datasets, columns, and metadata with terms from your SPSI vocabulary, you enable: - Keyword search that actually understands synonyms and related terms - Filters based on data type, units, methods, or ecological domain - Smart discovery interfaces (e.g., “Show me everything related to juvenile survival”)\n➡️ Example: A data catalog that lets users search by controlled term rather than inconsistent column names across spreadsheets.\n\n\n\n🔄 2. Semi-Automated Data Integration\n\n“These datasets report the same metric but use different terms, formats, or units.”\n\nUsing controlled terms with defined relationships (e.g., broader, exactMatch, hasUnit), you can: - Detect overlapping fields across submissions automatically - Align columns and units across multiple datasets - Standardize value domains (e.g., Red/Green/Amber vs Critical/Stable/Concerned)\n➡️ Example: A script that reads in new FSAR data and automatically maps it to the SPSR schema for validation and loading into a database.\n\n\n\n🧠 3. Smarter Applications (AI & Beyond)\n\n“Can’t AI just figure this stuff out?”\n\nOnly if you feed it structure.\nControlled vocabularies and ontologies allow you to: - Ground large language models (LLMs) in your domain’s specific terminology - Build Retrieval-Augmented Generation (RAG) systems for question answering - Use semantic search tools to find relevant variables, concepts, and datasets - Train AI to assist in metadata generation, anomaly detection, or dataset classification\n➡️ Example: A chatbot that helps scientists describe their data using your vocabulary, or recommends matching fields from existing standards.\n\n\n\n🔗 4. Future-Proof Interoperability\n\n“What if we want to share this with other agencies or join a broader platform?”\n\nStandardized vocabularies with persistent URIs and ontology alignments (e.g., with NCEAS, ENVO, OBO) make it easy to: - Share DFO terms with external partners - Convert metadata to international schemas (e.g., Darwin Core, ISO 19115) - Plug into federated data platforms without starting over\n➡️ Example: Publishing your vocabulary to w3id.org lets others reference and reuse your terms as global identifiers.\n\n\n\n🧰 5. Better Metadata, Better Stewardship\n\n“I just want people to fill out metadata that makes sense.”\n\nControlled vocabularies: - Reduce ambiguity - Improve machine readability - Make metadata easier to validate and automate\n➡️ Example: A dropdown menu in a data intake form linked to your vocab that auto-fills units, definitions, and example values — while storing clean, machine-readable metadata under the hood."
+  },
+  {
+    "objectID": "documentation_hub/how_to_guides/support_controlled_vocabs.html#tldr",
+    "href": "documentation_hub/how_to_guides/support_controlled_vocabs.html#tldr",
+    "title": "Support Controlled Vocabularies",
+    "section": "🧭 TL;DR",
+    "text": "🧭 TL;DR\nControlled vocabularies and ontologies are not the end — they’re the beginning.\nThey allow you to: - Find data more easily - Integrate it more reliably - Build tools more effectively - And use AI more meaningfully\nThey turn your data into infrastructure.\nAnd they help ensure that knowledge created today can be used, re-used, and trusted — long into the future."
+  },
+  {
+    "objectID": "deep_dives/Stock Assessment Data 101 for Fisheries Science Reports.html",
+    "href": "deep_dives/Stock Assessment Data 101 for Fisheries Science Reports.html",
+    "title": "Fisheries Science Reports – Data and Stats 101",
+    "section": "",
+    "text": "The 2025 Salmon Spring Week meetings reviewing the biological status of three stocks underscored the complex convergence of three frameworks: Canada’s Fish Stock Provisions (FSP), the Wild Salmon Policy (WSP), and the Precautionary Approach (PA).\n\n\nUnder the Fisheries Act, the Fish Stock Provisions mandate the identification of Limit Reference Points (LRPs) and the assignment of status (healthy, cautious, critical) for major stocks. This legal obligation ties directly into harvest control rules and rebuilding plan requirements when stocks fall below LRPs.\n\n\n\nThe WSP focuses on maintaining biological diversity and genetic distinctiveness by assessing stocks at the level of Conservation Units (CUs). It relies on the identification of biological benchmarks, including lower and upper benchmarks derived from stock-recruitment or percentile approaches, to classify CU status into red, amber, or green zones.\n\n\n\nThe PA emphasizes erring on the side of caution in the face of uncertainty. In assessments, this is operationalized via conservative assumptions (e.g., using lower bounds of estimates, assigning “data deficient” status) and requires clearly articulated risk statements and uncertainty quantification.\n\n\n\nKey terms—Limit Reference Point (LRP) under FSP and Lower Benchmark under WSP—are conceptually aligned but contextually distinct (Table 1). Likewise, USR (Upper Stock Reference) in PA guidance shares conceptual space with the WSP Upper Benchmark. The challenge is reconciling population-specific CUs with stock management units (SMUs) required by FSP, especially when CUs differ in status or data availability. Several inconsistencies, such as those seen in Stikine, highlight the need for an integrated data architecture and harmonized terminology.\nTable 1. Relation of Terms Across Frameworks\n\n\n\n\n\n\n\n\n\n\nWSP Term\nPA/Fisheries Act Equivalent\nPurpose\nStatistical Approach Used\nEg. Quantitative Benchmarks / Model\n\n\n\n\nLower Benchmark\nLimit Reference Point (LRP)\nAvoid serious harm\nSR-based (Ricker), Risk-based, Percentile\n\\(S_{GEN}\\), 40% \\(S_{MSY}\\), 25th percentile\n\n\nUpper Benchmark\nUpper Stock Reference (USR)\nTrigger caution, reduce removals\nSR-based (Ricker), Percentile\n80% \\(S_{MSY}\\), 50th/75th percentile\n\n\nGreen Zone\nHealthy Zone\nFull exploitation allowed\nComposite scoring, quantitative SR input\nStatus \\(\\geq\\) USR or Upper Benchmark\n\n\nAmber Zone\nCautious Zone\nManagement action to avoid critical\nComposite integration, trend analysis\nBetween LRP and USR\n\n\nRed Zone\nCritical Zone\nMinimize removals, enable rebuilding\nEscapement + trend + SR benchmarks\nStatus &lt; LRP or Lower Benchmark\n\n\nStatus Assessment\nStock Assessment\nDetermine location relative to LRP/USR\nIntegrated Indicators + SR + Escapement\nCombined benchmark comparison",
+    "crumbs": [
+      "FADS Wiki Home (Internal)",
+      "Deep Dives",
+      "Fisheries Science Reports -- Data and Stats 101"
+    ]
+  },
+  {
+    "objectID": "deep_dives/Stock Assessment Data 101 for Fisheries Science Reports.html#high-level-overview-stock-assessment-and-policy-alignment",
+    "href": "deep_dives/Stock Assessment Data 101 for Fisheries Science Reports.html#high-level-overview-stock-assessment-and-policy-alignment",
+    "title": "Fisheries Science Reports – Data and Stats 101",
+    "section": "",
+    "text": "The 2025 Salmon Spring Week meetings reviewing the biological status of three stocks underscored the complex convergence of three frameworks: Canada’s Fish Stock Provisions (FSP), the Wild Salmon Policy (WSP), and the Precautionary Approach (PA).\n\n\nUnder the Fisheries Act, the Fish Stock Provisions mandate the identification of Limit Reference Points (LRPs) and the assignment of status (healthy, cautious, critical) for major stocks. This legal obligation ties directly into harvest control rules and rebuilding plan requirements when stocks fall below LRPs.\n\n\n\nThe WSP focuses on maintaining biological diversity and genetic distinctiveness by assessing stocks at the level of Conservation Units (CUs). It relies on the identification of biological benchmarks, including lower and upper benchmarks derived from stock-recruitment or percentile approaches, to classify CU status into red, amber, or green zones.\n\n\n\nThe PA emphasizes erring on the side of caution in the face of uncertainty. In assessments, this is operationalized via conservative assumptions (e.g., using lower bounds of estimates, assigning “data deficient” status) and requires clearly articulated risk statements and uncertainty quantification.\n\n\n\nKey terms—Limit Reference Point (LRP) under FSP and Lower Benchmark under WSP—are conceptually aligned but contextually distinct (Table 1). Likewise, USR (Upper Stock Reference) in PA guidance shares conceptual space with the WSP Upper Benchmark. The challenge is reconciling population-specific CUs with stock management units (SMUs) required by FSP, especially when CUs differ in status or data availability. Several inconsistencies, such as those seen in Stikine, highlight the need for an integrated data architecture and harmonized terminology.\nTable 1. Relation of Terms Across Frameworks\n\n\n\n\n\n\n\n\n\n\nWSP Term\nPA/Fisheries Act Equivalent\nPurpose\nStatistical Approach Used\nEg. Quantitative Benchmarks / Model\n\n\n\n\nLower Benchmark\nLimit Reference Point (LRP)\nAvoid serious harm\nSR-based (Ricker), Risk-based, Percentile\n\\(S_{GEN}\\), 40% \\(S_{MSY}\\), 25th percentile\n\n\nUpper Benchmark\nUpper Stock Reference (USR)\nTrigger caution, reduce removals\nSR-based (Ricker), Percentile\n80% \\(S_{MSY}\\), 50th/75th percentile\n\n\nGreen Zone\nHealthy Zone\nFull exploitation allowed\nComposite scoring, quantitative SR input\nStatus \\(\\geq\\) USR or Upper Benchmark\n\n\nAmber Zone\nCautious Zone\nManagement action to avoid critical\nComposite integration, trend analysis\nBetween LRP and USR\n\n\nRed Zone\nCritical Zone\nMinimize removals, enable rebuilding\nEscapement + trend + SR benchmarks\nStatus &lt; LRP or Lower Benchmark\n\n\nStatus Assessment\nStock Assessment\nDetermine location relative to LRP/USR\nIntegrated Indicators + SR + Escapement\nCombined benchmark comparison",
+    "crumbs": [
+      "FADS Wiki Home (Internal)",
+      "Deep Dives",
+      "Fisheries Science Reports -- Data and Stats 101"
+    ]
+  },
+  {
+    "objectID": "deep_dives/Stock Assessment Data 101 for Fisheries Science Reports.html#deep-dive-into-reference-points-and-benchmarks-in-stock-assessment",
+    "href": "deep_dives/Stock Assessment Data 101 for Fisheries Science Reports.html#deep-dive-into-reference-points-and-benchmarks-in-stock-assessment",
+    "title": "Fisheries Science Reports – Data and Stats 101",
+    "section": "2. Deep Dive into Reference Points and Benchmarks in Stock Assessment",
+    "text": "2. Deep Dive into Reference Points and Benchmarks in Stock Assessment\n\nBenchmarks vs Reference Points\n\nWSP Benchmarks (UBM, LBM): Derived from productivity models or empirical data. They are biological in nature and specific to a Conservation Unit (CU).\n\nUBM often corresponds to spawner abundance giving Maximum Sustainable Yield (MSY) or similar.\nLBM often relates to serious harm thresholds, such as a 50% probability of recovery under management actionHolt et al. 2009 Indica….\n\nPrecautionary Approach Reference Points (USR, LRP): Defined at the Stock Management Unit (SMU) level, which aggregates multiple CUs. The LRP is legally required under the amended Fisheries Act.\n\nThe SMU-level LRP is often derived using the probability that all component CUs are above their respective LBM—commonly at ≥50% probability (Holt et al. 2023)….\nHow a Lower Benchmark Relates to the LRP\nThe CU-level LBM becomes the statistical input for deriving the SMU-level LRP. Specifically:\n\nLRPs can be derived via logistic regression models estimating the probability that all CUs within an SMU exceed their LBMs given a level of aggregate abundance (Holt et al. 2023)\nThis integrates the WSP framework into the Fisheries Act mandate for setting LRPs.\n\nIn essence, LRP ≈ aggregate abundance where there’s ≥50% chance all CUs are above their LBM (Holt et al. 2023)\n\n\nSpawner-Recruitment (SR) Based Approaches\nThe gold standard for benchmark estimation when sufficient data are available.\n\na. Ricker Model\nThe most commonly used model for Pacific salmon: - Equation:\n\\[\nR = S \\cdot e^{(a - bS + \\varepsilon)}\n\\]\n\nWhere…\n\n\\(R\\): Number of recruits (offspring that survive to a specific life stage)\n\\(S\\): Number of spawners (parents that produced the recruits)\n\\(a\\): Log-scale productivity parameter; reflects the average number of recruits per spawner at low population density\n\\(b\\): Density-dependence parameter; determines how rapidly recruitment decreases as spawner abundance increases\n\\(\\varepsilon\\): Process error term accounting for environmental or stochastic variation not explained by the model\n\n\n\nb. Benchmarks Derived From SR Models\n\nLower Benchmark (LRP):\n\nOften set at ( S_{GEN} ): spawner abundance that leads to the LRP (e.g., ( S_{MSY} )) in one generation.\nOr, alternatively, a % of ( S_{MSY} ) (e.g., 40%).\n\nUpper Benchmark (USR):\n\nOften set at 80% of ( S_{MSY} ) or similar.\n\nTarget (TRP):\n\nUsually near ( S_{MSY} ), or the escapement yielding maximum sustainable yield.\n\n\n\n\n\nAlternative Methods\n\nc. Percentile-Based Approaches\nUsed when data is limited: - Lower Benchmark: 25th percentile historical abundance. - Upper Benchmark: 50th or 75th percentile historical abundance.\n\n\nd. Risk-Based Approaches\n\nUse Monte Carlo or stochastic simulations to assess risk thresholds by repeatedly sampling from uncertainty distributions.\nSimulations quantify the likelihood of stocks falling below defined critical thresholds (LRP).\nBenchmarks are selected to ensure a low probability (e.g., ≤5%) of breaching critical thresholds under various plausible scenarios.\n\n\n\ne. Closed-Loop Simulations (Management Strategy Evaluation - MSE)\n\nUtilize simulation frameworks to test effectiveness and robustness of different management strategies and Harvest Control Rules (HCRs).\nIncorporate uncertainties explicitly:\n\nObservation errors: uncertainties in monitoring and data collection.\nImplementation variability: differences between planned and actual management actions.\nEnvironmental stochasticity: variability due to environmental factors and climate change.\n\nOutcomes evaluated include biological sustainability, economic viability, and compliance with conservation objectives.",
+    "crumbs": [
+      "FADS Wiki Home (Internal)",
+      "Deep Dives",
+      "Fisheries Science Reports -- Data and Stats 101"
+    ]
   }
 ]
