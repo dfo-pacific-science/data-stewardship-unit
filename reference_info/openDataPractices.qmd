@@ -24,7 +24,7 @@ For an excellent introduction to Tidy Data, check out Hadley Wickham’s 2014 pa
 ## 2. Redundancy in data is OK sometimes!
 
 Throughout our scientific careers, we’re often told to be concise and simplify so this advice may surprise you. Strategic redundancy in data allows you to make linkages between different pieces of information. It also saves space. 
-One way to invoke the hidden power of redundancy is using  metadata and data dictionaries to link important context to your primary dataset. For example, this table contains two types of observations: song information and Billboard rankings with one entry (i.e., row) each week the song remains on the Billboard Hot 100. Look what happens when we split the information into two tables: one with the song titles, artists’ names and run times; and the other with details on their Billboard rankings. This:
+One way to invoke the hidden power of redundancy is **using metadata and data dictionaries to link important context to your primary dataset.** For example, this table contains two types of observations: song information and Billboard rankings with one entry (i.e., row) each week the song remains on the Billboard Hot 100. Look what happens when we split the information into two tables: one with the song titles, artists’ names and run times; and the other with details on their Billboard rankings. This:
 
 -	Avoids confusion at scale – note how there are two types of temporal data in the first table. One could conflate time and date.
 -	Saves space. Say there were 100 songs with an average of 7 entries each. Rather than a table with 700 entries and 7 variables (4900 pieces of data), you now have 2 tables (containing 4500 data points total). This difference in memory usage scales with the size of your dataset. 
@@ -34,7 +34,7 @@ One way to invoke the hidden power of redundancy is using  metadata and data dic
 
 ## 3. Keep raw data raw
 
-Separating your raw data from analyses is essential for reproducibility. After all, how can we reproduce an analysis if we have no access to the original dataset? In repositories, create a folder named RAW. Place unmanipulated data here. Do not open these files except to add or remove raw data. You may consider setting them to “read-only” when viewing in Excel. Keep all analyses in your scripts and outside of Excel, which will read the data and create outputs from it. Use a descriptive file name for any outputs generated from raw data and place them in a separate folder. 
+Separating your raw data from analyses is essential for reproducibility. After all, how can we reproduce an analysis if we have no access to the original dataset? In repositories, create a folder named RAW. Place unmanipulated data here. *Do not open these files except to add or remove raw data.* You may consider setting them to “read-only” when viewing in Excel. Keep all analyses in your scripts and outside of Excel, which will read the data and create outputs from it. Use a descriptive file name for any outputs generated from raw data and place them in a separate folder. 
 Embracing Open Science practices doesn’t have to be overwhelming. By adopting tidy data formats, allowing for strategic redundancy, and keeping raw data untouched, you can contribute to a more transparent and collaborative scientific community and yourself up for smoother workflows and more reproducible research. These small, intentional steps can have a big impact, helping others build on your work and accelerating the pace of discovery.
 
 
