@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>contributing – FADS Documentation Hub</title>
+<title>Data Practices for Open Science – 3 Quick Tips – FADS Documentation Hub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,47 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-def654f57a554e84557b914867128fa7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-def654f57a554e84557b914867128fa7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,7 +99,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">FADS Documentation Hub</span>
     </a>
   </div>
@@ -94,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">FADS Wiki Home (Internal)</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -123,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../reference_info/dwc-obis-gbif.html">Reference Info</a></li><li class="breadcrumb-item"><a href="../reference_info/openDataPractices.html">Data Practices for Open Science – 3 Quick Tips</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -137,8 +157,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -159,13 +179,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./how_to_guides/databricks_r_studio.html" class="sidebar-item-text sidebar-link">
+  <a href="../how_to_guides/databricks_r_studio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Connect to the Azure Lakehouse from R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./how_to_guides/sharepoint_r.html" class="sidebar-item-text sidebar-link">
+  <a href="../how_to_guides/sharepoint_r.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Access Data in SharePoint from R</span></a>
   </div>
 </li>
@@ -173,28 +193,28 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Reference Info</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference_info/dwc-obis-gbif.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference_info/dwc-obis-gbif.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Darwin Core, GBIF, and OBIS Reference Guide</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference_info/openDataPractices.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference_info/openDataPractices.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Data Practices for Open Science – 3 Quick Tips</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference_info/publishing_data_externally.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference_info/publishing_data_externally.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hosting Data and Code</span></a>
   </div>
 </li>
@@ -209,7 +229,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference_info/data_standards/vocab-index.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference_info/data_standards/vocab-index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DFO Salmon Data Controlled Vocabulary</span></a>
   </div>
 </li>
@@ -226,7 +246,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference_info/tools/r_packages.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference_info/tools/r_packages.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">R Packages</span></a>
   </div>
 </li>
@@ -245,7 +265,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorials/support_controlled_vocabs.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorials/support_controlled_vocabs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Support Controlled Vocabularies</span></a>
   </div>
 </li>
@@ -262,7 +282,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./deep_dives/Stock Assessment Data 101 for Fisheries Science Reports.html" class="sidebar-item-text sidebar-link">
+  <a href="../deep_dives/Stock Assessment Data 101 for Fisheries Science Reports.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Fisheries Science Reports – Data and Stats 101</span></a>
   </div>
 </li>
@@ -278,115 +298,71 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#contributing-to-the-dsu-docs-tools" id="toc-contributing-to-the-dsu-docs-tools" class="nav-link active" data-scroll-target="#contributing-to-the-dsu-docs-tools">🤝 Contributing to the DSU Docs &amp; Tools</a>
-  <ul class="collapse">
-  <li><a href="#how-to-write-a-new-page" id="toc-how-to-write-a-new-page" class="nav-link" data-scroll-target="#how-to-write-a-new-page">✍️ How to Write a New Page</a>
-  <ul class="collapse">
-  <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a></li>
-  <li><a href="#clone-the-repo" id="toc-clone-the-repo" class="nav-link" data-scroll-target="#clone-the-repo">1. Clone the Repo</a></li>
-  <li><a href="#create-a-new-branch" id="toc-create-a-new-branch" class="nav-link" data-scroll-target="#create-a-new-branch">2. Create a new branch</a></li>
-  <li><a href="#make-a-new-.qmd-file" id="toc-make-a-new-.qmd-file" class="nav-link" data-scroll-target="#make-a-new-.qmd-file">3. Make a new .qmd file</a></li>
-  <li><a href="#preview-the-website" id="toc-preview-the-website" class="nav-link" data-scroll-target="#preview-the-website">4. Preview the website</a></li>
-  <li><a href="#render-the-website" id="toc-render-the-website" class="nav-link" data-scroll-target="#render-the-website">5. Render the website</a></li>
-  <li><a href="#push-changes-add-commit-push" id="toc-push-changes-add-commit-push" class="nav-link" data-scroll-target="#push-changes-add-commit-push">6. Push Changes (Add, Commit, Push)</a></li>
-  <li><a href="#create-a-pull-request" id="toc-create-a-pull-request" class="nav-link" data-scroll-target="#create-a-pull-request">7. Create a Pull Request</a></li>
-  </ul></li>
-  <li><a href="#pull-request-tips" id="toc-pull-request-tips" class="nav-link" data-scroll-target="#pull-request-tips">🚀 Pull Request Tips</a>
-  <ul class="collapse">
-  <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices">👯 Best Practices</a></li>
-  </ul></li>
-  <li><a href="#working-with-issues" id="toc-working-with-issues" class="nav-link" data-scroll-target="#working-with-issues">📝 Working with Issues</a></li>
-  <li><a href="#need-help" id="toc-need-help" class="nav-link" data-scroll-target="#need-help">🙌 Need Help?</a></li>
-  </ul></li>
+  <li><a href="#use-a-tidy-format" id="toc-use-a-tidy-format" class="nav-link active" data-scroll-target="#use-a-tidy-format">1. Use a tidy format</a></li>
+  <li><a href="#redundancy-in-data-is-ok-sometimes" id="toc-redundancy-in-data-is-ok-sometimes" class="nav-link" data-scroll-target="#redundancy-in-data-is-ok-sometimes">2. Redundancy in data is OK sometimes!</a></li>
+  <li><a href="#keep-raw-data-raw" id="toc-keep-raw-data-raw" class="nav-link" data-scroll-target="#keep-raw-data-raw">3. Keep raw data raw</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/CONTRIBUTING.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/CONTRIBUTING.md" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/reference_info/openDataPractices.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/reference_info/openDataPractices.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../reference_info/dwc-obis-gbif.html">Reference Info</a></li><li class="breadcrumb-item"><a href="../reference_info/openDataPractices.html">Data Practices for Open Science – 3 Quick Tips</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Data Practices for Open Science – 3 Quick Tips</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="contributing-to-the-dsu-docs-tools" class="level1">
-<h1>🤝 Contributing to the DSU Docs &amp; Tools</h1>
-<p>Thanks for helping improve the <strong>Data Stewardship Unit (DSU)</strong> site! 🎉<br>
-Whether you’re adding a how-to guide, writing up a tutorial, or sharing a helpful tool, your contribution helps make data stewardship easier for everyone in the Pacific Region Science Branch. 🐟🌲</p>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Sir Isaac Newton said, “If I have seen further, it is by standing on the shoulders of giants.” As scientists, we aim to share our findings with colleagues who may use the information to continue to make progress on important questions. Making your data more transparent and reproducible not only contributes to a more useful body of work but provides “shoulders” for those who come after you (other colleagues, students, and collaborators). It’s also handy for improving your own workflow. Your personal peace of mind is another added bonus to front loading the work of organizing and describing your dataset.</p>
+<p>You might be wondering what are we referring to when we talk about “Open Science”. A more open approach to research means making results accessible for the benefits of both scientists and broader society <span class="citation" data-cites="unesco2023">(<a href="#ref-unesco2023" role="doc-biblioref">UNESCO 2023</a>)</span>. The Open Science movement aims to increase transparency and the speed of knowledge transfer. Barriers to Open Science include things like: paywalled journals, favouring knowledge produced by high-income countries, hidden or unknown source code or workflow, and supporting data that is unavailable or unusable. In this article, we’ll tackle the last barrier and talk about practical ways to make your data more Open.</p>
 <hr>
-<section id="how-to-write-a-new-page" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-write-a-new-page">✍️ How to Write a New Page</h2>
-<p>If you’re already a member of the <code>dfo-pacific-science</code> organization, you can edit the repo directly. If not, you can still contribute by creating a pull request (PR) from your forked copy of the repo or creating an issue to request a change.</p>
-<p>Want to add a new documentation or tools page? Here’s how!</p>
-<p>You can open the repo after cloning it in an IDE like RStudio or VSCode depending on your preference.</p>
-<section id="requirements" class="level3">
-<h3 class="anchored" data-anchor-id="requirements">Requirements</h3>
-<ol type="1">
-<li>An IDE (<a href="https://posit.co/download/rstudio-desktop/">RStudio</a> or <a href="https://code.visualstudio.com/Download">VSCode</a>)</li>
-<li><a href="https://git-scm.com/downloads">Git SCM</a></li>
-<li><a href="https://quarto.org/docs/download/index.html">Quarto</a></li>
-</ol>
-</section>
-<section id="clone-the-repo" class="level3">
-<h3 class="anchored" data-anchor-id="clone-the-repo">1. Clone the Repo</h3>
-<p>To open the website locally, clone the repository with git by running <code>git clone https://github.com/dfo-pacific-science/data-stewardship-unit.git</code> in terminal in your IDE.</p>
-</section>
-<section id="create-a-new-branch" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-new-branch">2. Create a new branch</h3>
-<p>Make a new branch so that you can test things out without messing things up in the main branch. Run <code>git branch {branchName}</code> in the terminal in your IDE to make a new branch and <code>git switch {branchName}</code> to switch to it.</p>
-</section>
-<section id="make-a-new-.qmd-file" class="level3">
-<h3 class="anchored" data-anchor-id="make-a-new-.qmd-file">3. Make a new .qmd file</h3>
-<p>You can create a new .qmd file in one of the four folders (how_to_guides, reference_info, tutorials, deep_dives) to get it displayed under the navbar menu, which grabs .qmd files automatically.</p>
-</section>
-<section id="preview-the-website" class="level3">
-<h3 class="anchored" data-anchor-id="preview-the-website">4. Preview the website</h3>
-<p>In terminal, run <code>quarto preview</code>. A browser window will pop up with a locally-hosted version of the website. Make sure your changes look good and progress to the next step. Make edits if needed.</p>
-</section>
-<section id="render-the-website" class="level3">
-<h3 class="anchored" data-anchor-id="render-the-website">5. Render the website</h3>
-<p>In terminal, run <code>quarto render</code>. The complete site will be rendered in the <code>_site</code> folder for Github actions to deploy.</p>
-</section>
-<section id="push-changes-add-commit-push" class="level3">
-<h3 class="anchored" data-anchor-id="push-changes-add-commit-push">6. Push Changes (Add, Commit, Push)</h3>
-<p>Run <code>git add {fileName}</code> for all of the files you want to stage. Make sure to not forget the <code>_free</code> folder, which contains all of the information related to R code that runs in some of the .qmd’s.</p>
-<p>Run <code>git commit -m "commit message here"</code>.</p>
-<p>Run <code>git push</code>. If you’ve never pushed on your current branch, git will prompt you to use something like <code>git push --set-upstream origin {branchName}</code>.</p>
-</section>
-<section id="create-a-pull-request" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-pull-request">7. Create a Pull Request</h3>
-<p>Create a pull request from your branch and assign a team member to review it. There are protections on the main branch that caution you away from pushing without a review. Once the PR has been merged to main, the Github Action will be automatically triggered. Check the actions tab to see the deployment progress.</p>
+<section id="use-a-tidy-format" class="level2">
+<h2 class="anchored" data-anchor-id="use-a-tidy-format">1. Use a tidy format</h2>
+<p><img src="../images/dataPracticesImages/fig1TidyData.png" class="img-fluid" alt="Fig1TidyData"> Illustration from Tidy Data for reproducibility, efficiency, and collaboration by Julia Lowndes and Allison Horst. Adapted from <span class="citation" data-cites="wickham2014">Wickham (<a href="#ref-wickham2014" role="doc-biblioref">2014</a>)</span>.</p>
+<p>For an excellent introduction to Tidy Data, check out Hadley Wickham’s 2014 paper in the Journal of Statistical Software <span class="citation" data-cites="wickham2014">(<a href="#ref-wickham2014" role="doc-biblioref">Wickham 2014</a>)</span>. The tidy approach to data dictates that when organizing data, every observation should be represented by a row and every variable a column. This is a great approach for standardization and machine readability.</p>
 <hr>
 </section>
-</section>
-<section id="pull-request-tips" class="level2">
-<h2 class="anchored" data-anchor-id="pull-request-tips">🚀 Pull Request Tips</h2>
-<section id="best-practices" class="level3">
-<h3 class="anchored" data-anchor-id="best-practices">👯 Best Practices</h3>
+<section id="redundancy-in-data-is-ok-sometimes" class="level2">
+<h2 class="anchored" data-anchor-id="redundancy-in-data-is-ok-sometimes">2. Redundancy in data is OK sometimes!</h2>
+<p>Throughout our scientific careers, we’re often told to be concise and simplify so this advice may surprise you. Strategic redundancy in data allows you to make linkages between different pieces of information. It also saves space. One way to invoke the hidden power of redundancy is <strong>using metadata and data dictionaries to link important context to your primary dataset.</strong> For example, this table contains two types of observations: song information and Billboard rankings with one entry (i.e., row) each week the song remains on the Billboard Hot 100. Look what happens when we split the information into two tables: one with the song titles, artists’ names and run times; and the other with details on their Billboard rankings. This:</p>
 <ul>
-<li>Use <strong>feature branches</strong> off the main branch if working on a larger update (e.g.&nbsp;<code>fix/typo</code>, <code>add/new-tool-guide</code>)</li>
-<li>Otherwise for small updates, commit directly to <code>main</code> or create your Pull Request directly from main.</li>
-<li>Group related changes into one PR</li>
-<li>If you’re fixing an Issue, mention it in your PR:<br>
-<code>Closes #42</code> will auto-link and close the issue on merge</li>
-<li>Keep commit messages short but clear and in present tense (<code>"Add how-to for bulk metadata upload"</code>)</li>
+<li>Avoids confusion at scale – note how there are two types of temporal data in the first table. One could conflate time and date.</li>
+<li>Saves space. Say there were 100 songs with an average of 7 entries each. Rather than a table with 700 entries and 7 variables (4900 pieces of data), you now have 2 tables (containing 4500 data points total). This difference in memory usage scales with the size of your dataset.</li>
 </ul>
+<p><img src="../images/dataPracticesImages/table1TMI.png" class="img-fluid" alt="table1TMI"> Table 1. Too much information at different scales crammed into a single table. Table adapted from <span class="citation" data-cites="wickham2014">Wickham (<a href="#ref-wickham2014" role="doc-biblioref">2014</a>)</span>.</p>
+<p><img src="../images/dataPracticesImages/table2Redundancy.png" class="img-fluid" alt="table2Redundancy"> Table 2: Example of using redundancy by splitting tables in two. Note how one song (left) has multiple Billboard rankings (right). Tables adapted from <span class="citation" data-cites="wickham2014">Wickham (<a href="#ref-wickham2014" role="doc-biblioref">2014</a>)</span>.</p>
 <hr>
 </section>
-</section>
-<section id="working-with-issues" class="level2">
-<h2 class="anchored" data-anchor-id="working-with-issues">📝 Working with Issues</h2>
-<p>Use <a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues">GitHub Issues</a> to: - Request a new topic 📌 - Report a problem 🐛 - Share an idea 💡</p>
-<p>We tag and triage regularly — feel free to assign yourself or ask for help!</p>
-<hr>
-</section>
-<section id="need-help" class="level2">
-<h2 class="anchored" data-anchor-id="need-help">🙌 Need Help?</h2>
-<p>Open an issue, ping someone on the DSU team, or check the <a href="./README.md">README</a> for more guidance. We’re here to help! Thanks again for contributing — every little improvement adds up.</p>
+<section id="keep-raw-data-raw" class="level2">
+<h2 class="anchored" data-anchor-id="keep-raw-data-raw">3. Keep raw data raw</h2>
+<p>Separating your raw data from analyses is essential for reproducibility. After all, how can we reproduce an analysis if we have no access to the original dataset? In repositories, create a folder named RAW. Place unmanipulated data here. <em>Do not open these files except to add or remove raw data.</em> You may consider setting them to “read-only” when viewing in Excel. Keep all analyses in your scripts and outside of Excel, which will read the data and create outputs from it. Use a descriptive file name for any outputs generated from raw data and place them in a separate folder.</p>
+<p>Embracing Open Science practices doesn’t have to be overwhelming. By adopting tidy data formats, allowing for strategic redundancy, and keeping raw data untouched, you can contribute to a more transparent and collaborative scientific community and yourself up for smoother workflows and more reproducible research. These small, intentional steps can have a big impact, helping others build on your work and accelerating the pace of discovery.</p>
+
 
 
 </section>
-</section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-unesco2023" class="csl-entry" role="listitem">
+UNESCO. 2023. <em>UNESCO Recommendation on Open Science</em>. <a href="https://www.unesco.org/en/open-science/about?hub=686">https://www.unesco.org/en/open-science/about?hub=686</a>.
+</div>
+<div id="ref-wickham2014" class="csl-entry" role="listitem">
+Wickham, H. 2014. <span>“Tidy Data.”</span> <em>Journal of Statistical Software</em> 59 (10): 1–24. <a href="https://doi.org/10.18637/jss.v059.i10">https://doi.org/10.18637/jss.v059.i10</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -794,7 +770,7 @@ Whether you’re adding a how-to guide, writing up a tutorial, or sharing a help
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/CONTRIBUTING.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/CONTRIBUTING.md" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/reference_info/openDataPractices.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/reference_info/openDataPractices.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This site was created with <a href="https://quarto.org/">Quarto</a> and is hosted with <a href="https://pages.github.com/">GitHub Pages</a>.</p>
 </div>

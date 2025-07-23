@@ -95,30 +95,102 @@
     ]
   },
   {
-    "objectID": "reference_info/data_standards/vocab-index.html",
-    "href": "reference_info/data_standards/vocab-index.html",
-    "title": "DFO Salmon Data Controlled Vocabulary",
+    "objectID": "reference_info/openDataPractices.html",
+    "href": "reference_info/openDataPractices.html",
+    "title": "Data Practices for Open Science – 3 Quick Tips",
     "section": "",
-    "text": "A growing challenge in salmon research, management, and data stewardship is the proliferation of inconsistent terms, acronyms, and definitions across documents, programs, and even within the same organization—leading to confusion, miscommunication, and inefficiencies in analysis and reporting.\nTo address this, the Data Stewardship Unit (DSU) has initiated the DFO Salmon Data Controlled Vocabulary—a standardized, community-curated list of key terms and definitions related to salmon data collection, analysis, and policy within Fisheries and Oceans Canada (DFO) Pacific Region.\nThe table below consolidates definitions from regulatory documents, scientific literature, internal guidelines, and other sources into a single, searchable, and filterable reference designed to improve semantic clarity across DFO Pacific.\nThe table is more than a simple glossary: it is a formally structured controlled vocabulary that uses the W3C-endorsed Simple Knowledge Organization System (SKOS), enabling machine-readable formats for integration into data systems, APIs, and web applications.For a deep-dive on the how and why of controlled vocabularies, see our guide: Support Controlled Vocabularies.",
+    "text": "Sir Isaac Newton said, “If I have seen further, it is by standing on the shoulders of giants.” As scientists, we aim to share our findings with colleagues who may use the information to continue to make progress on important questions. Making your data more transparent and reproducible not only contributes to a more useful body of work but provides “shoulders” for those who come after you (other colleagues, students, and collaborators). It’s also handy for improving your own workflow. Your personal peace of mind is another added bonus to front loading the work of organizing and describing your dataset.\nYou might be wondering what are we referring to when we talk about “Open Science”. A more open approach to research means making results accessible for the benefits of both scientists and broader society (UNESCO 2023). The Open Science movement aims to increase transparency and the speed of knowledge transfer. Barriers to Open Science include things like: paywalled journals, favouring knowledge produced by high-income countries, hidden or unknown source code or workflow, and supporting data that is unavailable or unusable. In this article, we’ll tackle the last barrier and talk about practical ways to make your data more Open.",
     "crumbs": [
       "FADS Wiki Home (Internal)",
       "Reference Info",
-      "Data Standards",
-      "DFO Salmon Data Controlled Vocabulary"
+      "Data Practices for Open Science -- 3 Quick Tips"
     ]
   },
   {
-    "objectID": "reference_info/data_standards/vocab-index.html#dfo-salmon-controlled-vocabulary-terms-under-construction",
-    "href": "reference_info/data_standards/vocab-index.html#dfo-salmon-controlled-vocabulary-terms-under-construction",
-    "title": "DFO Salmon Data Controlled Vocabulary",
-    "section": "🗂️DFO Salmon – Controlled Vocabulary Terms (🚧Under Construction🚧)",
-    "text": "🗂️DFO Salmon – Controlled Vocabulary Terms (🚧Under Construction🚧)\n\n\n\n\n\n\nUnder the hood, the vocabulary is formatted in SKOS (Simple Knowledge Organization System), a W3C-recommended framework for representing controlled vocabularies and thesauri. By modeling terms and their relationships (broader, narrower, related), SKOS makes it easy to:\n\nMaintain consistent labels, definitions, and concept hierarchies.\nShare and integrate the vocabulary with other systems that understand RDF.\n\nThe vocabulary is intended to be a living document that evolves with the needs of the community. It is maintained by the Data Stewardship Unit (DSU) within the Fisheries and Assessment Data Section (FADS) in the Pacific Region of Fisheries and Oceans Canada (DFO).\nTo maximize accessibility, we publish three serializations:\n\nJSON – A lightweight format ideal for most web and desktop applications that need to load term lists and definitions without RDF tooling.\nJSON-LD – Embeds linked-data context so that terms become addressable URIs; perfect for web pages, APIs, and any environment where you want automatic context resolution and richer interoperability.\nTurtle (.ttl) – A compact, human-readable RDF syntax for semantic-web tools, triple stores, and SPARQL queries, enabling advanced semantic reasoning or integration into broader data ecosystems.\n\nYou can download or query any of these formats directly from our GitHub repo for programmatic access, metadata validation, integration, or automated workflows.\nFile a GitHub Issue at https://github.com/dfo-pacific-science/data-stewardship-unit/issues\nOr contact the Data Stewardship Unit.",
+    "objectID": "reference_info/openDataPractices.html#use-a-tidy-format",
+    "href": "reference_info/openDataPractices.html#use-a-tidy-format",
+    "title": "Data Practices for Open Science – 3 Quick Tips",
+    "section": "1. Use a tidy format",
+    "text": "1. Use a tidy format\n Illustration from Tidy Data for reproducibility, efficiency, and collaboration by Julia Lowndes and Allison Horst. Adapted from Wickham (2014).\nFor an excellent introduction to Tidy Data, check out Hadley Wickham’s 2014 paper in the Journal of Statistical Software (Wickham 2014). The tidy approach to data dictates that when organizing data, every observation should be represented by a row and every variable a column. This is a great approach for standardization and machine readability.",
     "crumbs": [
       "FADS Wiki Home (Internal)",
       "Reference Info",
-      "Data Standards",
-      "DFO Salmon Data Controlled Vocabulary"
+      "Data Practices for Open Science -- 3 Quick Tips"
     ]
+  },
+  {
+    "objectID": "reference_info/openDataPractices.html#redundancy-in-data-is-ok-sometimes",
+    "href": "reference_info/openDataPractices.html#redundancy-in-data-is-ok-sometimes",
+    "title": "Data Practices for Open Science – 3 Quick Tips",
+    "section": "2. Redundancy in data is OK sometimes!",
+    "text": "2. Redundancy in data is OK sometimes!\nThroughout our scientific careers, we’re often told to be concise and simplify so this advice may surprise you. Strategic redundancy in data allows you to make linkages between different pieces of information. It also saves space. One way to invoke the hidden power of redundancy is using metadata and data dictionaries to link important context to your primary dataset. For example, this table contains two types of observations: song information and Billboard rankings with one entry (i.e., row) each week the song remains on the Billboard Hot 100. Look what happens when we split the information into two tables: one with the song titles, artists’ names and run times; and the other with details on their Billboard rankings. This:\n\nAvoids confusion at scale – note how there are two types of temporal data in the first table. One could conflate time and date.\nSaves space. Say there were 100 songs with an average of 7 entries each. Rather than a table with 700 entries and 7 variables (4900 pieces of data), you now have 2 tables (containing 4500 data points total). This difference in memory usage scales with the size of your dataset.\n\n Table 1. Too much information at different scales crammed into a single table. Table adapted from Wickham (2014).\n Table 2: Example of using redundancy by splitting tables in two. Note how one song (left) has multiple Billboard rankings (right). Tables adapted from Wickham (2014).",
+    "crumbs": [
+      "FADS Wiki Home (Internal)",
+      "Reference Info",
+      "Data Practices for Open Science -- 3 Quick Tips"
+    ]
+  },
+  {
+    "objectID": "reference_info/openDataPractices.html#keep-raw-data-raw",
+    "href": "reference_info/openDataPractices.html#keep-raw-data-raw",
+    "title": "Data Practices for Open Science – 3 Quick Tips",
+    "section": "3. Keep raw data raw",
+    "text": "3. Keep raw data raw\nSeparating your raw data from analyses is essential for reproducibility. After all, how can we reproduce an analysis if we have no access to the original dataset? In repositories, create a folder named RAW. Place unmanipulated data here. Do not open these files except to add or remove raw data. You may consider setting them to “read-only” when viewing in Excel. Keep all analyses in your scripts and outside of Excel, which will read the data and create outputs from it. Use a descriptive file name for any outputs generated from raw data and place them in a separate folder.\nEmbracing Open Science practices doesn’t have to be overwhelming. By adopting tidy data formats, allowing for strategic redundancy, and keeping raw data untouched, you can contribute to a more transparent and collaborative scientific community and yourself up for smoother workflows and more reproducible research. These small, intentional steps can have a big impact, helping others build on your work and accelerating the pace of discovery.",
+    "crumbs": [
+      "FADS Wiki Home (Internal)",
+      "Reference Info",
+      "Data Practices for Open Science -- 3 Quick Tips"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "FADS Documentation Hub 🐟💾",
+    "section": "",
+    "text": "FADS Documentation Hub 🐟💾\nWelcome to the Fishery & Assessment Data Section (FADS) Documentation Hub!\nHere, we work in the open and share our knowledge to enable open data science collaboration with a broad community not only within DFO but also externally with academics, NGOs, and Indigenous groups. The FADS Wiki is for internal access by DFO employees while this Documentation Hub is openly accessible.\nWhether you’re a seasoned data steward or just starting out, this hub is designed to provide you with the resources you need to navigate the world of salmon data stewardship and management 📚✨\nWe follow the Diátaxis Framework to keep documentation organized, useful, and easy to navigate. The docs are grouped into four clear categories:\n\n\n️1. How-to Guides 🛠\nQuick, practical instructions for specific tasks.\nPerfect for when you’re asking:\n&gt; “How do I do this specific thing?”\nExamples:\n\nHow to request access to datasets stored in the cloud 🔐\n\nHow to submit a metadata record 📤\n\nHow to clean up an Excel file before uploading 🧼\n\n\n\n\n2. Reference Info 📘\nThe deep, detailed, no-fluff facts about tools, terms, and standards.\nUse these when you need precision or technical definitions.\nExamples:\n\nUsing terms from controlled vocabularies like Darwin Core 🧾\nOn hosting data and code 🫙\nTools, including reccomended R packages 🧑🏾‍💻\n\n\n\n\n3. Tutorials 🎓\nStructured, step-by-step lessons that help you learn by doing.\nIdeal for onboarding or skill-building.\nExamples:\n\nA walk through on using Power BI with our datasets 📊\nIntro to working with Synapse Notebooks 🧠\nHow to support controlled vocabularies 🔤\n\n\n\n\n4. Deep dives 🧠\nThoughtful writeups and explanations on the why behind the work.\nGreat for context, decision-making, or just satisfying your inner data philosopher.\nExamples:\n\nWhy metadata quality matters 🧼\nData lifecycle management explained 🌱➡️🌳\nThe theory behind our access protocols 🚦\n\n\n\n\nGetting Started 🛠️\n🧭 Start exploring using the navigation menu on your left to dive in!\n❔ Learn more about what resources are available on the About page.\n🔍 Use the search bar at the top right to find specific topics or resources.\n\n\n\nContribute & Collaborate! 🤝\nThis documentation is a living resource — always evolving and improving.\nWe’d love your feedback, suggestions, and ideas! 🗣️\nYou can even contribute directly to the documentation! See our Contributing Guide for more details. Spotted something confusing? Missing a topic? Got an awesome tip to share?\n➡️ Reach out to us anytime — we’re listening 👂 and always happy to help!\nHappy stewarding! 🐟✨\n\n↩︎️ Return to the Internal FADS SharePoint Wiki"
+  },
+  {
+    "objectID": "how_to_guides/sharepoint_r.html",
+    "href": "how_to_guides/sharepoint_r.html",
+    "title": "Access Data in SharePoint from R",
+    "section": "",
+    "text": "Connecting R to Sharepoint enables secure, programmatic data access for reproducible analysis workflows. This is especially useful to data stewards and scientists who want to move away from email and personal hard-drive based data storage and sharing and instead use a cloud service as a central repository for data.\nThis is particularly useful for data management tasks in Sharepoint, such as:\n\nDownloading data files for analysis\nUploading processed data files\nManaging document libraries and folders\nAutomating data workflows\n\n\n\n\n\n\n\nWarning\n\n\n\nKeep in mind, to access the DFO Sharepoint from R using the methods below you need to be on the DFO network or using the VPN.",
+    "crumbs": [
+      "FADS Wiki Home (Internal)",
+      "How to Guides",
+      "Access Data in SharePoint from R"
+    ]
+  },
+  {
+    "objectID": "how_to_guides/sharepoint_r.html#conclusion",
+    "href": "how_to_guides/sharepoint_r.html#conclusion",
+    "title": "Access Data in SharePoint from R",
+    "section": "Conclusion",
+    "text": "Conclusion\nThis enables secure, programmatic data access for reproducible analysis workflows. Using the Microsoft365R package, you can easily access and manage data in SharePoint from R. This allows for a more streamlined and efficient workflow, especially for data stewards and scientists who work with large datasets and need to collaborate with others.\nThis approach can help you automate data management tasks, reduce reliance on email and personal storage, and improve collaboration within your team.",
+    "crumbs": [
+      "FADS Wiki Home (Internal)",
+      "How to Guides",
+      "Access Data in SharePoint from R"
+    ]
+  },
+  {
+    "objectID": "how_to_guides/sharepoint_r.html#additional-resources",
+    "href": "how_to_guides/sharepoint_r.html#additional-resources",
+    "title": "Access Data in SharePoint from R",
+    "section": "Additional Resources",
+    "text": "Additional Resources\n\nMicrosoft365R Documentation",
+    "crumbs": [
+      "FADS Wiki Home (Internal)",
+      "How to Guides",
+      "Access Data in SharePoint from R"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About the DSU",
+    "section": "",
+    "text": "The Data Stewardship Unit (DSU) is situated within the Fisheries and Assessment Data Section (FADS), of the Stock Assessment and Research Division of the Pacific Region Science Branch of Fisheries and Oceans Canada (DFO).\nWe are a dedicated team committed to enhancing data management and stewardship practices within DFO. Our primary focus is on data related to Pacific Salmon within the DFO Pacific Region.\nOur goal is to provide guidance and assistance throughout the entire lifecycle of data management—from planning to publication. We strive to ensure our practices align with modern data standards, such as those outlined in the DFO Data Strategy and the Government of Canada’s digital data strategy. Our work is guided by the principles of making data findable, accessible, interoperable, and reusable (FAIR). Additionally, we highly value the principles of Indigenous data governance, such as ownership, control, access, and possession (OCAP), and we are committed to helping our collaborators respect and implement these principles in their work."
   },
   {
     "objectID": "how_to_guides/databricks_r_studio.html",
@@ -193,54 +265,30 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About the DSU",
+    "objectID": "reference_info/data_standards/vocab-index.html",
+    "href": "reference_info/data_standards/vocab-index.html",
+    "title": "DFO Salmon Data Controlled Vocabulary",
     "section": "",
-    "text": "The Data Stewardship Unit (DSU) is situated within the Fisheries and Assessment Data Section (FADS), of the Stock Assessment and Research Division of the Pacific Region Science Branch of Fisheries and Oceans Canada (DFO).\nWe are a dedicated team committed to enhancing data management and stewardship practices within DFO. Our primary focus is on data related to Pacific Salmon within the DFO Pacific Region.\nOur goal is to provide guidance and assistance throughout the entire lifecycle of data management—from planning to publication. We strive to ensure our practices align with modern data standards, such as those outlined in the DFO Data Strategy and the Government of Canada’s digital data strategy. Our work is guided by the principles of making data findable, accessible, interoperable, and reusable (FAIR). Additionally, we highly value the principles of Indigenous data governance, such as ownership, control, access, and possession (OCAP), and we are committed to helping our collaborators respect and implement these principles in their work."
-  },
-  {
-    "objectID": "how_to_guides/sharepoint_r.html",
-    "href": "how_to_guides/sharepoint_r.html",
-    "title": "Access Data in SharePoint from R",
-    "section": "",
-    "text": "Connecting R to Sharepoint enables secure, programmatic data access for reproducible analysis workflows. This is especially useful to data stewards and scientists who want to move away from email and personal hard-drive based data storage and sharing and instead use a cloud service as a central repository for data.\nThis is particularly useful for data management tasks in Sharepoint, such as:\n\nDownloading data files for analysis\nUploading processed data files\nManaging document libraries and folders\nAutomating data workflows\n\n\n\n\n\n\n\nWarning\n\n\n\nKeep in mind, to access the DFO Sharepoint from R using the methods below you need to be on the DFO network or using the VPN.",
+    "text": "A growing challenge in salmon research, management, and data stewardship is the proliferation of inconsistent terms, acronyms, and definitions across documents, programs, and even within the same organization—leading to confusion, miscommunication, and inefficiencies in analysis and reporting.\nTo address this, the Data Stewardship Unit (DSU) has initiated the DFO Salmon Data Controlled Vocabulary—a standardized, community-curated list of key terms and definitions related to salmon data collection, analysis, and policy within Fisheries and Oceans Canada (DFO) Pacific Region.\nThe table below consolidates definitions from regulatory documents, scientific literature, internal guidelines, and other sources into a single, searchable, and filterable reference designed to improve semantic clarity across DFO Pacific.\nThe table is more than a simple glossary: it is a formally structured controlled vocabulary that uses the W3C-endorsed Simple Knowledge Organization System (SKOS), enabling machine-readable formats for integration into data systems, APIs, and web applications.For a deep-dive on the how and why of controlled vocabularies, see our guide: Support Controlled Vocabularies.",
     "crumbs": [
       "FADS Wiki Home (Internal)",
-      "How to Guides",
-      "Access Data in SharePoint from R"
+      "Reference Info",
+      "Data Standards",
+      "DFO Salmon Data Controlled Vocabulary"
     ]
   },
   {
-    "objectID": "how_to_guides/sharepoint_r.html#conclusion",
-    "href": "how_to_guides/sharepoint_r.html#conclusion",
-    "title": "Access Data in SharePoint from R",
-    "section": "Conclusion",
-    "text": "Conclusion\nThis enables secure, programmatic data access for reproducible analysis workflows. Using the Microsoft365R package, you can easily access and manage data in SharePoint from R. This allows for a more streamlined and efficient workflow, especially for data stewards and scientists who work with large datasets and need to collaborate with others.\nThis approach can help you automate data management tasks, reduce reliance on email and personal storage, and improve collaboration within your team.",
+    "objectID": "reference_info/data_standards/vocab-index.html#dfo-salmon-controlled-vocabulary-terms-under-construction",
+    "href": "reference_info/data_standards/vocab-index.html#dfo-salmon-controlled-vocabulary-terms-under-construction",
+    "title": "DFO Salmon Data Controlled Vocabulary",
+    "section": "🗂️DFO Salmon – Controlled Vocabulary Terms (🚧Under Construction🚧)",
+    "text": "🗂️DFO Salmon – Controlled Vocabulary Terms (🚧Under Construction🚧)\n\n\n\n\n\n\nUnder the hood, the vocabulary is formatted in SKOS (Simple Knowledge Organization System), a W3C-recommended framework for representing controlled vocabularies and thesauri. By modeling terms and their relationships (broader, narrower, related), SKOS makes it easy to:\n\nMaintain consistent labels, definitions, and concept hierarchies.\nShare and integrate the vocabulary with other systems that understand RDF.\n\nThe vocabulary is intended to be a living document that evolves with the needs of the community. It is maintained by the Data Stewardship Unit (DSU) within the Fisheries and Assessment Data Section (FADS) in the Pacific Region of Fisheries and Oceans Canada (DFO).\nTo maximize accessibility, we publish three serializations:\n\nJSON – A lightweight format ideal for most web and desktop applications that need to load term lists and definitions without RDF tooling.\nJSON-LD – Embeds linked-data context so that terms become addressable URIs; perfect for web pages, APIs, and any environment where you want automatic context resolution and richer interoperability.\nTurtle (.ttl) – A compact, human-readable RDF syntax for semantic-web tools, triple stores, and SPARQL queries, enabling advanced semantic reasoning or integration into broader data ecosystems.\n\nYou can download or query any of these formats directly from our GitHub repo for programmatic access, metadata validation, integration, or automated workflows.\nFile a GitHub Issue at https://github.com/dfo-pacific-science/data-stewardship-unit/issues\nOr contact the Data Stewardship Unit.",
     "crumbs": [
       "FADS Wiki Home (Internal)",
-      "How to Guides",
-      "Access Data in SharePoint from R"
+      "Reference Info",
+      "Data Standards",
+      "DFO Salmon Data Controlled Vocabulary"
     ]
-  },
-  {
-    "objectID": "how_to_guides/sharepoint_r.html#additional-resources",
-    "href": "how_to_guides/sharepoint_r.html#additional-resources",
-    "title": "Access Data in SharePoint from R",
-    "section": "Additional Resources",
-    "text": "Additional Resources\n\nMicrosoft365R Documentation",
-    "crumbs": [
-      "FADS Wiki Home (Internal)",
-      "How to Guides",
-      "Access Data in SharePoint from R"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "FADS Documentation Hub 🐟💾",
-    "section": "",
-    "text": "FADS Documentation Hub 🐟💾\nWelcome to the Fishery & Assessment Data Section (FADS) Documentation Hub!\nHere, we work in the open and share our knowledge to enable open data science collaboration with a broad community not only within DFO but also externally with academics, NGOs, and Indigenous groups. The FADS Wiki is for internal access by DFO employees while this Documentation Hub is openly accessible.\nWhether you’re a seasoned data steward or just starting out, this hub is designed to provide you with the resources you need to navigate the world of salmon data stewardship and management 📚✨\nWe follow the Diátaxis Framework to keep documentation organized, useful, and easy to navigate. The docs are grouped into four clear categories:\n\n\n️1. How-to Guides 🛠\nQuick, practical instructions for specific tasks.\nPerfect for when you’re asking:\n&gt; “How do I do this specific thing?”\nExamples:\n\nHow to request access to datasets stored in the cloud 🔐\n\nHow to submit a metadata record 📤\n\nHow to clean up an Excel file before uploading 🧼\n\n\n\n\n2. Reference Info 📘\nThe deep, detailed, no-fluff facts about tools, terms, and standards.\nUse these when you need precision or technical definitions.\nExamples:\n\nUsing terms from controlled vocabularies like Darwin Core 🧾\nOn hosting data and code 🫙\nTools, including reccomended R packages 🧑🏾‍💻\n\n\n\n\n3. Tutorials 🎓\nStructured, step-by-step lessons that help you learn by doing.\nIdeal for onboarding or skill-building.\nExamples:\n\nA walk through on using Power BI with our datasets 📊\nIntro to working with Synapse Notebooks 🧠\nHow to support controlled vocabularies 🔤\n\n\n\n\n4. Deep dives 🧠\nThoughtful writeups and explanations on the why behind the work.\nGreat for context, decision-making, or just satisfying your inner data philosopher.\nExamples:\n\nWhy metadata quality matters 🧼\nData lifecycle management explained 🌱➡️🌳\nThe theory behind our access protocols 🚦\n\n\n\n\nGetting Started 🛠️\n🧭 Start exploring using the navigation menu on your left to dive in!\n❔ Learn more about what resources are available on the About page.\n🔍 Use the search bar at the top right to find specific topics or resources.\n\n\n\nContribute & Collaborate! 🤝\nThis documentation is a living resource — always evolving and improving.\nWe’d love your feedback, suggestions, and ideas! 🗣️\nYou can even contribute directly to the documentation! See our Contributing Guide for more details. Spotted something confusing? Missing a topic? Got an awesome tip to share?\n➡️ Reach out to us anytime — we’re listening 👂 and always happy to help!\nHappy stewarding! 🐟✨\n\n↩︎️ Return to the Internal FADS SharePoint Wiki"
   },
   {
     "objectID": "reference_info/dwc-obis-gbif.html",
