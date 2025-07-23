@@ -1,12 +1,14 @@
 ---
-title: "Data Practices for Open Science - 3 Quick Tips"
+title: "Data Practices for Open Science -- 3 Quick Tips"
 version: "v1.0"
 last_updated: "2025-07-23"
 bibliography: ../bibliography.bib
 bibliographystyle: apa
 ---
 
-Sir Isaac Newton said, "If I have seen further, it is by standing on the shoulders of giants." As scientists, we aim to share our findings with colleagues who may use the information to continue to make progress on important questions. Making your data more transparent and reproducible not only contributes to a more useful body of work but provides "shoulders" for those who come after you (other colleagues, students, and collaborators). It's also handy for improving your own workflow. Your personal peace of mind is another added bonus to front loading the work of organizing and describing your dataset. You might be wondering what are we referring to when we talk about "Open Science". A more open approach to research means making results accessible for the benefits of both scientists and broader society [@unesco2023]. The Open Science movement aims to increase transparency and the speed of knowledge transfer. Barriers to Open Science include things like: paywalled journals, favoring knowledge produced by high-income countries, hidden or unknown source code or workflow, and supporting data that is unavailable or unusable. In this article, we'll tackle the last barrier and talk about practical ways to make your data more Open.
+Sir Isaac Newton said, "If I have seen further, it is by standing on the shoulders of giants." As scientists, we aim to share our findings with colleagues who may use the information to continue to make progress on important questions. Making your data more transparent and reproducible not only contributes to a more useful body of work but provides "shoulders" for those who come after you (other colleagues, students, and collaborators). It's also handy for improving your own workflow. Your personal peace of mind is another added bonus to front loading the work of organizing and describing your dataset. 
+
+You might be wondering what are we referring to when we talk about "Open Science". A more open approach to research means making results accessible for the benefits of both scientists and broader society [@unesco2023]. The Open Science movement aims to increase transparency and the speed of knowledge transfer. Barriers to Open Science include things like: paywalled journals, favouring knowledge produced by high-income countries, hidden or unknown source code or workflow, and supporting data that is unavailable or unusable. In this article, we'll tackle the last barrier and talk about practical ways to make your data more Open.
 
 ------------------------------------------------------------------------
 
@@ -25,9 +27,9 @@ Throughout our scientific careers, we're often told to be concise and simplify s
 -   Avoids confusion at scale -- note how there are two types of temporal data in the first table. One could conflate time and date.
 -   Saves space. Say there were 100 songs with an average of 7 entries each. Rather than a table with 700 entries and 7 variables (4900 pieces of data), you now have 2 tables (containing 4500 data points total). This difference in memory usage scales with the size of your dataset.
 
-![table1TMI](../images/dataPracticesImages/table1TMI.png) Table 1. Too much information at different scales crammed into a single table (adapted from @wickham2014).
+![table1TMI](../images/dataPracticesImages/table1TMI.png) Table 1. Too much information at different scales crammed into a single table. Table adapted from @wickham2014.
 
-![table2Redundancy](../images/dataPracticesImages/table2Redundancy.png) Table 2: Example of using redundancy by splitting tables in two (adapted from @wickham2014).
+![table2Redundancy](../images/dataPracticesImages/table2Redundancy.png) Table 2: Example of using redundancy by splitting tables in two. Note how one song (left) has multiple Billboard rankings (right). Tables adapted from @wickham2014.
 
 ------------------------------------------------------------------------
 
