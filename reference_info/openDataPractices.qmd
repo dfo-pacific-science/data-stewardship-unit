@@ -12,12 +12,10 @@ You might be wondering what are we referring to when we talk about “Open Scien
 
 ## 1. Use a tidy format 
 
-[add the table]
-
-Illustration from Tidy Data for reproducibility, efficiency, and collaboration by Julia Lowndes and Allison Horst  . Adapted from Wickham 2014. 
+![Fig1Hadley](../images/dataPracticesImages/fig1TidyData.png) 
+Illustration from Tidy Data for reproducibility, efficiency, and collaboration by Julia Lowndes and Allison Horst. Adapted from Wickham (2014). 
 
 For an excellent introduction to Tidy Data, check out Hadley Wickham’s 2014 paper in the Journal of Statistical Software (Wickham 2014). The tidy approach to data dictates that when organizing data, every observation should be represented by a row and every variable a column. This is a great approach for standardization and machine readability. 
-
 
 ---
 
@@ -30,7 +28,11 @@ One way to invoke the hidden power of redundancy is **using metadata and data di
 -	Saves space. Say there were 100 songs with an average of 7 entries each. Rather than a table with 700 entries and 7 variables (4900 pieces of data), you now have 2 tables (containing 4500 data points total). This difference in memory usage scales with the size of your dataset. 
 
 
-[add other tables]
+![table1TMI](../images/dataPracticesImages/table1TMI.png)
+Table 1. Too much information at different scales crammed into a single table (adapted from Wickham, 2014).
+
+![table2Redundancy](../images/dataPracticesImages/table2Redundancy.png)
+Table 2: Example of using redundancy by splitting tables in two (adapted from Wickham, 2014).
 
 ## 3. Keep raw data raw
 
