@@ -6,11 +6,15 @@ eval: false
 last_updated: "2025-08-11"
 ---
 
-### Why Connect to Sharepoint?
+## Some sort of background
 Inspiration taken from: https://github.com/AtlanticR/R_Git_Support/blob/main/open_data.Rmd
 
 
-``` {r, echo = TRUE, message= FALSE, warning= FALSE, error= FALSE, cache= FALSE, results='hide'}
+
+## Downloading from ESRI Rest Servers
+
+```{r,warning=FALSE,message=FALSE}
+
 ################################################################################
 
 # Use the librarian package to open multiple packages at once
@@ -35,7 +39,10 @@ librarian::shelf(
                   
 # This one's always under development though
 devtools::install_github("ropensci/rnaturalearthhires")
+```
 
+
+```{r mapping}
 ################################################################################
 ## Create a map ESRI Rest
 
@@ -72,6 +79,10 @@ ggplot()+
   scale_fill_discrete(name = "Accessibility")+
   theme_bw() # tidies up map colouring
   
+```
+
+## Downloading geodatabases
+``` {r, echo = TRUE, message= FALSE, warning= FALSE, error= FALSE, cache= FALSE, results='hide'}
 
 ################################################################################
 ## Downloading geodatabases 
@@ -142,28 +153,10 @@ ggplot()+
   scale_fill_discrete(name = "Region")+
   theme_bw()
 
+```
 
-################################################################################
-### Using ckanr 
-
-# Our IT sometimes need to upgrade the server hardware or software, which can cause the URLs to the data to change (e.g. this part: "https://egisp.dfo-mpo.gc.ca/arcgis/..."), but as far as I know the Universally Unique Identifier (UUID) will persist. We can leverage the [CKAN](https://ckan.org/) API to make our script above more robust. CKAN is a data management system that allows you to publish, share, and find data. The `ckanr` package allows you to interact with CKAN from R. You can use the `ckanr_setup()` function to set up the connection to the Open Data portal (amongst others). 
-
-#### Finding data
-
-# While you can search for data on the [Open Data](https://search.open.canada.ca/data/) portal, it can be cumbersome to find the data you need. The [Open Science Data Portal](https://osdp-psdo.canada.ca/dp/en/search) (OSDP) is actually much better for finding data, searches the same database, and the UUID'd are consistent among the search portals. 
-
-# If you don't want to search via the browser, you can use the `ckanr` package to search for data using the `package_search()` function. You can use the `q` argument to search for data. For example, you can search for "cumulative human impact" to find the data we will use in this example.
-ckanr_setup("https://open.canada.ca/data")
-search_results = package_search(q = "Pacific salmon")
-search_results
-
-
-# This shows how to find spatial data (e.g., shapefiles, geodatabases, etc.)
-search_results = package_search(
-  q = "Pacific salmon",
-  fq = 'res_format:(SHP OR GDB OR GeoJSON OR KML OR CSV)' # CSV is sometimes spatial (lat/lon), sometimes not
-)
-
+## Plotting raster data 
+``` {r, echo = TRUE, message= FALSE, warning= FALSE, error= FALSE, cache= FALSE, results='hide'}
 ################################################################################
 ### Plotting raster data
 # This is actually raster data stored in a geodatabase. Which is a bit different to plot
@@ -225,7 +218,10 @@ ggplot()+
   )+
   theme_bw()
 
+```
 
+## Making Leaflet Maps
+``` {r, echo = TRUE, message= FALSE, warning= FALSE, error= FALSE, cache= FALSE, results='hide'}
 
 # Step 2: Convert raster to leaflet-compatible format
 pal = colorNumeric(palette = "magma", domain = values(rast_proj), na.color = "transparent")
@@ -238,4 +234,29 @@ leaflet() %>%
             title = "Boating Effort",
             position = "bottomright")
 
+```
+
+## Searching for data with ckanr
+``` {r, echo = TRUE, message= FALSE, warning= FALSE, error= FALSE, cache= FALSE, results='hide'}
+
+################################################################################
+### Using ckanr 
+
+# Our IT sometimes need to upgrade the server hardware or software, which can cause the URLs to the data to change (e.g. this part: "https://egisp.dfo-mpo.gc.ca/arcgis/..."), but as far as I know the Universally Unique Identifier (UUID) will persist. We can leverage the [CKAN](https://ckan.org/) API to make our script above more robust. CKAN is a data management system that allows you to publish, share, and find data. The `ckanr` package allows you to interact with CKAN from R. You can use the `ckanr_setup()` function to set up the connection to the Open Data portal (amongst others). 
+
+#### Finding data
+
+# While you can search for data on the [Open Data](https://search.open.canada.ca/data/) portal, it can be cumbersome to find the data you need. The [Open Science Data Portal](https://osdp-psdo.canada.ca/dp/en/search) (OSDP) is actually much better for finding data, searches the same database, and the UUID'd are consistent among the search portals. 
+
+# If you don't want to search via the browser, you can use the `ckanr` package to search for data using the `package_search()` function. You can use the `q` argument to search for data. For example, you can search for "cumulative human impact" to find the data we will use in this example.
+ckanr_setup("https://open.canada.ca/data")
+search_results = package_search(q = "Pacific salmon")
+search_results
+
+
+# This shows how to find spatial data (e.g., shapefiles, geodatabases, etc.)
+search_results = package_search(
+  q = "Pacific salmon",
+  fq = 'res_format:(SHP OR GDB OR GeoJSON OR KML OR CSV)' # CSV is sometimes spatial (lat/lon), sometimes not
+)
 ```
