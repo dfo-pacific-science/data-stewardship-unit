@@ -1,0 +1,241 @@
+---
+title: "Accessing Data from the Open Government Portal"
+format: html
+version: "v1.0"
+eval: false
+last_updated: "2025-08-11"
+---
+
+### Why Connect to Sharepoint?
+Inspiration taken from: https://github.com/AtlanticR/R_Git_Support/blob/main/open_data.Rmd
+
+
+``` {r, echo = TRUE, message= FALSE, warning= FALSE, error= FALSE, cache= FALSE, results='hide'}
+################################################################################
+
+# Use the librarian package to open multiple packages at once
+#install.packages("librarian")
+#library("librarian")
+
+librarian::shelf(
+                 arcpullr,
+                 ckanr,
+                 dplyr,
+                 devtools,
+                 ggplot2,
+                 ggspatial,
+                 leaflet,
+                 leafpop,
+                 mapview,
+                 rnaturalearth,
+                 sf,
+                 stars,
+                 terra,
+                 viridisLite)
+                  
+# This one's always under development though
+devtools::install_github("ropensci/rnaturalearthhires")
+
+################################################################################
+## Create a map ESRI Rest
+
+
+# Get coastline for North America 
+coast = ne_countries(scale = 10, returnclass = c("sf"), continent = "North America") 
+
+# Make a quick map to see what it looks like
+ggplot()+
+  geom_sf(data=coast, fill="lightgray")+
+  theme_minimal()
+
+# Download some data from open data
+# For all datasets from Open Data, look carefully at the "Layers" option. For this, 0 means English, and 1 means French
+# This is the final thing specified in the URL
+salmonDepots = get_spatial_layer("https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/pacific_recreational_fishery_salmon_head_depots/MapServer/0")
+
+# Define lat/lon bounds, otherwise the map will show the entire globe (see map above)
+bounds = st_bbox(salmonDepots)
+
+# Create a map of this data using ggplot
+ggplot()+
+  geom_sf(data = coast, fill = "lightgrey")+
+  geom_sf(data = salmonDepots, size = 3.5, aes(fill = ACCESSIBILITY___ACCESSIBILITÉ), pch = 21, alpha = 0.85)+
+  coord_sf(xlim = c(bounds[1], bounds[3]), 
+           ylim = c(bounds[2], bounds[4]))+
+  # I'm not always convinced maps north arrows need to be added when the lat/lon is specified but some people insist!
+  # Add north arrow to the top right (tr) of the map. It points to "true north", not magnetic north
+  annotation_north_arrow(location = "tr", which_north = "true",
+                         #height = unit(0.7, "cm"), width = unit(0.7, "cm"),
+                         style = north_arrow_minimal)+
+  # Also, scale bars shouldn't be added when you're this zoomed out, but here's how to add one anyone:
+  annotation_scale(location = "bl", text_cex = 0.8)+
+  scale_fill_discrete(name = "Accessibility")+
+  theme_bw() # tidies up map colouring
+  
+
+################################################################################
+## Downloading geodatabases 
+
+# Geodatabases are an ESRI thing, but it is still possible to download and extract the data with R!
+
+# I couldn't find any good Pacific salmon examples so I found one of "floating infrastructure"
+# https://open.canada.ca/data/en/dataset/049770ef-6cb3-44ee-afc8-5d77d6200a12/resource/c32dff08-973e-4141-86e8-27839636bc63
+
+# Instead of downloading the data directly to your computer, you can create a temporary directory and download it there
+# Create a temporary directory to store the downloaded zip file
+temp_dir = tempdir()
+
+# Define the path for the downloaded zip file inside the temp directory
+zip_file = file.path(temp_dir, "zipPath.gdb.zip")
+
+# Define the directory where the zip contents will be extracted
+# This is a relative path, so files will be extracted into the current working directory
+unzip_dir = file.path("extracted_fgdb")
+
+# Download the zipped geodatabase. To get the correct link to download, right click on the "Go to Resource" button, and select "Copy link address"
+download.file(
+  "https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/049770ef-6cb3-44ee-afc8-5d77d6200a12/attachments/floating_infrastructure-docks.gdb.zip",
+  destfile = zip_file,
+  mode = "wb"
+)
+
+# Create the extraction directory if it doesn't already exist
+dir.create(unzip_dir, showWarnings = FALSE)
+
+# Unzip the downloaded file into the extraction directory
+unzip(zip_file, exdir = unzip_dir)
+
+# List the files extracted to verify contents
+list.files(unzip_dir)
+
+# Load the layers available in the extracted .gdb file
+# Copy the name from the list.files() command. This should match the name of the gdb from the URL above
+layers = st_layers(file.path(unzip_dir, "floating_infrastructure-docks.gdb"))
+
+# Turn layers from a list into a dataframe
+# layers has 1 entry called docks, so now a df called 'docks' will be created
+for(l in layers$name){
+  message("Reading layer: ", l)
+  assign(l, st_read(file.path(unzip_dir, "floating_infrastructure-docks.gdb"), layer = l, quiet = TRUE))
+}
+
+### Create a map to show off your work
+
+# Note that the coordinate reference system of these two are different
+st_crs(docks) # Nad 83
+st_crs(coast) # WGS 84
+
+# To plot with ggplot, one of them has to be reprojected. I've transform the docks CRS to match the coast CRS 
+docks = st_transform(docks, st_crs(coast))
+
+# Redefine the bounds of the layer of interest
+bounds = st_bbox(docks)
+
+# Make a map of the docks
+ggplot()+
+  geom_sf(data = coast, fill = "lightgrey")+
+  geom_sf(data = docks, size = 3.5, pch = 21, aes(fill = region), alpha = 0.65)+
+  coord_sf(
+    xlim = c(bounds["xmin"], bounds["xmax"]),
+    ylim = c(bounds["ymin"], bounds["ymax"])
+  ) +
+  scale_fill_discrete(name = "Region")+
+  theme_bw()
+
+
+################################################################################
+### Using ckanr 
+
+# Our IT sometimes need to upgrade the server hardware or software, which can cause the URLs to the data to change (e.g. this part: "https://egisp.dfo-mpo.gc.ca/arcgis/..."), but as far as I know the Universally Unique Identifier (UUID) will persist. We can leverage the [CKAN](https://ckan.org/) API to make our script above more robust. CKAN is a data management system that allows you to publish, share, and find data. The `ckanr` package allows you to interact with CKAN from R. You can use the `ckanr_setup()` function to set up the connection to the Open Data portal (amongst others). 
+
+#### Finding data
+
+# While you can search for data on the [Open Data](https://search.open.canada.ca/data/) portal, it can be cumbersome to find the data you need. The [Open Science Data Portal](https://osdp-psdo.canada.ca/dp/en/search) (OSDP) is actually much better for finding data, searches the same database, and the UUID'd are consistent among the search portals. 
+
+# If you don't want to search via the browser, you can use the `ckanr` package to search for data using the `package_search()` function. You can use the `q` argument to search for data. For example, you can search for "cumulative human impact" to find the data we will use in this example.
+ckanr_setup("https://open.canada.ca/data")
+search_results = package_search(q = "Pacific salmon")
+search_results
+
+
+# This shows how to find spatial data (e.g., shapefiles, geodatabases, etc.)
+search_results = package_search(
+  q = "Pacific salmon",
+  fq = 'res_format:(SHP OR GDB OR GeoJSON OR KML OR CSV)' # CSV is sometimes spatial (lat/lon), sometimes not
+)
+
+################################################################################
+### Plotting raster data
+# This is actually raster data stored in a geodatabase. Which is a bit different to plot
+# Remi's example shows how to plot tiff data. This is different
+
+# If you read through the data, you'll see that that many types of data are availble for this (e.g., point data, raster, vector grid) 
+# The raster data I'm interested in is titled "surveyeffort"
+# https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/recreational_vessel_traffic_model_for_british_columbia/MapServer
+
+
+# Follow steps above to create a temporary folder to download & extract geodatabase info
+temp_dir = tempdir()
+zip_file = file.path(temp_dir, "bc_boating_model.zip")
+unzip_dir = file.path(temp_dir, "bc_boating_data")
+
+# Download the dataset zip file
+download.file(
+  url = "https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/fed5f00f-7b17-4ac2-95d6-f1a73858dac0/attachments/Recreational_Boating_Data_Model.gdb.zip",
+  destfile = zip_file,
+  mode = "wb"
+)
+
+# Unzip the contents
+dir.create(unzip_dir, showWarnings = FALSE)
+unzip(zip_file, exdir = unzip_dir)
+
+# List the file names you just downloaded 
+boat_file = list.files(unzip_dir, full.names = TRUE)
+
+# Turn the "survey effort" data into raster format
+surveyRast = rast(boat_file, sub = "surveyeffort")
+
+# Plot it just to see what it looks like
+# It's gross! There are lots of values with no survey effort that make everything yucky to look at
+plot(surveyRast)
+
+# We need to fix up the data a bit more. First, unfortunately SpatRasters can't directly be plotted with ggplot
+# So, we have to turn this into into a data frame
+# But we can't do that directly, because the current projection is UTM, which means we'll lose lat/lon info
+# So we first need to project it, so it's in the same CRS as the coast layer
+
+# Use the project function to project to WGS 84 (i.e., the CRS of the coast file)
+rast_proj = project(surveyRast, coast)
+
+# You'll see this also fixes the issue of no data. Things get cleared up!
+plot(rast_proj)
+
+# Convert it to a dataframe. Keep the coordinate info
+rast_df = as.data.frame(rast_proj, xy = TRUE) 
+
+# Plot it with geom_tile and add the coast data as well
+ggplot()+
+  geom_tile(data = rast_df, aes(x=x, y=y, fill = Recreational_Boating_Data_Model)) +
+  geom_sf(data = coast, fill = "lightgrey")+
+  scale_fill_viridis_c(option = "magma")+
+  coord_sf(
+    xlim = c(bounds["xmin"], bounds["xmax"]),
+    ylim = c(bounds["ymin"], bounds["ymax"])
+  )+
+  theme_bw()
+
+
+
+# Step 2: Convert raster to leaflet-compatible format
+pal = colorNumeric(palette = "magma", domain = values(rast_proj), na.color = "transparent")
+
+# Step 3: Create leaflet map
+leaflet() %>%
+  addProviderTiles(providers$Esri.OceanBasemap) %>%
+  addRasterImage(rast_proj, colors = pal, opacity = 0.7, project = T) %>%
+  addLegend(pal = pal, values = values(rast_proj),
+            title = "Boating Effort",
+            position = "bottomright")
+
+```
