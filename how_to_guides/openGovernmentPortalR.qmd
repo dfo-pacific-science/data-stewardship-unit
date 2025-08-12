@@ -16,13 +16,11 @@ This tutorial reviews:
 
 -   Extracting data from file geodatabases
 
--   Searching for data using ckanr
+-   Searching for data using `ckanr`
 
 The examples cover the basics of mapping in R, including plotting both vector and raster data with `ggplot()`, and creating `leaflet` maps.
 
 Note that much of this content has been adapted from a [similar tutorial created in the DFO Maritimes Region](https://github.com/AtlanticR/R_Git_Support/blob/main/open_data.Rmd), but with DFO Pacific examples.
-
-## Accessing
 
 ### Loading packages
 
@@ -34,7 +32,7 @@ install.packages("librarian")
 
 If you already have the librarian package, skip to loading the packages:
 
-```{r,warning=FALSE,message=FALSE}
+```{r, warning=FALSE, message=FALSE}
 librarian::shelf(
                  arcpullr, ckanr, dplyr, devtools, ggplot2, ggspatial, leaflet, leafpop, mapview,
                  rnaturalearth, sf, stars, terra, viridisLite)
@@ -74,52 +72,55 @@ ggplot()+
 
 The `arcpullr` package is a great way to access ArcGIS REST services. It allows you to query and download data from ArcGIS servers. You can use the `get_spatial_layer()` function to get a spatial layer from an ArcGIS server.
 
+The following code shows how to access the Pacific Recreational Fishery Salmon Head Depots on [Open Data](https://open.canada.ca/data/en/dataset/3cc03bbf-d59f-4812-996e-ddc52e0ba99e).
 
+When on Open Data, look for the [ESRI REST record](https://open.canada.ca/data/en/dataset/3cc03bbf-d59f-4812-996e-ddc52e0ba99e/resource/1c89a180-7622-42b1-9edf-be2457265880). To get the correct link for R, right click on the "Go to Resource" button, and select "Copy link address". Note the link used in the code below.
 
-Pacific Recreational Fishery Salmon Head Depots on [Open Data](https://open.canada.ca/data/en/dataset/3cc03bbf-d59f-4812-996e-ddc52e0ba99e).
-
-The following code will download and load the entire dataset into R.
+COME BACK AND FIX THIS BIT
+Note that in some cases, there might be many layers... 0 vs 1 etc etc 
 
 ```{r draft sites,warning=FALSE}
-# Download some data from open data
-# For all datasets from Open Data, look carefully at the "Layers" option. For this, 0 means English, and 1 means French
-# This is the final thing specified in the URL
 salmonDepots = get_spatial_layer("https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/pacific_recreational_fishery_salmon_head_depots/MapServer/0")
 ```
 
-I'm also 'cropping' the plot to the bounding box of the data. The `st_bbox()` function from the `sf` package allows you to get the bounding box of a spatial object. You can use the `xlim` and `ylim` arguments in the `coord_sf()` function to set the limits of the x and y axes.
+It maybe useful to crop the plot to the bounding box of the data. The `st_bbox()` function from the `sf` package allows you to get the bounding box of a spatial object. You can use the `xlim` and `ylim` arguments in the `coord_sf()` function to set the limits of the x and y axes.
 
 ```{r draft sites plot}
-# Define lat/lon bounds, otherwise the map will show the entire globe (see map above)
+# Define lat/lon bounds of your dataset
 bounds = st_bbox(salmonDepots)
+```
 
-# Create a map of this data using ggplot
+There are many ways to plot spatial data in R but `ggplot` is generally a favourite!
+
+```{r draft sites,warning=FALSE}
 ggplot()+
   geom_sf(data = coast, fill = "lightgrey")+
   geom_sf(data = salmonDepots, size = 3.5, aes(fill = ACCESSIBILITY___ACCESSIBILITÉ), pch = 21, alpha = 0.85)+
   coord_sf(xlim = c(bounds[1], bounds[3]), 
            ylim = c(bounds[2], bounds[4]))+
   # I'm not always convinced maps north arrows need to be added when the lat/lon is specified but some people insist!
-  # Add north arrow to the top right (tr) of the map. It points to "true north", not magnetic north
+  # Add north arrow to the top right (tr) of the map. It points to "true" north, not magnetic north
   annotation_north_arrow(location = "tr", which_north = "true",
                          #height = unit(0.7, "cm"), width = unit(0.7, "cm"),
                          style = north_arrow_minimal)+
-  # Also, scale bars shouldn't be added when you're this zoomed out, but here's how to add one anyone:
+  # Also, scale bars shouldn't be added when you're this zoomed out, but here's how to add one anyway:
   annotation_scale(location = "bl", text_cex = 0.8)+
   scale_fill_discrete(name = "Accessibility")+
-  theme_bw() # tidies up map colouring
+  theme_bw() # tidies up the visuals 
   
 ```
 
-## Downloading geodatabases
+## Accessing file geodatabases
 
-Geodatabases are an ESRI thing, but it is still possible to download and extract the data with R!
+[File geodatabases](https://pro.arcgis.com/en/pro-app/latest/help/data/geodatabases/manage-file-gdb/file-geodatabases.htm) are a proprietary file format developed by ESRI for spatial and non-spatial data. Many spatial datasets are uploaded to Open Data as file geodatabases, and it is possible to download and extract them with R!
 
-I couldn't find any good Pacific salmon examples so I found one of "floating infrastructure" https://open.canada.ca/data/en/dataset/049770ef-6cb3-44ee-afc8-5d77d6200a12/resource/c32dff08-973e-4141-86e8-27839636bc63
+The example below shows how to access the file geodatabase from the [floating infrastructure (i.e., docks) dataset on [Open Data](https://open.canada.ca/data/en/dataset/049770ef-6cb3-44ee-afc8-5d77d6200a12/resource/c32dff08-973e-4141-86e8-27839636bc63)
 
-```{r, echo = TRUE, message= FALSE, warning= FALSE, error= FALSE, cache= FALSE, results='hide'}
+### Creating temporary directories
+To explore data, it is helpful to create temporary directories to store and extract data.
 
-# Instead of downloading the data directly to your computer, you can create a temporary directory and download it there
+```{r tempDirs}
+
 # Create a temporary directory to store the downloaded zip file
 temp_dir = tempdir()
 
@@ -130,7 +131,7 @@ zip_file = file.path(temp_dir, "zipPath.gdb.zip")
 # This is a relative path, so files will be extracted into the current working directory
 unzip_dir = file.path("extracted_fgdb")
 
-# Download the zipped geodatabase. To get the correct link to download, right click on the "Go to Resource" button, and select "Copy link address"
+# Download the zipped geodatabase. To get the correct link, right click on the "Go to Resource" button, and select "Copy link address"
 download.file(
   "https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/049770ef-6cb3-44ee-afc8-5d77d6200a12/attachments/floating_infrastructure-docks.gdb.zip",
   destfile = zip_file,
@@ -164,23 +165,23 @@ for(l in layers$name){
 ```{r}
 ### Create a map to show off your work
 
-# Note that the coordinate reference system of these two are different
-st_crs(docks) # Nad 83
+# Note that the coordinate reference system of these two layers are different
+st_crs(docks) # NAD 83
 st_crs(coast) # WGS 84
 
 # To plot with ggplot, one of them has to be reprojected. I've transform the docks CRS to match the coast CRS 
 docks = st_transform(docks, st_crs(coast))
 
 # Redefine the bounds of the layer of interest
-bounds = st_bbox(docks)
+boundsDOcks = st_bbox(docks)
 
 # Make a map of the docks
 ggplot()+
   geom_sf(data = coast, fill = "lightgrey")+
   geom_sf(data = docks, size = 3.5, pch = 21, aes(fill = region), alpha = 0.65)+
   coord_sf(
-    xlim = c(bounds["xmin"], bounds["xmax"]),
-    ylim = c(bounds["ymin"], bounds["ymax"])
+    xlim = c(boundsDOcks["xmin"], boundsDOcks["xmax"]),
+    ylim = c(boundsDOcks["ymin"], boundsDOcks["ymax"])
   ) +
   scale_fill_discrete(name = "Region")+
   theme_bw()
@@ -189,9 +190,13 @@ ggplot()+
 
 ## Plotting raster data
 
-This is actually raster data stored in a geodatabase. Which is a bit different to plot. Remi's example shows how to plot tiff data. This is different
+You can follow the example in the [Maritimes tutorial](https://github.com/AtlanticR/R_Git_Support/blob/main/open_data.Rmd) for accessing raster data from tiff files. This shows how to access and plot raster data stored in a geodatabase
 
-If you read through the data, you'll see that that many types of data are availble for this (e.g., point data, raster, vector grid) The raster data I'm interested in is titled "surveyeffort" within the https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/recreational_vessel_traffic_model_for_british_columbia/MapServer
+The example I'm using is from the [recreational vessel traffic model on the BC coast](https://open.canada.ca/data/dataset/fed5f00f-7b17-4ac2-95d6-f1a73858dac0). 
+
+If you read through [the metadata](https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/recreational_vessel_traffic_model_for_british_columbia/MapServer), you'll see that that many types of data are available for this (e.g., point data, raster, vector grid). The raster data I'm interested in is titled "surveyeffort". 
+
+
 
 ```{r, echo = TRUE, message= FALSE, warning= FALSE, error= FALSE, cache= FALSE, results='hide'}
 
