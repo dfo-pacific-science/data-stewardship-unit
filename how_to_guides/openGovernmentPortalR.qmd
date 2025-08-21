@@ -2,7 +2,7 @@
 title: "Accessing Data from the Open Government Portal"
 format: html
 version: "v1.0"
-
+echo: false
 last_updated: "2025-08-11"
 ---
 
@@ -16,9 +16,9 @@ This tutorial reviews:
 
 -   Extracting data from file geodatabases
 
--   Searching for data using `ckanr`
+-   Using `ckanr` to build more robust code
 
-The examples cover the basics of mapping in R, including plotting both vector and raster data with `ggplot()`, and creating `leaflet` maps.
+The examples cover the basics of mapping in R, including plotting both vector and raster data with `ggplot()`, and creating `leaflet` maps. Many online tutorials provide further detail for specifics of mapping in R, for example: - https://mdl.library.utoronto.ca/technology/tutorials/introduction-gis-using-r - https://cengel.github.io/R-spatial/
 
 Note that much of this content has been adapted from a [similar tutorial created in the DFO Maritimes Region](https://github.com/AtlanticR/R_Git_Support/blob/main/open_data.Rmd), but with DFO Pacific examples.
 
@@ -48,9 +48,9 @@ devtools::install_github("ropensci/rnaturalearthhires")
 
 There are some great packages to get basemaps in R. The `rnaturalearth` package is a good option for getting country borders and other geographical features. You can use the `ne_countries()` function to get country borders.
 
-Depending on your study area, `rnaturalearth` may not have the level of detail required (e.g., some islands are missing). The `bcmaps` package has a lot of detailed basemaps and spatial data for the BC coast, and the `bc_bound_hres()` function is particularly useful for mapping coastline.
+In British Columbia, `rnaturalearth` may not have the level of detail required (e.g., some islands are missing). The `bcmaps` package has a lot of detailed basemaps and spatial data for the BC coast, and the `bc_bound_hres()` function is particularly useful for mapping coastline.
 
-Because the examples used are for the entire BC coast, I am using `rnaturalearth`.
+Because the data used in the tutorial are for the entire BC coast, `rnaturalearth` is used in the examples below.
 
 ```{r coast}
 
@@ -76,21 +76,20 @@ The following code shows how to access the Pacific Recreational Fishery Salmon H
 
 When on Open Data, look for the [ESRI REST record](https://open.canada.ca/data/en/dataset/3cc03bbf-d59f-4812-996e-ddc52e0ba99e/resource/1c89a180-7622-42b1-9edf-be2457265880). To get the correct link for R, right click on the "Go to Resource" button, and select "Copy link address". Note the link used in the code below.
 
-COME BACK AND FIX THIS BIT
-Note that in some cases, there might be many layers... 0 vs 1 etc etc 
+Also, make sure to specify the appropriate layer. In the example below, the "0" at the end of the address in the the example below denotes the English version, while the 1 represents French (see layers within the [Mapserver example](https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/pacific_recreational_fishery_salmon_head_depots/MapServer)).
 
 ```{r draft sites,warning=FALSE}
 salmonDepots = get_spatial_layer("https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/pacific_recreational_fishery_salmon_head_depots/MapServer/0")
 ```
 
-It maybe useful to crop the plot to the bounding box of the data. The `st_bbox()` function from the `sf` package allows you to get the bounding box of a spatial object. You can use the `xlim` and `ylim` arguments in the `coord_sf()` function to set the limits of the x and y axes.
+It may be useful to crop the plot to the bounding box of the data. The `st_bbox()` function from the `sf` package allows you to get the bounding box of a spatial object. You can use the `xlim` and `ylim` arguments in the `coord_sf()` function to set the limits of the x and y axes.
 
 ```{r draft sites plot}
 # Define lat/lon bounds of your dataset
 bounds = st_bbox(salmonDepots)
 ```
 
-There are many ways to plot spatial data in R but `ggplot` is generally a favourite!
+`sf objects` can be plotted directly with the `ggplot` function.
 
 ```{r draft sites,warning=FALSE}
 ggplot()+
@@ -117,7 +116,8 @@ ggplot()+
 The example below shows how to access the file geodatabase from the [floating infrastructure (i.e., docks) dataset on [Open Data](https://open.canada.ca/data/en/dataset/049770ef-6cb3-44ee-afc8-5d77d6200a12/resource/c32dff08-973e-4141-86e8-27839636bc63)
 
 ### Creating temporary directories
-To explore data, it is helpful to create temporary directories to store and extract data.
+
+For exploring data, it is often helpful to create temporary directories to store and extract data. This can be easier than downloading the data directly and setting your directories.
 
 ```{r tempDirs}
 
@@ -163,7 +163,6 @@ for(l in layers$name){
 ### Map the data
 
 ```{r}
-### Create a map to show off your work
 
 # Note that the coordinate reference system of these two layers are different
 st_crs(docks) # NAD 83
@@ -192,11 +191,9 @@ ggplot()+
 
 You can follow the example in the [Maritimes tutorial](https://github.com/AtlanticR/R_Git_Support/blob/main/open_data.Rmd) for accessing raster data from tiff files. This shows how to access and plot raster data stored in a geodatabase
 
-The example I'm using is from the [recreational vessel traffic model on the BC coast](https://open.canada.ca/data/dataset/fed5f00f-7b17-4ac2-95d6-f1a73858dac0). 
+The example I'm using is from the [recreational vessel traffic model on the BC coast](https://open.canada.ca/data/dataset/fed5f00f-7b17-4ac2-95d6-f1a73858dac0).
 
-If you read through [the metadata](https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/recreational_vessel_traffic_model_for_british_columbia/MapServer), you'll see that that many types of data are available for this (e.g., point data, raster, vector grid). The raster data I'm interested in is titled "surveyeffort". 
-
-
+If you read through [the metadata](https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/recreational_vessel_traffic_model_for_british_columbia/MapServer), you'll see that that many types of data are available in this geodatabase (e.g., point data, raster, vector grid). The data being plotted in this example below is the "surveyeffort" raster dataset.
 
 ```{r, echo = TRUE, message= FALSE, warning= FALSE, error= FALSE, cache= FALSE, results='hide'}
 
@@ -219,26 +216,24 @@ unzip(zip_file, exdir = unzip_dir)
 # List the file names you just downloaded 
 boat_file = list.files(unzip_dir, full.names = TRUE)
 
+```
+## Mapping with ggplot
+
+Unfortunately, raster data in this format cannot be directly mapped with `ggplot`.
+But, you can convert it to a data frame and keep the coordinate positions.
+
+
+```{r}
+
 # Turn the "survey effort" data into raster format
 surveyRast = rast(boat_file, sub = "surveyeffort")
 
-# Plot it just to see what it looks like
-# It's gross! There are lots of values with no survey effort that make everything yucky to look at
-plot(surveyRast)
-
-# We need to fix up the data a bit more. First, unfortunately SpatRasters can't directly be plotted with ggplot
-# So, we have to turn this into into a data frame
-# But we can't do that directly, because the current projection is UTM, which means we'll lose lat/lon info
-# So we first need to project it, so it's in the same CRS as the coast layer
-
-# Use the project function to project to WGS 84 (i.e., the CRS of the coast file)
+# Use the project function to project to WGS 84 (i.e., to match the CRS of the coastline file)
 rast_proj = project(surveyRast, coast)
-
-# You'll see this also fixes the issue of no data. Things get cleared up!
-plot(rast_proj)
 
 # Convert it to a dataframe. Keep the coordinate info
 rast_df = as.data.frame(rast_proj, xy = TRUE) 
+
 
 # Plot it with geom_tile and add the coast data as well
 ggplot()+
@@ -253,7 +248,10 @@ ggplot()+
 
 ```
 
-## Making Leaflet Maps
+### Making Leaflet Maps
+
+[Leaflet maps](https://rstudio.github.io/leaflet/) are interactive maps that can be a great way to explore data. 
+The example below shows how to display The ESRI Ocean Basemap is a good basemap for displaying them. These can also be great for point data, since you can create [popup labels](https://rstudio.github.io/leaflet/articles/popups.html) where you can click and view your attribute data.
 
 ```{r}
 
@@ -270,22 +268,49 @@ leaflet() %>%
 
 ```
 
-## Searching for data with ckanr
+## Using `ckanr` to build more robust code
 
-Our IT sometimes need to upgrade the server hardware or software, which can cause the URLs to the data to change (e.g. this part: "https://egisp.dfo-mpo.gc.ca/arcgis/..."), but as far as I know the Universally Unique Identifier (UUID) will persist. We can leverage the [CKAN](https://ckan.org/) API to make our script above more robust. CKAN is a data management system that allows you to publish, share, and find data. The `ckanr` package allows you to interact with CKAN from R. You can use the `ckanr_setup()` function to set up the connection to the Open Data portal (amongst others).
+Sometimes, IT needs to upgrade server hardware or software, which can result in changes to the ESRI REST service URLs (e.g., the portion like this: https://egisp.dfo-mpo.gc.ca/arcgis/...). However, the Universally Unique Identifier (UUID) associated with each dataset remains unchanged.
 
-While you can search for data on the [Open Data](https://search.open.canada.ca/data/) portal, it can be cumbersome to find the data you need. The [Open Science Data Portal](https://osdp-psdo.canada.ca/dp/en/search) (OSDP) is actually much better for finding data, searches the same database, and the UUID'd are consistent among the search portals.
+In the Open Data portal, the UUID is the final part of the URL after "dataset". For example, in the Pacific Recreational Salmon Head Depots dataset:
+https://open.canada.ca/data/dataset/3cc03bbf-d59f-4812-996e-ddc52e0ba99e
+The UUID is: 3cc03bbf-d59f-4812-996e-ddc52e0ba99e.
+
+To make our script more robust, we can use the CKAN API. CKAN is a data management system that supports publishing, sharing, and discovering datasets. The ckanr package in R allows us to interact with CKAN-based portals, such as Open Data. You can use the ckanr_setup() function to establish a connection.
+
+Instead of hardcoding the ESRI REST URL in our script (which may change) we can use the CKAN API to reference the stable UUID. This allows us to dynamically retrieve the current ESRI REST URL associated with that UUID, ensuring our code remains functional even if updates occur.
+
+### Downloading data
+
+We'll use the [Pacific Recreational Fishery Salmon Head Depots](https://open.canada.ca/data/dataset/3cc03bbf-d59f-4812-996e-ddc52e0ba99e) data as an example. We can use the `ckanr` package to extract the ESRI REST URL by referencing the UUID. This may seem like an extra step while you're writing your code, but it will save you time in the long run if/when the URLs change (which can apparently happen!!)
+
+```{r ckanr}
+
+
+ckanr_setup("https://open.canada.ca/data")
+uuid = "3cc03bbf-d59f-4812-996e-ddc52e0ba99e"
+pkg = ckanr::package_show(uuid)
+resources = pkg$resources
+df_resources = as.data.frame(do.call(rbind, resources))
+
+# Now you can grab the correct ESRI Rest URL ("url"). Make sure to search for that format, and also specify you want the English ("En") version and not French
+salmon_url = unlist(df_resources[df_resources$format == "ESRI REST" & sapply(df_resources$language, function(x) "en" %in% x), "url"])
+
+```
+
+### Searching for data
+
+You can also use the `ckanr` package to search for data using the `package_search()` function. You can use the `q` argument to search for key words, and the fq argument to specify file types.
 
 ```{r, echo = TRUE, message= FALSE, warning= FALSE, error= FALSE, cache= FALSE, results='hide'}
 
-# If you don't want to search via the browser, you can use the `ckanr` package to search for data using the `package_search()` function. You can use the `q` argument to search for data. For example, you can search for "cumulative human impact" to find the data we will use in this example.
 ckanr_setup("https://open.canada.ca/data")
 search_results = package_search(q = "Pacific salmon")
-search_results
+search_results # Note that UUID also shows up here after the <CKAN Package> text
 
-# This shows how to find spatial data (e.g., shapefiles, geodatabases, etc.)
+# You  can also search specifically for spatial data (e.g., shapefiles, geodatabases, etc.) by specifying the fq argument
 search_results = package_search(
   q = "Pacific salmon",
-  fq = 'res_format:(SHP OR GDB OR GeoJSON OR KML OR CSV)' # CSV is sometimes spatial (lat/lon), sometimes not
+  fq = 'res_format:(SHP OR GDB OR GeoJSON OR KML OR CSV)' # CSVs are sometimes spatial (lat/lon), sometimes not
 )
 ```
