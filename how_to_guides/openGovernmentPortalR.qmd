@@ -18,9 +18,9 @@ This tutorial reviews:
 
 -   Using `ckanr` to build more robust code
 
-The examples cover the basics of mapping in R, including plotting both vector and raster data with `ggplot()`, and creating `leaflet` maps. Many online tutorials provide further detail for specifics of mapping in R, for example: - https://mdl.library.utoronto.ca/technology/tutorials/introduction-gis-using-r - https://cengel.github.io/R-spatial/
+The examples cover the basics of mapping in R, including plotting both vector and raster data with `ggplot()`, and creating `leaflet` maps. Many online tutorials provide further detail for specifics of mapping in R if you need more background for mapping in R. For example, [this tutorial from the University of Toronto](https://mdl.library.utoronto.ca/technology/tutorials/introduction-gis-using-r) is a great place to start.
 
-Note that much of this content has been expanded from a [similar tutorial created in the DFO Maritimes Region](https://github.com/AtlanticR/R_Git_Support/blob/main/open_data.Rmd), but with DFO Pacific examples. Other clarifying comments have been added.
+Note that much of this content has been expanded from a [similar tutorial created in the DFO Maritimes Region](https://github.com/AtlanticR/R_Git_Support/blob/main/open_data.Rmd), but with DFO Pacific examples. Other clarifying comments have also been added.
 
 ### Loading packages
 
@@ -69,15 +69,15 @@ The `arcpullr` package is a great way to access [ArcGIS REST services](https://g
 
 ### Example: Pacific Recreational Fishery Salmon Head Depots
 
-There are many URLs associated with each dataset. The one we need to feed into the `get_spatial_layer()` function should include "arcgis/rest/services". 
+There can many URLs associated with each dataset. The "ArcGIS Rest URL" we need to feed into the `get_spatial_layer()` function should be the one that includes "arcgis/rest/services".
 
-Using the [Pacific Recreational Fishery Salmon Head dataset](https://open.canada.ca/data/en/dataset/3cc03bbf-d59f-4812-996e-ddc52e0ba99e) as an example, the URL we would need is "https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/pacific_recreational_fishery_salmon_head_depots/MapServer/".
+For example, with the [Pacific Recreational Fishery Salmon Head dataset](https://open.canada.ca/data/en/dataset/3cc03bbf-d59f-4812-996e-ddc52e0ba99e), the URL we are interested in is <https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/pacific_recreational_fishery_salmon_head_depots/MapServer/>.
 
-If you have trouble tracking this down, go to the appropriate [dataset page](https://open.canada.ca/data/en/dataset/3cc03bbf-d59f-4812-996e-ddc52e0ba99e) on Open Data. 
+If you have trouble tracking this down, go to the appropriate [dataset page](https://open.canada.ca/data/en/dataset/3cc03bbf-d59f-4812-996e-ddc52e0ba99e) on Open Data.
 
-Then, Under the **Data and Resources** section, find the item labelled **ESRI REST** (there is both an English and French example) and left click on it. On the [new page that opens](https://open.canada.ca/data/en/dataset/3cc03bbf-d59f-4812-996e-ddc52e0ba99e/resource/1c89a180-7622-42b1-9edf-be2457265880), right click on the *Go to Resource* button, and select "Copy link address". This will copy the URL you need.
+Then, Under the **Data and Resources** section, find the item labelled **ESRI REST** (there is both an English and French example) and left click on it. On the [new page that opens](https://open.canada.ca/data/en/dataset/3cc03bbf-d59f-4812-996e-ddc52e0ba99e/resource/1c89a180-7622-42b1-9edf-be2457265880), right click on the **Go to Resource** button, and select **Copy link address**. This will copy the URL you need.
 
-It is also important to specify the appropriate layer. In the example below, the "0" at the end of the address in the the example below denotes the English version, while the 1 represents French (see layers within the [Mapserver example](https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/pacific_recreational_fishery_salmon_head_depots/MapServer)). You will always need to specify the layer you interested in. For example, in the [Pacific Commercial Salmon In Season Catch Estimates dataset](https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/pacific_commercial_salmon_in_season_catch_estimates_en/MapServer), layers 0 to 3 represent gill nets, troll, seine and Pacific Fishery Management Areas, respectively. 
+It is also important to specify the appropriate layer. In the example below, the "0" at the end of the address in the the example below denotes the English version, while the 1 represents French (see layers within the [MapServer page](https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/pacific_recreational_fishery_salmon_head_depots/MapServer)). They also do not always correspond to language. For example, in the [Pacific Commercial Salmon In Season Catch Estimates dataset](https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/pacific_commercial_salmon_in_season_catch_estimates_en/MapServer), layers 0 to 3 represent gill nets, troll, seine and Pacific Fishery Management Areas, respectively.
 
 ```{r draft sites,warning=FALSE}
 salmonDepots = get_spatial_layer("https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/pacific_recreational_fishery_salmon_head_depots/MapServer/0")
@@ -114,7 +114,7 @@ ggplot()+
 
 [File geodatabases](https://pro.arcgis.com/en/pro-app/latest/help/data/geodatabases/manage-file-gdb/file-geodatabases.htm) are a proprietary file format developed by ESRI for spatial and non-spatial data. Many spatial datasets are uploaded to Open Data as file geodatabases, and it is possible to download and extract them with R!
 
-The example below shows how to access the file geodatabase from the [floating infrastructure (i.e., docks) dataset on [Open Data](https://open.canada.ca/data/en/dataset/049770ef-6cb3-44ee-afc8-5d77d6200a12/resource/c32dff08-973e-4141-86e8-27839636bc63)
+The example below shows how to access the file geodatabase from the [floating infrastructure dataset on Open Data](https://open.canada.ca/data/en/dataset/049770ef-6cb3-44ee-afc8-5d77d6200a12/resource/c32dff08-973e-4141-86e8-27839636bc63)
 
 ### Creating temporary directories
 
@@ -190,11 +190,9 @@ ggplot()+
 
 ## Plotting raster data
 
-You can follow the example in the [Maritimes tutorial](https://github.com/AtlanticR/R_Git_Support/blob/main/open_data.Rmd) for accessing raster data from tiff files. An example is shown here for accessing and plotting raster data stored in a geodatabase
+An example is shown here for accessing and plotting raster data stored in a geodatabase. You can follow the example in the [Maritimes tutorial](https://github.com/AtlanticR/R_Git_Support/blob/main/open_data.Rmd) for accessing raster data from tiff files, if you are interested.
 
 The example I'm using is from the [recreational vessel traffic model on the BC coast](https://open.canada.ca/data/dataset/fed5f00f-7b17-4ac2-95d6-f1a73858dac0).
-
-If you read through [the metadata](https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/recreational_vessel_traffic_model_for_british_columbia/MapServer), you'll see that that many types of data are available in this geodatabase (e.g., point data, raster, vector grid). The data being plotted in this example below is the "surveyeffort" raster dataset (which is specified at a later point).
 
 ```{r, echo = TRUE, message= FALSE, warning= FALSE, error= FALSE, cache= FALSE, results='hide'}
 
@@ -219,9 +217,11 @@ boat_file = list.files(unzip_dir, full.names = TRUE)
 
 ```
 
-## Mapping with ggplot
+## Mapping with the survey effort data with ggplot
 
 Unfortunately, raster data in this format cannot be directly mapped with `ggplot`. But, you can convert it to a data frame and keep the coordinate positions.
+
+If you read through [the metadata](https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/recreational_vessel_traffic_model_for_british_columbia/MapServer), you'll see that that many types of data are available in this geodatabase (e.g., point data, raster, vector grid). The data being plotted in this example below is the *surveyeffort* raster dataset, which is specified using the `sub` argument in the `rast()` function.
 
 ```{r}
 
@@ -250,7 +250,7 @@ ggplot()+
 
 ### Making Leaflet Maps
 
-[Leaflet maps](https://rstudio.github.io/leaflet/) are interactive maps that can be a great way to explore data. Leaflet maps can also be great for point data, since you can create [popup labels](https://rstudio.github.io/leaflet/articles/popups.html) where you can click and view your attribute data. 
+[Leaflet maps](https://rstudio.github.io/leaflet/) are interactive maps that can be a great way to explore data. Leaflet maps can also be great for point data, since you can create [popup labels](https://rstudio.github.io/leaflet/articles/popups.html) where you can click and view your attribute data.
 
 ```{r}
 
@@ -269,9 +269,9 @@ leaflet() %>%
 
 ## Using `ckanr` to build more robust code
 
-Sometimes, IT needs to upgrade server hardware or software, which can result in changes to the ArcGIS REST service URLs (e.g., the portion like this: https://egisp.dfo-mpo.gc.ca/arcgis/...). However, the Universally Unique Identifier (UUID) associated with each dataset remains unchanged.
+Sometimes, IT needs to upgrade server hardware or software, which can result in changes to the ArcGIS REST service URLs (e.g., the portion like this: *https://egisp.dfo-mpo.gc.ca/arcgis/rest/services*). However, the Universally Unique Identifier (UUID) associated with each dataset remains unchanged.
 
-In the Open Data portal, the UUID is the final part of the URL after "dataset". For example, in the Pacific Recreational Salmon Head Depots dataset: https://open.canada.ca/data/dataset/3cc03bbf-d59f-4812-996e-ddc52e0ba99e The UUID is: 3cc03bbf-d59f-4812-996e-ddc52e0ba99e.
+In the Open Data portal, the UUID is the final part of the URL after "dataset". For example, in the Pacific Recreational Salmon Head Depots dataset: *https://open.canada.ca/data/dataset/3cc03bbf-d59f-4812-996e-ddc52e0ba99e* The UUID is: *3cc03bbf-d59f-4812-996e-ddc52e0ba99e*.
 
 To make our script more robust, we can use the CKAN API. CKAN is a data management system that supports publishing, sharing, and discovering datasets. The ckanr package in R allows us to interact with CKAN-based portals, such as Open Data. You can use the ckanr_setup() function to establish a connection.
 
@@ -297,7 +297,7 @@ salmon_url = unlist(df_resources[df_resources$format == "ESRI REST" & sapply(df_
 
 ### Searching for data
 
-You can also use the `ckanr` package to search for data using the `package_search()` function. You can use the `q` argument to search for key words, and the fq argument to specify file types.
+You can also use the `ckanr` package to search for data using the `package_search()` function. You can use the `q` argument to search for key words, and the `fq` argument to specify file types.
 
 ```{r, echo = TRUE, message= FALSE, warning= FALSE, error= FALSE, cache= FALSE, results='hide'}
 
