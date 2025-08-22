@@ -221,7 +221,7 @@ boat_file = list.files(unzip_dir, full.names = TRUE)
 
 ```
 
-## Mapping with the survey effort data with ggplot
+## Mapping the survey effort data with `ggplot`
 
 Unfortunately, raster data in this format cannot be directly mapped with `ggplot`. But, you can convert it to a data frame and keep the coordinate positions.
 
@@ -248,6 +248,7 @@ ggplot()+
     xlim = c(bounds["xmin"], bounds["xmax"]),
     ylim = c(bounds["ymin"], bounds["ymax"])
   )+
+  labs(x = NULL, y = NULL)+
   theme_bw()
 
 ```
