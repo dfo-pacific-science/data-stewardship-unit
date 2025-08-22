@@ -96,8 +96,8 @@ bounds = st_bbox(salmonDepots)
 ggplot()+
   geom_sf(data = coast, fill = "lightgrey")+
   geom_sf(data = salmonDepots, size = 3.5, aes(fill = ACCESSIBILITY___ACCESSIBILITÉ), pch = 21, alpha = 0.85)+
-  coord_sf(xlim = c(bounds[1], bounds[3]), 
-           ylim = c(bounds[2], bounds[4]))+
+  coord_sf(xlim = c(bounds["xmin"], bounds["xmax"]),
+    ylim = c(bounds["ymin"], bounds["ymax"]))+
   # I'm not always convinced maps north arrows need to be added when the lat/lon is specified but some people insist!
   # Add north arrow to the top right (tr) of the map. It points to "true" north, not magnetic north
   annotation_north_arrow(location = "tr", which_north = "true",
