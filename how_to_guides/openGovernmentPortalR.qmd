@@ -114,7 +114,7 @@ ggplot()+
 
 [File geodatabases](https://pro.arcgis.com/en/pro-app/latest/help/data/geodatabases/manage-file-gdb/file-geodatabases.htm) are a proprietary file format developed by ESRI for spatial and non-spatial data. Many spatial datasets are uploaded to Open Data as file geodatabases, and it is possible to download and extract them with R!
 
-The example below shows how to access the file geodatabase from the [floating infrastructure dataset on Open Data](https://open.canada.ca/data/en/dataset/049770ef-6cb3-44ee-afc8-5d77d6200a12/resource/c32dff08-973e-4141-86e8-27839636bc63)
+The example below shows how to access the file geodatabase from the [floating infrastructure dataset on Open Data](https://open.canada.ca/data/en/dataset/049770ef-6cb3-44ee-afc8-5d77d6200a12)
 
 ### Creating temporary directories
 
