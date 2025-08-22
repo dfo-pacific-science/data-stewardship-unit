@@ -59,11 +59,9 @@ If you have trouble tracking this down, go to the appropriate [dataset page](htt
 
 Then, under the **Data and Resources** section, find the item labelled **ESRI REST** (there is both an English and French example) and left click on it. Select **Go to Resource**. 
 
-
-
+![goToResource](../images/openDataSpatial/dataAndResources.png) 
 This will open a new page with the URL you need:
-
-
+![salmonDepot](../images/openDataSpatial/salmonDepotURL.png)
 
 It is also important the appropriate layer is specified. The "0" at the end of the address in in the example denotes the English version, while the 1 represents French (see layers within the [MapServer page](https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/pacific_recreational_fishery_salmon_head_depots/MapServer)). They also do not always correspond to language. For example, in the [Pacific Commercial Salmon In Season Catch Estimates dataset](https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/pacific_commercial_salmon_in_season_catch_estimates_en/MapServer), layers 0 to 3 represent gill nets, troll, seine and Pacific Fishery Management Areas, respectively.
 
