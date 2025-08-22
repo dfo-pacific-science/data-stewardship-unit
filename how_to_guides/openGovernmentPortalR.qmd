@@ -7,7 +7,7 @@ last_updated: "2025-08-11"
 
 ## Background
 
-This tutorial provides an overview for how to extract spatial data from the [Open Government Portal](https://open.canada.ca/), commonly referred to as *Open Data*. OGP is the Government of Canada’s official platform for publishing federal datasets, and DFO Science staff publish eligible data products there to meet open data policy requirements, ensure visibility of our work, and support reuse by partners and the public.
+This tutorial provides an overview for how to extract spatial data from the [Open Government Portal](https://open.canada.ca/), commonly referred to as *Open Data*. OGP is the Government of Canada's official platform for publishing federal datasets, and DFO Science staff publish eligible data products there to meet open data policy requirements, ensure visibility of our work, and support reuse by partners and the public.
 
 The code below shows how to leverage the resources available on OGP, making it easier to meet FAIR (Findable, Accessible, Interoperable, Reusable) principles and support reproducible science.
 
@@ -44,7 +44,6 @@ librarian::shelf(
 
 ```
 
-
 ## Accessing Open Data via ARCGIS REST
 
 The `arcpullr` package is a great way to access [ArcGIS REST services](https://geoappext.nrcan.gc.ca/arcgis/sdk/rest/index.html#//02ss00000057000000), which are often used for storing spatial data on Open Data. You can use the `get_spatial_layer()` function to retrieve a spatial layer from an ArcGIS server.
@@ -59,7 +58,8 @@ If you have trouble tracking this down, go to the appropriate [dataset page](htt
 
 Then, under the **Data and Resources** section, find the item labelled **ESRI REST** (there is both an English and French example). Left click on the **Explore** dropdown item, then right click on **Go to resource**, and then left click on **Copy link**. This then copies the link to the URL you need.
 
-![goToResource](../images/openDataSpatial/geodatabaseLink.png) 
+![goToResource](../images/openDataSpatial/geodatabaseLink.png)
+
 It is important to ensure the appropriate layer is specified. In this example, the "0" at the end of the address denotes the English version, while a 1 represents French (see layers within the [MapServer page](https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/pacific_recreational_fishery_salmon_head_depots/MapServer)). They also do not always correspond to language. For example, in the [Pacific Commercial Salmon In Season Catch Estimates dataset](https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/pacific_commercial_salmon_in_season_catch_estimates_en/MapServer), layers 0 to 3 represent gill nets, troll, seine and Pacific Fishery Management Areas, respectively.
 
 ```{r salmonDepots, warning=FALSE}
@@ -67,8 +67,6 @@ salmonDepots = get_spatial_layer("https://egisp.dfo-mpo.gc.ca/arcgis/rest/servic
 ```
 
 ### Creating a map
-
-#### Preparing a basemap
 
 There are some great packages to get basemaps in R. The `rnaturalearth` package is a good option for getting country borders and other geographical features. You can use the `ne_countries()` function to get country borders.
 
@@ -231,16 +229,16 @@ rast_proj = project(surveyRast, coast)
 # Convert it to a dataframe. Keep the coordinate info
 rast_df = as.data.frame(rast_proj, xy = TRUE) 
 
+# Get the bounds for this. Using different code than above, since this is a regular data frame 
+boundsRast = with(rast_df, c(xmin = min(x), xmax = max(x), ymin = min(y), ymax = max(y)))
 
 # Plot it with geom_tile and add the coast data as well
 ggplot()+
   geom_tile(data = rast_df, aes(x=x, y=y, fill = Recreational_Boating_Data_Model)) +
   geom_sf(data = coast, fill = "lightgrey")+
   scale_fill_viridis_c(option = "magma")+
-  coord_sf(
-    xlim = c(boundsDocks["xmin"], boundsDocks["xmax"]),
-    ylim = c(boundsDocks["ymin"], boundsDocks["ymax"])
-  ) +
+  coord_sf(xlim = c(boundsRast["xmin"], boundsRast["xmax"]),
+                ylim = c(boundsRast["ymin"], boundsRast["ymax"]))+
   labs(x = NULL, y = NULL)+
   theme_bw()
 
