@@ -25,17 +25,22 @@ Note that much of this content has been expanded from a [similar tutorial create
 
 The [librarian](https://cran.r-project.org/web/packages/librarian/vignettes/intro-to-librarian.html) package is useful for loading multiple packages in R. It allows you to load packages from CRAN, GitHub, and other sources with a single command. It also installs missing packages automatically.
 
-```{r, eval=FALSE}
-install.packages("librarian")
-```
+```{r setup-librarian, message=FALSE, warning=FALSE}
+# Set CRAN mirror to avoid errors
+options(repos = c(CRAN = "https://cloud.r-project.org"))
 
-If you already have the librarian package, skip to loading the packages:
+# Install librarian if not already installed
+if (!requireNamespace("librarian", quietly = TRUE)) {
+  install.packages("librarian")
+}
 
-```{r, warning=FALSE, message=FALSE}
+# Load packages using librarian
 librarian::shelf(
-                 arcpullr, ckanr, dplyr, devtools, ggplot2, ggspatial, leaflet, leafpop, mapview,
-                 rnaturalearth, sf, stars, terra, viridisLite, 
-                 "github::ropensci/rnaturalearthhires") # example for loading from GitHub
+  arcpullr, ckanr, dplyr, devtools, ggplot2, ggspatial, leaflet, leafpop, mapview,
+  rnaturalearth, sf, stars, terra, viridisLite,
+  "github::ropensci/rnaturalearthhires" # example for loading from GitHub
+)
+
 ```
 
 ### Preparing a basemap
@@ -165,8 +170,8 @@ for(l in layers$name){
 ```{r dock-map, warning=FALSE, message=FALSE}
 
 # Note that the coordinate reference system of these two layers are different
-st_crs(docks) # NAD 83
-st_crs(coast) # WGS 84
+invisible(st_crs(docks)) # NAD 83
+invisible(st_crs(coast)) # WGS 84
 
 # To plot with ggplot, one of them has to be reprojected. I've transform the docks CRS to match the coast CRS 
 docks = st_transform(docks, st_crs(coast))
