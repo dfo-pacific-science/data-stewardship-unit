@@ -57,11 +57,10 @@ For example, with the [Pacific Recreational Fishery Salmon Head dataset](https:/
 
 If you have trouble tracking this down, go to the appropriate [dataset page](https://open.canada.ca/data/en/dataset/3cc03bbf-d59f-4812-996e-ddc52e0ba99e) on Open Data.
 
-Then, under the **Data and Resources** section, find the item labelled **ESRI REST** (there is both an English and French example). Left click on **Explore**, then right click on **Go to resource** and left click on **Copy link**. This then copies the link to the URL you need.
+Then, under the **Data and Resources** section, find the item labelled **ESRI REST** (there is both an English and French example). Left click on the **Explore** dropdown item, then right click on **Go to resource**, and then left click on **Copy link**. This then copies the link to the URL you need.
 
 ![goToResource](../images/openDataSpatial/geodatabaseLink.png) 
-
-It is also important the appropriate layer is specified. The "0" at the end of the address in in the example denotes the English version, while the 1 represents French (see layers within the [MapServer page](https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/pacific_recreational_fishery_salmon_head_depots/MapServer)). They also do not always correspond to language. For example, in the [Pacific Commercial Salmon In Season Catch Estimates dataset](https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/pacific_commercial_salmon_in_season_catch_estimates_en/MapServer), layers 0 to 3 represent gill nets, troll, seine and Pacific Fishery Management Areas, respectively.
+It is important to ensure the appropriate layer is specified. In this example, the "0" at the end of the address denotes the English version, while a 1 represents French (see layers within the [MapServer page](https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/pacific_recreational_fishery_salmon_head_depots/MapServer)). They also do not always correspond to language. For example, in the [Pacific Commercial Salmon In Season Catch Estimates dataset](https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/pacific_commercial_salmon_in_season_catch_estimates_en/MapServer), layers 0 to 3 represent gill nets, troll, seine and Pacific Fishery Management Areas, respectively.
 
 ```{r salmonDepots, warning=FALSE}
 salmonDepots = get_spatial_layer("https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/pacific_recreational_fishery_salmon_head_depots/MapServer/0")
@@ -130,7 +129,7 @@ zip_file = file.path(temp_dir, "zipPath.gdb.zip")
 # This is a relative path, so files will be extracted into the current working directory
 unzip_dir = file.path("extracted_fgdb")
 
-# Download the zipped geodatabase. To get the correct link, right click on the "Go to Resource" button, and select "Copy link address"
+# Download the dataset zip file. To get the correct link, follow the same steps as in the Pacific Recreational Fishery Salmon Head Depots example above, but with the "FDGB/GDB" item in Data and resources 
 download.file(
   "https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/049770ef-6cb3-44ee-afc8-5d77d6200a12/attachments/floating_infrastructure-docks.gdb.zip",
   destfile = zip_file,
@@ -199,7 +198,7 @@ temp_dir = tempdir()
 zip_file = file.path(temp_dir, "bc_boating_model.zip")
 unzip_dir = file.path(temp_dir, "bc_boating_data")
 
-# Download the dataset zip file
+# Download the dataset zip file. To get the correct link, follow the same steps as in the Pacific Recreational Fishery Salmon Head Depots example above, but with the "FDGB/GDB" item in Data and resources
 download.file(
   url = "https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/fed5f00f-7b17-4ac2-95d6-f1a73858dac0/attachments/Recreational_Boating_Data_Model.gdb.zip",
   destfile = zip_file,
