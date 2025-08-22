@@ -37,8 +37,7 @@ if (!requireNamespace("librarian", quietly = TRUE)) {
 # Load packages using librarian
 librarian::shelf(
   arcpullr, ckanr, dplyr, devtools, ggplot2, ggspatial, leaflet, leafpop, mapview,
-  rnaturalearth, sf, stars, terra, viridisLite,
-  "github::ropensci/rnaturalearthhires" # example for loading from GitHub
+  rnaturalearth, sf, stars, terra, viridisLite, ropensci/rnaturalearthhires # example for loading from GitHub
 )
 
 ```
