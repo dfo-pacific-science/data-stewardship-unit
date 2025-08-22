@@ -7,7 +7,9 @@ last_updated: "2025-08-11"
 
 ## Background
 
-This tutorial provides an overview for how to extract data from the [Open Government Portal](https://open.canada.ca/), commonly referred to as *Open Data*.
+This tutorial provides an overview for how to extract data from the [Open Government Portal](https://open.canada.ca/), commonly referred to as *Open Data*. OGP is the Government of Canada’s official platform for publishing federal datasets, and DFO science staff publish eligible data products there to meet open data policy requirements, ensure visibility of our work, and support reuse by partners and the public.
+
+The code below shows how to leverage the rich resources available on OGP, making it easier to meet FAIR (Findable, Accessible, Interoperable, Reusable) principles and support reproducible science.
 
 This tutorial reviews:
 
