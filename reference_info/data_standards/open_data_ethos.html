@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>databricks_r_studio – FADS Documentation Hub</title>
+<title>Designing Databases – FADS Documentation Hub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -122,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../reference_info/dwc-obis-gbif.html">Reference Info</a></li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/open_data_ethos.html">Data Standards</a></li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/open_data_ethos.html">Designing Databases</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -178,13 +178,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Reference Info</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../reference_info/dwc-obis-gbif.html" class="sidebar-item-text sidebar-link">
@@ -205,16 +205,16 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Data Standards</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/data_standards/open_data_ethos.html" class="sidebar-item-text sidebar-link">
+  <a href="../../reference_info/data_standards/open_data_ethos.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Designing Databases</span></a>
   </div>
 </li>
@@ -284,22 +284,197 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#start-with-the-questions-you-ask-not-the-tools-you-use" id="toc-start-with-the-questions-you-ask-not-the-tools-you-use" class="nav-link active" data-scroll-target="#start-with-the-questions-you-ask-not-the-tools-you-use"><strong>Start with the Questions You Ask, Not the Tools You Use</strong></a></li>
+  <li><a href="#identify-entities-things-and-attributes-details" id="toc-identify-entities-things-and-attributes-details" class="nav-link" data-scroll-target="#identify-entities-things-and-attributes-details"><strong>2. Identify Entities (Things) and Attributes (Details)</strong></a></li>
+  <li><a href="#table-naming" id="toc-table-naming" class="nav-link" data-scroll-target="#table-naming">1. <strong>Table Naming</strong></a></li>
+  <li><a href="#column-naming" id="toc-column-naming" class="nav-link" data-scroll-target="#column-naming">2. <strong>Column Naming</strong></a></li>
+  <li><a href="#normalization" id="toc-normalization" class="nav-link" data-scroll-target="#normalization">3. <strong>Normalization</strong></a></li>
+  <li><a href="#uri-usage" id="toc-uri-usage" class="nav-link" data-scroll-target="#uri-usage">4. <strong>URI Usage</strong></a></li>
+  <li><a href="#best-practice-summary" id="toc-best-practice-summary" class="nav-link" data-scroll-target="#best-practice-summary">5. <strong>Best Practice Summary</strong></a></li>
+  <li><a href="#understanding-data-modeling-paradigms" id="toc-understanding-data-modeling-paradigms" class="nav-link" data-scroll-target="#understanding-data-modeling-paradigms"><strong>Understanding Data Modeling Paradigms</strong></a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/reference_info/data_standards/open_data_ethos.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/reference_info/data_standards/open_data_ethos.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../reference_info/dwc-obis-gbif.html">Reference Info</a></li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/open_data_ethos.html">Data Standards</a></li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/open_data_ethos.html">Designing Databases</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Designing Databases</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
-<meta charset="utf-8">
-<title>Redirecting to https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/databricks_r_studio.html</title>
-<meta http-equiv="refresh" content="0; URL=https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/databricks_r_studio.html">
-<link rel="canonical" href="https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/databricks_r_studio.html">
+</header>
 
 
+<p>This document outlines the considerations for database design and naming conventions within the context of Science.</p>
+<p>Here’s our pragmatic advice for biologists who are designing relational database schemas, whether for small-scale monitoring projects or regional programs.</p>
+<section id="start-with-the-questions-you-ask-not-the-tools-you-use" class="level3">
+<h3 class="anchored" data-anchor-id="start-with-the-questions-you-ask-not-the-tools-you-use"><strong>Start with the Questions You Ask, Not the Tools You Use</strong></h3>
+<p>Before thinking about tables or columns, start with what you want to know:</p>
+<ul>
+<li><p>What are the key questions you ask of your data?</p></li>
+<li><p>What observations or measurements do you routinely record?</p></li>
+<li><p>What varies, and what stays the same?</p></li>
+</ul>
+<p>Example:</p>
+<blockquote class="blockquote">
+<p>You’re studying salmon migration. You want to know: When did fish arrive? Where were they tagged? What was their length?</p>
+</blockquote>
+<p>These questions define the <strong>core concepts</strong> in your data — and that’s what your database should be built around.</p>
+</section>
+<section id="identify-entities-things-and-attributes-details" class="level3">
+<h3 class="anchored" data-anchor-id="identify-entities-things-and-attributes-details"><strong>2. Identify Entities (Things) and Attributes (Details)</strong></h3>
+<p>Break your data into <strong>entities</strong> — the nouns in your questions:</p>
+<ul>
+<li><p>A <strong>Fish</strong> is an entity.</p></li>
+<li><p>A <strong>Tagging Event</strong> is an entity.</p></li>
+<li><p>A <strong>Location</strong> is an entity.</p></li>
+</ul>
+<p>Then, identify <strong>attributes</strong> — the things you record about each entity:</p>
+<ul>
+<li><p>Fish: ID, species, length, weight</p></li>
+<li><p>Tagging Event: date, method, person</p></li>
+<li><p>Location: name, coordinates, habitat type</p></li>
+</ul>
+<p>This becomes your <strong>conceptual model.</strong></p>
+</section>
+<section id="table-naming" class="level3">
+<h3 class="anchored" data-anchor-id="table-naming">1. <strong>Table Naming</strong></h3>
+<ul>
+<li><p>Use nouns (singular form): <code>FishCapture</code>, <code>StreamSegment</code>, <code>SampleEvent</code></p></li>
+<li><p>Align with <strong>Darwin Core classes</strong> or other domain models when possible (e.g., <code>Event</code>, <code>Occurrence</code>, <code>Organism</code>)</p></li>
+<li><p>Avoid cryptic abbreviations unless standardized</p></li>
+</ul>
+</section>
+<section id="column-naming" class="level3">
+<h3 class="anchored" data-anchor-id="column-naming">2. <strong>Column Naming</strong></h3>
+<ul>
+<li><p>Be human-readable but consistent: <code>life_stage</code>, <code>fork_length_mm</code>, <code>stream_name</code></p></li>
+<li><p>Refer to shared vocabulary terms (eventually discoverable via URI)</p></li>
+<li><p>Add a comment or metadata link pointing to URI when possible (e.g., <code>dcterms:identifier</code>)</p></li>
+</ul>
+</section>
+<section id="normalization" class="level3">
+<h3 class="anchored" data-anchor-id="normalization">3. <strong>Normalization</strong></h3>
+<ul>
+<li><p>Normalize cautiously. Don’t overdo it if:</p>
+<ul>
+<li><p>It creates cognitive overhead for end-users</p></li>
+<li><p>The data is small or semi-structured</p></li>
+</ul></li>
+<li><p>Normalize <strong>reference data</strong> like species, gear, location, methods</p></li>
+</ul>
+</section>
+<section id="uri-usage" class="level3">
+<h3 class="anchored" data-anchor-id="uri-usage">4. <strong>URI Usage</strong></h3>
+<ul>
+<li><p>Don’t force URIs in your raw schema—but design for them</p></li>
+<li><p>If a term or field has a known standard URI (e.g., from SKOS, CF Conventions, Darwin Core), include it in a metadata dictionary or data dictionary spreadsheet</p></li>
+</ul>
+</section>
+<section id="best-practice-summary" class="level3">
+<h3 class="anchored" data-anchor-id="best-practice-summary">5. <strong>Best Practice Summary</strong></h3>
+<ul>
+<li><p>Design your tables and columns with humans and future integration in mind</p></li>
+<li><p>Use controlled vocabularies as lookup references during schema design</p></li>
+<li><p>Defer the semantic formalization (e.g., OWL mapping) to the stewardship team</p></li>
+</ul>
+</section>
+<section id="understanding-data-modeling-paradigms" class="level3">
+<h3 class="anchored" data-anchor-id="understanding-data-modeling-paradigms"><strong>Understanding Data Modeling Paradigms</strong></h3>
+<p>Before diving into the nuts and bolts of designing databases, it’s helpful to understand that there are multiple ways to think about structuring data — and each has its own terminology and ideal use cases.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Paradigm</strong></th>
+<th><strong>“Things” (Entities)</strong></th>
+<th><strong>“Details” (Attributes)</strong></th>
+<th><strong>“Connections” (Relationships)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Relational Database</td>
+<td>Entity (Table)</td>
+<td>Attribute (Column)</td>
+<td>Foreign Key / Join Table</td>
+</tr>
+<tr class="even">
+<td>Object-Oriented</td>
+<td>Class</td>
+<td>Property / Field</td>
+<td>Association / Inheritance</td>
+</tr>
+<tr class="odd">
+<td>Semantic Web / Ontologies</td>
+<td>Class / Concept</td>
+<td>Property</td>
+<td>Triple (subject–predicate–object)</td>
+</tr>
+<tr class="even">
+<td>Document Database</td>
+<td>Document</td>
+<td>Field</td>
+<td>Embedded documents / linked IDs</td>
+</tr>
+<tr class="odd">
+<td>Graph Database</td>
+<td>Node</td>
+<td>Property</td>
+<td>Edge (with optional properties)</td>
+</tr>
+<tr class="even">
+<td>ISO 11179</td>
+<td>Object Class</td>
+<td>Property Term + Representation Term</td>
+<td>Conceptual Domain / Data Element Concept</td>
+</tr>
+</tbody>
+</table>
+<p>Each paradigm has different strengths:</p>
+<ul>
+<li><p><strong>Relational:</strong> Good for structured, well-defined data with clear rules.</p></li>
+<li><p><strong>Object-Oriented:</strong> Useful when data is tightly coupled with application logic.</p></li>
+<li><p><strong>Semantic Web:</strong> Ideal for integrating across domains using shared vocabularies.</p></li>
+<li><p><strong>Document:</strong> Flexible for nested or hierarchical data that varies across records.</p></li>
+<li><p><strong>Graph:</strong> Great for complex relationships like networks or ecological interactions.</p></li>
+<li><p><strong>ISO 11179:</strong> Well-suited for metadata registries and formal vocabularies; emphasizes precise definition of data elements across systems.</p></li>
+</ul>
+<section id="what-is-a-concept" class="level4">
+<h4 class="anchored" data-anchor-id="what-is-a-concept"><strong>What is a Concept?</strong></h4>
+<p>In some modeling frameworks — especially those used in ontologies and metadata registries — the term <strong>Concept</strong> replaces or complements the notion of an entity. A concept is a semantically meaningful idea or term, often given a definition, URI, and relationships to other concepts.</p>
+<ul>
+<li><p>In <strong>SKOS</strong> (Simple Knowledge Organization System), a <code>Concept</code> is the core building block used to represent ideas in controlled vocabularies (e.g., “Estuary Habitat” or “Juvenile Stage”).</p></li>
+<li><p>In <strong>ISO 11179</strong>, a <strong>Data Element Concept</strong> combines an <strong>Object Class</strong> (e.g., “Fish”) and a <strong>Property</strong> (e.g., “Length”). It helps precisely define what kind of information a data element captures.</p></li>
+</ul>
+<p>So, while “Entity” and “Attribute” are useful in building a table-driven model, “Concept” is often used when defining a shared vocabulary or metadata standard to ensure that different systems and teams are talking about the same thing.</p>
+<p>For most field data collection and biological analysis, starting with Entities and Attributes is simple and effective. But if your work involves publishing metadata, aligning with ontologies, or contributing to shared vocabularies, understanding and using Concepts can become essential.</p>
+
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -727,7 +902,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/documentation_hub/how_to_guides/databricks_r_studio.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/documentation_hub/how_to_guides/databricks_r_studio.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/reference_info/data_standards/open_data_ethos.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/reference_info/data_standards/open_data_ethos.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This site was created with <a href="https://quarto.org/">Quarto</a> and is hosted with <a href="https://pages.github.com/">GitHub Pages</a>.</p>
 </div>
