@@ -173,15 +173,15 @@ invisible(st_crs(coast)) # WGS 84
 docks = st_transform(docks, st_crs(coast))
 
 # Redefine the bounds of the layer of interest
-boundsDOcks = st_bbox(docks)
+boundsDocks = st_bbox(docks)
 
 # Make a map of the docks
 ggplot()+
   geom_sf(data = coast, fill = "lightgrey")+
   geom_sf(data = docks, size = 3.5, pch = 21, aes(fill = region), alpha = 0.65)+
   coord_sf(
-    xlim = c(boundsDOcks["xmin"], boundsDOcks["xmax"]),
-    ylim = c(boundsDOcks["ymin"], boundsDOcks["ymax"])
+    xlim = c(boundsDocks["xmin"], boundsDocks["xmax"]),
+    ylim = c(boundsDocks["ymin"], boundsDocks["ymax"])
   ) +
   scale_fill_discrete(name = "Region")+
   theme_bw()
@@ -241,9 +241,9 @@ ggplot()+
   geom_sf(data = coast, fill = "lightgrey")+
   scale_fill_viridis_c(option = "magma")+
   coord_sf(
-    xlim = c(bounds["xmin"], bounds["xmax"]),
-    ylim = c(bounds["ymin"], bounds["ymax"])
-  )+
+    xlim = c(boundsDocks["xmin"], boundsDocks["xmax"]),
+    ylim = c(boundsDocks["ymin"], boundsDocks["ymax"])
+  ) +
   labs(x = NULL, y = NULL)+
   theme_bw()
 
