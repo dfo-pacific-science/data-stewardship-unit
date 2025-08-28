@@ -47,10 +47,10 @@ Table 1. **External Platform Use Guidelines** for three data classifications of 
 - **Recommended for**: Non-sensitive, unclassified code, metadata schemas, documentation, workflows.
 - **Allowed**: Unclassified data/code only. Data must go through the Approvals and Internal publishing process before being posted anywhere public.
 - **Private repos**: Use for drafting and collaboration before public release. Do not use for long-term data storage.
-- **FSAR Guidance**: Posting of data in a public GitHub repo before FSAR is formally approved by CSAS and before the release has beeing approved by the Regional Director of Science is likely a breach of the Access to Information Act and/or Privacy Act.
+- **FSAR Guidance**: Releasing data in a public GitHub repo before approval by CSAS and before the release has been approved by the Regional Director of Science is a breach of the Access to Information Act and/or Privacy Act.
 
 > 🔗 [TBS Directive on Open Government, Section 6.1](https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=28108#cha6) – Open information by default, subject to security/privacy.
-> 🔗 [DFO Policy for Scientific Data](https://www.dfo-mpo.gc.ca/about-notre-sujet/publications/science/datapolicy-politiquedonnees/index-eng.html) - " t is the responsibility of the Regional Director of Science to designate specific Data as classified for preventing its open sharing."
+> 🔗 [DFO Policy for Scientific Data](https://www.dfo-mpo.gc.ca/about-notre-sujet/publications/science/datapolicy-politiquedonnees/index-eng.html) - "it is the responsibility of the Regional Director of Science to designate specific Data as classified for preventing its open sharing."
 
 ---
 
