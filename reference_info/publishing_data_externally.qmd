@@ -6,8 +6,7 @@ last_updated: "2025-04-04"
 
 This guide is intended for scientists and technical staff in the DFO Pacific Region Science Branch. It outlines what is allowed, restricted, or prohibited when using internal and external platforms (e.g., Sharepoint, GitHub, Zenodo, Google Drive) to manage and share DFO Science data, code, and metadata, including during Fishery Science Advisory Report (FSAR) workflows.
 
-For FSAR workflows, we recommend authors save their data in the Sharepoint for the Pacific Salmon Data MS Team. All data should be accompanied by a data dictionary with a README. For resources on creating a data dictionary, please see [our blurb on data standards](https://github.com/dfo-pacific-science/data-stewardship-unit/tree/main/data_standards).
-Github can be used to host the code associated with analyses. 
+For FSAR workflows, we recommend authors save their data in the Sharepoint for the Pacific Salmon Data MS Team. All data should be accompanied by a data dictionary with a README. Github can be used to host the code associated with analyses. 
 
 ---
 
