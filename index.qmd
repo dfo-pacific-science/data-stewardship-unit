@@ -3,7 +3,7 @@ format: html
 profile: english
 ---
 
-# FADS Documentation Hub 🐟💾
+# FADS Open Science Hub 🐟💾
 
 Welcome to the Fishery & Assessment Data Section (FADS) Open Science Hub! 
 
