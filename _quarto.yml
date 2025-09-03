@@ -1,6 +1,6 @@
 project: 
   type: website
-  title: "FADS Documentation Hub"
+  title: "FADS Open Science Hub"
   output-dir: ./_site
 
 format:
@@ -17,7 +17,7 @@ website:
   navbar:
     search: true
     left:
-      - text: "FADS Wiki Home (Internal)"
+      - text: "FADS Internal Wiki"
         href: https://086gc.sharepoint.com/:u:/r/sites/FisheryAssessmentDataSectionWiki/SitePages/CollabHome.aspx?csf=1&web=1&e=tkJJk4
       - text: "About"
         href: about.qmd

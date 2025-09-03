@@ -5,13 +5,13 @@ profile: english
 
 # FADS Documentation Hub 🐟💾
 
-Welcome to the Fishery & Assessment Data Section (FADS) Documentation Hub! 
+Welcome to the Fishery & Assessment Data Section (FADS) Open Science Hub! 
 
-Here, we work in the open and share our knowledge to **enable open data science collaboration with a broad community** not only within DFO but also externally with academics, NGOs, and Indigenous groups. The FADS Wiki is for internal access by DFO employees while this Documentation Hub is openly accessible.
+Here, we work in the open and share our knowledge to **enable open data science collaboration with a broad community** not only within DFO but also externally with academics, NGOs, and Indigenous groups. The FADS Wiki is for internal access by DFO employees while this Open Science Hub is openly accessible.
 
-Whether you're a seasoned data steward or just starting out, this hub is designed to provide you with the resources you need to navigate the world of salmon data stewardship and management 📚✨
+Whether you're a seasoned data steward or just starting out, this hub is designed to provide you with the resources you need to navigate the world of salmon data stewardship and management within DFO 📚✨
 
-We follow the [**Diátaxis Framework**](https://diataxis.fr) to keep documentation organized, useful, and easy to navigate. The docs are grouped into four clear categories:
+To keep documentation organized, useful, and easy to navigate docs are grouped into four clear categories:
 
 ------------------------------------------------------------------------
 
