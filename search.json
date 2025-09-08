@@ -375,7 +375,7 @@
   {
     "objectID": "documentation_hub/how_to_guides/sharepoint_r.html",
     "href": "documentation_hub/how_to_guides/sharepoint_r.html",
-    "title": "FADS Open Science Hub",
+    "title": "FADS Open Science Documentation Hub",
     "section": "",
     "text": "Redirecting to https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/sharepoint_r.html"
   },
@@ -410,7 +410,7 @@
   {
     "objectID": "documentation_hub/how_to_guides/databricks_r_studio.html",
     "href": "documentation_hub/how_to_guides/databricks_r_studio.html",
-    "title": "FADS Open Science Hub",
+    "title": "FADS Open Science Documentation Hub",
     "section": "",
     "text": "Redirecting to https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/databricks_r_studio.html"
   },
@@ -671,14 +671,14 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "FADS Open Science Hub 🐟💾",
+    "title": "FADS Open Science Documentation Hub 🐟💾",
     "section": "",
-    "text": "FADS Open Science Hub 🐟💾\nWelcome to the Fishery & Assessment Data Section (FADS) Open Science Hub!\nHere, we work in the open and share our knowledge to enable open data science collaboration with a broad community not only within DFO but also externally with academics, NGOs, and Indigenous groups. The FADS Wiki is for internal access by DFO employees while this Open Science Hub is openly accessible.\nWhether you’re a seasoned data steward or just starting out, this hub is designed to provide you with the resources you need to navigate the world of salmon data stewardship and management within DFO 📚✨\nTo keep documentation organized, useful, and easy to navigate docs are grouped into four clear categories:\n\n\n️1. How-to Guides 🛠\nQuick, practical instructions for specific tasks.\nPerfect for when you’re asking:\n&gt; “How do I do this specific thing?”\nExamples:\n\nHow to request access to datasets stored in the cloud 🔐\n\nHow to submit a metadata record 📤\n\nHow to clean up an Excel file before uploading 🧼\n\n\n\n\n2. Reference Info 📘\nThe deep, detailed, no-fluff facts about tools, terms, and standards.\nUse these when you need precision or technical definitions.\nExamples:\n\nUsing terms from controlled vocabularies like Darwin Core 🧾\nOn hosting data and code 🫙\nTools, including reccomended R packages 🧑🏾‍💻\n\n\n\n\n3. Tutorials 🎓\nStructured, step-by-step lessons that help you learn by doing.\nIdeal for onboarding or skill-building.\nExamples:\n\nA walk through on using Power BI with our datasets 📊\nIntro to working with Synapse Notebooks 🧠\nHow to support controlled vocabularies 🔤\n\n\n\n\n4. Deep dives 🧠\nThoughtful writeups and explanations on the why behind the work.\nGreat for context, decision-making, or just satisfying your inner data philosopher.\nExamples:\n\nWhy metadata quality matters 🧼\nData lifecycle management explained 🌱➡️🌳\nThe theory behind our access protocols 🚦\n\n\n\n\nGetting Started 🛠️\n🧭 Start exploring using the navigation menu on your left to dive in!\n❔ Learn more about what resources are available on the About page.\n🔍 Use the search bar at the top right to find specific topics or resources.\n\n\n\nContribute & Collaborate! 🤝\nThis documentation is a living resource — always evolving and improving.\nWe’d love your feedback, suggestions, and ideas! 🗣️\nYou can even contribute directly to the documentation! See our Contributing Guide for more details. Spotted something confusing? Missing a topic? Got an awesome tip to share?\n➡️ Reach out to us anytime — we’re listening 👂 and always happy to help!\nHappy stewarding! 🐟✨\n\n↩︎️ Return to the Internal FADS SharePoint Wiki"
+    "text": "FADS Open Science Documentation Hub 🐟💾\nWelcome to the Fishery & Assessment Data Section (FADS) Open Science Documentation Hub! This is the public facing portion of our internal FADS Wiki on SharePoint.\nHere, we work in the open and share our knowledge to enable open data science collaboration with a broad community not only within DFO but also externally with academics, NGOs, and Indigenous groups.\nWhether you’re a seasoned data steward or just starting out, this hub is designed to provide you with the resources you need to navigate the world of salmon data stewardship and management within DFO 📚✨\nTo keep documentation organized, useful, and easy to navigate docs are grouped into four clear categories:\n\n\n️1. How-to Guides 🛠\nQuick, practical instructions for specific tasks.\nPerfect for when you’re asking:\n&gt; “How do I do this specific thing?”\nExamples:\n\nHow to request access to datasets stored in the cloud 🔐\n\nHow to submit a metadata record 📤\n\nHow to clean up an Excel file before uploading 🧼\n\n\n\n\n2. Reference Info 📘\nThe deep, detailed, no-fluff facts about tools, terms, and standards.\nUse these when you need precision or technical definitions.\nExamples:\n\nUsing terms from controlled vocabularies like Darwin Core 🧾\nOn hosting data and code 🫙\nTools, including reccomended R packages 🧑🏾‍💻\n\n\n\n\n3. Tutorials 🎓\nStructured, step-by-step lessons that help you learn by doing.\nIdeal for onboarding or skill-building.\nExamples:\n\nA walk through on using Power BI with our datasets 📊\nIntro to working with Synapse Notebooks 🧠\nHow to support controlled vocabularies 🔤\n\n\n\n\n4. Deep dives 🧠\nThoughtful writeups and explanations on the why behind the work.\nGreat for context, decision-making, or just satisfying your inner data philosopher.\nExamples:\n\nWhy metadata quality matters 🧼\nData lifecycle management explained 🌱➡️🌳\nThe theory behind our access protocols 🚦\n\n\n\n\nGetting Started 🛠️\n🧭 Start exploring using the navigation menu on your left to dive in!\n❔ Learn more about what resources are available on the About page.\n🔍 Use the search bar at the top right to find specific topics or resources.\n\n\n\nContribute & Collaborate! 🤝\nThis documentation is a living resource — always evolving and improving.\nWe’d love your feedback, suggestions, and ideas! 🗣️\nYou can even contribute directly to the documentation! See our Contributing Guide for more details. Spotted something confusing? Missing a topic? Got an awesome tip to share?\n➡️ Reach out to us anytime — we’re listening 👂 and always happy to help!\nHappy stewarding! 🐟✨\n\n↩︎️ Return to the Internal FADS SharePoint Wiki"
   },
   {
     "objectID": "dsu_documentation.html",
     "href": "dsu_documentation.html",
-    "title": "FADS Open Science Hub",
+    "title": "FADS Open Science Documentation Hub",
     "section": "",
     "text": "Redirecting to https://dfo-pacific-science.github.io/data-stewardship-unit/index.html"
   }
