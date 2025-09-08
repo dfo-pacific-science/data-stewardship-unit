@@ -1,6 +1,6 @@
 project: 
   type: website
-  title: "FADS Open Science Hub"
+  title: "FADS Open Science Documentation Hub"
   output-dir: ./_site
 
 format:
