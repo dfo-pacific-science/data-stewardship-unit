@@ -4,6 +4,7 @@ format: html
 redirect_from:
   - /documentation_hub/how_to_guides/databricks_r_studio
 freeze: auto
+eval: false
 ---
 
 ## TL;DR
