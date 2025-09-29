@@ -1,19 +1,5 @@
 [
   {
-    "objectID": "tools.html",
-    "href": "tools.html",
-    "title": "🧰 Tools for Data Stewardship ⚙️📦",
-    "section": "",
-    "text": "Welcome to the Tools section of the DSU site! 🐟\nHere you’ll find a curated set of apps, platforms, scripts, and templates that support your work as a data steward or data producer within the Pacific Region Science Branch of Fisheries and Oceans Canada. 🧪🌊\n\n\n\nWe’re actively gathering, building, and documenting the most useful tools for the job — so stay tuned! In the meantime, here’s a sneak peek at what’s coming:\n\n\n\n🗂 Data Dictionary and Metadata Templates (Excel + JSON)\n🤝 Data Management Agreement Templates\n🧮 R & Python Functions, Scripts, and Packages for data cleaning and reporting\n🔗 Links to External Tools (See Internal DSU SharePoint Wiki for internal tools)\n🧠 Toolkits for Data Stewards (checklists, walkthroughs, best practices)\n\n\n\n\n\nIf you’ve built or used something you think could help others — whether it’s a handy Excel macro or a full-blown Shiny app — we’d love to include it here!\nSend us a note and let’s make it easier for everyone to work smarter. 🤝💡\n\n🧭 Return to the Internal DSU Wiki\n\nTools don’t solve problems — people do. But the right tool helps a lot. 🛠️🙂"
-  },
-  {
-    "objectID": "tools.html#this-page-is-under-construction",
-    "href": "tools.html#this-page-is-under-construction",
-    "title": "🧰 Tools for Data Stewardship ⚙️📦",
-    "section": "",
-    "text": "We’re actively gathering, building, and documenting the most useful tools for the job — so stay tuned! In the meantime, here’s a sneak peek at what’s coming:\n\n\n\n🗂 Data Dictionary and Metadata Templates (Excel + JSON)\n🤝 Data Management Agreement Templates\n🧮 R & Python Functions, Scripts, and Packages for data cleaning and reporting\n🔗 Links to External Tools (See Internal DSU SharePoint Wiki for internal tools)\n🧠 Toolkits for Data Stewards (checklists, walkthroughs, best practices)\n\n\n\n\n\nIf you’ve built or used something you think could help others — whether it’s a handy Excel macro or a full-blown Shiny app — we’d love to include it here!\nSend us a note and let’s make it easier for everyone to work smarter. 🤝💡\n\n🧭 Return to the Internal DSU Wiki\n\nTools don’t solve problems — people do. But the right tool helps a lot. 🛠️🙂"
-  },
-  {
     "objectID": "deep_dives/Stock Assessment Data 101 for Fisheries Science Reports.html",
     "href": "deep_dives/Stock Assessment Data 101 for Fisheries Science Reports.html",
     "title": "Fisheries Science Reports – Data and Stats 101",
@@ -50,81 +36,110 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About the DSU",
+    "objectID": "documentation_hub/how_to_guides/support_controlled_vocabs.html",
+    "href": "documentation_hub/how_to_guides/support_controlled_vocabs.html",
+    "title": "Support Controlled Vocabularies",
     "section": "",
-    "text": "The Data Stewardship Unit (DSU) is situated within the Fisheries and Assessment Data Section (FADS), of the Stock Assessment and Research Division of the Pacific Region Science Branch of Fisheries and Oceans Canada (DFO).\nWe are a dedicated team committed to enhancing data management and stewardship practices within DFO. Our primary focus is on data related to Pacific Salmon within the DFO Pacific Region.\nOur goal is to provide guidance and assistance throughout the entire lifecycle of data management—from planning to publication. We strive to ensure our practices align with modern data standards, such as those outlined in the DFO Data Strategy and the Government of Canada’s digital data strategy. Our work is guided by the principles of making data findable, accessible, interoperable, and reusable (FAIR). Additionally, we highly value the principles of Indigenous data governance, such as ownership, control, access, and possession (OCAP), and we are committed to helping our collaborators respect and implement these principles in their work."
+    "text": "The scientist downloads and completes the data dictionary template (Excel)\n\nThey describe each variable: name, definition, method, units, etc.\nThey may include URIs from known vocabularies if possible\n\nThe spreadsheet includes:\n\nA README sheet with instructions\nA Metadata tab for project-level context\nA Data Dictionary tab with one row per variable\n\n\n\n\n\n\nThe data dictionary is passed into your R validation function (validate_data_dictionary())\nIt compares submitted variables to your reference vocabulary, hosted as JSON on GitHub Pages\nThe validator returns:\n\nMatched terms\nUnmatched terms\nSuggested mappings using fuzzy logic (e.g., stringdist or Jaro-Winkler)\n\nThe scientist or steward reviews and adjusts terms as needed\n\n\n\n\n\nFor each submitted or candidate term:\n\nUse an automated lookup tool to check if a concept already exists in the NCEAS Salmon Ontology. Start by using the BioPortal Annotator or API to match term labels and definitions. Optionally, build a lightweight script that compares local vocabulary terms to the ontology by label, synonyms, or definition text using exact or fuzzy string matching. Consider integrating the result into your pipeline for batch validation.\nIf it exists:\n\nUse skos:exactMatch or skos:closeMatch in your .ttl (Turtle) or .jsonld RDF vocab files. These mappings are typically stored in the ontology files generated from your .csv source. Add a column like exact_match_uri or close_match_uri to your .csv, your export script can incorporate those values automatically during serialization to .ttl or .jsonld.\n\nIf it doesn’t exist, but is broadly applicable:\n\nPrepare a Pull Request or issue to suggest the term to the NCEAS maintainers\nInclude:\n\nLabel, definition, synonyms\nUsage example or data sources\n\n\n\n\n\n\n\n\nMaintain DFO vocabularies in GitHub as:\n\n.csv for editing\n.json for R/python access and validation\n.jsonld and .ttl for ontology use\n\nAssign persistent URIs using https://w3id.org/dfo/spsi#term-id\nOrganize vocabularies by data domain or project (e.g., monitoring, habitat, biology)\n\n\n\n\n\nExtend your vocabularies with relationships:\n\nbroader, narrower, related\nhasUnit, hasMethod, derivedFrom\n\nUse tools like rdflib or skosify to model in Turtle or OWL\nAdd namespace info:\n\n@prefix dfo-spsi: &lt;https://w3id.org/dfo/spsi#&gt;\n\nOver time, link this to:\n\nNCEAS ontology\nNERC units\nENVO/OBI for environment/sample methods\n\n\n\n\n\n\nHost vocab on GitHub Pages + register URIs at w3id.org\nLink from your Quarto site (/data-standards/vocab-index.html)\nAllow download in multiple formats (JSON, JSON-LD, TTL)\nUse vocab in:\n\nData validation tools\nMetadata editors\nAPIs and dashboards\nAI pipelines (semantic RAG, search, integration)\n\n\n\nThis workflow will enable DFO Pacific to build a structured, version-controlled, and interoperable vocabulary and ontology infrastructure for salmon data, with clear ties to domain-wide standards and extensibility for AI use cases."
   },
   {
-    "objectID": "CONTRIBUTING.html",
-    "href": "CONTRIBUTING.html",
-    "title": "🤝 Contributing to the DSU Docs & Tools",
+    "objectID": "documentation_hub/how_to_guides/support_controlled_vocabs.html#guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo",
+    "href": "documentation_hub/how_to_guides/support_controlled_vocabs.html#guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo",
+    "title": "Support Controlled Vocabularies",
     "section": "",
-    "text": "Thanks for helping improve the Data Stewardship Unit (DSU) site! 🎉\nWhether you’re adding a how-to guide, writing up a tutorial, or sharing a helpful tool, your contribution helps make data stewardship easier for everyone in the Pacific Region Science Branch. 🐟🌲\n\n\n\nIf you’re already a member of the dfo-pacific-science organization, you can edit the repo directly. If not, you can still contribute by creating a pull request (PR) from your forked copy of the repo or creating an issue to request a change.\nWant to add a new documentation or tools page? Here’s how!\nYou can open the repo after cloning it in an IDE like RStudio or VSCode depending on your preference.\n\n\n\nAn IDE (RStudio or VSCode)\nGit SCM\nQuarto\n\n\n\n\nTo open the website locally, clone the repository with git by running git clone https://github.com/dfo-pacific-science/data-stewardship-unit.git in terminal in your IDE.\n\n\n\nMake a new branch so that you can test things out without messing things up in the main branch. Run git branch {branchName} in the terminal in your IDE to make a new branch and git switch {branchName} to switch to it.\n\n\n\nYou can create a new .qmd file in one of the four folders (how_to_guides, reference_info, tutorials, deep_dives) to get it displayed under the navbar menu, which grabs .qmd files automatically.\n\n\n\nIn terminal, run quarto preview. A browser window will pop up with a locally-hosted version of the website. Make sure your changes look good and progress to the next step. Make edits if needed.\n\n\n\nIn terminal, run quarto render. The complete site will be rendered in the _site folder for Github actions to deploy.\n\n\n\nRun git add {fileName} for all of the files you want to stage. Make sure to not forget the _free folder, which contains all of the information related to R code that runs in some of the .qmd’s.\nRun git commit -m \"commit message here\".\nRun git push. If you’ve never pushed on your current branch, git will prompt you to use something like git push --set-upstream origin {branchName}.\n\n\n\nCreate a pull request from your branch and assign a team member to review it. There are protections on the main branch that caution you away from pushing without a review. Once the PR has been merged to main, the Github Action will be automatically triggered. Check the actions tab to see the deployment progress.\n\n\n\n\n\n\n\n\nUse feature branches off the main branch if working on a larger update (e.g. fix/typo, add/new-tool-guide)\nOtherwise for small updates, commit directly to main or create your Pull Request directly from main.\nGroup related changes into one PR\nIf you’re fixing an Issue, mention it in your PR:\nCloses #42 will auto-link and close the issue on merge\nKeep commit messages short but clear and in present tense (\"Add how-to for bulk metadata upload\")\n\n\n\n\n\n\nUse GitHub Issues to: - Request a new topic 📌 - Report a problem 🐛 - Share an idea 💡\nWe tag and triage regularly — feel free to assign yourself or ask for help!\n\n\n\n\nOpen an issue, ping someone on the DSU team, or check the README for more guidance. We’re here to help! Thanks again for contributing — every little improvement adds up."
+    "text": "The scientist downloads and completes the data dictionary template (Excel)\n\nThey describe each variable: name, definition, method, units, etc.\nThey may include URIs from known vocabularies if possible\n\nThe spreadsheet includes:\n\nA README sheet with instructions\nA Metadata tab for project-level context\nA Data Dictionary tab with one row per variable\n\n\n\n\n\n\nThe data dictionary is passed into your R validation function (validate_data_dictionary())\nIt compares submitted variables to your reference vocabulary, hosted as JSON on GitHub Pages\nThe validator returns:\n\nMatched terms\nUnmatched terms\nSuggested mappings using fuzzy logic (e.g., stringdist or Jaro-Winkler)\n\nThe scientist or steward reviews and adjusts terms as needed\n\n\n\n\n\nFor each submitted or candidate term:\n\nUse an automated lookup tool to check if a concept already exists in the NCEAS Salmon Ontology. Start by using the BioPortal Annotator or API to match term labels and definitions. Optionally, build a lightweight script that compares local vocabulary terms to the ontology by label, synonyms, or definition text using exact or fuzzy string matching. Consider integrating the result into your pipeline for batch validation.\nIf it exists:\n\nUse skos:exactMatch or skos:closeMatch in your .ttl (Turtle) or .jsonld RDF vocab files. These mappings are typically stored in the ontology files generated from your .csv source. Add a column like exact_match_uri or close_match_uri to your .csv, your export script can incorporate those values automatically during serialization to .ttl or .jsonld.\n\nIf it doesn’t exist, but is broadly applicable:\n\nPrepare a Pull Request or issue to suggest the term to the NCEAS maintainers\nInclude:\n\nLabel, definition, synonyms\nUsage example or data sources\n\n\n\n\n\n\n\n\nMaintain DFO vocabularies in GitHub as:\n\n.csv for editing\n.json for R/python access and validation\n.jsonld and .ttl for ontology use\n\nAssign persistent URIs using https://w3id.org/dfo/spsi#term-id\nOrganize vocabularies by data domain or project (e.g., monitoring, habitat, biology)\n\n\n\n\n\nExtend your vocabularies with relationships:\n\nbroader, narrower, related\nhasUnit, hasMethod, derivedFrom\n\nUse tools like rdflib or skosify to model in Turtle or OWL\nAdd namespace info:\n\n@prefix dfo-spsi: &lt;https://w3id.org/dfo/spsi#&gt;\n\nOver time, link this to:\n\nNCEAS ontology\nNERC units\nENVO/OBI for environment/sample methods\n\n\n\n\n\n\nHost vocab on GitHub Pages + register URIs at w3id.org\nLink from your Quarto site (/data-standards/vocab-index.html)\nAllow download in multiple formats (JSON, JSON-LD, TTL)\nUse vocab in:\n\nData validation tools\nMetadata editors\nAPIs and dashboards\nAI pipelines (semantic RAG, search, integration)\n\n\n\nThis workflow will enable DFO Pacific to build a structured, version-controlled, and interoperable vocabulary and ontology infrastructure for salmon data, with clear ties to domain-wide standards and extensibility for AI use cases."
   },
   {
-    "objectID": "CONTRIBUTING.html#how-to-write-a-new-page",
-    "href": "CONTRIBUTING.html#how-to-write-a-new-page",
-    "title": "🤝 Contributing to the DSU Docs & Tools",
-    "section": "",
-    "text": "If you’re already a member of the dfo-pacific-science organization, you can edit the repo directly. If not, you can still contribute by creating a pull request (PR) from your forked copy of the repo or creating an issue to request a change.\nWant to add a new documentation or tools page? Here’s how!\nYou can open the repo after cloning it in an IDE like RStudio or VSCode depending on your preference.\n\n\n\nAn IDE (RStudio or VSCode)\nGit SCM\nQuarto\n\n\n\n\nTo open the website locally, clone the repository with git by running git clone https://github.com/dfo-pacific-science/data-stewardship-unit.git in terminal in your IDE.\n\n\n\nMake a new branch so that you can test things out without messing things up in the main branch. Run git branch {branchName} in the terminal in your IDE to make a new branch and git switch {branchName} to switch to it.\n\n\n\nYou can create a new .qmd file in one of the four folders (how_to_guides, reference_info, tutorials, deep_dives) to get it displayed under the navbar menu, which grabs .qmd files automatically.\n\n\n\nIn terminal, run quarto preview. A browser window will pop up with a locally-hosted version of the website. Make sure your changes look good and progress to the next step. Make edits if needed.\n\n\n\nIn terminal, run quarto render. The complete site will be rendered in the _site folder for Github actions to deploy.\n\n\n\nRun git add {fileName} for all of the files you want to stage. Make sure to not forget the _free folder, which contains all of the information related to R code that runs in some of the .qmd’s.\nRun git commit -m \"commit message here\".\nRun git push. If you’ve never pushed on your current branch, git will prompt you to use something like git push --set-upstream origin {branchName}.\n\n\n\nCreate a pull request from your branch and assign a team member to review it. There are protections on the main branch that caution you away from pushing without a review. Once the PR has been merged to main, the Github Action will be automatically triggered. Check the actions tab to see the deployment progress."
+    "objectID": "documentation_hub/how_to_guides/support_controlled_vocabs.html#why-bother-with-controlled-vocabularies-and-ontologies",
+    "href": "documentation_hub/how_to_guides/support_controlled_vocabs.html#why-bother-with-controlled-vocabularies-and-ontologies",
+    "title": "Support Controlled Vocabularies",
+    "section": "🤔 Why Bother with Controlled Vocabularies and Ontologies?",
+    "text": "🤔 Why Bother with Controlled Vocabularies and Ontologies?\nIt’s a fair question. Why invest all this time defining terms, aligning with ontologies, and assigning URIs?\nBecause it unlocks a future where your data works harder for you. Controlled vocabularies and ontologies aren’t just academic exercises — they’re the foundation for better discovery, smarter integration, and automation across the science lifecycle.\nHere are some tangible ways this work adds value:\n\n\n🔍 1. Enhanced Data Discovery\n\n“I know someone collected salmon smolt data… but where do I find it?”\n\nBy tagging datasets, columns, and metadata with terms from your SPSI vocabulary, you enable: - Keyword search that actually understands synonyms and related terms - Filters based on data type, units, methods, or ecological domain - Smart discovery interfaces (e.g., “Show me everything related to juvenile survival”)\n➡️ Example: A data catalog that lets users search by controlled term rather than inconsistent column names across spreadsheets.\n\n\n\n🔄 2. Semi-Automated Data Integration\n\n“These datasets report the same metric but use different terms, formats, or units.”\n\nUsing controlled terms with defined relationships (e.g., broader, exactMatch, hasUnit), you can: - Detect overlapping fields across submissions automatically - Align columns and units across multiple datasets - Standardize value domains (e.g., Red/Green/Amber vs Critical/Stable/Concerned)\n➡️ Example: A script that reads in new FSAR data and automatically maps it to the SPSR schema for validation and loading into a database.\n\n\n\n🧠 3. Smarter Applications (AI & Beyond)\n\n“Can’t AI just figure this stuff out?”\n\nOnly if you feed it structure.\nControlled vocabularies and ontologies allow you to: - Ground large language models (LLMs) in your domain’s specific terminology - Build Retrieval-Augmented Generation (RAG) systems for question answering - Use semantic search tools to find relevant variables, concepts, and datasets - Train AI to assist in metadata generation, anomaly detection, or dataset classification\n➡️ Example: A chatbot that helps scientists describe their data using your vocabulary, or recommends matching fields from existing standards.\n\n\n\n🔗 4. Future-Proof Interoperability\n\n“What if we want to share this with other agencies or join a broader platform?”\n\nStandardized vocabularies with persistent URIs and ontology alignments (e.g., with NCEAS, ENVO, OBO) make it easy to: - Share DFO terms with external partners - Convert metadata to international schemas (e.g., Darwin Core, ISO 19115) - Plug into federated data platforms without starting over\n➡️ Example: Publishing your vocabulary to w3id.org lets others reference and reuse your terms as global identifiers.\n\n\n\n🧰 5. Better Metadata, Better Stewardship\n\n“I just want people to fill out metadata that makes sense.”\n\nControlled vocabularies: - Reduce ambiguity - Improve machine readability - Make metadata easier to validate and automate\n➡️ Example: A dropdown menu in a data intake form linked to your vocab that auto-fills units, definitions, and example values — while storing clean, machine-readable metadata under the hood."
   },
   {
-    "objectID": "CONTRIBUTING.html#pull-request-tips",
-    "href": "CONTRIBUTING.html#pull-request-tips",
-    "title": "🤝 Contributing to the DSU Docs & Tools",
-    "section": "",
-    "text": "Use feature branches off the main branch if working on a larger update (e.g. fix/typo, add/new-tool-guide)\nOtherwise for small updates, commit directly to main or create your Pull Request directly from main.\nGroup related changes into one PR\nIf you’re fixing an Issue, mention it in your PR:\nCloses #42 will auto-link and close the issue on merge\nKeep commit messages short but clear and in present tense (\"Add how-to for bulk metadata upload\")"
+    "objectID": "documentation_hub/how_to_guides/support_controlled_vocabs.html#tldr",
+    "href": "documentation_hub/how_to_guides/support_controlled_vocabs.html#tldr",
+    "title": "Support Controlled Vocabularies",
+    "section": "🧭 TL;DR",
+    "text": "🧭 TL;DR\nControlled vocabularies and ontologies are not the end — they’re the beginning.\nThey allow you to: - Find data more easily - Integrate it more reliably - Build tools more effectively - And use AI more meaningfully\nThey turn your data into infrastructure.\nAnd they help ensure that knowledge created today can be used, re-used, and trusted — long into the future."
   },
   {
-    "objectID": "CONTRIBUTING.html#working-with-issues",
-    "href": "CONTRIBUTING.html#working-with-issues",
-    "title": "🤝 Contributing to the DSU Docs & Tools",
+    "objectID": "documentation_hub/how_to_guides/sharepoint_r.html",
+    "href": "documentation_hub/how_to_guides/sharepoint_r.html",
+    "title": "FADS Open Science Documentation Hub",
     "section": "",
-    "text": "Use GitHub Issues to: - Request a new topic 📌 - Report a problem 🐛 - Share an idea 💡\nWe tag and triage regularly — feel free to assign yourself or ask for help!"
+    "text": "Redirecting to https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/sharepoint_r.html"
   },
   {
-    "objectID": "CONTRIBUTING.html#need-help",
-    "href": "CONTRIBUTING.html#need-help",
-    "title": "🤝 Contributing to the DSU Docs & Tools",
+    "objectID": "how_to_guides/databricks_r_studio.html",
+    "href": "how_to_guides/databricks_r_studio.html",
+    "title": "Connect to the Azure Lakehouse from R",
     "section": "",
-    "text": "Open an issue, ping someone on the DSU team, or check the README for more guidance. We’re here to help! Thanks again for contributing — every little improvement adds up."
-  },
-  {
-    "objectID": "how_to_guides/sharepoint_r.html",
-    "href": "how_to_guides/sharepoint_r.html",
-    "title": "Access Data in SharePoint from R",
-    "section": "",
-    "text": "Connecting R to Sharepoint enables secure, programmatic data access for reproducible analysis workflows. This is especially useful to data stewards and scientists who want to move away from email and personal hard-drive based data storage and sharing and instead use a cloud service as a central repository for data.\nThis is particularly useful for data management tasks in Sharepoint, such as:\n\nDownloading data files for analysis\nUploading processed data files\nManaging document libraries and folders\nAutomating data workflows\n\n\n\n\n\n\n\nWarning\n\n\n\nKeep in mind, to access the DFO Sharepoint from R using the methods below you need to be on the DFO network or using the VPN.",
+    "text": "DFO’s shift to the Azure Lakehouse model integrates Azure Databricks, Data Lake Storage, Delta Lake, and Synapse Analytics, replacing siloed data storage and scattered code repositories. This transition centralizes data, standardizes workflows, and improves access to shared datasets and intermediate data products.\nWith Personal Access Tokens (PATs), analysts can now connect directly to the Lakehouse from RStudio (or other IDEs like VSCode or PyCharm), working seamlessly with cloud-stored data in their preferred environment. This guide explains how to set up that connection using RStudio for analysis, GitHub for code management, and the Lakehouse for data storage and sharing.",
     "crumbs": [
       "FADS Internal Wiki",
       "How to Guides",
-      "Access Data in SharePoint from R"
+      "Connect to the Azure Lakehouse from R"
     ]
   },
   {
-    "objectID": "how_to_guides/sharepoint_r.html#conclusion",
-    "href": "how_to_guides/sharepoint_r.html#conclusion",
-    "title": "Access Data in SharePoint from R",
-    "section": "Conclusion",
-    "text": "Conclusion\nThis enables secure, programmatic data access for reproducible analysis workflows. Using the Microsoft365R package, you can easily access and manage data in SharePoint from R. This allows for a more streamlined and efficient workflow, especially for data stewards and scientists who work with large datasets and need to collaborate with others.\nThis approach can help you automate data management tasks, reduce reliance on email and personal storage, and improve collaboration within your team.",
+    "objectID": "how_to_guides/databricks_r_studio.html#tldr",
+    "href": "how_to_guides/databricks_r_studio.html#tldr",
+    "title": "Connect to the Azure Lakehouse from R",
+    "section": "",
+    "text": "DFO’s shift to the Azure Lakehouse model integrates Azure Databricks, Data Lake Storage, Delta Lake, and Synapse Analytics, replacing siloed data storage and scattered code repositories. This transition centralizes data, standardizes workflows, and improves access to shared datasets and intermediate data products.\nWith Personal Access Tokens (PATs), analysts can now connect directly to the Lakehouse from RStudio (or other IDEs like VSCode or PyCharm), working seamlessly with cloud-stored data in their preferred environment. This guide explains how to set up that connection using RStudio for analysis, GitHub for code management, and the Lakehouse for data storage and sharing.",
     "crumbs": [
       "FADS Internal Wiki",
       "How to Guides",
-      "Access Data in SharePoint from R"
+      "Connect to the Azure Lakehouse from R"
     ]
   },
   {
-    "objectID": "how_to_guides/sharepoint_r.html#additional-resources",
-    "href": "how_to_guides/sharepoint_r.html#additional-resources",
-    "title": "Access Data in SharePoint from R",
-    "section": "Additional Resources",
-    "text": "Additional Resources\n\nMicrosoft365R Documentation",
+    "objectID": "how_to_guides/databricks_r_studio.html#azure-data-bricks-and-the-azure-lakehouse",
+    "href": "how_to_guides/databricks_r_studio.html#azure-data-bricks-and-the-azure-lakehouse",
+    "title": "Connect to the Azure Lakehouse from R",
+    "section": "Azure Data Bricks and the Azure Lakehouse",
+    "text": "Azure Data Bricks and the Azure Lakehouse\nAzure Databricks is a cloud-based analytics platform for big data processing, machine learning, and collaborative analysis. Built on Apache Spark, it integrates with Azure Data Lake Storage (ADLS), Delta Lake, and Synapse Analytics, the core components of the Azure Lakehouse.\nIn this model, Databricks acts as the compute engine, running code while Data Lake Storage and Delta Lake handle scalable, secure data storage. Synapse Analytics adds SQL-based analytics and data warehousing.\nFor DFO, adopting the Lakehouse model eliminates siloed data storage and fragmented code management. Previously, datasets were scattered across systems, and essential data cleaning and analysis code was split across multiple GitHub repositories, making it hard to track, reuse, or standardize. Valuable intermediate data products were often inaccessible. The Lakehouse consolidates data, transformations, and curated datasets, improving collaboration, reproducibility, and transparency.\nNow, analysts can connect directly to the Lakehouse from RStudio (or any IDE) using PATs, gaining seamless, secure access to centralized data with scalable compute. This shift removes past limitations on data access, permissions, and technology use, significantly enhancing DFO’s analytical capabilities.\nThis guide walks through the setup process, enabling you to connect to Azure Databricks and analyze Lakehouse-stored data using RStudio for code execution, GitHub for version control, and the Lakehouse for data storage and sharing.",
     "crumbs": [
       "FADS Internal Wiki",
       "How to Guides",
-      "Access Data in SharePoint from R"
+      "Connect to the Azure Lakehouse from R"
+    ]
+  },
+  {
+    "objectID": "how_to_guides/databricks_r_studio.html#quick-start-guide-to-accessing-azure-lakehouse-from-r-studio",
+    "href": "how_to_guides/databricks_r_studio.html#quick-start-guide-to-accessing-azure-lakehouse-from-r-studio",
+    "title": "Connect to the Azure Lakehouse from R",
+    "section": "Quick Start Guide to Accessing Azure Lakehouse from R Studio",
+    "text": "Quick Start Guide to Accessing Azure Lakehouse from R Studio\n\nAccess Token\nCreate your user access token in Databricks WebUI.\nIMPORTANT: Treat this token as your personal password and do not share with anybody\n\nIn Databricks Web UI &gt; go to your profile page and navigate to\nUser &gt; Developer\nAccess tokens &gt; Manage\nGenerate new token as required. Ensure to set the expiration of the token to a suitable date (1 year from now)\nCopy and save this token somewhere safe such as an encrypted password manager\n\n\n\n\nDatabricks Token\n\n\n\n\nJDBC Driver\n\nDownload JDBC (java database connectivity) driver from https://www.databricks.com/spark/jdbc-drivers-download. Save and extract the .jar file to an accessible location on your computer (C:Users\\Your username is fine).\nSet up your Databricks JDBC connection URL. You can copy this directly from Databricks this way\nIn the Databricks Web UI, navigate to SQL Warehouses\nClick on the SQL Warehouse compute resource that you started  \nGo to ‘Connection details’ &gt; JDBC URL and copy the string\n\n\n\n\nJDBC Driver\n\n\n\n\nEstablishing a Connection to Databricks from R Studio (or any other IDE)\n\nEnsure you are on the DFO VPN\n\n\nlibrary(RJDBC)\n\njdbc_driver &lt;- JDBC(\"com.databricks.client.jdbc.Driver\", \"C:/Users/JOHNSONBRE/DatabricksJDBC42.jar\", \"\")\n\nurlsql &lt;- \"jdbc:databricks://adb....;\"\n\n# Run the code below here once to store your personal access token in your R Environment. \n# IMPORTANT! Never hard code your PAT in directly in your code script since your script will likely be shared, exposing your secret personal access token \n\nfile.edit(\"~/.Renviron\") # add DATABRICKS_PAT=\"your_personal_access_token\" to your .Renviron file\n\npat &lt;- Sys.getenv(\"DATABRICKS_PAT\")\n\nconnsql &lt;- RJDBC::dbConnect(jdbc_driver, urlsql, \"token\", pat)\n\nTest your connection to Databricks by running the following code:\n\ndbGetQuery(connsql, \"SELECT 1\")\n\nIf you see a table with a single row and a single column with the value 1, then your connection is successful\n\n\nExploring the Lakehouse\nNext, we will query the available catalogs of databases, their schemas, and their tables in the Lakehouse.\n\nCatalogs\nExplore the available catalogs in the Databricks environment. Catalogs are the top-level containers in Databricks that store databases.\nIn the DFO Pacific Lakehouse, catalogs are used to organize the medallion architecture.\nYou may be able to see multiple catalogs in your Databricks environment.\n\n# See what catalogs are available\ndbGetQuery(connsql, \"SHOW CATALOGS\")\n\n\n\nSchemas\nCheck available schemas in bronze catalogue\n\ndbGetQuery(connsql, \"SHOW SCHEMAS IN bronze_pacific_prod\")\n\n# check available schemas in bronze nuseds\ndbGetQuery(connsql, \"SHOW TABLES IN bronze_pacific_prod.nuseds_v2_0\")\n\n# Query bronze nuseds_v2_0 table\nnuseds_activity_types &lt;- dbGetQuery(connsql, \"SELECT * FROM bronze_pacific_prod.nuseds_v2_0.activity_types LIMIT 10\")\n\n\n\nTables\nCheck out the tables in FOS_v1_1\n\ndbGetQuery(connsql, \"SHOW TABLES IN bronze_pacific_prod.FOS_v1_1\")\n\n\n\n\nDescribe Tables\nDescribe a FOS_v1_1 table to extract metadata about a specific table, like what columns are available and their data types.\n\ndbGetQuery(connsql, \"DESCRIBE bronze_pacific_prod.FOS_v1_1.stock\")\n\n\n\nRunning Queries\nRun a query to extract data from a table in the Lakehouse.\n\n# Query bronze nuseds_v2_0 smu_cu_lookup table\nsmu_cu_lookup &lt;- dbGetQuery(connsql, \"SELECT * FROM bronze_pacific_prod.nuseds_v2_0.smu_cu_lookup LIMIT 10\")\n\nsmu_cu_lookup\n\nConnect to the FOS data and aggregrate:\n\n# Query bronze FOS_v1_1 stock table\nstock &lt;- dbGetQuery(connsql, \"SELECT * FROM bronze_pacific_prod.FOS_v1_1.stock\")\n\nTry using an aggregation function such as count and group by to get a count of the number of rows in the table.\n\n# Count the number of rows in the stock table\ndbGetQuery(connsql, \"SELECT COUNT(*) FROM bronze_pacific_prod.FOS_v1_1.stock\")",
+    "crumbs": [
+      "FADS Internal Wiki",
+      "How to Guides",
+      "Connect to the Azure Lakehouse from R"
+    ]
+  },
+  {
+    "objectID": "how_to_guides/databricks_r_studio.html#local-compute-versus-databricks-compute",
+    "href": "how_to_guides/databricks_r_studio.html#local-compute-versus-databricks-compute",
+    "title": "Connect to the Azure Lakehouse from R",
+    "section": "Local Compute versus Databricks Compute",
+    "text": "Local Compute versus Databricks Compute\nUsing Databricks compute should be minimized to avoid unnecessary costs. Instead, use your local computer for data exploration and analysis. Only use Databricks compute when you need to access new data, write data back to the Lakehouse, or run large-scale computations.\n\nWhen Databricks Compute is Used vs. Local Compute\nDatabricks Compute:\n\nRunning SQL queries and data processing tasks on the data stored in the Azure Lakehouse.\nAny operations that involve querying the data, such as dbGetQuery(connsql, “SELECT * FROM …”), are executed on Databricks compute resources.\n\nLocal Compute:\n\nWriting and executing R scripts that establish the connection to Databricks.\nProcessing the results returned from Databricks.\nManaging code with Git and GitHub from your local machine.\n\n\n\nTips to Minimize Databricks Compute Costs\nOptimize Queries: Write efficient SQL queries to minimize the amount of data processed and transferred to your local machine.\nUse Caching: Save data locally and don’t run dbGetQuery commands unless you are intentionally trying to get new data. Cache intermediate results when performing complex transformations to avoid redundant computations.\nFor example in R:\n\n# Query the data and save it to a variable\ndata &lt;- dbGetQuery(connsql, \"SELECT * FROM ...\") # Run the query only once or as needed for new data\n \n# Perform transformations on the data\ntransformed_data &lt;- data %&gt;% ...\n\n# Cache the transformed data\nsaveRDS(transformed_data, \"transformed_data.rds\")\n\n# Next time you need the transformed data, don't run the query again, instead load it from the cache or from your local copy\n\n# Load the transformed data from the cache\ntransformed_data &lt;- readRDS(\"transformed_data.rds\")\n\n# Continue working with the transformed data",
+    "crumbs": [
+      "FADS Internal Wiki",
+      "How to Guides",
+      "Connect to the Azure Lakehouse from R"
+    ]
+  },
+  {
+    "objectID": "how_to_guides/databricks_r_studio.html#using-a-github-repo-in-databricks",
+    "href": "how_to_guides/databricks_r_studio.html#using-a-github-repo-in-databricks",
+    "title": "Connect to the Azure Lakehouse from R",
+    "section": "Using a GitHub Repo in Databricks",
+    "text": "Using a GitHub Repo in Databricks\nOne of the advantages of using GitHub with Databricks is that you can easily import code from a GitHub repository into a Databricks notebook. This allows you to leverage the version control and collaboration features of GitHub while working in Databricks.\nHowever, there are a few things to keep in mind when using a GitHub repo in Databricks:\n\nImporting Code: You can import code from a GitHub repository into a Databricks notebook by specifying the URL of the GitHub repository. Databricks will clone the repository and import the code into the notebook.\nCode Execution: When you import code from a GitHub repository into a Databricks notebook, the code is executed in the Databricks environment. This means that any data access or processing tasks will be performed on Databricks compute resources.\nCode Management: While you can import code from a GitHub repository into a Databricks notebook, you are not able to push code changes back to the repository directly from Databricks. If you need to make changes to the code, you will need to do so in the GitHub repository and then re-import the code into the Databricks notebook.",
+    "crumbs": [
+      "FADS Internal Wiki",
+      "How to Guides",
+      "Connect to the Azure Lakehouse from R"
     ]
   },
   {
@@ -212,69 +227,11 @@
     ]
   },
   {
-    "objectID": "reference_info/tools/r_packages.html",
-    "href": "reference_info/tools/r_packages.html",
-    "title": "R Packages",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "FADS Open Science Documentation Hub 🐟💾",
     "section": "",
-    "text": "Welcome to the R Packages section of the DSU site! 🐟\nHere you’ll find a curated set of R packages that support your work as a data steward or data producer within the Pacific Region Science Branch of Fisheries and Oceans Canada. 🧪🌊\n\n\ntidyr, an offering from the tidyverse is the speedy Swiffer mop to your messy data. It provides tools for following the ethos of tidy data, which holds the following tenets:\n\nEach variable is a column; each column is a variable.\nEach observation is a row; each row is an observation.\nEach value is a cell; each cell is a single value.\n\nFor example, make your wide formatted data more tidy with pivot_longer() or deal with missing values with drop_na().\n\n\n\n\n\n\nWant to load all the tidyverse packages at once?\n\n\n\nTry library(tidyverse) to load all of those amazing tools in one line\n\n\n\n\n\nggplot2 is a powerful tool for data visualization offered under the tidyverse umbrella.\nAs any scientist knows, visualizing your data is just as important as generating it. After all, how can you communicate your results if they’re hidden away in a table?\nThe R graph gallery has countless of great examples of plots created with ggplot2. Check them out!\n\n\n\nAnother tidyverse offering, dplyr is an essential package for data manipulation. Try out generating summary stats in a breeze with group_by() |&gt; summarise() or join two datasets with a left_join().\n\n\n\narrow is an amazing tool for working with larger than memory data. R usually performs computations in RAM (your computer’s short term memory), but this can pose a problem for larger datasets. Arrow moves computations onto disk (your computer’s long term memory) to avoid this.\nFor a tutorial, see here",
-    "crumbs": [
-      "FADS Internal Wiki",
-      "Reference Info",
-      "Tools",
-      "R Packages"
-    ]
-  },
-  {
-    "objectID": "reference_info/tools/r_packages.html#tidyr",
-    "href": "reference_info/tools/r_packages.html#tidyr",
-    "title": "R Packages",
-    "section": "",
-    "text": "tidyr, an offering from the tidyverse is the speedy Swiffer mop to your messy data. It provides tools for following the ethos of tidy data, which holds the following tenets:\n\nEach variable is a column; each column is a variable.\nEach observation is a row; each row is an observation.\nEach value is a cell; each cell is a single value.\n\nFor example, make your wide formatted data more tidy with pivot_longer() or deal with missing values with drop_na().\n\n\n\n\n\n\nWant to load all the tidyverse packages at once?\n\n\n\nTry library(tidyverse) to load all of those amazing tools in one line",
-    "crumbs": [
-      "FADS Internal Wiki",
-      "Reference Info",
-      "Tools",
-      "R Packages"
-    ]
-  },
-  {
-    "objectID": "reference_info/tools/r_packages.html#ggplot2",
-    "href": "reference_info/tools/r_packages.html#ggplot2",
-    "title": "R Packages",
-    "section": "",
-    "text": "ggplot2 is a powerful tool for data visualization offered under the tidyverse umbrella.\nAs any scientist knows, visualizing your data is just as important as generating it. After all, how can you communicate your results if they’re hidden away in a table?\nThe R graph gallery has countless of great examples of plots created with ggplot2. Check them out!",
-    "crumbs": [
-      "FADS Internal Wiki",
-      "Reference Info",
-      "Tools",
-      "R Packages"
-    ]
-  },
-  {
-    "objectID": "reference_info/tools/r_packages.html#dplyr",
-    "href": "reference_info/tools/r_packages.html#dplyr",
-    "title": "R Packages",
-    "section": "",
-    "text": "Another tidyverse offering, dplyr is an essential package for data manipulation. Try out generating summary stats in a breeze with group_by() |&gt; summarise() or join two datasets with a left_join().",
-    "crumbs": [
-      "FADS Internal Wiki",
-      "Reference Info",
-      "Tools",
-      "R Packages"
-    ]
-  },
-  {
-    "objectID": "reference_info/tools/r_packages.html#arrow",
-    "href": "reference_info/tools/r_packages.html#arrow",
-    "title": "R Packages",
-    "section": "",
-    "text": "arrow is an amazing tool for working with larger than memory data. R usually performs computations in RAM (your computer’s short term memory), but this can pose a problem for larger datasets. Arrow moves computations onto disk (your computer’s long term memory) to avoid this.\nFor a tutorial, see here",
-    "crumbs": [
-      "FADS Internal Wiki",
-      "Reference Info",
-      "Tools",
-      "R Packages"
-    ]
+    "text": "FADS Open Science Documentation Hub 🐟💾\nWelcome to the Fishery & Assessment Data Section (FADS) Open Science Documentation Hub! This is the public facing portion of our internal FADS Wiki on SharePoint.\nHere, we work in the open and share our knowledge to enable open data science collaboration with a broad community not only within DFO but also externally with academics, NGOs, and Indigenous groups.\nWhether you’re a seasoned data steward or just starting out, this hub is designed to provide you with the resources you need to navigate the world of salmon data stewardship and management within DFO 📚✨\nTo keep documentation organized, useful, and easy to navigate docs are grouped into four clear categories:\n\n\n️1. How-to Guides 🛠\nQuick, practical instructions for specific tasks.\nPerfect for when you’re asking:\n&gt; “How do I do this specific thing?”\nExamples:\n\nHow to request access to datasets stored in the cloud 🔐\n\nHow to submit a metadata record 📤\n\nHow to clean up an Excel file before uploading 🧼\n\n\n\n\n2. Reference Info 📘\nThe deep, detailed, no-fluff facts about tools, terms, and standards.\nUse these when you need precision or technical definitions.\nExamples:\n\nUsing terms from controlled vocabularies like Darwin Core 🧾\nOn hosting data and code 🫙\nTools, including reccomended R packages 🧑🏾‍💻\n\n\n\n\n3. Tutorials 🎓\nStructured, step-by-step lessons that help you learn by doing.\nIdeal for onboarding or skill-building.\nExamples:\n\nA walk through on using Power BI with our datasets 📊\nIntro to working with Synapse Notebooks 🧠\nHow to support controlled vocabularies 🔤\n\n\n\n\n4. Deep dives 🧠\nThoughtful writeups and explanations on the why behind the work.\nGreat for context, decision-making, or just satisfying your inner data philosopher.\nExamples:\n\nWhy metadata quality matters 🧼\nData lifecycle management explained 🌱➡️🌳\nThe theory behind our access protocols 🚦\n\n\n\n\nGetting Started 🛠️\n🧭 Start exploring using the navigation menu on your left to dive in!\n❔ Learn more about what resources are available on the About page.\n🔍 Use the search bar at the top right to find specific topics or resources.\n\n\n\nContribute & Collaborate! 🤝\nThis documentation is a living resource — always evolving and improving.\nWe’d love your feedback, suggestions, and ideas! 🗣️\nYou can even contribute directly to the documentation! See our Contributing Guide for more details. Spotted something confusing? Missing a topic? Got an awesome tip to share?\n➡️ Reach out to us anytime — we’re listening 👂 and always happy to help!\nHappy stewarding! 🐟✨\n\n↩︎️ Return to the Internal FADS SharePoint Wiki"
   },
   {
     "objectID": "reference_info/dwc-obis-gbif.html",
@@ -373,74 +330,6 @@
     ]
   },
   {
-    "objectID": "documentation_hub/how_to_guides/sharepoint_r.html",
-    "href": "documentation_hub/how_to_guides/sharepoint_r.html",
-    "title": "FADS Open Science Documentation Hub",
-    "section": "",
-    "text": "Redirecting to https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/sharepoint_r.html"
-  },
-  {
-    "objectID": "documentation_hub/how_to_guides/support_controlled_vocabs.html",
-    "href": "documentation_hub/how_to_guides/support_controlled_vocabs.html",
-    "title": "Support Controlled Vocabularies",
-    "section": "",
-    "text": "The scientist downloads and completes the data dictionary template (Excel)\n\nThey describe each variable: name, definition, method, units, etc.\nThey may include URIs from known vocabularies if possible\n\nThe spreadsheet includes:\n\nA README sheet with instructions\nA Metadata tab for project-level context\nA Data Dictionary tab with one row per variable\n\n\n\n\n\n\nThe data dictionary is passed into your R validation function (validate_data_dictionary())\nIt compares submitted variables to your reference vocabulary, hosted as JSON on GitHub Pages\nThe validator returns:\n\nMatched terms\nUnmatched terms\nSuggested mappings using fuzzy logic (e.g., stringdist or Jaro-Winkler)\n\nThe scientist or steward reviews and adjusts terms as needed\n\n\n\n\n\nFor each submitted or candidate term:\n\nUse an automated lookup tool to check if a concept already exists in the NCEAS Salmon Ontology. Start by using the BioPortal Annotator or API to match term labels and definitions. Optionally, build a lightweight script that compares local vocabulary terms to the ontology by label, synonyms, or definition text using exact or fuzzy string matching. Consider integrating the result into your pipeline for batch validation.\nIf it exists:\n\nUse skos:exactMatch or skos:closeMatch in your .ttl (Turtle) or .jsonld RDF vocab files. These mappings are typically stored in the ontology files generated from your .csv source. Add a column like exact_match_uri or close_match_uri to your .csv, your export script can incorporate those values automatically during serialization to .ttl or .jsonld.\n\nIf it doesn’t exist, but is broadly applicable:\n\nPrepare a Pull Request or issue to suggest the term to the NCEAS maintainers\nInclude:\n\nLabel, definition, synonyms\nUsage example or data sources\n\n\n\n\n\n\n\n\nMaintain DFO vocabularies in GitHub as:\n\n.csv for editing\n.json for R/python access and validation\n.jsonld and .ttl for ontology use\n\nAssign persistent URIs using https://w3id.org/dfo/spsi#term-id\nOrganize vocabularies by data domain or project (e.g., monitoring, habitat, biology)\n\n\n\n\n\nExtend your vocabularies with relationships:\n\nbroader, narrower, related\nhasUnit, hasMethod, derivedFrom\n\nUse tools like rdflib or skosify to model in Turtle or OWL\nAdd namespace info:\n\n@prefix dfo-spsi: &lt;https://w3id.org/dfo/spsi#&gt;\n\nOver time, link this to:\n\nNCEAS ontology\nNERC units\nENVO/OBI for environment/sample methods\n\n\n\n\n\n\nHost vocab on GitHub Pages + register URIs at w3id.org\nLink from your Quarto site (/data-standards/vocab-index.html)\nAllow download in multiple formats (JSON, JSON-LD, TTL)\nUse vocab in:\n\nData validation tools\nMetadata editors\nAPIs and dashboards\nAI pipelines (semantic RAG, search, integration)\n\n\n\nThis workflow will enable DFO Pacific to build a structured, version-controlled, and interoperable vocabulary and ontology infrastructure for salmon data, with clear ties to domain-wide standards and extensibility for AI use cases."
-  },
-  {
-    "objectID": "documentation_hub/how_to_guides/support_controlled_vocabs.html#guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo",
-    "href": "documentation_hub/how_to_guides/support_controlled_vocabs.html#guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo",
-    "title": "Support Controlled Vocabularies",
-    "section": "",
-    "text": "The scientist downloads and completes the data dictionary template (Excel)\n\nThey describe each variable: name, definition, method, units, etc.\nThey may include URIs from known vocabularies if possible\n\nThe spreadsheet includes:\n\nA README sheet with instructions\nA Metadata tab for project-level context\nA Data Dictionary tab with one row per variable\n\n\n\n\n\n\nThe data dictionary is passed into your R validation function (validate_data_dictionary())\nIt compares submitted variables to your reference vocabulary, hosted as JSON on GitHub Pages\nThe validator returns:\n\nMatched terms\nUnmatched terms\nSuggested mappings using fuzzy logic (e.g., stringdist or Jaro-Winkler)\n\nThe scientist or steward reviews and adjusts terms as needed\n\n\n\n\n\nFor each submitted or candidate term:\n\nUse an automated lookup tool to check if a concept already exists in the NCEAS Salmon Ontology. Start by using the BioPortal Annotator or API to match term labels and definitions. Optionally, build a lightweight script that compares local vocabulary terms to the ontology by label, synonyms, or definition text using exact or fuzzy string matching. Consider integrating the result into your pipeline for batch validation.\nIf it exists:\n\nUse skos:exactMatch or skos:closeMatch in your .ttl (Turtle) or .jsonld RDF vocab files. These mappings are typically stored in the ontology files generated from your .csv source. Add a column like exact_match_uri or close_match_uri to your .csv, your export script can incorporate those values automatically during serialization to .ttl or .jsonld.\n\nIf it doesn’t exist, but is broadly applicable:\n\nPrepare a Pull Request or issue to suggest the term to the NCEAS maintainers\nInclude:\n\nLabel, definition, synonyms\nUsage example or data sources\n\n\n\n\n\n\n\n\nMaintain DFO vocabularies in GitHub as:\n\n.csv for editing\n.json for R/python access and validation\n.jsonld and .ttl for ontology use\n\nAssign persistent URIs using https://w3id.org/dfo/spsi#term-id\nOrganize vocabularies by data domain or project (e.g., monitoring, habitat, biology)\n\n\n\n\n\nExtend your vocabularies with relationships:\n\nbroader, narrower, related\nhasUnit, hasMethod, derivedFrom\n\nUse tools like rdflib or skosify to model in Turtle or OWL\nAdd namespace info:\n\n@prefix dfo-spsi: &lt;https://w3id.org/dfo/spsi#&gt;\n\nOver time, link this to:\n\nNCEAS ontology\nNERC units\nENVO/OBI for environment/sample methods\n\n\n\n\n\n\nHost vocab on GitHub Pages + register URIs at w3id.org\nLink from your Quarto site (/data-standards/vocab-index.html)\nAllow download in multiple formats (JSON, JSON-LD, TTL)\nUse vocab in:\n\nData validation tools\nMetadata editors\nAPIs and dashboards\nAI pipelines (semantic RAG, search, integration)\n\n\n\nThis workflow will enable DFO Pacific to build a structured, version-controlled, and interoperable vocabulary and ontology infrastructure for salmon data, with clear ties to domain-wide standards and extensibility for AI use cases."
-  },
-  {
-    "objectID": "documentation_hub/how_to_guides/support_controlled_vocabs.html#why-bother-with-controlled-vocabularies-and-ontologies",
-    "href": "documentation_hub/how_to_guides/support_controlled_vocabs.html#why-bother-with-controlled-vocabularies-and-ontologies",
-    "title": "Support Controlled Vocabularies",
-    "section": "🤔 Why Bother with Controlled Vocabularies and Ontologies?",
-    "text": "🤔 Why Bother with Controlled Vocabularies and Ontologies?\nIt’s a fair question. Why invest all this time defining terms, aligning with ontologies, and assigning URIs?\nBecause it unlocks a future where your data works harder for you. Controlled vocabularies and ontologies aren’t just academic exercises — they’re the foundation for better discovery, smarter integration, and automation across the science lifecycle.\nHere are some tangible ways this work adds value:\n\n\n🔍 1. Enhanced Data Discovery\n\n“I know someone collected salmon smolt data… but where do I find it?”\n\nBy tagging datasets, columns, and metadata with terms from your SPSI vocabulary, you enable: - Keyword search that actually understands synonyms and related terms - Filters based on data type, units, methods, or ecological domain - Smart discovery interfaces (e.g., “Show me everything related to juvenile survival”)\n➡️ Example: A data catalog that lets users search by controlled term rather than inconsistent column names across spreadsheets.\n\n\n\n🔄 2. Semi-Automated Data Integration\n\n“These datasets report the same metric but use different terms, formats, or units.”\n\nUsing controlled terms with defined relationships (e.g., broader, exactMatch, hasUnit), you can: - Detect overlapping fields across submissions automatically - Align columns and units across multiple datasets - Standardize value domains (e.g., Red/Green/Amber vs Critical/Stable/Concerned)\n➡️ Example: A script that reads in new FSAR data and automatically maps it to the SPSR schema for validation and loading into a database.\n\n\n\n🧠 3. Smarter Applications (AI & Beyond)\n\n“Can’t AI just figure this stuff out?”\n\nOnly if you feed it structure.\nControlled vocabularies and ontologies allow you to: - Ground large language models (LLMs) in your domain’s specific terminology - Build Retrieval-Augmented Generation (RAG) systems for question answering - Use semantic search tools to find relevant variables, concepts, and datasets - Train AI to assist in metadata generation, anomaly detection, or dataset classification\n➡️ Example: A chatbot that helps scientists describe their data using your vocabulary, or recommends matching fields from existing standards.\n\n\n\n🔗 4. Future-Proof Interoperability\n\n“What if we want to share this with other agencies or join a broader platform?”\n\nStandardized vocabularies with persistent URIs and ontology alignments (e.g., with NCEAS, ENVO, OBO) make it easy to: - Share DFO terms with external partners - Convert metadata to international schemas (e.g., Darwin Core, ISO 19115) - Plug into federated data platforms without starting over\n➡️ Example: Publishing your vocabulary to w3id.org lets others reference and reuse your terms as global identifiers.\n\n\n\n🧰 5. Better Metadata, Better Stewardship\n\n“I just want people to fill out metadata that makes sense.”\n\nControlled vocabularies: - Reduce ambiguity - Improve machine readability - Make metadata easier to validate and automate\n➡️ Example: A dropdown menu in a data intake form linked to your vocab that auto-fills units, definitions, and example values — while storing clean, machine-readable metadata under the hood."
-  },
-  {
-    "objectID": "documentation_hub/how_to_guides/support_controlled_vocabs.html#tldr",
-    "href": "documentation_hub/how_to_guides/support_controlled_vocabs.html#tldr",
-    "title": "Support Controlled Vocabularies",
-    "section": "🧭 TL;DR",
-    "text": "🧭 TL;DR\nControlled vocabularies and ontologies are not the end — they’re the beginning.\nThey allow you to: - Find data more easily - Integrate it more reliably - Build tools more effectively - And use AI more meaningfully\nThey turn your data into infrastructure.\nAnd they help ensure that knowledge created today can be used, re-used, and trusted — long into the future."
-  },
-  {
-    "objectID": "documentation_hub/how_to_guides/databricks_r_studio.html",
-    "href": "documentation_hub/how_to_guides/databricks_r_studio.html",
-    "title": "FADS Open Science Documentation Hub",
-    "section": "",
-    "text": "Redirecting to https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/databricks_r_studio.html"
-  },
-  {
-    "objectID": "reference_info/data_standards/vocab-index.html",
-    "href": "reference_info/data_standards/vocab-index.html",
-    "title": "DFO Salmon Data Controlled Vocabulary",
-    "section": "",
-    "text": "A growing challenge in salmon research, management, and data stewardship is the proliferation of inconsistent terms, acronyms, and definitions across documents, programs, and even within the same organization—leading to confusion, miscommunication, and inefficiencies in analysis and reporting.\nTo address this, the Data Stewardship Unit (DSU) has initiated the DFO Salmon Data Controlled Vocabulary—a standardized, community-curated list of key terms and definitions related to salmon data collection, analysis, and policy within Fisheries and Oceans Canada (DFO) Pacific Region.\nThe table below consolidates definitions from regulatory documents, scientific literature, internal guidelines, and other sources into a single, searchable, and filterable reference designed to improve semantic clarity across DFO Pacific.\nThe table is more than a simple glossary: it is a formally structured controlled vocabulary that uses the W3C-endorsed Simple Knowledge Organization System (SKOS), enabling machine-readable formats for integration into data systems, APIs, and web applications.For a deep-dive on the how and why of controlled vocabularies, see our guide: Support Controlled Vocabularies.",
-    "crumbs": [
-      "FADS Internal Wiki",
-      "Reference Info",
-      "Data Standards",
-      "DFO Salmon Data Controlled Vocabulary"
-    ]
-  },
-  {
-    "objectID": "reference_info/data_standards/vocab-index.html#dfo-salmon-controlled-vocabulary-terms-under-construction",
-    "href": "reference_info/data_standards/vocab-index.html#dfo-salmon-controlled-vocabulary-terms-under-construction",
-    "title": "DFO Salmon Data Controlled Vocabulary",
-    "section": "🗂️DFO Salmon – Controlled Vocabulary Terms (🚧Under Construction🚧)",
-    "text": "🗂️DFO Salmon – Controlled Vocabulary Terms (🚧Under Construction🚧)\n\n\n\n\n\n\nUnder the hood, the vocabulary is formatted in SKOS (Simple Knowledge Organization System), a W3C-recommended framework for representing controlled vocabularies and thesauri. By modeling terms and their relationships (broader, narrower, related), SKOS makes it easy to:\n\nMaintain consistent labels, definitions, and concept hierarchies.\nShare and integrate the vocabulary with other systems that understand RDF.\n\nThe vocabulary is intended to be a living document that evolves with the needs of the community. It is maintained by the Data Stewardship Unit (DSU) within the Fisheries and Assessment Data Section (FADS) in the Pacific Region of Fisheries and Oceans Canada (DFO).\nTo maximize accessibility, we publish three serializations:\n\nJSON – A lightweight format ideal for most web and desktop applications that need to load term lists and definitions without RDF tooling.\nJSON-LD – Embeds linked-data context so that terms become addressable URIs; perfect for web pages, APIs, and any environment where you want automatic context resolution and richer interoperability.\nTurtle (.ttl) – A compact, human-readable RDF syntax for semantic-web tools, triple stores, and SPARQL queries, enabling advanced semantic reasoning or integration into broader data ecosystems.\n\nYou can download or query any of these formats directly from our GitHub repo for programmatic access, metadata validation, integration, or automated workflows.\nFile a GitHub Issue at https://github.com/dfo-pacific-science/data-stewardship-unit/issues\nOr contact the Data Stewardship Unit.",
-    "crumbs": [
-      "FADS Internal Wiki",
-      "Reference Info",
-      "Data Standards",
-      "DFO Salmon Data Controlled Vocabulary"
-    ]
-  },
-  {
     "objectID": "reference_info/openDataPractices.html",
     "href": "reference_info/openDataPractices.html",
     "title": "Data Practices for Open Science – 3 Quick Tips",
@@ -486,6 +375,67 @@
       "FADS Internal Wiki",
       "Reference Info",
       "Data Practices for Open Science -- 3 Quick Tips"
+    ]
+  },
+  {
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "🤝 Contributing to the DSU Docs & Tools",
+    "section": "",
+    "text": "Thanks for helping improve the Data Stewardship Unit (DSU) site! 🎉\nWhether you’re adding a how-to guide, writing up a tutorial, or sharing a helpful tool, your contribution helps make data stewardship easier for everyone in the Pacific Region Science Branch. 🐟🌲\n\n\n\nIf you’re already a member of the dfo-pacific-science organization, you can edit the repo directly. If not, you can still contribute by creating a pull request (PR) from your forked copy of the repo or creating an issue to request a change.\nWant to add a new documentation or tools page? Here’s how!\nYou can open the repo after cloning it in an IDE like RStudio or VSCode depending on your preference.\n\n\n\nAn IDE (RStudio or VSCode)\nGit SCM\nQuarto\n\n\n\n\nTo open the website locally, clone the repository with git by running git clone https://github.com/dfo-pacific-science/data-stewardship-unit.git in terminal in your IDE.\n\n\n\nMake a new branch so that you can test things out without messing things up in the main branch. Run git branch {branchName} in the terminal in your IDE to make a new branch and git switch {branchName} to switch to it.\n\n\n\nYou can create a new .qmd file in one of the four folders (how_to_guides, reference_info, tutorials, deep_dives) to get it displayed under the navbar menu, which grabs .qmd files automatically.\n\n\n\nIn terminal, run quarto preview. A browser window will pop up with a locally-hosted version of the website. Make sure your changes look good and progress to the next step. Make edits if needed.\n\n\n\nIn terminal, run quarto render. The complete site will be rendered in the _site folder for Github actions to deploy.\n\n\n\nRun git add {fileName} for all of the files you want to stage. Make sure to not forget the _free folder, which contains all of the information related to R code that runs in some of the .qmd’s.\nRun git commit -m \"commit message here\".\nRun git push. If you’ve never pushed on your current branch, git will prompt you to use something like git push --set-upstream origin {branchName}.\n\n\n\nCreate a pull request from your branch and assign a team member to review it. There are protections on the main branch that caution you away from pushing without a review. Once the PR has been merged to main, the Github Action will be automatically triggered. Check the actions tab to see the deployment progress.\n\n\n\n\n\n\n\n\nUse feature branches off the main branch if working on a larger update (e.g. fix/typo, add/new-tool-guide)\nOtherwise for small updates, commit directly to main or create your Pull Request directly from main.\nGroup related changes into one PR\nIf you’re fixing an Issue, mention it in your PR:\nCloses #42 will auto-link and close the issue on merge\nKeep commit messages short but clear and in present tense (\"Add how-to for bulk metadata upload\")\n\n\n\n\n\n\nUse GitHub Issues to: - Request a new topic 📌 - Report a problem 🐛 - Share an idea 💡\nWe tag and triage regularly — feel free to assign yourself or ask for help!\n\n\n\n\nOpen an issue, ping someone on the DSU team, or check the README for more guidance. We’re here to help! Thanks again for contributing — every little improvement adds up."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#how-to-write-a-new-page",
+    "href": "CONTRIBUTING.html#how-to-write-a-new-page",
+    "title": "🤝 Contributing to the DSU Docs & Tools",
+    "section": "",
+    "text": "If you’re already a member of the dfo-pacific-science organization, you can edit the repo directly. If not, you can still contribute by creating a pull request (PR) from your forked copy of the repo or creating an issue to request a change.\nWant to add a new documentation or tools page? Here’s how!\nYou can open the repo after cloning it in an IDE like RStudio or VSCode depending on your preference.\n\n\n\nAn IDE (RStudio or VSCode)\nGit SCM\nQuarto\n\n\n\n\nTo open the website locally, clone the repository with git by running git clone https://github.com/dfo-pacific-science/data-stewardship-unit.git in terminal in your IDE.\n\n\n\nMake a new branch so that you can test things out without messing things up in the main branch. Run git branch {branchName} in the terminal in your IDE to make a new branch and git switch {branchName} to switch to it.\n\n\n\nYou can create a new .qmd file in one of the four folders (how_to_guides, reference_info, tutorials, deep_dives) to get it displayed under the navbar menu, which grabs .qmd files automatically.\n\n\n\nIn terminal, run quarto preview. A browser window will pop up with a locally-hosted version of the website. Make sure your changes look good and progress to the next step. Make edits if needed.\n\n\n\nIn terminal, run quarto render. The complete site will be rendered in the _site folder for Github actions to deploy.\n\n\n\nRun git add {fileName} for all of the files you want to stage. Make sure to not forget the _free folder, which contains all of the information related to R code that runs in some of the .qmd’s.\nRun git commit -m \"commit message here\".\nRun git push. If you’ve never pushed on your current branch, git will prompt you to use something like git push --set-upstream origin {branchName}.\n\n\n\nCreate a pull request from your branch and assign a team member to review it. There are protections on the main branch that caution you away from pushing without a review. Once the PR has been merged to main, the Github Action will be automatically triggered. Check the actions tab to see the deployment progress."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#pull-request-tips",
+    "href": "CONTRIBUTING.html#pull-request-tips",
+    "title": "🤝 Contributing to the DSU Docs & Tools",
+    "section": "",
+    "text": "Use feature branches off the main branch if working on a larger update (e.g. fix/typo, add/new-tool-guide)\nOtherwise for small updates, commit directly to main or create your Pull Request directly from main.\nGroup related changes into one PR\nIf you’re fixing an Issue, mention it in your PR:\nCloses #42 will auto-link and close the issue on merge\nKeep commit messages short but clear and in present tense (\"Add how-to for bulk metadata upload\")"
+  },
+  {
+    "objectID": "CONTRIBUTING.html#working-with-issues",
+    "href": "CONTRIBUTING.html#working-with-issues",
+    "title": "🤝 Contributing to the DSU Docs & Tools",
+    "section": "",
+    "text": "Use GitHub Issues to: - Request a new topic 📌 - Report a problem 🐛 - Share an idea 💡\nWe tag and triage regularly — feel free to assign yourself or ask for help!"
+  },
+  {
+    "objectID": "CONTRIBUTING.html#need-help",
+    "href": "CONTRIBUTING.html#need-help",
+    "title": "🤝 Contributing to the DSU Docs & Tools",
+    "section": "",
+    "text": "Open an issue, ping someone on the DSU team, or check the README for more guidance. We’re here to help! Thanks again for contributing — every little improvement adds up."
+  },
+  {
+    "objectID": "reference_info/data_standards/vocab-index.html",
+    "href": "reference_info/data_standards/vocab-index.html",
+    "title": "DFO Salmon Data Controlled Vocabulary",
+    "section": "",
+    "text": "A growing challenge in salmon research, management, and data stewardship is the proliferation of inconsistent terms, acronyms, and definitions across documents, programs, and even within the same organization—leading to confusion, miscommunication, and inefficiencies in analysis and reporting.\nTo address this, the Data Stewardship Unit (DSU) has initiated the DFO Salmon Data Controlled Vocabulary—a standardized, community-curated list of key terms and definitions related to salmon data collection, analysis, and policy within Fisheries and Oceans Canada (DFO) Pacific Region.\nThe table below consolidates definitions from regulatory documents, scientific literature, internal guidelines, and other sources into a single, searchable, and filterable reference designed to improve semantic clarity across DFO Pacific.\nThe table is more than a simple glossary: it is a formally structured controlled vocabulary that uses the W3C-endorsed Simple Knowledge Organization System (SKOS), enabling machine-readable formats for integration into data systems, APIs, and web applications.For a deep-dive on the how and why of controlled vocabularies, see our guide: Support Controlled Vocabularies.",
+    "crumbs": [
+      "FADS Internal Wiki",
+      "Reference Info",
+      "Data Standards",
+      "DFO Salmon Data Controlled Vocabulary"
+    ]
+  },
+  {
+    "objectID": "reference_info/data_standards/vocab-index.html#dfo-salmon-controlled-vocabulary-terms-under-construction",
+    "href": "reference_info/data_standards/vocab-index.html#dfo-salmon-controlled-vocabulary-terms-under-construction",
+    "title": "DFO Salmon Data Controlled Vocabulary",
+    "section": "🗂️DFO Salmon – Controlled Vocabulary Terms (🚧Under Construction🚧)",
+    "text": "🗂️DFO Salmon – Controlled Vocabulary Terms (🚧Under Construction🚧)\n\n\n\n\n\n\nUnder the hood, the vocabulary is formatted in SKOS (Simple Knowledge Organization System), a W3C-recommended framework for representing controlled vocabularies and thesauri. By modeling terms and their relationships (broader, narrower, related), SKOS makes it easy to:\n\nMaintain consistent labels, definitions, and concept hierarchies.\nShare and integrate the vocabulary with other systems that understand RDF.\n\nThe vocabulary is intended to be a living document that evolves with the needs of the community. It is maintained by the Data Stewardship Unit (DSU) within the Fisheries and Assessment Data Section (FADS) in the Pacific Region of Fisheries and Oceans Canada (DFO).\nTo maximize accessibility, we publish three serializations:\n\nJSON – A lightweight format ideal for most web and desktop applications that need to load term lists and definitions without RDF tooling.\nJSON-LD – Embeds linked-data context so that terms become addressable URIs; perfect for web pages, APIs, and any environment where you want automatic context resolution and richer interoperability.\nTurtle (.ttl) – A compact, human-readable RDF syntax for semantic-web tools, triple stores, and SPARQL queries, enabling advanced semantic reasoning or integration into broader data ecosystems.\n\nYou can download or query any of these formats directly from our GitHub repo for programmatic access, metadata validation, integration, or automated workflows.\nFile a GitHub Issue at https://github.com/dfo-pacific-science/data-stewardship-unit/issues\nOr contact the Data Stewardship Unit.",
+    "crumbs": [
+      "FADS Internal Wiki",
+      "Reference Info",
+      "Data Standards",
+      "DFO Salmon Data Controlled Vocabulary"
     ]
   },
   {
@@ -549,76 +499,126 @@
     ]
   },
   {
-    "objectID": "how_to_guides/databricks_r_studio.html",
-    "href": "how_to_guides/databricks_r_studio.html",
-    "title": "Connect to the Azure Lakehouse from R",
+    "objectID": "reference_info/tools/r_packages.html",
+    "href": "reference_info/tools/r_packages.html",
+    "title": "R Packages",
     "section": "",
-    "text": "DFO’s shift to the Azure Lakehouse model integrates Azure Databricks, Data Lake Storage, Delta Lake, and Synapse Analytics, replacing siloed data storage and scattered code repositories. This transition centralizes data, standardizes workflows, and improves access to shared datasets and intermediate data products.\nWith Personal Access Tokens (PATs), analysts can now connect directly to the Lakehouse from RStudio (or other IDEs like VSCode or PyCharm), working seamlessly with cloud-stored data in their preferred environment. This guide explains how to set up that connection using RStudio for analysis, GitHub for code management, and the Lakehouse for data storage and sharing.",
+    "text": "Welcome to the R Packages section of the DSU site! 🐟\nHere you’ll find a curated set of R packages that support your work as a data steward or data producer within the Pacific Region Science Branch of Fisheries and Oceans Canada. 🧪🌊\n\n\ntidyr, an offering from the tidyverse is the speedy Swiffer mop to your messy data. It provides tools for following the ethos of tidy data, which holds the following tenets:\n\nEach variable is a column; each column is a variable.\nEach observation is a row; each row is an observation.\nEach value is a cell; each cell is a single value.\n\nFor example, make your wide formatted data more tidy with pivot_longer() or deal with missing values with drop_na().\n\n\n\n\n\n\nTipWant to load all the tidyverse packages at once?\n\n\n\nTry library(tidyverse) to load all of those amazing tools in one line\n\n\n\n\n\nggplot2 is a powerful tool for data visualization offered under the tidyverse umbrella.\nAs any scientist knows, visualizing your data is just as important as generating it. After all, how can you communicate your results if they’re hidden away in a table?\nThe R graph gallery has countless of great examples of plots created with ggplot2. Check them out!\n\n\n\nAnother tidyverse offering, dplyr is an essential package for data manipulation. Try out generating summary stats in a breeze with group_by() |&gt; summarise() or join two datasets with a left_join().\n\n\n\narrow is an amazing tool for working with larger than memory data. R usually performs computations in RAM (your computer’s short term memory), but this can pose a problem for larger datasets. Arrow moves computations onto disk (your computer’s long term memory) to avoid this.\nFor a tutorial, see here",
     "crumbs": [
       "FADS Internal Wiki",
-      "How to Guides",
-      "Connect to the Azure Lakehouse from R"
+      "Reference Info",
+      "Tools",
+      "R Packages"
     ]
   },
   {
-    "objectID": "how_to_guides/databricks_r_studio.html#tldr",
-    "href": "how_to_guides/databricks_r_studio.html#tldr",
-    "title": "Connect to the Azure Lakehouse from R",
+    "objectID": "reference_info/tools/r_packages.html#tidyr",
+    "href": "reference_info/tools/r_packages.html#tidyr",
+    "title": "R Packages",
     "section": "",
-    "text": "DFO’s shift to the Azure Lakehouse model integrates Azure Databricks, Data Lake Storage, Delta Lake, and Synapse Analytics, replacing siloed data storage and scattered code repositories. This transition centralizes data, standardizes workflows, and improves access to shared datasets and intermediate data products.\nWith Personal Access Tokens (PATs), analysts can now connect directly to the Lakehouse from RStudio (or other IDEs like VSCode or PyCharm), working seamlessly with cloud-stored data in their preferred environment. This guide explains how to set up that connection using RStudio for analysis, GitHub for code management, and the Lakehouse for data storage and sharing.",
+    "text": "tidyr, an offering from the tidyverse is the speedy Swiffer mop to your messy data. It provides tools for following the ethos of tidy data, which holds the following tenets:\n\nEach variable is a column; each column is a variable.\nEach observation is a row; each row is an observation.\nEach value is a cell; each cell is a single value.\n\nFor example, make your wide formatted data more tidy with pivot_longer() or deal with missing values with drop_na().\n\n\n\n\n\n\nTipWant to load all the tidyverse packages at once?\n\n\n\nTry library(tidyverse) to load all of those amazing tools in one line",
     "crumbs": [
       "FADS Internal Wiki",
-      "How to Guides",
-      "Connect to the Azure Lakehouse from R"
+      "Reference Info",
+      "Tools",
+      "R Packages"
     ]
   },
   {
-    "objectID": "how_to_guides/databricks_r_studio.html#azure-data-bricks-and-the-azure-lakehouse",
-    "href": "how_to_guides/databricks_r_studio.html#azure-data-bricks-and-the-azure-lakehouse",
-    "title": "Connect to the Azure Lakehouse from R",
-    "section": "Azure Data Bricks and the Azure Lakehouse",
-    "text": "Azure Data Bricks and the Azure Lakehouse\nAzure Databricks is a cloud-based analytics platform for big data processing, machine learning, and collaborative analysis. Built on Apache Spark, it integrates with Azure Data Lake Storage (ADLS), Delta Lake, and Synapse Analytics, the core components of the Azure Lakehouse.\nIn this model, Databricks acts as the compute engine, running code while Data Lake Storage and Delta Lake handle scalable, secure data storage. Synapse Analytics adds SQL-based analytics and data warehousing.\nFor DFO, adopting the Lakehouse model eliminates siloed data storage and fragmented code management. Previously, datasets were scattered across systems, and essential data cleaning and analysis code was split across multiple GitHub repositories, making it hard to track, reuse, or standardize. Valuable intermediate data products were often inaccessible. The Lakehouse consolidates data, transformations, and curated datasets, improving collaboration, reproducibility, and transparency.\nNow, analysts can connect directly to the Lakehouse from RStudio (or any IDE) using PATs, gaining seamless, secure access to centralized data with scalable compute. This shift removes past limitations on data access, permissions, and technology use, significantly enhancing DFO’s analytical capabilities.\nThis guide walks through the setup process, enabling you to connect to Azure Databricks and analyze Lakehouse-stored data using RStudio for code execution, GitHub for version control, and the Lakehouse for data storage and sharing.",
+    "objectID": "reference_info/tools/r_packages.html#ggplot2",
+    "href": "reference_info/tools/r_packages.html#ggplot2",
+    "title": "R Packages",
+    "section": "",
+    "text": "ggplot2 is a powerful tool for data visualization offered under the tidyverse umbrella.\nAs any scientist knows, visualizing your data is just as important as generating it. After all, how can you communicate your results if they’re hidden away in a table?\nThe R graph gallery has countless of great examples of plots created with ggplot2. Check them out!",
     "crumbs": [
       "FADS Internal Wiki",
-      "How to Guides",
-      "Connect to the Azure Lakehouse from R"
+      "Reference Info",
+      "Tools",
+      "R Packages"
     ]
   },
   {
-    "objectID": "how_to_guides/databricks_r_studio.html#quick-start-guide-to-accessing-azure-lakehouse-from-r-studio",
-    "href": "how_to_guides/databricks_r_studio.html#quick-start-guide-to-accessing-azure-lakehouse-from-r-studio",
-    "title": "Connect to the Azure Lakehouse from R",
-    "section": "Quick Start Guide to Accessing Azure Lakehouse from R Studio",
-    "text": "Quick Start Guide to Accessing Azure Lakehouse from R Studio\n\nAccess Token\nCreate your user access token in Databricks WebUI.\nIMPORTANT: Treat this token as your personal password and do not share with anybody\n\nIn Databricks Web UI &gt; go to your profile page and navigate to\nUser &gt; Developer\nAccess tokens &gt; Manage\nGenerate new token as required. Ensure to set the expiration of the token to a suitable date (1 year from now)\nCopy and save this token somewhere safe such as an encrypted password manager\n\n\n\n\nDatabricks Token\n\n\n\n\nJDBC Driver\n\nDownload JDBC (java database connectivity) driver from https://www.databricks.com/spark/jdbc-drivers-download. Save and extract the .jar file to an accessible location on your computer (C:Users\\Your username is fine).\nSet up your Databricks JDBC connection URL. You can copy this directly from Databricks this way\nIn the Databricks Web UI, navigate to SQL Warehouses\nClick on the SQL Warehouse compute resource that you started  \nGo to ‘Connection details’ &gt; JDBC URL and copy the string\n\n\n\n\nJDBC Driver\n\n\n\n\nEstablishing a Connection to Databricks from R Studio (or any other IDE)\n\nEnsure you are on the DFO VPN\n\n\nlibrary(RJDBC)\n\njdbc_driver &lt;- JDBC(\"com.databricks.client.jdbc.Driver\", \"C:/Users/JOHNSONBRE/DatabricksJDBC42.jar\", \"\")\n\nurlsql &lt;- \"jdbc:databricks://adb-553282681420861.1.azuredatabricks.net:443/default;transportMode=http;ssl=1;AuthMech=3;httpPath=/sql/1.0/warehouses/613056ec98d47d29;\"\n\n# Run the code below here once to store your personal access token in your R Environment. \n# IMPORTANT! Never hard code your PAT in directly in your code script since your script will likely be shared, exposing your secret personal access token \n\nfile.edit(\"~/.Renviron\") # add DATABRICKS_PAT=\"your_personal_access_token\" to your .Renviron file\n\npat &lt;- Sys.getenv(\"DATABRICKS_PAT\")\n\nconnsql &lt;- RJDBC::dbConnect(jdbc_driver, urlsql, \"token\", pat)\n\nTest your connection to Databricks by running the following code:\n\ndbGetQuery(connsql, \"SELECT 1\")\n\nIf you see a table with a single row and a single column with the value 1, then your connection is successful\n\n\nExploring the Lakehouse\nNext, we will query the available catalogs of databases, their schemas, and their tables in the Lakehouse.\n\nCatalogs\nExplore the available catalogs in the Databricks environment. Catalogs are the top-level containers in Databricks that store databases.\nIn the DFO Pacific Lakehouse, catalogs are used to organize the medallion architecture.\nYou may be able to see multiple catalogs in your Databricks environment.\n\n# See what catalogs are available\ndbGetQuery(connsql, \"SHOW CATALOGS\")\n\n\n\nSchemas\nCheck available schemas in bronze catalogue\n\ndbGetQuery(connsql, \"SHOW SCHEMAS IN bronze_pacific_prod\")\n\n# check available schemas in bronze nuseds\ndbGetQuery(connsql, \"SHOW TABLES IN bronze_pacific_prod.nuseds_v2_0\")\n\n# Query bronze nuseds_v2_0 table\nnuseds_activity_types &lt;- dbGetQuery(connsql, \"SELECT * FROM bronze_pacific_prod.nuseds_v2_0.activity_types LIMIT 10\")\n\n\n\nTables\nCheck out the tables in FOS_v1_1\n\ndbGetQuery(connsql, \"SHOW TABLES IN bronze_pacific_prod.FOS_v1_1\")\n\n\n\n\nDescribe Tables\nDescribe a FOS_v1_1 table to extract metadata about a specific table, like what columns are available and their data types.\n\ndbGetQuery(connsql, \"DESCRIBE bronze_pacific_prod.FOS_v1_1.stock\")\n\n\n\nRunning Queries\nRun a query to extract data from a table in the Lakehouse.\n\n# Query bronze nuseds_v2_0 smu_cu_lookup table\nsmu_cu_lookup &lt;- dbGetQuery(connsql, \"SELECT * FROM bronze_pacific_prod.nuseds_v2_0.smu_cu_lookup LIMIT 10\")\n\nsmu_cu_lookup\n\nConnect to the FOS data and aggregrate:\n\n# Query bronze FOS_v1_1 stock table\nstock &lt;- dbGetQuery(connsql, \"SELECT * FROM bronze_pacific_prod.FOS_v1_1.stock\")\n\nTry using an aggregation function such as count and group by to get a count of the number of rows in the table.\n\n# Count the number of rows in the stock table\ndbGetQuery(connsql, \"SELECT COUNT(*) FROM bronze_pacific_prod.FOS_v1_1.stock\")",
+    "objectID": "reference_info/tools/r_packages.html#dplyr",
+    "href": "reference_info/tools/r_packages.html#dplyr",
+    "title": "R Packages",
+    "section": "",
+    "text": "Another tidyverse offering, dplyr is an essential package for data manipulation. Try out generating summary stats in a breeze with group_by() |&gt; summarise() or join two datasets with a left_join().",
     "crumbs": [
       "FADS Internal Wiki",
-      "How to Guides",
-      "Connect to the Azure Lakehouse from R"
+      "Reference Info",
+      "Tools",
+      "R Packages"
     ]
   },
   {
-    "objectID": "how_to_guides/databricks_r_studio.html#local-compute-versus-databricks-compute",
-    "href": "how_to_guides/databricks_r_studio.html#local-compute-versus-databricks-compute",
-    "title": "Connect to the Azure Lakehouse from R",
-    "section": "Local Compute versus Databricks Compute",
-    "text": "Local Compute versus Databricks Compute\nUsing Databricks compute should be minimized to avoid unnecessary costs. Instead, use your local computer for data exploration and analysis. Only use Databricks compute when you need to access new data, write data back to the Lakehouse, or run large-scale computations.\n\nWhen Databricks Compute is Used vs. Local Compute\nDatabricks Compute:\n\nRunning SQL queries and data processing tasks on the data stored in the Azure Lakehouse.\nAny operations that involve querying the data, such as dbGetQuery(connsql, “SELECT * FROM …”), are executed on Databricks compute resources.\n\nLocal Compute:\n\nWriting and executing R scripts that establish the connection to Databricks.\nProcessing the results returned from Databricks.\nManaging code with Git and GitHub from your local machine.\n\n\n\nTips to Minimize Databricks Compute Costs\nOptimize Queries: Write efficient SQL queries to minimize the amount of data processed and transferred to your local machine.\nUse Caching: Save data locally and don’t run dbGetQuery commands unless you are intentionally trying to get new data. Cache intermediate results when performing complex transformations to avoid redundant computations.\nFor example in R:\n\n# Query the data and save it to a variable\ndata &lt;- dbGetQuery(connsql, \"SELECT * FROM ...\") # Run the query only once or as needed for new data\n \n# Perform transformations on the data\ntransformed_data &lt;- data %&gt;% ...\n\n# Cache the transformed data\nsaveRDS(transformed_data, \"transformed_data.rds\")\n\n# Next time you need the transformed data, don't run the query again, instead load it from the cache or from your local copy\n\n# Load the transformed data from the cache\ntransformed_data &lt;- readRDS(\"transformed_data.rds\")\n\n# Continue working with the transformed data",
+    "objectID": "reference_info/tools/r_packages.html#arrow",
+    "href": "reference_info/tools/r_packages.html#arrow",
+    "title": "R Packages",
+    "section": "",
+    "text": "arrow is an amazing tool for working with larger than memory data. R usually performs computations in RAM (your computer’s short term memory), but this can pose a problem for larger datasets. Arrow moves computations onto disk (your computer’s long term memory) to avoid this.\nFor a tutorial, see here",
     "crumbs": [
       "FADS Internal Wiki",
-      "How to Guides",
-      "Connect to the Azure Lakehouse from R"
+      "Reference Info",
+      "Tools",
+      "R Packages"
     ]
   },
   {
-    "objectID": "how_to_guides/databricks_r_studio.html#using-a-github-repo-in-databricks",
-    "href": "how_to_guides/databricks_r_studio.html#using-a-github-repo-in-databricks",
-    "title": "Connect to the Azure Lakehouse from R",
-    "section": "Using a GitHub Repo in Databricks",
-    "text": "Using a GitHub Repo in Databricks\nOne of the advantages of using GitHub with Databricks is that you can easily import code from a GitHub repository into a Databricks notebook. This allows you to leverage the version control and collaboration features of GitHub while working in Databricks.\nHowever, there are a few things to keep in mind when using a GitHub repo in Databricks:\n\nImporting Code: You can import code from a GitHub repository into a Databricks notebook by specifying the URL of the GitHub repository. Databricks will clone the repository and import the code into the notebook.\nCode Execution: When you import code from a GitHub repository into a Databricks notebook, the code is executed in the Databricks environment. This means that any data access or processing tasks will be performed on Databricks compute resources.\nCode Management: While you can import code from a GitHub repository into a Databricks notebook, you are not able to push code changes back to the repository directly from Databricks. If you need to make changes to the code, you will need to do so in the GitHub repository and then re-import the code into the Databricks notebook.",
+    "objectID": "tools.html",
+    "href": "tools.html",
+    "title": "🧰 Tools for Data Stewardship ⚙️📦",
+    "section": "",
+    "text": "Welcome to the Tools section of the DSU site! 🐟\nHere you’ll find a curated set of apps, platforms, scripts, and templates that support your work as a data steward or data producer within the Pacific Region Science Branch of Fisheries and Oceans Canada. 🧪🌊\n\n\n\nWe’re actively gathering, building, and documenting the most useful tools for the job — so stay tuned! In the meantime, here’s a sneak peek at what’s coming:\n\n\n\n🗂 Data Dictionary and Metadata Templates (Excel + JSON)\n🤝 Data Management Agreement Templates\n🧮 R & Python Functions, Scripts, and Packages for data cleaning and reporting\n🔗 Links to External Tools (See Internal DSU SharePoint Wiki for internal tools)\n🧠 Toolkits for Data Stewards (checklists, walkthroughs, best practices)\n\n\n\n\n\nIf you’ve built or used something you think could help others — whether it’s a handy Excel macro or a full-blown Shiny app — we’d love to include it here!\nSend us a note and let’s make it easier for everyone to work smarter. 🤝💡\n\n🧭 Return to the Internal DSU Wiki\n\nTools don’t solve problems — people do. But the right tool helps a lot. 🛠️🙂"
+  },
+  {
+    "objectID": "tools.html#this-page-is-under-construction",
+    "href": "tools.html#this-page-is-under-construction",
+    "title": "🧰 Tools for Data Stewardship ⚙️📦",
+    "section": "",
+    "text": "We’re actively gathering, building, and documenting the most useful tools for the job — so stay tuned! In the meantime, here’s a sneak peek at what’s coming:\n\n\n\n🗂 Data Dictionary and Metadata Templates (Excel + JSON)\n🤝 Data Management Agreement Templates\n🧮 R & Python Functions, Scripts, and Packages for data cleaning and reporting\n🔗 Links to External Tools (See Internal DSU SharePoint Wiki for internal tools)\n🧠 Toolkits for Data Stewards (checklists, walkthroughs, best practices)\n\n\n\n\n\nIf you’ve built or used something you think could help others — whether it’s a handy Excel macro or a full-blown Shiny app — we’d love to include it here!\nSend us a note and let’s make it easier for everyone to work smarter. 🤝💡\n\n🧭 Return to the Internal DSU Wiki\n\nTools don’t solve problems — people do. But the right tool helps a lot. 🛠️🙂"
+  },
+  {
+    "objectID": "how_to_guides/sharepoint_r.html",
+    "href": "how_to_guides/sharepoint_r.html",
+    "title": "Access Data in SharePoint from R",
+    "section": "",
+    "text": "Connecting R to Sharepoint enables secure, programmatic data access for reproducible analysis workflows. This is especially useful to data stewards and scientists who want to move away from email and personal hard-drive based data storage and sharing and instead use a cloud service as a central repository for data.\nThis is particularly useful for data management tasks in Sharepoint, such as:\n\nDownloading data files for analysis\nUploading processed data files\nManaging document libraries and folders\nAutomating data workflows\n\n\n\n\n\n\n\nWarning\n\n\n\nKeep in mind, to access the DFO Sharepoint from R using the methods below you need to be on the DFO network or using the VPN.",
     "crumbs": [
       "FADS Internal Wiki",
       "How to Guides",
-      "Connect to the Azure Lakehouse from R"
+      "Access Data in SharePoint from R"
     ]
+  },
+  {
+    "objectID": "how_to_guides/sharepoint_r.html#conclusion",
+    "href": "how_to_guides/sharepoint_r.html#conclusion",
+    "title": "Access Data in SharePoint from R",
+    "section": "Conclusion",
+    "text": "Conclusion\nThis enables secure, programmatic data access for reproducible analysis workflows. Using the Microsoft365R package, you can easily access and manage data in SharePoint from R. This allows for a more streamlined and efficient workflow, especially for data stewards and scientists who work with large datasets and need to collaborate with others.\nThis approach can help you automate data management tasks, reduce reliance on email and personal storage, and improve collaboration within your team.",
+    "crumbs": [
+      "FADS Internal Wiki",
+      "How to Guides",
+      "Access Data in SharePoint from R"
+    ]
+  },
+  {
+    "objectID": "how_to_guides/sharepoint_r.html#additional-resources",
+    "href": "how_to_guides/sharepoint_r.html#additional-resources",
+    "title": "Access Data in SharePoint from R",
+    "section": "Additional Resources",
+    "text": "Additional Resources\n\nMicrosoft365R Documentation",
+    "crumbs": [
+      "FADS Internal Wiki",
+      "How to Guides",
+      "Access Data in SharePoint from R"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About the DSU",
+    "section": "",
+    "text": "The Data Stewardship Unit (DSU) is situated within the Fisheries and Assessment Data Section (FADS), of the Stock Assessment and Research Division of the Pacific Region Science Branch of Fisheries and Oceans Canada (DFO).\nWe are a dedicated team committed to enhancing data management and stewardship practices within DFO. Our primary focus is on data related to Pacific Salmon within the DFO Pacific Region.\nOur goal is to provide guidance and assistance throughout the entire lifecycle of data management—from planning to publication. We strive to ensure our practices align with modern data standards, such as those outlined in the DFO Data Strategy and the Government of Canada’s digital data strategy. Our work is guided by the principles of making data findable, accessible, interoperable, and reusable (FAIR). Additionally, we highly value the principles of Indigenous data governance, such as ownership, control, access, and possession (OCAP), and we are committed to helping our collaborators respect and implement these principles in their work."
   },
   {
     "objectID": "tutorials/support_controlled_vocabs.html",
@@ -669,11 +669,11 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "FADS Open Science Documentation Hub 🐟💾",
+    "objectID": "documentation_hub/how_to_guides/databricks_r_studio.html",
+    "href": "documentation_hub/how_to_guides/databricks_r_studio.html",
+    "title": "FADS Open Science Documentation Hub",
     "section": "",
-    "text": "FADS Open Science Documentation Hub 🐟💾\nWelcome to the Fishery & Assessment Data Section (FADS) Open Science Documentation Hub! This is the public facing portion of our internal FADS Wiki on SharePoint.\nHere, we work in the open and share our knowledge to enable open data science collaboration with a broad community not only within DFO but also externally with academics, NGOs, and Indigenous groups.\nWhether you’re a seasoned data steward or just starting out, this hub is designed to provide you with the resources you need to navigate the world of salmon data stewardship and management within DFO 📚✨\nTo keep documentation organized, useful, and easy to navigate docs are grouped into four clear categories:\n\n\n️1. How-to Guides 🛠\nQuick, practical instructions for specific tasks.\nPerfect for when you’re asking:\n&gt; “How do I do this specific thing?”\nExamples:\n\nHow to request access to datasets stored in the cloud 🔐\n\nHow to submit a metadata record 📤\n\nHow to clean up an Excel file before uploading 🧼\n\n\n\n\n2. Reference Info 📘\nThe deep, detailed, no-fluff facts about tools, terms, and standards.\nUse these when you need precision or technical definitions.\nExamples:\n\nUsing terms from controlled vocabularies like Darwin Core 🧾\nOn hosting data and code 🫙\nTools, including reccomended R packages 🧑🏾‍💻\n\n\n\n\n3. Tutorials 🎓\nStructured, step-by-step lessons that help you learn by doing.\nIdeal for onboarding or skill-building.\nExamples:\n\nA walk through on using Power BI with our datasets 📊\nIntro to working with Synapse Notebooks 🧠\nHow to support controlled vocabularies 🔤\n\n\n\n\n4. Deep dives 🧠\nThoughtful writeups and explanations on the why behind the work.\nGreat for context, decision-making, or just satisfying your inner data philosopher.\nExamples:\n\nWhy metadata quality matters 🧼\nData lifecycle management explained 🌱➡️🌳\nThe theory behind our access protocols 🚦\n\n\n\n\nGetting Started 🛠️\n🧭 Start exploring using the navigation menu on your left to dive in!\n❔ Learn more about what resources are available on the About page.\n🔍 Use the search bar at the top right to find specific topics or resources.\n\n\n\nContribute & Collaborate! 🤝\nThis documentation is a living resource — always evolving and improving.\nWe’d love your feedback, suggestions, and ideas! 🗣️\nYou can even contribute directly to the documentation! See our Contributing Guide for more details. Spotted something confusing? Missing a topic? Got an awesome tip to share?\n➡️ Reach out to us anytime — we’re listening 👂 and always happy to help!\nHappy stewarding! 🐟✨\n\n↩︎️ Return to the Internal FADS SharePoint Wiki"
+    "text": "Redirecting to https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/databricks_r_studio.html"
   },
   {
     "objectID": "dsu_documentation.html",

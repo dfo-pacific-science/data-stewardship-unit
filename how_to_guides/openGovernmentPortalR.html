@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -68,14 +68,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../images/logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-b47d8d0f367f8638c7240f63f190e3b6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-972cf70390dc11df476ac11b7b56006c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -114,6 +115,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">FADS Open Science Documentation Hub</span>
     </a>
@@ -173,7 +176,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -384,7 +388,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="loading-packages">Loading packages</h3>
 <p>The <a href="https://cran.r-project.org/web/packages/librarian/vignettes/intro-to-librarian.html">librarian</a> package is useful for loading multiple packages in R. It allows you to load packages from CRAN, GitHub, and other sources with a single command. It also installs missing packages automatically.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set CRAN mirror to avoid errors</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set CRAN mirror to avoid errors</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">CRAN =</span> <span class="st">"https://cloud.r-project.org"</span>))</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Install librarian if not already installed</span></span>
@@ -396,7 +400,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>librarian<span class="sc">::</span><span class="fu">shelf</span>(</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  arcpullr, ckanr, dplyr, devtools, ggplot2, ggspatial, leaflet, leafpop, mapview,</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  rnaturalearth, sf, stars, terra, viridisLite, ropensci<span class="sc">/</span>rnaturalearthhires <span class="co"># example for loading from GitHub</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>
@@ -417,7 +421,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>It is important to ensure the appropriate layer is specified. In this example, the “0” at the end of the address denotes the English version, while a 1 represents French (see layers within the <a href="https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/pacific_recreational_fishery_salmon_head_depots/MapServer">MapServer page</a>). They also do not always correspond to language. For example, in the <a href="https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/pacific_commercial_salmon_in_season_catch_estimates_en/MapServer">Pacific Commercial Salmon In Season Catch Estimates dataset</a>, layers 0 to 3 represent gill nets, troll, seine and Pacific Fishery Management Areas, respectively.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>salmonDepots <span class="ot">=</span> <span class="fu">get_spatial_layer</span>(<span class="st">"https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/pacific_recreational_fishery_salmon_head_depots/MapServer/0"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>salmonDepots <span class="ot">=</span> <span class="fu">get_spatial_layer</span>(<span class="st">"https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/pacific_recreational_fishery_salmon_head_depots/MapServer/0"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="creating-a-map" class="level3">
@@ -426,12 +430,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In British Columbia, <code>rnaturalearth</code> may not have the level of detail required (e.g., some islands are missing). The <code>bcmaps</code> package has a lot of detailed basemaps and spatial data for the BC coast, and the <code>bc_bound_hres()</code> function is particularly useful for mapping coastline.</p>
 <p>Since the data used in the tutorial are for the entire BC coast, <code>rnaturalearth</code> is used in the examples below.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get coastline for North America </span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>coast <span class="ot">=</span> <span class="fu">ne_countries</span>(<span class="at">scale =</span> <span class="dv">10</span>, <span class="at">returnclass =</span> <span class="fu">c</span>(<span class="st">"sf"</span>), <span class="at">continent =</span> <span class="st">"North America"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get coastline for North America </span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>coast <span class="ot">=</span> <span class="fu">ne_countries</span>(<span class="at">scale =</span> <span class="dv">10</span>, <span class="at">returnclass =</span> <span class="fu">c</span>(<span class="st">"sf"</span>), <span class="at">continent =</span> <span class="st">"North America"</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Because the coastline basemap data span all of North America, it may be useful to crop the plot to the bounding box of the data (BC coast). The <code>st_bbox()</code> function from the <code>sf</code> package allows you to get the bounding box of a spatial object. You can use the <code>xlim</code> and <code>ylim</code> arguments in the <code>coord_sf()</code> function to set the limits of the x and y axes.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define lat/lon bounds of your dataset</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define lat/lon bounds of your dataset</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>bounds <span class="ot">=</span> <span class="fu">st_bbox</span>(salmonDepots)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>()<span class="sc">+</span></span>
@@ -447,7 +451,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Also, scale bars shouldn't be added when you're this zoomed out, but here's how to add one anyway to the bottom left (bl):</span></span>
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotation_scale</span>(<span class="at">location =</span> <span class="st">"bl"</span>, <span class="at">text_cex =</span> <span class="fl">0.8</span>)<span class="sc">+</span></span>
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_discrete</span>(<span class="at">name =</span> <span class="st">"Accessibility"</span>)<span class="sc">+</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="co"># tidies up the visuals </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="co"># tidies up the visuals </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>
@@ -459,7 +463,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="creating-temporary-directories">Creating temporary directories</h3>
 <p>For exploring data, it is often helpful to create temporary directories to store and extract data. This can be easier than downloading the data directly and setting your directories.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a temporary directory to store the downloaded zip file</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a temporary directory to store the downloaded zip file</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>temp_dir <span class="ot">=</span> <span class="fu">tempdir</span>()</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the path for the downloaded zip file inside the temp directory</span></span>
@@ -494,13 +498,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(l <span class="cf">in</span> layers<span class="sc">$</span>name){</span>
 <span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Reading layer: "</span>, l)</span>
 <span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">assign</span>(l, <span class="fu">st_read</span>(<span class="fu">file.path</span>(unzip_dir, <span class="st">"floating_infrastructure-docks.gdb"</span>), <span class="at">layer =</span> l, <span class="at">quiet =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="map-the-data" class="level3">
 <h3 class="anchored" data-anchor-id="map-the-data">Map the data</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Note that the coordinate reference system of these two layers are different</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Note that the coordinate reference system of these two layers are different</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">invisible</span>(<span class="fu">st_crs</span>(docks)) <span class="co"># NAD 83</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">invisible</span>(<span class="fu">st_crs</span>(coast)) <span class="co"># WGS 84</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -519,7 +523,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylim =</span> <span class="fu">c</span>(boundsDocks[<span class="st">"ymin"</span>], boundsDocks[<span class="st">"ymax"</span>])</span>
 <span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_discrete</span>(<span class="at">name =</span> <span class="st">"Region"</span>)<span class="sc">+</span></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>
@@ -528,7 +532,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>An example is shown here for accessing and plotting raster data stored in a geodatabase. You can follow the example in the <a href="https://github.com/AtlanticR/R_Git_Support/blob/main/open_data.Rmd">Maritimes tutorial</a> for accessing raster data from tiff files, if you are interested.</p>
 <p>The example I’m using is from the <a href="https://open.canada.ca/data/dataset/fed5f00f-7b17-4ac2-95d6-f1a73858dac0">recreational vessel traffic model on the BC coast</a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Follow steps above to create a temporary folder to download &amp; extract geodatabase info</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Follow steps above to create a temporary folder to download &amp; extract geodatabase info</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>temp_dir <span class="ot">=</span> <span class="fu">tempdir</span>()</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>zip_file <span class="ot">=</span> <span class="fu">file.path</span>(temp_dir, <span class="st">"bc_boating_model.zip"</span>)</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>unzip_dir <span class="ot">=</span> <span class="fu">file.path</span>(temp_dir, <span class="st">"bc_boating_data"</span>)</span>
@@ -545,7 +549,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span>(zip_file, <span class="at">exdir =</span> unzip_dir)</span>
 <span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="co"># List the file names you just downloaded </span></span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>boat_file <span class="ot">=</span> <span class="fu">list.files</span>(unzip_dir, <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>boat_file <span class="ot">=</span> <span class="fu">list.files</span>(unzip_dir, <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="mapping-the-survey-effort-data-with-ggplot" class="level2">
@@ -553,7 +557,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Unfortunately, raster data in this format cannot be directly mapped with <code>ggplot</code>. But, you can convert it to a data frame and keep the coordinate positions.</p>
 <p>If you read through <a href="https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/recreational_vessel_traffic_model_for_british_columbia/MapServer">the metadata</a>, you’ll see that that many types of data are available in this geodatabase (e.g., point data, raster, vector grid). The data being plotted in this example below is the <em>surveyeffort</em> raster dataset, which is specified using the <code>sub</code> argument in the <code>rast()</code> function.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Turn the "survey effort" data into raster format</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Turn the "survey effort" data into raster format</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>surveyRast <span class="ot">=</span> <span class="fu">rast</span>(boat_file, <span class="at">sub =</span> <span class="st">"surveyeffort"</span>)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the project function to project to WGS 84 (i.e., to match the CRS of the coastline file)</span></span>
@@ -573,13 +577,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">xlim =</span> <span class="fu">c</span>(boundsRast[<span class="st">"xmin"</span>], boundsRast[<span class="st">"xmax"</span>]),</span>
 <span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>                <span class="at">ylim =</span> <span class="fu">c</span>(boundsRast[<span class="st">"ymin"</span>], boundsRast[<span class="st">"ymax"</span>]))<span class="sc">+</span></span>
 <span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="cn">NULL</span>)<span class="sc">+</span></span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <section id="making-leaflet-maps" class="level3">
 <h3 class="anchored" data-anchor-id="making-leaflet-maps">Making Leaflet Maps</h3>
 <p><a href="https://rstudio.github.io/leaflet/">Leaflet maps</a> are interactive maps that can be a great way to explore data. Leaflet maps can also be great for point data, since you can create <a href="https://rstudio.github.io/leaflet/articles/popups.html">popup labels</a> where you can click and view your attribute data.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert raster to leaflet-compatible format</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert raster to leaflet-compatible format</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>pal <span class="ot">=</span> <span class="fu">colorNumeric</span>(<span class="at">palette =</span> <span class="st">"magma"</span>, <span class="at">domain =</span> <span class="fu">values</span>(rast_proj), <span class="at">na.color =</span> <span class="st">"transparent"</span>)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create leaflet map</span></span>
@@ -588,7 +592,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addRasterImage</span>(rast_proj, <span class="at">colors =</span> pal, <span class="at">opacity =</span> <span class="fl">0.7</span>, <span class="at">project =</span> T) <span class="sc">%&gt;%</span></span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addLegend</span>(<span class="at">pal =</span> pal, <span class="at">values =</span> <span class="fu">values</span>(rast_proj),</span>
 <span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">title =</span> <span class="st">"Survey Effort"</span>,</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>            <span class="at">position =</span> <span class="st">"bottomright"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>            <span class="at">position =</span> <span class="st">"bottomright"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>
@@ -602,21 +606,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="downloading-data">Downloading data</h3>
 <p>We’ll use the <a href="https://open.canada.ca/data/dataset/3cc03bbf-d59f-4812-996e-ddc52e0ba99e">Pacific Recreational Fishery Salmon Head Depots</a> data as an example. We can use the <code>ckanr</code> package to extract the ArcGIS REST URL by referencing the UUID. This may seem like an extra step while you’re writing your code, but it will save you time in the long run if the URLs change (it can happen!!)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ckanr_setup</span>(<span class="st">"https://open.canada.ca/data"</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ckanr_setup</span>(<span class="st">"https://open.canada.ca/data"</span>)</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>uuid <span class="ot">=</span> <span class="st">"3cc03bbf-d59f-4812-996e-ddc52e0ba99e"</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>pkg <span class="ot">=</span> ckanr<span class="sc">::</span><span class="fu">package_show</span>(uuid)</span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>resources <span class="ot">=</span> pkg<span class="sc">$</span>resources</span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>df_resources <span class="ot">=</span> <span class="fu">as.data.frame</span>(<span class="fu">do.call</span>(rbind, resources))</span>
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Now you can grab the correct ESRI Rest URL ("url"). Make sure to search for that format, and also specify you want the English ("En") version and not French</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>salmon_url <span class="ot">=</span> <span class="fu">unlist</span>(df_resources[df_resources<span class="sc">$</span>format <span class="sc">==</span> <span class="st">"ESRI REST"</span> <span class="sc">&amp;</span> <span class="fu">sapply</span>(df_resources<span class="sc">$</span>language, <span class="cf">function</span>(x) <span class="st">"en"</span> <span class="sc">%in%</span> x), <span class="st">"url"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>salmon_url <span class="ot">=</span> <span class="fu">unlist</span>(df_resources[df_resources<span class="sc">$</span>format <span class="sc">==</span> <span class="st">"ESRI REST"</span> <span class="sc">&amp;</span> <span class="fu">sapply</span>(df_resources<span class="sc">$</span>language, <span class="cf">function</span>(x) <span class="st">"en"</span> <span class="sc">%in%</span> x), <span class="st">"url"</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="searching-for-data" class="level3">
 <h3 class="anchored" data-anchor-id="searching-for-data">Searching for data</h3>
 <p>You can also use the <code>ckanr</code> package to search for data using the <code>package_search()</code> function. You can use the <code>q</code> argument to search for key words, and the <code>fq</code> argument to specify file types.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ckanr_setup</span>(<span class="st">"https://open.canada.ca/data"</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ckanr_setup</span>(<span class="st">"https://open.canada.ca/data"</span>)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>search_results <span class="ot">=</span> <span class="fu">package_search</span>(<span class="at">q =</span> <span class="st">"Pacific salmon"</span>)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>search_results <span class="co"># Note that UUID also shows up here after the &lt;CKAN Package&gt; text</span></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -624,7 +628,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>search_results <span class="ot">=</span> <span class="fu">package_search</span>(</span>
 <span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">q =</span> <span class="st">"Pacific salmon"</span>,</span>
 <span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">fq =</span> <span class="st">'res_format:(SHP OR GDB OR GeoJSON OR KML OR CSV)'</span> <span class="co"># CSVs sometimes contain spatial data, sometimes not</span></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 
@@ -683,13 +687,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
