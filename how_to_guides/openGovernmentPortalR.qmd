@@ -3,8 +3,7 @@ title: "Accessing Spatial Data from the Open Government Portal"
 format: html
 version: "v1.0"
 last_updated: "2025-08-11"
-execute:
-  eval: false
+freeze: auto
 ---
 
 ## Background
