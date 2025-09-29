@@ -3,6 +3,8 @@ project:
   title: "FADS Open Science Documentation Hub"
   output-dir: ./_site
 
+freeze: auto
+
 format:
   html: 
     theme: cosmo
