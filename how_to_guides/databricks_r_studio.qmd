@@ -1,6 +1,8 @@
 ---
 title: "Connect to the Azure Lakehouse from R"
-format: html
+format: 
+  html: 
+    code-overflow: wrap
 redirect_from:
   - /documentation_hub/how_to_guides/databricks_r_studio
 freeze: auto
@@ -31,6 +33,14 @@ This guide walks through the setup process, enabling you to connect to Azure Dat
 Create your user access token in Databricks WebUI. 
 
 **IMPORTANT: Treat this token as your personal password and do not share with anybody**
+
+0. Request an account on the DFO Azure Databricks workspace (EDH Subscription) by submitting an email to DFO.PACStrategicData-DonneesStrategiquesPAC.MPO@dfo-mpo.gc.ca Copy, Paste this template request and replace the [placeholders] with your information:
+
+```{text}
+Hi Team,
+
+I'm following the guide at https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/databricks_r_studio.html and I'd like to be added to the DFO Azure Databricks workspace (EDH Subscription) to access the DFO Pacific Lakehouse for my work which is [briefly describe your work here so that the administrators know which types of permissions to give you: Data Analyst, Data Scientist, Data Engineer (described in section 1.1 of https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/databricks_r_studio.html)]. 
+```
 
 1. In [Databricks Web UI](https://adb-553282681420861.1.azuredatabricks.net/) > go to your profile page and navigate to
 
