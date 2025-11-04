@@ -23,6 +23,8 @@ website:
         href: https://086gc.sharepoint.com/:u:/r/sites/FisheryAssessmentDataSectionWiki/SitePages/CollabHome.aspx?csf=1&web=1&e=tkJJk4
       - text: "About"
         href: about.qmd
+      - text: "Data Projects"
+        href: fads-portfolio.qmd
         
     tools:
       - icon: github
@@ -54,3 +56,4 @@ lang: en
 
 execute:
   freeze: auto
+  python: .venv/bin/python

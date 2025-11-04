@@ -1,0 +1,20 @@
+---
+title: "Formal Ontology Documentation"
+format:
+  html:
+    toc: false
+---
+
+The complete **DFO Salmon Ontology documentation** is available at the Widoco-generated site:
+
+**👉 [https://w3id.org/dfoc/salmon/widoco/index.html](https://w3id.org/dfoc/salmon/widoco/index.html)**
+
+This documentation includes:
+- Formal class hierarchies and relationships
+- Property definitions and constraints
+- Axiomatic relationships and inference rules
+- Complete ontology structure and imports
+
+The ontology source can be accessed at: [https://w3id.org/dfoc/salmon](https://w3id.org/dfoc/salmon)
+
+For curated, human-friendly term tables organized by theme, see the other pages in this section. These tables focus on **Controlled Vocabularies and Thesauri** extracted from the full ontology.

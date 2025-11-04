@@ -56,3 +56,6 @@ fabric/66c682a0-fdf3-49f5-b985-e8bd4dd14a70/SynapseNotebook/82de2f33-bfa0-409f-8
 fabric/66c682a0-fdf3-49f5-b985-e8bd4dd14a70/SynapseNotebook/82de2f33-bfa0-409f-8a0c-6ddba7f01aed/.artifact-info
 
 /.quarto/
+
+**/*.quarto_ipynb
+.venv/

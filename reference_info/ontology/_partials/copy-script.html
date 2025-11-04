@@ -1,0 +1,75 @@
+<script>
+(function () {
+  function handleCopy(event) {
+    const button = event.target.closest('button.copy-uri');
+    if (!button) {
+      return;
+    }
+    event.preventDefault();
+    const uri = button.getAttribute('data-uri');
+    if (!uri) {
+      return;
+    }
+    navigator.clipboard.writeText(uri).then(() => {
+      const original = button.textContent;
+      button.textContent = 'Copied';
+      button.classList.add('copied');
+      setTimeout(() => {
+        button.textContent = original;
+        button.classList.remove('copied');
+      }, 1500);
+    }).catch(() => {
+      button.textContent = 'Copy failed';
+      button.classList.add('error');
+      setTimeout(() => {
+        button.textContent = 'Copy';
+        button.classList.remove('error');
+      }, 2000);
+    });
+  }
+
+  document.addEventListener('click', handleCopy);
+})();
+</script>
+
+<style>
+.ontology-term-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.ontology-term-table th,
+.ontology-term-table td {
+  border-bottom: 1px solid var(--quarto-border-color, #ddd);
+  padding: 0.6rem;
+  vertical-align: top;
+}
+.ontology-term-table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+.ontology-term-table .uri-cell {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+button.copy-uri {
+  font-size: 0.85rem;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--quarto-border-color, #bbb);
+  border-radius: 4px;
+  background-color: var(--quarto-body-bg, #fff);
+  cursor: pointer;
+}
+button.copy-uri.copied {
+  color: #2c7a7b;
+  border-color: #2c7a7b;
+}
+button.copy-uri.error {
+  color: #c53030;
+  border-color: #c53030;
+}
+.ontology-term-table .coming-soon {
+  color: var(--quarto-muted-color, #666);
+  font-style: italic;
+}
+</style>
