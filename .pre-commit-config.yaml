@@ -1,0 +1,27 @@
+# Pre-commit hooks for Data Stewardship Unit website
+# Install with: pre-commit install
+# Run manually with: pre-commit run --all-files
+
+repos:
+  - repo: local
+    hooks:
+      # Hook 1: Update submodule and regenerate term tables
+      - id: update-ontology-submodule
+        name: Update ontology submodule and regenerate term tables
+        entry: bash -c 'cd "$(git rev-parse --show-toplevel)" && scripts/pre-commit-update-ontology.sh'
+        language: system
+        files: ^data/ontology/|^\.gitmodules$
+        pass_filenames: false
+        always_run: false
+        description: Updates ontology submodule and regenerates term tables if submodule changed
+        
+      # Hook 2: Validate term tables (existing)
+      - id: validate-ontology-tables
+        name: Validate Ontology Term Tables
+        entry: Rscript scripts/validate-term-tables.R
+        language: system
+        files: ^data/ontology/release/artifacts/term-tables/.*\.csv$
+        pass_filenames: false
+        always_run: false
+        description: Validates CSV structure and metadata for ontology term tables
+

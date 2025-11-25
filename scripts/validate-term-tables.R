@@ -5,24 +5,84 @@
 library(readr)
 library(jsonlite)
 
-# Expected files configuration
-EXPECTED_FILES <- list(
-  "stock-assessment-terms" = list(
-    csv = "data/ontology/release/artifacts/term-tables/stock-assessment-terms.csv"
-  ),
-  "genetics-terms" = list(
-    csv = "data/ontology/release/artifacts/term-tables/genetics-terms.csv"
-  ),
-  "legislation-terms" = list(
-    csv = "data/ontology/release/artifacts/term-tables/legislation-terms.csv"
-  ),
-  "benchmarks-terms" = list(
-    csv = "data/ontology/release/artifacts/term-tables/benchmarks-terms.csv"
-  ),
-  "hatchery-enhancement-terms" = list(
-    csv = "data/ontology/release/artifacts/term-tables/hatchery-enhancement-terms.csv"
-  )
-)
+# Try to load yaml package for reading themes.yml
+if (requireNamespace("yaml", quietly = TRUE)) {
+  library(yaml)
+  USE_YAML <- TRUE
+} else {
+  USE_YAML <- FALSE
+  warning("Package 'yaml' not available, using hardcoded theme list")
+}
+
+# Function to load expected files from themes.yml dynamically
+load_expected_files_from_config <- function(project_root) {
+  themes_yml_path <- file.path(project_root, "data/ontology/scripts/config/themes.yml")
+  
+  if (!USE_YAML || !file.exists(themes_yml_path)) {
+    # Fallback to hardcoded list
+    return(list(
+      "stock-assessment-terms" = list(
+        csv = "data/ontology/release/artifacts/term-tables/stock-assessment-terms.csv"
+      ),
+      "genetics-terms" = list(
+        csv = "data/ontology/release/artifacts/term-tables/genetics-terms.csv"
+      ),
+      "legislation-terms" = list(
+        csv = "data/ontology/release/artifacts/term-tables/legislation-terms.csv"
+      ),
+      "benchmarks-terms" = list(
+        csv = "data/ontology/release/artifacts/term-tables/benchmarks-terms.csv"
+      ),
+      "hatchery-enhancement-terms" = list(
+        csv = "data/ontology/release/artifacts/term-tables/hatchery-enhancement-terms.csv"
+      )
+    ))
+  }
+  
+  # Read YAML config
+  themes_config <- tryCatch({
+    read_yaml(themes_yml_path)
+  }, error = function(e) {
+    warning("Failed to read themes.yml: ", e$message, ", using fallback")
+    return(NULL)
+  })
+  
+  if (is.null(themes_config) || is.null(themes_config$themes)) {
+    warning("themes.yml is empty or invalid, using fallback")
+    return(list(
+      "stock-assessment-terms" = list(
+        csv = "data/ontology/release/artifacts/term-tables/stock-assessment-terms.csv"
+      ),
+      "genetics-terms" = list(
+        csv = "data/ontology/release/artifacts/term-tables/genetics-terms.csv"
+      ),
+      "legislation-terms" = list(
+        csv = "data/ontology/release/artifacts/term-tables/legislation-terms.csv"
+      ),
+      "benchmarks-terms" = list(
+        csv = "data/ontology/release/artifacts/term-tables/benchmarks-terms.csv"
+      ),
+      "hatchery-enhancement-terms" = list(
+        csv = "data/ontology/release/artifacts/term-tables/hatchery-enhancement-terms.csv"
+      )
+    ))
+  }
+  
+  # Build expected files list from themes config
+  expected <- list()
+  for (theme in themes_config$themes) {
+    csv_filename <- theme$output_csv %||% paste0(theme$id, ".csv")
+    theme_id <- sub("\\.csv$", "", csv_filename)
+    expected[[theme_id]] <- list(
+      csv = file.path("data/ontology/release/artifacts/term-tables", csv_filename)
+    )
+  }
+  
+  return(expected)
+}
+
+# Expected files configuration (will be loaded dynamically in main())
+EXPECTED_FILES <- NULL
 
 REQUIRED_COLUMNS <- c(
   "term_name",
@@ -149,6 +209,10 @@ validate_meta <- function(csv_path) {
 
 main <- function() {
   project_root <- get_project_root()
+  
+  # Load expected files dynamically from themes.yml
+  EXPECTED_FILES <<- load_expected_files_from_config(project_root)
+  
   all_errors <- character(0)
   
   for (theme in names(EXPECTED_FILES)) {

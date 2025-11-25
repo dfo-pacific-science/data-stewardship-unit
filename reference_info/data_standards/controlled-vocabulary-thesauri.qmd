@@ -19,6 +19,12 @@ library(here)
 library(jsonlite)
 library(htmltools)
 
+# Load yaml package for reading themes.yml
+if (!requireNamespace("yaml", quietly = TRUE)) {
+  stop("Package 'yaml' is required. Please install it with: install.packages('yaml')")
+}
+library(yaml)
+
 # Get project root directory
 project_root <- if (Sys.getenv("QUARTO_PROJECT_DIR") != "") {
   Sys.getenv("QUARTO_PROJECT_DIR")
@@ -38,20 +44,69 @@ project_root <- if (Sys.getenv("QUARTO_PROJECT_DIR") != "") {
 helpers_path <- file.path(project_root, "reference_info/ontology/_partials/helpers.R")
 source(helpers_path)
 
-# Define themes
-themes <- list(
-  list(id = "stock-assessment-terms", label = "Stock Assessment Methods"),
-  list(id = "genetics-terms", label = "Genetics and GSI"),
-  list(id = "legislation-terms", label = "Legislation and Policy"),
-  list(id = "benchmarks-terms", label = "Biological Benchmarks"),
-  list(id = "hatchery-enhancement-terms", label = "Hatchery and Enhancement")
-)
+# Function to load themes from ontology config
+load_themes_from_config <- function(project_root) {
+  themes_yml_path <- file.path(project_root, "data/ontology/scripts/config/themes.yml")
+  
+  if (!file.exists(themes_yml_path)) {
+    warning("themes.yml not found at ", themes_yml_path, ", using fallback themes")
+    # Fallback to hardcoded themes if config file not found
+    return(list(
+      list(id = "stock-assessment-terms", label = "Stock Assessment Methods"),
+      list(id = "genetics-terms", label = "Genetics and GSI"),
+      list(id = "legislation-terms", label = "Legislation and Policy"),
+      list(id = "benchmarks-terms", label = "Biological Benchmarks and Indicators"),
+      list(id = "hatchery-enhancement-terms", label = "Hatchery and Enhancement")
+    ))
+  }
+  
+  # Read YAML config
+  themes_config <- tryCatch({
+    read_yaml(themes_yml_path)
+  }, error = function(e) {
+    warning("Failed to read themes.yml: ", e$message, ", using fallback themes")
+    return(NULL)
+  })
+  
+  if (is.null(themes_config) || is.null(themes_config$themes)) {
+    warning("themes.yml is empty or invalid, using fallback themes")
+    return(list(
+      list(id = "stock-assessment-terms", label = "Stock Assessment Methods"),
+      list(id = "genetics-terms", label = "Genetics and GSI"),
+      list(id = "legislation-terms", label = "Legislation and Policy"),
+      list(id = "benchmarks-terms", label = "Biological Benchmarks and Indicators"),
+      list(id = "hatchery-enhancement-terms", label = "Hatchery and Enhancement")
+    ))
+  }
+  
+  # Convert YAML structure to R list format
+  # Use output_csv field directly (already has correct hyphenated format)
+  themes <- lapply(themes_config$themes, function(theme) {
+    # Extract theme ID from CSV filename (remove .csv extension)
+    csv_filename <- theme$output_csv %||% paste0(theme$id, ".csv")
+    theme_id <- sub("\\.csv$", "", csv_filename)
+    
+    list(
+      id = theme_id,
+      label = theme$label
+    )
+  })
+  
+  return(themes)
+}
+
+# Load themes dynamically
+themes <- load_themes_from_config(project_root)
 
 # Load all term tables
 all_terms <- list()
-for (theme in themes) {
+for (theme_idx in seq_along(themes)) {
+  current_theme <- themes[[theme_idx]]
+  current_theme_label <- as.character(current_theme$label)
+  current_theme_id <- as.character(current_theme$id)
+  
   csv_path <- file.path(project_root, "data/ontology/release/artifacts/term-tables", 
-                        paste0(theme$id, ".csv"))
+                        paste0(current_theme_id, ".csv"))
   result <- load_dataset(csv_path)
   df <- result$data
   meta <- result$metadata
@@ -68,8 +123,8 @@ for (theme in themes) {
         related_terms = as.character(row$related_terms %||% ""),
         canonical_uri = as.character(row$canonical_uri %||% ""),
         widoco_link = as.character(row$widoco_link %||% ""),
-        theme = theme$label,
-        theme_id = theme$id
+        theme = current_theme_label,
+        theme_id = current_theme_id
       )
     }
   }
@@ -319,19 +374,77 @@ if (!exists("load_dataset")) {
   source(helpers_path)
 }
 
-# Define themes
-themes <- list(
-  list(id = "stock-assessment-terms", label = "Stock Assessment Methods", 
-       desc = "enumeration and escapement related vocabularies"),
-  list(id = "genetics-terms", label = "Genetics and GSI", 
-       desc = "laboratory, assay, and reporting constructs"),
-  list(id = "legislation-terms", label = "Legislation and Policy", 
-       desc = "policy frameworks and status designations"),
-  list(id = "benchmarks-terms", label = "Biological Benchmarks", 
-       desc = "conservation limits, reference points, and indicators"),
-  list(id = "hatchery-enhancement-terms", label = "Hatchery and Enhancement", 
-       desc = "hatchery facilities, production, and salmon origin classifications")
-)
+# Load yaml package if not already loaded
+if (!requireNamespace("yaml", quietly = TRUE)) {
+  stop("Package 'yaml' is required. Please install it with: install.packages('yaml')")
+}
+if (!exists("yaml")) {
+  library(yaml)
+}
+
+# Function to load themes from ontology config (with optional desc field)
+load_themes_from_config_with_desc <- function(project_root) {
+  themes_yml_path <- file.path(project_root, "data/ontology/scripts/config/themes.yml")
+  
+  if (!file.exists(themes_yml_path)) {
+    warning("themes.yml not found at ", themes_yml_path, ", using fallback themes")
+    # Fallback to hardcoded themes if config file not found
+    return(list(
+      list(id = "stock-assessment-terms", label = "Stock Assessment Methods", 
+           desc = "enumeration and escapement related vocabularies"),
+      list(id = "genetics-terms", label = "Genetics and GSI", 
+           desc = "laboratory, assay, and reporting constructs"),
+      list(id = "legislation-terms", label = "Legislation and Policy", 
+           desc = "policy frameworks and status designations"),
+      list(id = "benchmarks-terms", label = "Biological Benchmarks and Indicators", 
+           desc = "conservation limits, reference points, and indicators"),
+      list(id = "hatchery-enhancement-terms", label = "Hatchery and Enhancement", 
+           desc = "hatchery facilities, production, and salmon origin classifications")
+    ))
+  }
+  
+  # Read YAML config
+  themes_config <- tryCatch({
+    read_yaml(themes_yml_path)
+  }, error = function(e) {
+    warning("Failed to read themes.yml: ", e$message, ", using fallback themes")
+    return(NULL)
+  })
+  
+  if (is.null(themes_config) || is.null(themes_config$themes)) {
+    warning("themes.yml is empty or invalid, using fallback themes")
+    return(list(
+      list(id = "stock-assessment-terms", label = "Stock Assessment Methods", 
+           desc = "enumeration and escapement related vocabularies"),
+      list(id = "genetics-terms", label = "Genetics and GSI", 
+           desc = "laboratory, assay, and reporting constructs"),
+      list(id = "legislation-terms", label = "Legislation and Policy", 
+           desc = "policy frameworks and status designations"),
+      list(id = "benchmarks-terms", label = "Biological Benchmarks and Indicators", 
+           desc = "conservation limits, reference points, and indicators"),
+      list(id = "hatchery-enhancement-terms", label = "Hatchery and Enhancement", 
+           desc = "hatchery facilities, production, and salmon origin classifications")
+    ))
+  }
+  
+  # Convert YAML structure to R list format with optional desc field
+  themes <- lapply(themes_config$themes, function(theme) {
+    # Extract theme ID from CSV filename (remove .csv extension)
+    csv_filename <- theme$output_csv %||% paste0(theme$id, ".csv")
+    theme_id <- sub("\\.csv$", "", csv_filename)
+    
+    list(
+      id = theme_id,
+      label = theme$label,
+      desc = theme$desc %||% ""  # Optional description field
+    )
+  })
+  
+  return(themes)
+}
+
+# Load themes dynamically
+themes <- load_themes_from_config_with_desc(project_root)
 
 # Build tab buttons HTML
 tab_buttons <- character()
@@ -383,11 +496,12 @@ for (idx in seq_along(themes)) {
   if (is.null(df) || nrow(df) == 0) {
     panel_content <- tags$p("Term table not found. Run the ontology extraction workflow to generate term tables.")
   } else {
-    # Add theme column to dataframe
-    df$theme <- theme$label
+    # Add theme column to dataframe - ensure correct theme label is assigned
+    theme_label <- theme$label
+    df$theme <- theme_label
     
     # Render table using reactable - this will be detected by Quarto
-    table_output <- render_table(df, theme_label = theme$label)
+    table_output <- render_table(df, theme_label = theme_label)
     panel_content <- c(panel_content, list(table_output))
   }
   
