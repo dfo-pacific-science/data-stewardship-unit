@@ -1199,7 +1199,7 @@
     "href": "reference_info/data_standards/controlled-vocabulary-thesauri.html#search-terms",
     "title": "Controlled Vocabulary & Thesauri",
     "section": "Search Terms",
-    "text": "Search Terms\n\n\n    Vocabulary Summary            Total Terms      81              Terms by Theme        Biological Benchmarks  7  Genetics and GSI  6  Hatchery and Enhancement  7  Legislation and Policy  30  Stock Assessment Methods  31                            81        With Definitions                    42        With Sources                    68      With Related Terms",
+    "text": "Search Terms\n\n\n    Vocabulary Summary            Total Terms      81              Terms by Theme        Biological Benchmarks and Indicators  7  Genetics and GSI  6  Hatchery and Enhancement  7  Legislation and Policy  30  Stock Assessment Methods  31                            81        With Definitions                    42        With Sources                    68      With Related Terms",
     "crumbs": [
       "FADS Internal Wiki",
       "Reference Info",
@@ -1212,7 +1212,7 @@
     "href": "reference_info/data_standards/controlled-vocabulary-thesauri.html#browse-by-theme",
     "title": "Controlled Vocabulary & Thesauri",
     "section": "Browse by Theme",
-    "text": "Browse by Theme\nUse the tabs below to explore terms organized by theme:\n\n\n\nStock Assessment MethodsGenetics and GSILegislation and PolicyBiological BenchmarksHatchery and Enhancement",
+    "text": "Browse by Theme\nUse the tabs below to explore terms organized by theme:\n\n\n\nStock Assessment MethodsGenetics and GSILegislation and PolicyBiological Benchmarks and IndicatorsHatchery and Enhancement",
     "crumbs": [
       "FADS Internal Wiki",
       "Reference Info",
