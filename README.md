@@ -18,9 +18,15 @@ This repository has some the following files and directories of note:
 To run the website locally, follow these steps in the terminal:
 
 1. Clone the repository with git by running `git clone https://github.com/dfo-pacific-science/data-stewardship-unit.git` in terminal. 
-2. Install the required dependencies: `R -e "install.packages('quarto')"`
-3. Preview the website by running `quarto render`
-4. To publish the site, merge commits to the main branch. For information on publishing, refer to the contribution information below.
+2. Install Quarto: `R -e "install.packages('quarto')"` or follow [Quarto installation instructions](https://quarto.org/docs/get-started/)
+3. Install required R packages: `R -e "install.packages(c('reactable', 'readr', 'jsonlite', 'htmltools', 'htmlwidgets'))"`
+4. Set up pre-commit hooks (optional but recommended): 
+   - Install pre-commit: `pip install pre-commit` or `brew install pre-commit`
+   - Install hooks: `pre-commit install`
+5. Preview the website by running `quarto preview` or build with `quarto render`
+6. To publish the site, merge commits to the main branch. For information on publishing, refer to the contribution information below.
+
+**Note:** The website must be built locally. CSV validation happens automatically via pre-commit hooks before commits. GitHub Actions only renders and publishes the Quarto website.
 
 ## Contributing
 

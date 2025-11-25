@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>robot_setup – FADS Open Science Documentation Hub</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../images/logo.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-972cf70390dc11df476ac11b7b56006c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">FADS Open Science Documentation Hub</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://086gc.sharepoint.com/:u:/r/sites/FisheryAssessmentDataSectionWiki/SitePages/CollabHome.aspx?csf=1&amp;web=1&amp;e=tkJJk4"> 
+<span class="menu-text">FADS Internal Wiki</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../fads-portfolio.html"> 
+<span class="menu-text">Data Services</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../../reference_info/data_standards/controlled-vocabulary-thesauri.html" aria-current="page"> 
+<span class="menu-text">Salmon Data Standards</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/dfo-pacific-science/data-stewardship-unit">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues">
+            Report a Bug
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../../../index.html" class="sidebar-logo-link">
+      <img src="../../../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../../../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">How to Guides</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../how_to_guides/databricks_r_studio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Connect to the Azure Lakehouse from R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../how_to_guides/openGovernmentPortalR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Accessing Spatial Data from the Open Government Portal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../how_to_guides/sharepoint_r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Access Data in SharePoint from R</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Reference Info</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Salmon Data Standards</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../reference_info/data_standards/controlled-vocabulary-thesauri.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Controlled Vocabulary &amp; Thesauri</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../reference_info/ontology/formal-documentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DFO Salmon Ontology</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../reference_info/dwc-obis-gbif.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Darwin Core, GBIF, and OBIS Reference Guide</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../reference_info/openDataPractices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Practices for Open Science – 3 Quick Tips</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../reference_info/publishing_data_externally.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hosting Data and Code</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Tools</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../reference_info/tools/r_packages.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R Packages</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Tutorials</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../tutorials/support_controlled_vocabs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Support Controlled Vocabularies</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Deep Dives</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../deep_dives/Stock Assessment Data 101 for Fisheries Science Reports.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fisheries Science Reports – Data and Stats 101</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#robot-setup-and-known-limitations" id="toc-robot-setup-and-known-limitations" class="nav-link active" data-scroll-target="#robot-setup-and-known-limitations">ROBOT Setup and Known Limitations</a>
+  <ul class="collapse">
+  <li><a href="#robot-commands" id="toc-robot-commands" class="nav-link" data-scroll-target="#robot-commands">ROBOT Commands</a>
+  <ul class="collapse">
+  <li><a href="#basic-quality-checks" id="toc-basic-quality-checks" class="nav-link" data-scroll-target="#basic-quality-checks">Basic Quality Checks</a></li>
+  <li><a href="#cicd-configuration" id="toc-cicd-configuration" class="nav-link" data-scroll-target="#cicd-configuration">CI/CD Configuration</a></li>
+  <li><a href="#multi-reasoner-analysis" id="toc-multi-reasoner-analysis" class="nav-link" data-scroll-target="#multi-reasoner-analysis">Multi-Reasoner Analysis</a></li>
+  </ul></li>
+  <li><a href="#known-robot-limitations-with-skos" id="toc-known-robot-limitations-with-skos" class="nav-link" data-scroll-target="#known-robot-limitations-with-skos">Known ROBOT Limitations with SKOS</a>
+  <ul class="collapse">
+  <li><a href="#missing-label-errors-for-skos-concepts" id="toc-missing-label-errors-for-skos-concepts" class="nav-link" data-scroll-target="#missing-label-errors-for-skos-concepts">Missing Label Errors for SKOS Concepts</a></li>
+  <li><a href="#jfact-datatype-warning" id="toc-jfact-datatype-warning" class="nav-link" data-scroll-target="#jfact-datatype-warning">JFact Datatype Warning</a></li>
+  </ul></li>
+  <li><a href="#expected-baseline-violations" id="toc-expected-baseline-violations" class="nav-link" data-scroll-target="#expected-baseline-violations">Expected Baseline Violations</a>
+  <ul class="collapse">
+  <li><a href="#error-level-39-total" id="toc-error-level-39-total" class="nav-link" data-scroll-target="#error-level-39-total">ERROR Level (39 total)</a></li>
+  <li><a href="#warn-level-159-total---updated-after-whitespace-fix" id="toc-warn-level-159-total---updated-after-whitespace-fix" class="nav-link" data-scroll-target="#warn-level-159-total---updated-after-whitespace-fix">WARN Level (159 total) - Updated after whitespace fix</a></li>
+  <li><a href="#info-level-52-total" id="toc-info-level-52-total" class="nav-link" data-scroll-target="#info-level-52-total">INFO Level (52 total)</a></li>
+  </ul></li>
+  <li><a href="#definition-property-recognition-issues" id="toc-definition-property-recognition-issues" class="nav-link" data-scroll-target="#definition-property-recognition-issues">3. Definition Property Recognition Issues</a></li>
+  <li><a href="#quality-monitoring" id="toc-quality-monitoring" class="nav-link" data-scroll-target="#quality-monitoring">Quality Monitoring</a>
+  <ul class="collapse">
+  <li><a href="#regression-detection" id="toc-regression-detection" class="nav-link" data-scroll-target="#regression-detection">Regression Detection</a></li>
+  <li><a href="#expected-vs-genuine-violations" id="toc-expected-vs-genuine-violations" class="nav-link" data-scroll-target="#expected-vs-genuine-violations">Expected vs Genuine Violations</a></li>
+  </ul></li>
+  <li><a href="#quality-monitoring-1" id="toc-quality-monitoring-1" class="nav-link" data-scroll-target="#quality-monitoring-1">Quality Monitoring</a>
+  <ul class="collapse">
+  <li><a href="#automated-checks" id="toc-automated-checks" class="nav-link" data-scroll-target="#automated-checks">Automated Checks</a></li>
+  <li><a href="#regression-detection-1" id="toc-regression-detection-1" class="nav-link" data-scroll-target="#regression-detection-1">Regression Detection</a></li>
+  <li><a href="#contributing-guidelines" id="toc-contributing-guidelines" class="nav-link" data-scroll-target="#contributing-guidelines">Contributing Guidelines</a></li>
+  </ul></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a>
+  <ul class="collapse">
+  <li><a href="#robot-wont-start" id="toc-robot-wont-start" class="nav-link" data-scroll-target="#robot-wont-start">ROBOT Won’t Start</a></li>
+  <li><a href="#inconsistent-reasoner-results" id="toc-inconsistent-reasoner-results" class="nav-link" data-scroll-target="#inconsistent-reasoner-results">Inconsistent Reasoner Results</a></li>
+  <li><a href="#unexpected-violations" id="toc-unexpected-violations" class="nav-link" data-scroll-target="#unexpected-violations">Unexpected Violations</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/data/ontology/docs/ROBOT_SETUP.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/data/ontology/docs/ROBOT_SETUP.md" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="robot-setup-and-known-limitations" class="level1">
+<h1>ROBOT Setup and Known Limitations</h1>
+<p>This document describes ROBOT configuration for the DFO Salmon Ontology and documents known limitations and expected violations.</p>
+<section id="robot-commands" class="level2">
+<h2 class="anchored" data-anchor-id="robot-commands">ROBOT Commands</h2>
+<section id="basic-quality-checks" class="level3">
+<h3 class="anchored" data-anchor-id="basic-quality-checks">Basic Quality Checks</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check logical consistency</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">robot</span> reason <span class="at">--input</span> ontology/dfo-salmon.ttl <span class="at">--reasoner</span> ELK</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate quality report (with custom profile to handle expected violations)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">robot</span> report <span class="at">--input</span> ontology/dfo-salmon.ttl <span class="at">--profile</span> robot-profile.yaml <span class="at">--fail-on</span> ERROR <span class="at">--output</span> release/artifacts/quality-report.html</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert formats</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">robot</span> convert <span class="at">--input</span> ontology/dfo-salmon.ttl <span class="at">--output</span> release/artifacts/dfo-salmon.owl</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="cicd-configuration" class="level3">
+<h3 class="anchored" data-anchor-id="cicd-configuration">CI/CD Configuration</h3>
+<p><strong>Problem:</strong> ROBOT fails CI/CD pipelines due to expected violations that aren’t actual errors.</p>
+<p><strong>Solution:</strong> Use the provided configuration to prevent false failures:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the provided quality check script (recommended)</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./scripts/robot-quality-check.sh</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Or run ROBOT directly with appropriate settings</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">java</span> <span class="at">-jar</span> tools/robot.jar report <span class="dt">\</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">--input</span> ontology/dfo-salmon.ttl <span class="dt">\</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">--profile</span> robot-profile.yaml <span class="dt">\</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">--fail-on</span> ERROR <span class="dt">\</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">--output</span> release/artifacts/quality-report.html</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Key Configuration Options:</strong></p>
+<ol type="1">
+<li><strong>Custom Profile (<code>robot-profile.yaml</code>):</strong> Downgrades violation severity for known acceptable issues</li>
+<li><strong><code>--fail-on ERROR</code>:</strong> Still fails on genuine ERROR-level issues, but expected violations are downgraded to INFO level</li>
+<li><strong>Quality Check Script:</strong> Handles all configuration automatically</li>
+</ol>
+</section>
+<section id="multi-reasoner-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="multi-reasoner-analysis">Multi-Reasoner Analysis</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Test with multiple reasoners</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">robot</span> reason <span class="at">--input</span> ontology/dfo-salmon.ttl <span class="at">--reasoner</span> ELK <span class="at">--output</span> release/artifacts/elk-inferred.ttl</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">robot</span> reason <span class="at">--input</span> ontology/dfo-salmon.ttl <span class="at">--reasoner</span> HermiT <span class="at">--output</span> release/artifacts/hermit-inferred.ttl</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">robot</span> reason <span class="at">--input</span> ontology/dfo-salmon.ttl <span class="at">--reasoner</span> JFact <span class="at">--output</span> release/artifacts/jfact-inferred.ttl</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="known-robot-limitations-with-skos" class="level2">
+<h2 class="anchored" data-anchor-id="known-robot-limitations-with-skos">Known ROBOT Limitations with SKOS</h2>
+<section id="missing-label-errors-for-skos-concepts" class="level3">
+<h3 class="anchored" data-anchor-id="missing-label-errors-for-skos-concepts">Missing Label Errors for SKOS Concepts</h3>
+<p><strong>Issue:</strong> ROBOT reports 31 ERROR violations for SKOS concepts lacking <code>rdfs:label</code>.</p>
+<p><strong>Root Cause:</strong> ROBOT does not perform RDFS inference and doesn’t recognize that <code>skos:prefLabel</code> is a subproperty of <code>rdfs:label</code> per W3C SKOS specification.</p>
+<p><strong>Impact:</strong> None - this is a tool limitation, not a modeling error:</p>
+<ul>
+<li>✅ W3C SKOS compliant: <code>skos:prefLabel</code> is subproperty of <code>rdfs:label</code></li>
+<li>✅ OWL reasoning: All reasoners understand the relationship correctly</li>
+<li>✅ SPARQL queries: SKOS-aware applications work correctly</li>
+<li>✅ Semantic web tools: SKOS-compliant tools handle correctly</li>
+</ul>
+<p><strong>Decision:</strong> Do NOT add redundant <code>rdfs:label</code> properties to satisfy ROBOT.</p>
+<p><strong>Baseline Expected Errors:</strong> 31 missing labels on SKOS concepts (acceptable)</p>
+<p><strong>Quality Check:</strong> New terms should not add to this count - verify any new missing label errors are genuine issues, not SKOS concepts with <code>skos:prefLabel</code>.</p>
+</section>
+<section id="jfact-datatype-warning" class="level3">
+<h3 class="anchored" data-anchor-id="jfact-datatype-warning">JFact Datatype Warning</h3>
+<p><strong>Issue:</strong> JFact reports “A known datatype for https://w3id.org/dfo/salmon#EstimateType cannot be found”</p>
+<p><strong>Root Cause:</strong> <code>EstimateType</code> is correctly modeled as <code>skos:Concept</code> (not a datatype). JFact’s datatype checking system is confused by SKOS concept usage as object property ranges.</p>
+<p><strong>Impact:</strong> None - all reasoners (ELK, HermiT, JFact) produce identical results (2183 lines). Ontology is logically consistent.</p>
+<p><strong>Action:</strong> This warning can be safely ignored.</p>
+</section>
+</section>
+<section id="expected-baseline-violations" class="level2">
+<h2 class="anchored" data-anchor-id="expected-baseline-violations">Expected Baseline Violations</h2>
+<p>When running ROBOT report, expect these violations as acceptable:</p>
+<section id="error-level-39-total" class="level3">
+<h3 class="anchored" data-anchor-id="error-level-39-total">ERROR Level (39 total)</h3>
+<ul>
+<li><strong>31 SKOS concepts:</strong> Missing <code>rdfs:label</code> (have <code>skos:prefLabel</code> - acceptable per W3C SKOS)</li>
+<li><strong>8 Darwin Core terms:</strong> Missing <code>rdfs:label</code> (external imports - acceptable)</li>
+</ul>
+</section>
+<section id="warn-level-159-total---updated-after-whitespace-fix" class="level3">
+<h3 class="anchored" data-anchor-id="warn-level-159-total---updated-after-whitespace-fix">WARN Level (159 total) - Updated after whitespace fix</h3>
+<ul>
+<li><strong>147 missing definitions:</strong>
+<ul>
+<li>3 BFO MIREOT terms (expected - have <code>oboInOwl:hasDefinition</code>)</li>
+<li>8 Darwin Core terms (expected - external imports)</li>
+<li>7 hybrid OWL+SKOS concepts (ROBOT limitation - have <code>skos:definition</code>)</li>
+<li>129 DFO terms (ROBOT limitation - have <code>rdfs:comment</code> but not recognized)</li>
+</ul></li>
+<li><strong>1 other minor annotation issue</strong></li>
+</ul>
+</section>
+<section id="info-level-52-total" class="level3">
+<h3 class="anchored" data-anchor-id="info-level-52-total">INFO Level (52 total)</h3>
+<ul>
+<li><strong>52 missing superclasses:</strong> To be analyzed for appropriateness (see superclass-analysis.md)</li>
+</ul>
+</section>
+</section>
+<section id="definition-property-recognition-issues" class="level2">
+<h2 class="anchored" data-anchor-id="definition-property-recognition-issues">3. Definition Property Recognition Issues</h2>
+<p><strong>Issue:</strong> ROBOT reports missing definitions for terms that actually have definitions using different properties.</p>
+<p><strong>Root Cause:</strong> ROBOT’s definition checking is limited and doesn’t recognize all definition properties used in hybrid OWL+SKOS ontologies.</p>
+<p><strong>Affected Terms:</strong></p>
+<ol type="1">
+<li><p><strong>Hybrid OWL+SKOS Concepts (7 terms):</strong></p>
+<ul>
+<li>Use <code>skos:definition</code> instead of <code>rdfs:comment</code></li>
+<li>Examples: <code>dfo:Extinct</code>, <code>dfo:Endangered</code>, <code>dfo:Threatened</code></li>
+<li>ROBOT expects <code>rdfs:comment</code> for OWL classes</li>
+</ul></li>
+<li><p><strong>BFO MIREOT Terms (3 terms):</strong></p>
+<ul>
+<li>Use <code>oboInOwl:hasDefinition</code> instead of <code>rdfs:comment</code></li>
+<li>ROBOT may not recognize this property</li>
+</ul></li>
+<li><p><strong>Darwin Core Terms (8 terms):</strong></p>
+<ul>
+<li>External imports without local definitions</li>
+<li>Expected and acceptable</li>
+</ul></li>
+</ol>
+<p><strong>Impact:</strong> None - all terms have appropriate definitions per W3C standards.</p>
+<p><strong>Recommendation:</strong> Document these as expected violations rather than changing the ontology to accommodate ROBOT limitations.</p>
+</section>
+<section id="quality-monitoring" class="level2">
+<h2 class="anchored" data-anchor-id="quality-monitoring">Quality Monitoring</h2>
+<section id="regression-detection" class="level3">
+<h3 class="anchored" data-anchor-id="regression-detection">Regression Detection</h3>
+<p>When adding new terms:</p>
+<ol type="1">
+<li>Run ROBOT report before and after changes</li>
+<li>Verify ERROR count doesn’t increase beyond baseline (39)</li>
+<li>Document any new violations and their acceptability</li>
+<li>Update this document if new expected violations are identified</li>
+</ol>
+</section>
+<section id="expected-vs-genuine-violations" class="level3">
+<h3 class="anchored" data-anchor-id="expected-vs-genuine-violations">Expected vs Genuine Violations</h3>
+<p><strong>Expected (Acceptable):</strong></p>
+<ul>
+<li>31 SKOS label “errors” (W3C SKOS compliant)</li>
+<li>8 Darwin Core label “errors” (external imports)</li>
+<li>3 BFO definition “warnings” (MIREOT approach)</li>
+<li>8 Darwin Core definition “warnings” (external imports)</li>
+<li>7 hybrid OWL+SKOS definition “warnings” (ROBOT limitation)</li>
+<li>129 DFO definition “warnings” (ROBOT limitation)</li>
+</ul>
+<p><strong>To Be Investigated:</strong></p>
+<ul>
+<li>52 superclass info violations (see superclass-analysis.md)</li>
+</ul>
+</section>
+</section>
+<section id="quality-monitoring-1" class="level2">
+<h2 class="anchored" data-anchor-id="quality-monitoring-1">Quality Monitoring</h2>
+<section id="automated-checks" class="level3">
+<h3 class="anchored" data-anchor-id="automated-checks">Automated Checks</h3>
+<p>Use the provided <code>scripts/robot-commands.bat</code> for consistent quality checking.</p>
+</section>
+<section id="regression-detection-1" class="level3">
+<h3 class="anchored" data-anchor-id="regression-detection-1">Regression Detection</h3>
+<p>When adding new terms:</p>
+<ol type="1">
+<li>Run ROBOT report before and after changes</li>
+<li>Verify ERROR count doesn’t increase beyond baseline (39)</li>
+<li>Document any new violations and their acceptability</li>
+<li>Update this document if new expected violations are identified</li>
+</ol>
+</section>
+<section id="contributing-guidelines" class="level3">
+<h3 class="anchored" data-anchor-id="contributing-guidelines">Contributing Guidelines</h3>
+<p>Before submitting changes:</p>
+<ol type="1">
+<li>Run ROBOT reasoner to ensure logical consistency</li>
+<li>Check that new violations are documented as acceptable</li>
+<li>Update ROBOT_SETUP.md if new expected violations are introduced</li>
+<li>Ensure all three reasoners (ELK, HermiT, JFact) produce consistent results</li>
+</ol>
+</section>
+</section>
+<section id="troubleshooting" class="level2">
+<h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
+<section id="robot-wont-start" class="level3">
+<h3 class="anchored" data-anchor-id="robot-wont-start">ROBOT Won’t Start</h3>
+<ul>
+<li>Ensure Java is installed and accessible</li>
+<li>Check that <code>tools/robot.jar</code> exists</li>
+<li>Verify file paths in commands are correct</li>
+</ul>
+</section>
+<section id="inconsistent-reasoner-results" class="level3">
+<h3 class="anchored" data-anchor-id="inconsistent-reasoner-results">Inconsistent Reasoner Results</h3>
+<ul>
+<li>All three reasoners should produce identical line counts</li>
+<li>If results differ, there may be a logical inconsistency</li>
+<li>Check for unsatisfiable classes or contradictory axioms</li>
+</ul>
+</section>
+<section id="unexpected-violations" class="level3">
+<h3 class="anchored" data-anchor-id="unexpected-violations">Unexpected Violations</h3>
+<ul>
+<li>Compare against baseline expected violations in this document</li>
+<li>Document new acceptable violations</li>
+<li>Investigate genuine new issues</li>
+</ul>
+<hr>
+<p><em>Last updated: 2025-01-24</em> <em>ROBOT version: 1.9.8</em></p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/dfo-pacific-science\.github\.io\/data-stewardship-unit\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/data/ontology/docs/ROBOT_SETUP.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/data/ontology/docs/ROBOT_SETUP.md" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This site was created with <a href="https://quarto.org/">Quarto</a> and is hosted with <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

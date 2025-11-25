@@ -1,0 +1,1995 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>fsar_tracer_prd_cqs – FADS Open Science Documentation Hub</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<link href="../../../../images/logo.png" rel="icon" type="image/png">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-972cf70390dc11df476ac11b7b56006c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../../index.html">
+    <span class="navbar-title">FADS Open Science Documentation Hub</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://086gc.sharepoint.com/:u:/r/sites/FisheryAssessmentDataSectionWiki/SitePages/CollabHome.aspx?csf=1&amp;web=1&amp;e=tkJJk4"> 
+<span class="menu-text">FADS Internal Wiki</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../fads-portfolio.html"> 
+<span class="menu-text">Data Services</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../../../reference_info/data_standards/controlled-vocabulary-thesauri.html" aria-current="page"> 
+<span class="menu-text">Salmon Data Standards</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/dfo-pacific-science/data-stewardship-unit">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues">
+            Report a Bug
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../../../../index.html" class="sidebar-logo-link">
+      <img src="../../../../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../../../../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">How to Guides</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../how_to_guides/databricks_r_studio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Connect to the Azure Lakehouse from R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../how_to_guides/openGovernmentPortalR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Accessing Spatial Data from the Open Government Portal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../how_to_guides/sharepoint_r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Access Data in SharePoint from R</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Reference Info</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Salmon Data Standards</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../reference_info/data_standards/controlled-vocabulary-thesauri.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Controlled Vocabulary &amp; Thesauri</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../reference_info/ontology/formal-documentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DFO Salmon Ontology</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../reference_info/dwc-obis-gbif.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Darwin Core, GBIF, and OBIS Reference Guide</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../reference_info/openDataPractices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Practices for Open Science – 3 Quick Tips</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../reference_info/publishing_data_externally.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hosting Data and Code</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Tools</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../reference_info/tools/r_packages.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R Packages</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Tutorials</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../tutorials/support_controlled_vocabs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Support Controlled Vocabularies</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Deep Dives</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../deep_dives/Stock Assessment Data 101 for Fisheries Science Reports.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fisheries Science Reports – Data and Stats 101</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#advice-trace-demo-ux-interface-spec-fsar-hero" id="toc-advice-trace-demo-ux-interface-spec-fsar-hero" class="nav-link active" data-scroll-target="#advice-trace-demo-ux-interface-spec-fsar-hero">Advice Trace Demo — UX &amp; Interface Spec (FSAR Hero)</a>
+  <ul class="collapse">
+  <li><a href="#personas-stories-acceptance" id="toc-personas-stories-acceptance" class="nav-link" data-scroll-target="#personas-stories-acceptance">1) Personas → Stories → Acceptance</a>
+  <ul class="collapse">
+  <li><a href="#persona-a-executives-directors-branch-division-managers" id="toc-persona-a-executives-directors-branch-division-managers" class="nav-link" data-scroll-target="#persona-a-executives-directors-branch-division-managers">Persona A — Executives / Directors / Branch &amp; Division Managers</a></li>
+  <li><a href="#persona-b-fsar-lead-author" id="toc-persona-b-fsar-lead-author" class="nav-link" data-scroll-target="#persona-b-fsar-lead-author">Persona B — FSAR Lead Author</a></li>
+  <li><a href="#persona-c-reviewer-stock-assessment-biologist" id="toc-persona-c-reviewer-stock-assessment-biologist" class="nav-link" data-scroll-target="#persona-c-reviewer-stock-assessment-biologist">Persona C — Reviewer / Stock Assessment Biologist</a></li>
+  <li><a href="#persona-d-data-steward-fsar-analyst-co-author" id="toc-persona-d-data-steward-fsar-analyst-co-author" class="nav-link" data-scroll-target="#persona-d-data-steward-fsar-analyst-co-author">Persona D — Data Steward / FSAR Analyst Co-author</a></li>
+  </ul></li>
+  <li><a href="#b-user-stories-acceptance-criteria-reflect-real-fsar-concerns" id="toc-b-user-stories-acceptance-criteria-reflect-real-fsar-concerns" class="nav-link" data-scroll-target="#b-user-stories-acceptance-criteria-reflect-real-fsar-concerns">1b) User Stories &amp; Acceptance Criteria (Reflect Real FSAR Concerns)</a>
+  <ul class="collapse">
+  <li><a href="#benchmark-transparency-core" id="toc-benchmark-transparency-core" class="nav-link" data-scroll-target="#benchmark-transparency-core">Benchmark Transparency (Core)</a></li>
+  <li><a href="#data-gaps-proxies-cu-accounting" id="toc-data-gaps-proxies-cu-accounting" class="nav-link" data-scroll-target="#data-gaps-proxies-cu-accounting">Data Gaps &amp; Proxies (CU Accounting)</a></li>
+  <li><a href="#mixed-stock-risk-gsi" id="toc-mixed-stock-risk-gsi" class="nav-link" data-scroll-target="#mixed-stock-risk-gsi">Mixed-Stock Risk (GSI)</a></li>
+  <li><a href="#uncertainty-handling" id="toc-uncertainty-handling" class="nav-link" data-scroll-target="#uncertainty-handling">Uncertainty Handling</a></li>
+  <li><a href="#policy-gates-legal-readiness" id="toc-policy-gates-legal-readiness" class="nav-link" data-scroll-target="#policy-gates-legal-readiness">Policy Gates &amp; Legal Readiness</a></li>
+  </ul></li>
+  <li><a href="#uiux-inspiration" id="toc-uiux-inspiration" class="nav-link" data-scroll-target="#uiux-inspiration">2) UI/UX Inspiration</a>
+  <ul class="collapse">
+  <li><a href="#visual-flow" id="toc-visual-flow" class="nav-link" data-scroll-target="#visual-flow">2.1 Visual Flow</a></li>
+  <li><a href="#purpose-of-ui-elements" id="toc-purpose-of-ui-elements" class="nav-link" data-scroll-target="#purpose-of-ui-elements">2.2 Purpose of UI Elements</a></li>
+  <li><a href="#metadata-intake-data-steward-mode" id="toc-metadata-intake-data-steward-mode" class="nav-link" data-scroll-target="#metadata-intake-data-steward-mode">2.4 Metadata Intake (Data Steward Mode)</a></li>
+  </ul></li>
+  <li><a href="#c-usability-data-input-workflow-reduce-friction-increase-trust" id="toc-c-usability-data-input-workflow-reduce-friction-increase-trust" class="nav-link" data-scroll-target="#c-usability-data-input-workflow-reduce-friction-increase-trust">2c) Usability &amp; Data Input Workflow (Reduce Friction, Increase Trust)</a>
+  <ul class="collapse">
+  <li><a href="#excel-rshacl-validator-enhancements" id="toc-excel-rshacl-validator-enhancements" class="nav-link" data-scroll-target="#excel-rshacl-validator-enhancements">Excel + R/SHACL Validator Enhancements</a></li>
+  <li><a href="#import-wizard-in-the-web-ui" id="toc-import-wizard-in-the-web-ui" class="nav-link" data-scroll-target="#import-wizard-in-the-web-ui">Import Wizard in the Web UI</a></li>
+  <li><a href="#evidence-drawer-quality-of-life" id="toc-evidence-drawer-quality-of-life" class="nav-link" data-scroll-target="#evidence-drawer-quality-of-life">Evidence Drawer Quality of Life</a></li>
+  <li><a href="#risk-chips-completeness-meter" id="toc-risk-chips-completeness-meter" class="nav-link" data-scroll-target="#risk-chips-completeness-meter">Risk Chips &amp; Completeness Meter</a></li>
+  <li><a href="#controlled-vocab-pickers-suggest-term-flow" id="toc-controlled-vocab-pickers-suggest-term-flow" class="nav-link" data-scroll-target="#controlled-vocab-pickers-suggest-term-flow">Controlled Vocab Pickers + “Suggest Term” Flow</a></li>
+  <li><a href="#iteration-comparison" id="toc-iteration-comparison" class="nav-link" data-scroll-target="#iteration-comparison">Iteration &amp; Comparison</a></li>
+  <li><a href="#accessibility-presentation" id="toc-accessibility-presentation" class="nav-link" data-scroll-target="#accessibility-presentation">Accessibility &amp; Presentation</a></li>
+  <li><a href="#ontology-integration-and-open-questions" id="toc-ontology-integration-and-open-questions" class="nav-link" data-scroll-target="#ontology-integration-and-open-questions">2.3 Ontology Integration and Open Questions</a></li>
+  <li><a href="#f.-wsp-rapid-status-support" id="toc-f.-wsp-rapid-status-support" class="nav-link" data-scroll-target="#f.-wsp-rapid-status-support">2f. WSP Rapid-Status Support</a></li>
+  </ul></li>
+  <li><a href="#d-global-acceptance-criteria" id="toc-d-global-acceptance-criteria" class="nav-link" data-scroll-target="#d-global-acceptance-criteria">2d) Global Acceptance Criteria</a></li>
+  <li><a href="#e-architecture-pattern-spsr-django-integration-updated-2025-01-27" id="toc-e-architecture-pattern-spsr-django-integration-updated-2025-01-27" class="nav-link" data-scroll-target="#e-architecture-pattern-spsr-django-integration-updated-2025-01-27">2e) Architecture Pattern &amp; SPSR (Django) Integration (UPDATED 2025-01-27)</a>
+  <ul class="collapse">
+  <li><a href="#graph-knowledge-service-architecture" id="toc-graph-knowledge-service-architecture" class="nav-link" data-scroll-target="#graph-knowledge-service-architecture">Graph Knowledge Service Architecture</a></li>
+  <li><a href="#updated-integration-pattern" id="toc-updated-integration-pattern" class="nav-link" data-scroll-target="#updated-integration-pattern">Updated Integration Pattern</a></li>
+  <li><a href="#contract-and-integration-points" id="toc-contract-and-integration-points" class="nav-link" data-scroll-target="#contract-and-integration-points">Contract and Integration Points</a></li>
+  <li><a href="#why-this-architecture" id="toc-why-this-architecture" class="nav-link" data-scroll-target="#why-this-architecture">Why This Architecture</a></li>
+  <li><a href="#integration-strategy-revised" id="toc-integration-strategy-revised" class="nav-link" data-scroll-target="#integration-strategy-revised">Integration Strategy (revised)</a></li>
+  <li><a href="#concrete-touchpoints-django" id="toc-concrete-touchpoints-django" class="nav-link" data-scroll-target="#concrete-touchpoints-django">Concrete Touchpoints (Django)</a></li>
+  <li><a href="#libraries-patterns-djangonative" id="toc-libraries-patterns-djangonative" class="nav-link" data-scroll-target="#libraries-patterns-djangonative">Libraries &amp; Patterns (Django‑native)</a></li>
+  <li><a href="#where-badges-drawer-and-drilldowns-live" id="toc-where-badges-drawer-and-drilldowns-live" class="nav-link" data-scroll-target="#where-badges-drawer-and-drilldowns-live">Where Badges, Drawer, and Drill‑downs live</a></li>
+  <li><a href="#migrationscalability-notes" id="toc-migrationscalability-notes" class="nav-link" data-scroll-target="#migrationscalability-notes">Migration/Scalability Notes</a></li>
+  </ul></li>
+  <li><a href="#minimum-viable-product-mvp-definition" id="toc-minimum-viable-product-mvp-definition" class="nav-link" data-scroll-target="#minimum-viable-product-mvp-definition">3) Minimum Viable Product (MVP) Definition</a>
+  <ul class="collapse">
+  <li><a href="#mvp-features-essential-for-initial-release" id="toc-mvp-features-essential-for-initial-release" class="nav-link" data-scroll-target="#mvp-features-essential-for-initial-release">3.1 MVP Features (Essential for Initial Release)</a></li>
+  <li><a href="#future-features-post-mvp" id="toc-future-features-post-mvp" class="nav-link" data-scroll-target="#future-features-post-mvp">3.2 Future Features (Post-MVP)</a></li>
+  </ul></li>
+  <li><a href="#b-output-contract-advice-trace-pack" id="toc-b-output-contract-advice-trace-pack" class="nav-link" data-scroll-target="#b-output-contract-advice-trace-pack">3b) Output Contract (Advice Trace Pack)</a></li>
+  <li><a href="#competency-questions-advice-trace-hierarchical-flow" id="toc-competency-questions-advice-trace-hierarchical-flow" class="nav-link" data-scroll-target="#competency-questions-advice-trace-hierarchical-flow">4) Competency Questions — Advice Trace (Hierarchical Flow)</a></li>
+  <li><a href="#a-research-classifier-integration-competency-questions" id="toc-a-research-classifier-integration-competency-questions" class="nav-link" data-scroll-target="#a-research-classifier-integration-competency-questions">4a) Research Classifier Integration Competency Questions</a>
+  <ul class="collapse">
+  <li><a href="#paper-to-fsar-linking-questions" id="toc-paper-to-fsar-linking-questions" class="nav-link" data-scroll-target="#paper-to-fsar-linking-questions">Paper-to-FSAR Linking Questions</a></li>
+  <li><a href="#sector-and-accountability-questions" id="toc-sector-and-accountability-questions" class="nav-link" data-scroll-target="#sector-and-accountability-questions">Sector and Accountability Questions</a></li>
+  <li><a href="#graph-rag-questions" id="toc-graph-rag-questions" class="nav-link" data-scroll-target="#graph-rag-questions">Graph RAG Questions</a></li>
+  <li><a href="#cu-level-questions" id="toc-cu-level-questions" class="nav-link" data-scroll-target="#cu-level-questions">CU-Level Questions</a></li>
+  <li><a href="#smu-level-questions" id="toc-smu-level-questions" class="nav-link" data-scroll-target="#smu-level-questions">SMU-Level Questions</a></li>
+  <li><a href="#advice-level-questions" id="toc-advice-level-questions" class="nav-link" data-scroll-target="#advice-level-questions">Advice-Level Questions</a></li>
+  <li><a href="#decision-level-questions" id="toc-decision-level-questions" class="nav-link" data-scroll-target="#decision-level-questions">Decision-Level Questions</a></li>
+  <li><a href="#policy-legal-questions" id="toc-policy-legal-questions" class="nav-link" data-scroll-target="#policy-legal-questions">Policy &amp; Legal Questions</a></li>
+  <li><a href="#change-intelligence-questions" id="toc-change-intelligence-questions" class="nav-link" data-scroll-target="#change-intelligence-questions">Change Intelligence Questions</a></li>
+  <li><a href="#cu-accounting-questions" id="toc-cu-accounting-questions" class="nav-link" data-scroll-target="#cu-accounting-questions">CU Accounting Questions</a></li>
+  <li><a href="#benchmark-transparency-questions" id="toc-benchmark-transparency-questions" class="nav-link" data-scroll-target="#benchmark-transparency-questions">Benchmark Transparency Questions</a></li>
+  <li><a href="#cu-proxy-and-risk-questions" id="toc-cu-proxy-and-risk-questions" class="nav-link" data-scroll-target="#cu-proxy-and-risk-questions">CU Proxy and Risk Questions</a></li>
+  <li><a href="#uncertainty-and-quality-questions" id="toc-uncertainty-and-quality-questions" class="nav-link" data-scroll-target="#uncertainty-and-quality-questions">Uncertainty and Quality Questions</a></li>
+  <li><a href="#policy-and-legal-compliance-questions" id="toc-policy-and-legal-compliance-questions" class="nav-link" data-scroll-target="#policy-and-legal-compliance-questions">Policy and Legal Compliance Questions</a></li>
+  <li><a href="#cross-cutting-questions" id="toc-cross-cutting-questions" class="nav-link" data-scroll-target="#cross-cutting-questions">Cross-Cutting Questions</a></li>
+  <li><a href="#wsp-rapid-status-questions" id="toc-wsp-rapid-status-questions" class="nav-link" data-scroll-target="#wsp-rapid-status-questions">WSP Rapid-Status Questions</a></li>
+  </ul></li>
+  <li><a href="#sparql-query-pack-v0.1-backing-the-ui" id="toc-sparql-query-pack-v0.1-backing-the-ui" class="nav-link" data-scroll-target="#sparql-query-pack-v0.1-backing-the-ui">4) SPARQL Query Pack (v0.1) — Backing the UI</a></li>
+  <li><a href="#graph-database-data-ingest-2month-poc" id="toc-graph-database-data-ingest-2month-poc" class="nav-link" data-scroll-target="#graph-database-data-ingest-2month-poc">5) Graph Database &amp; Data Ingest (2‑Month POC)</a></li>
+  <li><a href="#spsr-schema-recommendations-minimal-high-leverage-tweaks" id="toc-spsr-schema-recommendations-minimal-high-leverage-tweaks" class="nav-link" data-scroll-target="#spsr-schema-recommendations-minimal-high-leverage-tweaks">6) SPSR Schema Recommendations (minimal, high-leverage tweaks)</a></li>
+  <li><a href="#tool-stack-standards-recommended" id="toc-tool-stack-standards-recommended" class="nav-link" data-scroll-target="#tool-stack-standards-recommended">7) Tool Stack &amp; Standards (recommended)</a></li>
+  <li><a href="#month-poc-plan-barkley-sockeye" id="toc-month-poc-plan-barkley-sockeye" class="nav-link" data-scroll-target="#month-poc-plan-barkley-sockeye">8) 2‑Month POC Plan — Barkley Sockeye</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/data/ontology/docs/ontology_applications/FSAR_Tracer_PRD_CQs.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/data/ontology/docs/ontology_applications/FSAR_Tracer_PRD_CQs.md" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="advice-trace-demo-ux-interface-spec-fsar-hero" class="level1">
+<h1>Advice Trace Demo — UX &amp; Interface Spec (FSAR Hero)</h1>
+<p><strong>Goal:</strong> For one SMU, show a transparent, reproducible chain: <strong>CU statuses → SMU aggregation → scientific advice → management decision → legal framework</strong>. Optimized for managers (clarity) and analysts (evidence) with progressive disclosure starting from CU-level detail to high-level SMU aggregation and advice flow.</p>
+<hr>
+<section id="personas-stories-acceptance" class="level2">
+<h2 class="anchored" data-anchor-id="personas-stories-acceptance">1) Personas → Stories → Acceptance</h2>
+<section id="persona-a-executives-directors-branch-division-managers" class="level3">
+<h3 class="anchored" data-anchor-id="persona-a-executives-directors-branch-division-managers">Persona A — Executives / Directors / Branch &amp; Division Managers</h3>
+<ul>
+<li><strong>Goal:</strong> Rapid assurance that the <strong>evidence underpinning advice</strong> is defensible, current, and <strong>policy-ready</strong>. Need to answer “Are we policy-ready and defensible today?” and “What changed since the last FSAR?”</li>
+<li><strong>Stories:</strong> Select <strong>SMU + Year</strong> → see <strong>Policy &amp; Legal Readiness</strong> panel with hard gates; <strong>Evidence Completeness</strong> gauge; <strong>Delta since last FSAR</strong> summary; <strong>download Advice Trace Pack</strong> for briefing/audit.</li>
+<li><strong>KPI Widgets:</strong> Coverage (% SMUs with current FSAR), WSP status zone distribution, below-LRP triggers, evidence completeness (Complete / Gaps / Missing-Critical), timeliness (last update date)</li>
+<li><strong>Acceptance:</strong> <strong>Policy &amp; Legal Readiness</strong> panel (hard gate on “Ready”):
+<ul>
+<li>WSP status zone for the SMU (with explicit mapping to LRP/USR and how assessed this cycle)</li>
+<li>Precautionary Approach compliance: harvest control rule named + parameterized, with source &amp; version</li>
+<li>Fisheries Act Fish Stocks provisions: below-LRP indicator (Yes/No), if Yes → Rebuilding Plan link + plan version/date</li>
+<li><strong>Evidence Completeness</strong> reports <em>Ready</em> when all required evidence + policy gates pass; <em>Partial</em> when optional items missing; <em>Blocked</em> when required items missing</li>
+<li><strong>Delta since last FSAR</strong> (mandatory in Advice Trace Pack and on screen): Changed benchmarks, methods/code versions, data additions/removals, status zone, advice/rationale</li>
+<li><strong>Export</strong> downloads the pack with structured deltas vs.&nbsp;previous FSAR</li>
+<li><strong>AC:</strong> Exec sees a red “Policy trigger” chip whenever an SMU is below LRP and a Rebuilding Plan link is present</li>
+</ul></li>
+</ul>
+</section>
+<section id="persona-b-fsar-lead-author" class="level3">
+<h3 class="anchored" data-anchor-id="persona-b-fsar-lead-author">Persona B — FSAR Lead Author</h3>
+<ul>
+<li><strong>Goal:</strong> Ensure narrative coherence, benchmark justification, proxy rationale, and reviewer response integration for submission-ready FSARs.</li>
+<li><strong>Responsibilities:</strong> Narrative coherence, benchmark justification, proxy rationale, reviewer response integration</li>
+<li><strong>Stories:</strong> Generate submission-ready trace packs with benchmarks, uncertainty notes, proxy decisions, and methods provenance; integrate reviewer feedback; ensure policy compliance.</li>
+<li><strong>Acceptance:</strong> <strong>AC:</strong> Lead Author can generate a “submission-ready” trace pack with benchmarks, uncertainty notes, proxy decisions, and methods provenance in ≤2 clicks.</li>
+</ul>
+</section>
+<section id="persona-c-reviewer-stock-assessment-biologist" class="level3">
+<h3 class="anchored" data-anchor-id="persona-c-reviewer-stock-assessment-biologist">Persona C — Reviewer / Stock Assessment Biologist</h3>
+<ul>
+<li><strong>Goal:</strong> Verify methods, benchmarks, reproducibility; confirm uncertainty handling and scientific rigor.</li>
+<li><strong>Stories:</strong> Open <strong>Method</strong> → view parameters for both analytical and field methods (including field method downgrade criteria and Estimate Type Classification for specific SENs) + <strong>exact code commit/tag/or dataset DOI</strong>; inspect <strong>Benchmarks</strong> as first-class entities with derivation evidence; toggle <strong>Uncertainty overlay</strong> to confirm GSI/CI presence and propagation; review <strong>CU inclusion/exclusion</strong> transparency.</li>
+<li><strong>One-click panels for:</strong> benchmark derivation (type, value, method, sensitivity flags), uncertainty treatment (CIs/probabilities), GSI usage (used?, n, misassignment/CI), and downgrade criteria used</li>
+<li><strong>Acceptance:</strong> <strong>Method</strong> shows name/protocol/version/parameters + link to exact commit/tag/DOI used by figures/status. <strong>Benchmarks</strong> as explicit entities (dfo:LowerBenchmark, dfo:UpperBenchmark, dfo:TargetReference) with:
+<ul>
+<li>Derivation method, input dataset(s), time window, uncertainty method, and version/date</li>
+<li>Back-calculable query (stored SPARQL and/or R script call) to regenerate the estimate</li>
+<li><strong>Reference Points</strong> include type/value/derivation + benchmark method; sensitivity flagged</li>
+<li><strong>Uncertainty overlay</strong> badges missing <strong>GSI</strong>, <strong>sample sizes</strong>, or <strong>status CIs</strong>; click reveals missing fields</li>
+<li><strong>CU Accounting</strong>: CU list for the SMU explicitly lists included, excluded, and proxied CUs with machine-readable justification; GSI usage (Yes/No), sample sizes, and assignment uncertainty</li>
+<li><strong>Downgrade Criteria</strong>: Display downgrade criteria (from SKOS scheme) and make violations/assumptions visible</li>
+<li><strong>AC:</strong> Reviewer can verify benchmark method &amp; code version; GSI sample size &amp; uncertainty are visible where relevant</li>
+</ul></li>
+</ul>
+</section>
+<section id="persona-d-data-steward-fsar-analyst-co-author" class="level3">
+<h3 class="anchored" data-anchor-id="persona-d-data-steward-fsar-analyst-co-author">Persona D — Data Steward / FSAR Analyst Co-author</h3>
+<ul>
+<li><strong>Goal:</strong> Ensure data standards are met (terms, provenance, data quality, uncertainty); fail fast; identify missing metadata or poor data stewardship practices to help support FSAR authors meet best practices. Ship FSARs quickly. Upload draft data to check for compliance, completeness etc.</li>
+<li><strong>Stories:</strong>
+<ul>
+<li>Start a new submission via a <strong>Metadata Intake wizard</strong>: select SMU + Year, fill required metadata using <strong>controlled‑vocab dropdowns</strong> sourced from SKOS, attach Excel/CSV.</li>
+<li>Click <strong>Validate</strong> to run SHACL + R validator; see inline errors (row/column, severity, code, fix‑hint); correct and re‑validate until state = <strong>Ready</strong>.</li>
+<li>Save/resume drafts; download a tailored <strong>Excel template</strong> for the selected scope (Population, CU, SMU, Indicator Stock, PFMA) pre‑filled with valid enumerations.</li>
+<li>Open <strong>Evidence Drawer</strong> for provenance minimum and submission audit (who/when, validator versions).</li>
+</ul></li>
+<li><strong>Acceptance:</strong>
+<ul>
+<li><strong>Validator gating:</strong> “Ready” is blocked unless all required metadata are present: method registry term + version, benchmark derivation record, data coverage window, unit + scale, provenance (PROV-O), and person‑time stamps (who/when).</li>
+<li><strong>Error contract:</strong> Validation returns structured errors with severity (critical/optional), row/column/file, error code, message, and fix‑hint; non‑zero on critical errors; zero only when Ready.</li>
+<li><strong>Controlled‑vocab</strong> enforcement for <code>spawner_origin</code>, <code>data_source_type</code>, <code>reference_point_type</code>, <code>downgrade_criterion</code> via SKOS schemes in <code>graph:vocab</code>; off‑list values rejected with friendly messages.</li>
+<li><strong>Provenance minimum</strong> is visible at the top of the submission and in the Evidence Drawer: <code>data_source</code>, <code>method</code>, <code>code_version/hash</code>, <code>reviewer</code>, <code>date</code>.</li>
+<li><strong>Schema alignment</strong>: SPSR fields align with validator and FSAR reporting (explicit LRP/USR/TR records, status decision + rationale, CI fields).</li>
+<li><strong>Submission lifecycle:</strong> Draft → Validated → Ready → Ingested, with audit events (who/when/tool versions). Human review and approval required before ingestion.</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="b-user-stories-acceptance-criteria-reflect-real-fsar-concerns" class="level2">
+<h2 class="anchored" data-anchor-id="b-user-stories-acceptance-criteria-reflect-real-fsar-concerns">1b) User Stories &amp; Acceptance Criteria (Reflect Real FSAR Concerns)</h2>
+<section id="benchmark-transparency-core" class="level3">
+<h3 class="anchored" data-anchor-id="benchmark-transparency-core">Benchmark Transparency (Core)</h3>
+<p><strong>Story:</strong> As a Reviewer, I need to verify that all reference points have transparent derivation methods and sensitivity flags.</p>
+<p><strong>Acceptance Criteria:</strong> - Add controlled vocab for <code>reference_point_type</code> (e.g., LRP/USR/Sgen/Smsy) and <code>benchmark_method</code> - <strong>AC:</strong> Benchmarks must display type, value, method, sensitivity flags, and link to method/code provenance</p>
+</section>
+<section id="data-gaps-proxies-cu-accounting" class="level3">
+<h3 class="anchored" data-anchor-id="data-gaps-proxies-cu-accounting">Data Gaps &amp; Proxies (CU Accounting)</h3>
+<p><strong>Story:</strong> As a Lead Author, I need to document CU inclusion decisions and proxy justifications with reviewer sign-off.</p>
+<p><strong>Acceptance Criteria:</strong> - Add a CU inclusion/proxy table with fields: <code>decision</code> (included/excluded/proxied), <code>justification</code>, <code>reviewer</code>, <code>review_date</code> - <strong>AC:</strong> Any CU ≠ “included” requires justification + reviewer sign-off or it fails validation (flagged Missing-Critical)</p>
+</section>
+<section id="mixed-stock-risk-gsi" class="level3">
+<h3 class="anchored" data-anchor-id="mixed-stock-risk-gsi">Mixed-Stock Risk (GSI)</h3>
+<p><strong>Story:</strong> As a Reviewer, I need to assess GSI usage and assignment uncertainty for mixed-stock fisheries.</p>
+<p><strong>Acceptance Criteria:</strong> - Add fields: <code>gsiUsed</code> (bool), <code>gsiSampleSize</code> (int), <code>gsiAssignmentUncertainty</code> (text/CI or % misID), <code>baseline_reference</code> - <strong>AC:</strong> If stock is mixed-fishery AND <code>gsiUsed</code> = false → show risk chip (“No GSI apportionment”) and require rationale</p>
+</section>
+<section id="uncertainty-handling" class="level3">
+<h3 class="anchored" data-anchor-id="uncertainty-handling">Uncertainty Handling</h3>
+<p><strong>Story:</strong> As a Reviewer, I need to verify that key estimates include confidence intervals or documented rationale for absence.</p>
+<p><strong>Acceptance Criteria:</strong> - Add <code>status_confidence</code> (probabilities/CI) and <code>downgradeReason</code> (controlled list) for quality-downgraded inputs - <strong>AC:</strong> Key estimates must include CI or flagged rationale for absence; status shows P(Green/Amber/Red) or a CI note</p>
+</section>
+<section id="policy-gates-legal-readiness" class="level3">
+<h3 class="anchored" data-anchor-id="policy-gates-legal-readiness">Policy Gates &amp; Legal Readiness</h3>
+<p><strong>Story:</strong> As an Executive, I need to ensure compliance with Fisheries Act Fish Stocks provisions and rebuilding requirements.</p>
+<p><strong>Acceptance Criteria:</strong> - Add explicit checks: <code>belowLRP</code> (bool), <code>RebuildingPlanURL</code>, <code>hcrIdentifier</code>/<code>hcrParameters</code> - <strong>AC:</strong> <code>belowLRP</code> = true requires a valid Rebuilding Plan link or shows Missing-Critical</p>
+</section>
+</section>
+<section id="uiux-inspiration" class="level2">
+<h2 class="anchored" data-anchor-id="uiux-inspiration">2) UI/UX Inspiration</h2>
+<p><strong>Single page</strong> flow focused on clarity and drill‑downs. The page is split into a left <strong>Advice Trace</strong> and a right <strong>Evidence Drawer</strong>.</p>
+<section id="visual-flow" class="level3">
+<h3 class="anchored" data-anchor-id="visual-flow">2.1 Visual Flow</h3>
+<ul>
+<li><p><strong>Header bar:</strong> SMU + Year picker (Barkley Sockeye • 2025), Export.</p></li>
+<li><p><strong>Advice Trace Flow (hierarchical multi-branch tree, left-to-right with progressive disclosure):</strong></p>
+<p><strong>Level 0 (Initial View):</strong></p>
+<pre><code>[CU₁] ┐
+[CU₂] ├─→ [SMU] → [Advice]
+[CU₃] ┘</code></pre>
+<ul>
+<li><strong>CU nodes</strong>: Each shows CU name, status zone (color-coded: Red/Amber/Green), Evidence badge</li>
+<li><strong>SMU node</strong>: Shows SMU name, year, aggregated status zone (color-coded: Red/Amber/Green), Evidence badge</li>
+<li><strong>Advice node</strong>: Shows FSAR title, year, Evidence badge, Documents quick links (FSAR/Research/Tech Report)</li>
+</ul>
+<p><strong>Level 1 (Click SMU - Reveals SMU Details):</strong></p>
+<pre><code>[CU₁] ┐
+[CU₂] ├─→ [SMU + Methods/Benchmarks] → [Advice]
+[CU₃] ┘</code></pre>
+<ul>
+<li><strong>SMU expanded</strong>: Shows aggregation methods, LRP calculation, USR, status derivation</li>
+<li><strong>Status color rule</strong>: SMU color = worst-case of CU colors (any Red → Red; else any Amber → Amber; else Green)</li>
+</ul>
+<p><strong>Level 2 (Click CU - Reveals CU Details):</strong></p>
+<pre><code>[CU₁ + Data/Methods/Benchmarks] → [SMU] → [Advice]</code></pre>
+<ul>
+<li><strong>CU expanded</strong>: Shows:
+<ul>
+<li>Data sources (escapement measurements, GSI, proxies with justifications)</li>
+<li>Methods (enumeration methods, estimate methods, code commits/DOIs)</li>
+<li>Benchmarks (Lower Benchmark, Upper Benchmark with derivation methods)</li>
+<li>Quality indicators (estimate type, downgrade criteria, uncertainty measures)</li>
+</ul></li>
+</ul>
+<p><strong>Level 2 (Click Advice - Reveals Documents and Decisions):</strong></p>
+<pre><code>[CU₁] ┐
+[CU₂] ├─→ [SMU] → [Advice + FSAR/Research Docs] → [Management Decision] → [Legal Framework]
+[CU₃] ┘</code></pre>
+<ul>
+<li><strong>Advice expanded</strong>: Shows:
+<ul>
+<li>Documents quick links (FSAR/Research/Tech Report buttons)</li>
+<li>FSAR document (title, doc number, year, DOI, download link)</li>
+<li>Research Documents (precursors, with titles, doc numbers, DOIs)</li>
+<li>Technical Reports</li>
+<li>Advice text, reviewer, review date, version</li>
+<li><strong>Management Decision sub-node</strong>: Shows decision type, date, decision maker (branch or division), rationale, supporting advice</li>
+<li><strong>Legal Framework sub-node</strong>: Shows framework name, relevant sections, requirements, compliance status</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Evidence Drawer (right slide‑over):</strong> Tabs <strong>Data • Methods • Benchmarks • Uncertainty • Policy/Legal • Changes</strong>. Always shows <strong>provenance minimum</strong> (source, method, code commit, reviewer/date) at the top.</p>
+<ul>
+<li><strong>Data tab:</strong> Input datasets, data sources, coverage windows, units/scales, QC status</li>
+<li><strong>Methods tab:</strong> Method registry terms, versions, parameters, code commits/DOIs, reproducibility links</li>
+<li><strong>Benchmarks tab:</strong> LRP/USR/TR entities with derivation evidence, uncertainty methods, regeneration queries</li>
+<li><strong>Uncertainty tab:</strong> Status intervals, GSI sample sizes, assignment uncertainty, downgrade criteria</li>
+<li><strong>Policy/Legal tab:</strong> WSP zone mapping, HCR parameters, Fisheries Act triggers, rebuilding plan links</li>
+<li><strong>Changes tab:</strong> Delta vs.&nbsp;last FSAR (data, methods, benchmarks, status, advice, rationale)</li>
+<li><strong>Documents tab:</strong> Lists linked artifacts with icon, title, doc number, year, size; actions: <strong>Open</strong>, <strong>Download</strong>, <strong>Copy citation</strong>.</li>
+</ul></li>
+<li><p><strong>Top ribbon:</strong> Readiness pill (Ready / Partial / Blocked) + “Why not Ready?” popover with specific missing items</p></li>
+<li><p><strong>Always show:</strong> Last FSAR vs This Cycle mini-diff</p></li>
+<li><p><strong>Export button:</strong> Packages the <strong>Advice Trace Pack</strong> (versioned JSON-LD bundle with structured deltas vs.&nbsp;previous FSAR, figures, summary pdf of advice trace node metadata). Includes a <strong>/docs/</strong> subfolder with cached PDFs if allowed and an optional /data/ folder if toggled.</p></li>
+</ul>
+<p>This will be an interactive hierarchical tree style graph with progressive disclosure. The initial view shows all CUs for the selected SMU flowing to the SMU and then to Advice, with Management Decision and Legal Framework appearing as sub-nodes when Advice is expanded. Clicking any node reveals additional nodes and specific details in the Evidence Drawer. We need rich relationships (e.g., multiple datasets feeding multiple methods) and should use a <strong>node‑link view</strong> with a toggle for specific profiles for Biologist/Scientist, Data Steward/Custodian, and Executive/Director which shows different levels of details depending on their persona. Use Cytoscape.js or D3 or other custom javascript as needed.</p>
+</section>
+<section id="purpose-of-ui-elements" class="level3">
+<h3 class="anchored" data-anchor-id="purpose-of-ui-elements">2.2 Purpose of UI Elements</h3>
+<ul>
+<li><strong>Evidence badges:</strong> Summarize <strong>evidence presence/quality</strong> for the decision context at each node:<br>
+<strong>Complete</strong> = all required evidence present; <strong>Gaps</strong> = optional elements missing; <strong>Missing‑Critical</strong> = required evidence missing. These roll up SHACL/validator results and CQ checks. <em>(Does not imply review approval.)</em></li>
+<li><strong>Risk chips:</strong> Compact flags tied to specific CQs (e.g., <em>proxy justification missing</em>, <em>no status CI</em>). Clicking a chip focuses the Drawer on the missing field(s).</li>
+<li><strong>Evidence Drawer:</strong> The audit lens—shows the <em>who/what/when/how</em> for the selected node: datasets, parameters, reference‑point derivations, code commit, reviewer/date, and links to figures or repos.</li>
+<li><strong>Documents:</strong> Surface authoritative downloads (FSAR, Technical Reports, Research Documents). Each item shows <strong>doc type</strong>, <strong>title</strong>, <strong>doc number/identifier</strong>, <strong>issued date</strong>, <strong>version</strong>, <strong>size</strong>, and a <strong>canonical URL/DOI</strong>; if internal, use a <strong>pre‑signed URL</strong>. A small badge indicates <strong>Public</strong> or <strong>Internal</strong>.</li>
+<li><strong>Currency tab:</strong> Shows last‑updated and version pins per component; highlights stale items with thresholds (e.g., &gt;12 months).</li>
+<li><strong>Drill‑down:</strong> From Drawer items (e.g., a dataset row, code commit, or document), jump to the source in SPSR (record view), GRD (run/sample), CSAS/DFO publications page, or GitHub (exact commit/tag) or Zenodo Release. Breadcrumbs let you pop back to the node.</li>
+</ul>
+</section>
+<section id="metadata-intake-data-steward-mode" class="level3">
+<h3 class="anchored" data-anchor-id="metadata-intake-data-steward-mode">2.4 Metadata Intake (Data Steward Mode)</h3>
+<ul>
+<li><strong>Header (Intake mode):</strong> “Start New Submission” with SMU + Year selectors.</li>
+<li><strong>Step 1 — Metadata form:</strong> Controlled‑vocab dropdowns for <code>spawner_origin</code>, <code>data_source_type</code>, <code>reference_point_type</code>, <code>downgrade_criterion</code> (SKOS in <code>graph:vocab</code>); provenance minimum fields pinned.</li>
+<li><strong>Step 2 — Attach files:</strong> Upload <code>.xlsx</code> (current accepted format). Parse Metadata tab first; show a preview of parsed metadata fields.</li>
+<li><strong>Step 3 — Validate:</strong> Run SHACL + R validator; render inline errors (severity, row/col, code, fix‑hint). Provide “Re‑run validation” and “Download error report”.</li>
+<li><strong>Step 4 — Ready &amp; Submit:</strong> When no critical errors remain, mark <strong>Ready</strong>. Submissions require human review/approval before ingest to SPSR.</li>
+<li><strong>Utilities:</strong> “Download tailored template” endpoint pre‑seeds enumerations and column headers by scope (Population, CU, SMU, Indicator Stock, PFMA); “Save draft” persists current progress.</li>
+</ul>
+</section>
+</section>
+<section id="c-usability-data-input-workflow-reduce-friction-increase-trust" class="level2">
+<h2 class="anchored" data-anchor-id="c-usability-data-input-workflow-reduce-friction-increase-trust">2c) Usability &amp; Data Input Workflow (Reduce Friction, Increase Trust)</h2>
+<section id="excel-rshacl-validator-enhancements" class="level3">
+<h3 class="anchored" data-anchor-id="excel-rshacl-validator-enhancements">Excel + R/SHACL Validator Enhancements</h3>
+<p><strong>Story:</strong> As a Data Steward, I need targeted error reporting with fix-hints to resolve validation issues efficiently.</p>
+<p><strong>Acceptance Criteria:</strong> - Add row/column targeted errors with fix-hints, and mark error severity (Critical/High/Info) - Provide template tabs for read-only vocab sheets (RP types, methods, status zones) powering data validation dropdowns - <strong>AC:</strong> Authors resolve all Critical errors locally; validator returns 0 Critical before upload is permitted</p>
+</section>
+<section id="import-wizard-in-the-web-ui" class="level3">
+<h3 class="anchored" data-anchor-id="import-wizard-in-the-web-ui">Import Wizard in the Web UI</h3>
+<p><strong>Story:</strong> As a Data Steward, I need guided upload with preview and validation feedback to ensure data quality.</p>
+<p><strong>Acceptance Criteria:</strong> - Add guided upload: preview parsed rows, validation report inline, diff vs last submission, idempotent re-upload - <strong>AC:</strong> Users can correct flagged fields in-app or re-upload; system preserves stable IDs for re-uploads</p>
+</section>
+<section id="evidence-drawer-quality-of-life" class="level3">
+<h3 class="anchored" data-anchor-id="evidence-drawer-quality-of-life">Evidence Drawer Quality of Life</h3>
+<p><strong>Story:</strong> As a Reviewer, I need quick access to all evidence links and citation information.</p>
+<p><strong>Acceptance Criteria:</strong> - Add quick links to dataset DOI, code commit/DOI, method concept; copy citation button; peek of data dictionary fields - <strong>AC:</strong> From any status tile, user can open drawer and reach all evidence links ≤2 clicks</p>
+</section>
+<section id="risk-chips-completeness-meter" class="level3">
+<h3 class="anchored" data-anchor-id="risk-chips-completeness-meter">Risk Chips &amp; Completeness Meter</h3>
+<p><strong>Story:</strong> As an Executive, I need visual indicators of coverage and completeness at a glance.</p>
+<p><strong>Acceptance Criteria:</strong> - Add filterable risk chips (e.g., Missing CI, No GSI, Proxy w/o review, Below LRP w/o plan) - Add Evidence Completeness gauge per SMU (Complete / Gaps / Missing-Critical) and section-level mini-gauges - <strong>AC:</strong> Executive sees coverage and completeness at a glance; Reviewer filters by risk type to accelerate audits</p>
+</section>
+<section id="controlled-vocab-pickers-suggest-term-flow" class="level3">
+<h3 class="anchored" data-anchor-id="controlled-vocab-pickers-suggest-term-flow">Controlled Vocab Pickers + “Suggest Term” Flow</h3>
+<p><strong>Story:</strong> As a Data Steward, I need flexible vocab management that doesn’t block workflow when new terms are needed.</p>
+<p><strong>Acceptance Criteria:</strong> - Add inline pickers for methods/benchmarks; Suggest a new term creates a temporary local mapping and queues curation - <strong>AC:</strong> Off-list entries can’t block; they’re tracked and reconciled later (with audit trail)</p>
+</section>
+<section id="iteration-comparison" class="level3">
+<h3 class="anchored" data-anchor-id="iteration-comparison">Iteration &amp; Comparison</h3>
+<p><strong>Story:</strong> As a Lead Author, I need to track changes between cycles and generate comparison reports.</p>
+<p><strong>Acceptance Criteria:</strong> - Add change-log auto-generation (data/method/benchmark/status/advice) + cycle diff view - <strong>AC:</strong> Lead Author can export a Change Summary page between cycles</p>
+</section>
+<section id="accessibility-presentation" class="level3">
+<h3 class="anchored" data-anchor-id="accessibility-presentation">Accessibility &amp; Presentation</h3>
+<p><strong>Story:</strong> As a user with accessibility needs, I need the interface to be usable with assistive technologies and printable.</p>
+<p><strong>Acceptance Criteria:</strong> - Add color-blind-safe status palette, keyboard navigation, structured headings, printable Advice Trace Pack - <strong>AC:</strong> Trace Pack includes figures + evidence appendix with live links</p>
+</section>
+<section id="ontology-integration-and-open-questions" class="level3">
+<h3 class="anchored" data-anchor-id="ontology-integration-and-open-questions">2.3 Ontology Integration and Open Questions</h3>
+<p><strong>Data Product Ontology Integration:</strong></p>
+<ul>
+<li><strong>Question:</strong> How should we integrate the <a href="https://ekgf.github.io/dprod/">Data Product Ontology (DPROD)</a> to handle dataset management instead of using generic <code>Dataset</code> classes?</li>
+<li><strong>Investigation needed:</strong> Map existing DFO Salmon Ontology classes to DPROD’s <code>DataProduct</code>, <code>DataService</code>, <code>Distribution</code>, and <code>Dataset</code> classes for standardized data product representation.</li>
+</ul>
+<p><strong>Core Entity Questions (Requiring Investigation):</strong></p>
+<ul>
+<li><strong>Data Products:</strong> How should we model data products using DPROD vs.&nbsp;existing <code>dfo:EscapementMeasurement</code> hierarchy?</li>
+<li><strong>Analysis Processes:</strong> Should we replace <code>dfo:GSIRun</code> with <code>dfo:AnalysisRun</code> to better represent genetic analysis processes?</li>
+<li><strong>Scientific Outputs:</strong> What is the most appropriate term for scientific advice/recommendations? (Investigate DFO CSAS terminology)</li>
+<li><strong>Decision Support:</strong> Is <code>DecisionContext</code> the right term, or would <code>Decision</code> be sufficient for management decision support?</li>
+<li><strong>SIL/SEN Integration:</strong> How should we align with Minh Doan’s PR for Stream Inspection Logs (SIL) and Escapement Narratives (SEN) terms?</li>
+</ul>
+<p><strong>Relations (PROV‑O flavored):</strong> <code>StatusAssessment used DataProduct/ReferencePoint</code>, <code>StatusAssessment wasGeneratedBy Method</code>, <code>ScientificOutput wasDerivedFrom StatusAssessment</code>, <code>ScientificOutput supports Decision</code>, <code>Figure wasDerivedFrom {DataProduct,Method}</code>.</p>
+<p><strong>WSP Rapid-Status Support:</strong></p>
+<p>The ontology now supports WSP rapid-status assessments via <code>fsar:WSPMetric</code>, <code>fsar:MetricBenchmark</code>, and <code>fsar:AlgorithmThreshold</code> classes. The <code>dfo:StockAssessment</code> class links to WSP metrics via <code>fsar:assessesMetric</code>, and produces rapid statuses via <code>fsar:producesRapidStatus</code> with confidence categories via <code>fsar:hasConfidence</code>. Decision requirement patterns from v3 (e.g., <code>fsar:RebuildingPlanRequirement</code>) work with WSP trigger conditions linking metric positions to policy obligations.</p>
+<hr>
+</section>
+<section id="f.-wsp-rapid-status-support" class="level3">
+<h3 class="anchored" data-anchor-id="f.-wsp-rapid-status-support">2f. WSP Rapid-Status Support</h3>
+<p>The FSAR Tracer now supports WSP rapid-status assessments through integration with the Learning Tree 3 decision-tree algorithm. This support enables tracking of the four standard WSP metrics, their benchmarks and algorithm thresholds, rapid status assignments, and confidence categories.</p>
+<p><strong>Four Standard WSP Metrics:</strong></p>
+<ol type="1">
+<li><strong>Absolute Abundance</strong>: Compares generational average spawner abundance to COSEWIC criterion D1 thresholds. Lower benchmark: 1,000 spawners; Upper benchmark: 10,000 spawners.</li>
+<li><strong>Relative Abundance</strong>: Compares generational average spawner abundance to CU-specific benchmarks (typically Sgen lower, 80% SMSY upper, or habitat capacity-based).</li>
+<li><strong>Long-Term Trend</strong>: Compares current generational average to long-term average spawner abundance. Lower benchmark: 50% of long-term average; Upper benchmark: 75% of long-term average.</li>
+<li><strong>Percent Change</strong>: Quantifies linear change in spawner abundance over the most recent three generations. Lower benchmark: -25%; Upper benchmark: -15%.</li>
+</ol>
+<p><strong>Learning Tree 3 Decision-Tree Integration:</strong></p>
+<p>The Learning Tree 3 algorithm assigns rapid statuses (Red, Amber, Green) based on metric values and availability. The algorithm uses threshold values that differ from metric benchmarks by design, incorporating buffers and precautionary adjustments based on expert processes and CART analyses.</p>
+<p><strong>Metric Benchmarks vs.&nbsp;Algorithm Thresholds:</strong></p>
+<p>Algorithm thresholds intentionally diverge from benchmarks in several places:</p>
+<ul>
+<li><strong>Absolute Abundance</strong>: Benchmark lower threshold is 1,000 spawners (COSEWIC criterion D1), but Learning Tree 3 algorithm uses 1,500 (benchmark plus 500 buffer) to account for uncertainty and how experts treated individual years in generational averages.</li>
+<li><strong>Relative Abundance</strong>: Upper benchmark threshold in Learning Tree 3 equals the WSP upper benchmark plus 10% buffer to account for how this metric was treated in WSP integrated status processes.</li>
+<li><strong>Long-Term Trend</strong>: Benchmark thresholds are 50% (lower) and 75% (upper), but Learning Tree 3 uses 79% (lower) and 233% (upper). These thresholds emerged from CART analyses and are applied conditionally with other metrics.</li>
+<li><strong>Percent Change</strong>: Benchmark lower threshold is -25%, but Learning Tree 3 uses -70% (emerged from CART analyses). This threshold is only applied conditionally when long-term trend &gt;= 79% and absolute abundance &gt;= 10,000.</li>
+</ul>
+<p><strong>Confidence Category Output:</strong></p>
+<p>Each rapid status assessment includes a confidence category (High, Medium, or Low):</p>
+<ul>
+<li><strong>High confidence</strong>: Status assigned using absolute abundance or relative abundance metrics (both requiring higher quality data and benchmarks).</li>
+<li><strong>Medium confidence</strong>: Status based on long-term trend metrics with some abundance information available.</li>
+<li><strong>Low confidence</strong>: Status based on trend metrics alone without abundance benchmarks.</li>
+</ul>
+<p>These confidence ratings are derived from the algorithm branch (node) that determines the status, based on metric availability and data types used.</p>
+<p><strong>Decision Requirements:</strong></p>
+<p>WSP metric positions trigger decision requirements through <code>fsar:Condition</code> patterns that link to <code>fsar:DecisionRequirement</code> classes. For example, when rapid status is Red (below LRP), this triggers rebuilding plan requirements mandated by the Fisheries Act Fish Stocks Provisions.</p>
+<hr>
+</section>
+</section>
+<section id="d-global-acceptance-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="d-global-acceptance-criteria">2d) Global Acceptance Criteria</h2>
+<p><strong>A1. Benchmarks:</strong> Each SMU year must include at least one LRP and one USR entity with derivation metadata (method, inputs, time window), version/DOI or commit, and an executable regeneration link (stored query or code pointer). Benchmarks must display type, value, method, sensitivity flags, and link to method/code provenance.</p>
+<p><strong>A2. Uncertainty:</strong> Status decision must include interval or categorical uncertainty; where estimates are downgraded, the downgrade criterion (from SKOS scheme) is recorded and shown. Key estimates must include CI or flagged rationale for absence; status shows P(Green/Amber/Red) or a CI note.</p>
+<p><strong>A3. Policy &amp; Legal Readiness:</strong> “Ready” requires: WSP zone computed and justified; named Harvest Control Rule with parameters and version; Fisheries Act Fish Stocks check (below-LRP flag) and, if true, link to Rebuilding Plan. <code>belowLRP</code> = true requires a valid Rebuilding Plan link or shows Missing-Critical.</p>
+<p><strong>A4. Change Log:</strong> Advice Trace Pack must include structured deltas vs.&nbsp;previous FSAR: data, methods, benchmarks, status, advice, rationale. Lead Author can export a Change Summary page between cycles.</p>
+<p><strong>A5. CU Accounting:</strong> CU list for the SMU must explicitly list included, excluded, and proxied CUs with machine-readable justification; GSI usage (Yes/No), sample sizes, and assignment uncertainty. Any CU ≠ “included” requires justification + reviewer sign-off or it fails validation (flagged Missing-Critical).</p>
+<p><strong>A6. Intake &amp; Validation:</strong> Controlled‑vocab fields are enforced via SKOS; SHACL + R validator must pass all critical checks before a submission becomes “Ready”. Validation returns structured errors (severity, row/col, code, fix‑hint). Submission lifecycle is Draft → Validated → Ready → Ingested, with audit events and human approval before ingestion. Authors resolve all Critical errors locally; validator returns 0 Critical before upload is permitted.</p>
+<p><strong>A7. GSI Risk Assessment:</strong> If stock is mixed-fishery AND <code>gsiUsed</code> = false → show risk chip (“No GSI apportionment”) and require rationale. GSI usage fields must include <code>gsiUsed</code> (bool), <code>gsiSampleSize</code> (int), <code>gsiAssignmentUncertainty</code> (text/CI or % misID), <code>baseline_reference</code>.</p>
+<p><strong>A8. Executive KPIs:</strong> Exec sees coverage and completeness at a glance; Reviewer filters by risk type to accelerate audits. Exec sees a red “Policy trigger” chip whenever an SMU is below LRP and a Rebuilding Plan link is present.</p>
+<p><strong>A9. Lead Author Workflow:</strong> Lead Author can generate a “submission-ready” trace pack with benchmarks, uncertainty notes, proxy decisions, and methods provenance in ≤2 clicks.</p>
+<p><strong>A10. Reviewer Verification:</strong> Reviewer can verify benchmark method &amp; code version; GSI sample size &amp; uncertainty are visible where relevant. From any status tile, user can open drawer and reach all evidence links ≤2 clicks.</p>
+<hr>
+</section>
+<section id="e-architecture-pattern-spsr-django-integration-updated-2025-01-27" class="level2">
+<h2 class="anchored" data-anchor-id="e-architecture-pattern-spsr-django-integration-updated-2025-01-27">2e) Architecture Pattern &amp; SPSR (Django) Integration (UPDATED 2025-01-27)</h2>
+<p><strong>Context:</strong> SPSR is a <strong>layered monolith</strong> today (Presentation → Application → Domain → Infrastructure). The architecture has evolved to use a <strong>Graph Knowledge Service microservice</strong> pattern instead of a simple sidecar.</p>
+<section id="graph-knowledge-service-architecture" class="level3">
+<h3 class="anchored" data-anchor-id="graph-knowledge-service-architecture">Graph Knowledge Service Architecture</h3>
+<p><strong>Components</strong>: 1. <strong>Fuseki Graph Database</strong> (LXD container, managed in <code>dfo-salmon-graph-service</code> repo) - Shared graph store for RCD papers, SPSR data, FSAR traces - Graphs: <code>vocab</code>, <code>fsar:*</code>, <code>rcd:papers</code>, <code>spsr:data</code>, <code>org:structure</code> - SPARQL endpoint: <code>http://dfo-salmon-graph-service:3030/sparql</code></p>
+<ol start="2" type="1">
+<li><strong>Graph API Service</strong> (LXD container, in <code>dfo-salmon-graph-service</code> repo)
+<ul>
+<li>REST wrapper over SPARQL</li>
+<li>Endpoints: <code>/api/papers</code>, <code>/api/accountabilities</code>, <code>/api/evidence-chain</code>, <code>/api/intake/vocab</code>, <code>/api/intake/validate</code></li>
+<li>Caching, error handling, rate limiting</li>
+<li>Enables apps to avoid direct SPARQL complexity</li>
+</ul></li>
+<li><strong>MCP Server</strong> (LXD container, in <code>dfo-salmon-graph-service</code> repo)
+<ul>
+<li>Custom Model Context Protocol server</li>
+<li>Exposes graph via SPARQL tools for AI agents</li>
+<li>Graph-based RAG capabilities</li>
+<li>Tools: <code>query_papers</code>, <code>query_evidence_chain</code>, <code>query_accountabilities</code>, etc.</li>
+</ul></li>
+<li><strong>SPSR Django Application</strong> (existing)
+<ul>
+<li>Presentation: HTMX/Alpine.js UI</li>
+<li>Application: <code>AdviceTraceService</code> orchestrates SPSR ORM + Graph API</li>
+<li>Domain: SPSR models with ACL mapping to ontology</li>
+<li>Infrastructure: HTTP client connecting to Graph API Service (not direct SPARQL)</li>
+</ul></li>
+</ol>
+</section>
+<section id="updated-integration-pattern" class="level3">
+<h3 class="anchored" data-anchor-id="updated-integration-pattern">Updated Integration Pattern</h3>
+<p><strong>“Layered Monolith + Graph API Service + Contract”</strong></p>
+<pre><code>Browser ──(HTMX)──▶ Django Templates (SPSR)
+   ▲                     │
+   │                 AdviceTraceService (App layer)
+   │                 │              │
+   │       SPSR ORM (Domain)  Graph API Client
+   │                 │              │
+   │                 └── DRF JSON‑LD └──▶ Graph API Service (dfo-salmon-graph-service)
+   │                     Endpoint              │
+   │                                        Fuseki (Graph DB)</code></pre>
+</section>
+<section id="contract-and-integration-points" class="level3">
+<h3 class="anchored" data-anchor-id="contract-and-integration-points">Contract and Integration Points</h3>
+<p><strong>Contract</strong>: SPSR consumes JSON-LD via Graph API Service (not direct SPARQL)</p>
+<p><strong>Endpoints</strong>: - SPSR → Graph API: <code>GET /api/advice-trace/{smu}/{year}</code> → JSON-LD - SPSR → Graph API: <code>GET /api/papers?stock=&lt;stock&gt;&amp;method=&lt;method&gt;</code> - SPSR → Graph API: <code>POST /api/intake/validate</code> → SHACL + R validation results - SPSR → Graph API: <code>GET /api/intake/vocab?scheme=&lt;scheme&gt;</code> → SKOS options</p>
+<p><strong>Deployment</strong>: All graph services in <code>dfo-salmon-graph-service</code> LXD container; SPSR connects via network (REST API).</p>
+</section>
+<section id="why-this-architecture" class="level3">
+<h3 class="anchored" data-anchor-id="why-this-architecture">Why This Architecture</h3>
+<ul>
+<li><strong>Separation of concerns:</strong> Graph infrastructure separate from application logic</li>
+<li><strong>Scalability:</strong> Independent scaling of graph services</li>
+<li><strong>Multiple consumers:</strong> RCD, SPSR, and future projects can all use Graph API Service</li>
+<li><strong>Low coupling:</strong> SPSR consumes JSON-LD contract via REST, not direct SPARQL</li>
+<li><strong>Incremental adoption:</strong> Start with Barkley; add more SMUs incrementally</li>
+</ul>
+<p><strong>Build the front end directly in SPSR</strong> (Django templates + HTMX/Alpine). Keep the <strong>JSON‑LD contract</strong> so the UI remains decoupled and you can still export/share. Use Quarto only for <strong>documentation</strong> or publishing the Advice Trace Pack as a static companion, not as the primary UI.</p>
+</section>
+<section id="integration-strategy-revised" class="level3">
+<h3 class="anchored" data-anchor-id="integration-strategy-revised">Integration Strategy (revised)</h3>
+<ol type="1">
+<li><strong>MVP (Weeks 1–4)</strong> — <em>Django + Graph API Service</em>
+<ul>
+<li>Add <code>/api/advice-trace/{smu}/{year}</code> (DRF) returning JSON‑LD for CU → SMU → Advice flow.</li>
+<li>Add <code>/advice-trace/?smu=…&amp;year=…</code> Django view rendering the basic trace flow (HTMX partials).</li>
+<li>Connect to <strong>Graph API Service</strong> via HTTP client (not direct Fuseki).</li>
+<li>Compute <strong>Badges</strong> server‑side (from Graph API responses) → render as HTMX fragments.</li>
+</ul></li>
+<li><strong>Hardening (Post-MVP)</strong>
+<ul>
+<li>Cache Graph API responses (Django cache) per SMU/Year; invalidate on data refresh.</li>
+<li>Move JSON‑LD generation to a scheduled management command; publish for archival.</li>
+</ul></li>
+<li><strong>Optional external publishing</strong>
+<ul>
+<li>Generate a Quarto <strong>static site</strong> that reads the same JSON‑LD + figures for external stakeholders; link it from SPSR.</li>
+</ul></li>
+</ol>
+</section>
+<section id="concrete-touchpoints-django" class="level3">
+<h3 class="anchored" data-anchor-id="concrete-touchpoints-django">Concrete Touchpoints (Django)</h3>
+<ul>
+<li><strong>Endpoints</strong>
+<ul>
+<li><code>GET /api/advice-trace/{smu}/{year}</code> → JSON‑LD (CU → SMU → Advice trace)</li>
+<li><code>GET /api/documents?smu=&amp;year=</code> → PDFs/links metadata (accessible via Advice node)</li>
+<li><code>GET /api/cq/{smu}/{year}</code> → CQ results used by badges (optional; or compute inline)</li>
+<li><code>GET /advice-trace/intake</code> → Intake UI page (HTMX) for Persona C</li>
+<li><code>GET /api/intake/vocab?scheme=reference_point_type</code> → SKOS options (label, IRI, notation)</li>
+<li><code>POST /api/intake/validate</code> → Run SHACL + R; returns normalized error payload</li>
+<li><code>POST /api/intake/submit</code> → Mark as Ready, queue for human review/ingestion</li>
+<li><code>GET /api/intake/submissions</code> → List/filter drafts by user/state</li>
+<li><code>GET /api/intake/template?scope=SMU&amp;smu=&amp;year=</code> → Tailored XLSX template download</li>
+</ul></li>
+<li><strong>Adapters</strong>
+<ul>
+<li><strong>SPARQL adapter</strong>: small class wrapping query files (Q1–Q8); returns rows → DTOs</li>
+<li><strong>ACL mappers</strong>: SPSR models → ontology JSON‑LD (via <code>rdflib</code> or hand‑rolled JSON)</li>
+</ul></li>
+<li><strong>Validators</strong>
+<ul>
+<li><code>python manage.py run_shacl</code> (pySHACL) against shapes; persist results for badge rollups</li>
+<li><code>validate_spsr.R</code> in CI; post results to a table or cache</li>
+<li>Investigation: R validator run mode (sync vs async) and error contract TBD; capture as decision in ADR/todo_list</li>
+</ul></li>
+</ul>
+</section>
+<section id="libraries-patterns-djangonative" class="level3">
+<h3 class="anchored" data-anchor-id="libraries-patterns-djangonative">Libraries &amp; Patterns (Django‑native)</h3>
+<ul>
+<li><strong>UI:</strong> HTMX, Alpine.js (no SPA); <strong>Cytoscape.js</strong> if/when node‑link needed</li>
+<li><strong>Graph:</strong> <code>SPARQLWrapper</code> (Py) or <code>rdflib.plugins.sparql</code></li>
+<li><strong>JSON‑LD:</strong> <code>rdflib</code> or plain JSON with a context; keep a versioned <code>@context</code></li>
+<li><strong>Caching:</strong> <code>django‑redis</code> (per SMU/Year keyspace)</li>
+<li><strong>Testing:</strong> pytest + snapshot tests for SPARQL responses; SHACL as CI gate
+<ul>
+<li>For intake: API contract tests for validator error payload; HTMX component tests for error rendering</li>
+</ul></li>
+</ul>
+</section>
+<section id="where-badges-drawer-and-drilldowns-live" class="level3">
+<h3 class="anchored" data-anchor-id="where-badges-drawer-and-drilldowns-live">Where Badges, Drawer, and Drill‑downs live</h3>
+<ul>
+<li><strong>Badges</strong>: computed server‑side from SPARQL + SHACL; rendered as small HTMX fragments per CU/SMU/Advice node (so they can refresh without full page reload).</li>
+<li><strong>Evidence Drawer</strong>: a Django partial that takes a node <code>id</code> and queries (via service) for provenance, parameters, documents, figures; deep‑links to SPSR record pages and CSAS/DFO docs.</li>
+<li><strong>Drill‑downs</strong>: standard Django routes for SPSR records (dataset, method configs), GRD run/sample pages, and external doc links (new tab). HTMX keeps the experience snappy.</li>
+<li><strong>Documents</strong>: accessible via Advice node expansion, showing FSAR/Research/Tech Report quick links and full document hierarchy.</li>
+</ul>
+</section>
+<section id="migrationscalability-notes" class="level3">
+<h3 class="anchored" data-anchor-id="migrationscalability-notes">Migration/Scalability Notes</h3>
+<ul>
+<li>If/when SPSR evolves toward services, the <strong>JSON‑LD contract</strong> and <strong>SPARQL adapter</strong> remain valid; you can swap the graph engine (e.g., Blazegraph, Neptune) without changing UI.</li>
+<li>The <strong>anti‑corruption layer</strong> keeps ontology terms from leaking into core domain models; rollouts are safer.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="minimum-viable-product-mvp-definition" class="level2">
+<h2 class="anchored" data-anchor-id="minimum-viable-product-mvp-definition">3) Minimum Viable Product (MVP) Definition</h2>
+<section id="mvp-features-essential-for-initial-release" class="level3">
+<h3 class="anchored" data-anchor-id="mvp-features-essential-for-initial-release">3.1 MVP Features (Essential for Initial Release)</h3>
+<p><strong>Core Functionality:</strong></p>
+<ul>
+<li><strong>Single SMU Focus:</strong> Barkley Sockeye only for initial demonstration</li>
+<li><strong>Hierarchical Flow:</strong> Progressive disclosure starting with all CUs → SMU → Advice, with Management Decision and Legal Framework as sub-nodes of Advice</li>
+<li><strong>Status Aggregation:</strong> SMU status derived from constituent CU statuses using worst-case rule</li>
+<li><strong>Evidence Badges:</strong> Complete/Gaps/Missing-Critical status indicators at CU, SMU, and Advice levels</li>
+<li><strong>Evidence Drawer:</strong> Basic provenance display with source, method, code commit, reviewer/date</li>
+<li><strong>Document Hierarchy:</strong> FSAR with precursor Research Documents</li>
+<li><strong>Export Functionality:</strong> Basic Advice Trace Pack generation</li>
+<li><strong>Metadata Intake (Persona D):</strong> Guided wizard to capture required metadata via controlled‑vocab dropdowns; attach <code>.xlsx</code>; validate and iterate until Ready</li>
+<li><strong>Benchmark Transparency:</strong> Reference point types, methods, sensitivity flags with derivation evidence</li>
+<li><strong>CU Accounting:</strong> Inclusion/exclusion/proxy decisions with justification and reviewer sign-off</li>
+<li><strong>GSI Risk Assessment:</strong> Mixed-stock fishery risk chips and GSI usage tracking</li>
+<li><strong>Uncertainty Handling:</strong> Status confidence intervals and downgrade reason tracking</li>
+<li><strong>Policy Gates:</strong> Below-LRP triggers and rebuilding plan compliance checks</li>
+<li><strong>Risk Chips &amp; Completeness Meter:</strong> Visual indicators for coverage and completeness</li>
+<li><strong>Accessibility:</strong> Color-blind-safe palette, keyboard navigation, printable trace packs</li>
+</ul>
+<p><strong>Technical Requirements:</strong></p>
+<ul>
+<li><strong>Django HTMX Interface:</strong> Single-page application with CU-first hierarchical flow and progressive disclosure</li>
+<li><strong>SPARQL Backend:</strong> Core queries for CU-level, SMU-level, Advice-level evidence completeness, with Decision and Legal Framework as sub-queries</li>
+<li><strong>JSON-LD Contract:</strong> Standardized data exchange format supporting CU → SMU → Advice → Decision/Legal Framework structure</li>
+<li><strong>Basic Validation:</strong> SHACL shapes for status aggregation and evidence completeness</li>
+<li><strong>Validation Loop:</strong> SHACL + R validator adapters with normalized error JSON (severity, row/col, code, fix‑hint); submission state machine persisted</li>
+<li><strong>Enhanced Error Reporting:</strong> Row/column targeted errors with fix-hints, error severity (Critical/High/Info)</li>
+<li><strong>Template System:</strong> Read-only vocab sheets powering data validation dropdowns</li>
+<li><strong>Risk Assessment Engine:</strong> Mixed-stock fishery + GSI usage risk chip generation</li>
+<li><strong>Policy Compliance Engine:</strong> Below-LRP trigger detection and rebuilding plan validation</li>
+<li><strong>Accessibility Features:</strong> Color-blind-safe status palette, keyboard navigation, structured headings</li>
+<li><strong>Export Enhancement:</strong> Printable Advice Trace Pack with figures and evidence appendix</li>
+</ul>
+</section>
+<section id="future-features-post-mvp" class="level3">
+<h3 class="anchored" data-anchor-id="future-features-post-mvp">3.2 Future Features (Post-MVP)</h3>
+<p><strong>Enhanced Functionality:</strong></p>
+<ul>
+<li><strong>Multi-SMU Support:</strong> Expand beyond Barkley Sockeye with cross-SMU comparisons</li>
+<li><strong>Advanced Analytics:</strong> Cross-cycle comparisons, trend analysis, status aggregation validation</li>
+<li><strong>Rich Visualizations:</strong> Interactive CU-first hierarchical graphs, network views, status zone dashboards</li>
+<li><strong>Automated Classification:</strong> SHACL-based estimate type assignment and status derivation</li>
+<li><strong>Integration APIs:</strong> SPSR/GRD real-time data feeds with hierarchical data structure</li>
+<li><strong>Advanced Export:</strong> Custom report generation, hierarchical data visualization packages</li>
+</ul>
+<p><strong>Advanced Technical Features:</strong></p>
+<ul>
+<li><strong>Graph Database:</strong> Full triple store implementation with advanced querying</li>
+<li><strong>Real-time Updates:</strong> Live data currency monitoring</li>
+<li><strong>Advanced Validation:</strong> Comprehensive data quality assessment</li>
+<li><strong>External Integrations:</strong> CSAS document management, GitHub code linking</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="b-output-contract-advice-trace-pack" class="level2">
+<h2 class="anchored" data-anchor-id="b-output-contract-advice-trace-pack">3b) Output Contract (Advice Trace Pack)</h2>
+<p>Ship a versioned JSON-LD bundle with:</p>
+<ul>
+<li><strong>dfo:StatusAssessment</strong> (decision, uncertainty, inputs)</li>
+<li><strong>dfo:LowerBenchmark</strong> / <strong>dfo:UpperBenchmark</strong> / <strong>dfo:TargetReference</strong> (as first-class entities with derivation evidence)</li>
+<li><strong>prov:wasGeneratedBy</strong> links to code DOIs/commits and method registry terms</li>
+<li><strong>dfo:PolicyReadiness</strong> node (WSP zone, HCR id+params, Fish Stocks trigger + rebuilding link)</li>
+<li><strong>dfo:ChangeLog</strong> list of diffs vs last FSAR</li>
+<li><strong>dfo:CUAccounting</strong> (included/excluded/proxied CUs with justification)</li>
+<li><strong>dfo:GSIUsage</strong> (sample sizes, assignment uncertainty)</li>
+</ul>
+<p><strong>Required Fields Checklist (v0.2)</strong> <code>data_source_type</code>, <code>spawner_origin</code>, <code>proxy_justification</code>, <code>method_name</code>, <code>method_version</code>, <code>code_commit</code>, <code>reference_point_type</code>, <code>benchmark_method</code>, <code>benchmark_sensitivity</code>, <code>status_value</code>, <code>status_ci</code>, <code>gsi_sample_size/ci</code>, <code>gsiUsed</code>, <code>gsiAssignmentUncertainty</code>, <code>baseline_reference</code>, <code>status_confidence</code>, <code>downgradeReason</code>, <code>belowLRP</code>, <code>rebuildingPlanURL</code>, <code>hcrIdentifier</code>, <code>hcrParameters</code>, <code>scientific_output_text</code>, <code>reviewer</code>, <code>date</code>, <code>decision_id</code>, <code>policy_readiness_flags</code>, <code>change_log</code>.</p>
+<hr>
+</section>
+<section id="competency-questions-advice-trace-hierarchical-flow" class="level2">
+<h2 class="anchored" data-anchor-id="competency-questions-advice-trace-hierarchical-flow">4) Competency Questions — Advice Trace (Hierarchical Flow)</h2>
+<p><em>(Each CQ backs a UI badge, drawer, or diff; fields listed must exist in data/template/SHACL. Questions marked with ⚠️ require ontology investigation.)</em></p>
+</section>
+<section id="a-research-classifier-integration-competency-questions" class="level2">
+<h2 class="anchored" data-anchor-id="a-research-classifier-integration-competency-questions">4a) Research Classifier Integration Competency Questions</h2>
+<section id="paper-to-fsar-linking-questions" class="level3">
+<h3 class="anchored" data-anchor-id="paper-to-fsar-linking-questions">Paper-to-FSAR Linking Questions</h3>
+<p><strong>CQ-PAPER-1: What papers support a specific FSAR advice document?</strong></p>
+<pre class="sparql"><code>SELECT ?paper ?title ?authors ?year ?extraction_confidence
+WHERE {
+  ?fsar a fsar:ScientificOutput ;
+        dcterms:title ?fsarTitle ;
+        dcterms:identifier ?fsarDOI .
+  ?paper a iao:0000310 ;
+         dcterms:title ?title ;
+         dcterms:creator ?authors ;
+         dcterms:date ?year ;
+         dfoc:supportsAdvice ?fsar .
+  OPTIONAL { ?paper dfoc:extraction_confidence ?extraction_confidence }
+}</code></pre>
+<p><strong>CQ-PAPER-2: What papers support decisions related to a specific accountability?</strong></p>
+<pre class="sparql"><code>SELECT ?paper ?title ?accountability ?accountabilityLabel ?sector
+WHERE {
+  ?paper a iao:0000310 ;
+         dcterms:title ?title ;
+         dfoc:supportsAccountability ?accountability ;
+         dfoc:aboutSector ?sector .
+  ?accountability rdfs:label ?accountabilityLabel .
+  FILTER(?accountabilityLabel = "TAC" || ?accountabilityLabel = "HCR")
+}</code></pre>
+</section>
+<section id="sector-and-accountability-questions" class="level3">
+<h3 class="anchored" data-anchor-id="sector-and-accountability-questions">Sector and Accountability Questions</h3>
+<p><strong>CQ-SECTOR-1: What accountabilities are required for a specific sector?</strong></p>
+<pre class="sparql"><code>SELECT ?sector ?accountability ?accountabilityType ?decisionContext
+WHERE {
+  ?orgUnit a dfoc:Sector ;
+           rdfs:label ?sector .
+  ?orgUnit fsar:hasAccountability ?accountability .
+  ?accountability a ?accountabilityType .
+  OPTIONAL {
+    ?accountability fsar:requiresDecision ?decisionContext .
+  }
+}
+FILTER(?accountabilityType IN (fsar:DecisionAccountability, fsar:BenchmarkAccountability, fsar:MandateAccountability))</code></pre>
+<p><strong>CQ-SECTOR-2: What papers support accountabilities in Fisheries Management sector?</strong></p>
+<pre class="sparql"><code>SELECT ?paper ?title ?accountability ?accountabilityLabel
+WHERE {
+  ?paper a iao:0000310 ;
+         dcterms:title ?title ;
+         dfoc:aboutSector ?sector ;
+         dfoc:supportsAccountability ?accountability .
+  ?sector rdfs:label "Fisheries Management"@en .
+  ?accountability rdfs:label ?accountabilityLabel .
+}</code></pre>
+</section>
+<section id="graph-rag-questions" class="level3">
+<h3 class="anchored" data-anchor-id="graph-rag-questions">Graph RAG Questions</h3>
+<p><strong>CQ-RAG-1: Find semantically related papers to a given paper</strong></p>
+<pre class="sparql"><code>SELECT ?relatedPaper ?title ?relationship
+WHERE {
+  ?paper a iao:0000310 ;
+         dcterms:title "Original Paper Title" .
+  ?paper dfoc:aboutStock ?stock .
+  ?relatedPaper a iao:0000310 ;
+                dcterms:title ?title ;
+                dfoc:aboutStock ?stock .
+  ?relatedPaper dfoc:usesMethod ?method .
+  ?paper dfoc:usesMethod ?method .
+  BIND("Same stock and method" AS ?relationship)
+}
+FILTER(?relatedPaper != ?paper)</code></pre>
+<p><strong>CQ-RAG-2: Discover papers through multi-hop relationships (stock → CU → method → decision)</strong></p>
+<pre class="sparql"><code>SELECT ?paper ?title ?stock ?cu ?method ?decision
+WHERE {
+  ?stock a dfoc:Stock ;
+         rdfs:label "Barkley Sockeye"@en ;
+         dfoc:hasMemberCU ?cu .
+  ?cu dfoc:hasStatusAssessment ?assessment .
+  ?assessment prov:wasGeneratedBy ?method .
+  ?paper a iao:0000310 ;
+         dcterms:title ?title ;
+         dfoc:aboutStock ?stock ;
+         dfoc:aboutCU ?cu ;
+         dfoc:usesMethod ?method ;
+         dfoc:supportsDecision ?decision .
+}</code></pre>
+<hr>
+</section>
+<section id="cu-level-questions" class="level3">
+<h3 class="anchored" data-anchor-id="cu-level-questions">CU-Level Questions</h3>
+<p><strong>CQ-CU-1: What is the status of each Conservation Unit in an SMU?</strong></p>
+<pre class="sparql"><code>SELECT ?cu ?cuLabel ?statusZone ?statusValue ?statusCI
+WHERE {
+  ?smu a dfo:StockManagementUnit ;
+       rdfs:label "Barkley Sockeye"@en ;
+       dfo:hasMemberCU ?cu .
+  ?cu rdfs:label ?cuLabel ;
+      dfo:hasStatusAssessment ?assessment .
+  ?assessment dfo:statusZone ?statusZone ;
+              dfo:statusValue ?statusValue .
+  OPTIONAL { ?assessment dfo:statusCI ?statusCI }
+}</code></pre>
+<p><strong>CQ-CU-2: What data sources feed each CU’s status assessment?</strong></p>
+<pre class="sparql"><code>SELECT ?cu ?cuLabel ?dataSource ?dataType ?spawnerOrigin ?proxyJustification
+WHERE {
+  ?cu a dfo:ConservationUnit ;
+      rdfs:label ?cuLabel ;
+      dfo:hasStatusAssessment ?assessment .
+  ?assessment prov:used ?dataSource .
+  ?dataSource dfo:data_source_type ?dataType ;
+              dfo:spawner_origin ?spawnerOrigin .
+  OPTIONAL { ?dataSource dfo:proxy_justification ?proxyJustification }
+}</code></pre>
+<p><strong>CQ-CU-3: What methods and benchmarks are used for each CU?</strong></p>
+<pre class="sparql"><code>SELECT ?cu ?cuLabel ?method ?methodName ?lowerBenchmark ?upperBenchmark
+WHERE {
+  ?cu a dfo:ConservationUnit ;
+      rdfs:label ?cuLabel ;
+      dfo:hasStatusAssessment ?assessment .
+  ?assessment prov:wasGeneratedBy ?method .
+  ?method rdfs:label ?methodName .
+  
+  OPTIONAL {
+    ?cu dfo:hasLowerBenchmark ?lb .
+    ?lb dfo:benchmarkValue ?lowerBenchmark .
+  }
+  OPTIONAL {
+    ?cu dfo:hasUpperBenchmark ?ub .
+    ?ub dfo:benchmarkValue ?upperBenchmark .
+  }
+}</code></pre>
+</section>
+<section id="smu-level-questions" class="level3">
+<h3 class="anchored" data-anchor-id="smu-level-questions">SMU-Level Questions</h3>
+<p><strong>CQ-SMU-1: What is the SMU status and how does it derive from CU statuses?</strong></p>
+<pre class="sparql"><code>SELECT ?smu ?smuStatus ?cu ?cuStatus
+WHERE {
+  ?smu a dfo:StockManagementUnit ;
+       rdfs:label "Barkley Sockeye"@en ;
+       dfo:hasStatusAssessment ?smuAssessment ;
+       dfo:hasMemberCU ?cu .
+  ?smuAssessment dfo:statusZone ?smuStatus .
+  ?cu dfo:hasStatusAssessment ?cuAssessment .
+  ?cuAssessment dfo:statusZone ?cuStatus .
+}
+ORDER BY ?cuStatus</code></pre>
+<p><strong>CQ-SMU-2: What aggregation methods and reference points are used at the SMU level?</strong></p>
+<pre class="sparql"><code>SELECT ?smu ?lrp ?lrpType ?lrpValue ?aggregationMethod
+WHERE {
+  ?smu a dfo:StockManagementUnit ;
+       rdfs:label "Barkley Sockeye"@en ;
+       dfo:hasLimitReferencePoint ?lrp .
+  ?lrp a dfo:CUStatusBasedLRP ;
+       dfo:referencePointValue ?lrpValue ;
+       prov:wasGeneratedBy ?aggregationMethod .
+  ?aggregationMethod rdfs:label ?aggregationMethodLabel .
+}</code></pre>
+</section>
+<section id="advice-level-questions" class="level3">
+<h3 class="anchored" data-anchor-id="advice-level-questions">Advice-Level Questions</h3>
+<p><strong>CQ-ADV-1: What scientific outputs (FSARs) exist for this SMU?</strong></p>
+<pre class="sparql"><code>SELECT ?smu ?advice ?fsarTitle ?fsarYear ?fsarDOI ?researchDoc ?researchTitle
+WHERE {
+  ?smu a dfo:StockManagementUnit ;
+       rdfs:label "Barkley Sockeye"@en ;
+       dfo:hasScientificOutput ?advice .
+  ?advice dcterms:title ?fsarTitle ;
+          dcterms:issued ?fsarYear .
+  OPTIONAL { ?advice dcterms:identifier ?fsarDOI }
+  OPTIONAL {
+    ?advice dfo:hasPrecursorDocument ?researchDoc .
+    ?researchDoc dcterms:title ?researchTitle .
+  }
+}</code></pre>
+<p><strong>CQ-ADV-2: What advice text and review information is available?</strong></p>
+<pre class="sparql"><code>SELECT ?advice ?adviceText ?reviewer ?reviewDate ?version
+WHERE {
+  ?smu a dfo:StockManagementUnit ;
+       rdfs:label "Barkley Sockeye"@en ;
+       dfo:hasScientificOutput ?advice .
+  ?advice dfo:adviceText ?adviceText ;
+          dfo:reviewer ?reviewer ;
+          dfo:reviewDate ?reviewDate ;
+          dfo:version ?version .
+}</code></pre>
+</section>
+<section id="decision-level-questions" class="level3">
+<h3 class="anchored" data-anchor-id="decision-level-questions">Decision-Level Questions</h3>
+<p><strong>CQ-DEC-1: What management decisions are supported by this advice?</strong></p>
+<pre class="sparql"><code>SELECT ?advice ?decision ?decisionType ?decisionDate ?decisionMaker
+WHERE {
+  ?smu a dfo:StockManagementUnit ;
+       rdfs:label "Barkley Sockeye"@en ;
+       dfo:hasScientificOutput ?advice .
+  ?advice dfo:supportsDecision ?decision .
+  ?decision dfo:decisionType ?decisionType ;
+            dfo:decisionDate ?decisionDate ;
+            dfo:decisionMaker ?decisionMaker .
+}</code></pre>
+<p><strong>CQ-DEC-2: What legal framework mandates this decision?</strong></p>
+<pre class="sparql"><code>SELECT ?decision ?framework ?frameworkName ?relevantSections
+WHERE {
+  ?smu a dfo:StockManagementUnit ;
+       rdfs:label "Barkley Sockeye"@en ;
+       dfo:hasScientificOutput ?advice .
+  ?advice dfo:supportsDecision ?decision .
+  ?decision dfo:requiredBy ?framework .
+  ?framework rdfs:label ?frameworkName ;
+             dfo:relevantSections ?relevantSections .
+}</code></pre>
+</section>
+<section id="policy-legal-questions" class="level3">
+<h3 class="anchored" data-anchor-id="policy-legal-questions">Policy &amp; Legal Questions</h3>
+<p><strong>CQ-POL-1: What is the WSP status zone and how was it derived from benchmarks?</strong></p>
+<pre class="sparql"><code>SELECT ?smu ?wspZone ?lrp ?usr ?statusDecision ?hcrUsed
+WHERE {
+  ?smu a dfo:StockManagementUnit ;
+       rdfs:label "Barkley Sockeye"@en ;
+       dfo:hasStatusAssessment ?assessment ;
+       dfo:hasLimitReferencePoint ?lrp ;
+       dfo:hasUpperStockReference ?usr .
+  ?assessment dfo:statusZone ?wspZone ;
+              dfo:statusDecision ?statusDecision ;
+              dfo:harvestControlRule ?hcrUsed .
+}</code></pre>
+<p><strong>CQ-POL-2: What Fisheries Act Fish Stocks provisions apply to this SMU?</strong></p>
+<pre class="sparql"><code>SELECT ?smu ?belowLRP ?rebuildingPlan ?planVersion ?planDate
+WHERE {
+  ?smu a dfo:StockManagementUnit ;
+       rdfs:label "Barkley Sockeye"@en ;
+       dfo:hasPolicyReadiness ?policy .
+  ?policy dfo:belowLRP ?belowLRP .
+  OPTIONAL {
+    ?policy dfo:rebuildingPlan ?rebuildingPlan .
+    ?rebuildingPlan dfo:version ?planVersion ;
+                    dfo:issued ?planDate .
+  }
+}</code></pre>
+</section>
+<section id="change-intelligence-questions" class="level3">
+<h3 class="anchored" data-anchor-id="change-intelligence-questions">Change Intelligence Questions</h3>
+<p><strong>CQ-CHG-1: What changed since the last FSAR cycle?</strong></p>
+<pre class="sparql"><code>SELECT ?smu ?currentCycle ?previousCycle ?dataChanges ?methodChanges ?benchmarkChanges ?statusChanges
+WHERE {
+  ?smu a dfo:StockManagementUnit ;
+       rdfs:label "Barkley Sockeye"@en ;
+       dfo:hasChangeLog ?changeLog .
+  ?changeLog dfo:currentCycle ?currentCycle ;
+             dfo:previousCycle ?previousCycle ;
+             dfo:dataChanges ?dataChanges ;
+             dfo:methodChanges ?methodChanges ;
+             dfo:benchmarkChanges ?benchmarkChanges ;
+             dfo:statusChanges ?statusChanges .
+}</code></pre>
+</section>
+<section id="cu-accounting-questions" class="level3">
+<h3 class="anchored" data-anchor-id="cu-accounting-questions">CU Accounting Questions</h3>
+<p><strong>CQ-CU-ACCT-1: Which CUs are included, excluded, or proxied in this SMU assessment?</strong></p>
+<pre class="sparql"><code>SELECT ?smu ?cu ?inclusionStatus ?justification ?reviewer ?reviewDate
+WHERE {
+  ?smu a dfo:StockManagementUnit ;
+       rdfs:label "Barkley Sockeye"@en ;
+       dfo:hasCUAccounting ?accounting .
+  ?accounting dfo:cuInclusion ?cu ;
+              dfo:inclusionStatus ?inclusionStatus ;
+              dfo:justification ?justification ;
+              dfo:reviewer ?reviewer ;
+              dfo:reviewDate ?reviewDate .
+}</code></pre>
+<p><strong>CQ-CU-ACCT-2: What GSI usage and uncertainty information is available?</strong></p>
+<pre class="sparql"><code>SELECT ?smu ?gsiUsed ?sampleSize ?assignmentUncertainty ?gsiMethod
+WHERE {
+  ?smu a dfo:StockManagementUnit ;
+       rdfs:label "Barkley Sockeye"@en ;
+       dfo:hasGSIUsage ?gsiUsage .
+  ?gsiUsage dfo:gsiUsed ?gsiUsed ;
+            dfo:sampleSize ?sampleSize ;
+            dfo:assignmentUncertainty ?assignmentUncertainty ;
+            dfo:gsiMethod ?gsiMethod .
+}</code></pre>
+</section>
+<section id="benchmark-transparency-questions" class="level3">
+<h3 class="anchored" data-anchor-id="benchmark-transparency-questions">Benchmark Transparency Questions</h3>
+<p><strong>CQ-BENCH-1: What benchmark types and methods are used for each reference point?</strong></p>
+<pre class="sparql"><code>SELECT ?rp ?rpType ?benchMethod ?sensitivity ?derivationMethod ?codeCommit
+WHERE {
+  ?smu a dfo:StockManagementUnit ;
+       rdfs:label "Barkley Sockeye"@en ;
+       dfo:hasLimitReferencePoint ?rp .
+  ?rp dfo:reference_point_type ?rpType ;
+      dfo:benchmark_method ?benchMethod ;
+      prov:wasGeneratedBy ?derivationMethod .
+  ?derivationMethod dfo:code_commit ?codeCommit .
+  OPTIONAL { ?rp dfo:benchmark_sensitivity ?sensitivity }
+}</code></pre>
+<p><strong>CQ-BENCH-2: What are the sensitivity flags and derivation evidence for each benchmark?</strong></p>
+<pre class="sparql"><code>SELECT ?rp ?sensitivity ?inputDataset ?timeWindow ?uncertaintyMethod ?version
+WHERE {
+  ?smu a dfo:StockManagementUnit ;
+       rdfs:label "Barkley Sockeye"@en ;
+       dfo:hasLimitReferencePoint ?rp .
+  ?rp dfo:benchmark_sensitivity ?sensitivity ;
+      prov:used ?inputDataset ;
+      dfo:time_window ?timeWindow ;
+      dfo:uncertainty_method ?uncertaintyMethod ;
+      dfo:version ?version .
+}</code></pre>
+</section>
+<section id="cu-proxy-and-risk-questions" class="level3">
+<h3 class="anchored" data-anchor-id="cu-proxy-and-risk-questions">CU Proxy and Risk Questions</h3>
+<p><strong>CQ-CU-PROXY-1: Which CUs are proxied and what is the justification?</strong></p>
+<pre class="sparql"><code>SELECT ?cu ?inclusionStatus ?justification ?reviewer ?reviewDate ?riskLevel
+WHERE {
+  ?smu a dfo:StockManagementUnit ;
+       rdfs:label "Barkley Sockeye"@en ;
+       dfo:hasCUAccounting ?accounting .
+  ?accounting dfo:cuInclusion ?cu ;
+              dfo:inclusionStatus ?inclusionStatus ;
+              dfo:justification ?justification ;
+              dfo:reviewer ?reviewer ;
+              dfo:reviewDate ?reviewDate .
+  BIND(IF(?inclusionStatus != "included", "High", "Low") AS ?riskLevel)
+}</code></pre>
+<p><strong>CQ-GSI-RISK-1: What is the GSI usage and assignment uncertainty for mixed-stock fisheries?</strong></p>
+<pre class="sparql"><code>SELECT ?smu ?gsiUsed ?sampleSize ?assignmentUncertainty ?baselineReference ?riskChip
+WHERE {
+  ?smu a dfo:StockManagementUnit ;
+       rdfs:label "Barkley Sockeye"@en ;
+       dfo:hasGSIUsage ?gsiUsage ;
+       dfo:fisheryType "mixed-stock" .
+  ?gsiUsage dfo:gsiUsed ?gsiUsed ;
+            dfo:sampleSize ?sampleSize ;
+            dfo:assignmentUncertainty ?assignmentUncertainty ;
+            dfo:baseline_reference ?baselineReference .
+  BIND(IF(?gsiUsed = false, "No GSI apportionment", "GSI Available") AS ?riskChip)
+}</code></pre>
+</section>
+<section id="uncertainty-and-quality-questions" class="level3">
+<h3 class="anchored" data-anchor-id="uncertainty-and-quality-questions">Uncertainty and Quality Questions</h3>
+<p><strong>CQ-UNCERTAINTY-1: What uncertainty measures are available for status assessments?</strong></p>
+<pre class="sparql"><code>SELECT ?assessment ?statusConfidence ?downgradeReason ?ciLower ?ciUpper ?probabilityGreen ?probabilityAmber ?probabilityRed
+WHERE {
+  ?smu a dfo:StockManagementUnit ;
+       rdfs:label "Barkley Sockeye"@en ;
+       dfo:hasStatusAssessment ?assessment .
+  ?assessment dfo:status_confidence ?statusConfidence .
+  OPTIONAL { ?assessment dfo:downgradeReason ?downgradeReason }
+  OPTIONAL { ?assessment dfo:ciLower ?ciLower ; dfo:ciUpper ?ciUpper }
+  OPTIONAL { 
+    ?assessment dfo:probabilityGreen ?probabilityGreen ;
+                dfo:probabilityAmber ?probabilityAmber ;
+                dfo:probabilityRed ?probabilityRed
+  }
+}</code></pre>
+<p><strong>CQ-UNCERTAINTY-2: Which estimates are missing confidence intervals or have downgrade reasons?</strong></p>
+<pre class="sparql"><code>SELECT ?estimate ?estimateType ?missingCI ?downgradeReason ?qualityFlag
+WHERE {
+  ?smu a dfo:StockManagementUnit ;
+       rdfs:label "Barkley Sockeye"@en ;
+       dfo:hasStatusAssessment ?assessment .
+  ?assessment prov:used ?estimate .
+  ?estimate dfo:estimate_type ?estimateType .
+  BIND(NOT EXISTS { ?estimate dfo:confidenceInterval ?ci } AS ?missingCI)
+  OPTIONAL { ?estimate dfo:downgradeReason ?downgradeReason }
+  BIND(IF(?missingCI = true || BOUND(?downgradeReason), "Quality Concern", "Good") AS ?qualityFlag)
+}</code></pre>
+</section>
+<section id="policy-and-legal-compliance-questions" class="level3">
+<h3 class="anchored" data-anchor-id="policy-and-legal-compliance-questions">Policy and Legal Compliance Questions</h3>
+<p><strong>CQ-POLICY-1: What policy triggers and legal requirements apply to this SMU?</strong></p>
+<pre class="sparql"><code>SELECT ?smu ?belowLRP ?rebuildingPlanURL ?hcrIdentifier ?hcrParameters ?policyTrigger ?complianceStatus
+WHERE {
+  ?smu a dfo:StockManagementUnit ;
+       rdfs:label "Barkley Sockeye"@en ;
+       dfo:hasPolicyReadiness ?policy .
+  ?policy dfo:belowLRP ?belowLRP ;
+          dfo:hcrIdentifier ?hcrIdentifier ;
+          dfo:hcrParameters ?hcrParameters .
+  OPTIONAL { ?policy dfo:rebuildingPlanURL ?rebuildingPlanURL }
+  BIND(IF(?belowLRP = true &amp;&amp; BOUND(?rebuildingPlanURL), "Compliant", "Policy Trigger") AS ?policyTrigger)
+  BIND(IF(?belowLRP = true &amp;&amp; !BOUND(?rebuildingPlanURL), "Missing-Critical", "Ready") AS ?complianceStatus)
+}</code></pre>
+</section>
+<section id="cross-cutting-questions" class="level3">
+<h3 class="anchored" data-anchor-id="cross-cutting-questions">Cross-Cutting Questions</h3>
+<p><strong>CQ-TRACE-1: What is the complete evidence chain from CU data to management decision?</strong></p>
+<pre class="sparql"><code>SELECT ?cu ?cuData ?cuMethod ?cuStatus ?smuStatus ?advice ?decision ?framework
+WHERE {
+  ?smu a dfo:StockManagementUnit ;
+       rdfs:label "Barkley Sockeye"@en ;
+       dfo:hasMemberCU ?cu ;
+       dfo:hasStatusAssessment ?smuAssessment ;
+       dfo:hasScientificOutput ?advice .
+
+  ?cu dfo:hasStatusAssessment ?cuAssessment .
+  ?cuAssessment prov:used ?cuData ;
+                prov:wasGeneratedBy ?cuMethod ;
+                dfo:statusZone ?cuStatus .
+
+  ?smuAssessment dfo:statusZone ?smuStatus .
+
+  ?advice dfo:supportsDecision ?decision .
+  ?decision dfo:requiredBy ?framework .
+}</code></pre>
+<p><strong>Required Fields Checklist (v0.2)</strong> <code>data_source_type</code>, <code>spawner_origin</code>, <code>proxy_justification</code>, <code>method_name</code>, <code>method_version</code>, <code>code_commit</code>, <code>reference_point_type</code>, <code>benchmark_method</code>, <code>benchmark_sensitivity</code>, <code>status_value</code>, <code>status_ci</code>, <code>gsi_sample_size/ci</code>, <code>gsiUsed</code>, <code>gsiAssignmentUncertainty</code>, <code>baseline_reference</code>, <code>status_confidence</code>, <code>downgradeReason</code>, <code>belowLRP</code>, <code>rebuildingPlanURL</code>, <code>hcrIdentifier</code>, <code>hcrParameters</code>, <code>scientific_output_text</code>, <code>reviewer</code>, <code>date</code>, <code>decision_id</code>, <code>policy_readiness_flags</code>, <code>change_log</code>.</p>
+</section>
+<section id="wsp-rapid-status-questions" class="level3">
+<h3 class="anchored" data-anchor-id="wsp-rapid-status-questions">WSP Rapid-Status Questions</h3>
+<p><strong>CQ-WSP-1: What are the metric benchmark values vs algorithm threshold values for each WSP metric?</strong></p>
+<pre class="sparql"><code>SELECT ?metric ?metricLabel ?benchmarkType ?benchmarkValue ?benchmarkUnits ?thresholdValue ?thresholdUnits ?thresholdNote
+WHERE {
+  ?assessment a dfo:StockAssessment ;
+              fsar:assessesMetric ?metric .
+  ?metric rdfs:label ?metricLabel ;
+          fsar:hasBenchmark ?benchmark ;
+          fsar:hasAlgorithmThreshold ?threshold .
+  ?benchmark rdfs:label ?benchmarkType ;
+             fsar:numericValue ?benchmarkValue ;
+             fsar:units ?benchmarkUnits .
+  ?threshold fsar:numericValue ?thresholdValue ;
+             fsar:units ?thresholdUnits .
+  OPTIONAL { ?threshold fsar:note ?thresholdNote }
+}
+ORDER BY ?metricLabel ?benchmarkType</code></pre>
+<p><strong>CQ-WSP-2: What confidence category does the rapid status assessment have?</strong></p>
+<pre class="sparql"><code>SELECT ?assessment ?rapidStatus ?confidence ?confidenceLabel
+WHERE {
+  ?assessment a dfo:StockAssessment ;
+              fsar:producesRapidStatus ?rapidStatus ;
+              fsar:hasConfidence ?confidence .
+  ?confidence skos:prefLabel ?confidenceLabel .
+  ?rapidStatus skos:prefLabel ?statusLabel .
+}</code></pre>
+<p><strong>CQ-WSP-3: What decision requirements are triggered by the status/metric positions?</strong></p>
+<pre class="sparql"><code>SELECT ?assessment ?rapidStatus ?condition ?conditionLabel ?requirement ?requirementLabel ?framework ?frameworkLabel
+WHERE {
+  ?assessment a dfo:StockAssessment ;
+              fsar:producesRapidStatus ?rapidStatus .
+  ?rapidStatus skos:prefLabel ?statusLabel .
+  ?requirement a fsar:DecisionRequirement ;
+               rdfs:label ?requirementLabel ;
+               fsar:triggeredBy ?condition ;
+               fsar:mandatedBy ?framework .
+  ?condition rdfs:label ?conditionLabel .
+  ?framework rdfs:label ?frameworkLabel .
+  # Note: This query structure assumes conditions can be inferred from rapid status
+  # Actual implementation may require additional logic to connect status to conditions
+}</code></pre>
+<p><strong>CQ-WSP-4: How do WSP metric benchmarks relate to Learning Tree 3 algorithm thresholds?</strong></p>
+<pre class="sparql"><code>SELECT ?metric ?metricLabel ?benchmarkValue ?benchmarkUnits ?thresholdValue ?thresholdUnits ?rationaleNote
+WHERE {
+  ?metric a fsar:WSPMetric ;
+          rdfs:label ?metricLabel ;
+          fsar:hasBenchmark ?benchmark ;
+          fsar:hasAlgorithmThreshold ?threshold .
+  ?benchmark fsar:numericValue ?benchmarkValue ;
+             fsar:units ?benchmarkUnits .
+  ?threshold fsar:numericValue ?thresholdValue ;
+             fsar:units ?thresholdUnits .
+  OPTIONAL { ?threshold fsar:note ?rationaleNote }
+}
+ORDER BY ?metricLabel</code></pre>
+<hr>
+</section>
+</section>
+<section id="sparql-query-pack-v0.1-backing-the-ui" class="level2">
+<h2 class="anchored" data-anchor-id="sparql-query-pack-v0.1-backing-the-ui">4) SPARQL Query Pack (v0.1) — Backing the UI</h2>
+<p><em>(Prefixes omitted; assume : is ontology ns; dprod: for Data Product Ontology; prov: for provenance. Queries marked with ⚠️ require ontology investigation.)</em></p>
+<p><strong>Q1 — Evidence Completeness by Decision</strong> ⚠️</p>
+<pre class="sparql"><code>SELECT ?decision (IF(?critMissing=0, IF(?optMissing=0, "Complete", "Gaps"), "Missing-Critical") AS ?state)
+WHERE {
+  BIND(:TAC_HCR AS ?decision)
+  {
+    SELECT (SUM(?isCritMissing) AS ?critMissing) (SUM(?isOptMissing) AS ?optMissing)
+    WHERE {
+      # required=false means optional; required=true means required evidence
+      VALUES (?field ?required) {
+        (:status_value true)
+        (:reference_point_type true)
+        (:status_ci false)
+      }
+      BIND(IF(?required=true &amp;&amp; NOT EXISTS { ?s :hasField ?field }, 1, 0) AS ?isCritMissing)
+      BIND(IF(?required=false &amp;&amp; NOT EXISTS { ?s :hasField ?field }, 1, 0) AS ?isOptMissing)
+    }
+  }
+}</code></pre>
+<p><strong>Q2 — Proxy Without Justification</strong></p>
+<pre class="sparql"><code>SELECT ?record WHERE {
+  ?record :data_source_type :genetic_proxy .
+  FILTER NOT EXISTS { ?record :proxy_justification ?j . FILTER(STRLEN(STR(?j))&gt;0) }
+}</code></pre>
+<p><strong>Q3 — Method Reproducibility</strong></p>
+<pre class="sparql"><code>SELECT ?method ?name ?version ?commit WHERE {
+  ?status :wasGeneratedBy ?method .
+  ?method :method_name ?name ; :method_version ?version ; :code_commit ?commit .
+}</code></pre>
+<p><strong>Q4 — Reference Points Used</strong></p>
+<pre class="sparql"><code>SELECT ?rp ?type ?benchMethod ?sensitivity WHERE {
+  ?status :used ?rp .
+  ?rp :reference_point_type ?type ; :benchmark_method ?benchMethod .
+  OPTIONAL { ?rp :benchmark_sensitivity ?sensitivity }
+}</code></pre>
+<p><strong>Q5 — Missing Uncertainty</strong></p>
+<pre class="sparql"><code>SELECT ?node WHERE {
+  { ?status :status_value ?v FILTER(NOT EXISTS { ?status :status_ci ?ci }) }
+  UNION { ?gsi a :GSIResult FILTER(NOT EXISTS { ?gsi :gsi_sample_size ?n }) }
+}</code></pre>
+<p><strong>Q6 — Data Currency (last updated per component)</strong></p>
+<pre class="sparql"><code>SELECT ?component ?id ?lastModified ?version WHERE {
+  VALUES ?component { :Dataset :Method :ReferencePoint :Status :Advice }
+  ?id a ?component ; :lastModified ?lastModified .
+  OPTIONAL { ?id :version ?version }
+}</code></pre>
+<p><strong>Q7 — Scientific Output Text + Review</strong> ⚠️</p>
+<pre class="sparql"><code>SELECT ?output ?text ?reviewer ?date WHERE {
+  ?output a :ScientificOutput ; :scientific_output_text ?text ; :reviewer ?reviewer ; :date ?date .
+}</code></pre>
+<p><strong>Q8 — Linked Documents (FSAR / Tech / Research)</strong></p>
+<pre class="sparql"><code>SELECT ?doc ?type ?title ?id ?issued ?url ?contentUrl WHERE {
+  ?output a :ScientificOutput ; :hasDocument ?doc .
+  ?doc a :Document ; :doc_type ?type ; dcterms:title ?title ; dcterms:identifier ?id ; dcterms:issued ?issued .
+  OPTIONAL { ?doc schema:url ?url }
+  OPTIONAL { ?doc schema:contentUrl ?contentUrl }
+}</code></pre>
+<p><strong>Q9 — Data Product Integration</strong> ⚠️</p>
+<pre class="sparql"><code>SELECT ?dataProduct ?title ?owner ?service WHERE {
+  ?dataProduct a dprod:DataProduct ;
+    dprod:title ?title ;
+    dprod:dataProductOwner ?owner ;
+    dprod:outputPort ?service .
+  ?service a dprod:DataService ;
+    dprod:endpointURL ?endpoint .
+}</code></pre>
+<p><strong>Q10 — Controlled‑Vocab Options by Scheme</strong></p>
+<pre class="sparql"><code>SELECT ?concept ?label ?notation WHERE {
+  ?concept skos:inScheme :ReferencePointType ;
+           skos:prefLabel ?label .
+  OPTIONAL { ?concept skos:notation ?notation }
+}</code></pre>
+<p><strong>Q11 — Downgrade Criteria</strong></p>
+<pre class="sparql"><code>SELECT ?criterion ?label ?definition WHERE {
+  ?criterion skos:inScheme :DowngradeCriteria ;
+            skos:prefLabel ?label .
+  OPTIONAL { ?criterion skos:definition ?definition }
+}</code></pre>
+<hr>
+</section>
+<section id="graph-database-data-ingest-2month-poc" class="level2">
+<h2 class="anchored" data-anchor-id="graph-database-data-ingest-2month-poc">5) Graph Database &amp; Data Ingest (2‑Month POC)</h2>
+<p><strong>Choice:</strong> <strong>Apache Jena Fuseki (Docker)</strong> — fast to stand up; great for JSON‑LD loads; local or VM.</p>
+<p><strong>Graph Database Requirements:</strong></p>
+<ul>
+<li><strong>MVP:</strong> Basic Fuseki setup with core graphs for Barkley Sockeye demonstration</li>
+<li><strong>Future:</strong> Full triple store implementation with advanced querying capabilities</li>
+<li><strong>Integration:</strong> Support for DPROD ontology classes and relationships</li>
+<li><strong>Performance:</strong> Optimized for SPARQL queries supporting evidence completeness checks</li>
+</ul>
+<p><strong>Graphs</strong></p>
+<ul>
+<li><code>graph:fsar:2025:barkley</code> — current cycle</li>
+<li><code>graph:vocab</code> — SKOS terms; <code>graph:shapes</code> — SHACL</li>
+<li><code>graph:dprod</code> — Data Product Ontology integration (future)</li>
+</ul>
+<p><strong>Sources → JSON‑LD Extracts</strong></p>
+<ul>
+<li>SPSR extracts (status inputs, ref points, metadata)</li>
+<li>GRD subset (Barkley, <code>Run_ID</code>, <code>Sample_ID</code>, <code>Assay_ID</code>)</li>
+<li>FSAR scientific output block + provenance</li>
+<li><strong>Investigation needed:</strong> How to integrate DPROD data product descriptions</li>
+</ul>
+<p><strong>Load Steps</strong></p>
+<ol type="1">
+<li>Export CSV/JSON from SPSR/GRD/FSAR → convert to JSON‑LD via small scripts (R or Python + rdflib).</li>
+<li><code>tbdloader</code>/<code>s-put</code> (Jena) to load per‑graph; store prefixes; run SHACL report.</li>
+<li>Run SPARQL pack; generate Advice Trace Pack assets (no cross‑cycle diffs; show data currency only).</li>
+<li><strong>Future:</strong> Implement DPROD integration and advanced graph database features.</li>
+</ol>
+<hr>
+</section>
+<section id="spsr-schema-recommendations-minimal-high-leverage-tweaks" class="level2">
+<h2 class="anchored" data-anchor-id="spsr-schema-recommendations-minimal-high-leverage-tweaks">6) SPSR Schema Recommendations (minimal, high-leverage tweaks)</h2>
+<p>Your current SPSR tables already include LRP/USR/TR fields and rich age/harvest columns. To avoid a disruptive rewrite:</p>
+<p><strong>Critical (do now):</strong></p>
+<ul>
+<li><strong>Add Benchmarks table</strong> (or JSON field) with: <code>type</code> {LRP, USR, TR}, <code>value</code>, <code>units</code>, <code>method_ref</code>, <code>inputs_ref</code>, <code>time_window</code>, <code>uncertainty</code>, <code>version</code>, <code>derived_on</code>, <code>derived_by</code>, <code>reference_point_type</code> (controlled vocab), <code>benchmark_method</code> (controlled vocab), <code>benchmark_sensitivity</code> (flags)</li>
+<li><strong>Add StatusAssessment fieldset</strong> per SMU-year: <code>status_zone</code>, <code>decision_basis</code> (link to benchmark ids), <code>uncertainty_summary</code>, <code>downgrade_reason?</code>, <code>reviewer</code>, <code>date</code>, <code>status_confidence</code> (probabilities/CI), <code>ciLower</code>, <code>ciUpper</code>, <code>probabilityGreen</code>, <code>probabilityAmber</code>, <code>probabilityRed</code></li>
+<li><strong>Add PolicyReadiness flags</strong>: <code>below_lrp</code> (bool), <code>hcr_id</code>, <code>hcr_params</code>, <code>rebuilding_plan_url</code>, <code>hcrIdentifier</code>, <code>hcrParameters</code></li>
+<li><strong>Add Submission entities</strong> (for intake):
+<ul>
+<li><code>Submission</code>: <code>id</code>, <code>smu</code>, <code>year</code>, <code>user_id</code>, <code>state</code> {Draft|Validated|Ready|Ingested}, <code>provenance_minimum</code> fields (<code>method</code>, <code>version</code>, <code>code_commit</code>, <code>reviewer</code>, <code>date</code>), <code>created_at</code>, <code>updated_at</code></li>
+<li><code>ValidationRun</code>: <code>submission_id</code>, <code>tool</code> {SHACL|R}, <code>version</code>, <code>timestamp</code>, <code>passed</code> (bool), <code>error_json</code></li>
+</ul></li>
+<li><strong>Add CU inclusion/proxy table</strong> with fields: <code>cu_id</code>, <code>decision</code> (included/excluded/proxied), <code>justification</code>, <code>reviewer</code>, <code>review_date</code></li>
+<li><strong>Add GSI usage fields</strong>: <code>gsiUsed</code> (bool), <code>gsiSampleSize</code> (int), <code>gsiAssignmentUncertainty</code> (text/CI or % misID), <code>baseline_reference</code>, <code>fisheryType</code> (mixed-stock/single-stock)</li>
+</ul>
+<p><strong>Medium:</strong></p>
+<ul>
+<li><strong>Standardize units</strong> using QUDT IRIs stored alongside numerics (keep current “pragmatic literal + unit IRI” convention)</li>
+</ul>
+<p><strong>Validator &amp; Data Model Alignment:</strong></p>
+<ul>
+<li><strong>Add/ensure fields:</strong> <code>benchmark_method</code>, <code>reference_point_type</code>, <code>proxy_justification</code>, <code>code_commit</code>, <code>reviewer</code>, <code>date</code>, <code>gsi_sample_size</code>, <code>gsi_ci</code>, <code>gsiUsed</code>, <code>gsiAssignmentUncertainty</code>, <code>baseline_reference</code>, <code>status_confidence</code>, <code>downgradeReason</code>, <code>belowLRP</code>, <code>rebuildingPlanURL</code>, <code>hcrIdentifier</code>, <code>hcrParameters</code></li>
+<li><strong>SHACL shapes:</strong> required vs optional by decision context; friendly messages; error severity (Critical/High/Info)</li>
+<li><strong>R validator:</strong> fail‑fast CLI (non‑zero on error), row/col pinpoint, fix‑hints mapping</li>
+<li><strong>GRD join:</strong> prefer <code>Run_ID + Sample_ID</code> (optional <code>Assay_ID</code>) for Barkley</li>
+<li><strong>Error JSON contract:</strong> Normalize validator output keys: <code>severity</code>, <code>code</code>, <code>message</code>, <code>row</code>, <code>column</code>, <code>file</code>, <code>hint</code>.</li>
+<li><strong>Permissions &amp; gating:</strong> Only whitelisted users (Django auth/email list) can submit; human review required before ingestion.</li>
+<li><strong>Template tabs:</strong> Read-only vocab sheets (RP types, methods, status zones) powering data validation dropdowns</li>
+<li><strong>Risk assessment:</strong> Mixed-stock fishery + <code>gsiUsed</code> = false → show risk chip and require rationale</li>
+<li><strong>Policy compliance:</strong> <code>belowLRP</code> = true requires valid Rebuilding Plan link or shows Missing-Critical</li>
+</ul>
+<p>These are small additive tables/columns that unlock everything above without refactoring your time-series or age structures.</p>
+<hr>
+</section>
+<section id="tool-stack-standards-recommended" class="level2">
+<h2 class="anchored" data-anchor-id="tool-stack-standards-recommended">7) Tool Stack &amp; Standards (recommended)</h2>
+<ul>
+<li><strong>Standards:</strong> SKOS (vocab), PROV‑O/DQV (provenance/quality), SHACL (validation), JSON‑LD (interchange).</li>
+<li><strong>Triple store:</strong> Jena Fuseki (Docker); local dev + GitHub CI for lint/validate.</li>
+<li><strong>UI:</strong> Quarto static site + light JS; optional R Shiny later.</li>
+<li><strong>Pipelines:</strong> GitHub Actions (validate TTL/JSON‑LD, run SHACL, run R tests, build site).</li>
+</ul>
+<hr>
+</section>
+<section id="month-poc-plan-barkley-sockeye" class="level2">
+<h2 class="anchored" data-anchor-id="month-poc-plan-barkley-sockeye">8) 2‑Month POC Plan — Barkley Sockeye</h2>
+<p><strong>Weeks 1–2:</strong></p>
+<ul>
+<li>Extract Barkley data; publish vocab v0.1; define JSON‑LD context</li>
+<li><strong>Stand up Fuseki graph database</strong> with core graphs</li>
+<li>Load <code>graph:vocab</code>/<code>graph:fsar:2025:barkley</code></li>
+<li><strong>Add SPSR schema enhancements</strong> (Benchmarks table, StatusAssessment fieldset, PolicyReadiness flags)</li>
+<li><strong>Investigate DPROD integration</strong> requirements</li>
+<li>Stand up <strong>Intake UI skeleton</strong> (HTMX) and vocab endpoints; persist <code>Submission</code> drafts</li>
+<li>Parse <code>.xlsx</code> Metadata tab server‑side; preview parsed metadata</li>
+</ul>
+<p><strong>Weeks 3–4:</strong></p>
+<ul>
+<li>Implement SPARQL Q1–Q9 (enhanced MVP queries including Policy/Legal, Change Intelligence, CU Accounting)</li>
+<li>SHACL v0.1 for basic validation + policy readiness gates</li>
+<li>Excel template + R validator v0.1 with enhanced metadata requirements</li>
+<li>Generate first Advice Trace Pack with structured deltas vs.&nbsp;previous FSAR</li>
+<li><strong>Implement CU Accounting</strong> (included/excluded/proxied CUs with justification)</li>
+<li>Integrate <strong>SHACL + R</strong> adapters; return normalized error JSON; add submission state machine (Draft/Validated/Ready)</li>
+<li>Define/decide <strong>R validator run mode</strong> (sync vs async) and document as decision</li>
+</ul>
+<p><strong>Weeks 5–6:</strong></p>
+<ul>
+<li>Add <strong>Policy &amp; Legal Readiness</strong> panel with hard gates</li>
+<li>Add <strong>Change Intelligence</strong> (delta vs.&nbsp;last FSAR)</li>
+<li>Wire enhanced UI (picker, CU-first hierarchical flow, drawer with new tabs, export)</li>
+<li><strong>Implement GSI Usage tracking</strong> (sample sizes, assignment uncertainty)</li>
+<li><strong>Add Downgrade Criteria</strong> display and validation</li>
+<li>Wire <strong>intake submission review/approval</strong> workflow (human gating) and ingestion stub</li>
+<li>Add <strong>tailored template</strong> generator endpoint and error report download</li>
+</ul>
+<p><strong>Weeks 7–8:</strong></p>
+<ul>
+<li>Acceptance sweep (enhanced badges, policy overlays, export validations with deltas)</li>
+<li><strong>Implement Benchmark entities</strong> as first-class objects with derivation evidence</li>
+<li><strong>Investigate SIL/SEN integration</strong> with Minh Doan’s PR</li>
+<li>Docs + exec one‑pager; demo handoff with policy readiness demonstration</li>
+<li><strong>Plan post-MVP features</strong> and DPROD integration</li>
+<li>Acceptance sweep for <strong>intake</strong> (permissions, audit events, Ready gating)</li>
+<li>Document submission lifecycle and error contract; add API contract tests</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/dfo-pacific-science\.github\.io\/data-stewardship-unit\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/data/ontology/docs/ontology_applications/FSAR_Tracer_PRD_CQs.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/data/ontology/docs/ontology_applications/FSAR_Tracer_PRD_CQs.md" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This site was created with <a href="https://quarto.org/">Quarto</a> and is hosted with <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

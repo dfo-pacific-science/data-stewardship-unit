@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>dfo-2024-rapid-status-approximations – FADS Open Science Documentation Hub</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../../">
+<link href="../../../../../images/logo.png" rel="icon" type="image/png">
+<script src="../../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../../site_libs/bootstrap/bootstrap-972cf70390dc11df476ac11b7b56006c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../../../index.html">
+    <span class="navbar-title">FADS Open Science Documentation Hub</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://086gc.sharepoint.com/:u:/r/sites/FisheryAssessmentDataSectionWiki/SitePages/CollabHome.aspx?csf=1&amp;web=1&amp;e=tkJJk4"> 
+<span class="menu-text">FADS Internal Wiki</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../fads-portfolio.html"> 
+<span class="menu-text">Data Services</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../../../../reference_info/data_standards/controlled-vocabulary-thesauri.html" aria-current="page"> 
+<span class="menu-text">Salmon Data Standards</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/dfo-pacific-science/data-stewardship-unit">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues">
+            Report a Bug
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../../../../../index.html" class="sidebar-logo-link">
+      <img src="../../../../../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../../../../../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">How to Guides</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../how_to_guides/databricks_r_studio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Connect to the Azure Lakehouse from R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../how_to_guides/openGovernmentPortalR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Accessing Spatial Data from the Open Government Portal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../how_to_guides/sharepoint_r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Access Data in SharePoint from R</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Reference Info</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Salmon Data Standards</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../reference_info/data_standards/controlled-vocabulary-thesauri.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Controlled Vocabulary &amp; Thesauri</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../reference_info/ontology/formal-documentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DFO Salmon Ontology</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../reference_info/dwc-obis-gbif.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Darwin Core, GBIF, and OBIS Reference Guide</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../reference_info/openDataPractices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Practices for Open Science – 3 Quick Tips</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../reference_info/publishing_data_externally.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hosting Data and Code</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Tools</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../reference_info/tools/r_packages.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R Packages</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Tutorials</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../tutorials/support_controlled_vocabs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Support Controlled Vocabularies</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Deep Dives</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../deep_dives/Stock Assessment Data 101 for Fisheries Science Reports.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fisheries Science Reports – Data and Stats 101</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<p>Pacific Region</p>
+<p>Canadian Science Advisory Secretariat Science Response 2024/004</p>
+<p>RAPID STATUS APPROXIMATIONS FOR PACIFIC SALMON DERIVED FROM INTEGRATED EXPERT ASSESSMENTS UNDER DFO’S WILD SALMON POLICY</p>
+<p>Context Regular tracking of the state and distribution of salmon biodiversity is increasingly important in a changing climate. Broad declines in Canadian Pacific salmon abundances have been linked to global climate change and other factors such as deteriorating habitats, increased fish disease, and invasive species (Grant et al.&nbsp;2019). To track salmon biodiversity change, we present a Wild Salmon Policy (WSP) rapid status assessment approach for Pacific salmon. This approach can assign a Red, Amber, or Green status, with High, Medium or Low confidence to salmon conservation units (CUs) with applicable data.</p>
+<p>Pacific salmon adaptive diversity occurs at a range of scales that include the species, CU, population and deme. The WSP identifies diversity at the scale of CUs, which are fundamental units that cannot be recolonized if lost (DFO 2005; Holtby and Ciruna 2007; Wade et al.&nbsp;2019). Fisheries and Oceans Canada (DFO)’s WSP covers five species of Pacific salmon: Sockeye (Oncorhynchus nerka), Chinook (O. tshawytscha), Coho (O. kisutch), Pink (O. gorbuscha) and Chum Salmon (O. keta). DFO has the authority to manage these salmon under the Fisheries Act (2019). Steelhead (O. mykiss) are managed provincially, and therefore are not included in WSP rapid status assessments.</p>
+<p>This Canadian Science Advisory Secretariate (CSAS) review of the WSP rapid status assessment approach was requested by DFO Science Branch to support the evaluation of Pacific salmon Stock Management Unit (SMU) statuses relative to their Limit Reference Points (LRPs). An SMU defines a group of one or more Pacific salmon CUs that are managed together with the objective of achieving a joint status. The LRP represents the status below which serious harm is occurring to the stock, based on biological criteria established by DFO Science through peer review. An SMU below its LRP triggers a rebuilding plan. A recent CSAS process recommended that LRPs for SMUs be defined as a percentage, with the objective being that 100% of all CUs in the SMU are above the WSP Red status zone (DFO 2023; Holt et al.&nbsp;2023a, 2023b). An SMU falls below the LRP if one or more CUs in an SMU are in the WSP Red status zone. The WSP rapid status approach was recommended for assessing LRP status (DFO 2023; Holt et al.&nbsp;2023a). Subsequently through the current report’s CSAS process, a recommended next step is the vetting of the individual CU WSP rapid status results, and LRP status determination, by experts in a structured process.</p>
+<p>Existing WSP integrated status assessments provide a foundational approach to tracking annual salmon CU status. This approach uses an expert decision-making process to combine statuses across individual WSP metrics, and additional related information, into a single integrated status. However, the WSP integrated status assessment approach only gets us part- way to tracking annual CU status, since it is time- and labor-intensive, and as a result, has only been completed for 11% of the current 377 CUs, and is 5–10 years out of date. To expand the number of CUs assessed, and provide annual CU status updates, this paper presents a new</p>
+<p>January 2024</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>WSP rapid status approach that approximates the expert decision-making process used in the integrated status assessments. Annual WSP rapid statuses are estimated using an algorithm implemented with computer code for British Columbia (BC) and Yukon CUs with applicable data.</p>
+<p>The WSP rapid status approach provides more complete coverage of WSP statuses across CUs. Expanding the number of assessed CUs will require input from stock assessment experts to select appropriate escapement enumeration sites and years, and to perform data treatments such as gap filling as applicable. Experts would work iteratively to explore specifications for use with the WSP rapid status algorithm, such as identifying applicable WSP rapid status metrics for these data, and reviewing the WSP rapid statuses generated by the algorithm to finalize the approach for their CUs. The establishment of a governance strategy for this work is recommended, including the identification of roles and responsibilities, to ensure the inclusion of new CUs, and annual updates across CUs.</p>
+<p>The WSP rapid status approach is integrated into DFO’s Pacific Salmon Status Scanner. DFO’s Salmon Scanner is an interactive data visualization tool specifically designed for experts to support scientific exploration and help them incorporate science into decision-making processes. Experts are those with expertise on Pacific salmon including stock assessment biologists, Indigenous technical experts, research scientists, habitat, harvest, and hatchery management biologists, etc.</p>
+<p>The objectives of this Science Response are to:</p>
+<ol type="1">
+<li>Summarize the methods, results, and conclusions of the WSP rapid status approach. The</li>
+</ol>
+<p>development of this approach included three key components:</p>
+<ol type="a">
+<li>a performance evaluation of candidate WSP rapid status algorithms against existing</li>
+</ol>
+<p>CSAS reviewed WSP integrated statuses;</p>
+<ol start="2" type="a">
+<li>an evaluation of the application of the rapid status algorithm to years and CUs that</li>
+</ol>
+<p>currently do not have WSP integrated statuses completed;</p>
+<ol start="3" type="a">
+<li>a measure of confidence in WSP rapid status results.</li>
+</ol>
+<ol start="2" type="1">
+<li><p>Document the review processes that have occurred to develop the rapid status algorithm.</p></li>
+<li><p>Provide advice on next steps and future work.</p></li>
+</ol>
+<p>This Science Response Report results from the regional peer review of November 18, 2022 on the Rapid status approximations for Pacific salmon derived from integrated expert assessments under Fisheries and Oceans Canada Wild Salmon Policy.</p>
+<p>Background</p>
+<p>Core Principles</p>
+<p>There are three core principles of the WSP rapid status assessment approach:</p>
+<ol type="1">
+<li>The first core principle is that WSP CUs were identified and rapid statuses were developed based on conservation biology principles (Mace and Lande 1991; Mace et al.&nbsp;1992, 2008; Caughley 1994; National Research Council (US) Committee on Scientific Issues in the Endangered Species Act 1998; McElhany et al.&nbsp;2000; Rodrigues et al.&nbsp;2006), and are aligned with scientific peer reviewed publications (Holtby and Ciruna 2007; Holt 2009, 2010; Holt et al.&nbsp;2009; Grant et al.&nbsp;2011, 2020; Grant and Pestal 2013; DFO 2015, 2016; Brown et al.&nbsp;2019). This ensures that Pacific salmon statuses are scientifically objective, consistent,</li>
+</ol>
+<p>2</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>and comparable across BC/Yukon CUs. Standardized metrics also need to be widely applicable and relatively easy to use and update regularly. Specifically:</p>
+<ol type="a">
+<li><p>The WSP identifies diversity at the scale of CUs, as fundamental units that cannot be recolonized if lost (DFO 2005). Methods to identify CUs (Holtby and Ciruna 2007), revisions to the original CU list (Grant et al.&nbsp;2011; Brown et al.&nbsp;2019), and development of a process for revising CUs (Wade et al.&nbsp;2019) have been peer reviewed through DFO CSAS processes.</p></li>
+<li><p>WSP integrated statuses fall into one of three key status zones: Red (poor), Amber (intermediate) or Green (good), with two intermediate zones (Red/Amber and Amber/Green) (Table 1). The CU WSP integrated status assessments that have been completed were based on ~15 years of methods development and preparation, and occurred through CSAS meetings that took up to three days and 40 experts to complete (Holt 2009; Holt et al.&nbsp;2009; Grant et al.&nbsp;2011, 2020; Grant and Pestal 2013; DFO 2015, 2016). These WSP integrated status assessment processes involved broad collaboration across salmon stock assessment experts both within DFO and across Indigenous groups, consultants, NGOs, etc.</p></li>
+<li><p>The WSP status assessment approach builds on the status assessment approach used by the International Union for the Conservation of Nature (IUCN) for global species (Rodrigues et al.&nbsp;2006; Mace et al.&nbsp;2008; IUCN 2022), which has been adopted by the Committee on the Status of Endangered Wildlife in Canada (COSEWIC) for Canadian species (COSEWIC 2021). A COSEWIC species is roughly equivalent to a WSP CU. The WSP Red status zone largely aligns with COSEWIC’s Endangered status; Amber aligns with Threatened and Special Concern status; and Green aligns with Not at Risk status (See Appendix A.5 in Pestal et al.&nbsp;2023).</p></li>
+</ol>
+<ol start="2" type="1">
+<li>The second core principle is the vetting of data and evaluation of WSP rapid statuses by CU</li>
+</ol>
+<p>experts. DFO stock assessment leads work in collaboration with Indigenous groups, consultants, and others that support or lead salmon stock assessment programs. These CU experts work iteratively to fine tune the CU data used (determining appropriate spawner escapement enumeration sites, years, data treatment, etc.), and select applicable WSP status metrics and metric calculation details, given their knowledge of the data. WSP rapid statuses generated by the algorithm are used to evaluate these settings.</p>
+<ol start="3" type="1">
+<li>The third core principle is continual learning and refinement. This means that data sets and status metrics for each CU will be regularly reviewed and updated, and that the rapid status algorithm will be reviewed through ongoing iterative work with CU experts (described in the second core principle). By evaluating WSP rapid status algorithm outputs for the CUs for which they have expertise, CU experts can identify where decision-rules may be revised or added to the WSP rapid status algorithm. As new CU cases are added, where common new and/or revised decision-rules are proposed, the revised WSP rapid status algorithm performance can be tested for overall improvements.</li>
+</ol>
+<p>Analysis and Response</p>
+<p>Algorithm Development Background</p>
+<p>• A set of candidate WSP rapid status algorithms were developed as decision trees. A CU’s WSP rapid status is assigned depending on answers to a sequence of dichotomous Yes/No questions using status metrics (see Figure 1 for the Learning Tree 3 algorithm). The combination of metrics applied, and their individual values or statuses, leads to a final WSP</p>
+<p>3</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>rapid status determination. The WSP rapid status decision trees approximate the decision- making process that experts used in WSP integrated status assessment processes to determine final CU statuses. Decision-making in WSP integrated status assessments was conducted by experts using standard data summary packages and their own expert input on CU data, within a structured process.</p>
+<p>• Seven candidate algorithms were developed and evaluated (Table 2).</p>
+<p>o Three fitted algorithms: developed using Classification and Regression Tree (CART)</p>
+<p>analyses (more details provided in subsequent sections) (Table 2; Section 2.4.2 in Pestal et al.&nbsp;2023);</p>
+<p>o Four constructed algorithms: developed with a combination of CART decision tree</p>
+<p>elements and common rationale from the WSP integrated status assessment processes (Table 2; Section 2.4.3 in Pestal et al.&nbsp;2023). Common rationale are extracted from the narratives that experts developed in each WSP integrated status assessment process; narratives describe the metrics, statuses, and additional related information that experts used to determine the final integrated WSP status for each CU (see Appendix B in Pestal et al.&nbsp;2023).</p>
+<p>• Depending on the candidate WSP rapid status algorithm, the status for a CU can be assigned as: one of the five status zones described for WSP integrated statuses (above); one of the three key status zones (Red, Amber or Green); or one of two zones (Red or Not Red) (Tables 1 and 2).</p>
+<p>• A performance evaluation was conducted across the seven candidates to select the</p>
+<p>algorithm for WSP rapid status evaluations (see next section: Analysis Outline). A set of six criteria were established to evaluate the performance of each candidate algorithm. These were evaluated with quantitative performance measures and qualitative considerations. Quantitative performance evaluations compared past WSP integrated statuses (considered ‘true statuses’) to WSP rapid statuses generated by each algorithm, using identical data across CUs.</p>
+<p>• Algorithms were developed using a standard suite of metrics that align with those</p>
+<p>applied in the WSP integrated status processes. A standard suite of metrics is foundational to assessing wildlife species’ status. Such a suite has been established globally through the IUCN (Rodrigues et al.&nbsp;2006; Mace et al.&nbsp;2008; IUCN 2022) and adopted in Canada by COSEWIC (COSEWIC 2021). The WSP emphasizes ‘standardized monitoring of wild salmon status’ (DFO 2005; Holt et al.&nbsp;2009).</p>
+<p>• Standardized metrics enable objective and transparent assessments of status, and the production of consistent status results. This is key in order to compare statuses across assessed species, or CUs in the case of the WSP. Standardized metrics also need to be widely applicable and relatively easy to use and update regularly (Mace and Lande 1991).</p>
+<p>• The standard metrics used in WSP rapid status algorithms were generally the same metrics used in the WSP integrated status assessments. These metrics assess abundances and trends in Pacific salmon CUs.</p>
+<p>• The WSP rapid status algorithm provides a method to readily compare statuses</p>
+<p>across CUs and years. The rapid statuses are designed to approximate expert-driven WSP integrated status assessment processes, and similar to IUCN and COSEWIC, be broadly applicable to the assessed group, in this case Pacific salmon CUs. Expert opinion is critical in the selection of appropriate data and metrics to use in the algorithm, and to propose new and revised decision-rules that may improve overall algorithm performance. Expert input is</p>
+<p>4</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>also critical when the WSP rapid statuses are used in more formal processes like LRP status assessments, prioritization activities, state of salmon reporting, climate change vulnerability assessments, etc. The WSP rapid statuses can form the foundation of status assessments required for these more formal processes. Similar to past WSP integrated status assessment processes, expert input can be provided in a structured way in these processes, to fine tune WSP rapid statuses while ensuring that they remain consistent and comparable.</p>
+<p>Analysis Outline</p>
+<p>The WSP rapid status approach has evolved from previously developed peer-reviewed methods (Holt 2009; Holt et al.&nbsp;2009; Grant et al.&nbsp;2011, 2020; Grant and Pestal 2013; DFO 2015, 2016). Analyses details are provided in two accompanying technical reports (Pestal et al.&nbsp;2023; Pestal et al.&nbsp;In prep1). To develop the WSP rapid status algorithm that approximates the detailed WSP integrated status assessment approach, we worked through the following 11 steps (details provided in Pestal et al.&nbsp;2023).</p>
+<ol type="1">
+<li>Compiled the learning data set. This includes key metric values, corresponding metric</li>
+</ol>
+<p>statuses, and WSP integrated statuses (considered ‘true’ statuses) for CUs from the four past WSP integrated status assessments (Grant and Pestal 2013; DFO 2015, 2016; Grant et al.&nbsp;2020).</p>
+<ol start="2" type="1">
+<li><p>Identified six performance criteria to guide the construction, evaluation, and selection of candidate algorithms. Performance evaluation of algorithms included quantitative error evaluation, and qualitative considerations relative to these criteria.</p></li>
+<li><p>Fit Classification and Regression Tree (CART) models to the learning data set: this includes metric values or statuses and corresponding WSP integrated statuses (‘true’ statuses) derived from existing WSP integrated status assessments. Trees were fit using various combinations of predictor (metric values and statuses on those metrics) and response variable (CU status) formats, data subsets, and model fit settings (e.g., complexity penalty, error weighting).</p></li>
+<li><p>Selected candidate CART algorithms (‘fitted algorithms’) to span the range of trees possible</p></li>
+</ol>
+<p>from the available data and settings, from very simple to very complex.</p>
+<ol start="5" type="1">
+<li>Reviewed narratives provided by experts for their CU WSP integrated status designations, in order to extract common rationale for these designations across CUs. These narratives are reprinted in Appendix B in Pestal et al.&nbsp;2023 from published reports for Fraser Sockeye (Grant and Pestal 2013; Grant et al.&nbsp;2020), and unpublished reports for Interior Fraser Coho2 and Southern BC Chinook3.</li>
+</ol>
+<p>1 Pestal, G., MacDonald, B.L., Grant, S.C.H., and Carr-Harris, C. State of the Salmon: Application of the Wild Salmon Policy rapid status approach to Fraser, Skeena, and Nass sockeye, Fraser pink and chum, Interior Fraser Coho, and southern BC Chinook salmon, for spawner abundances up to 2022. Can. Tech. Rep.&nbsp;Fish. Aquat. Sci. In preparation.</p>
+<p>2 Parken, C. 2014. Wild Salmon Policy Biological Status Assessment for Conservation Units of Interior Fraser River Coho Salmon (Oncorhynchus kisutch). Unpublished CSAP Working Paper 2013SAL12.</p>
+<p>3 Brown, G., Holt, C., Thiess, M., and Pestal, G. 2014. Integrated Biological Status Assessments under the Wild Salmon Policy Using Standardized Metrics and Expert Judgement: Southern British Columbia.</p>
+<p>5</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<ol start="6" type="1">
+<li>Developed custom algorithms (‘constructed algorithms’) by combining CART-derived</li>
+</ol>
+<p>algorithm branches from step 4, with common rationale from WSP integrated status assessment processes in step 5.</p>
+<ol start="7" type="1">
+<li>Implemented candidate algorithms as an R function to estimate WSP rapid statuses using</li>
+</ol>
+<p>existing WSP status assessment metrics (learning data set).</p>
+<ol start="8" type="1">
+<li><p>Evaluated algorithm performance according to the criteria identified in Step 2.</p></li>
+<li><p>Complied out-of-sample data sets for years and CUs that do not have WSP integrated</p></li>
+</ol>
+<p>status assessments completed (see next Data Section for adding new data for out-of- sample testing). Conducted out-of-sample testing.</p>
+<ol start="10" type="1">
+<li><p>Reviewed results with salmon stock assessment experts.</p></li>
+<li><p>Performed sensitivity tests (with and without using relative abundance metrics).</p></li>
+</ol>
+<p>Steps 3 and 4 above were repeated through an iterative, collaborative process as authors of Pestal et al.&nbsp;2023 explored the effect of alternative CART settings and identified a shortlist of candidate CART algorithms.</p>
+<p>Steps 5–10 above were also repeated through an iterative process. Constructed algorithms were developed and refined through evaluating performance and reviewing documentation from the status workshops to identify missing components and uncover special considerations.</p>
+<p>Data</p>
+<p>Learning Data Set</p>
+<p>The first phase of algorithm development was to build a learning data set. The purpose of the learning data set was to support the development and evaluation of the candidate algorithms.</p>
+<p>The learning data set for this analysis consists of the exact WSP metric values, metric statuses, and corresponding WSP integrated statuses from the four completed WSP integrated status assessments. This included two assessments for Fraser Sockeye (Grant and Pestal 2013; Grant et al.&nbsp;2020), one for Interior Fraser Coho2 (DFO 2015) and Southern BC Chinook3 (DFO 2016; Brown et al.&nbsp;2019). These assessments covered 47 CUs, or 65 cases, from these three species groups (see Section 2.2.1.1 in Pestal et al.&nbsp;2023 for details). WSP integrated status assessment processes relied on years of work selecting and treating the data, and identifying relevant metrics, benchmarks, and specifications (such as average generation length) required to assess WSP status. Processes also relied on workshops and CSAS peer review to finalize data, metrics, metric interpretation, and status assignments.</p>
+<p>Metric values used in the completed WSP integrated status assessments had to be transformed for the algorithm inputs, because algorithm fitting requires that a single value and status be identified for each of the four metrics used to assess rapid status (see Section 2.2.4.1 in Pestal et al.&nbsp;2023 for details).</p>
+<p>Out-of-Sample Data Set</p>
+<p>An out-of-sample data set was also built to support the evaluation of candidate algorithms for years with no existing WSP integrated status assessments. This data set was also used for the selected algorithm on CUs with no existing WSP integrated status assessments.</p>
+<p>For each group of new CUs, such as those used in the out-of-samples test, and when adding new annual data for previously assessed CUs, we worked with the CU stock assessment experts to assign and evaluate statuses. Vetting data in collaboration with CU experts is the second core principle of WSP rapid status assessments. For each CU, initial development of a</p>
+<p>6</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>WSP rapid status data set requires that DFO CU stock assessment experts work in collaboration with their DFO teams, Indigenous groups, consultants, non-governmental organizations (NGOs) and others that support, lead or collaborate on salmon stock assessment programs. Through the vetting process, we eliminate any data sets or metrics that would not produce reliable status results. This also ensures that data selection and treatment are standardized.</p>
+<p>We moved through the following steps to develop data sets for new years and CUs with no previous WSP integrated status assessments (as described in Pestal et al.&nbsp;In prep1):</p>
+<ol type="1">
+<li><p>Review the CU list to identify and document any changes from the last published version.</p></li>
+<li><p>Review CU-level data, document any major changes from the last published version, and</p></li>
+</ol>
+<p>calculate status metrics.</p>
+<ol start="3" type="1">
+<li>Review a range of input specifications that identify applicable data, data treatment and</li>
+</ol>
+<p>appropriate WSP status metrics for the CU. This includes selecting spawner escapement enumeration sites that are appropriate for status assessments, start years for data that will ensure consistent escapement time series, appropriate gap-filling and data smoothing treatments if required, appropriate relative-abundance benchmarks if available and applicable, etc.</p>
+<ol start="4" type="1">
+<li>Apply the WSP rapid status algorithm with a range of input specifications, as recommended</li>
+</ol>
+<p>by CU experts, and review preliminary rapid statuses.</p>
+<ol start="5" type="1">
+<li>Repeat steps 3-4 until there is consensus among the stock assessment experts that the</li>
+</ol>
+<p>WSP rapid statuses generated by the algorithms are reasonable.</p>
+<p>Pestal et al.&nbsp;(In prep)1 documents the data and specification details for each group of CUs included in the case studies. Here we briefly list any major changes made to the CU list or data treatment steps that would cause the data used for this assessment to deviate from previously published versions:</p>
+<p>• Fraser Sockeye: No changes in the CU list. No changes in the data treatment for 23 of the 24 CUs since the last integrated status assessment. Data for 2016–2019 were added using consistent data treatment methods (Grant et al.&nbsp;2020). The only exception is Cultus-L, which was changed from a previous Red status to data deficient. This change was due to unresolved questions regarding how to interpret the data for recent years affected by the captive brood (hatchery enhancement) program.</p>
+<p>•</p>
+<p>Interior Fraser Coho: no changes in the CU list and the data treatment since the last integrated status assessment2 (DFO 2015), just additional years of data.</p>
+<p>• Southern BC (SBC) Chinook: No changes in the CU list. For most CUs, the data treatment was as per the last published (Brown et al.&nbsp;2019), using foundations from an unpublished data report3. Changes were implemented for several CUs:</p>
+<p>o Data treatment for the three west coast Vancouver Island (WCVI) CUs was revised for consistency with a recent case study reviewed by CSAS (Holt et al.&nbsp;2023b) and further revised based on guidance from CU experts. Specifically, the set of indicator sites used to build the CU-level time series was revised based on new information (Proportionate Natural Influence (PNI), Withler et al.&nbsp;2018) on hatchery contribution. This PNI-based revision to CU-level time series is potentially applicable to many other SBC Chinook CUs that are currently data deficient due to the enhancement rating for indicator sites, and could greatly expand coverage of the rapid status scan (e.g., Inner South Coast).</p>
+<p>7</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>o New data were provided by BC Interior staff for Okanagan Chinook, using estimates of</p>
+<p>natural-origin spawners developed by the Okanagan Nation Alliance.</p>
+<p>• Fraser Pink: No changes in CU list. Data provided by DFO (M. Townsend and J.A. Tadey,</p>
+<p>DFO).</p>
+<p>• Fraser Chum: No changes in CU list. Data provided by DFO (M. Townsend and J.A. Tadey,</p>
+<p>DFO).</p>
+<p>• Skeena and Nass Sockeye: Stock-level data were recently peer reviewed (Pestal et al.&nbsp;In prep4). Stocks mostly match up with WSP CUs. For cases where stock-level data combine multiple CUs, mostly groups of 2–3 small lakes, CU-level data were developed by assigning the available time series to the largest CU and assessing the smaller CUs as data deficient. This is consistent with how the same data issue was handled for the Chilko-S/Chilko-ES combined time series in the Fraser Sockeye status assessments. For Babine Lake, the three CUs identified by Holtby and Ciruna (2007) were revised to timing-based CUs (Early, Mid, Late). Pinkut and Fulton were excluded from the WSP rapid status assessment data sets because the majority of Sockeye production comes from large-scale actively-managed spawning channels.</p>
+<p>WSP Metrics</p>
+<p>The WSP rapid status approach uses two abundance metrics (relative abundance and absolute abundance) and two trend in abundance metrics (long term trend and percent change). Benchmarks unique to each metric were used in past WSP integrated status assessments to delineate the metric’s Red, Amber, and Green status zones.</p>
+<p>All four metrics (relative abundance, absolute abundance, long-term trend, and percent change) incorporate an estimate of the generational average of spawner abundance in their calculation. However, this was calculated differently for different groups of CUs. The generational average is calculated as the geometric mean across the number of years corresponding to the most common age class (e.g., four years for most Fraser Sockeye). For Fraser Sockeye CUs, spawner time series were smoothed prior to calculating generational averages, whereas for Interior Fraser Coho and Southern BC Chinook, generational averages were calculated using unsmoothed time series, in part because of high proportions of missing data that made generational smoothing unreliable.</p>
+<p>More details on the metrics are as follows:</p>
+<p>• Relative abundance: This metric compares a CU’s current generational average of</p>
+<p>spawner abundance (geometric mean) to upper and lower benchmarks. For the purpose of the WSP rapid status algorithm process, relative abundance metric values are calculated as two proportions (current generational average abundance / lower benchmark; current generational average abundance / upper benchmark). Benchmarks are estimated with a) stock-recruitment models (Holt et al.&nbsp;2009; Grant et al.&nbsp;2011; Grant and Pestal 2013), b) freshwater habitat capacity models (Parken et al.&nbsp;2006; Grant et al.&nbsp;2011, 2020; Grant and Pestal 2013; DFO 2015, 2016), or c) percentiles of the spawner abundance time series (Holt et al.&nbsp;2018). These benchmarks are unique to each CU. Across all approaches, the relative</p>
+<p>4 Pestal, G.P., Carr-Harris, C., Cox-Rogers, S., English, K., Alexander, R., and the Skeena Nass Sockeye Technical Working Group. 2023. Sockeye Salmon (Oncorhynchus nerka) from the Skeena and Nass Basins, British Columbia: Population Structure and Spawner-Recruit Data. Can. Tech. Rep.&nbsp;Fish. Aquat. Sci. In preparation.</p>
+<p>8</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>abundance metric is applied only when CU experts both confirm its applicability to the existing CU data, and provide benchmarks they consider appropriate.</p>
+<p>• Stock-recruitment-based benchmarks are recommended for CUs with applicable stock- recruitment data. Using this method, the lower benchmark is Sgen, the escapement that would result in recovery to SMSY in one generation, and the upper benchmark is 80% SMSY. SMSY is the spawner abundance at maximum sustainable yield (Holt 2009, 2010; Holt et al. 2009). Where these were used for Southern BC Chinook CUs, the upper benchmark was 85% SMSY to align with the Pacific Salmon Treaty (PST) process.</p>
+<p>• Where stock-recruitment data are not available, benchmarks derived from a CU’s freshwater habitat capacity have been used for the relative abundance metric. Benchmarks for one Fraser Sockeye CU (Chilliwack-ES) were based on the capacity of the rearing lake used during the freshwater juvenile stage (Holt et al.&nbsp;2009; Grant et al.&nbsp;2011). For Southern BC Chinook CUs, habitat-capacity benchmarks were based on the CU’s watershed area (Parken et al.&nbsp;2006) using Sgen (lower benchmark) and 85% SMSY (upper benchmark), to align with PST benchmarks. However, expert consensus in the WSP integrated status workshop was to not use these benchmarks for CUs where only relative indices of abundance were available, which includes most of the Southern BC Chinook CUs (DFO 2015). Recent work has identified habitat-based biological benchmarks for WCVI Chinook CUs based on habitat capacity for sites included in the index of abundance (Holt et al. 2023b), and these have been incorporated into the out-of-sample data sets: the retrospective for CUs with previous WSP integrated status assessments completed (Pestal et al.&nbsp;2023), and for CUs with no previous assessments (Pestal et al.&nbsp;In prep1).</p>
+<p>• Percentile benchmarks were not used in past WSP integrated status assessment processes (learning data set), and were not provided by experts for new CUs in the out-of-sample data set.</p>
+<p>• Absolute abundance: This metric compares the average escapement of the most recent generation (geometric mean) to COSEWIC criterion D1 and part of criterion C, which are used to define ‘Threatened Species’ (COSEWIC 2021). The lower benchmark is set at 1,000 to align with criterion D1, and the upper benchmark is set at 10,000, which is used in combination with other abundance metrics under criterion C (COSEWIC 2021). Similar to the relative abundance metric, metric values are calculated as two proportions (current generational average abundance / lower benchmark; current generational average abundance / upper benchmark).</p>
+<p>• The absolute abundance benchmarks are grounded in fundamental principles of population and conservation ecology. The value 1,000 is a critical threshold from conservation biology (National Research Council (US) Committee on Scientific Issues in the Endangered Species Act 1998; McElhany et al.&nbsp;2000). Below 1,000 a population is more at risk from demographic stochasticity, such as randomly in a given year producing mostly males or females. They also are at greater risk from environmental change and catastrophic events, have greater risk of accumulating deleterious genetic mutations, and have a low evolutionary potential to adapt to environmental change.</p>
+<p>• The value 10,000 is an upper limit on population size particularly at risk from environmental variation and catastrophes. Population sizes above 10,000 are protected from moderate to high environmental variation, as one example (National Research Council (US) Committee on Scientific Issues in the Endangered Species Act 1998; McElhany et al.&nbsp;2000). Currently, deteriorating environmental conditions are increasingly occurring in salmon habitats due to climate change, with more extreme events like flooding, drought, fires, and heatwaves (Bush</p>
+<p>9</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>and Lemmen 2019; Cheung et al.&nbsp;2021; IPCC 2022; Cheng et al.&nbsp;2023). These events can also occur concurrently, compounding their impacts on wildlife species.</p>
+<p>• For these reasons, the IUCN and COSEWIC include small population size criteria to account for increased extinction risk within their status assessment process (COSEWIC 2021; IUCN 2022). Wildlife species assessed by these organizations may be perpetually classified in Threatened or Endangered at risk categories if populations are small. Conservation science shows that higher extinction risk exists for such small populations regardless of whether they have remained stable at low abundances for several generations.</p>
+<p>• The 1,000 benchmark was used by experts in the past WSP integrated status assessments, in combination with other metrics and additional information, to determine CU status, as documented in the narratives for Fraser Sockeye, Southern BC Chinook and Interior Fraser Coho (see Appendix B in Pestal et al.&nbsp;2023 for narratives reprinted from CSAS publications).</p>
+<p>• Long-term trend in abundance: This metric compares the ratio of the current generational average (geometric mean) spawner abundance to the long-term average (geometric mean). Lower and upper benchmarks for this metric are 50% and 75%, respectively.</p>
+<p>• Percent change (short-term trend in abundance): This metric quantifies the linear change in total spawner abundance (or effective female spawners for Fraser Sockeye CUs) over the most recent three generations. Lower and upper benchmarks for this metric are -25% and -15%, respectively.</p>
+<p>• To calculate the percent change metric, all CU spawner abundance time series were log-</p>
+<p>transformed. For most CUs, the time series was also smoothed using a running generational average (Fraser Sockeye, Fraser Chum, Fraser Pink, Interior Fraser Coho, and Skeena- Nass Sockeye). However, for Interior Fraser Coho and Southern BC Chinook, no smoothing was done, in part because of high proportions of missing data that made generational smoothing unreliable.</p>
+<p>Fitted Algorithms using CART Analyses</p>
+<p>CART analyses were a useful starting point for algorithm construction (Section 2.4.2 in Pestal et al.&nbsp;2023). Three algorithms were developed using CART analyses: Minimalist (Table 2; Appendix D.1 in Pestal et al.&nbsp;2023), Fancy Pants (Table 2; Appendix D.2 in Pestal et al.&nbsp;2023), and Categorical Realist (Table 2; Appendix D.3 in Pestal et al.&nbsp;2023).</p>
+<p>Briefly, CART searches for a binary split in available data or cases, which uses a criterion to divide the original group of cases into two smaller groups of cases. Tree branches are added as these new groups are further split into even smaller groups.</p>
+<p>What determines the ‘best’ grouping of cases depends on error rates (i.e., number of incorrect classifications), error type (e.g., false positives vs.&nbsp;false negatives in a classification tree that screens for a medical condition), and tree complexity (i.e., the number of branches on the tree). In CART, the fitting step balances the number of branches (complexity) against the magnitude and type of misclassifications.</p>
+<p>We used the R package Rpart (Therneau and Atkinson 2023) to fit classification trees to our learning data set of 65 completed WSP status assessments, using the metrics as predictor variables and WSP integrated statuses as the response variables. Rpart uses cross-validation to estimate error between predictor and response variables. We explored alternative fitted trees working through variations of response variables, predictor variables, model fits, and data sub- setting (Section 2.4.2 in Pestal et al.&nbsp;2023). When using metric values as the predictor variable,</p>
+<p>10</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>the CART analysis finds threshold metric values to create binary splits in the data. These thresholds do not align with the WSP metric benchmarks in all cases (see below).</p>
+<p>Constructed Algorithms</p>
+<p>Using the CART-fitted algorithms as a baseline, we built constructed algorithms (Section 2.4.3 in Pestal et al.&nbsp;2023) to more closely align with the six performance criteria (next section). We started with the construction of two candidate algorithms for a detailed performance evaluation, one very simple: Simply Red (Table 2; Appendix D.4 in Pestal et al.&nbsp;2023), and the other more complex: Learning Tree 1 (Table 2; Appendix D.5 in Pestal et al.&nbsp;2023). Subsequently, the complex algorithm went through two further steps of evolution, producing the Learning Tree 2 (Table 2; Appendix D.6 in Pestal et al.&nbsp;2023) and Learning Tree 3 (Table 2; Appendix D.7 in Pestal et al.&nbsp;2023).</p>
+<p>The Learning Tree evolution from version one to three illustrates the adaptive approach we are proposing for future implementation of this algorithm. We constructed the Learning Tree family of algorithms using decision nodes found in the CART-fitted trees, and integrated these with the common rationale extracted from existing WSP integrated status assessments (Appendix B in Pestal et al.&nbsp;2023). Development of the Learning Tree algorithms was highly iterative. As each branch evolved, this algorithm was evaluated for biological rationale and consistency with the WSP integrated status assessment processes, and error rates were investigated.</p>
+<p>Metric thresholds in the Learning Tree algorithm were based on those determined through CART analyses, though some were minorly adjusted to better align with the data and common rationale from WSP integrated status assessments. These thresholds differ from WSP metric benchmarks in some cases, particularly where they are being applied in sequence with multiple other metrics:</p>
+<p>• Absolute abundance: the lower threshold equals the WSP lower benchmark plus 50%;</p>
+<p>specifically, this is a buffer of 500 on the COSEWIC metric benchmark of 1,000, increasing the threshold to 1,500. This aligns with how experts in past WSP integrated status assessment processes considered uncertainty in the data, and how experts compared each of the past four to twelve years to the COSEWIC criterion D1 (small population size) threshold of 1,000. Since the algorithm compares a CU’s current generational average of spawner abundances, not individual years, to the COSEWIC threshold, applying a buffer to the benchmark for this metric is consistent with the precautionary approach taken by experts when considering this metric.</p>
+<p>• Relative abundance: the upper threshold equals the WSP upper benchmark plus 10%; this buffer was included to account for how this metric was treated in the WSP integrated status processes. In the Learning Tree 3 algorithm, the relative abundance lower threshold is equal to the WSP lower benchmark.</p>
+<p>• Long term trend: the lower threshold is 79%, while the WSP lower benchmark is 50%; the upper threshold is 233%, while the WSP upper benchmark is 75%. Long term trend thresholds applied in the Learning Tree 3 algorithm emerged from the CART analyses. These thresholds are applied by the algorithm in combination with additional information, namely, the absolute abundance metric, if available. The upper threshold (233%) is only applied in concert with the percent change metric, and is conditional on that value.</p>
+<p>• Percent change: the lower threshold is -70%, while the lower benchmark is -25%. The</p>
+<p>Learning Tree 3 algorithm only applies one threshold to the percent change metric, -70%. This threshold emerged from the CART analyses, with minor adjustments to better align with the data and common rationale used in the WSP integrated status assessment processes</p>
+<p>11</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>(see subsequent sections). The percent change metric is conditionally applied by the Learning Tree 3 algorithm. That is, it is applied if the long term trend metric has a value greater than 79%, and if an absolute abundance metric is available, the value of this metric falls above it’s upper benchmark (equivalent to a generational average of 10,000 spawners).</p>
+<p>Performance Criteria</p>
+<p>We iteratively evaluated and altered candidate algorithms based on their performance against a set of predetermined criteria. For some algorithms, this was done by adjusting the CART tree fit settings. For other algorithms we actively revised or reorganized the decision nodes (Section 2.4 in Pestal et al.&nbsp;2023). The criteria used to guide the construction and evaluation of candidate algorithms were as follows:</p>
+<ol type="1">
+<li>Algorithms should have relatively low error rates when comparing WSP rapid statuses to</li>
+</ol>
+<p>integrated statuses, the latter which are assumed to be ‘true’ statuses.</p>
+<ol start="2" type="1">
+<li>Algorithm errors should be precautionary, meaning that estimated WSP rapid statuses</li>
+</ol>
+<p>should err on the side of being poorer, indicating a higher risk of extirpation, when compared to ‘true’ WSP integrated statuses. For example, if a ‘true’ integrated WSP status is Amber, a status error should be more likely to be Red over Green.</p>
+<ol start="3" type="1">
+<li>Algorithms must be broadly applicable across CUs with different data types and metric</li>
+</ol>
+<p>availability.</p>
+<ol start="4" type="1">
+<li>Algorithms that estimate WSP rapid status for three main status zones, Red, Amber, and</li>
+</ol>
+<p>Green are preferred.</p>
+<ol start="5" type="1">
+<li><p>Algorithms should reflect thresholds that emerged as those distinguishing statuses in WSP integrated status assessment. These tend to be equal to or more biologically conservative than WSP benchmarks from Holt et al.&nbsp;(2009).</p></li>
+<li><p>Algorithm decisions should adhere to the logic applied in the WSP integrated status</p></li>
+</ol>
+<p>assessments. This includes the following common rationale applied in the detailed WSP integrated status assessment processes. Narratives from past processes are reprinted in Appendix B in Pestal et al.&nbsp;(2023). The original publications are published through CSAS for Fraser Sockeye (Grant and Pestal 2013; Grant et al.&nbsp;2020) and unpublished for Interior Fraser Coho2 and Southern BC Chinook3.</p>
+<p>Performance of the algorithms on criteria 1, 2, and 3 can be quantified using error rates, measures of bias (specifically over-prediction), and completion rates, respectively. Completion rate is the proportion of the 65 cases in the learning data set for which rapid status could be assigned. These quantitative performance measures were calculated across all CUs and by species.</p>
+<p>Performance on criterion 4 can be easily evaluated by checking that all three simple WSP integrated status zones (Red, Amber, and Green) are included as branches of the algorithm trees.</p>
+<p>Performance on the remaining criteria, 5 and 6, is subjective and was evaluated by experts.</p>
+<p>Quantitative Performance Measures</p>
+<p>For the 65 cases in the learning data set, we compared WSP rapid statuses generated by each of the candidate algorithms to existing WSP integrated statuses (considered ‘true’ statuses).</p>
+<p>12</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>We used the entire learning data set to evaluate performance using the six criteria above. Due to the small sample size, we did not use cross-validation approaches that split data into learning and testing data sets, as is commonly done for forecasting models (see review in MacDonald and Grant 2012). Cross-validation is generally recommended to minimize the risk of over-tuning models to the idiosyncrasies of the data being used; this is intended to minimize overly optimistic expectations for how models will perform with new data sets (Picard and Cook 1984). However, the learning data set had a relatively small sample, making cross-validation inappropriate (Picard and Cook 1984).</p>
+<p>Instead, to prevent overfitting the candidate algorithms to CUs and years in the learning data set, and to ensure that the algorithms were broadly applicable to all BC and Yukon CUs, we applied the following methods:</p>
+<p>• We developed performance criteria to guide the construction, evaluation and selection of</p>
+<p>candidate algorithms (see previous section). If we had relied exclusively on model performance determined through cross-validation, this would have increased the risk of selecting an algorithm that is ‘overfitted’ to the learning data set.</p>
+<p>• Algorithm development included both fitted and constructed algorithms:</p>
+<p>o Three fitted algorithms were developed using CART analyses (Section 2.4.2 in Pestal et al.&nbsp;2023), which uses cross-validation to determine error rates and types. Using CART analyses, algorithm fit is determined by balancing error rates and types, and tree complexity. Different fitted algorithms were developed by altering both the complexity setting from low to high, and altering the use of metric values or statuses. CART analysis was conducted using the R package rpart (Therneau and Atkinson 2023).</p>
+<p>o Four constructed algorithms (Section 2.4.3 in Pestal et al.&nbsp;2023) were developed using the CART algorithms as a baseline. These algorithms were built to more closely align with the performance criteria, and incorporate common rationale extracted from existing WSP integrated status assessments. Considering common rationale that would be applicable to a broad range of CU data types reduced the risk of overfitting algorithms to the learning data set.</p>
+<p>• We conducted an out-of-sample test with the seven candidate algorithms for years that do not have WSP integrated status assessments completed (Pestal et al.&nbsp;2023). We also did an out-of-sample test for the selected Learning Tree 3 algorithm for CUs that were not used in the learning data set (Pestal et al.&nbsp;2023). Experts verified statuses in these cases to confirm the applicability of the algorithm(s) to these new data sets.</p>
+<p>To calculate prediction errors we first converted statuses to scores from 1 = Green to 5 = Red (Table 1). We then calculated the difference between WSP integrated status scores and the rapid status scores (i.e., observed-predicted) (Section 2.4.4 in Pestal et al.&nbsp;2023). A negative error means that the algorithm predicted a poorer status than the WSP integrated status. Note that candidate algorithms differed in terms of possible outcomes (e.g., whether Red/Amber and Amber/Green options are included), and the status scores were adapted accordingly.</p>
+<p>We used the following quantitative performance measures to compare algorithm performance for all cases:</p>
+<p>• Number and percent correct: the total number of cases and the percent of cases where the rapid status assigned by the algorithm matches the WSP integrated status (‘true’ status). This measures alignment with Criterion 1. Note that percent correct is calculated from the number of completed cases (see below), not the total number of cases.</p>
+<p>13</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>• Number and percent over-predicted: the total number and percentage of cases with positive errors in status estimates; where the rapid status assigned by the algorithm is better than the WSP integrated status. This measures alignment with Criterion 2. Percent over- predicted is calculated from the number of completed cases.</p>
+<p>• Number and percent completed: the number and percent of cases where the algorithm was able to generate rapid statuses. This partially measures alignment with Criterion 3 to the extent that different data types and metric availability are represented in the learning data set.</p>
+<p>• Median, mean, and range of prediction errors: summary statistics that describe the</p>
+<p>distribution of prediction errors and identify any bias.</p>
+<p>In addition, we cross-tabulated WSP integrated statuses against the WSP rapid statuses predicted by an algorithm. The frequency of each type of possible error resulting from misclassification was estimated. For example, a CU with a Green WSP integrated status that is misclassified by the algorithm as Amber will have the same error of +2 as an Amber CU misclassified as Red, but the biological implications of the error are different. The practical implications of errors were evaluated qualitatively through discussions with CU experts.</p>
+<p>Algorithm Performance Evaluation</p>
+<p>Performance was compared across the four fitted and three constructed rapid status algorithms (Tables 2 and 3; Figures 2 and 3). The Learning Tree 3 rapid status algorithm (Figure 1; Table 4) was selected as the best performing among the suite of seven candidate algorithms (Table 2 and 3; Figures 2 and 3; Section 3.2 in Pestal et al.&nbsp;2023). It is applicable to the largest proportion of CUs in the learning data set (100% of cases), with the highest accuracy (83% correct overall, 84% Fraser Sockeye, and 80% for SBC Chinook and Interior Fraser Coho). It also adheres to the decision-making processes that occurred in the WSP integrated status assessments. Since the Learning Tree 3 algorithm has the highest completion rate for the learning data set, it should also be the algorithm that is most widely applicable to other species and areas (Table 3).</p>
+<p>The Learning Tree 3 was designed to account for differences in both data type (relative index versus absolute abundance) and metric availability. The Learning Tree 3 provides branch options that are conditional on whether or not certain metrics are available for the CU. Outside of the learning data set, few CUs in the Pacific Region will have absolute or relative abundance metrics available. Flexibility to accommodate differing metric availability is key to ensuring applicability across a broad range of data types across BC and Yukon CUs.</p>
+<p>Confidence Ratings for WSP Rapid Status Learning Tree 3 Algorithm</p>
+<p>Greater confidence in status is associated with some metrics and status results. In the WSP integrated status assessments, assigned statuses were more consistent across experts in some cases over others. In particular, cases that had relative abundance and absolute abundance metrics were more consistently assessed than those with only trend metrics and relative index data (Pestal et al.&nbsp;2023). To apply these metrics, a CU must have higher quality data to be able to estimate benchmarks, or estimate this metric’s annual value for comparison with its benchmarks. Therefore, we have more confidence in statuses that are assigned using the absolute and relative abundance metrics, than statuses assigned using long-term trend metrics.</p>
+<p>The long-term trend metric compares a CU’s metric value (ratio of the current generational average spawner abundance to the long-term average) to the metric’s benchmarks. The CU’s value for this metric is influenced by the length of the time series and degree of fisheries</p>
+<p>14</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>exploitation that occurred early in the time series. This metric can also be calculated for lower quality data, including indices of abundances. For these reasons, this metric was considered less reliable to assess status by experts in past WSP integrated status assessment processes.</p>
+<p>To account for these differences in confidence identified from past WSP integrated status assessment processes, we used the branches of the algorithm to identify confidence in the statuses being assigned, based on the combination of metrics, metric values, and data types that determine each status node. Through expert judgement we can bin the end nodes into three confidence zones: High, Medium, and Low, and then evaluate this binning by referring to the learning data set CUs that end up in each zone (Section 2.5 in Pestal et al.&nbsp;2023).</p>
+<p>Confidence ratings below were applied to each end node of the Learning Tree 3 algorithm (Figure 1) as follows:</p>
+<p>• High confidence – Red: either absolute abundance is available and falls below 1.5 times the lower benchmark on this metric (node 3), OR relative abundance benchmarks are available and generational average spawner abundance falls below the lower benchmark (nodes 19 or 23).</p>
+<p>• High confidence – Green: abundance is above the upper benchmark on the absolute</p>
+<p>abundance metric, or this cannot be assessed AND relative abundance benchmarks are available and generational average spawner abundance falls above 1.1 times the upper benchmark (node 36).</p>
+<p>• High confidence – Amber: abundance is above the upper benchmark on the absolute abundance metric, or this cannot be assessed; relative abundance benchmarks are available and generational average spawner abundance fall between the lower and 1.1 times the upper benchmarks (node 37).</p>
+<p>• Medium confidence – Red: (1) absolute abundance falls between the upper and 1.5 times the lower benchmarks and status is based on long-term trend (node 21), or (2) abundance is above the upper benchmark on the absolute abundance metric, or cannot be assessed, relative abundance metrics are not available but status can be assessed based on long-term trends alone (nodes 17) or with both long-term and percent change (short-term) trends (node 33).</p>
+<p>• Medium confidence – Amber: either (1) have relative abundance benchmark and absolute abundance is between the upper and 1.5 time the lower benchmark (node 22), or (2) relative abundance metrics are not available, but absolute abundance is between the upper benchmark and 1.5 times the lower benchmark, and based on long-term trend (node 20).</p>
+<p>• Low confidence – Amber: abundance falls above the upper benchmark on the absolute</p>
+<p>abundance metric, or cannot be evaluated on this metric, and relative abundance metrics are not available so CU status is assessed based on long-term trend and percent change (node 65).</p>
+<p>• Low confidence – Green: abundance falls above the upper benchmark on the absolute</p>
+<p>abundance metric, or cannot be evaluated on this metric; relative abundance metrics are not available; status is based on trends alone (long-term and percent change) (node 64).</p>
+<p>Rapid statuses assigned by the Learning Tree 3 were categorized as High, Medium or Low confidence for most of the 65 cases in the learning data set (Section 3.3 in Pestal et al.&nbsp;2023; Table 5). These confidence ratings were compared to the errors between the rapid statuses and the WSP integrated statuses (considered ‘true’ statuses). Given the high overall success rate of this algorithm, there were only a few errors. Specifically, there were five cases where the</p>
+<p>15</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>algorithm assigned a better status than the WSP integrated statuses, and did so with High confidence. These are the outcomes we would want to minimize, since they are less precautionary.</p>
+<p>In all five cases, the discrepancy between WSP rapid and integrated statuses is small, and can be readily explained by the additional information considered in the expert deliberations, as documented in the status narratives for each CU within the WSP assessment reports (Appendix B in Pestal et al.&nbsp;2023). In all of these cases, Learning Tree 3 generates rapid statuses that match the starting point for the experts’ status discussions, but the algorithm cannot capture the nuances of additional information used in the workshop consensus to downgrade the statuses by half a category (i.e., from Amber to Red/Amber or from Green to Amber/Green). On the 3- status scale, these half-category statuses were then simplified to the lower status (i.e., Red/Amber became Red, Amber/Green became Amber), and therefore these show up as a full category error in the comparison.</p>
+<p>Out-of-Samples Test: Applying Learning Tree to CUs and Years without WSP Integrated Status Assessments</p>
+<p>We evaluated the application of the Learning Tree 3 rapid status algorithm to years and CUs that currently do not have WSP integrated statuses assigned (Table 6; Pestal et al.&nbsp;In prep1). Six salmon case studies, with a total of 105 CUs, were used for this evaluation (Table 6). This includes three groups of salmon not previously assessed for WSP integrated status: Skeena- Nass Sockeye, Fraser Pink and Fraser Chum. This also includes the three groups of salmon previously assessed: Fraser Sockeye, Southern BC Chinook and Interior Fraser Coho. For these latter three, the evaluation of WSP rapid status is expanded to years with no WSP integrated statuses assigned. Each CU and year with sufficient data was assigned a WSP Red, Amber or Green rapid status and High, Medium or Low confidence rating.</p>
+<p>There were a total of 69 CUs where a WSP rapid status could be assigned to at least one year of data (Table 6). There were 36 CUs for which WSP rapid statuses could not be assigned for any year due to insufficient data or other considerations (Table 6). Summaries for each CU, showing spawner abundance trends, metrics, and rapid statuses over time, are provided in Appendices A–G in Pestal et al.&nbsp;(In prep.1). An example CU showing the summary information is presented in Figure 4.</p>
+<p>WSP rapid statuses for Fraser Pink, Fraser Chum, and Skeena/Nass Sockeye Salmon were reviewed by CU experts from DFO Stock Assessment (Interior Fraser Area and North Coast Areas). These experts agreed that data compilation and treatment methods, metric calculations, and WSP rapid status outputs were relevant and accurate according to their expert knowledge of the available data sets. Out-of-sample WSP rapid status results for Fraser Sockeye, Coho, and Southern BC Chinook were generated using the same data treatment methods and metric calculations previously reviewed and applied in the WSP integrated status assessments. DFO stock assessment experts reviewed the out-of-sample WSP rapid status outputs for these CUs.</p>
+<p>For Fraser Sockeye, Southern BC Chinook and Interior Fraser Coho, the Learning Tree 3 algorithm was able to assign rapid statuses to the years before and after the WSP integrated status assessments were conducted (Table 7). This was expected, since the rapid status algorithm was designed using past WSP integrated status assessments for these CU groups in the learning data set (Pestal et al.&nbsp;2023). These CUs covered both absolute abundance and relative index data types and included a range of metric availability.</p>
+<p>The application of WSP rapid statuses to Skeena-Nass Sockeye, Fraser Pink, and Fraser Chum CUs increased the number of assessed CUs to 69 from 43 CUs previously assessed through</p>
+<p>16</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>WSP integrated status assessments (Table 6). This was anticipated since the Learning Tree 3 algorithm had the highest completion rate for the learning data set (Pestal et al.&nbsp;2023), and is applicable to other species and areas. Also, the new data sets met minimum data requirements to assess WSP rapid status. Learning Tree 3 was designed to account for differences in both data type and metric availability through its multiple branch options. This flexibility is key to ensuring applicability across CUs both within the learning data set and as the algorithm is applied to additional data sets in the future.</p>
+<p>The number of CUs that can be assessed has generally increased over time, and the relative mix of Red, Amber, and Green assigned statuses has changed. Specifically, across all 105 CUs in the six case studies, the percentage of Red and Amber CU statuses increased over time, and, conversely, the percentage of Green CU statuses decreased (Table 8; Figure 5). The same pattern is observed when looking at only the CUs where a status could be assigned each year. For example, Table 8 shows that:</p>
+<p>• For 1995, WSP rapid statuses could be assigned to 36 CUs. Seven were assigned Red status (19% of assessable CUs, 7% of all CUs), 14 were assigned Amber status (39% of assessable CUs, 13% of all CUs), and 15 were assigned Green status (42% of assessable CUs, 14% of all CUs) (Table 8).</p>
+<p>• For 2018, one of two years when the largest number of CUs could be assessed (67 out of</p>
+<p>105 CUs in the six case studies), there were a total of 28 CUs with Red rapid statuses (42% of assessable CUs, 27% of all CUs), 29 CUs assigned Amber status (43% of assessable CUs, 27% of all CUs), and 10 CUs assigned Green status (15% of assessable CUs, 10% of all CUs) (Table 8).</p>
+<p>Any unassessed years are due to data deficiencies, including no surveys, no assessment of sites classified as ‘wild’, and unresolved questions regarding data treatment.</p>
+<p>Since the last WSP integrated status assessments, the WSP rapid statuses indicate that statuses have deteriorated for many CUs (Sec. 4.2 of Pestal et al.&nbsp;2023). Specifically, WSP rapid statuses for 11 of the 23 Fraser Sockeye CUs, and for 4 of the 15 Southern BC Chinook CUs with enough data from wild sites to complete an assessment (Sec. 4.2 of Pestal et al. 2023) deteriorated. This highlights the urgent need for up-to-date status assessments and demonstrates the usefulness of the recommended algorithm.</p>
+<p>Sensitivity Analyses</p>
+<p>The relative abundance metric sensitivity test compared how rapid statuses changed when this metric was included or excluded from a candidate algorithm (Table 9). The relative abundance metric was available for 37 of the 65 cases in the learning data set. Details on what CUs included this metric included are available in a separate report (see Section 3.5 in Pestal et al. 2023).</p>
+<p>Completion rate was almost 100% for the three Learning Tree algorithms for this sensitivity analysis. As the Learning Tree evolved from 1 to 3, the algorithm became more consistent in the statuses assigned with the relative abundance metric versus without. Statuses changed when the relative abundance metric was removed for the following number of cases: Learning Tree 1: 17/37 cases; Learning Tree 2: 13/37 cases; Learning Tree 3: 9/37 cases (Table 9).</p>
+<p>Learning Tree 3 is more precautionary when the relative abundance metric is not available, compared to when it is available, and compared to Learning Trees 1 and 2. In most cases (7/9), the rapid status assigned with less information (i.e., without the relative abundance metric) was</p>
+<p>17</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>poorer than with it included (Table 9: Number Worse by 1 status zone: 5; Number Worse by 2 status zones: 2; out of the total Number Changed: 9).</p>
+<p>Layers of Precaution</p>
+<p>We chose to be precautionary at multiple stages of the WSP rapid status algorithm process to align this approach with the WSP integrated status assessment approach, which provides ‘true’ CU statuses. Precautionary actions taken were:</p>
+<ol type="1">
+<li>To evaluate algorithm performance, we downgraded mixed WSP integrated statuses to the</li>
+</ol>
+<p>poorer of the two statuses (Red/Amber became Red, Amber/Green became Amber).</p>
+<ol start="2" type="1">
+<li>In the evaluation of alternative algorithms, we looked at the direction of errors and</li>
+</ol>
+<p>considered underestimates of status (e.g., assigning Red status to an Amber CU) less of a concern than overestimates of status (e.g., assigning a Green status to an Amber CU). This relates to criterion 2 in the previous Performance Criteria section).</p>
+<ol start="3" type="1">
+<li>In the Learning Tree 3 algorithm:</li>
+</ol>
+<ol type="a">
+<li>we included a buffer of 500 above the COSEWIC absolute abundance Criterion D1</li>
+</ol>
+<p>threshold of 1,000 for small population size; the threshold for this metric is set at 1,500. This was to account for how this metric was treated by experts in the workshops, where CU statuses were downgraded if one year in a generation fell below 1,000, if the estimates were considered uncertain, or if the generational average was close to the 1,000 threshold.</p>
+<ol start="2" type="a">
+<li>similar to the buffer on the absolute abundance metric lower benchmark (previous bullet),</li>
+</ol>
+<p>we added a 10% buffer to the upper threshold of the relative abundance metric.</p>
+<p>This level of precaution in the WSP rapid status assessment approach is consistent with the approach taken by experts in the completed WSP integrated status assessments (Appendix B in Pestal et al.&nbsp;2023; Grant and Pestal 2012; DFO 2015, 2016; Grant et al.&nbsp;2020). This is demonstrated by the relatively low error between CU statuses generated by the WSP rapid status algorithm compared to the ‘true’ status, provided by past expert-driven WSP integrated status assessments (Table 5).</p>
+<p>Examples of where experts in the WSP integrated status assessment processes included precautionary approaches are provided below:</p>
+<p>•</p>
+<p>In the WSP integrated status assessment processes, the relative abundance metric drove status designations where it was available. In evaluating this metric, experts considered the consistency in status across all probability levels (10% to 90%) of the estimated benchmarks to determine status. If statuses were mixed across probability levels, status was down- weighed towards the lower status level, or a mixed status was assigned (e.g., Red/Amber or Amber/Green) (Appendix B in Pestal et al.&nbsp;2023). The WSP rapid status approach compares the current generational average (or ‘dominant’ cycle, in the case of Fraser Sockeye cyclic CUs), to the median (50% probability level) estimates of the relative abundance benchmarks, instead of presenting the full probability distribution of the benchmarks. Since this metric is so heavily relied upon in status designations, using only the median benchmarks in the WSP rapid status algorithm has the potential to assign overly optimistic statuses in comparison to the WSP integrated status approaches. The three decisions listed above were therefore made to remain consistent with the degree of caution applied in the expert-driven processes.</p>
+<p>18</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>• When considering absolute abundance in WSP integrated status workshops, experts</p>
+<p>considered uncertainty in the data, and also compared each of the past four to twelve years to the COSEWIC criterion D1 (small population size) threshold of 1,000. In contrast, the algorithm compares the last generation average abundance to the COSEWIC threshold. To make this algorithm threshold more consistent with the precautionary approach used by experts in the WSP integrated status approach, a buffer was added. The buffer accounts for data uncertainty, and some of the masking of individual low abundance years (falling below the 1,000 COSEWIC threshold) that might occur, when averaged together with larger abundance years in the most recent generation. The buffer of 500 increases the COSEWIC metric threshold to 1,500 in the algorithm.</p>
+<p>Note that biological thresholds for WSP rapid status are currently stationary. They do not consider deteriorating salmon productivity observed for many salmon CUs (Dorner et al.&nbsp;2008, 2018; Grant et al.&nbsp;2019, 2021). As the climate continues to change and habitats continue to deteriorate due to human activities, larger salmon population size thresholds may be required to ensure a CU’s persistence under these conditions (McElhany et al.&nbsp;2000). See next steps section below on consideration of time-varying productivity in the WSP rapid status approach.</p>
+<p>Conclusions</p>
+<p>The Learning Tree 3 algorithm (Tables 2 and 4; Figure 1) was used to provide annual WSP rapid statuses for Pacific salmon CUs with applicable data in BC and the Yukon. This algorithm estimated Red, Amber or Green CU statuses annually with High, Medium or Low confidence. This algorithm performed best across a suite of seven candidate algorithms on CUs with previous WSP integrated status assessments (Tables 2–3; Figures 2–3; Section 3.2 in Pestal et al.&nbsp;2023). Further, out-of-samples testing was conducted on years and CUs without previous WSP integrated status assessments to further validate the use of the WSP rapid status algorithm (Table 8; Figure 5). Combined, these performance evaluations included 105 CUs, covering all five species of Pacific salmon DFO manages: Sockeye, Chinook, Coho, Pink and Chum. It also spanned a broad geographic area including the following: Fraser River, Skeena and Nass watersheds, Inner South Coast, and West Coast of Vancouver Island.</p>
+<p>The WSP rapid status approach ensures that statuses are scientifically objective, consistent, and comparable across BC and Yukon salmon CUs. It also ensures that they are relatively easy to implement, broadly applicable to data rich and data poor CUs, and can be updated annually. This approach is grounded in the principles of conservation biology, which emphasize using abundance and trends in abundance criteria to evaluate conservation risk (Caughly 1994; Mace et al.&nbsp;2009). It is also grounded in past scientific research and processes where CUs were identified (Holtby and Ciruna 2007; Grant et al.&nbsp;2011; Brown et al.&nbsp;2019), and CU statuses were assigned (Holt 2009, 2010; Holt et al.&nbsp;2009; Grant et al.&nbsp;2011, 2020; Grant and Pestal 2013; DFO 2015, 2016).</p>
+<p>The WSP rapid status algorithm is designed to be flexible. It can assess status for CUs that have different data types: absolute abundance or indices of abundance; and metric availability. It can improve as more CUs are added for status assessments, and as new methods are developed to consider time-varying productivity in relative abundance benchmarks, distribution information, etc. It is named the Learning Tree for this reason. We recommend that prior to including new metrics in the algorithm, expert-driven WSP integrated status assessments are conducted to ground-truth the effects of new metrics on WSP status determinations.</p>
+<p>To demonstrate the flexibility of the WSP rapid status algorithm, it was successfully applied to the full time-series of data available for the CUs in the learning data set: Fraser Sockeye, Southern BC Chinook and Interior Fraser Coho CUs (Pestal et al.&nbsp;2023; Pestal et al.&nbsp;In prep.1).</p>
+<p>19</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>It was also successfully applied to CU groups that did not have completed WSP integrated status assessments: Skeena/Nass Sockeye and Fraser Pink and Chum CUs (Pestal et al.&nbsp;In prep1). WSP rapid status summaries for these 65 CUs indicate that that statuses have deteriorated over time; the percentage Red and Amber CUs have increased, relative to Green (Figure 5).</p>
+<p>The WSP rapid status approach can be used by experts to support scientific exploration and help them to incorporate science into decision-making processes. WSP rapid status assessments support the evaluation of Pacific salmon SMU statuses relative to their LRP’s (Holt et al.&nbsp;2023a, 2023b; DFO 2023). The assessment of SMU LRPs is a legal obligation prescribed under the revised Fisheries Act’s new Fish Stock Provisions. WSP rapid statuses and their underlying data can also be used to track and detect patterns in annual salmon CU statuses, support climate change vulnerability assessments, and may also support the prioritization and evaluation of hatchery, harvest and habitat management actions.</p>
+<p>Ongoing/Future Work</p>
+<ol type="a">
+<li>Develop a Data Management Strategy for WSP rapid status inputs</li>
+</ol>
+<p>A DFO data management strategy is recommended as the key next step. This step would enable the expansion of WSP rapid status assessments across all BC and Yukon CUs with applicable data, and also provide annual updates to each CU’s rapid statuses. Due to DFO’s Pacific Salmon Strategy, there is currently both increased resourcing, and an opportunity to put these pieces in place to ensure that all applicable Pacific Salmon CU data are available annually to assess WSP rapid statuses. Note, we assume DFO Area Stock Assessment leads integrate expertise from Indigenous groups, NGOs, consultants and others in the management of CU stock assessment data. We recommend the following roles and responsibilities as a starting point for consideration, and expect these to evolve as the data management strategy emerges:</p>
+<p>DFO Pacific Salmon Strategy Initiative (PSSI) Data Policy and Analytics Team</p>
+<p>• Create and maintain a central database (DB) to warehouse annual composite data for WSP rapid status assessments, and the annual CU WSP rapid statuses, and available WSP integrated statuses. These data would be accessible to DFO staff and external groups such as Indigenous communities, COSEWIC, IUCN, academics, and the Pacific Salmon Foundation.</p>
+<p>DFO Science: Data Management Unit (DMU)</p>
+<p>• Establish governance by ensuring annual CU composite data for WSP rapid status</p>
+<p>assessments and WSP rapid statuses are provided by DFO Stock Assessment leads.</p>
+<p>• Automate data treatment steps where possible, including development of appropriate</p>
+<p>computer code packages and input specification files in collaboration with PSSI Data Policy and Analytics Team and DFO Stock Assessment leads.</p>
+<p>• Ensure standardization in approaches across CUs and years by working directly with Stock</p>
+<p>Assessment leads, and with support from State of Salmon (SOS) leads for new CUs.</p>
+<p>Area and Core DFO Stock Assessment</p>
+<p>• Set up data treatment and specification files for the WSP rapid status application for new CU data sets (following data steps in previous data section) in collaboration with SOS leads and DMU.</p>
+<p>20</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>• Provide annual selected and treated data for WSP rapid status application to DMU.</p>
+<p>• Support the automation of data treatment steps where possible, including the development of appropriate computer code packages and input files in collaboration with the DMU.</p>
+<p>• Support standardization processes across groups of CUs led by DMU.</p>
+<p>DFO Science: State of the Salmon (SOS) Program (Authors of current paper)</p>
+<p>• Work with DFO Stock Assessment leads to determine data needs and metric specifications for WSP rapid statuses for new CU data sets being added (following data steps in previous data section).</p>
+<p>• Provide annual time series of WSP rapid statuses and their associated data sets to DMU</p>
+<p>DB. Pull data from database and update rapid statuses.</p>
+<ol start="2" type="a">
+<li>Improving End-User Access</li>
+</ol>
+<p>DFO’s new Salmon Scanner data visualization tool for Pacific salmon will provide interactive displays of the rapid statuses generated by the Learning Tree 3 algorithm, and their underlying data (Sections 4.5 in Pestal et al.&nbsp;2023). DFO’s Salmon Scanner has been developed and will be released shortly. This tool was developed as an R-Shiny application. Shiny is a widely used freeware with many applications in fisheries science and decision support. It has been designed as a code package to be run on R, but can also be used in a browser format. DFO’s Salmon Scanner generates data by calculating annual WSP rapid statuses for Pacific Salmon CUs. It also centralizes and makes key salmon data readily available to experts, including escapement, recruitment, life-history, and spawner distribution.</p>
+<ol start="3" type="a">
+<li>Algorithm Revisions as Required</li>
+</ol>
+<p>Revising the WSP rapid status algorithm can include directly altering the decision-tree, or adding new metrics. Such revisions or improvements may be identified as new CU data sets are assessed. In such cases, we recommend that experts perform additional WSP integrated status assessments to expand the learning data set. WSP integrated status assessment processes should include DFO, Indigenous groups, and other experts, similar to past processes. With the existing or updated learning data set, performance of the WSP rapid status algorithm should be re-evaluated and compared between the existing algorithm and new proposed algorithm revisions. This would ensure that the algorithm’s performance improves overall when compared to the ‘true’ statuses, versus hyper-tuning the algorithm to particular CU cases.</p>
+<p>Additional metrics could be added to the Learning Tree 3 algorithm. New metric considerations, however, should align with the WSP emphasis on ‘standardized monitoring of [Pacific] salmon status’ (DFO 2005; Holt et al.&nbsp;2009).</p>
+<p>While there is a considerable amount of ancillary information (fish disease or parasite prevenance, genetics, fish behavior, etc.) that could be included to assess salmon status, we do not recommend using these sources of information for the WSP rapid status approach. Instead we recommend continuing to emphasize standardized metrics and additional information that focuses on abundance and trends in abundance at this time (Appendix A in Pestal et al.&nbsp;2023; Holt et al.&nbsp;2009; Holt 2009; Grant et al.&nbsp;2011; Grant and Pestal 2013; DFO 2015, 2016; Grant et al.&nbsp;2020b). These status metrics are based on conservation biology theory, particularly with emphasis on two paradigms: small population size and declining population (Caughley 1994; Mace et al.&nbsp;2008).</p>
+<p>A distribution metric is not currently included in the WSP rapid status algorithm. Distribution metrics were included in a WSP status toolkit (Holt et al.&nbsp;2009), and CU distribution trends were</p>
+<p>21</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>provided in the Southern BC Chinook and Interior Fraser Coho integrated status assessment processes. However distribution information did not influence WSP integrated statuses (Appendix B in Pestal et al.&nbsp;2023; DFO 2015, 2016). Further, no benchmarks have been resolved for distribution metrics through expert processes or research.</p>
+<p>Distribution metrics might be particularly important for broadly distributed CUs, like those of Chum and Pink Salmon. Considerable information on spawning distribution exists among salmon experts within DFO and among Indigenous communities and other groups. If work is done to develop benchmarks and explore their use by experts in WSP integrated status assessment processes, distribution metrics could be added to subsequent iterations of the Learning Tree 3 algorithm. However, another important consideration is how broadly available these data will be across CUs, and how readily they can be updated annually.</p>
+<p>Distribution information might be more relevant for subsequent steps involving the use of rapid statuses, rather than in the evaluation of status. For example, information on changes within a CU’s spawning or juvenile rearing distribution should be captured when developing recovery or rebuilding plans.</p>
+<ol start="4" type="a">
+<li>Adding or updating relative-abundance benchmarks for CUs, including</li>
+</ol>
+<p>incorporating time varying productivity into benchmarks.</p>
+<p>Relative-abundance metric benchmarks should be added and updated for CUs where possible. Although WSP rapid statuses can be developed without relative-abundance metrics, the confidence in rapid statuses increases when these metrics are applied.</p>
+<p>These benchmarks are added by CU experts, based on their knowledge of the applicability of the data to this metric. There are CUs we have included in the current assessment, like Fraser Pink and Chum CUs, where experts did not provide relative-abundance metric benchmarks, and therefore, the relative-abundance metric was not included. An evaluation of whether or not stock-recruitment, habitat capacity or percentile benchmarks are applicable to these CUs is recommended in order to potentially assess the WSP rapid statuses of these CUs with higher confidence.</p>
+<p>Percentile benchmarks could be considered in cases where stock-recruitment or habitat- capacity benchmarks are unavailable, and where applicable spawner abundance data exist. However, percentile benchmarks have been shown to be appropriate only for CUs with moderate to high productivity over their time-series (&gt;2.5 recruits per spawner) and low to moderate harvest rates (&lt;40%) (see Table 6 in Holt et al.&nbsp;2018).</p>
+<p>Broad declines in Canadian salmon abundances and productivity suggest that time-varying productivity should be considered in the relative abundance metric benchmarks. This is recommended for CUs where persistent changes in abundances and productivity have occurred. Time-varying productivity benchmarks, estimated from stock-recruitment models, were used in the first WSP integrated status assessment process for Fraser Sockeye (Grant et al.&nbsp;2011; Grant and Pestal 2013). However, these were not included in the subsequent WSP integrated status assessment since statuses of these CUs had returned to average, relative to the previous five years of poor productivity (Grant et al.&nbsp;2020). Therefore, the more recent WSP integrated status assessment for Fraser Sockeye CUs relied on models that considered average productivity for each CU (Grant et al.&nbsp;2021). Since this last assessment, however, productivity declines have resumed. Further, since climate change is expected to continue to significantly change the quality of ecosystems and habitats, persistent CU productivity and distribution changes are expected (Bush and Lemmen 2019; Cheung and Frölicher 2020; IPCC 2021).</p>
+<p>22</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>Incorporating time-varying productivity into relative abundance benchmarks is challenging when CU productivity has not stabilized (Peterman et al.&nbsp;2003; Dorner et al.&nbsp;2008, 2018; Malick et al. 2017), and when large productivity shifts continue to occur between years (Grant et al.&nbsp;2021). Questions to consider include: how often to adjust benchmarks to account for time-varying CU productivity; how to interpret status over time if benchmarks are adjusted frequently, or are not adjusted despite productivity changes; and how to ensure consistency in applying time-varying productivity considerations to benchmarks in the WSP rapid status algorithm. Work is ongoing in DFO to investigate these types of questions and develop guidelines with regard to developing and applying time-varying productivity to status and other applications such as forecasts (C.A Holt, DFO, pers. comm.).</p>
+<ol start="5" type="a">
+<li>Explore revisions to data sets with hatchery influence using the Proportionate</li>
+</ol>
+<p>Natural Influence (PNI) in salmon CU statuses.</p>
+<p>Hatcheries are expected to play an increasing role in the conservation of salmon CUs. Hatchery enhancement programs are being expanded for this purpose through DFO’s Pacific Salmon Strategy Initiative (PSSI). Although all WSP integrated status assessments to date have attempted to exclude hatchery populations (Grant et al.&nbsp;2011; Brown et al.&nbsp;2019), this may be increasingly challenging to do going forward given the larger role hatcheries will play in salmon conservation.</p>
+<p>Recent work explores Proportionate Natural Influence (PNI) in hatchery influenced salmon populations (Withler et al.&nbsp;2018). The PNI is a metric used to assess the genetic risks of hatchery production on natural populations as an index of gene flow. Guidance provided in a recent publication is being considered for adjusting which salmon populations should be included for a CU status assessment, depending on the level of PNI (see Table 3 in Withler et al.&nbsp;2018).</p>
+<ol start="6" type="a">
+<li>Applying WSP rapid statuses in formal decision making processes</li>
+</ol>
+<p>This Canadian Science Advisory Secretariate (CSAS) review of the WSP rapid status assessment approach was requested by DFO Science Branch to support the evaluation of Pacific salmon Stock Management Unit (SMU) statuses relative to their Limit Reference Points (LRPs). An SMU defines a group of one or more Pacific salmon CUs that are managed together with the objective of achieving a joint status. The LRP represents the status below which serious harm is occurring to the stock, based on biological criteria established by DFO Science through peer review. An SMU below its LRP triggers a rebuilding plan. A recent CSAS process recommended that LRPs for SMUs be defined as a percentage, with the objective being that 100% of all CUs in the SMU are above the WSP Red status zone (DFO 2023; Holt et al.&nbsp;2023a, 2023b). An SMU falls below the LRP if one or more CUs in an SMU are in the WSP Red status zone. The WSP rapid status approach was recommended for assessing LRP status (DFO 2023; Holt et al.&nbsp;2023a). Through the current CSAS process, reported here, a recommended next step is the vetting of the individual CU WSP rapid status results, and LRP status determination, by experts in a structured process.</p>
+<p>The WSP rapid statuses with expert input could also be combined with non-science considerations prior to and after rebuilding plans are triggered:</p>
+<p>• Before rebuilding plans are triggered by science, SMUs are prioritized for consideration in</p>
+<p>the rebuilding plan process. Prioritization includes both scientific and resource management considerations. Prioritization could include combining WSP rapid statuses with expert input to determine whether or not the SMU is below its LRP. However, prioritization also includes other social, cultural, economic and other factors such as considerations of First Nations</p>
+<p>23</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>Food, Social and Ceremonial (FSC) needs, international treaty obligations, various stakeholder interests, the vulnerability of CUs to climate change, and more.</p>
+<p>• After rebuilding plans are triggered by science/expert input, determination of rebuilding actions is led by resource management, with scientific inputs. SMU statuses, based on statuses of individual CUs within the LRP process, could be used to help isolate the particular CUs that require rebuilding considerations. This would help to narrow down the scope of the rebuilding plan. It could also help narrow down the type of actions taken broadly. For example, though a small but persistent CU may not need specific actions to increase its population size (i.e., rebuild), it likely would require increased protection and maintenance of its existing habitat, due to its small and restricted geographic range and increased extinction risk. CUs of Pink or Chum Salmon, for example, span broad geographic areas in freshwater, therefore, the risk of environmental change or catastrophe are moderated. In contrast, smaller Sockeye CUs are likely much more vulnerable to any perturbation or extreme event, which is occurring at an increasing frequency due to climate change.</p>
+<p>Other applications of the WSP rapid statuses, when combined with expert input, may include the following:</p>
+<p>• State of salmon reporting: trends in salmon CU statuses can be presented by area, species, life-history, and stock management units. By combining expert input with WSP rapid status information, and other information providing in DFO’s Salmon Scanner, regular reporting on state of the salmon can be provided.</p>
+<p>• Prioritization of hatchery, harvest, habitat management actions: there is an increasing number of stocks of concern, and therefore, increasing demand for management interventions. Annual CU WSP rapid statuses and trends may be one input that can support prioritization activities. Other science-based inputs to support prioritization may also include the future vulnerability of CUs to climate change (see next bullet). Other non-science inputs may also be required in prioritization processes, such as Indigenous FSC priorities, international treaty obligations, etc.</p>
+<p>• Climate change vulnerability assessments (CCVAs): climate change is a key factor</p>
+<p>influencing salmon and their ecosystems. CCVAs should be completed to determine salmon CU vulnerability to projected ongoing change. Salmon statuses could provide a key input to CCVAs, and DFO’s Salmon Scanner could provide a way to quickly compare and contrast, and test high level hypotheses for which salmon are more or less vulnerable to projected changes. These assessments may include additional information provided by DFO Science on climate change projections in freshwater/marine ecosystems, salmon responses, and more.</p>
+<p>24</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>Tables</p>
+<p>Table 1. Alternative status scales for evaluating algorithm performance. WSP rapid statuses were converted to scores from 1–5 to capture the magnitude and direction of classification errors. WSP rapid statuses need to be simplified to the same scale as the WSP integrated status assessments to make meaningful comparisons within an algorithm and between algorithms. See Section 2.4.4 in Pestal et al.&nbsp;2023 for more details. The 5 status scale is the scale used in previous WSP integrated status assessments (Grant and Pestal 2013; Grant et al.&nbsp;2020; DFO 2015, 2016). Different WSP rapid status candidate algorithms were developed to assess status on one of the three scales (see Table 2), with statuses converted to each of the three scales for performance evaluation (Table 3; Section 2.4.4 in Pestal et al.&nbsp;2023).</p>
+<p>5 Status Scale</p>
+<p>3 Status Scale</p>
+<p>2 Status Scale</p>
+<p>Zone</p>
+<p>Red</p>
+<p>Red / Amber</p>
+<p>Amber</p>
+<p>Amber / Green</p>
+<p>Green</p>
+<p>Score Zone</p>
+<p>Score Zone</p>
+<p>Score</p>
+<p>5</p>
+<p>4</p>
+<p>3</p>
+<p>2</p>
+<p>1</p>
+<p>Red</p>
+<p>Amber</p>
+<p>Green</p>
+<p>Red</p>
+<p>Not Red</p>
+<p>5</p>
+<p>2</p>
+<p>5</p>
+<p>3</p>
+<p>1</p>
+<p>25</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>Table 2. The seven candidate rapid status algorithms. Three fitted algorithms based on exploring alternative CART model fits, and four constructed algorithms based on combining CART fits with additional considerations. The fitted algorithms used all 65 cases from the learning data set. Exploratory CART fits using data split by species or data type were unstable and were therefore not included in the shortlist of candidate algorithms for detailed testing. Constructed algorithms use components of the fitted algorithms, so indirectly use all available data. This table summarizes the design approach for each algorithm. Section 2.4 in Pestal et al.&nbsp;2023 describes the development steps. Appendix D in Pestal et al. 2023 shows the full algorithms as a diagram and as a set of classification rules. Note that these algorithms generate rapid statuses at different scales of resolution, from 5 (Red, Red/Amber, Amber, Amber/Green, Green), to 3 (Red, Amber, Green) to 2 (Red, NotRed), as shown by the ‘x’ in the right-hand columns (R = Red, nR = notRed, RA = Red/Amber, A = Amber, AG = Amber/Green, G = Green) (see Table 3).</p>
+<p>Type Fitted</p>
+<p>Name Minimalist Appendix E.1*</p>
+<p>Description • 3 status scale: simplified status scale • Built using only the values for trend</p>
+<p>metrics: long-term &amp; short-term trend, which are broadly available metrics common to most CUs</p>
+<p>• Tree fitting with high complexity penalty to generate a simple tree with few branches.</p>
+<p>R nR RA A AG G X X</p>
+<p>X</p>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<p>FancyPants Appendix E.2*</p>
+<p>Categorical Realist Appendix E.3*</p>
+<p>Constructed Simply Red</p>
+<p>Appendix E.4*</p>
+<p>Learning Tree 1 Appendix E.5*</p>
+<p>Learning Tree 2 Appendix E.6<em> Learning Tree 3 Appendix E.7</em></p>
+<p>• 5 status scale: matches WSP integrated</p>
+<p>X</p>
+<ul>
+<li></li>
+</ul>
+<p>X</p>
+<p>X</p>
+<p>X</p>
+<p>X</p>
+<p>status scale</p>
+<p>• Built using values for all available metrics • Tree fitting with low complexity penalty to generate a more complex tree with finer resolution with more branches.</p>
+<p>• 2 status scale: simplified status scale • Simplified metrics: absolute abundance, relative abundance and long-term trend • Fit separate trees for different data types,</p>
+<p>but only R and A were isolated as terminal nodes by the tree fit.</p>
+<p>• 2 status scale: simplified status scale • Simplified metrics: long-term &amp; short-term</p>
+<p>trend, and relative abundance</p>
+<p>• Combines all the criteria from the other</p>
+<p>algorithms that flag a Red status • 3 status scale: simplified status scale • Built on the CART algorithms but</p>
+<p>combined with WSP integrated status assessment narratives (Appendix B in Pestal et al.&nbsp;2023).</p>
+<p>• 3 status scale: simplified status scale • Same as Learning Tree 1 but use R/A/G statuses instead of calculated metric values.</p>
+<p>• 3 status scale: simplified status scale • Evolution of Learning Tree 1, putting</p>
+<p>absolute abundance first, and providing additional considerations for long-term trend and percent change metrics.</p>
+<p>X</p>
+<ul>
+<li></li>
+<li></li>
+</ul>
+<p>X</p>
+<ul>
+<li></li>
+<li></li>
+</ul>
+<p>X</p>
+<p>X</p>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<p>X</p>
+<ul>
+<li></li>
+<li></li>
+</ul>
+<p>X</p>
+<ul>
+<li></li>
+</ul>
+<p>X</p>
+<p>X</p>
+<ul>
+<li></li>
+<li></li>
+</ul>
+<p>X</p>
+<ul>
+<li></li>
+</ul>
+<p>X</p>
+<p>X</p>
+<ul>
+<li></li>
+<li></li>
+</ul>
+<p>X</p>
+<ul>
+<li></li>
+</ul>
+<p>X</p>
+<p>*in Pestal et al.&nbsp;(2023).</p>
+<p>26</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>Table 3. Summary of algorithm performance across all 65 cases in the learning set: Fraser Sockeye, Southern BC Chinook and Interior Fraser Coho CUs. Note in the learning set there are two years with WSP integrated status assessments completed for Fraser Sockeye CUs, in addition to one year for Southern BC Chinook CUs and one year for Interior Fraser Coho CUs. The table shows the completion rate (Number Complete): the number of cases the algorithm could assign a status to out of the total 65 learning data set cases; number of correct designations (Number Correct): the rapid status matches WSP integrated status; the number of close designations (Number Close): the rapid status is only 1 step different from the WSP integrated status; and the number of overestimates (Number Predicted a Better Status): the rapid status is better than the WSP integrated status. Median, Mean and Range of Errors are presented in the last 3 rows. All errors are calculated by converting status designations to a 2, 3, or 5-status scale (Tables 1 and 2). The status scale that matches the algorithm is marked with an asterisk, bold font and grey shading. A negative error means that the algorithm assigned a worse status than the integrated expert assessment. Table cells are highlighted in orange and marked with two asterisks if a rapid status could be assigned for less than 3/4 of the cases (Number Complete &lt; 49/65), or if the mean error was larger than 0.3 (Mean &lt; -0.3 or Mean &gt; 0.3).</p>
+<p>Fancy Pants 54</p>
+<p>Categorical Realist 55</p>
+<p>Simply Red 55</p>
+<p>Learning Tree 1 65</p>
+<p>Learning Tree 2 65</p>
+<p>Learning Tree 3 65</p>
+<p>Minimalist</p>
+<p>64</p>
+<p>39</p>
+<p>49* 55</p>
+<p>54</p>
+<p>49* 55</p>
+<p>8</p>
+<p>8* 6</p>
+<p>0</p>
+<p>0* 0</p>
+<p>0.25</p>
+<p>0* -0.14</p>
+<p>Performance Measure Number Complete Number Correct</p>
+<p>Number Close</p>
+<p>Number that Predicted a Better Status</p>
+<p>Median Error</p>
+<p>Mean Error</p>
+<p>Range of Error</p>
+<p>Status Scale -</p>
+<p>5 3</p>
+<p>2</p>
+<p>5</p>
+<p>3</p>
+<p>2</p>
+<p>5</p>
+<p>3 2</p>
+<p>5</p>
+<p>3 2</p>
+<p>5</p>
+<p>3</p>
+<p>2</p>
+<p>5 3</p>
+<p>2</p>
+<p>47* 49</p>
+<p>50</p>
+<p>50* 49</p>
+<p>50</p>
+<p>2* 1 0</p>
+<p>0* 0 0</p>
+<p>0.2* 0.19</p>
+<p>0.22</p>
+<p>-2 to 4</p>
+<p>-2 to 4* -3 to 4</p>
+<p>-1 to 4* -2 to 4</p>
+<p>0 to 4</p>
+<p>30</p>
+<p>41* 50</p>
+<p>44</p>
+<p>41* 50</p>
+<p>5</p>
+<p>5* 5</p>
+<p>0</p>
+<p>0* 0</p>
+<p>23 26</p>
+<p>47* 47</p>
+<p>47</p>
+<p>47*</p>
+<p>10</p>
+<p>17</p>
+<p>2*</p>
+<p>0</p>
+<p>0</p>
+<p>0*</p>
+<p>39</p>
+<p>46* 58</p>
+<p>55</p>
+<p>46* 58</p>
+<p>17</p>
+<p>17* 6</p>
+<p>0</p>
+<p>0* 0</p>
+<p>41</p>
+<p>48* 58</p>
+<p>58</p>
+<p>48* 58</p>
+<p>16</p>
+<p>16* 7</p>
+<p>0</p>
+<p>0* 0</p>
+<p>44</p>
+<p>54* 59</p>
+<p>60</p>
+<p>54* 59</p>
+<p>7</p>
+<p>7* 4</p>
+<p>0</p>
+<p>0* 0</p>
+<p>0.4</p>
+<p>0.15* -0.27</p>
+<p>-2 to 2</p>
+<p>-2 to 2* -3 to 2</p>
+<p>0.27</p>
+<p>0.02</p>
+<p>0.22*</p>
+<p>-2 to 4 -3 to 4</p>
+<p>-3 to 4*</p>
+<p>-0.23</p>
+<p>-0.49** -0.23</p>
+<p>-4 to 4</p>
+<p>-4 to 4* -3 to 4</p>
+<p>-0.23</p>
+<p>-0.49<strong> -0.32</strong> -4 to 2</p>
+<p>-4 to 2* -3 to 2</p>
+<p>0.2</p>
+<p>-0.06* -0.09</p>
+<p>-2 to 4</p>
+<p>-2 to 4* -3 to 4</p>
+<p>27</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>Table 4. WSP rapid status Learning Tree 3 status assignments by node (see Figure 1). This table presents the decisions in Learning Tree 3 that led to Red or Amber or Green status assignments; status outcomes depend on the pathway and decisions made. The final node that corresponds to the status assignment is presented below, as it corresponds to Figure 1. Note, the absolute abundance lower benchmark is 1,000, the algorithm a buffer of 500 (total: 1,500).</p>
+<p>Node Node3 Node17</p>
+<p>Status Rule Red Red</p>
+<p>Node19</p>
+<p>Red</p>
+<p>Data Type is Absolute Abundance AND Absolute Abundance &lt; 1,500 Data Type is Relative Index OR Absolute Abundance ≥ 1,500; then Data Type is Relative Index OR Absolute Abundance ≥ 10,000; then no Relative Abundance lower benchmark; then Long Term Trend &lt; 79% Data Type is Relative Index OR Absolute Abundance ≥ 1,500; then Data Type is Relative Index OR Absolute Abundance ≥ 10,000 then have Relative Abundance lower benchmark; then Relative Abundance &lt; Relative Abundance lower benchmark</p>
+<p>Node20</p>
+<p>Amber Data Type is Relative Index OR Absolute Abundance ≥ 1,500;</p>
+<p>Node21</p>
+<p>Red</p>
+<p>then Data Type is Absolute Abundance AND Absolute Abundance &lt; 10,000; then no Relative Abundance lower benchmark; then Long Term Trend ≥ 79% Data Type is Relative Index OR Absolute Abundance ≥ 1,500; then Data Type is Absolute Abundance AND Absolute Abundance &lt; 10,000; then no Relative Abundance lower benchmark; then Long Term Trend &lt; 79%</p>
+<p>Node22</p>
+<p>Amber Data Type is Relative Index OR Absolute Abundance ≥ 1,500;</p>
+<p>Node23</p>
+<p>Red</p>
+<p>Node33</p>
+<p>Red</p>
+<p>then Data Type is Absolute Abundance AND Absolute Abundance &lt; 10,000; then have Relative Abundance lower benchmark; then Relative Abundance ≥ Relative Abundance lower benchmark Data Type is Relative Index OR Absolute Abundance ≥ 1,500; then Data Type is Absolute Abundance AND Absolute Abundance &lt; 10,000; then have Relative Abundance lower benchmark; then Relative Abundance &lt; Relative Abundance lower benchmark Data Type is Relative Index OR Absolute Abundance ≥ 1,500; then Data Type is Relative Index OR Absolute Abundance ≥ 10,000; then no Relative Abundance lower benchmark; then Long Term Trend ≥ 79%; then Percent Change &lt; -70</p>
+<p>Node36</p>
+<p>Green Data Type is Relative Index OR Absolute Abundance ≥ 1,500;</p>
+<p>then Data Type is Relative Index OR Absolute Abundance ≥ 10,000 then have Relative Abundance lower benchmark; then Relative Abundance ≥ Relative Abundance lower benchmark; then Relative Abundance ≥ Relative Abundance upper benchmark x 1.1</p>
+<p>Node37</p>
+<p>Amber Data Type is Relative Index OR Absolute Abundance ≥ 1,500;</p>
+<p>then Data Type is Relative Index OR Absolute Abundance ≥ 10,000 then have Relative Abundance lower benchmark; then Relative Abundance ≥ Relative Abundance lower benchmark; then Relative Abundance &lt; Relative Abundance upper benchmark x 1.1</p>
+<p>Node64</p>
+<p>Green Data Type is Relative Index OR Absolute Abundance ≥ 1,500;</p>
+<p>then Data Type is Relative Index OR Absolute Abundance ≥ 10,000; then no Relative Abundance lower benchmark; then Long Term Trend ≥ 79%; then Percent Change &lt; -70 then Long Term Trend ≥ 233</p>
+<p>Node65</p>
+<p>Amber Data Type is Relative Index OR Absolute Abundance ≥ 1,500;</p>
+<p>then Data Type is Relative Index OR Absolute Abundance ≥ 10,000; then no Relative Abundance lower benchmark; then Long Term Trend ≥ 79%; then Percent Change &lt; -70 then Long Term Trend &lt; 233</p>
+<p>28</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>Table 5. Contingency table of error types (None, Predicted Better, Predicted Worse) and confidence ratings (Low, Medium or High) for WSP rapid statuses generated by the Learning Tree 3 algorithm across all three status scales (see Table 1). These are statuses assigned for the learning data set of 65 cases, which includes two assessments for Fraser Sockeye CUs. The least precautionary outcome occurs where the rapid status assigned by the algorithm is better than the WSP integrated status assessments and the confidence rating is High: this is highlighted in orange and marked with an asterisk. Specifics for the fives cases where this least precautionary outcome occurred are summarized in Section 3.3 in Pestal et al. 2023. None: Learning Tree 3 assigned an identical status to the WSP integrated status assigned for the same CU and data during expert workshops; Predicted Better: Learning Tree 3 assigned a better status than the WSP integrated status; Predicted Worse: Learning Tree 3 assigned a poorer status than WSP integrates status.</p>
+<p>Error Type None Predicted Better Predicted Worse Total</p>
+<p>Low Medium High Total 54 7 4 65</p>
+<p>25 5* 1 31</p>
+<p>26 0 2 28</p>
+<p>3 2 1 6</p>
+<p>Table 6. This table is organized by species and Area to present the associated total number of: (a) CUs, which is the current list of CUs used for data processing, identified by DFO Area staff; (b) Rapid Status ≥ 1: is the number of CUs where a WSP rapid status could be assigned for at least one year, among all CUs data have been compiled for in WSP rapid status assessments (Pestal et al.&nbsp;2023); and (c) Integrated Status ≥ 1: number of CUs with at least one completed WSP integrated status assessment, this represents the learning data set used to develop and evaluate performance of WSP rapid status algorithms (Pestal et al.&nbsp;2023).</p>
+<p>Species</p>
+<p>Area</p>
+<p>Chinook Chinook Chinook West Coast Vancouver</p>
+<p>Fraser Inner South Coast</p>
+<p>Chinook Chinook Chum Coho Pink Sockeye* Sockeye Sockeye Sockeye TOTAL</p>
+<p>Island Okanagan TOTAL Fraser Interior Fraser Fraser Fraser Skeena Nass TOTAL TOTAL</p>
+<ol type="a">
+<li><p>CUs</p></li>
+<li><p>Rapid Status ≥ 1</p></li>
+<li><p>Integrated Status ≥ 1</p></li>
+</ol>
+<p>18 12 3</p>
+<p>1 34 1 5 1 24 32 8 64 105</p>
+<p>15 1 3</p>
+<p>1 20 1 5 1 22 16 4 42 69</p>
+<p>11 1 2</p>
+<p>1 15 0 5 0 23 0 0 23 43</p>
+<p>*.Fraser sockeye Chilko-ES cannot be separated from Chilko-S/Chilko-ES; Cultus-L has no WSP rapid status since high hatchery contributions have not been resolved in data set.</p>
+<p>29</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>Table 7. Summary of WSP integrated and rapid status assessments (Learning Tree 3) by species and year. WSP integrated statuses are summarized as the total number of assessed CUs (Number) and the number of CUs assigned each status category (Red; Amber; or Green). Note that WSP integrated statuses of Red/Amber were coded as Red; and Amber/Green were coded as Amber for this summary to match the three status categories generated by the WSP rapid status algorithm. Also note that Fraser Sockeye were assessed in two status workshops, essentially doubling the number of WSP integrated status assessments for this group (2012, 2017). WSP rapid statuses are summarized as the total number assessed (Number), which covers all available retrospective years since 1995 and the number of CU/Year combinations assigned each status category. WSP rapid statuses are either one of the three status zones (Red, Amber, Green) or None if there is at least one status metric available but no rapid status could be determined.</p>
+<p>Species Chinook Chum Coho Pink Sockeye Total</p>
+<p>WSP Rapid Status</p>
+<p>WSP Integrated Status Number Red Amber Green Number Red Amber Green None 300 24 25 8 115 472</p>
+<p>553 25 125 13 1.100 1.816</p>
+<p>123 1 87 3 417 631</p>
+<p>119 0 4 2 290 415</p>
+<p>11 0 9 0 278 298</p>
+<p>2 0 0 0 8 10</p>
+<p>15 0 5 0 45 65</p>
+<p>12 0 0 0 20 32</p>
+<p>1 0 5 0 17 23</p>
+<p>30</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>Table 8. The assessment of WSP rapid statuses for 105 CUs in the case studies, from 1995–2018. Number Rapid Status column shows the total number of CUs where a WSP rapid status could be assigned in each year. Of these cases, the percentage of Red (% Red Column) and Amber (% Amber Column) CU statuses increased, and conversely, the percentage of Green (% Green Column) CU statuses decreased over time. The final three columns are the percentage of CUs that could be assessed (% of CUs Assessed), versus unassessed (% of CUs Unassessed), and the percentages assigned a Red status (% Red), when compared to the total number of CUs in the case studies (105). These are the annual values plotted in Figure 5.</p>
+<p>CUs with a WSP Rapid Status Assessment</p>
+<p>Number: Rapid Status 36 35 37 39 41 48 48 47 50 51 52 53 53 53 57 58 61 59 66 65 65 65 67 67 66</p>
+<p>Year 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019</p>
+<p>% Red 19 17 19 18 17 19 17 17 22 28 27 32 28 32 44 38 36 34 36 32 35 32 39 42 47</p>
+<p>% Amber 39 46 54 54 46 54 58 49 46 45 48 47 51 55 40 50 44 42 44 49 45 48 45 43 42</p>
+<p>% Green 42 37 27 28 37 27 25 34 32 28 25 21 21 13 16 12 20 24 20 19 20 20 16 15 11</p>
+<p>% of CUs Assessed 34 33 35 37 39 46 46 45 48 49 50 50 50 50 54 55 58 56 63 62 62 62 64 64 63</p>
+<p>All CUs</p>
+<p>% of CUs Unassessed 66 67 65 63 61 54 54 55 52 51 50 50 50 50 46 45 42 44 37 38 38 38 36 36 37</p>
+<p>% Red 7 6 7 7 7 9 8 8 10 13 13 16 14 16 24 21 21 19 23 20 22 20 25 27 30</p>
+<p>31</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>Table 9. Summary of the relative abundance metric sensitivity test that compares how rapid statuses change when this metric was included or excluded from a CU’s metric set. The relative abundance metric is available for 37 of the 65 cases in the learning data set. This metric is used by the following algorithms: Categorical Realist, Simply Red, and Learning Tree 1, 2, and 3. The Minimalist does not use the relative abundance metric, so it was excluded. The Categorical Realist and Simply Red were included, but since they are relatively simple, they cannot assign statuses for 37/37 and 25/37 cases, respectively. This table shows the number of cases where the algorithm could assign status (Number Completed) versus where the algorithm could not assign a status (Number Not Completed). This is presented for the two scenarios: With and Without the relative abundance metric (RA). It also shows the number of cases where the rapid status changed, as well as the direction and magnitude of the changes. Notable results are highlighted in orange and marked with two asterisks. A single asterisk denotes where excluding the relative abundance metric results in an incomplete status for Chilliwack-ES Sockeye, which is an exceptional case (see Section 3.5 in Pestal 2023 for the description of the Chilliwack-ES sockeye CU exception).</p>
+<p>Fitted</p>
+<p>Constructed</p>
+<p>Learning Tree</p>
+<p>Simply Red 36 1 12 25**</p>
+<p>LT1 37 0 36 1* 0 17<strong> 2 0 1 0 0 13</strong> 1 0</p>
+<p>LT2 LT3 37 0 36 1* 9** 5 2 2 0</p>
+<p>37 0 36 1* 13** 5 1 7 0</p>
+<p>With RA metric</p>
+<p>Without RA metric</p>
+<p>Measure Number Completed Number Not Completed Number Completed Number Not Completed Number Changed Number Worse by 1 status zone Number Worse by 2 status zones Number Better by 1 status zone Number Better by 2 status zones</p>
+<p>Categorical Realist 37 0 0 37** 0 0 0 0 0</p>
+<p>32</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>Figures</p>
+<p>Figure 1. WSP rapid status Learning Tree 3 algorithm (Table 4 includes written descriptions). To assess a CU, metric values are compared to thresholds presented at each decision point. Yes or No answers split each path of the decision tree, terminating at WSP rapid status assignments. The different splits are identified as nodes: 1 to 65. Pathway 1 is taken when the CU has no absolute abundance data, or these data exist, but fall above its upper threshold of 10,000. Pathway 2 is taken when the CU has absolute abundance data and these fall under its upper benchmark of 10,000. AbsAbd: absolute abundance; AbsLBM: absolute abundance lower threshold (1,000 benchmark plus 500 buffer); AbsUBM: absolute abundance upper threshold; Rel LBM: relative abundance lower threshold; Rel UBM: relative abundance upper threshold, which is the upper benchmark for this metric + 10%; LongTrend: is long term trend metric; %Change: percent change metric. High, Medium, or Low confidence ratings are identified for each node.</p>
+<p>33</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>Figure 2. Number (lower horizontal axis) or percent (upper horizontal axis) of correct WSP rapid statuses, as compared to WSP integrated statuses, out of the total 65 cases in the learning data set for three fitted algorithms (Minimalist, Fancy Pants and Categorical Realist; and four constructed algorithms: Simply Red, LearningTree1, LearningTree2, LearningTree3). Results are shown for the three alternative WSP status scales (5,3, or 2 status categories), as explained in Table 1. This is one out of several performance measures used; the full set are presented in Table 3. Candidate algorithms were evaluated against criteria with a combination of quantitative and qualitative performance measures, not exclusively based on this figure.</p>
+<p>34</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>Figure 3. Number (lower horizontal axis) or percent (upper horizontal axis) of close WSP rapid statuses, as compared to WSP integrated statuses, out of the total 65 cases in the learning data set for three fitted algorithms (Minimalist, Fancy Pants and Categorical Realist; and four constructed algorithms: Simply Red, LearningTree1, LearningTree2, LearningTree3. Close indicates the WSP rapid status in only 1 status zone different from the WSP integrated status on a 5 status scale. For example, a CU assessed as Amber by the expert process and assigned Not Red by the Simply Red algorithm would be scored as incorrect in Figure 2, but scored as “close” in this figure. Results are shown for the three alternative WSP status scales (5,3, or 2 status categories), as explained in Table 1. This is one out of several performance measures used; the full set are presented in Table 3. Candidate algorithms were evaluated against criteria with a combination of quantitative and qualitative performance measures, not exclusively based on this figure.</p>
+<p>35</p>
+<p>Pacific Region</p>
+<p>Bowron-ES (SK-Fraser ES)</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>Narrative: Generational average abundance has generally declined since the 1950s. The WSP rapid statuses switched from Amber to Red in 2004. The relative abundance metric drives the rapid statuses, with statuses matching in all years. Absolute abundance was Amber for most of the time series, except the final year, which was Red. Integrated statuses were Red in 2010 and 2015, matching the rapid statuses. Rapid statuses have subsequently remained Red.</p>
+<p>Figure 4. An example CU summary (Bowron_ES) of rapid statues by individual metrics (RelAbd: relative abundance; AbsAbd: absolute abundance; LongTrend: long-term trend; PercChange: percent change), the WSP rapid status by year, and associated confidence rating (H: High; M: Medium; L: Low). The WSP integrated status (IntStatus) is also indicated for the year this was assessed. The narrative at the top of this figure describes the metrics driving rapid statuses over time. All 62 CUs assessed for rapid status are found in Appendices A–G of Pestal et al.&nbsp;(2023).</p>
+<p>36</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>Figure 5. WSP rapid status changes over time. A) The number of CUs that were able to be assigned a WSP rapid status increases from 1995 to 2019. The increase over time is due to shorter time series, with data only being available in more recent years for a number of CUs. B) The proportion of Red and Amber CUs, relative to the total number of CU cases (105 total) increased over time. Conversely, the proportion of Green CUs declined. Table 8 lists the annual values.</p>
+<p>37</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>Contributors</p>
+<p>Affiliation Role Contributor DFO Science, Pacific Region Gottfried Pestal Author DFO Science, Pacific Region Bronwyn L. MacDonald Author DFO Science, Pacific Region Author Sue C.H. Grant Author Carrie A. Holt DFO Science, Pacific Region CSAS Steering Committee DFO Science, Pacific Region Antonio Vélez-Espino CSAS Steering Committee DFO Science, Pacific Region Chuck Parken CSAS Steering Committee DFO Science, Pacific Region Charmaine Carr-Harris Reviewer Pete Nicklin</p>
+<p>Upper Fraser Fisheries Conservation Alliance (UFFCA) DFO Science, Pacific Region</p>
+<p>Brendan Connors</p>
+<p>Reviewer</p>
+<p>Approved by Andrew Thomson Regional Director Science Branch, Pacific Region Fisheries and Oceans Canada</p>
+<p>November 9, 2023</p>
+<p>Sources of Information This Science Response Report results from the regional peer review of November 18, 2022 on the Rapid status approximations for Pacific salmon derived from integrated expert assessments under Fisheries and Oceans Canada Wild Salmon Policy.</p>
+<p>Brown, G.S., Baillie, S.J., Thiess, M.E., Bailey, R.E., Candy, J.R., Parken, C.K., and Willis, D.M.</p>
+<ol start="2019" type="1">
+<li>Pre-COSEWIC review of southern British Columbia Chinook Salmon (Oncorhynchus tshawytscha) conservation units, Part I: background. DFO Can. Sci. Advis. Sec. Res. Doc. 2019/011. vii + 67 p.</li>
+</ol>
+<p>Bush, E., and Lemmen, D.S. (Editors). 2019. Canada’s Changing Climate Report; Government</p>
+<p>of Canada, Ottawa, ON. 444 p.</p>
+<p>Caughley, G. 1994. Directions in Conservation Biology. J. Anim. Ecol. 63(2): 215–244.</p>
+<p>Cheng, L., Abraham, J., Trenberth, K.E., Fasullo, J., Boyer, T., Mann, M.E., Zhu, J., Wang, F., Locarnini, R., Li, Y., Zhang, B., Yu, F., Wan, L., Chen, X., Feng, L., Song, X., Liu, Y., Reseghetti, F., Simoncelli, S., Gouretski, V., Chen, G., Mishonov, A., Reagan, J., and Li, G. 2023. Another year of record heat for the oceans. Adv. Atmos. Sci. 40, 963-974.</p>
+<p>Cheung, W.W.L., and Frölicher, T.L. 2020. Marine heatwaves exacerbate climate change</p>
+<p>impacts for fisheries in the northeast Pacific. Sci. Rep.&nbsp;10(1): 1–10.</p>
+<p>Cheung, W.W.L., Frölicher, T.L., Lam, V.W.Y., Oyinlola, M.A., Reygondeau, G., Sumaila, U.R.,</p>
+<p>Tai, T.C., Teh, L.C.L., and Wabnitz, C.C.C. 2021. Marine high temperature extremes amplify the impacts of climate change on fish and fisheries. Sci. Adv.: 1–16.</p>
+<p>COSEWIC. 2021. COSEWIC’s Assessment Process, Categories and Guidlines.</p>
+<p>DFO. 2005. Canada’s Policy for Conservation of Wild Pacific Salmon. Fisheries and Oceans</p>
+<p>Canada, Vancouver, B.C. vi + 49 p.</p>
+<p>38</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>DFO. 2015. Wild Salmon Policy biological status assessment for conservation units of Interior Fraser River Coho Salmon (Oncorhynchus kisutch). DFO Can. Sci. Advis. Sec. Sci. Advis. Rep.&nbsp;2015/022.</p>
+<p>DFO. 2016. Integrated biological status of southern British Columbia Chinook Salmon</p>
+<p>(Oncorhynchus tshawytscha) under the Wild Salmon Policy. DFO Can. Sci. Advis. Sec. Sci. Advis. Rep.&nbsp;2016/042.</p>
+<p>DFO. 2023. Biological benchmarks and building blocks for aggregate-level management targets for Skeena and Nass Sockeye Salmon (Oncorhynchus nerka). DFO Can. Sci. Advis. Sec. Sci. Advis. Rep.&nbsp;2023/008.</p>
+<p>Dorner, B., Catalano, M.J., and Peterman, R.M. 2018. Spatial and temporal patterns of</p>
+<p>covariation in productivity of Chinook salmon populations of the northeastern Pacific Ocean. Can. J. Fish. Aquat. Sci. 75(7): 1082–1095.</p>
+<p>Dorner, B., Peterman, R.M., and Haeseker, S.L. 2008. Historical trends in productivity of 120</p>
+<p>Pacific pink, chum, and sockeye salmon stocks reconstructed by using a Kalman filter. Can. J. Fish. Aquat. Sci. 65(9): 1842–1866.</p>
+<p>Grant, S.C.H., Holt, C.A., Pestal, G., Davis, B.M., and MacDonald, B.L. 2020. The 2017 Fraser Sockeye Salmon (Oncorhynchus nerka) Integrated Biological Status Re-Assessments Under the Wild Salmon Policy Using Standardized Metrics and Expert Judgement. DFO Can. Sci. Advis. Sec. Res. Doc. 2020/038. vii+ 211 p.</p>
+<p>Grant, S.C.H., MacDonald, B.L., Cone, T.E., Holt, C.A., Cass, A., Porszt, E.J., Hume, J.M.B., and Pon, L.B. 2011. Evaluation of Uncertainty in Fraser Sockeye (Oncorhynchus nerka) Wild Salmon Policy Status Using Abundance and Trends in Abundance Metrics. DFO Can. Sci. Advis. Sec. Res. Doc. 2011/087. viii + 183 p.</p>
+<p>Grant, S.C.H., MacDonald, B.L., Lewis, D., Wilson, N.L., and Michielsens, C.G.J. 2021. State of Canadian Pacific salmon in 2020. In State of the Physical, Biological and Selected Fishery Resources of Pacific Canadian Marine Ecosystems in 2020. Can. Tech. Rep.&nbsp;Fish. &amp; Aquat. Sci. 3434. pp.&nbsp;vii + 231. Edited by J.L. Boldt, A. Javorski, and P.C. Chandler.</p>
+<p>Grant, S.C.H., MacDonald, B.L., and Winston, M.L. 2019. State of the Canadian Pacific Salmon:</p>
+<p>Responses to Changing Climate and Habitats. Can. Tech. Rep.&nbsp;Fish. Aquat. Sci. 3332. ix + 50 p.</p>
+<p>Grant, S.C.H., and Pestal, G. 2013. Integrated Biological Status Assessments Under the Wild Salmon Policy Using Standardized Metrics and Expert Judgement: Fraser River Sockeye Salmon (Oncorhynchus nerka) Case Studies. DFO Can. Sci. Advis. Sec. Res. Doc. 2012/106. v + 132 p.</p>
+<p>Holt, C.A., Davis, B., Dobson, D., Godbout, L., Luedke, W., Tadey, J., and Van Will, P. 2018. Evaluating Benchmarks of Biological Status for Data-limited Conservation Units of Pacific Salmon, Focusing on Chum Salmon in Southern BC. DFO Can. Sci. Advis. Sec. Res. Doc. 2018/011. ix + 77 p.</p>
+<p>Holt, C.A. 2009. Evaluation of benchmarks for conservation units in Canada’s Wild Salmon</p>
+<p>Policy: Technical Documentation. DFO Can. Sci. Advis. Sec. Res. Doc. 2009/059. x + 50 p.</p>
+<p>Holt, C.A. 2010. Will depleted populations of Pacific salmon recover under persistent reductions</p>
+<p>in survival and catastrophic mortality events? ICES J. Mar.&nbsp;Sci. 67(9): 2018–2026.</p>
+<p>Holt, C.A., Cass, A., Holtby, B., and Riddell, B. 2009. Indicators of status and benchmarks for conservation units in Canada’s Wild Salmon Policy. DFO Can. Sci. Advis. Sec. Res. Doc. 2009/058. viii + 74 p.</p>
+<p>39</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>Holt, C.A., Holt, K., Warkentin, L., Wor, C., Connors, B., Grant, S.C.H., Huang, A.-M., and</p>
+<p>Marentette, J. 2023a. Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units. DFO Can. Sci. Adv. Sec. Res. Doc. 2023/009. iv + 66 p.</p>
+<p>Holt, K.R., Holt, C.A., Warkentin, L., Wor, C., Davis, B., Arbeider, M., Bokvist, J., Crowley, S., Grant, S.C.H., Luedke, W., McHugh, D., Picco, C., and Van Will, P. 2023b. Case Study Applications of LRP Estimation Methods to Pacific Salmon Stock Management Units. DFO Can. Sci. Advis. Sec. Res. Doc. 2023/010. iv + 129 p.</p>
+<p>Holtby, B.L., and Ciruna, K.A. 2007. Conservation Units for Pacific Salmon under the Wild</p>
+<p>Salmon Policy. DFO Can. Sci. Advis. Sec. Res. Doc. 2007/070. viii + 350 p.</p>
+<p>IPCC [Intergovernmental Panel on Climate Change]. 2021. Summary for Policymakers. In C.</p>
+<p>Field, V. Barros, T. Stocker, &amp; Q. Dahe (Eds.), Managing the Risks of Extreme Events and Disasters to Advance Climate Change Adaptation: Special Report of the Intergovernmental Panel on Climate Change. Cambridge: Cambridge University Press. pp.&nbsp;3–22.</p>
+<p>IPCC. 2022. Climate Change 2022: Impacts, Adaptation and Vulnerability Report.</p>
+<p>IUCN [International Union for Conservation of Nature and Natural Resources]. 2022. Guidelines</p>
+<p>for Using the IUCN Red List Categories and Criteria. Version 15.1. Prepared by the Standards and Petitions Committee.</p>
+<p>MacDonald, B.L., and Grant, S.C.H. 2012. Pre-season run size forecasts for Fraser River Sockeye salmon (Oncorhynchus nerka) in 2012. DFO Can. Sci. Advis. Sec. Res. Doc. 2012/011. v + 64 p.</p>
+<p>Mace, G., Collar, N., Cooke, J., Gaston, K., Ginsberg, J., Leader Williams, N., Maunder, M., and Milner-Gulland, E.J. 1992. The development of new criteria for listing species on the IUCN Red List. 19: 16–22.</p>
+<p>Mace, G.M., Collar, N.J., Gaston, K.J., Hilton-Taylor, C., Arçakaya, H.R., Leader-Williams, N.,</p>
+<p>Milner-Gulland, E.J., and Stuart, S.N. 2008. Quantification of extinction risk : IUCN’s system for classifying threatened species. Conserv. Biol. 22(6): 1424–1442.</p>
+<p>Mace, G.M., and Lande, R. 1991. Assessing extinction threats : toward a reevaluation of IUCN</p>
+<p>threatened species categories. Conserv. Biol. 5(2): 148–157.</p>
+<p>Malick, M.J., Cox, S.P., Mueter, F.J., Dorner, B., and Peterman, R.M. 2017. Effects of the North Pacific Current on the productivity of 163 Pacific salmon stocks. Fish. Oceanogr. 26(3): 268– 281.</p>
+<p>McElhany, P., Ruckelshaus, M.H., Ford, M.J., Wainwright, T.C., and Bjorkstedt, E.P. 2000.</p>
+<p>Viable salmonid populations and the recovery of evolutionarily significant units. U.S. Dept. Commer., NOAA Tech. Memo. NMFS-NWFSC-42. 156 p.</p>
+<p>National Research Council (US) Committee on Scientific Issues in the Endangered Species Act.</p>
+<ol start="1998" type="1">
+<li>Science and the Endangered Species Act.</li>
+</ol>
+<p>Parken, C.K., McNicol, R.E., and Irvine, J.R. 2006. Habitat-based methods to estimate</p>
+<p>escapement goals for data limited Chinook salmon stocks in British Columbia, 2004. Can. Sci. Advis. Secr. Res. Doc. 2006/083. vii + 74 p.</p>
+<p>Pestal, G., MacDonald, B.L., Grant, S.C.H., and Holt, C.A. 2023. State of the Salmon: rapid</p>
+<p>status assessment approach for Pacific salmon under Canada’s Wild Salmon Policy. Can. Tech. Rep.&nbsp;Fish. Aquat. Sci. 3570: xiv + 200 p.</p>
+<p>40</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>Peterman, R.M., Pyper, B.J., and MacGregor, B.W. 2003. Use of the Kalman filter to reconstruct historical trends in productivity of Bristol Bay sockeye salmon (Oncorhynchus nerka). Can. J. Fish. Aquat. Sci. 60: 809–824.</p>
+<p>Picard, R.R., and Cook, R.D. 1984. Cross-Validation of Regression Models. J. Am. Stat. Assoc.</p>
+<p>79(387): 575–583.</p>
+<p>Rodrigues, A.S.L., Pilgrim, J.D., Lamoreux, J.F., Hoffmann, M., and Brooks, T.M. 2006. The</p>
+<p>value of the IUCN Red List for conservation. Trends Ecol. Evol. 21(2): 71–76.</p>
+<p>Therneau, T., and Atkinson, B. 2023. Rpart: recursive partitioning and regression trees.</p>
+<p>Wade, J., Hamilton, S., Baxter, B., Brown, G., Grant, S.C.H., Holt, C.A., Thiess, M., and Withler,</p>
+<p>R.E. 2019. Framework for reviewing and approving revisions to Wild Salmon Policy Conservation Units. DFO Can. Sci. Advis. Sec. Res. Doc. 2019/015. v + 29 p.</p>
+<p>Withler, R.E., Bradford, M.J., Willis, D., and Holt, C.A. 2018. Genetically Based Targets for</p>
+<p>Enhanced Contributions to Canadian Pacific Chinook Salmon Populations. DFO Can. Sci. Advis. Sec. Res. Doc. 2018/019. xii + 88 p.</p>
+<p>41</p>
+<p>Pacific Region</p>
+<p>Science Response: Rapid Status Assessments for Pacific Salmon</p>
+<p>This Report is Available from the: Centre for Science Advice (CSA) Pacific Region Fisheries and Oceans Canada 3190 Hammond Bay Road Nanaimo, BC V9T 6N7</p>
+<p>E-Mail: DFO.PacificCSA-CASPacifique.MPO@dfo-mpo.gc.ca Internet address: www.dfo-mpo.gc.ca/csas-sccs/</p>
+<p>ISBN 978-0-660-69418-4</p>
+<p>Cat. No.&nbsp;Fs70-7/2024-004E-PDF</p>
+<p>© His Majesty the King in Right of Canada, as represented by the Minister of the Department of Fisheries and Oceans, 2024</p>
+<p>ISSN 1919-3769</p>
+<p>Correct Citation for this Publication:</p>
+<p>DFO. 2024. Rapid Status Approximations for Pacific Salmon Derived from Integrated Expert</p>
+<p>Assessments under Fisheries and Oceans Canada Wild Salmon Policy. DFO Can. Sci. Advis. Sec. Sci. Resp. 2024/004.</p>
+<p>Aussi disponible en français :</p>
+<p>MPO. 2024. Approximations rapides de l’état du saumon du Pacifique dérivées d’évaluations</p>
+<p>d’experts intégrées dans le cadre de la Politique concernant le saumon sauvage de Pêches et Océans Canada. Secr. can. des avis. sci. du MPO. Rép. des Sci. 2024/004.</p>
+<p>42</p>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/dfo-pacific-science\.github\.io\/data-stewardship-unit\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/data/ontology/docs/context/pdfs/DFO 2024 RAPID STATUS APPROXIMATIONS.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/data/ontology/docs/context/pdfs/DFO 2024 RAPID STATUS APPROXIMATIONS.md" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This site was created with <a href="https://quarto.org/">Quarto</a> and is hosted with <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

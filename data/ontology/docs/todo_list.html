@@ -1,0 +1,2136 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>todo_list – FADS Open Science Documentation Hub</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../images/logo.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-972cf70390dc11df476ac11b7b56006c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">FADS Open Science Documentation Hub</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://086gc.sharepoint.com/:u:/r/sites/FisheryAssessmentDataSectionWiki/SitePages/CollabHome.aspx?csf=1&amp;web=1&amp;e=tkJJk4"> 
+<span class="menu-text">FADS Internal Wiki</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../fads-portfolio.html"> 
+<span class="menu-text">Data Services</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../../reference_info/data_standards/controlled-vocabulary-thesauri.html" aria-current="page"> 
+<span class="menu-text">Salmon Data Standards</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/dfo-pacific-science/data-stewardship-unit">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues">
+            Report a Bug
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../../../index.html" class="sidebar-logo-link">
+      <img src="../../../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../../../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">How to Guides</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../how_to_guides/databricks_r_studio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Connect to the Azure Lakehouse from R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../how_to_guides/openGovernmentPortalR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Accessing Spatial Data from the Open Government Portal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../how_to_guides/sharepoint_r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Access Data in SharePoint from R</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Reference Info</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Salmon Data Standards</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../reference_info/data_standards/controlled-vocabulary-thesauri.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Controlled Vocabulary &amp; Thesauri</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../reference_info/ontology/formal-documentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DFO Salmon Ontology</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../reference_info/dwc-obis-gbif.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Darwin Core, GBIF, and OBIS Reference Guide</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../reference_info/openDataPractices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Practices for Open Science – 3 Quick Tips</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../reference_info/publishing_data_externally.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hosting Data and Code</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Tools</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../reference_info/tools/r_packages.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R Packages</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Tutorials</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../tutorials/support_controlled_vocabs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Support Controlled Vocabularies</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Deep Dives</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../deep_dives/Stock Assessment Data 101 for Fisheries Science Reports.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fisheries Science Reports – Data and Stats 101</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#dfo-salmon-ontology---fsar-tracer-mvp-todo-list" id="toc-dfo-salmon-ontology---fsar-tracer-mvp-todo-list" class="nav-link active" data-scroll-target="#dfo-salmon-ontology---fsar-tracer-mvp-todo-list">DFO Salmon Ontology - FSAR Tracer MVP Todo List</a>
+  <ul class="collapse">
+  <li><a href="#done-requirements-and-design-review" id="toc-done-requirements-and-design-review" class="nav-link" data-scroll-target="#done-requirements-and-design-review">DONE Requirements and Design Review</a>
+  <ul class="collapse">
+  <li><a href="#review-and-refine-fsar-tracer-prd" id="toc-review-and-refine-fsar-tracer-prd" class="nav-link" data-scroll-target="#review-and-refine-fsar-tracer-prd">Review and Refine FSAR Tracer PRD</a></li>
+  <li><a href="#review-competency-questions" id="toc-review-competency-questions" class="nav-link" data-scroll-target="#review-competency-questions">Review Competency Questions</a></li>
+  </ul></li>
+  <li><a href="#dfo-organizational-structure" id="toc-dfo-organizational-structure" class="nav-link" data-scroll-target="#dfo-organizational-structure">DFO Organizational Structure</a>
+  <ul class="collapse">
+  <li><a href="#add-org-ontology-mireot-and-dfo-organizational-classes" id="toc-add-org-ontology-mireot-and-dfo-organizational-classes" class="nav-link" data-scroll-target="#add-org-ontology-mireot-and-dfo-organizational-classes">Add ORG Ontology MIREOT and DFO Organizational Classes</a></li>
+  <li><a href="#add-dfo-specific-organizational-properties" id="toc-add-dfo-specific-organizational-properties" class="nav-link" data-scroll-target="#add-dfo-specific-organizational-properties">Add DFO-Specific Organizational Properties</a></li>
+  <li><a href="#add-project-class-and-linkage-properties" id="toc-add-project-class-and-linkage-properties" class="nav-link" data-scroll-target="#add-project-class-and-linkage-properties">Add Project Class and Linkage Properties</a></li>
+  <li><a href="#update-conventions.md" id="toc-update-conventions.md" class="nav-link" data-scroll-target="#update-conventions.md">Update CONVENTIONS.md</a></li>
+  <li><a href="#create-example-organizational-structure" id="toc-create-example-organizational-structure" class="nav-link" data-scroll-target="#create-example-organizational-structure">Create Example Organizational Structure</a></li>
+  </ul></li>
+  <li><a href="#silsen-integration-review" id="toc-silsen-integration-review" class="nav-link" data-scroll-target="#silsen-integration-review">SIL/SEN Integration Review</a>
+  <ul class="collapse">
+  <li><a href="#review-minh-doans-silsen-pr" id="toc-review-minh-doans-silsen-pr" class="nav-link" data-scroll-target="#review-minh-doans-silsen-pr">Review Minh Doan’s SIL/SEN PR</a></li>
+  </ul></li>
+  <li><a href="#done-bfo-mireot-import-and-dwc-mapping" id="toc-done-bfo-mireot-import-and-dwc-mapping" class="nav-link" data-scroll-target="#done-bfo-mireot-import-and-dwc-mapping">DONE BFO MIREOT Import and DwC Mapping</a>
+  <ul class="collapse">
+  <li><a href="#add-bfo-mireot-definitions" id="toc-add-bfo-mireot-definitions" class="nav-link" data-scroll-target="#add-bfo-mireot-definitions">Add BFO MIREOT Definitions</a></li>
+  <li><a href="#update-dwc-to-bfo-mappings" id="toc-update-dwc-to-bfo-mappings" class="nav-link" data-scroll-target="#update-dwc-to-bfo-mappings">Update DwC-to-BFO Mappings</a></li>
+  <li><a href="#clean-up-estimate-type-classification-code" id="toc-clean-up-estimate-type-classification-code" class="nav-link" data-scroll-target="#clean-up-estimate-type-classification-code">Clean Up Estimate Type Classification Code</a></li>
+  <li><a href="#enhance-conventions.md-import-policy" id="toc-enhance-conventions.md-import-policy" class="nav-link" data-scroll-target="#enhance-conventions.md-import-policy">Enhance CONVENTIONS.md Import Policy</a></li>
+  <li><a href="#update-shacl-file-header" id="toc-update-shacl-file-header" class="nav-link" data-scroll-target="#update-shacl-file-header">Update SHACL File Header</a></li>
+  <li><a href="#fix-robot-validation" id="toc-fix-robot-validation" class="nav-link" data-scroll-target="#fix-robot-validation">Fix ROBOT Validation</a></li>
+  </ul></li>
+  <li><a href="#darwin-core-conceptual-model-dwc-cm-implementation" id="toc-darwin-core-conceptual-model-dwc-cm-implementation" class="nav-link" data-scroll-target="#darwin-core-conceptual-model-dwc-cm-implementation">Darwin Core Conceptual Model (DwC-CM) Implementation</a>
+  <ul class="collapse">
+  <li><a href="#implement-dwc-cm-patterns" id="toc-implement-dwc-cm-patterns" class="nav-link" data-scroll-target="#implement-dwc-cm-patterns">Implement DwC-CM Patterns</a></li>
+  <li><a href="#update-documentation-for-dwc-cm" id="toc-update-documentation-for-dwc-cm" class="nav-link" data-scroll-target="#update-documentation-for-dwc-cm">Update Documentation for DwC-CM</a></li>
+  </ul></li>
+  <li><a href="#dqv-mireot-import-for-quality-framework" id="toc-dqv-mireot-import-for-quality-framework" class="nav-link" data-scroll-target="#dqv-mireot-import-for-quality-framework">DQV MIREOT Import for Quality Framework</a>
+  <ul class="collapse">
+  <li><a href="#add-dqv-mireot-definitions" id="toc-add-dqv-mireot-definitions" class="nav-link" data-scroll-target="#add-dqv-mireot-definitions">Add DQV MIREOT Definitions</a></li>
+  <li><a href="#create-evidence-completeness-dimensions" id="toc-create-evidence-completeness-dimensions" class="nav-link" data-scroll-target="#create-evidence-completeness-dimensions">Create Evidence Completeness Dimensions</a></li>
+  <li><a href="#create-quality-annotations-evidence-badges" id="toc-create-quality-annotations-evidence-badges" class="nav-link" data-scroll-target="#create-quality-annotations-evidence-badges">Create Quality Annotations (Evidence Badges)</a></li>
+  </ul></li>
+  <li><a href="#fsar-tracer-core-classes" id="toc-fsar-tracer-core-classes" class="nav-link" data-scroll-target="#fsar-tracer-core-classes">FSAR Tracer Core Classes</a>
+  <ul class="collapse">
+  <li><a href="#fsar-module-implementation-status" id="toc-fsar-module-implementation-status" class="nav-link" data-scroll-target="#fsar-module-implementation-status">FSAR Module Implementation Status</a></li>
+  <li><a href="#wsp-rapid-status-support" id="toc-wsp-rapid-status-support" class="nav-link" data-scroll-target="#wsp-rapid-status-support">WSP Rapid-Status Support</a></li>
+  <li><a href="#integration-with-core-ontology" id="toc-integration-with-core-ontology" class="nav-link" data-scroll-target="#integration-with-core-ontology">Integration with Core Ontology</a></li>
+  <li><a href="#enhanced-requirements-from-prd-updates" id="toc-enhanced-requirements-from-prd-updates" class="nav-link" data-scroll-target="#enhanced-requirements-from-prd-updates">Enhanced Requirements from PRD Updates</a></li>
+  </ul></li>
+  <li><a href="#w3id-phase-1-publication" id="toc-w3id-phase-1-publication" class="nav-link" data-scroll-target="#w3id-phase-1-publication">W3ID Phase 1 Publication</a>
+  <ul class="collapse">
+  <li><a href="#prepare-core-terms" id="toc-prepare-core-terms" class="nav-link" data-scroll-target="#prepare-core-terms">Prepare Core Terms</a></li>
+  <li><a href="#create-w3id-configuration" id="toc-create-w3id-configuration" class="nav-link" data-scroll-target="#create-w3id-configuration">Create W3ID Configuration</a></li>
+  <li><a href="#test-locally" id="toc-test-locally" class="nav-link" data-scroll-target="#test-locally">Test Locally</a></li>
+  <li><a href="#submit-w3id-pr" id="toc-submit-w3id-pr" class="nav-link" data-scroll-target="#submit-w3id-pr">Submit W3ID PR</a></li>
+  <li><a href="#update-post-publication" id="toc-update-post-publication" class="nav-link" data-scroll-target="#update-post-publication">Update Post-Publication</a></li>
+  </ul></li>
+  <li><a href="#genetics-classes-for-grd-integration" id="toc-genetics-classes-for-grd-integration" class="nav-link" data-scroll-target="#genetics-classes-for-grd-integration">Genetics Classes for GRD Integration</a>
+  <ul class="collapse">
+  <li><a href="#review-existing-genetics-classes" id="toc-review-existing-genetics-classes" class="nav-link" data-scroll-target="#review-existing-genetics-classes">Review Existing Genetics Classes</a></li>
+  <li><a href="#add-grd-linkage-properties" id="toc-add-grd-linkage-properties" class="nav-link" data-scroll-target="#add-grd-linkage-properties">Add GRD Linkage Properties</a></li>
+  <li><a href="#document-genetics-to-fsar-linkage-pattern" id="toc-document-genetics-to-fsar-linkage-pattern" class="nav-link" data-scroll-target="#document-genetics-to-fsar-linkage-pattern">Document Genetics-to-FSAR Linkage Pattern</a></li>
+  </ul></li>
+  <li><a href="#silsen-skos-schemes-integration" id="toc-silsen-skos-schemes-integration" class="nav-link" data-scroll-target="#silsen-skos-schemes-integration">SIL/SEN SKOS Schemes Integration</a>
+  <ul class="collapse">
+  <li><a href="#integrate-sil-enumeration-methods" id="toc-integrate-sil-enumeration-methods" class="nav-link" data-scroll-target="#integrate-sil-enumeration-methods">Integrate SIL Enumeration Methods</a></li>
+  <li><a href="#integrate-sen-estimate-methods" id="toc-integrate-sen-estimate-methods" class="nav-link" data-scroll-target="#integrate-sen-estimate-methods">Integrate SEN Estimate Methods</a></li>
+  <li><a href="#add-silsen-classes-if-needed" id="toc-add-silsen-classes-if-needed" class="nav-link" data-scroll-target="#add-silsen-classes-if-needed">Add SIL/SEN Classes (if needed)</a></li>
+  </ul></li>
+  <li><a href="#data-source-properties" id="toc-data-source-properties" class="nav-link" data-scroll-target="#data-source-properties">Data Source Properties</a>
+  <ul class="collapse">
+  <li><a href="#data-source-properties-status" id="toc-data-source-properties-status" class="nav-link" data-scroll-target="#data-source-properties-status">Data Source Properties Status</a></li>
+  <li><a href="#missing-data-source-properties-need-integration" id="toc-missing-data-source-properties-need-integration" class="nav-link" data-scroll-target="#missing-data-source-properties-need-integration">Missing Data Source Properties (Need Integration)</a></li>
+  </ul></li>
+  <li><a href="#method-reproducibility-properties" id="toc-method-reproducibility-properties" class="nav-link" data-scroll-target="#method-reproducibility-properties">Method Reproducibility Properties</a>
+  <ul class="collapse">
+  <li><a href="#method-reproducibility-properties-status" id="toc-method-reproducibility-properties-status" class="nav-link" data-scroll-target="#method-reproducibility-properties-status">Method Reproducibility Properties Status</a></li>
+  <li><a href="#missing-method-reproducibility-properties-need-integration" id="toc-missing-method-reproducibility-properties-need-integration" class="nav-link" data-scroll-target="#missing-method-reproducibility-properties-need-integration">Missing Method Reproducibility Properties (Need Integration)</a></li>
+  </ul></li>
+  <li><a href="#reference-points-and-review-properties" id="toc-reference-points-and-review-properties" class="nav-link" data-scroll-target="#reference-points-and-review-properties">Reference Points and Review Properties</a>
+  <ul class="collapse">
+  <li><a href="#reference-points-and-review-properties-status" id="toc-reference-points-and-review-properties-status" class="nav-link" data-scroll-target="#reference-points-and-review-properties-status">Reference Points and Review Properties Status</a></li>
+  <li><a href="#missing-reference-points-properties-need-integration" id="toc-missing-reference-points-properties-need-integration" class="nav-link" data-scroll-target="#missing-reference-points-properties-need-integration">Missing Reference Points Properties (Need Integration)</a></li>
+  </ul></li>
+  <li><a href="#shacl-header-and-documentation" id="toc-shacl-header-and-documentation" class="nav-link" data-scroll-target="#shacl-header-and-documentation">SHACL Header and Documentation</a>
+  <ul class="collapse">
+  <li><a href="#update-shacl-file-header-1" id="toc-update-shacl-file-header-1" class="nav-link" data-scroll-target="#update-shacl-file-header-1">Update SHACL File Header</a></li>
+  </ul></li>
+  <li><a href="#shacl-decision-context-shape" id="toc-shacl-decision-context-shape" class="nav-link" data-scroll-target="#shacl-decision-context-shape">SHACL Decision Context Shape</a>
+  <ul class="collapse">
+  <li><a href="#create-decision-context-shape" id="toc-create-decision-context-shape" class="nav-link" data-scroll-target="#create-decision-context-shape">Create Decision Context Shape</a></li>
+  </ul></li>
+  <li><a href="#shacl-conditional-validation-rules" id="toc-shacl-conditional-validation-rules" class="nav-link" data-scroll-target="#shacl-conditional-validation-rules">SHACL Conditional Validation Rules</a>
+  <ul class="collapse">
+  <li><a href="#add-conditional-validation-rules" id="toc-add-conditional-validation-rules" class="nav-link" data-scroll-target="#add-conditional-validation-rules">Add Conditional Validation Rules</a></li>
+  </ul></li>
+  <li><a href="#mel-provenance-validation" id="toc-mel-provenance-validation" class="nav-link" data-scroll-target="#mel-provenance-validation">Mel Provenance Validation</a>
+  <ul class="collapse">
+  <li><a href="#add-provenance-validation" id="toc-add-provenance-validation" class="nav-link" data-scroll-target="#add-provenance-validation">Add Provenance Validation</a></li>
+  </ul></li>
+  <li><a href="#w3id-phase-2-publication" id="toc-w3id-phase-2-publication" class="nav-link" data-scroll-target="#w3id-phase-2-publication">W3ID Phase 2 Publication</a>
+  <ul class="collapse">
+  <li><a href="#prepare-fsar-terms" id="toc-prepare-fsar-terms" class="nav-link" data-scroll-target="#prepare-fsar-terms">Prepare FSAR Terms</a></li>
+  <li><a href="#update-w3id-configuration" id="toc-update-w3id-configuration" class="nav-link" data-scroll-target="#update-w3id-configuration">Update W3ID Configuration</a></li>
+  <li><a href="#submit-w3id-update" id="toc-submit-w3id-update" class="nav-link" data-scroll-target="#submit-w3id-update">Submit W3ID Update</a></li>
+  </ul></li>
+  <li><a href="#sparql-query-pack" id="toc-sparql-query-pack" class="nav-link" data-scroll-target="#sparql-query-pack">SPARQL Query Pack</a>
+  <ul class="collapse">
+  <li><a href="#create-query-file" id="toc-create-query-file" class="nav-link" data-scroll-target="#create-query-file">Create Query File</a></li>
+  <li><a href="#core-evidence-queries-q1-q4" id="toc-core-evidence-queries-q1-q4" class="nav-link" data-scroll-target="#core-evidence-queries-q1-q4">Core Evidence Queries (Q1-Q4)</a></li>
+  <li><a href="#data-currency-and-quality-queries-q5-q8" id="toc-data-currency-and-quality-queries-q5-q8" class="nav-link" data-scroll-target="#data-currency-and-quality-queries-q5-q8">Data Currency and Quality Queries (Q5-Q8)</a></li>
+  <li><a href="#genetics-integration-query-q9" id="toc-genetics-integration-query-q9" class="nav-link" data-scroll-target="#genetics-integration-query-q9">Genetics Integration Query (Q9)</a></li>
+  </ul></li>
+  <li><a href="#relations-ontology-alignment" id="toc-relations-ontology-alignment" class="nav-link" data-scroll-target="#relations-ontology-alignment">Relations Ontology Alignment</a>
+  <ul class="collapse">
+  <li><a href="#document-ro-alignment" id="toc-document-ro-alignment" class="nav-link" data-scroll-target="#document-ro-alignment">Document RO Alignment</a></li>
+  </ul></li>
+  <li><a href="#import-policy-documentation" id="toc-import-policy-documentation" class="nav-link" data-scroll-target="#import-policy-documentation">Import Policy Documentation</a>
+  <ul class="collapse">
+  <li><a href="#update-conventions.md-import-policy" id="toc-update-conventions.md-import-policy" class="nav-link" data-scroll-target="#update-conventions.md-import-policy">Update CONVENTIONS.md Import Policy</a></li>
+  </ul></li>
+  <li><a href="#readme-updates" id="toc-readme-updates" class="nav-link" data-scroll-target="#readme-updates">README Updates</a>
+  <ul class="collapse">
+  <li><a href="#update-readme.md-technical-overview" id="toc-update-readme.md-technical-overview" class="nav-link" data-scroll-target="#update-readme.md-technical-overview">Update README.md Technical Overview</a></li>
+  <li><a href="#add-fsar-tracer-section-to-readme" id="toc-add-fsar-tracer-section-to-readme" class="nav-link" data-scroll-target="#add-fsar-tracer-section-to-readme">Add FSAR Tracer Section to README</a></li>
+  </ul></li>
+  <li><a href="#sample-data-creation" id="toc-sample-data-creation" class="nav-link" data-scroll-target="#sample-data-creation">Sample Data Creation</a>
+  <ul class="collapse">
+  <li><a href="#create-barkley-sockeye-sample-instances" id="toc-create-barkley-sockeye-sample-instances" class="nav-link" data-scroll-target="#create-barkley-sockeye-sample-instances">Create Barkley Sockeye Sample Instances</a></li>
+  <li><a href="#link-instances-with-prov-o" id="toc-link-instances-with-prov-o" class="nav-link" data-scroll-target="#link-instances-with-prov-o">Link Instances with PROV-O</a></li>
+  <li><a href="#annotate-with-dqv-quality" id="toc-annotate-with-dqv-quality" class="nav-link" data-scroll-target="#annotate-with-dqv-quality">Annotate with DQV Quality</a></li>
+  </ul></li>
+  <li><a href="#json-ld-context-and-export" id="toc-json-ld-context-and-export" class="nav-link" data-scroll-target="#json-ld-context-and-export">JSON-LD Context and Export</a>
+  <ul class="collapse">
+  <li><a href="#create-json-ld-context" id="toc-create-json-ld-context" class="nav-link" data-scroll-target="#create-json-ld-context">Create JSON-LD Context</a></li>
+  <li><a href="#export-sample-data-as-json-ld" id="toc-export-sample-data-as-json-ld" class="nav-link" data-scroll-target="#export-sample-data-as-json-ld">Export Sample Data as JSON-LD</a></li>
+  </ul></li>
+  <li><a href="#w3id-phase-3-complete-publication" id="toc-w3id-phase-3-complete-publication" class="nav-link" data-scroll-target="#w3id-phase-3-complete-publication">W3ID Phase 3 Complete Publication</a>
+  <ul class="collapse">
+  <li><a href="#prepare-remaining-terms" id="toc-prepare-remaining-terms" class="nav-link" data-scroll-target="#prepare-remaining-terms">Prepare Remaining Terms</a></li>
+  <li><a href="#final-w3id-update" id="toc-final-w3id-update" class="nav-link" data-scroll-target="#final-w3id-update">Final W3ID Update</a></li>
+  <li><a href="#post-publication-verification" id="toc-post-publication-verification" class="nav-link" data-scroll-target="#post-publication-verification">Post-Publication Verification</a></li>
+  </ul></li>
+  <li><a href="#cicd-and-quality-checks" id="toc-cicd-and-quality-checks" class="nav-link" data-scroll-target="#cicd-and-quality-checks">CI/CD and Quality Checks</a>
+  <ul class="collapse">
+  <li><a href="#fix-robot-validation-1" id="toc-fix-robot-validation-1" class="nav-link" data-scroll-target="#fix-robot-validation-1">Fix ROBOT Validation</a></li>
+  <li><a href="#add-quality-checks" id="toc-add-quality-checks" class="nav-link" data-scroll-target="#add-quality-checks">Add Quality Checks</a></li>
+  </ul></li>
+  <li><a href="#deferred-to-post-mvp" id="toc-deferred-to-post-mvp" class="nav-link" data-scroll-target="#deferred-to-post-mvp">Deferred to Post-MVP</a>
+  <ul class="collapse">
+  <li><a href="#dprod-investigation" id="toc-dprod-investigation" class="nav-link" data-scroll-target="#dprod-investigation">DPROD Investigation</a></li>
+  <li><a href="#full-ro-integration" id="toc-full-ro-integration" class="nav-link" data-scroll-target="#full-ro-integration">Full RO Integration</a></li>
+  <li><a href="#estimate-type-automated-assignment" id="toc-estimate-type-automated-assignment" class="nav-link" data-scroll-target="#estimate-type-automated-assignment">Estimate Type Automated Assignment</a></li>
+  <li><a href="#multi-smu-support" id="toc-multi-smu-support" class="nav-link" data-scroll-target="#multi-smu-support">Multi-SMU Support</a></li>
+  <li><a href="#robot-validation-setup" id="toc-robot-validation-setup" class="nav-link" data-scroll-target="#robot-validation-setup">ROBOT Validation Setup</a></li>
+  </ul></li>
+  <li><a href="#nceas-salmon-ontology-integration" id="toc-nceas-salmon-ontology-integration" class="nav-link" data-scroll-target="#nceas-salmon-ontology-integration">NCEAS Salmon Ontology Integration</a>
+  <ul class="collapse">
+  <li><a href="#immediate-actions-next-3-months" id="toc-immediate-actions-next-3-months" class="nav-link" data-scroll-target="#immediate-actions-next-3-months">Immediate Actions (Next 3 months)</a></li>
+  <li><a href="#medium-term-actions-3-12-months" id="toc-medium-term-actions-3-12-months" class="nav-link" data-scroll-target="#medium-term-actions-3-12-months">Medium-term Actions (3-12 months)</a></li>
+  <li><a href="#long-term-actions-1-3-years" id="toc-long-term-actions-1-3-years" class="nav-link" data-scroll-target="#long-term-actions-1-3-years">Long-term Actions (1-3 years)</a></li>
+  <li><a href="#contribution-heuristics" id="toc-contribution-heuristics" class="nav-link" data-scroll-target="#contribution-heuristics">Contribution Heuristics</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/data/ontology/docs/todo_list.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/data/ontology/docs/todo_list.md" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="dfo-salmon-ontology---fsar-tracer-mvp-todo-list" class="level1">
+<h1>DFO Salmon Ontology - FSAR Tracer MVP Todo List</h1>
+<p><strong>Focus:</strong> 8-week path to Barkley Sockeye FSAR evidence chain demo<br>
+<strong>Goal:</strong> Six-node trace (Data → Method → RefPoints → Status → Advice → Decision) with badges</p>
+<p><strong>Last Updated:</strong> 2025-01-27<br>
+<strong>Status:</strong> Active development for FSAR Advice Trace (2-month critical path)</p>
+<hr>
+<section id="done-requirements-and-design-review" class="level2">
+<h2 class="anchored" data-anchor-id="done-requirements-and-design-review">DONE Requirements and Design Review</h2>
+<p><strong>Owner:</strong> Brett<br>
+<strong>Priority:</strong> Critical<br>
+<strong>Scope:</strong> Foundation and alignment</p>
+<section id="review-and-refine-fsar-tracer-prd" class="level3">
+<h3 class="anchored" data-anchor-id="review-and-refine-fsar-tracer-prd">Review and Refine FSAR Tracer PRD</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">Review <code>docs/ontology_applications/FSAR_Tracer_PRD_CQs.md</code> for completeness</label></li>
+<li><label><input type="checkbox" checked="">Clarify terminology: “Scientific Output” vs “Advice”, “Decision” vs “DecisionContext”</label></li>
+<li><label><input type="checkbox" checked="">Finalize evidence chain requirements</label></li>
+<li><label><input type="checkbox" checked="">Document required fields checklist (v1.0)</label></li>
+<li><label><input type="checkbox" checked="">Ensure alignment with SPSR data model</label></li>
+<li><label><input type="checkbox" checked="">Comprehensive PRD update with personas, user stories, acceptance criteria, competency questions, schema recommendations, and MVP enhancements</label></li>
+</ul>
+</section>
+<section id="review-competency-questions" class="level3">
+<h3 class="anchored" data-anchor-id="review-competency-questions">Review Competency Questions</h3>
+<p><strong>File:</strong> <code>docs/COMPETENCY_QUESTIONS.md</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">Review existing stock assessment competency questions</label></li>
+<li><label><input type="checkbox" checked="">Add FSAR Tracer-specific competency questions (Q1-Q9)</label></li>
+<li><label><input type="checkbox" checked="">Verify each question maps to ontology classes/properties</label></li>
+<li><label><input type="checkbox" checked="">Ensure questions cover all evidence chain nodes</label></li>
+<li><label><input type="checkbox" checked="">Add genetics/GSI competency questions for GRD linkage</label></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="dfo-organizational-structure" class="level2">
+<h2 class="anchored" data-anchor-id="dfo-organizational-structure">DFO Organizational Structure</h2>
+<p><strong>Owner:</strong> Mel<br>
+<strong>Priority:</strong> Medium<br>
+<strong>Scope:</strong> Organizational hierarchy classes and properties</p>
+<section id="add-org-ontology-mireot-and-dfo-organizational-classes" class="level3">
+<h3 class="anchored" data-anchor-id="add-org-ontology-mireot-and-dfo-organizational-classes">Add ORG Ontology MIREOT and DFO Organizational Classes</h3>
+<p><strong>File:</strong> <code>ontology/dfo-salmon.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Add ORG prefix declaration: <code>@prefix org: &lt;http://www.w3.org/ns/org#&gt;</code></label></li>
+<li><label><input type="checkbox">Add ORG MIREOT section with key terms: <code>org:Organization</code>, <code>org:OrganizationalUnit</code>, <code>org:hasUnit</code>, <code>org:hasSubOrganization</code></label></li>
+<li><label><input type="checkbox">Add DFO-specific organizational classes as subclasses of <code>org:OrganizationalUnit</code>:</label>
+<ul>
+<li><code>dfo:Unit</code> (with <code>skos:altLabel "Program"@en</code>)</li>
+<li><code>dfo:Section</code>, <code>dfo:Division</code>, <code>dfo:Branch</code>, <code>dfo:Region</code>, <code>dfo:Sector</code></li>
+</ul></li>
+<li><label><input type="checkbox">Add comprehensive rdfs:label and rdfs:comment for each DFO class</label></li>
+<li><label><input type="checkbox">Add rdfs:isDefinedBy for all classes</label></li>
+</ul>
+</section>
+<section id="add-dfo-specific-organizational-properties" class="level3">
+<h3 class="anchored" data-anchor-id="add-dfo-specific-organizational-properties">Add DFO-Specific Organizational Properties</h3>
+<p><strong>File:</strong> <code>ontology/dfo-salmon.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Add DFO-specific subproperties of ORG properties:</label>
+<ul>
+<li><code>dfo:hasUnit</code> (subproperty of <code>org:hasUnit</code>)</li>
+<li><code>dfo:hasSection</code> (subproperty of <code>org:hasSubOrganization</code>)</li>
+<li><code>dfo:hasDivision</code> (subproperty of <code>org:hasSubOrganization</code>)</li>
+<li><code>dfo:hasBranch</code> (subproperty of <code>org:hasSubOrganization</code>)</li>
+<li><code>dfo:hasRegion</code> (subproperty of <code>org:hasSubOrganization</code>)</li>
+</ul></li>
+<li><label><input type="checkbox">Set appropriate domains and ranges for each DFO subproperty</label></li>
+<li><label><input type="checkbox">Add organizational metadata properties: <code>dfo:organizationalUnitName</code>, <code>dfo:organizationalUnitCode</code></label></li>
+<li><label><input type="checkbox">Document ORG alignment in comments</label></li>
+</ul>
+</section>
+<section id="add-project-class-and-linkage-properties" class="level3">
+<h3 class="anchored" data-anchor-id="add-project-class-and-linkage-properties">Add Project Class and Linkage Properties</h3>
+<p><strong>File:</strong> <code>ontology/dfo-salmon.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Add <code>dfo:Project</code> class as subclass of <code>bfo:0000015</code> (process)</label></li>
+<li><label><input type="checkbox">Add <code>dfo:managedBy</code> property linking Project to Unit</label></li>
+<li><label><input type="checkbox">Add <code>dfo:collaboratesWith</code> symmetric property for cross-cutting collaborations</label></li>
+<li><label><input type="checkbox">Add inverse <code>dfo:manages</code> property</label></li>
+<li><label><input type="checkbox">Add basic project properties: <code>dfo:projectTitle</code>, <code>dfo:projectFirstYear</code>, <code>dfo:projectLastYear</code></label></li>
+</ul>
+</section>
+<section id="update-conventions.md" class="level3">
+<h3 class="anchored" data-anchor-id="update-conventions.md">Update CONVENTIONS.md</h3>
+<p><strong>File:</strong> <code>docs/CONVENTIONS.md</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Add section documenting ORG ontology integration approach</label></li>
+<li><label><input type="checkbox">Document DFO-specific organizational hierarchy pattern using ORG subclasses</label></li>
+<li><label><input type="checkbox">Document project cross-cutting collaboration pattern</label></li>
+<li><label><input type="checkbox">Add examples of organizational structure modeling with ORG alignment</label></li>
+<li><label><input type="checkbox">Add note about Program = Unit synonymy</label></li>
+</ul>
+</section>
+<section id="create-example-organizational-structure" class="level3">
+<h3 class="anchored" data-anchor-id="create-example-organizational-structure">Create Example Organizational Structure</h3>
+<p><strong>File:</strong> <code>ontology/examples/dfo-org-structure-example.ttl</code> (NEW FILE)</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Create example instances of organizational hierarchy (schema only in main file)</label></li>
+<li><label><input type="checkbox">Show Unit → Section → Division → Branch → Region → Sector relationships</label></li>
+<li><label><input type="checkbox">Create example project instances with organizational linkages</label></li>
+<li><label><input type="checkbox">Document that these are examples, not production data</label></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="silsen-integration-review" class="level2">
+<h2 class="anchored" data-anchor-id="silsen-integration-review">SIL/SEN Integration Review</h2>
+<p><strong>Owner:</strong> Mel + Minh Doan<br>
+<strong>Priority:</strong> High<br>
+<strong>Scope:</strong> Align with Minh Doan’s escapement measurement work</p>
+<section id="review-minh-doans-silsen-pr" class="level3">
+<h3 class="anchored" data-anchor-id="review-minh-doans-silsen-pr">Review Minh Doan’s SIL/SEN PR</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Review Minh Doan’s Stream Inspection Logs (SIL) terms</label></li>
+<li><label><input type="checkbox">Review Escapement Narratives (SEN) terms</label></li>
+<li><label><input type="checkbox">Identify SKOS concept schemes relevant to FSAR Tracer</label></li>
+<li><label><input type="checkbox">Map SIL/SEN enumeration methods to existing <code>:EnumerationMethodScheme</code></label></li>
+<li><label><input type="checkbox">Document integration plan for SIL/SEN classes</label></li>
+<li><label><input type="checkbox">Prioritize SKOS schemes that benefit both FSAR Tracer and SIL/SEN work</label></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="done-bfo-mireot-import-and-dwc-mapping" class="level2">
+<h2 class="anchored" data-anchor-id="done-bfo-mireot-import-and-dwc-mapping">DONE BFO MIREOT Import and DwC Mapping</h2>
+<p><strong>Owner:</strong> Brett<br>
+<strong>Priority:</strong> High<br>
+<strong>Scope:</strong> Upper ontology grounding via BFO</p>
+<section id="add-bfo-mireot-definitions" class="level3">
+<h3 class="anchored" data-anchor-id="add-bfo-mireot-definitions">Add BFO MIREOT Definitions</h3>
+<p><strong>File:</strong> <code>ontology/dfo-salmon.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">Keep BFO prefix declaration at line 2: <code>@prefix bfo: &lt;http://purl.obolibrary.org/obo/BFO_&gt;</code></label></li>
+<li><label><input type="checkbox" checked="">Add BFO MIREOT section after line 240</label></li>
+<li><label><input type="checkbox" checked="">Import <code>bfo:0000015</code> (process) with label and oboInOwl:hasDefinition</label></li>
+<li><label><input type="checkbox" checked="">Import <code>bfo:0000040</code> (material entity) with label and oboInOwl:hasDefinition</label></li>
+<li><label><input type="checkbox" checked="">Import <code>bfo:0000031</code> (generically dependent continuant) with label and oboInOwl:hasDefinition</label></li>
+<li><label><input type="checkbox" checked="">Add section comment: “Upper ontology grounding for process/entity/quality hierarchy”</label></li>
+<li><label><input type="checkbox" checked="">Test ontology loads in Protégé without errors</label></li>
+</ul>
+</section>
+<section id="update-dwc-to-bfo-mappings" class="level3">
+<h3 class="anchored" data-anchor-id="update-dwc-to-bfo-mappings">Update DwC-to-BFO Mappings</h3>
+<p><strong>File:</strong> <code>ontology/dfo-salmon.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">Update lines 219-234 (Class Mappings section)</label></li>
+<li><label><input type="checkbox" checked="">Change <code>dwc:Organism rdfs:subClassOf bfo:0000040</code> to use actual BFO class (not comment)</label></li>
+<li><label><input type="checkbox" checked="">Change <code>dwc:Event rdfs:subClassOf bfo:0000015</code> to use actual BFO class</label></li>
+<li><label><input type="checkbox" checked="">Change <code>dwc:MaterialEntity rdfs:subClassOf bfo:0000040</code></label></li>
+<li><label><input type="checkbox" checked="">Change <code>dwc:Agent rdfs:subClassOf bfo:0000040</code></label></li>
+<li><label><input type="checkbox" checked="">Update section title to “Class Mappings to Darwin Core and BFO Upper Ontology”</label></li>
+<li><label><input type="checkbox" checked="">Verify reasoning works with ELK reasoner</label></li>
+<li><label><input type="checkbox" checked="">Implement DwC-CM alignment (dwc:Assertion transition)</label></li>
+</ul>
+</section>
+<section id="clean-up-estimate-type-classification-code" class="level3">
+<h3 class="anchored" data-anchor-id="clean-up-estimate-type-classification-code">Clean Up Estimate Type Classification Code</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">Delete scripts/automated_classification.py (not needed for FSAR Tracer MVP)</label></li>
+<li><label><input type="checkbox" checked="">Update docs/CONVENTIONS.md: Remove automated classification references</label></li>
+<li><label><input type="checkbox" checked="">Update docs/VALIDATION_README.md: Change to manual classification</label></li>
+<li><label><input type="checkbox" checked="">Update docs/ADR.md: Note automation deferred to post-MVP</label></li>
+<li><label><input type="checkbox" checked="">Update scripts/test_shacl_validation.py: Remove assignedEstimateType query</label></li>
+<li><label><input type="checkbox" checked="">Keep EstimateTypeScheme and assignedEstimateType property in ontology</label></li>
+</ul>
+</section>
+<section id="enhance-conventions.md-import-policy" class="level3">
+<h3 class="anchored" data-anchor-id="enhance-conventions.md-import-policy">Enhance CONVENTIONS.md Import Policy</h3>
+<p><strong>File:</strong> <code>docs/CONVENTIONS.md</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">Add BFO rationale explaining why BFO is used for FSAR Tracer</label></li>
+<li><label><input type="checkbox" checked="">Add FSAR Tracer specific usage examples for BFO, DQV, and PROV-O</label></li>
+<li><label><input type="checkbox" checked="">Document how MIREOT terms map to FSAR evidence chain classes</label></li>
+<li><label><input type="checkbox" checked="">Explain PROV-O property usage patterns for provenance tracking</label></li>
+</ul>
+</section>
+<section id="update-shacl-file-header" class="level3">
+<h3 class="anchored" data-anchor-id="update-shacl-file-header">Update SHACL File Header</h3>
+<p><strong>File:</strong> <code>ontology/shapes/dfo-salmon-shapes.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">Clarify that SHACL shapes are for data quality validation, not automated classification</label></li>
+<li><label><input type="checkbox" checked="">Add note that estimate types are manually assigned based on Hyatt 1997 criteria</label></li>
+<li><label><input type="checkbox" checked="">Add note that no instance data goes in main ontology file; instances go in examples/</label></li>
+</ul>
+</section>
+<section id="fix-robot-validation" class="level3">
+<h3 class="anchored" data-anchor-id="fix-robot-validation">Fix ROBOT Validation</h3>
+<p><strong>File:</strong> <code>.github/workflows/ci.yml</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">Comment out ROBOT validate step that was causing GitHub Actions failures</label></li>
+<li><label><input type="checkbox" checked="">ROBOT validate command doesn’t exist in v1.9.5 or needs profile setup</label></li>
+<li><label><input type="checkbox" checked="">Keep reasoning step which works correctly</label></li>
+<li><label><input type="checkbox" checked="">Add note to re-enable in PR-013: CI/CD and Quality Checks</label></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="darwin-core-conceptual-model-dwc-cm-implementation" class="level2">
+<h2 class="anchored" data-anchor-id="darwin-core-conceptual-model-dwc-cm-implementation">Darwin Core Conceptual Model (DwC-CM) Implementation</h2>
+<p><strong>Owner:</strong> Brett<br>
+<strong>Priority:</strong> High<br>
+<strong>Scope:</strong> DwC-CM alignment and implementation</p>
+<section id="implement-dwc-cm-patterns" class="level3">
+<h3 class="anchored" data-anchor-id="implement-dwc-cm-patterns">Implement DwC-CM Patterns</h3>
+<p><strong>File:</strong> <code>ontology/dfo-salmon.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">Update ontology header with DwC-CM implementation comments</label></li>
+<li><label><input type="checkbox" checked="">Update <code>dfo:EscapementMeasurement</code> to subclass <code>dwc:Assertion</code> (replace <code>dwc:MeasurementOrFact</code>)</label></li>
+<li><label><input type="checkbox" checked="">Update <code>dfo:GSICompositionMeasurement</code> to subclass <code>dwc:Assertion</code> (replace <code>dwc:MeasurementOrFact</code>)</label></li>
+<li><label><input type="checkbox" checked="">Update <code>dfo:Catch</code> to subclass <code>dwc:Assertion</code> (replace <code>dwc:MeasurementOrFact</code>)</label></li>
+<li><label><input type="checkbox" checked="">Remove TODO comments for dwc:Assertion transition</label></li>
+<li><label><input type="checkbox">Review property domains/ranges for DwC-CM alignment</label></li>
+<li><label><input type="checkbox">Ensure DwC Data Package (DwC-DP) compatibility</label></li>
+</ul>
+</section>
+<section id="update-documentation-for-dwc-cm" class="level3">
+<h3 class="anchored" data-anchor-id="update-documentation-for-dwc-cm">Update Documentation for DwC-CM</h3>
+<p><strong>Files:</strong> <code>docs/CONVENTIONS.md</code>, <code>README.md</code>, <code>docs/onboarding.md</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">Update CONVENTIONS.md with DwC-CM implementation guidance</label></li>
+<li><label><input type="checkbox" checked="">Update README.md to reflect DwC-CM implementation</label></li>
+<li><label><input type="checkbox" checked="">Update onboarding.md with DwC-CM concepts</label></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="dqv-mireot-import-for-quality-framework" class="level2">
+<h2 class="anchored" data-anchor-id="dqv-mireot-import-for-quality-framework">DQV MIREOT Import for Quality Framework</h2>
+<p><strong>Owner:</strong> Mel<br>
+<strong>Priority:</strong> High<br>
+<strong>Scope:</strong> Evidence completeness and quality tracking</p>
+<section id="add-dqv-mireot-definitions" class="level3">
+<h3 class="anchored" data-anchor-id="add-dqv-mireot-definitions">Add DQV MIREOT Definitions</h3>
+<p><strong>File:</strong> <code>ontology/dfo-salmon.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Add DQV prefix declaration at line 9: <code>@prefix dqv: &lt;http://www.w3.org/ns/dqv#&gt;</code></label></li>
+<li><label><input type="checkbox">Add DQV MIREOT section after BFO section (~line 250)</label></li>
+<li><label><input type="checkbox">Import <code>dqv:Dimension</code> with rdfs:label and rdfs:comment</label></li>
+<li><label><input type="checkbox">Import <code>dqv:QualityAnnotation</code> with rdfs:label and rdfs:comment</label></li>
+<li><label><input type="checkbox">Import <code>dqv:inDimension</code> object property with rdfs:label and rdfs:comment</label></li>
+<li><label><input type="checkbox">Add rdfs:isDefinedBy for each term pointing to DQV namespace</label></li>
+<li><label><input type="checkbox">Test DQV terms are recognized in Protégé</label></li>
+</ul>
+</section>
+<section id="create-evidence-completeness-dimensions" class="level3">
+<h3 class="anchored" data-anchor-id="create-evidence-completeness-dimensions">Create Evidence Completeness Dimensions</h3>
+<p><strong>File:</strong> <code>ontology/dfo-salmon.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Add section comment: “Evidence Completeness Framework (DQV-based)”</label></li>
+<li><label><input type="checkbox">Create <code>dfo:EvidenceCompletenessDimension</code> as instance of <code>dqv:Dimension</code></label></li>
+<li><label><input type="checkbox">Create <code>dfo:DataCurrencyDimension</code> as instance of <code>dqv:Dimension</code></label></li>
+<li><label><input type="checkbox">Add skos:prefLabel and skos:definition for both dimensions</label></li>
+<li><label><input type="checkbox">Add rdfs:isDefinedBy for each dimension</label></li>
+</ul>
+</section>
+<section id="create-quality-annotations-evidence-badges" class="level3">
+<h3 class="anchored" data-anchor-id="create-quality-annotations-evidence-badges">Create Quality Annotations (Evidence Badges)</h3>
+<p><strong>File:</strong> <code>ontology/dfo-salmon.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Create <code>dfo:CompleteEvidence</code> as <code>dqv:QualityAnnotation</code></label></li>
+<li><label><input type="checkbox">Create <code>dfo:GapsEvidence</code> as <code>dqv:QualityAnnotation</code></label></li>
+<li><label><input type="checkbox">Create <code>dfo:MissingCriticalEvidence</code> as <code>dqv:QualityAnnotation</code></label></li>
+<li><label><input type="checkbox">Link each to <code>dfo:EvidenceCompletenessDimension</code> via <code>dqv:inDimension</code></label></li>
+<li><label><input type="checkbox">Add skos:prefLabel for each badge (Complete, Gaps, Missing-Critical)</label></li>
+<li><label><input type="checkbox">Add rdfs:isDefinedBy for each annotation</label></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="fsar-tracer-core-classes" class="level2">
+<h2 class="anchored" data-anchor-id="fsar-tracer-core-classes">FSAR Tracer Core Classes</h2>
+<p><strong>Owner:</strong> Brett<br>
+<strong>Priority:</strong> High<br>
+<strong>Scope:</strong> Evidence chain ontology classes</p>
+<section id="fsar-module-implementation-status" class="level3">
+<h3 class="anchored" data-anchor-id="fsar-module-implementation-status">FSAR Module Implementation Status</h3>
+<p><strong>File:</strong> <code>docs/ontology_applications/dfo-fsar.ttl</code><br>
+<strong>Latest Version:</strong> <code>docs/ontology_applications/dfo-fsar-v4.ttl</code> (includes WSP rapid-status support)</p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked=""><strong>COMPLETED</strong>: FSAR module ontology created with comprehensive class definitions</label></li>
+<li><label><input type="checkbox" checked=""><strong>COMPLETED</strong>: Core FSAR classes implemented:</label>
+<ul>
+<li><code>fsar:StockAssessment</code> (subclass of <code>dfo:StockAssessment</code>)</li>
+<li><code>fsar:PolicyReadiness</code> (policy &amp; legal readiness tracking)</li>
+<li><code>fsar:ManagementDecision</code> (management decision records)</li>
+<li><code>fsar:CUInclusion</code> (CU accounting entries)</li>
+<li><code>fsar:GSIUsage</code> (genetic stock ID usage details)</li>
+<li><code>fsar:ChangeLogEntry</code> (change log entries)</li>
+</ul></li>
+<li><label><input type="checkbox" checked=""><strong>COMPLETED</strong>: Comprehensive object properties implemented:</label>
+<ul>
+<li><code>fsar:assessesUnit</code>, <code>fsar:hasStatusZone</code>, <code>fsar:usesDataset</code>, <code>fsar:usesMethod</code></li>
+<li><code>fsar:supportsAdvice</code>, <code>fsar:ledToDecision</code>, <code>fsar:hasPolicyReadiness</code></li>
+<li><code>fsar:hasCUInclusion</code>, <code>fsar:hasGSIUsage</code>, <code>fsar:hasChangeLogEntry</code>, <code>fsar:hasThreatFactor</code></li>
+</ul></li>
+<li><label><input type="checkbox" checked=""><strong>COMPLETED</strong>: Comprehensive datatype properties implemented:</label>
+<ul>
+<li>Policy readiness: <code>fsar:belowLRP</code>, <code>fsar:hcrIdentifier</code>, <code>fsar:hcrParameters</code>, <code>fsar:rebuildingPlanURL</code></li>
+<li>Assessment details: <code>fsar:assessedYear</code>, <code>fsar:uncertaintyNote</code>, <code>fsar:statusCI</code>, <code>fsar:downgradeReason</code></li>
+<li>CU accounting: <code>fsar:cuDecision</code>, <code>fsar:justification</code>, <code>fsar:reviewedBy</code>, <code>fsar:reviewDate</code></li>
+<li>GSI usage: <code>fsar:gsiUsed</code>, <code>fsar:gsiSampleSize</code>, <code>fsar:gsiAssignmentUncertainty</code></li>
+<li>Change tracking: <code>fsar:changeCategory</code>, <code>fsar:changeDetail</code></li>
+</ul></li>
+<li><label><input type="checkbox" checked=""><strong>COMPLETED</strong>: Example instances created for Barkley Sockeye 2025 assessment</label></li>
+<li><label><input type="checkbox" checked=""><strong>COMPLETED</strong>: PROV-O provenance patterns implemented with RDF-star annotations</label></li>
+</ul>
+</section>
+<section id="wsp-rapid-status-support" class="level3">
+<h3 class="anchored" data-anchor-id="wsp-rapid-status-support">WSP Rapid-Status Support</h3>
+<p><strong>File:</strong> <code>docs/ontology_applications/dfo-fsar-v4.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked=""><strong>COMPLETED</strong>: WSP rapid-status support added to FSAR Tracer module (2025-01-27)</label>
+<ul>
+<li>Added WSP metric classes (<code>fsar:WSPMetric</code>, <code>fsar:MetricBenchmark</code>, <code>fsar:AlgorithmThreshold</code>)</li>
+<li>Added status and confidence categories using SKOS</li>
+<li>Added properties linking assessments to metrics, statuses, and confidence</li>
+<li>Added example benchmark and threshold instances</li>
+<li>Documented benchmark vs.&nbsp;algorithm threshold differences</li>
+</ul></li>
+<li><label><input type="checkbox" checked=""><strong>COMPLETED</strong>: Updated PRD with WSP rapid-status section (2f) and 4 new CQs (CQ-WSP-1 through CQ-WSP-4)</label></li>
+<li><label><input type="checkbox"><strong>NEXT</strong>: Integrate WSP rapid-status into FSAR Tracer UI/application layer</label></li>
+<li><label><input type="checkbox"><strong>NEXT</strong>: Add validation rules for benchmark/threshold consistency</label></li>
+<li><label><input type="checkbox"><strong>FUTURE</strong>: Consider time-varying productivity support for relative abundance benchmarks</label></li>
+</ul>
+</section>
+<section id="integration-with-core-ontology" class="level3">
+<h3 class="anchored" data-anchor-id="integration-with-core-ontology">Integration with Core Ontology</h3>
+<p><strong>File:</strong> <code>ontology/dfo-salmon.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>NEXT</strong>: Integrate FSAR module classes into core ontology</label>
+<ul>
+<li>Add <code>fsar:</code> prefix declaration to core ontology</li>
+<li>Import or reference FSAR module classes in core ontology</li>
+<li>Ensure alignment between <code>dfo:StockAssessment</code> and <code>fsar:StockAssessment</code></li>
+<li><strong>Note</strong>: Consider namespace alignment - FSAR module uses <code>fsar:</code> prefix, core will use <code>dfoc:</code> prefix</li>
+</ul></li>
+<li><label><input type="checkbox" checked=""><strong>COMPLETED</strong>: Added <code>dfo:StockAssessment</code> class to core ontology (2025-01-27)</label></li>
+<li><label><input type="checkbox"><strong>NEXT</strong>: Add missing core classes referenced by FSAR module:</label>
+<ul>
+<li><code>dfo:HarvestAdvice</code> (referenced by <code>fsar:supportsAdvice</code>)</li>
+<li>Ensure <code>dfo:Dataset</code> class exists and is properly defined</li>
+<li>Verify <code>dfo:StockManagementUnit</code> class alignment</li>
+</ul></li>
+<li><label><input type="checkbox"><strong>NEXT</strong>: Add missing SKOS concept schemes referenced by FSAR module:</label>
+<ul>
+<li><code>:WSPBiologicalStatusZoneScheme</code> (for WSP_Green, WSP_Amber, WSP_Red)</li>
+<li><code>:DowngradeCriteria</code> scheme (for downgrade reasons)</li>
+<li><code>:ThreatFactorScheme</code> (for threat factors)</li>
+<li>Method schemes (for <code>fsar:usesMethod</code>)</li>
+</ul></li>
+</ul>
+</section>
+<section id="enhanced-requirements-from-prd-updates" class="level3">
+<h3 class="anchored" data-anchor-id="enhanced-requirements-from-prd-updates">Enhanced Requirements from PRD Updates</h3>
+<p><strong>Based on comprehensive PRD updates (2025-01-27):</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>NEXT</strong>: Add benchmark transparency properties:</label>
+<ul>
+<li><code>fsar:reference_point_type</code> (controlled vocab: LRP/USR/Sgen/Smsy)</li>
+<li><code>fsar:benchmark_method</code> (controlled vocab: SR model, percentile, expert judgment)</li>
+<li><code>fsar:benchmark_sensitivity</code> (sensitivity flags)</li>
+</ul></li>
+<li><label><input type="checkbox"><strong>NEXT</strong>: Add uncertainty handling properties:</label>
+<ul>
+<li><code>fsar:status_confidence</code> (probabilities/CI)</li>
+<li><code>fsar:ciLower</code>, <code>fsar:ciUpper</code> (confidence interval bounds)</li>
+<li><code>fsar:probabilityGreen</code>, <code>fsar:probabilityAmber</code>, <code>fsar:probabilityRed</code></li>
+</ul></li>
+<li><label><input type="checkbox"><strong>NEXT</strong>: Add GSI risk assessment properties:</label>
+<ul>
+<li><code>fsar:baseline_reference</code> (baseline reference for GSI)</li>
+<li><code>fsar:fisheryType</code> (mixed-stock/single-stock classification)</li>
+</ul></li>
+<li><label><input type="checkbox"><strong>NEXT</strong>: Add method reproducibility properties:</label>
+<ul>
+<li><code>fsar:method_name</code>, <code>fsar:method_version</code>, <code>fsar:code_commit</code></li>
+</ul></li>
+<li><label><input type="checkbox"><strong>NEXT</strong>: Add data source properties:</label>
+<ul>
+<li><code>fsar:data_source_type</code> (direct, proxy, genetic proxy)</li>
+<li><code>fsar:spawner_origin</code> (wild, hatchery, mixed)</li>
+<li><code>fsar:proxy_justification</code> (required when data_source_type contains “proxy”)</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="w3id-phase-1-publication" class="level2">
+<h2 class="anchored" data-anchor-id="w3id-phase-1-publication">W3ID Phase 1 Publication</h2>
+<p><strong>Owner:</strong> Mel<br>
+<strong>Priority:</strong> High <strong>Scope:</strong> Publish stable core terms to w3id.org</p>
+<section id="prepare-core-terms" class="level3">
+<h3 class="anchored" data-anchor-id="prepare-core-terms">Prepare Core Terms</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Review/finalize labels and definitions for core terms</label></li>
+<li><label><input type="checkbox">Update ontology IRI to https://w3id.org/dfo/salmon</label></li>
+<li><label><input type="checkbox">Create version IRI: https://w3id.org/dfo/salmon/v0.1.0</label></li>
+<li><label><input type="checkbox">Update all rdfs:isDefinedBy for core terms to w3id URIs</label></li>
+<li><label><input type="checkbox">Document versioning strategy</label></li>
+<li><label><input type="checkbox"><strong>CRITICAL</strong>: Change namespace from <code>dfo:</code> to <code>dfoc:</code> since <code>dfo</code> is already taken on w3id</label>
+<ul>
+<li>Update all prefix declarations from <code>@prefix dfo: &lt;https://w3id.org/dfo/salmon#&gt;</code> to <code>@prefix dfoc: &lt;https://w3id.org/dfo/salmon#&gt;</code></li>
+<li>Update all class and property references from <code>dfo:</code> to <code>dfoc:</code></li>
+<li>Update all rdfs:isDefinedBy references to use dfoc: namespace</li>
+<li>Update documentation and examples to reflect dfoc: namespace</li>
+</ul></li>
+</ul>
+</section>
+<section id="create-w3id-configuration" class="level3">
+<h3 class="anchored" data-anchor-id="create-w3id-configuration">Create W3ID Configuration</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Fork w3id.org repository</label></li>
+<li><label><input type="checkbox">Create /dfo/salmon/.htaccess (content negotiation)</label></li>
+<li><label><input type="checkbox">Add redirections: ontology file and term URIs</label></li>
+<li><label><input type="checkbox">Create /dfo/salmon/README.md</label></li>
+</ul>
+</section>
+<section id="test-locally" class="level3">
+<h3 class="anchored" data-anchor-id="test-locally">Test Locally</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Test ontology file redirection</label></li>
+<li><label><input type="checkbox">Test term URI redirection (#Stock, etc.)</label></li>
+<li><label><input type="checkbox">Test content negotiation (text/turtle, application/rdf+xml)</label></li>
+<li><label><input type="checkbox">Verify version URIs</label></li>
+</ul>
+</section>
+<section id="submit-w3id-pr" class="level3">
+<h3 class="anchored" data-anchor-id="submit-w3id-pr">Submit W3ID PR</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Submit to w3id.org repository</label></li>
+<li><label><input type="checkbox">Document purpose in PR description</label></li>
+<li><label><input type="checkbox">Respond to reviewers</label></li>
+<li><label><input type="checkbox">Monitor for approval</label></li>
+</ul>
+</section>
+<section id="update-post-publication" class="level3">
+<h3 class="anchored" data-anchor-id="update-post-publication">Update Post-Publication</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Confirm all rdfs:isDefinedBy use w3id URIs</label></li>
+<li><label><input type="checkbox">Test URI resolution</label></li>
+<li><label><input type="checkbox">Update README with w3id links</label></li>
+<li><label><input type="checkbox">Update CONVENTIONS with persistent URI guidelines</label></li>
+</ul>
+<p><strong>Phase 1 Terms List:</strong></p>
+<ul>
+<li>Core: Stock, ConservationUnit, ManagementUnit</li>
+<li>Events: EscapementMeasurement, EscapementSurveyEvent</li>
+<li>Properties: aboutStock, hasMember, isMemberOf, usesEnumerationMethod, usesEstimateMethod, assignedEstimateType</li>
+<li>SKOS: EstimateTypeScheme (Type1-6), EnumerationMethodScheme, EstimateMethodScheme</li>
+<li><strong>Note</strong>: All terms will use <code>dfoc:</code> namespace prefix instead of <code>dfo:</code> due to w3id namespace conflict</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="genetics-classes-for-grd-integration" class="level2">
+<h2 class="anchored" data-anchor-id="genetics-classes-for-grd-integration">Genetics Classes for GRD Integration</h2>
+<p><strong>Owner:</strong> Brett<br>
+<strong>Priority:</strong> High<br>
+<strong>Scope:</strong> Link to Genetics Results Database</p>
+<section id="review-existing-genetics-classes" class="level3">
+<h3 class="anchored" data-anchor-id="review-existing-genetics-classes">Review Existing Genetics Classes</h3>
+<p><strong>File:</strong> <code>ontology/dfo-salmon.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Review existing genetics classes (lines 885-923): GeneticSample, GSIRun, GSICompositionMeasurement, ReportingUnit, Assay, MarkerPanel, Protocol</label></li>
+<li><label><input type="checkbox">Document current genetics class limitations and gaps</label></li>
+<li><label><input type="checkbox">Verify properties link samples to survey events and stocks</label></li>
+<li><label><input type="checkbox">Check if <code>GSIRun</code> adequately models GRD run identifiers</label></li>
+<li><label><input type="checkbox">Verify <code>GSICompositionMeasurement</code> can link to FSAR Tracer data products</label></li>
+</ul>
+</section>
+<section id="add-grd-linkage-properties" class="level3">
+<h3 class="anchored" data-anchor-id="add-grd-linkage-properties">Add GRD Linkage Properties</h3>
+<p><strong>File:</strong> <code>ontology/dfo-salmon.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Add <code>dfo:grdRunID</code> DatatypeProperty for GRD Run_ID</label></li>
+<li><label><input type="checkbox">Add <code>dfo:grdSampleID</code> DatatypeProperty for GRD Sample_ID</label></li>
+<li><label><input type="checkbox">Add <code>dfo:grdAssayID</code> DatatypeProperty for GRD Assay_ID (optional)</label></li>
+<li><label><input type="checkbox">Add <code>dfo:gsi_sample_size</code> DatatypeProperty for uncertainty tracking</label></li>
+<li><label><input type="checkbox">Add <code>dfo:gsi_ci</code> DatatypeProperty for confidence intervals</label></li>
+<li><label><input type="checkbox">Set appropriate domains and ranges</label></li>
+<li><label><input type="checkbox">Add comments explaining GRD integration</label></li>
+</ul>
+</section>
+<section id="document-genetics-to-fsar-linkage-pattern" class="level3">
+<h3 class="anchored" data-anchor-id="document-genetics-to-fsar-linkage-pattern">Document Genetics-to-FSAR Linkage Pattern</h3>
+<p><strong>File:</strong> <code>docs/CONVENTIONS.md</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Add section 6.x “Genetics Results Database (GRD) Integration”</label></li>
+<li><label><input type="checkbox">Document how GSICompositionMeasurement links to StatusAssessment</label></li>
+<li><label><input type="checkbox">Explain Run_ID, Sample_ID, Assay_ID usage</label></li>
+<li><label><input type="checkbox">Add example pattern for GRD→SPSR→FSAR trace</label></li>
+<li><label><input type="checkbox">Document uncertainty propagation from GSI to status assessment</label></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="silsen-skos-schemes-integration" class="level2">
+<h2 class="anchored" data-anchor-id="silsen-skos-schemes-integration">SIL/SEN SKOS Schemes Integration</h2>
+<p><strong>Owner:</strong> Mel + Minh Doan<br>
+<strong>Priority:</strong> High<br>
+<strong>Scope:</strong> Align with Minh Doan’s escapement measurement work</p>
+<section id="integrate-sil-enumeration-methods" class="level3">
+<h3 class="anchored" data-anchor-id="integrate-sil-enumeration-methods">Integrate SIL Enumeration Methods</h3>
+<p><strong>File:</strong> <code>ontology/dfo-salmon.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Review Minh Doan’s enumeration method concepts</label></li>
+<li><label><input type="checkbox">Integrate missing concepts into <code>:EnumerationMethodScheme</code></label></li>
+<li><label><input type="checkbox">Ensure all concepts have skos:prefLabel, skos:definition, skos:broader</label></li>
+<li><label><input type="checkbox">Add skos:inScheme links</label></li>
+<li><label><input type="checkbox">Verify no duplicate or conflicting concepts</label></li>
+</ul>
+</section>
+<section id="integrate-sen-estimate-methods" class="level3">
+<h3 class="anchored" data-anchor-id="integrate-sen-estimate-methods">Integrate SEN Estimate Methods</h3>
+<p><strong>File:</strong> <code>ontology/dfo-salmon.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Review Minh Doan’s estimate method concepts</label></li>
+<li><label><input type="checkbox">Integrate missing concepts into <code>:EstimateMethodScheme</code></label></li>
+<li><label><input type="checkbox">Ensure consistency with existing methods (AreaUnderTheCurve, PeakCountAnalysis, etc.)</label></li>
+<li><label><input type="checkbox">Add skos:prefLabel, skos:definition, skos:broader for all</label></li>
+<li><label><input type="checkbox">Verify scheme completeness</label></li>
+</ul>
+</section>
+<section id="add-silsen-classes-if-needed" class="level3">
+<h3 class="anchored" data-anchor-id="add-silsen-classes-if-needed">Add SIL/SEN Classes (if needed)</h3>
+<p><strong>File:</strong> <code>ontology/dfo-salmon.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Add <code>dfo:StreamInspectionLog</code> class if not already present</label></li>
+<li><label><input type="checkbox">Add <code>dfo:EscapementNarrative</code> class if not already present</label></li>
+<li><label><input type="checkbox">Link to existing <code>dfo:EscapementSurveyEvent</code> hierarchy</label></li>
+<li><label><input type="checkbox">Add properties for SIL/SEN metadata</label></li>
+<li><label><input type="checkbox">Document relationship to EscapementMeasurement</label></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="data-source-properties" class="level2">
+<h2 class="anchored" data-anchor-id="data-source-properties">Data Source Properties</h2>
+<p><strong>Owner:</strong> Mel<br>
+<strong>Priority:</strong> High<br>
+<strong>Scope:</strong> Evidence completeness tracking properties</p>
+<section id="data-source-properties-status" class="level3">
+<h3 class="anchored" data-anchor-id="data-source-properties-status">Data Source Properties Status</h3>
+<p><strong>File:</strong> <code>docs/ontology_applications/dfo-fsar.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked=""><strong>COMPLETED</strong>: <code>fsar:proxy_justification</code> implemented in FSAR module</label>
+<ul>
+<li>Domain: <code>fsar:CUInclusion</code>, Range: <code>xsd:string</code></li>
+<li>Comment: “Explanation for the CU decision if it’s not simply ‘included’”</li>
+</ul></li>
+<li><label><input type="checkbox" checked=""><strong>COMPLETED</strong>: Data source tracking via <code>fsar:usesDataset</code> property</label>
+<ul>
+<li>Links assessments to input datasets</li>
+<li>Subproperty of <code>prov:used</code> for provenance tracking</li>
+</ul></li>
+</ul>
+</section>
+<section id="missing-data-source-properties-need-integration" class="level3">
+<h3 class="anchored" data-anchor-id="missing-data-source-properties-need-integration">Missing Data Source Properties (Need Integration)</h3>
+<p><strong>File:</strong> <code>ontology/dfo-salmon.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>NEXT</strong>: Add <code>dfo:data_source_type</code> DatatypeProperty to core ontology</label>
+<ul>
+<li>Set domain to <code>dfo:EscapementMeasurement</code>, range to <code>xsd:string</code></li>
+<li>Add label and comment explaining source types (direct, proxy, genetic proxy)</li>
+<li><strong>Note</strong>: This should be added to core ontology, not FSAR module</li>
+</ul></li>
+<li><label><input type="checkbox"><strong>NEXT</strong>: Add <code>dfo:spawner_origin</code> DatatypeProperty to core ontology</label>
+<ul>
+<li>Set domain to <code>dfo:EscapementMeasurement</code>, range to <code>xsd:string</code></li>
+<li>Add comment explaining wild, hatchery, mixed origins</li>
+<li><strong>Note</strong>: This should be added to core ontology, not FSAR module</li>
+</ul></li>
+<li><label><input type="checkbox"><strong>NEXT</strong>: Integrate FSAR module <code>fsar:proxy_justification</code> with core ontology</label>
+<ul>
+<li>Consider if this should be a core property or remain FSAR-specific</li>
+<li>Ensure alignment with PRD requirements for proxy justification</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="method-reproducibility-properties" class="level2">
+<h2 class="anchored" data-anchor-id="method-reproducibility-properties">Method Reproducibility Properties</h2>
+<p><strong>Owner:</strong> Mel<br>
+<strong>Priority:</strong> High<br>
+<strong>Scope:</strong> Method reproducibility tracking</p>
+<section id="method-reproducibility-properties-status" class="level3">
+<h3 class="anchored" data-anchor-id="method-reproducibility-properties-status">Method Reproducibility Properties Status</h3>
+<p><strong>File:</strong> <code>docs/ontology_applications/dfo-fsar.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked=""><strong>COMPLETED</strong>: Method tracking via <code>fsar:usesMethod</code> property</label>
+<ul>
+<li>Links assessments to analytical methods (SKOS concepts)</li>
+<li>Subproperty of <code>prov:wasGeneratedBy</code> for provenance tracking</li>
+</ul></li>
+<li><label><input type="checkbox" checked=""><strong>COMPLETED</strong>: Method provenance via PROV-O patterns</label>
+<ul>
+<li>RDF-star annotations for method generation provenance</li>
+<li>Links to code commits and implementation details</li>
+</ul></li>
+</ul>
+</section>
+<section id="missing-method-reproducibility-properties-need-integration" class="level3">
+<h3 class="anchored" data-anchor-id="missing-method-reproducibility-properties-need-integration">Missing Method Reproducibility Properties (Need Integration)</h3>
+<p><strong>File:</strong> <code>ontology/dfo-salmon.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>NEXT</strong>: Add <code>dfo:method_name</code> DatatypeProperty to core ontology</label>
+<ul>
+<li>Set domain to <code>dfo:AnalysisMethod</code>, range to <code>xsd:string</code></li>
+<li><strong>Note</strong>: This should be added to core ontology, not FSAR module</li>
+</ul></li>
+<li><label><input type="checkbox"><strong>NEXT</strong>: Add <code>dfo:method_version</code> DatatypeProperty to core ontology</label>
+<ul>
+<li>Set domain to <code>dfo:AnalysisMethod</code>, range to <code>xsd:string</code></li>
+<li><strong>Note</strong>: This should be added to core ontology, not FSAR module</li>
+</ul></li>
+<li><label><input type="checkbox"><strong>NEXT</strong>: Add <code>dfo:code_commit</code> DatatypeProperty to core ontology</label>
+<ul>
+<li>Set domain to <code>dfo:AnalysisMethod</code>, range to <code>xsd:string</code></li>
+<li>Add comment: Git commit hash/tag for reproducibility</li>
+<li><strong>Note</strong>: This should be added to core ontology, not FSAR module</li>
+</ul></li>
+<li><label><input type="checkbox"><strong>NEXT</strong>: Integrate FSAR module method tracking with core ontology</label>
+<ul>
+<li>Ensure <code>dfo:AnalysisMethod</code> class exists in core ontology</li>
+<li>Align FSAR method tracking with core ontology patterns</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="reference-points-and-review-properties" class="level2">
+<h2 class="anchored" data-anchor-id="reference-points-and-review-properties">Reference Points and Review Properties</h2>
+<p><strong>Owner:</strong> Mel<br>
+<strong>Priority:</strong> High<br>
+<strong>Scope:</strong> Reference points and review tracking</p>
+<section id="reference-points-and-review-properties-status" class="level3">
+<h3 class="anchored" data-anchor-id="reference-points-and-review-properties-status">Reference Points and Review Properties Status</h3>
+<p><strong>File:</strong> <code>docs/ontology_applications/dfo-fsar.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked=""><strong>COMPLETED</strong>: Policy readiness properties implemented:</label>
+<ul>
+<li><code>fsar:belowLRP</code> (boolean flag for LRP status)</li>
+<li><code>fsar:hcrIdentifier</code> (HCR identifier/name)</li>
+<li><code>fsar:hcrParameters</code> (HCR parameters)</li>
+<li><code>fsar:rebuildingPlanURL</code> (rebuilding plan link)</li>
+</ul></li>
+<li><label><input type="checkbox" checked=""><strong>COMPLETED</strong>: Assessment review properties implemented:</label>
+<ul>
+<li><code>fsar:uncertaintyNote</code> (uncertainty summary)</li>
+<li><code>fsar:statusCI</code> (status confidence interval)</li>
+<li><code>fsar:downgradeReason</code> (downgrade criteria)</li>
+</ul></li>
+<li><label><input type="checkbox" checked=""><strong>COMPLETED</strong>: CU accounting review properties implemented:</label>
+<ul>
+<li><code>fsar:reviewedBy</code> (reviewer name/identifier)</li>
+<li><code>fsar:reviewDate</code> (review date)</li>
+</ul></li>
+<li><label><input type="checkbox" checked=""><strong>COMPLETED</strong>: Reference point tracking via <code>fsar:usesMethod</code> property</label>
+<ul>
+<li>Links assessments to reference point calculation methods</li>
+</ul></li>
+</ul>
+</section>
+<section id="missing-reference-points-properties-need-integration" class="level3">
+<h3 class="anchored" data-anchor-id="missing-reference-points-properties-need-integration">Missing Reference Points Properties (Need Integration)</h3>
+<p><strong>File:</strong> <code>ontology/dfo-salmon.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>NEXT</strong>: Add <code>dfo:reference_point_type</code> DatatypeProperty to core ontology</label>
+<ul>
+<li>Set range to <code>xsd:string</code></li>
+<li>Add comment: Sgen, USR, LRP, SMSY, etc.</li>
+<li><strong>Note</strong>: This should be added to core ontology, not FSAR module</li>
+</ul></li>
+<li><label><input type="checkbox"><strong>NEXT</strong>: Add <code>dfo:benchmark_method</code> DatatypeProperty to core ontology</label>
+<ul>
+<li>Set range to <code>xsd:string</code></li>
+<li>Add comment: SR model, percentile, expert judgment</li>
+<li><strong>Note</strong>: This should be added to core ontology, not FSAR module</li>
+</ul></li>
+<li><label><input type="checkbox"><strong>NEXT</strong>: Add <code>dfo:benchmark_sensitivity</code> DatatypeProperty to core ontology</label>
+<ul>
+<li>Set range to <code>xsd:boolean</code></li>
+<li>Add comment: flag indicating sensitivity to assumptions</li>
+<li><strong>Note</strong>: This should be added to core ontology, not FSAR module</li>
+</ul></li>
+<li><label><input type="checkbox"><strong>NEXT</strong>: Add <code>dfo:status_value</code> DatatypeProperty to core ontology (if not exists)</label>
+<ul>
+<li>Set range to <code>xsd:decimal</code></li>
+<li>Add comment: numeric status value</li>
+<li><strong>Note</strong>: This should be added to core ontology, not FSAR module</li>
+</ul></li>
+<li><label><input type="checkbox"><strong>NEXT</strong>: Integrate FSAR module policy readiness with core ontology</label>
+<ul>
+<li>Consider if policy readiness should be core or FSAR-specific</li>
+<li>Ensure alignment with PRD requirements for policy gates</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="shacl-header-and-documentation" class="level2">
+<h2 class="anchored" data-anchor-id="shacl-header-and-documentation">SHACL Header and Documentation</h2>
+<p><strong>Owner:</strong> Mel<br>
+<strong>Priority:</strong> High<br>
+<strong>Scope:</strong> SHACL validation setup</p>
+<section id="update-shacl-file-header-1" class="level3">
+<h3 class="anchored" data-anchor-id="update-shacl-file-header-1">Update SHACL File Header</h3>
+<p><strong>File:</strong> <code>ontology/shapes/dfo-salmon-shapes.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">Add clarifying comment at top: “Validation shapes for data quality, NOT classification”</label></li>
+<li><label><input type="checkbox" checked="">Add note: “Estimate types are manually assigned based on Hyatt 1997 criteria”</label></li>
+<li><label><input type="checkbox" checked="">Add note: “No instance data in main ontology file; instances go in examples/”</label></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="shacl-decision-context-shape" class="level2">
+<h2 class="anchored" data-anchor-id="shacl-decision-context-shape">SHACL Decision Context Shape</h2>
+<p><strong>Owner:</strong> Mel<br>
+<strong>Priority:</strong> High<br>
+<strong>Scope:</strong> Decision context validation</p>
+<section id="create-decision-context-shape" class="level3">
+<h3 class="anchored" data-anchor-id="create-decision-context-shape">Create Decision Context Shape</h3>
+<p><strong>File:</strong> <code>ontology/shapes/dfo-salmon-shapes.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Create <code>dfo:TAC_HCR_DecisionShape</code> for TAC/HCR decision context</label></li>
+<li><label><input type="checkbox">List required fields as sh:property constraints:</label>
+<ul>
+<li><code>dfo:status_value</code> (sh:minCount 1)</li>
+<li><code>dfo:reference_point_type</code> (sh:minCount 1)</li>
+<li><code>dfo:method_name</code> (sh:minCount 1)</li>
+<li><code>dfo:reviewer</code> (sh:minCount 1)</li>
+<li><code>dfo:review_date</code> (sh:minCount 1)</li>
+</ul></li>
+<li><label><input type="checkbox">List optional fields (no minCount):</label>
+<ul>
+<li><code>dfo:status_ci</code></li>
+<li><code>dfo:gsi_sample_size</code></li>
+<li><code>dfo:benchmark_sensitivity</code></li>
+</ul></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="shacl-conditional-validation-rules" class="level2">
+<h2 class="anchored" data-anchor-id="shacl-conditional-validation-rules">SHACL Conditional Validation Rules</h2>
+<p><strong>Owner:</strong> Mel<br>
+<strong>Priority:</strong> High<br>
+<strong>Scope:</strong> Conditional validation logic</p>
+<section id="add-conditional-validation-rules" class="level3">
+<h3 class="anchored" data-anchor-id="add-conditional-validation-rules">Add Conditional Validation Rules</h3>
+<p><strong>File:</strong> <code>ontology/shapes/dfo-salmon-shapes.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Create <code>dfo:ProxyJustificationShape</code></label>
+<ul>
+<li>Rule: IF data_source_type contains “proxy” THEN proxy_justification required</li>
+<li>Add sh:message: “Proxy data sources must include justification”</li>
+</ul></li>
+<li><label><input type="checkbox">Create <code>dfo:MethodCompletenessShape</code></label>
+<ul>
+<li>Rule: AnalysisMethod must have name AND version AND code_commit</li>
+<li>Add sh:message for each missing field</li>
+</ul></li>
+<li><label><input type="checkbox">Create <code>dfo:StatusReviewShape</code></label>
+<ul>
+<li>Rule: StatusAssessment must have reviewer AND review_date</li>
+<li>Add sh:message: “Status assessments require reviewer and date”</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="mel-provenance-validation" class="level2">
+<h2 class="anchored" data-anchor-id="mel-provenance-validation">Mel Provenance Validation</h2>
+<p><strong>Owner:</strong> Mel<br>
+<strong>Priority:</strong> High<br>
+<strong>Scope:</strong> Provenance chain validation</p>
+<section id="add-provenance-validation" class="level3">
+<h3 class="anchored" data-anchor-id="add-provenance-validation">Add Provenance Validation</h3>
+<p><strong>File:</strong> <code>ontology/shapes/dfo-salmon-shapes.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Create <code>dfo:StatusProvenanceShape</code></label>
+<ul>
+<li>Require at least one prov:used link to Dataset</li>
+<li>Require prov:wasGeneratedBy link to AnalysisMethod</li>
+<li>Require prov:wasAttributedTo link to Agent</li>
+<li>Add friendly error messages</li>
+</ul></li>
+<li><label><input type="checkbox">Create <code>dfo:AdviceProvenanceShape</code></label>
+<ul>
+<li>Require ScientificOutput has prov:wasDerivedFrom StatusAssessment</li>
+<li>Require prov:wasAttributedTo for reviewer</li>
+<li>Add friendly error messages</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="w3id-phase-2-publication" class="level2">
+<h2 class="anchored" data-anchor-id="w3id-phase-2-publication">W3ID Phase 2 Publication</h2>
+<p><strong>Owner:</strong> Mel<br>
+<strong>Priority:</strong> Medium (after FSAR implementation)<br>
+<strong>Scope:</strong> Publish FSAR Tracer terms</p>
+<section id="prepare-fsar-terms" class="level3">
+<h3 class="anchored" data-anchor-id="prepare-fsar-terms">Prepare FSAR Terms</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Review/finalize FSAR Tracer classes and properties</label></li>
+<li><label><input type="checkbox">Update version IRI to https://w3id.org/dfo/salmon/v0.5.0</label></li>
+<li><label><input type="checkbox">Update rdfs:isDefinedBy for FSAR terms to w3id URIs</label></li>
+<li><label><input type="checkbox">Test FSAR terms work correctly</label></li>
+</ul>
+</section>
+<section id="update-w3id-configuration" class="level3">
+<h3 class="anchored" data-anchor-id="update-w3id-configuration">Update W3ID Configuration</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Update /dfo/salmon/.htaccess for new version</label></li>
+<li><label><input type="checkbox">Add redirections for FSAR term URIs</label></li>
+<li><label><input type="checkbox">Update /dfo/salmon/README.md with FSAR Tracer information</label></li>
+</ul>
+</section>
+<section id="submit-w3id-update" class="level3">
+<h3 class="anchored" data-anchor-id="submit-w3id-update">Submit W3ID Update</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Submit PR to w3id.org repository</label></li>
+<li><label><input type="checkbox">Document FSAR Tracer additions</label></li>
+<li><label><input type="checkbox">Respond to reviewers</label></li>
+<li><label><input type="checkbox">Monitor for approval</label></li>
+</ul>
+<p><strong>Phase 2 Terms List:</strong></p>
+<ul>
+<li>Classes: StatusAssessment, ScientificOutput, ManagementDecision, AnalysisMethod</li>
+<li>Properties: status_value, method_name, reviewer, review_date, data_source_type, spawner_origin</li>
+<li><strong>Note</strong>: All terms will use <code>dfoc:</code> namespace prefix instead of <code>dfo:</code> due to w3id namespace conflict</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="sparql-query-pack" class="level2">
+<h2 class="anchored" data-anchor-id="sparql-query-pack">SPARQL Query Pack</h2>
+<p><strong>Owner:</strong> Mel<br>
+<strong>Priority:</strong> High<br>
+<strong>Scope:</strong> Competency queries for UI</p>
+<section id="create-query-file" class="level3">
+<h3 class="anchored" data-anchor-id="create-query-file">Create Query File</h3>
+<p><strong>File:</strong> <code>ontology/sparql/fsar-tracer-queries.rq</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Create new file for FSAR Tracer queries</label></li>
+<li><label><input type="checkbox">Add header with query pack version and date</label></li>
+<li><label><input type="checkbox">Add prefix declarations for all namespaces</label></li>
+<li><label><input type="checkbox">Add table of contents listing Q1-Q9</label></li>
+</ul>
+</section>
+<section id="core-evidence-queries-q1-q4" class="level3">
+<h3 class="anchored" data-anchor-id="core-evidence-queries-q1-q4">Core Evidence Queries (Q1-Q4)</h3>
+<p><strong>File:</strong> <code>ontology/sparql/fsar-tracer-queries.rq</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked=""><strong>COMPLETED 2025-01-27</strong>: Implemented Q1: Evidence Completeness by Decision</label>
+<ul>
+<li>Check required vs optional fields</li>
+<li>Return state: Complete, Gaps, or Missing-Critical</li>
+</ul></li>
+<li><label><input type="checkbox" checked=""><strong>COMPLETED 2025-01-27</strong>: Implemented Q2: Proxy Without Justification</label>
+<ul>
+<li>Find records where data_source_type contains “proxy” but no proxy_justification</li>
+</ul></li>
+<li><label><input type="checkbox" checked=""><strong>COMPLETED 2025-01-27</strong>: Implemented Q3: Method Reproducibility</label>
+<ul>
+<li>Return method_name, method_version, code_commit</li>
+<li>Flag if any missing</li>
+</ul></li>
+<li><label><input type="checkbox" checked=""><strong>COMPLETED 2025-01-27</strong>: Implemented Q4: Reference Points Used</label>
+<ul>
+<li>Return reference_point_type, benchmark_method, benchmark_sensitivity</li>
+<li>List all reference points used in status assessment</li>
+</ul></li>
+</ul>
+</section>
+<section id="data-currency-and-quality-queries-q5-q8" class="level3">
+<h3 class="anchored" data-anchor-id="data-currency-and-quality-queries-q5-q8">Data Currency and Quality Queries (Q5-Q8)</h3>
+<p><strong>File:</strong> <code>ontology/sparql/fsar-tracer-queries.rq</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked=""><strong>COMPLETED 2025-01-27</strong>: Implemented Q5: Missing Uncertainty</label>
+<ul>
+<li>Find StatusAssessments without status_ci</li>
+<li>Find GSIResults without gsi_sample_size or gsi_ci</li>
+</ul></li>
+<li><label><input type="checkbox" checked=""><strong>COMPLETED 2025-01-27</strong>: Implemented Q6: Data Currency</label>
+<ul>
+<li>Return last modified timestamp per component (Dataset, Method, ReferencePoint, Status, Advice)</li>
+<li>Return version pins (owl:versionInfo)</li>
+<li>Flag stale data (&gt;12 months)</li>
+</ul></li>
+<li><label><input type="checkbox" checked=""><strong>COMPLETED 2025-01-27</strong>: Implemented Q7: Scientific Output Text + Review</label>
+<ul>
+<li>Return scientific_output_text, reviewer, review_date</li>
+</ul></li>
+<li><label><input type="checkbox" checked=""><strong>COMPLETED 2025-01-27</strong>: Implemented Q8: Linked Documents</label>
+<ul>
+<li>Return FSAR/Tech/Research document metadata</li>
+<li>Include doc_type, title, identifier, issued date, URL</li>
+</ul></li>
+</ul>
+</section>
+<section id="genetics-integration-query-q9" class="level3">
+<h3 class="anchored" data-anchor-id="genetics-integration-query-q9">Genetics Integration Query (Q9)</h3>
+<p><strong>File:</strong> <code>ontology/sparql/fsar-tracer-queries.rq</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked=""><strong>COMPLETED 2025-01-27</strong>: Implemented Q9: GRD Data Product Integration</label>
+<ul>
+<li>Return GSIRun linked to StatusAssessment</li>
+<li>Include grdRunID, grdSampleID, grdAssayID</li>
+<li>Return GSICompositionMeasurement with CIs</li>
+<li>Show linkage: GRD → Measurement → Status → Advice</li>
+<li>Added GSI risk assessment queries for mixed-stock fisheries</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="relations-ontology-alignment" class="level2">
+<h2 class="anchored" data-anchor-id="relations-ontology-alignment">Relations Ontology Alignment</h2>
+<p><strong>Owner:</strong> Mel<br>
+<strong>Priority:</strong> Medium<br>
+<strong>Scope:</strong> Documentation only (no code changes for MVP)</p>
+<section id="document-ro-alignment" class="level3">
+<h3 class="anchored" data-anchor-id="document-ro-alignment">Document RO Alignment</h3>
+<p><strong>File:</strong> <code>ontology/dfo-salmon.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Update membership relations section comment (lines 1010-1020)</label></li>
+<li><label><input type="checkbox">Add note: “Aligned with RO:0002131 (has_member) and RO:0002350 (member_of)”</label></li>
+<li><label><input type="checkbox">Add note: “Implemented as independent properties to avoid RO import overhead”</label></li>
+<li><label><input type="checkbox">Add <code>rdfs:seeAlso &lt;http://purl.obolibrary.org/obo/RO_0002131&gt;</code> to <code>dfo:hasMember</code></label></li>
+<li><label><input type="checkbox">Add <code>rdfs:seeAlso &lt;http://purl.obolibrary.org/obo/RO_0002350&gt;</code> to <code>dfo:isMemberOf</code></label></li>
+<li><label><input type="checkbox">Update comment explaining semantic alignment without import</label></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="import-policy-documentation" class="level2">
+<h2 class="anchored" data-anchor-id="import-policy-documentation">Import Policy Documentation</h2>
+<p><strong>Owner:</strong> Brett<br>
+<strong>Priority:</strong> High<br>
+<strong>Scope:</strong> CONVENTIONS documentation</p>
+<section id="update-conventions.md-import-policy" class="level3">
+<h3 class="anchored" data-anchor-id="update-conventions.md-import-policy">Update CONVENTIONS.md Import Policy</h3>
+<p><strong>File:</strong> <code>docs/CONVENTIONS.md</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">Add new section 2.3.6 “Ontology Import Strategy”</label></li>
+<li><label><input type="checkbox" checked="">Document three approaches: Full import, MIREOT, Prefix only</label></li>
+<li><label><input type="checkbox" checked="">Add decision matrix table (BFO, IAO, DQV, PROV-O, RO, DPROD, SKOS, DwC)</label></li>
+<li><label><input type="checkbox" checked="">Explain when to use each approach with examples</label></li>
+<li><label><input type="checkbox" checked="">Add FSAR Tracer import decisions and rationale</label></li>
+<li><label><input type="checkbox" checked="">Document MIREOT implementation pattern</label></li>
+</ul>
+</section>
+</section>
+<section id="readme-updates" class="level2">
+<h2 class="anchored" data-anchor-id="readme-updates">README Updates</h2>
+<p><strong>Owner:</strong> Mel<br>
+<strong>Priority:</strong> High<br>
+<strong>Scope:</strong> README documentation</p>
+<section id="update-readme.md-technical-overview" class="level3">
+<h3 class="anchored" data-anchor-id="update-readme.md-technical-overview">Update README.md Technical Overview</h3>
+<p><strong>File:</strong> <code>README.md</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Update Technical Overview section (lines 67-75)</label></li>
+<li><label><input type="checkbox">Add: “Pragmatic imports: MIREOT for BFO/IAO/DQV (~12 terms)”</label></li>
+<li><label><input type="checkbox">Add: “Upper ontology: BFO grounding for process/entity hierarchy”</label></li>
+<li><label><input type="checkbox">Add: “Provenance: PROV-O properties for FSAR evidence chains”</label></li>
+<li><label><input type="checkbox">Add: “Quality: DQV dimensions for evidence completeness tracking”</label></li>
+</ul>
+</section>
+<section id="add-fsar-tracer-section-to-readme" class="level3">
+<h3 class="anchored" data-anchor-id="add-fsar-tracer-section-to-readme">Add FSAR Tracer Section to README</h3>
+<p><strong>File:</strong> <code>README.md</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Add FSAR Tracer subsection to Ontology Scope (after line 130)</label></li>
+<li><label><input type="checkbox">List core classes: StatusAssessment, ScientificOutput, ManagementDecision, AnalysisMethod</label></li>
+<li><label><input type="checkbox">List PROV-O properties used</label></li>
+<li><label><input type="checkbox">List DQV dimensions and quality annotations</label></li>
+<li><label><input type="checkbox">List required fields for evidence completeness</label></li>
+<li><label><input type="checkbox">Note: No instance data in main ontology file</label></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="sample-data-creation" class="level2">
+<h2 class="anchored" data-anchor-id="sample-data-creation">Sample Data Creation</h2>
+<p><strong>Owner:</strong> Mel<br>
+<strong>Priority:</strong> High<br>
+<strong>Scope:</strong> Example instances for testing (NOT in main ontology)</p>
+<section id="create-barkley-sockeye-sample-instances" class="level3">
+<h3 class="anchored" data-anchor-id="create-barkley-sockeye-sample-instances">Create Barkley Sockeye Sample Instances</h3>
+<p><strong>File:</strong> <code>ontology/examples/barkley-2025-sample.ttl</code> (NEW FILE)</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Create sample <code>dfo:EscapementMeasurement</code> for Barkley 2025</label>
+<ul>
+<li>Include data_source_type, spawner_origin</li>
+<li>Link to Stock using dfo:aboutStock</li>
+<li>Link to SurveyEvent using dfo:observedDuring</li>
+</ul></li>
+<li><label><input type="checkbox">Create sample <code>dfo:AnalysisMethod</code> (SR benchmark)</label>
+<ul>
+<li>Include method_name, method_version, code_commit</li>
+</ul></li>
+<li><label><input type="checkbox">Create sample <code>dfo:ReferencePoint</code> (Sgen)</label>
+<ul>
+<li>Include reference_point_type, benchmark_method</li>
+</ul></li>
+<li><label><input type="checkbox">Create sample <code>dfo:StatusAssessment</code> for Barkley 2025</label>
+<ul>
+<li>Include status_value, status_ci, reviewer, review_date</li>
+</ul></li>
+<li><label><input type="checkbox">Create sample <code>dfo:ScientificOutput</code> (FSAR advice)</label></li>
+<li><label><input type="checkbox">Create sample <code>dfo:ManagementDecision</code> (TAC 2025)</label></li>
+</ul>
+</section>
+<section id="link-instances-with-prov-o" class="level3">
+<h3 class="anchored" data-anchor-id="link-instances-with-prov-o">Link Instances with PROV-O</h3>
+<p><strong>File:</strong> <code>ontology/examples/barkley-2025-sample.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Link StatusAssessment to EscapementMeasurement via <code>prov:used</code></label></li>
+<li><label><input type="checkbox">Link StatusAssessment to ReferencePoint via <code>prov:used</code></label></li>
+<li><label><input type="checkbox">Link StatusAssessment to AnalysisMethod via <code>prov:wasGeneratedBy</code></label></li>
+<li><label><input type="checkbox">Link StatusAssessment to Agent via <code>prov:wasAttributedTo</code></label></li>
+<li><label><input type="checkbox">Link ScientificOutput to StatusAssessment via <code>prov:wasDerivedFrom</code></label></li>
+<li><label><input type="checkbox">Link ManagementDecision to ScientificOutput via <code>prov:used</code></label></li>
+</ul>
+</section>
+<section id="annotate-with-dqv-quality" class="level3">
+<h3 class="anchored" data-anchor-id="annotate-with-dqv-quality">Annotate with DQV Quality</h3>
+<p><strong>File:</strong> <code>ontology/examples/barkley-2025-sample.ttl</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Add <code>dqv:hasQualityAnnotation</code> to StatusAssessment</label></li>
+<li><label><input type="checkbox">Link to <code>dfo:CompleteEvidence</code> annotation</label></li>
+<li><label><input type="checkbox">Add data currency timestamps using <code>dcterms:modified</code></label></li>
+<li><label><input type="checkbox">Add version pins using <code>owl:versionInfo</code></label></li>
+<li><label><input type="checkbox">Document quality annotation pattern in comments</label></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="json-ld-context-and-export" class="level2">
+<h2 class="anchored" data-anchor-id="json-ld-context-and-export">JSON-LD Context and Export</h2>
+<p><strong>Owner:</strong> Brett<br>
+<strong>Priority:</strong> Medium<br>
+<strong>Scope:</strong> JSON-LD export functionality</p>
+<section id="create-json-ld-context" class="level3">
+<h3 class="anchored" data-anchor-id="create-json-ld-context">Create JSON-LD Context</h3>
+<p><strong>File:</strong> <code>ontology/examples/fsar-tracer-context.jsonld</code> (NEW FILE)</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Create <span class="citation" data-cites="context">@context</span> with all FSAR Tracer prefixes</label></li>
+<li><label><input type="checkbox">Map dfo, prov, dqv, bfo, iao, dwc, skos, dcterms, schema namespaces</label></li>
+<li><label><input type="checkbox">Define short aliases for common properties</label></li>
+<li><label><input type="checkbox">Add <span class="citation" data-cites="vocab">@vocab</span> for default namespace</label></li>
+<li><label><input type="checkbox">Test context validates with JSON-LD playground</label></li>
+</ul>
+</section>
+<section id="export-sample-data-as-json-ld" class="level3">
+<h3 class="anchored" data-anchor-id="export-sample-data-as-json-ld">Export Sample Data as JSON-LD</h3>
+<p><strong>File:</strong> <code>ontology/examples/barkley-2025-sample.jsonld</code> (NEW FILE)</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Export Barkley sample as JSON-LD using context</label></li>
+<li><label><input type="checkbox">Validate JSON-LD syntax</label></li>
+<li><label><input type="checkbox">Document export process in README</label></li>
+<li><label><input type="checkbox">Add note: This is example data for testing, not production</label></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="w3id-phase-3-complete-publication" class="level2">
+<h2 class="anchored" data-anchor-id="w3id-phase-3-complete-publication">W3ID Phase 3 Complete Publication</h2>
+<p><strong>Owner:</strong> Mel<br>
+<strong>Priority:</strong> Medium<br>
+<strong>Scope:</strong> Complete W3ID publication</p>
+<section id="prepare-remaining-terms" class="level3">
+<h3 class="anchored" data-anchor-id="prepare-remaining-terms">Prepare Remaining Terms</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Review and finalize all remaining terms</label></li>
+<li><label><input type="checkbox">Update version IRI to https://w3id.org/dfo/salmon/v1.0.0</label></li>
+<li><label><input type="checkbox">Update all rdfs:isDefinedBy to w3id URIs</label></li>
+<li><label><input type="checkbox">Document complete versioning strategy</label></li>
+</ul>
+</section>
+<section id="final-w3id-update" class="level3">
+<h3 class="anchored" data-anchor-id="final-w3id-update">Final W3ID Update</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Update /dfo/salmon/.htaccess for v1.0.0</label></li>
+<li><label><input type="checkbox">Add redirections for all remaining term URIs</label></li>
+<li><label><input type="checkbox">Update /dfo/salmon/README.md with complete documentation</label></li>
+<li><label><input type="checkbox">Submit final PR to w3id.org repository</label></li>
+</ul>
+</section>
+<section id="post-publication-verification" class="level3">
+<h3 class="anchored" data-anchor-id="post-publication-verification">Post-Publication Verification</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Test all URIs resolve correctly</label></li>
+<li><label><input type="checkbox">Verify content negotiation works</label></li>
+<li><label><input type="checkbox">Update all documentation with w3id links</label></li>
+<li><label><input type="checkbox">Document w3id.org usage in README</label></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="cicd-and-quality-checks" class="level2">
+<h2 class="anchored" data-anchor-id="cicd-and-quality-checks">CI/CD and Quality Checks</h2>
+<p><strong>Owner:</strong> Brett<br>
+<strong>Priority:</strong> Medium<br>
+<strong>Scope:</strong> CI/CD pipeline improvements</p>
+<section id="fix-robot-validation-1" class="level3">
+<h3 class="anchored" data-anchor-id="fix-robot-validation-1">Fix ROBOT Validation</h3>
+<p><strong>File:</strong> <code>.github/workflows/ci.yml</code></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Investigate ROBOT validate command requirements</label></li>
+<li><label><input type="checkbox">Determine if newer ROBOT version needed (&gt;1.9.5)</label></li>
+<li><label><input type="checkbox">Create OBO validation profile if needed</label></li>
+<li><label><input type="checkbox">Re-enable validation in CI/CD pipeline</label></li>
+</ul>
+</section>
+<section id="add-quality-checks" class="level3">
+<h3 class="anchored" data-anchor-id="add-quality-checks">Add Quality Checks</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Add ontology linting checks</label></li>
+<li><label><input type="checkbox">Add SPARQL query validation</label></li>
+<li><label><input type="checkbox">Add SHACL validation in CI</label></li>
+<li><label><input type="checkbox">Add performance benchmarks</label></li>
+</ul>
+</section>
+</section>
+<section id="deferred-to-post-mvp" class="level2">
+<h2 class="anchored" data-anchor-id="deferred-to-post-mvp">Deferred to Post-MVP</h2>
+<section id="dprod-investigation" class="level3">
+<h3 class="anchored" data-anchor-id="dprod-investigation">DPROD Investigation</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Investigate DPROD namespace resolution (<code>https://www.omg.org/spec/DPROD/1.0/</code>)</label></li>
+<li><label><input type="checkbox">Compare DPROD vs dcat:Dataset + schema:Dataset</label></li>
+<li><label><input type="checkbox">Decide on data product modeling approach</label></li>
+<li><label><input type="checkbox">Document DPROD integration plan if adopted</label></li>
+<li><label><input type="checkbox">Update FSAR Tracer to use DPROD if beneficial</label></li>
+</ul>
+</section>
+<section id="full-ro-integration" class="level3">
+<h3 class="anchored" data-anchor-id="full-ro-integration">Full RO Integration</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Create subproperties of RO relations</label></li>
+<li><label><input type="checkbox">Import RO terms via MIREOT or prefix</label></li>
+<li><label><input type="checkbox">Test reasoning with RO alignment</label></li>
+<li><label><input type="checkbox">Update all membership relations to use RO subproperties</label></li>
+</ul>
+</section>
+<section id="estimate-type-automated-assignment" class="level3">
+<h3 class="anchored" data-anchor-id="estimate-type-automated-assignment">Estimate Type Automated Assignment</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Review Hyatt 1997 criteria automation requirements</label></li>
+<li><label><input type="checkbox">Create decision tree for automated type assignment</label></li>
+<li><label><input type="checkbox">Implement SHACL rules for automated classification</label></li>
+<li><label><input type="checkbox">Test classification accuracy with historical data</label></li>
+</ul>
+</section>
+<section id="multi-smu-support" class="level3">
+<h3 class="anchored" data-anchor-id="multi-smu-support">Multi-SMU Support</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Extend sample data beyond Barkley</label></li>
+<li><label><input type="checkbox">Test SPARQL queries across multiple SMUs</label></li>
+<li><label><input type="checkbox">Add SMU/CU/Stock hierarchy instances</label></li>
+<li><label><input type="checkbox">Document multi-SMU patterns</label></li>
+</ul>
+</section>
+<section id="robot-validation-setup" class="level3">
+<h3 class="anchored" data-anchor-id="robot-validation-setup">ROBOT Validation Setup</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Investigate ROBOT validate command requirements</label></li>
+<li><label><input type="checkbox">Determine if newer ROBOT version needed (&gt;1.9.5)</label></li>
+<li><label><input type="checkbox">Create OBO validation profile if needed</label></li>
+<li><label><input type="checkbox">Re-enable validation in CI/CD pipeline</label></li>
+<li><label><input type="checkbox">Add to PR-013: CI/CD and Quality Checks</label></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="nceas-salmon-ontology-integration" class="level2">
+<h2 class="anchored" data-anchor-id="nceas-salmon-ontology-integration">NCEAS Salmon Ontology Integration</h2>
+<section id="immediate-actions-next-3-months" class="level3">
+<h3 class="anchored" data-anchor-id="immediate-actions-next-3-months">Immediate Actions (Next 3 months)</h3>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>Review Current DFO to NCEAS Mappings</strong>: Examine existing mappings in <code>dfo-salmon.ttl</code></label>
+<ul class="task-list">
+<li><label><input type="checkbox">Review <code>dfo:SizeAtAge</code> → <code>odo:SALMON_00000167</code> (measurement type) mapping</label></li>
+<li><label><input type="checkbox">Review <code>dfo:AgeAtMaturity</code> → <code>odo:SALMON_00000407</code> (age class) mapping</label></li>
+<li><label><input type="checkbox">Review <code>dfo:PreTerminalFishery</code> → <code>odo:SALMON_00000137</code> (fishery type) mapping</label></li>
+<li><label><input type="checkbox">Review <code>dfo:TerminalFishery</code> → <code>odo:SALMON_00000137</code> (fishery type) mapping</label></li>
+<li><label><input type="checkbox">Validate semantic alignment and correctness of existing mappings</label></li>
+</ul></li>
+<li><label><input type="checkbox"><strong>Review All External Mappings</strong>: Audit all external ontology mappings in DFO ontology</label>
+<ul class="task-list">
+<li><label><input type="checkbox">Review BFO mappings (process, material entity, generically dependent continuant)</label></li>
+<li><label><input type="checkbox">Review IAO mappings (measurement datum, value specification, information content entity, directive)</label></li>
+<li><label><input type="checkbox">Review DwC mappings (Event, Organism, MaterialEntity, Agent)</label></li>
+<li><label><input type="checkbox">Review PROV-O property usage patterns</label></li>
+<li><label><input type="checkbox">Review SKOS scheme alignments</label></li>
+<li><label><input type="checkbox">Document mapping quality and identify any issues</label></li>
+</ul></li>
+<li><label><input type="checkbox"><strong>Complete NCEAS Alignment</strong>: Implement remaining 3 classes from Phase 1</label>
+<ul class="task-list">
+<li><label><input type="checkbox"><code>dfo:GeneticDiversity</code> → <code>odo:SALMON_00000167</code> (measurement type)</label></li>
+<li><label><input type="checkbox"><code>dfo:Fecundity</code> → <code>odo:SALMON_00000167</code> (measurement type)</label></li>
+<li><label><input type="checkbox"><code>dfo:MixedStockFishery</code> → <code>odo:SALMON_00000137</code> (Fishery type)</label></li>
+</ul></li>
+<li><label><input type="checkbox"><strong>Analyze Recruitment Relationship</strong>: Examine <code>dfo:Recruitment</code> relationship to NCEAS age class recruits</label></li>
+<li><label><input type="checkbox"><strong>Update Documentation</strong>: Document integration strategy in CONVENTIONS.md</label></li>
+</ul>
+</section>
+<section id="medium-term-actions-3-12-months" class="level3">
+<h3 class="anchored" data-anchor-id="medium-term-actions-3-12-months">Medium-term Actions (3-12 months)</h3>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>Establish NCEAS Governance</strong>: Work with NCEAS to establish cross-ontology coordination</label></li>
+<li><label><input type="checkbox"><strong>Contribute to NCEAS</strong>: Identify and contribute DFO concepts with multi-organizational relevance</label></li>
+<li><label><input type="checkbox"><strong>Monitor NCEAS Changes</strong>: Establish process to monitor and respond to NCEAS changes</label></li>
+</ul>
+</section>
+<section id="long-term-actions-1-3-years" class="level3">
+<h3 class="anchored" data-anchor-id="long-term-actions-1-3-years">Long-term Actions (1-3 years)</h3>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>Support NCEAS Development</strong>: Participate in NCEAS development for general domain concepts</label></li>
+<li><label><input type="checkbox"><strong>Evaluate Success</strong>: Assess whether integration achieves intended benefits</label></li>
+<li><label><input type="checkbox"><strong>Adapt Strategy</strong>: Refine integration approach based on experience</label></li>
+</ul>
+</section>
+<section id="contribution-heuristics" class="level3">
+<h3 class="anchored" data-anchor-id="contribution-heuristics">Contribution Heuristics</h3>
+<ul>
+<li><strong>CONTRIBUTE TO NCEAS</strong>: Multi-organizational relevance, scientific consensus, domain generality, methodological standards, environmental concepts, biological measurements, equipment and gear</li>
+<li><strong>KEEP IN DFO</strong>: Organizational specificity, Canadian context, DFO protocols, management hierarchies, policy frameworks, assessment methods, reference points</li>
+</ul>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/dfo-pacific-science\.github\.io\/data-stewardship-unit\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/data/ontology/docs/todo_list.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/data/ontology/docs/todo_list.md" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This site was created with <a href="https://quarto.org/">Quarto</a> and is hosted with <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
