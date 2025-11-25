@@ -57,6 +57,29 @@
   gap: 24px;
 }
 
+.portfolio-section-header {
+  grid-column: 1 / -1;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-top: 48px;
+  margin-bottom: 8px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e8e8e8;
+}
+
+.portfolio-section-header:first-of-type {
+  margin-top: 0;
+}
+
+.portfolio-section-description {
+  grid-column: 1 / -1;
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
 .portfolio-card {
   margin-bottom: 0;
   border: 1px solid #e0e0e0;
@@ -78,7 +101,7 @@
 
 .portfolio-card .card-header {
   background-color: #fff;
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: none;
   padding: 20px;
   cursor: pointer;
   transition: background-color 0.2s ease;

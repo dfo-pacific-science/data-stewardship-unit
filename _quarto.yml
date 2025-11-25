@@ -23,8 +23,10 @@ website:
         href: https://086gc.sharepoint.com/:u:/r/sites/FisheryAssessmentDataSectionWiki/SitePages/CollabHome.aspx?csf=1&web=1&e=tkJJk4
       - text: "About"
         href: about.qmd
-      - text: "Data Projects"
+      - text: "Data Services"
         href: fads-portfolio.qmd
+      - text: "Salmon Data Standards"
+        href: reference_info/data_standards/controlled-vocabulary-thesauri.qmd
         
     tools:
       - icon: github
@@ -41,7 +43,18 @@ website:
       background: light
       contents:
         - auto: how_to_guides
-        - auto: reference_info
+        - section: "Reference Info"
+          contents:
+            - section: "Salmon Data Standards"
+              contents:
+                - reference_info/data_standards/controlled-vocabulary-thesauri.qmd
+                - reference_info/ontology/formal-documentation.qmd
+            - reference_info/dwc-obis-gbif.qmd
+            - reference_info/openDataPractices.qmd
+            - reference_info/publishing_data_externally.qmd
+            - section: "Tools"
+              contents:
+                - reference_info/tools/r_packages.qmd
         - auto: tutorials
         - auto: deep_dives
       logo: images/logo.png
@@ -56,4 +69,3 @@ lang: en
 
 execute:
   freeze: auto
-  python: .venv/bin/python

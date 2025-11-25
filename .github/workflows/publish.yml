@@ -19,30 +19,9 @@ jobs:
           fetch-depth: 0
           submodules: recursive
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Install Python dependencies
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install pandas
-          if [ -f data/ontology/scripts/requirements.txt ]; then
-            python -m pip install -r data/ontology/scripts/requirements.txt
-          fi
-
-      - name: Generate ontology term tables
-        run: |
-          if [ -d data/ontology ]; then
-            python data/ontology/scripts/extract-term-tables.py
-          else
-            echo "Ontology submodule not available; skipping generation" >&2
-            exit 1
-          fi
-
-      - name: Validate ontology artifacts
-        run: python scripts/validate-term-tables.py
+      # Note: CSV generation and validation now happen locally via pre-commit hooks
+      # The ontology submodule's extract-term-tables.py script should be run locally
+      # before committing. Validation is handled by scripts/validate-term-tables.R
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2

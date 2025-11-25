@@ -1,0 +1,648 @@
+---
+title: "Controlled Vocabulary & Thesauri"
+format:
+  html:
+    toc: true
+---
+
+The Data Stewardship Unit (DSU) has created the **DFO Salmon Data Controlled Vocabulary**—a standardized, community-curated list of key terms and definitions related to salmon data collection, analysis, and policy within Fisheries and Oceans Canada (DFO) Pacific Region.
+
+The vocabulary tables below consolidate definitions from the DFO Salmon Ontology, regulatory documents, scientific literature, internal guidelines, and other sources into organized, searchable references designed to improve semantic clarity across DFO Pacific.
+
+## Search Terms
+
+```{r}
+#| echo: false
+#| warning: false
+#| results: 'asis'
+library(here)
+library(jsonlite)
+library(htmltools)
+
+# Get project root directory
+project_root <- if (Sys.getenv("QUARTO_PROJECT_DIR") != "") {
+  Sys.getenv("QUARTO_PROJECT_DIR")
+} else {
+  # Find _quarto.yml by walking up directory tree
+  current <- getwd()
+  while (current != dirname(current)) {
+    if (file.exists(file.path(current, "_quarto.yml"))) {
+      break
+    }
+    current <- dirname(current)
+  }
+  current
+}
+
+# Load helper functions
+helpers_path <- file.path(project_root, "reference_info/ontology/_partials/helpers.R")
+source(helpers_path)
+
+# Define themes
+themes <- list(
+  list(id = "stock-assessment-terms", label = "Stock Assessment Methods"),
+  list(id = "genetics-terms", label = "Genetics and GSI"),
+  list(id = "legislation-terms", label = "Legislation and Policy"),
+  list(id = "benchmarks-terms", label = "Biological Benchmarks"),
+  list(id = "hatchery-enhancement-terms", label = "Hatchery and Enhancement")
+)
+
+# Load all term tables
+all_terms <- list()
+for (theme in themes) {
+  csv_path <- file.path(project_root, "data/ontology/release/artifacts/term-tables", 
+                        paste0(theme$id, ".csv"))
+  result <- load_dataset(csv_path)
+  df <- result$data
+  meta <- result$metadata
+  
+  if (!is.null(df) && nrow(df) > 0) {
+    for (i in seq_len(nrow(df))) {
+      row <- df[i, ]
+      all_terms[[length(all_terms) + 1]] <- list(
+        term_name = as.character(row$term_name %||% ""),
+        definition = as.character(row$definition %||% ""),
+        definition_source = as.character(row$definition_source %||% ""),
+        definition_source_text = as.character(row$definition_source_text %||% ""),
+        definition_source_link = as.character(row$definition_source_link %||% ""),
+        related_terms = as.character(row$related_terms %||% ""),
+        canonical_uri = as.character(row$canonical_uri %||% ""),
+        widoco_link = as.character(row$widoco_link %||% ""),
+        theme = theme$label,
+        theme_id = theme$id
+      )
+    }
+  }
+}
+
+# Calculate statistics
+total_terms <- length(all_terms)
+terms_by_theme <- table(sapply(all_terms, function(x) x$theme))
+terms_with_definitions <- sum(sapply(all_terms, function(x) {
+  def <- x$definition %||% ""
+  nchar(trimws(def)) > 0 && def != "No definition available"
+}))
+terms_with_sources <- sum(sapply(all_terms, function(x) {
+  source_text <- x$definition_source_text %||% ""
+  source_link <- x$definition_source_link %||% ""
+  nchar(trimws(source_text)) > 0 || nchar(trimws(source_link)) > 0
+}))
+terms_with_related <- sum(sapply(all_terms, function(x) {
+  related <- x$related_terms %||% ""
+  nchar(trimws(related)) > 0
+}))
+
+# Create JavaScript searchable index
+# Escape JSON properly for embedding in JavaScript
+terms_json <- toJSON(all_terms, auto_unbox = TRUE, pretty = TRUE)
+
+# Build dashboard HTML
+theme_items <- paste0(sapply(names(terms_by_theme), function(theme_name) {
+  count <- terms_by_theme[[theme_name]]
+  paste0(
+    '<div style="display: flex; justify-content: space-between; align-items: center; padding: 0.5rem; background: #f8f9fa; border-radius: 0.25rem;">',
+    '  <span style="font-size: 0.9rem; color: #6c757d;">', theme_name, '</span>',
+    '  <span style="font-weight: 600; color: #446c8a;">', count, '</span>',
+    '</div>'
+  )
+}), collapse = '')
+
+dashboard_html <- paste0(
+  '<div id="vocab-dashboard" style="background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 0.5rem; padding: 1.5rem;">',
+  '  <h3 style="margin: 0 0 1rem 0; color: #446c8a; font-size: 1.1rem;">Vocabulary Summary</h3>',
+  '  <div style="display: grid; gap: 1rem;">',
+  '    <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: white; border-radius: 0.25rem;">',
+  '      <span style="color: #495057; font-weight: 500;">Total Terms</span>',
+  '      <span style="font-size: 1.5rem; font-weight: 600; color: #446c8a;">', total_terms, '</span>',
+  '    </div>',
+  '    <div style="padding: 0.75rem; background: white; border-radius: 0.25rem;">',
+  '      <div style="color: #495057; font-weight: 500; margin-bottom: 0.75rem;">Terms by Theme</div>',
+  '      <div style="display: grid; gap: 0.5rem;">',
+  theme_items,
+  '      </div>',
+  '    </div>',
+  '    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">',
+  '      <div style="padding: 0.75rem; background: white; border-radius: 0.25rem; text-align: center;">',
+  '        <div style="font-size: 1.25rem; font-weight: 600; color: #446c8a;">', terms_with_definitions, '</div>',
+  '        <div style="font-size: 0.85rem; color: #6c757d; margin-top: 0.25rem;">With Definitions</div>',
+  '      </div>',
+  '      <div style="padding: 0.75rem; background: white; border-radius: 0.25rem; text-align: center;">',
+  '        <div style="font-size: 1.25rem; font-weight: 600; color: #446c8a;">', terms_with_sources, '</div>',
+  '        <div style="font-size: 0.85rem; color: #6c757d; margin-top: 0.25rem;">With Sources</div>',
+  '      </div>',
+  '    </div>',
+  '    <div style="padding: 0.75rem; background: white; border-radius: 0.25rem; text-align: center;">',
+  '      <div style="font-size: 1.25rem; font-weight: 600; color: #446c8a;">', terms_with_related, '</div>',
+  '      <div style="font-size: 0.85rem; color: #6c757d; margin-top: 0.25rem;">With Related Terms</div>',
+  '    </div>',
+  '  </div>',
+  '</div>'
+)
+
+# Create search HTML with JavaScript
+# Use proper string concatenation to avoid quote issues
+search_html_parts <- c(
+  '<style>',
+  '  #vocab-search-input {',
+  '    border: 2px solid #446c8a !important;',
+  '    transition: border-color 0.2s, box-shadow 0.2s;',
+  '  }',
+  '  #vocab-search-input:focus {',
+  '    outline: none;',
+  '    border-color: #2c5282 !important;',
+  '    box-shadow: 0 0 0 3px rgba(68, 108, 138, 0.1);',
+  '  }',
+  '</style>',
+  '<div id="vocab-search-container">',
+  paste0('  ', dashboard_html),
+  '  <div style="margin-top: 1.5rem; margin-bottom: 1.5rem;">',
+  '    <input ',
+  '      type="text" ',
+  '      id="vocab-search-input" ',
+  '      placeholder="Search terms, definitions, or related concepts..." ',
+  '      style="width: 100%; padding: 0.75rem; font-size: 1rem; border-radius: 0.25rem;"',
+  '      autocomplete="off"',
+  '    />',
+  '    <div id="search-results-count" style="margin-top: 0.5rem; color: #6c757d; font-size: 0.9rem;"></div>',
+  '  </div>',
+  '  <div id="vocab-search-results"></div>',
+  '</div>',
+  '',
+  '<script>',
+  '(function() {',
+  paste0('  const terms = ', terms_json, ';'),
+  '  window.allTermsData = terms;',
+  '  const searchInput = document.getElementById("vocab-search-input");',
+  '  const resultsContainer = document.getElementById("vocab-search-results");',
+  '  const countContainer = document.getElementById("search-results-count");',
+  '  ',
+  '  function normalizeText(text) {',
+  '    return (text || "").toLowerCase().trim();',
+  '  }',
+  '  ',
+  '  function searchTerms(query) {',
+  '    if (!query) {',
+  '      resultsContainer.innerHTML = "";',
+  '      countContainer.textContent = "";',
+  '      return;',
+  '    }',
+  '    ',
+  '    const normalizedQuery = normalizeText(query);',
+  '    const queryWords = normalizedQuery.split(/\\s+/).filter(w => w.length > 0);',
+  '    ',
+  '    const matches = terms.filter(term => {',
+  '      const searchableText = normalizeText(',
+  '        term.term_name + " " + ',
+  '        term.definition + " " + ',
+  '        term.related_terms',
+  '      );',
+  '      ',
+  '      return queryWords.every(word => searchableText.includes(word));',
+  '    });',
+  '    ',
+  '    const countText = matches.length === 0 ',
+  '      ? "No results found" ',
+  '      : "Found " + matches.length + " term" + (matches.length !== 1 ? "s" : "");',
+  '    countContainer.textContent = countText;',
+  '    ',
+  '    if (matches.length === 0) {',
+  '      resultsContainer.innerHTML = "<p style=\\"color: #6c757d; padding: 1rem;\\">No matching terms found. Try different keywords or browse by theme below.</p>";',
+  '      return;',
+  '    }',
+  '    ',
+  '    let html = "<div style=\\"display: grid; gap: 1rem;\\">";',
+  '    matches.forEach(term => {',
+  '      const uri = term.canonical_uri || "";',
+  '      const sourceText = term.definition_source_text || "";',
+  '      const sourceLink = term.definition_source_link || "";',
+  '      let sourceHtml = "";',
+  '      if (sourceText) {',
+  '        sourceHtml = sourceText;',
+  '        if (sourceLink) {',
+  '          sourceHtml += "<br><a href=\\"" + sourceLink + "\\" target=\\"_blank\\" rel=\\"noopener\\" style=\\"font-size: 0.9rem; color: #446c8a;\\">Source</a>";',
+  '        }',
+  '      } else if (sourceLink) {',
+  '        sourceHtml = "<a href=\\"" + sourceLink + "\\" target=\\"_blank\\" rel=\\"noopener\\" style=\\"font-size: 0.9rem; color: #446c8a;\\">" + sourceLink + "</a>";',
+  '      }',
+  '      ',
+  '      const themeId = term.theme_id || "";',
+  '      const themeName = term.theme || "";',
+  '      const termName = term.term_name || "";',
+  '      const definition = term.definition || "No definition available";',
+  '      ',
+  '      html += "<div style=\\"border: 1px solid #dee2e6; border-radius: 0.25rem; padding: 1rem; background: white;\\">";',
+  '      html += "<div style=\\"display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;\\">";',
+  '      html += "<h3 style=\\"margin: 0; font-size: 1.1rem; color: #446c8a;\\">" + termName + "</h3>";',
+  '      html += "<span style=\\"font-size: 0.85rem; color: #6c757d; background: #f8f9fa; padding: 0.25rem 0.5rem; border-radius: 0.25rem;\\">" + themeName + "</span>";',
+  '      html += "</div>";',
+  '      html += "<p style=\\"margin: 0.5rem 0; color: #495057;\\">" + definition + "</p>";',
+  '      if (sourceHtml) {',
+  '        html += "<p style=\\"margin: 0.5rem 0; font-size: 0.9rem; color: #6c757d; font-style: italic;\\">Source: " + sourceHtml + "</p>";',
+  '      }',
+  '      html += "<div style=\\"display: flex; gap: 1rem; margin-top: 0.75rem; font-size: 0.9rem;\\">";',
+  '      html += "<div style=\\"flex: 1;\\"><strong>URI:</strong> <code style=\\"font-size: 0.85rem;\\">" + uri + "</code>";',
+  '      html += "<button type=\\"button\\" class=\\"copy-uri-btn\\" data-uri=\\"" + uri + "\\" style=\\"margin-left: 0.5rem; padding: 0.25rem 0.5rem; font-size: 0.85rem; border: 1px solid #dee2e6; background: white; border-radius: 0.25rem; cursor: pointer;\\">Copy</button></div>";',
+  '      html += "</div></div>";',
+  '    });',
+  '    html += "</div>";',
+  '    resultsContainer.innerHTML = html;',
+  '    ',
+  '    document.querySelectorAll(".copy-uri-btn").forEach(btn => {',
+  '      btn.addEventListener("click", function() {',
+  '        const uri = this.getAttribute("data-uri");',
+  '        navigator.clipboard.writeText(uri).then(() => {',
+  '          const original = this.textContent;',
+  '          this.textContent = "Copied!";',
+  '          setTimeout(() => {',
+  '            this.textContent = original;',
+  '          }, 1500);',
+  '        });',
+  '      });',
+  '    });',
+  '  }',
+  '  ',
+  '  let searchTimeout;',
+  '  searchInput.addEventListener("input", function() {',
+  '    clearTimeout(searchTimeout);',
+  '    const query = this.value;',
+  '    searchTimeout = setTimeout(() => searchTerms(query), 300);',
+  '  });',
+  '  ',
+  '  resultsContainer.innerHTML = "";',
+  '})();',
+  '</script>'
+)
+
+search_html <- paste(search_html_parts, collapse = "\n")
+knitr::raw_html(search_html)
+```
+
+## Browse by Theme
+
+Use the tabs below to explore terms organized by theme:
+
+```{r}
+#| echo: false
+#| warning: false
+library(here)
+library(htmltools)
+library(knitr)
+library(htmlwidgets)
+
+# Get project root directory (reuse from previous chunk if available, otherwise find it)
+if (!exists("project_root")) {
+  project_root <- if (Sys.getenv("QUARTO_PROJECT_DIR") != "") {
+    Sys.getenv("QUARTO_PROJECT_DIR")
+  } else {
+    current <- getwd()
+    while (current != dirname(current)) {
+      if (file.exists(file.path(current, "_quarto.yml"))) {
+        break
+      }
+      current <- dirname(current)
+    }
+    current
+  }
+}
+
+# Load required R packages
+library(readr)
+library(jsonlite)
+library(reactable)
+library(htmltools)
+library(htmlwidgets)
+library(knitr)
+
+# Load helper functions (if not already loaded)
+if (!exists("load_dataset")) {
+  helpers_path <- file.path(project_root, "reference_info/ontology/_partials/helpers.R")
+  source(helpers_path)
+}
+
+# Define themes
+themes <- list(
+  list(id = "stock-assessment-terms", label = "Stock Assessment Methods", 
+       desc = "enumeration and escapement related vocabularies"),
+  list(id = "genetics-terms", label = "Genetics and GSI", 
+       desc = "laboratory, assay, and reporting constructs"),
+  list(id = "legislation-terms", label = "Legislation and Policy", 
+       desc = "policy frameworks and status designations"),
+  list(id = "benchmarks-terms", label = "Biological Benchmarks", 
+       desc = "conservation limits, reference points, and indicators"),
+  list(id = "hatchery-enhancement-terms", label = "Hatchery and Enhancement", 
+       desc = "hatchery facilities, production, and salmon origin classifications")
+)
+
+# Build tab buttons HTML
+tab_buttons <- character()
+for (idx in seq_along(themes)) {
+  theme <- themes[[idx]]
+  theme_id <- theme$id
+  theme_label <- theme$label
+  active_class <- if (idx == 1) "active" else ""
+  tab_buttons <- c(tab_buttons, 
+    paste0('<button class="theme-tab-btn ', active_class, '" data-theme="', theme_id, 
+           '" data-index="', idx - 1, '">', theme_label, '</button>'))
+}
+
+# Store theme data for rendering
+theme_data <- list()
+for (idx in seq_along(themes)) {
+  theme <- themes[[idx]]
+  theme_id <- theme$id
+  csv_path <- file.path(project_root, "data/ontology/release/artifacts/term-tables", 
+                        paste0(theme_id, ".csv"))
+  result <- load_dataset(csv_path)
+  theme_data[[theme_id]] <- list(
+    df = result$data,
+    meta = result$metadata,
+    label = theme$label
+  )
+}
+
+# Build tabs structure using htmltools
+# This ensures Quarto can detect htmlwidgets and include JavaScript dependencies
+
+# Create tab buttons as HTML
+tab_buttons_html <- HTML(paste(tab_buttons, collapse = ''))
+
+# Build panels with widgets
+panels <- list()
+for (idx in seq_along(themes)) {
+  theme <- themes[[idx]]
+  theme_id <- theme$id
+  theme_info <- theme_data[[theme_id]]
+  df <- theme_info$df
+  meta <- theme_info$meta
+  
+  display_class <- if (idx == 1) "block" else "none"
+  
+  # Build panel content
+  panel_content <- list()
+  
+  if (is.null(df) || nrow(df) == 0) {
+    panel_content <- tags$p("Term table not found. Run the ontology extraction workflow to generate term tables.")
+  } else {
+    # Add theme column to dataframe
+    df$theme <- theme$label
+    
+    # Render table using reactable - this will be detected by Quarto
+    table_output <- render_table(df, theme_label = theme$label)
+    panel_content <- c(panel_content, list(table_output))
+  }
+  
+  # Create panel div
+  panels[[idx]] <- tags$div(
+    class = "theme-tab-panel",
+    id = paste0("panel-", theme_id),
+    style = paste0("display: ", display_class, ";"),
+    panel_content
+  )
+}
+
+# Build the complete structure
+tabs_container <- tags$div(
+  class = "theme-tabs-container",
+  tags$div(
+    class = "theme-tabs-buttons",
+    tab_buttons_html
+  ),
+  tags$div(
+    class = "theme-tabs-content",
+    panels
+  ),
+  tags$style(HTML('
+    .theme-tabs-container {
+      margin-top: 2rem;
+    }
+    .theme-tabs-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      border-bottom: 2px solid #dee2e6;
+      margin-bottom: 1.5rem;
+    }
+    .theme-tab-btn {
+      padding: 0.75rem 1.5rem;
+      background: #f8f9fa;
+      border: none;
+      border-bottom: 3px solid transparent;
+      cursor: pointer;
+      font-size: 1rem;
+      color: #495057;
+      transition: all 0.2s;
+      margin-bottom: -2px;
+    }
+    .theme-tab-btn:hover {
+      background: #e9ecef;
+      color: #446c8a;
+    }
+    .theme-tab-btn.active {
+      background: white;
+      color: #446c8a;
+      border-bottom-color: #446c8a;
+      font-weight: 600;
+    }
+    .theme-tabs-content {
+      min-height: 400px;
+    }
+    .theme-tab-panel {
+      animation: fadeIn 0.3s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .provenance-callout {
+      margin-bottom: 1rem;
+    }
+  ')),
+  tags$script(HTML("
+    (function() {
+      // Get terms data from the search script's scope
+      let terms = [];
+      try {
+        // Try to access terms from the search script
+        if (typeof window.allTermsData !== \"undefined\") {
+          terms = window.allTermsData;
+        }
+      } catch(e) {
+        console.warn(\"Could not access terms data:\", e);
+      }
+      
+      const tabButtons = document.querySelectorAll(\".theme-tab-btn\");
+      const tabPanels = document.querySelectorAll(\".theme-tab-panel\");
+      
+      tabButtons.forEach(btn => {
+        btn.addEventListener(\"click\", function() {
+          const themeId = this.getAttribute(\"data-theme\");
+          
+          // Remove active class from all buttons
+          tabButtons.forEach(b => b.classList.remove(\"active\"));
+          // Add active class to clicked button
+          this.classList.add(\"active\");
+          
+          // Hide all panels
+          tabPanels.forEach(panel => {
+            panel.style.display = \"none\";
+          });
+          
+          // Show selected panel
+          const selectedPanel = document.getElementById(\"panel-\" + themeId);
+          if (selectedPanel) {
+            selectedPanel.style.display = \"block\";
+          }
+        });
+      });
+      
+      // Handle related term link clicks - show card with term details
+      function handleRelatedTermClick(e) {
+        e.preventDefault();
+        const link = e.target.closest(\".related-term-link\");
+        if (!link) return;
+        
+        const termName = link.getAttribute(\"data-term-name\");
+        const termUri = link.getAttribute(\"data-term-uri\");
+        const relation = link.getAttribute(\"title\") || \"\";
+        
+        // Try to get terms from window scope (set by search script)
+        if (terms.length === 0 && typeof window.allTermsData !== \"undefined\") {
+          terms = window.allTermsData;
+        }
+        
+        // Find the term in the loaded terms data
+        const term = terms.length > 0 ? terms.find(function(t) {
+          return t.term_name === termName || t.canonical_uri === termUri;
+        }) : null;
+        
+        // Create modal card
+        const modal = document.createElement(\"div\");
+        modal.className = \"related-term-modal\";
+        modal.style.cssText = \"position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); display: flex; justify-content: center; align-items: center; z-index: 10000; padding: 1rem;\";
+        
+        const card = document.createElement(\"div\");
+        card.className = \"related-term-card\";
+        card.style.cssText = \"background: white; border-radius: 0.5rem; padding: 2rem; max-width: 600px; max-height: 80vh; overflow-y: auto; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); position: relative;\";
+        
+        if (term) {
+          const sourceText = term.definition_source_text || \"\";
+          const sourceLink = term.definition_source_link || \"\";
+          let sourceHtml = \"\";
+          if (sourceLink) {
+            sourceHtml = \"<a href=\\\"\" + sourceLink + \"\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\" style=\\\"font-size: 0.9rem; color: #446c8a;\\\">\" + (sourceText || sourceLink) + \"</a>\";
+          } else if (sourceText) {
+            sourceHtml = sourceText;
+          }
+          
+          const relationHtml = relation ? \"<p style=\\\"margin: 0 0 1rem 0; color: #6c757d; font-size: 0.9rem;\\\"><strong>Relation:</strong> \" + escapeHtml(relation) + \"</p>\" : \"\";
+          const sourceHtmlPart = sourceHtml ? \"<p style=\\\"margin: 0.5rem 0; font-size: 0.9rem; color: #6c757d; font-style: italic;\\\"><strong>Source:</strong> \" + sourceHtml + \"</p>\" : \"\";
+          
+          card.innerHTML = \"<button class=\\\"close-modal\\\" style=\\\"position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #666; padding: 0.25rem 0.5rem;\\\">&times;</button>\" +
+            \"<h2 style=\\\"margin: 0 0 1rem 0; color: #446c8a; font-size: 1.5rem;\\\">\" + escapeHtml(term.term_name) + \"</h2>\" +
+            relationHtml +
+            \"<p style=\\\"margin: 0 0 1rem 0; color: #495057; line-height: 1.6;\\\">\" + escapeHtml(term.definition || \"No definition available\") + \"</p>\" +
+            sourceHtmlPart +
+            \"<div style=\\\"margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #dee2e6;\\\">\" +
+            \"<p style=\\\"margin: 0.5rem 0; font-size: 0.9rem;\\\"><strong>Theme:</strong> <span style=\\\"color: #6c757d;\\\">\" + escapeHtml(term.theme || \"Unknown\") + \"</span></p>\" +
+            \"<p style=\\\"margin: 0.5rem 0; font-size: 0.9rem;\\\"><strong>Term ID:</strong> <a href=\\\"\" + escapeHtml(term.canonical_uri) + \"\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\" style=\\\"color: #446c8a; font-family: monospace; font-size: 0.85em; word-break: break-all;\\\">\" + escapeHtml(term.canonical_uri) + \"</a></p>\" +
+            \"</div>\";
+        } else {
+          const relationHtml = relation ? \"<p style=\\\"margin: 0 0 1rem 0; color: #6c757d; font-size: 0.9rem;\\\"><strong>Relation:</strong> \" + escapeHtml(relation) + \"</p>\" : \"\";
+          card.innerHTML = \"<button class=\\\"close-modal\\\" style=\\\"position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #666; padding: 0.25rem 0.5rem;\\\">&times;</button>\" +
+            \"<h2 style=\\\"margin: 0 0 1rem 0; color: #446c8a; font-size: 1.5rem;\\\">\" + escapeHtml(termName) + \"</h2>\" +
+            relationHtml +
+            \"<p style=\\\"margin: 0 0 1rem 0; color: #495057;\\\">Term details not available. This term may be from an external vocabulary.</p>\" +
+            \"<div style=\\\"margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #dee2e6;\\\">\" +
+            \"<p style=\\\"margin: 0.5rem 0; font-size: 0.9rem;\\\"><strong>Term ID:</strong> <a href=\\\"\" + escapeHtml(termUri) + \"\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\" style=\\\"color: #446c8a; font-family: monospace; font-size: 0.85em; word-break: break-all;\\\">\" + escapeHtml(termUri) + \"</a></p>\" +
+            \"</div>\";
+        }
+        
+        modal.appendChild(card);
+        document.body.appendChild(modal);
+        
+        // Close modal handlers
+        const closeModal = function() {
+          document.body.removeChild(modal);
+        };
+        
+        card.querySelector(\".close-modal\").addEventListener(\"click\", closeModal);
+        modal.addEventListener(\"click\", function(e) {
+          if (e.target === modal) {
+            closeModal();
+          }
+        });
+        
+        // Close on Escape key
+        const escapeHandler = function(e) {
+          if (e.key === \"Escape\") {
+            closeModal();
+            document.removeEventListener(\"keydown\", escapeHandler);
+          }
+        };
+        document.addEventListener(\"keydown\", escapeHandler);
+      }
+      
+      // Helper function to escape HTML
+      function escapeHtml(text) {
+        const div = document.createElement(\"div\");
+        div.textContent = text;
+        return div.innerHTML;
+      }
+      
+      // Add event listeners for related term links
+      // Use event delegation since links are in reactable tables
+      document.addEventListener(\"click\", function(e) {
+        if (e.target.closest(\".related-term-link\")) {
+          handleRelatedTermClick(e);
+        }
+      });
+    })();
+  ")),
+  tags$style(HTML('
+    .related-term-link:hover {
+      text-decoration: underline !important;
+      color: #2c5282 !important;
+    }
+    .related-term-card {
+      animation: fadeIn 0.2s ease-in;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    .close-modal:hover {
+      color: #000 !important;
+      background: #f0f0f0 !important;
+      border-radius: 0.25rem;
+    }
+  '))
+)
+
+# Output the complete structure
+# Using tagList ensures Quarto processes widgets correctly
+# Return the tagList - Quarto will handle rendering and widget detection
+tabs_container
+```
+
+## About the Vocabulary Structure
+
+Under the hood, the vocabulary is formatted in SKOS (Simple Knowledge Organization System), a W3C-recommended framework for representing controlled vocabularies and thesauri. By modeling terms and their relationships (broader, narrower, related), SKOS makes it easy to:
+
+- Maintain consistent labels, definitions, and concept hierarchies.
+- Share and integrate the vocabulary with other systems that understand RDF.
+
+The vocabulary is intended to be a living document that evolves with the needs of the community. It is maintained by the Data Stewardship Unit (DSU) within the Fisheries and Assessment Data Section (FADS) in the Pacific Region of Fisheries and Oceans Canada (DFO).
+
+The vocabulary is more than a simple glossary: it is a formally structured controlled vocabulary that uses the W3C-endorsed Simple Knowledge Organization System (SKOS), enabling machine-readable formats for integration into data systems, APIs, and web applications. For a deep-dive on the how and why of controlled vocabularies, see our guide: [Support Controlled Vocabularies](https://dfo-pacific-science.github.io/data-stewardship-unit/tutorials/support_controlled_vocabs.html).
+
+## Contributing
+
+File a GitHub Issue at https://github.com/dfo-pacific-science/data-stewardship-unit/issues
+
+Or contact the Data Stewardship Unit.

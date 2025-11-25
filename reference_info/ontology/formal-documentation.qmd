@@ -1,5 +1,5 @@
 ---
-title: "Formal Ontology Documentation"
+title: "DFO Salmon Ontology"
 format:
   html:
     toc: false
@@ -17,4 +17,4 @@ This documentation includes:
 
 The ontology source can be accessed at: [https://w3id.org/dfoc/salmon](https://w3id.org/dfoc/salmon)
 
-For curated, human-friendly term tables organized by theme, see the other pages in this section. These tables focus on **Controlled Vocabularies and Thesauri** extracted from the full ontology.
+For curated, human-friendly term tables organized by theme, see the [Controlled Vocabulary & Thesauri](../data_standards/controlled-vocabulary-thesauri.qmd) page. These tables focus on **Controlled Vocabularies and Thesauri** extracted from the full ontology.

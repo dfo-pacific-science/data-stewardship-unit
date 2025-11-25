@@ -1,61 +1,58 @@
 ---
-title: "Projects"
+title: "Data Services"
+toc: false
 css: styles/custom.css
 ---
 
-# Data Stewardship Unit Projects
+<style>
+/* Force full width for portfolio page content */
+.quarto-layout-row,
+.column-body,
+.main-content,
+.content {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Ensure grid layout uses full width */
+.grid {
+  max-width: 100% !important;
+}
+
+/* Preamble full width within main content area - ensure it doesn't extend behind sidebar */
+.portfolio-preamble {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+</style>
+
+
 
 ```{=html}
+<!-- Preamble -->
+<div style="width: 100%; max-width: 100%; overflow: hidden; box-sizing: border-box;">
+  <div class="mb-4 portfolio-preamble" style="padding: 1.5rem; background-color: #f8f9fa; border-radius: 8px; margin-bottom: 2rem;">
+    <p class="mb-0" style="font-size: 1.1rem; line-height: 1.6; color: #333;">
+      The Data Stewardship Unit (DSU) has developed a portfolio of data services to support DFO's salmon data management needs. Our services include both <strong>internal DFO platforms</strong> that streamline data access and analysis for staff, and <strong>open access services</strong> that make salmon data and knowledge publicly available to researchers, stakeholders, and the broader community.
+    </p>
+  </div>
+</div>
+
 <div class="portfolio-container">
 
-<!-- Project 1: Salmon Population Summary Repository -->
-<div class="card portfolio-card">
-  <div class="card-header">
-    <div class="d-flex justify-content-between align-items-center">
-      <strong>Salmon Population Summary Repository</strong>
-      <span class="badge portfolio-status-badge" style="background-color: #2196f3;">Testing</span>
-    </div>
-    <div class="mt-2 d-flex justify-content-between align-items-center">
-      <a href="#" class="text-muted">[URL placeholder]</a>
-      <button class="btn btn-link p-0 text-decoration-none portfolio-modal-btn" type="button" data-modal="modal-project-1">
-        <span class="portfolio-toggle-icon">▼</span>
-      </button>
-    </div>
-  </div>
-</div>
-
-<!-- Modal for Project 1 -->
-<div class="portfolio-modal" id="modal-project-1">
-  <div class="portfolio-modal-overlay"></div>
-  <div class="portfolio-modal-content">
-    <div class="portfolio-modal-header">
-      <h3>Salmon Population Summary Repository</h3>
-      <button class="portfolio-modal-close" type="button" aria-label="Close">×</button>
-    </div>
-    <div class="portfolio-modal-body">
-      <div class="mb-3">
-        <span class="badge portfolio-status-badge" style="background-color: #2196f3;">Testing</span>
-      </div>
-      <p>[Description placeholder - detailed project information will be added here]</p>
-      <div class="portfolio-screenshot-container">
-        <p class="text-center text-muted mb-0">📷 Screenshot coming soon</p>
-      </div>
-    </div>
-  </div>
-</div>
+<!-- Open Access Services Section -->
+<h2 class="portfolio-section-header">Open Access Services</h2>
 
 <!-- Project 2: DFO Salmon Ontology -->
-<div class="card portfolio-card">
+<div class="card portfolio-card" data-modal="modal-project-2" style="cursor: pointer;">
   <div class="card-header">
     <div class="d-flex justify-content-between align-items-center">
       <strong>DFO Salmon Ontology</strong>
       <span class="badge portfolio-status-badge" style="background-color: #2196f3;">Testing</span>
     </div>
     <div class="mt-2 d-flex justify-content-between align-items-center">
-      <a href="#" class="text-muted">[URL placeholder]</a>
-      <button class="btn btn-link p-0 text-decoration-none portfolio-modal-btn" type="button" data-modal="modal-project-2">
-        <span class="portfolio-toggle-icon">▼</span>
-      </button>
+      <a href="#" class="text-muted" onclick="event.stopPropagation();">[URL placeholder]</a>
     </div>
   </div>
 </div>
@@ -80,18 +77,159 @@ css: styles/custom.css
   </div>
 </div>
 
+<!-- Project 6: Qualark Data System -->
+<div class="card portfolio-card" data-modal="modal-project-6" style="cursor: pointer;">
+  <div class="card-header">
+    <div class="d-flex justify-content-between align-items-center">
+      <strong>Qualark Data System</strong>
+      <span class="badge portfolio-status-badge" style="background-color: #ff9800;">In Development</span>
+    </div>
+    <div class="mt-2 d-flex justify-content-between align-items-center">
+      <a href="#" class="text-muted" onclick="event.stopPropagation();">[URL placeholder]</a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Project 6 -->
+<div class="portfolio-modal" id="modal-project-6">
+  <div class="portfolio-modal-overlay"></div>
+  <div class="portfolio-modal-content">
+    <div class="portfolio-modal-header">
+      <h3>Qualark Data System</h3>
+      <button class="portfolio-modal-close" type="button" aria-label="Close">×</button>
+    </div>
+    <div class="portfolio-modal-body">
+      <div class="mb-3">
+        <span class="badge portfolio-status-badge" style="background-color: #ff9800;">In Development</span>
+      </div>
+      <p>[Description placeholder - detailed project information will be added here]</p>
+      <div class="portfolio-screenshot-container">
+        <p class="text-center text-muted mb-0">📷 Screenshot coming soon</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Project 7: Salmon Data Wiki -->
+<div class="card portfolio-card" data-modal="modal-project-7" style="cursor: pointer;">
+  <div class="card-header">
+    <div class="d-flex justify-content-between align-items-center">
+      <strong>Salmon Data Wiki</strong>
+      <span class="badge portfolio-status-badge" style="background-color: #9c27b0;">In Review</span>
+    </div>
+    <div class="mt-2 d-flex justify-content-between align-items-center">
+      <a href="#" class="text-muted" onclick="event.stopPropagation();">[URL placeholder]</a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Project 7 -->
+<div class="portfolio-modal" id="modal-project-7">
+  <div class="portfolio-modal-overlay"></div>
+  <div class="portfolio-modal-content">
+    <div class="portfolio-modal-header">
+      <h3>Salmon Data Wiki</h3>
+      <button class="portfolio-modal-close" type="button" aria-label="Close">×</button>
+    </div>
+    <div class="portfolio-modal-body">
+      <div class="mb-3">
+        <span class="badge portfolio-status-badge" style="background-color: #9c27b0;">In Review</span>
+      </div>
+      <p>[Description placeholder - detailed project information will be added here]</p>
+      <div class="portfolio-screenshot-container">
+        <p class="text-center text-muted mb-0">📷 Screenshot coming soon</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Project 8: Salmon SMU-CU-DU Crosswalk -->
+<div class="card portfolio-card" data-modal="modal-project-8" style="cursor: pointer;">
+  <div class="card-header">
+    <div class="d-flex justify-content-between align-items-center">
+      <strong>Salmon SMU-CU-DU Crosswalk</strong>
+      <span class="badge portfolio-status-badge" style="background-color: #4caf50;">In Production</span>
+    </div>
+    <div class="mt-2 d-flex justify-content-between align-items-center">
+      <a href="https://github.com/dfo-pacific-science/Salmon-SMU-CU-DU-Crosswalk" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">View Repository</a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Project 8 -->
+<div class="portfolio-modal" id="modal-project-8">
+  <div class="portfolio-modal-overlay"></div>
+  <div class="portfolio-modal-content">
+    <div class="portfolio-modal-header">
+      <h3>Salmon SMU-CU-DU Crosswalk</h3>
+      <button class="portfolio-modal-close" type="button" aria-label="Close">×</button>
+    </div>
+    <div class="portfolio-modal-body">
+      <div class="mb-3">
+        <span class="badge portfolio-status-badge" style="background-color: #4caf50;">In Production</span>
+      </div>
+      <p><strong>Business Problem:</strong> Salmon groups are managed and assessed at different organizational levels (Stock Management Units, Conservation Units, and Designatable Units), creating challenges in linking information across Science and Fisheries and Resource Management Branches, as well as across organizations (DFO and COSEWIC).</p>
+      <p><strong>Solution:</strong> The Salmon SMU-CU-DU Crosswalk is an open-access data repository that provides linkages between stock units, tracks CU revisions, and establishes a common vocabulary for DFO. The crosswalk table links Stock Management Units (SMU), Conservation Units (CU), and Designatable Units (DU) to help communicate and assess salmon stocks at distinct levels.</p>
+      <p><strong>Outcome:</strong> This crosswalk enables seamless communication between branches and organizations, supports consistent stock assessment, and provides version-controlled data that is reviewed and updated every three months to ensure accuracy.</p>
+      <p><strong>Key Features:</strong></p>
+      <ul>
+        <li>Linkages between stock units (SMU, CU, DU)</li>
+        <li>CU revision tracking</li>
+        <li>Life history type information</li>
+        <li>Version-controlled releases with changelog</li>
+        <li>Data dictionary for consistent interpretation</li>
+      </ul>
+      <div class="portfolio-screenshot-container">
+        <p class="text-center text-muted mb-0">📷 Screenshot coming soon</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Internal Services Section -->
+<h2 class="portfolio-section-header">Internal DFO Services</h2>
+
+<!-- Project 1: Salmon Population Summary Repository -->
+<div class="card portfolio-card" data-modal="modal-project-1" style="cursor: pointer;">
+  <div class="card-header">
+    <div class="d-flex justify-content-between align-items-center">
+      <strong>Salmon Population Summary Repository</strong>
+      <span class="badge portfolio-status-badge" style="background-color: #2196f3;">Testing</span>
+    </div>
+    <div class="mt-2 d-flex justify-content-between align-items-center">
+      <a href="#" class="text-muted" onclick="event.stopPropagation();">[URL placeholder]</a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Project 1 -->
+<div class="portfolio-modal" id="modal-project-1">
+  <div class="portfolio-modal-overlay"></div>
+  <div class="portfolio-modal-content">
+    <div class="portfolio-modal-header">
+      <h3>Salmon Population Summary Repository</h3>
+      <button class="portfolio-modal-close" type="button" aria-label="Close">×</button>
+    </div>
+    <div class="portfolio-modal-body">
+      <div class="mb-3">
+        <span class="badge portfolio-status-badge" style="background-color: #2196f3;">Testing</span>
+      </div>
+      <p>[Description placeholder - detailed project information will be added here]</p>
+      <div class="portfolio-screenshot-container">
+        <p class="text-center text-muted mb-0">📷 Screenshot coming soon</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Project 3: Fisheries Operating System Data Explorer -->
-<div class="card portfolio-card">
+<div class="card portfolio-card" data-modal="modal-project-3" style="cursor: pointer;">
   <div class="card-header">
     <div class="d-flex justify-content-between align-items-center">
       <strong>Fisheries Operating System Data Explorer</strong>
       <span class="badge portfolio-status-badge" style="background-color: #4caf50;">In Production</span>
     </div>
     <div class="mt-2 d-flex justify-content-between align-items-center">
-      <a href="https://app.fabric.microsoft.com/Redirect?action=OpenReport&appId=77d0b455-d761-4543-b126-999f29b0779f&reportObjectId=2cc62024-3c0a-4bb8-b161-bec67f91d906&ctid=1594fdae-a1d9-4405-915d-011467234338&reportPage=28134eafb5d5b2d10df5&pbi_source=appShareLink&portalSessionId=7a41f3f6-47b9-4943-ae12-d0998bff6ee1" target="_blank" rel="noopener noreferrer" class="text-muted">Access Platform</a>
-      <button class="btn btn-link p-0 text-decoration-none portfolio-modal-btn" type="button" data-modal="modal-project-3">
-        <span class="portfolio-toggle-icon">▼</span>
-      </button>
+      <a href="https://app.fabric.microsoft.com/Redirect?action=OpenReport&appId=77d0b455-d761-4543-b126-999f29b0779f&reportObjectId=2cc62024-3c0a-4bb8-b161-bec67f91d906&ctid=1594fdae-a1d9-4405-915d-011467234338&reportPage=28134eafb5d5b2d10df5&pbi_source=appShareLink&portalSessionId=7a41f3f6-47b9-4943-ae12-d0998bff6ee1" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Access Platform</a>
     </div>
   </div>
 </div>
@@ -119,17 +257,14 @@ css: styles/custom.css
 </div>
 
 <!-- Project 4: Genetic Results Database -->
-<div class="card portfolio-card">
+<div class="card portfolio-card" data-modal="modal-project-4" style="cursor: pointer;">
   <div class="card-header">
     <div class="d-flex justify-content-between align-items-center">
       <strong>Genetic Results Database</strong>
       <span class="badge portfolio-status-badge" style="background-color: #ff9800;">In Development</span>
     </div>
     <div class="mt-2 d-flex justify-content-between align-items-center">
-      <a href="#" class="text-muted">[URL placeholder]</a>
-      <button class="btn btn-link p-0 text-decoration-none portfolio-modal-btn" type="button" data-modal="modal-project-4">
-        <span class="portfolio-toggle-icon">▼</span>
-      </button>
+      <a href="#" class="text-muted" onclick="event.stopPropagation();">[URL placeholder]</a>
     </div>
   </div>
 </div>
@@ -155,17 +290,14 @@ css: styles/custom.css
 </div>
 
 <!-- Project 5: Salmon Outlook Report Enhancements -->
-<div class="card portfolio-card">
+<div class="card portfolio-card" data-modal="modal-project-5" style="cursor: pointer;">
   <div class="card-header">
     <div class="d-flex justify-content-between align-items-center">
       <strong>Salmon Outlook Report Enhancements</strong>
-      <span class="badge portfolio-status-badge" style="background-color: #ff9800;">In Progress</span>
+      <span class="badge portfolio-status-badge" style="background-color: #ff9800;">In Development</span>
     </div>
     <div class="mt-2 d-flex justify-content-between align-items-center">
-      <a href="#" class="text-muted">[URL placeholder]</a>
-      <button class="btn btn-link p-0 text-decoration-none portfolio-modal-btn" type="button" data-modal="modal-project-5">
-        <span class="portfolio-toggle-icon">▼</span>
-      </button>
+      <a href="#" class="text-muted" onclick="event.stopPropagation();">[URL placeholder]</a>
     </div>
   </div>
 </div>
@@ -180,79 +312,7 @@ css: styles/custom.css
     </div>
     <div class="portfolio-modal-body">
       <div class="mb-3">
-        <span class="badge portfolio-status-badge" style="background-color: #ff9800;">In Progress</span>
-      </div>
-      <p>[Description placeholder - detailed project information will be added here]</p>
-      <div class="portfolio-screenshot-container">
-        <p class="text-center text-muted mb-0">📷 Screenshot coming soon</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Project 6: Qualark Data System -->
-<div class="card portfolio-card">
-  <div class="card-header">
-    <div class="d-flex justify-content-between align-items-center">
-      <strong>Qualark Data System</strong>
-      <span class="badge portfolio-status-badge" style="background-color: #ff9800;">In Development</span>
-    </div>
-    <div class="mt-2 d-flex justify-content-between align-items-center">
-      <a href="#" class="text-muted">[URL placeholder]</a>
-      <button class="btn btn-link p-0 text-decoration-none portfolio-modal-btn" type="button" data-modal="modal-project-6">
-        <span class="portfolio-toggle-icon">▼</span>
-      </button>
-    </div>
-  </div>
-</div>
-
-<!-- Modal for Project 6 -->
-<div class="portfolio-modal" id="modal-project-6">
-  <div class="portfolio-modal-overlay"></div>
-  <div class="portfolio-modal-content">
-    <div class="portfolio-modal-header">
-      <h3>Qualark Data System</h3>
-      <button class="portfolio-modal-close" type="button" aria-label="Close">×</button>
-    </div>
-    <div class="portfolio-modal-body">
-      <div class="mb-3">
         <span class="badge portfolio-status-badge" style="background-color: #ff9800;">In Development</span>
-      </div>
-      <p>[Description placeholder - detailed project information will be added here]</p>
-      <div class="portfolio-screenshot-container">
-        <p class="text-center text-muted mb-0">📷 Screenshot coming soon</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Project 7: Salmon Data Wiki -->
-<div class="card portfolio-card">
-  <div class="card-header">
-    <div class="d-flex justify-content-between align-items-center">
-      <strong>Salmon Data Wiki</strong>
-      <span class="badge portfolio-status-badge" style="background-color: #9c27b0;">In Review</span>
-    </div>
-    <div class="mt-2 d-flex justify-content-between align-items-center">
-      <a href="#" class="text-muted">[URL placeholder]</a>
-      <button class="btn btn-link p-0 text-decoration-none portfolio-modal-btn" type="button" data-modal="modal-project-7">
-        <span class="portfolio-toggle-icon">▼</span>
-      </button>
-    </div>
-  </div>
-</div>
-
-<!-- Modal for Project 7 -->
-<div class="portfolio-modal" id="modal-project-7">
-  <div class="portfolio-modal-overlay"></div>
-  <div class="portfolio-modal-content">
-    <div class="portfolio-modal-header">
-      <h3>Salmon Data Wiki</h3>
-      <button class="portfolio-modal-close" type="button" aria-label="Close">×</button>
-    </div>
-    <div class="portfolio-modal-body">
-      <div class="mb-3">
-        <span class="badge portfolio-status-badge" style="background-color: #9c27b0;">In Review</span>
       </div>
       <p>[Description placeholder - detailed project information will be added here]</p>
       <div class="portfolio-screenshot-container">
@@ -267,8 +327,8 @@ css: styles/custom.css
 <script>
 // Portfolio modal functionality
 document.addEventListener('DOMContentLoaded', function() {
-  // Get all modal buttons
-  const modalButtons = document.querySelectorAll('.portfolio-modal-btn');
+  // Get all portfolio cards and modals
+  const portfolioCards = document.querySelectorAll('.portfolio-card[data-modal]');
   const modals = document.querySelectorAll('.portfolio-modal');
   const closeButtons = document.querySelectorAll('.portfolio-modal-close');
   const overlays = document.querySelectorAll('.portfolio-modal-overlay');
@@ -297,12 +357,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Add click handlers to modal buttons
-  modalButtons.forEach(button => {
-    button.addEventListener('click', function(e) {
-      e.preventDefault();
+  // Add click handlers to portfolio cards
+  portfolioCards.forEach(card => {
+    card.addEventListener('click', function(e) {
+      // Don't open modal if clicking on a link (links handle their own navigation)
+      if (e.target.tagName === 'A' || e.target.closest('a')) {
+        return;
+      }
       const modalId = this.getAttribute('data-modal');
-      openModal(modalId);
+      if (modalId) {
+        openModal(modalId);
+      }
     });
   });
 
