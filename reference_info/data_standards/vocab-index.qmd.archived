@@ -1,0 +1,205 @@
+---
+title: "DFO Salmon Data Controlled Vocabulary"
+format: html
+---
+
+A growing challenge in salmon research, management, and data stewardship is the proliferation of inconsistent terms, acronyms, and definitions across documents, programs, and even within the same organization—leading to confusion, miscommunication, and inefficiencies in analysis and reporting.
+
+To address this, the Data Stewardship Unit (DSU) has initiated the DFO Salmon Data Controlled Vocabulary—a standardized, community-curated list of key terms and definitions related to salmon data collection, analysis, and policy within Fisheries and Oceans Canada (DFO) Pacific Region.
+
+The vocabulary tables below consolidate definitions from the DFO Salmon Ontology, regulatory documents, scientific literature, internal guidelines, and other sources into organized, searchable references designed to improve semantic clarity across DFO Pacific.
+
+The vocabulary is more than a simple glossary: it is a formally structured controlled vocabulary that uses the W3C-endorsed Simple Knowledge Organization System (SKOS), enabling machine-readable formats for integration into data systems, APIs, and web applications. For a deep-dive on the how and why of controlled vocabularies, see our guide: [Support Controlled Vocabularies](https://dfo-pacific-science.github.io/data-stewardship-unit/tutorials/support_controlled_vocabs.html).
+
+## 🗂️ DFO Salmon Controlled Vocabulary Terms
+
+The vocabulary is organized by theme. Use the tabs below to navigate between categories:
+
+```{python}
+import importlib.util
+import os
+from pathlib import Path
+from IPython.display import display, HTML, Markdown
+
+# Get project root directory (where _quarto.yml is located)
+project_root = Path(os.environ.get("QUARTO_PROJECT_DIR", os.getcwd()))
+if not (project_root / "_quarto.yml").exists():
+    # Fallback: walk up from current directory to find _quarto.yml
+    current = Path.cwd()
+    while current != current.parent:
+        if (current / "_quarto.yml").exists():
+            project_root = current
+            break
+        current = current.parent
+
+helpers_path = project_root / "reference_info/ontology/_partials/helpers.py"
+spec = importlib.util.spec_from_file_location("ontology_helpers", helpers_path)
+helpers = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(helpers)  # type: ignore[attr-defined]
+
+# Define term categories
+term_categories = [
+    ("stock-assessment", "Stock Assessment Methods", "stock-assessment-terms.csv", "Enumeration and escapement related vocabularies"),
+    ("genetics", "Genetics and GSI", "genetics-terms.csv", "Laboratory, assay, and reporting constructs"),
+    ("legislation", "Legislation and Policy", "legislation-terms.csv", "Policy frameworks and status designations"),
+    ("benchmarks", "Biological Benchmarks", "benchmarks-terms.csv", "Conservation limits, reference points, and indicators"),
+    ("temporal", "Temporal References", "temporal-terms.csv", "Time-based frames such as brood and ocean entry years"),
+]
+
+# Generate tab navigation
+tabs_html = []
+for idx, (category_id, category_title, _, _) in enumerate(term_categories):
+    active_class = "active" if idx == 0 else ""
+    tabs_html.append(f'<button class="vocab-tab-btn {"active" if idx == 0 else ""}" onclick="showVocabTab(\'{category_id}\', this)">{category_title}</button>')
+
+# Render tabs first
+display(HTML(f"""
+<style>
+.vocab-tabs {{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 0.5rem;
+}}
+.vocab-tab-btn {{
+    padding: 0.75rem 1.5rem;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-bottom: none;
+    border-radius: 0.5rem 0.5rem 0 0;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+    margin-bottom: -2px;
+}}
+.vocab-tab-btn:hover {{
+    background: #e9ecef;
+}}
+.vocab-tab-btn.active {{
+    background: white;
+    border-bottom: 2px solid white;
+    color: #446c8a;
+    font-weight: 600;
+}}
+.vocab-tabs-container {{
+    margin-top: 1rem;
+}}
+.vocab-tab-content {{
+    padding: 1rem 0;
+}}
+.vocab-category-desc {{
+    color: #6c757d;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}}
+</style>
+<div class="vocab-tabs">{"".join(tabs_html)}</div>
+<div class="vocab-tabs-container">
+"""))
+
+# Render each tab's content
+for idx, (category_id, category_title, csv_file, category_desc) in enumerate(term_categories):
+    csv_path = project_root / "data/ontology/release/artifacts/term-tables" / csv_file
+    df, meta = helpers.load_dataset(csv_path)
+    
+    # Tab content wrapper
+    display_class = "block" if idx == 0 else "none"
+    display(HTML(f'<div id="vocab-tab-{category_id}" class="vocab-tab-content" style="display: {display_class};">'))
+    display(HTML(f'<p class="vocab-category-desc"><em>{category_desc}</em></p>'))
+    
+    if df is None:
+        display(helpers.warning_callout("Term table not found. Run the ontology extraction workflow to generate term tables."))
+    else:
+        if meta:
+            provenance = helpers.provenance_callout(meta)
+            if provenance is not None:
+                display(provenance)
+        display(helpers.render_table(df))
+    
+    display(HTML('</div>'))
+
+# Close the tabs container and add JavaScript
+display(HTML('</div>'))
+display(HTML("""
+<script>
+function showVocabTab(categoryId, buttonElement) {
+    // Hide all tab contents
+    document.querySelectorAll('.vocab-tab-content').forEach(tab => {
+        tab.style.display = 'none';
+    });
+    // Remove active class from all buttons
+    document.querySelectorAll('.vocab-tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    // Show selected tab
+    document.getElementById('vocab-tab-' + categoryId).style.display = 'block';
+    // Add active class to clicked button
+    buttonElement.classList.add('active');
+}
+(function () {
+  function handleCopy(event) {
+    const button = event.target.closest('button.copy-uri');
+    if (!button) {
+      return;
+    }
+    event.preventDefault();
+    const uri = button.getAttribute('data-uri');
+    if (!uri) {
+      return;
+    }
+    navigator.clipboard.writeText(uri).then(() => {
+      const original = button.textContent;
+      button.textContent = 'Copied';
+      button.classList.add('copied');
+      setTimeout(() => {
+        button.textContent = original;
+        button.classList.remove('copied');
+      }, 1500);
+    }).catch(() => {
+      button.textContent = 'Copy failed';
+      button.classList.add('error');
+      setTimeout(() => {
+        button.textContent = 'Copy';
+        button.classList.remove('error');
+      }, 2000);
+    });
+  }
+  document.addEventListener('click', handleCopy);
+})();
+</script>
+"""))
+```
+
+Under the hood, the vocabulary is formatted in SKOS (Simple Knowledge Organization System), a W3C-recommended framework for representing controlled vocabularies and thesauri. By modeling terms and their relationships (broader, narrower, related), SKOS makes it easy to:
+
+-   Maintain consistent labels, definitions, and concept hierarchies.
+
+-   Share and integrate the vocabulary with other systems that understand RDF.
+
+The vocabulary is intended to be a living document that evolves with the needs of the community. It is maintained by the Data Stewardship Unit (DSU) within the Fisheries and Assessment Data Section (FADS) in the Pacific Region of Fisheries and Oceans Canada (DFO).
+
+To maximize accessibility, we publish three serializations:
+
+-   JSON – A lightweight format ideal for most web and desktop applications that need to load term lists and definitions without RDF tooling.
+
+-   JSON-LD – Embeds linked-data context so that terms become addressable URIs; perfect for web pages, APIs, and any environment where you want automatic context resolution and richer interoperability.
+
+-   Turtle (.ttl) – A compact, human-readable RDF syntax for semantic-web tools, triple stores, and SPARQL queries, enabling advanced semantic reasoning or integration into broader data ecosystems.
+
+You can download or query any of these formats directly from our GitHub repo for programmatic access, metadata validation, integration, or automated workflows.
+
+File a GitHub Issue at https://github.com/dfo-pacific-science/data-stewardship-unit/issues
+
+Or contact the Data Stewardship Unit.
+
+```{=html}
+<!-- ## 🛠️ TODOs for Improvement
+
+-   [ ] Load vocab metadata from CSV or YAML instead of inline code
+-   [ ] Add filters by theme or program
+-   [ ] Include persistent w3id URIs once registered
+-   [ ] Add stats (e.g., number of terms, match rate with SPSR)
+-   [ ] Group vocabularies by domain (e.g., Stock Assessment, Monitoring, Habitat) -->
+```

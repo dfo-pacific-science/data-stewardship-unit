@@ -71,7 +71,7 @@ load_expected_files_from_config <- function(project_root) {
   # Build expected files list from themes config
   expected <- list()
   for (theme in themes_config$themes) {
-    csv_filename <- theme$output_csv %||% paste0(theme$id, ".csv")
+    csv_filename <- if (is.null(theme$output_csv)) paste0(theme$id, ".csv") else theme$output_csv
     theme_id <- sub("\\.csv$", "", csv_filename)
     expected[[theme_id]] <- list(
       csv = file.path("data/ontology/release/artifacts/term-tables", csv_filename)

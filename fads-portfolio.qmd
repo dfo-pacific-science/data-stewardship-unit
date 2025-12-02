@@ -221,11 +221,11 @@ css: styles/custom.css
   </div>
 </div>
 
-<!-- Project 3: Fisheries Operating System Data Explorer -->
+<!-- Project 3: Fishery Operations System Data Explorer -->
 <div class="card portfolio-card" data-modal="modal-project-3" style="cursor: pointer;">
   <div class="card-header">
     <div class="d-flex justify-content-between align-items-center">
-      <strong>Fisheries Operating System Data Explorer</strong>
+      <strong>Fishery Operations System Data Explorer</strong>
       <span class="badge portfolio-status-badge" style="background-color: #4caf50;">In Production</span>
     </div>
     <div class="mt-2 d-flex justify-content-between align-items-center">
@@ -239,7 +239,7 @@ css: styles/custom.css
   <div class="portfolio-modal-overlay"></div>
   <div class="portfolio-modal-content">
     <div class="portfolio-modal-header">
-      <h3>Fisheries Operating System Data Explorer</h3>
+      <h3>Fishery Operations System Data Explorer</h3>
       <button class="portfolio-modal-close" type="button" aria-label="Close">×</button>
     </div>
     <div class="portfolio-modal-body">
@@ -247,8 +247,13 @@ css: styles/custom.css
         <span class="badge portfolio-status-badge" style="background-color: #4caf50;">In Production</span>
       </div>
       <p><strong>Business Problem:</strong> Accessing summary statistics from the Fishery Operations System (FOS) Oracle database was inefficient, requiring SQL accounts or manual data requests, which created barriers for staff and burdened data custodians.</p>
-      <p><strong>Solution:</strong> The Fishery Operations System Internal Data Explorer is a self-service Power BI platform that allows DFO staff to access and download pre-computed summary statistics for commercial salmon catch, openings, and fishing vessel activity.</p>
-      <p><strong>Outcome:</strong> This platform streamlines data access, reduces reliance on manual requests, and empowers staff with timely insights, improving efficiency, decision-making, and fisheries management.</p>
+      <p><strong>Solution:</strong> The Fishery Operations System Internal Data Explorer is a self-service Power BI platform that allows DFO staff to access and download pre-computed summary statistics for commercial salmon catch, openings, and fishing vessel activity. 
+      <br>
+      <a href="https://app.fabric.microsoft.com/Redirect?action=OpenReport&appId=77d0b455-d761-4543-b126-999f29b0779f&reportObjectId=2cc62024-3c0a-4bb8-b161-bec67f91d906&ctid=1594fdae-a1d9-4405-915d-011467234338&reportPage=28134eafb5d5b2d10df5&pbi_source=appShareLink&portalSessionId=7a41f3f6-47b9-4943-ae12-d0998bff6ee1" target="_blank" rel="noopener noreferrer">
+        Click here to access the FOS Data Explorer
+      </a>
+      </p>
+      <p><strong>Outcome:</strong> This platform streamlines data access, reduces reliance on requests to data custodians, and empowers staff with timely insights, improving efficiency, decision-making, and fisheries management.</p>
       <div class="portfolio-screenshot-container">
         <img src="images/data_projects/fos.jpeg" alt="Fishery Operations System Data Explorer dashboard showing commercial salmon catch insights" class="img-fluid" style="max-width: 100%; height: auto; border-radius: 4px;">
       </div>
