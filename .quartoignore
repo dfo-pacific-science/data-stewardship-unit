@@ -1,6 +1,8 @@
-# Exclude internal ontology documentation
-data/ontology/docs/
+# Exclude entire data/ontology folder
+/data/ontology/
+data/ontology/
 
-# Exclude internal notes
-docs/notes/
+# Exclude entire docs folder
+/docs/
+docs/
 

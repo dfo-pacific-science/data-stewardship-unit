@@ -2,6 +2,11 @@ project:
   type: website
   title: "FADS Open Science Documentation Hub"
   output-dir: ./_site
+  render:
+    - "*.qmd"
+    - "*.md"
+    - "!data/ontology/**"
+    - "!docs/**"
 
 freeze: auto
 

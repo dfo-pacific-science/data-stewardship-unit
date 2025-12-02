@@ -110,12 +110,12 @@ css: styles/custom.css
   </div>
 </div>
 
-<!-- Project 7: Salmon Data Wiki -->
-<div class="card portfolio-card" data-modal="modal-project-7" style="cursor: pointer;">
+<!-- Project 5: Salmon Outlook Report Enhancements -->
+<div class="card portfolio-card" data-modal="modal-project-5" style="cursor: pointer;">
   <div class="card-header">
     <div class="d-flex justify-content-between align-items-center">
-      <strong>Salmon Data Wiki</strong>
-      <span class="badge portfolio-status-badge" style="background-color: #9c27b0;">In Review</span>
+      <strong>Salmon Outlook Report Enhancements</strong>
+      <span class="badge portfolio-status-badge" style="background-color: #ff9800;">In Development</span>
     </div>
     <div class="mt-2 d-flex justify-content-between align-items-center">
       <a href="#" class="text-muted" onclick="event.stopPropagation();">[URL placeholder]</a>
@@ -123,17 +123,50 @@ css: styles/custom.css
   </div>
 </div>
 
-<!-- Modal for Project 7 -->
-<div class="portfolio-modal" id="modal-project-7">
+<!-- Modal for Project 5 -->
+<div class="portfolio-modal" id="modal-project-5">
   <div class="portfolio-modal-overlay"></div>
   <div class="portfolio-modal-content">
     <div class="portfolio-modal-header">
-      <h3>Salmon Data Wiki</h3>
+      <h3>Salmon Outlook Report Enhancements</h3>
       <button class="portfolio-modal-close" type="button" aria-label="Close">×</button>
     </div>
     <div class="portfolio-modal-body">
       <div class="mb-3">
-        <span class="badge portfolio-status-badge" style="background-color: #9c27b0;">In Review</span>
+        <span class="badge portfolio-status-badge" style="background-color: #ff9800;">In Development</span>
+      </div>
+      <p>[Description placeholder - detailed project information will be added here]</p>
+      <div class="portfolio-screenshot-container">
+        <p class="text-center text-muted mb-0">📷 Screenshot coming soon</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Project 5: Salmon Outlook Report Enhancements -->
+<div class="card portfolio-card" data-modal="modal-project-5" style="cursor: pointer;">
+  <div class="card-header">
+    <div class="d-flex justify-content-between align-items-center">
+      <strong>Salmon Outlook Report Enhancements</strong>
+      <span class="badge portfolio-status-badge" style="background-color: #ff9800;">In Development</span>
+    </div>
+    <div class="mt-2 d-flex justify-content-between align-items-center">
+      <a href="#" class="text-muted" onclick="event.stopPropagation();">[URL placeholder]</a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Project 5 -->
+<div class="portfolio-modal" id="modal-project-5">
+  <div class="portfolio-modal-overlay"></div>
+  <div class="portfolio-modal-content">
+    <div class="portfolio-modal-header">
+      <h3>Salmon Outlook Report Enhancements</h3>
+      <button class="portfolio-modal-close" type="button" aria-label="Close">×</button>
+    </div>
+    <div class="portfolio-modal-body">
+      <div class="mb-3">
+        <span class="badge portfolio-status-badge" style="background-color: #ff9800;">In Development</span>
       </div>
       <p>[Description placeholder - detailed project information will be added here]</p>
       <div class="portfolio-screenshot-container">
@@ -185,6 +218,45 @@ css: styles/custom.css
     </div>
   </div>
 </div>
+
+<!-- Project 9: Salmon Escapement Estimates Toolkit -->
+<div class="card portfolio-card" data-modal="modal-project-9" style="cursor: pointer;">
+  <div class="card-header">
+    <div class="d-flex justify-content-between align-items-center">
+      <strong>Salmon Escapement Estimates Toolkit</strong>
+      <span class="badge portfolio-status-badge" style="background-color: #4caf50;">In Production</span>
+    </div>
+    <div class="mt-2 d-flex justify-content-between align-items-center">
+      <a href="https://dfo-pac-sci-dev.shinyapps.io/smn-escapement-toolkit/" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Access Toolkit</a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Project 9 -->
+<div class="portfolio-modal" id="modal-project-9">
+  <div class="portfolio-modal-overlay"></div>
+  <div class="portfolio-modal-content">
+    <div class="portfolio-modal-header">
+      <h3>Salmon Escapement Estimates Toolkit</h3>
+      <button class="portfolio-modal-close" type="button" aria-label="Close">×</button>
+    </div>
+    <div class="portfolio-modal-body">
+      <div class="mb-3">
+        <span class="badge portfolio-status-badge" style="background-color: #4caf50;">In Production</span>
+      </div>
+      <p>[Description placeholder - detailed project information will be added here]</p>
+      <p>
+        <a href="https://dfo-pac-sci-dev.shinyapps.io/smn-escapement-toolkit/" target="_blank" rel="noopener noreferrer">
+          Access the Salmon Escapement Estimates Classification Toolkit
+        </a>
+      </p>
+      <div class="portfolio-screenshot-container">
+        <img src="images/data_projects/smn-esc-toolkit.png" alt="Salmon Escapement Estimates Classification Toolkit interface" class="img-fluid" style="max-width: 100%; height: auto; border-radius: 4px;">
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Internal Services Section -->
 <h2 class="portfolio-section-header">Internal DFO Services</h2>
 
@@ -196,7 +268,7 @@ css: styles/custom.css
       <span class="badge portfolio-status-badge" style="background-color: #2196f3;">Testing</span>
     </div>
     <div class="mt-2 d-flex justify-content-between align-items-center">
-      <a href="#" class="text-muted" onclick="event.stopPropagation();">[URL placeholder]</a>
+      <a href="http://ci-bc-eos-2/" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Access Repository</a>
     </div>
   </div>
 </div>
@@ -213,9 +285,16 @@ css: styles/custom.css
       <div class="mb-3">
         <span class="badge portfolio-status-badge" style="background-color: #2196f3;">Testing</span>
       </div>
-      <p>[Description placeholder - detailed project information will be added here]</p>
+      <p><strong>Business Problem:</strong> Regional salmon population summary data need to be transparent and accessible for internal decision-making across the region and released externally where possible.</p>
+      <p><strong>What/Where:</strong> The Salmon Population Summary Repository (SPSR) is a web app and database hosted on IOS DMapps that houses data generated by Canadian Science Advisory Secretariat (CSAS) salmon week for Fisheries Science Advice Reports (FSARs).</p>
+      <p><strong>Deliverable/Outcome:</strong> Regionally aggregated stock assessment data can be easily found and re-used for frequent updates.</p>
+      <p>
+        <a href="http://ci-bc-eos-2/" target="_blank" rel="noopener noreferrer">
+          Access the Salmon Population Summary Repository
+        </a>
+      </p>
       <div class="portfolio-screenshot-container">
-        <p class="text-center text-muted mb-0">📷 Screenshot coming soon</p>
+        <img src="images/data_projects/spsr.png" alt="Salmon Population Summary Repository interface" class="img-fluid" style="max-width: 100%; height: auto; border-radius: 4px;">
       </div>
     </div>
   </div>
@@ -294,12 +373,12 @@ css: styles/custom.css
   </div>
 </div>
 
-<!-- Project 5: Salmon Outlook Report Enhancements -->
-<div class="card portfolio-card" data-modal="modal-project-5" style="cursor: pointer;">
+<!-- Project 7: Salmon Data Wiki -->
+<div class="card portfolio-card" data-modal="modal-project-7" style="cursor: pointer;">
   <div class="card-header">
     <div class="d-flex justify-content-between align-items-center">
-      <strong>Salmon Outlook Report Enhancements</strong>
-      <span class="badge portfolio-status-badge" style="background-color: #ff9800;">In Development</span>
+      <strong>Salmon Data Wiki</strong>
+      <span class="badge portfolio-status-badge" style="background-color: #9c27b0;">In Review</span>
     </div>
     <div class="mt-2 d-flex justify-content-between align-items-center">
       <a href="#" class="text-muted" onclick="event.stopPropagation();">[URL placeholder]</a>
@@ -307,17 +386,17 @@ css: styles/custom.css
   </div>
 </div>
 
-<!-- Modal for Project 5 -->
-<div class="portfolio-modal" id="modal-project-5">
+<!-- Modal for Project 7 -->
+<div class="portfolio-modal" id="modal-project-7">
   <div class="portfolio-modal-overlay"></div>
   <div class="portfolio-modal-content">
     <div class="portfolio-modal-header">
-      <h3>Salmon Outlook Report Enhancements</h3>
+      <h3>Salmon Data Wiki</h3>
       <button class="portfolio-modal-close" type="button" aria-label="Close">×</button>
     </div>
     <div class="portfolio-modal-body">
       <div class="mb-3">
-        <span class="badge portfolio-status-badge" style="background-color: #ff9800;">In Development</span>
+        <span class="badge portfolio-status-badge" style="background-color: #9c27b0;">In Review</span>
       </div>
       <p>[Description placeholder - detailed project information will be added here]</p>
       <div class="portfolio-screenshot-container">
