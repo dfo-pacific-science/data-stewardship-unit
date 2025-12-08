@@ -30,6 +30,13 @@ To run the website locally, follow these steps in the terminal:
 
 **Note:** The website must be built locally. CSV validation happens automatically via pre-commit hooks before commits. GitHub Actions only renders and publishes the Quarto website.
 
+## Ontology term tables workflow
+
+- Generate term tables in the sibling `dfo-salmon-ontology` repo (uses draft themes; `USE_DRAFT_THEMES=true python scripts/extract-term-tables.py` or `make publish-and-extract` there).
+- Sync outputs into this repo from the ontology repo using `scripts/sync_term_tables_to_dsu.sh` (run in the ontology repo, pointing to this repo’s `data/ontology` path).
+- This repo does **not** regenerate tables; pre-commit here only validates the CSV/meta files already synced.
+- To run validation manually here: `nix run nixpkgs#pre-commit -- run --all-files` inside `devenv shell`.
+
 ## Contributing
 
 If you would like to contribute to this project, please follow the guidelines in [CONTRIBUTING.md](CONTRIBUTING.md).
