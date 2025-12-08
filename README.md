@@ -17,6 +17,8 @@ This repository has some the following files and directories of note:
 
 To run the website locally, follow these steps in the terminal:
 
+> Tip: If you use Nix/devenv, run `devenv shell` to get the pinned toolchain (R, Python, Quarto, Node) without extra local installs.
+
 1. Clone the repository with git by running `git clone https://github.com/dfo-pacific-science/data-stewardship-unit.git` in terminal. 
 2. Install Quarto: `R -e "install.packages('quarto')"` or follow [Quarto installation instructions](https://quarto.org/docs/get-started/)
 3. Install required R packages: `R -e "install.packages(c('reactable', 'readr', 'jsonlite', 'htmltools', 'htmlwidgets', 'yaml'))"`
@@ -35,4 +37,3 @@ If you would like to contribute to this project, please follow the guidelines in
 ## License
 
 This project is licensed under the [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/).
-
