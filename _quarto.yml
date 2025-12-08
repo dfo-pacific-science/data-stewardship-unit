@@ -1,17 +1,16 @@
-project: 
+project:
   type: website
   title: "FADS Open Science Documentation Hub"
   output-dir: ./_site
   render:
     - "*.qmd"
-    - "*.md"
     - "!data/ontology/**"
     - "!docs/**"
 
 freeze: auto
 
 format:
-  html: 
+  html:
     theme: cosmo
     toc: true
     grid:
@@ -32,7 +31,7 @@ website:
         href: fads-portfolio.qmd
       - text: "Salmon Data Standards"
         href: reference_info/data_standards/controlled-vocabulary-thesauri.qmd
-        
+
     tools:
       - icon: github
         menu:
@@ -41,35 +40,35 @@ website:
           - text: Report a Bug
             href: https://github.com/dfo-pacific-science/data-stewardship-unit/issues
     background: "#dae2e8"
-    
+
   sidebar:
-      collapse-level: 1
-      style: docked
-      background: light
-      contents:
-        - auto: how_to_guides
-        - section: "Reference Info"
-          contents:
-            - section: "Salmon Data Standards"
-              contents:
-                - reference_info/data_standards/controlled-vocabulary-thesauri.qmd
-                - reference_info/ontology/formal-documentation.qmd
-            - reference_info/dwc-obis-gbif.qmd
-            - reference_info/openDataPractices.qmd
-            - reference_info/publishing_data_externally.qmd
-            - section: "Tools"
-              contents:
-                - reference_info/tools/r_packages.qmd
-        - auto: tutorials
-        - auto: deep_dives
-      logo: images/logo.png
-      search: true
-    
+    collapse-level: 1
+    style: docked
+    background: light
+    contents:
+      - auto: how_to_guides
+      - section: "Reference Info"
+        contents:
+          - section: "Salmon Data Standards"
+            contents:
+              - reference_info/data_standards/controlled-vocabulary-thesauri.qmd
+              - reference_info/ontology/formal-documentation.qmd
+          - reference_info/dwc-obis-gbif.qmd
+          - reference_info/openDataPractices.qmd
+          - reference_info/publishing_data_externally.qmd
+          - section: "Tools"
+            contents:
+              - reference_info/tools/r_packages.qmd
+      - auto: tutorials
+      - auto: deep_dives
+    logo: images/logo.png
+    search: true
+
   repo-url: https://github.com/dfo-pacific-science/data-stewardship-unit
   repo-actions: [edit, source, issue]
-  page-footer: 
+  page-footer:
     right: "This site was created with [Quarto](https://quarto.org/) and is hosted with [GitHub Pages](https://pages.github.com/)."
-    
+
 lang: en
 
 execute:

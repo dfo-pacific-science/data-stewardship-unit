@@ -1,5 +1,7 @@
 ---
-title: "Controlled Vocabulary & Thesauri"
+title: "DFO Salmon Data Standards"
+subtitle: "Controlled Vocabulary & Thesauri"
+freeze: false
 format:
   html:
     toc: true
@@ -9,15 +11,18 @@ The Data Stewardship Unit (DSU) has created the **DFO Salmon Data Controlled Voc
 
 The vocabulary tables below consolidate definitions from the DFO Salmon Ontology, regulatory documents, scientific literature, internal guidelines, and other sources into organized, searchable references designed to improve semantic clarity across DFO Pacific.
 
-## Search Terms
+::: {.callout-note}
+**Missing term or definition change?** Open an issue at <https://github.com/dfo-pacific-science/dfo-salmon-ontology/issues> and include: the term name (or new term request), the definition you propose, the source citation/URL, any synonym, and—if applicable—the desired hierarchy placement. For relationship fixes, state the current relationship and the change you want. Prefer GitHub; if needed, email FADSDataStewardship-GestiondesdonneesSFDA@dfo-mpo.gc.ca (may be slower).
+:::
+
 
 ```{r}
 #| echo: false
 #| warning: false
 #| results: 'asis'
-library(here)
 library(jsonlite)
 library(htmltools)
+library(tools)
 
 # Load yaml package for reading themes.yml
 if (!requireNamespace("yaml", quietly = TRUE)) {
@@ -44,59 +49,71 @@ project_root <- if (Sys.getenv("QUARTO_PROJECT_DIR") != "") {
 helpers_path <- file.path(project_root, "reference_info/ontology/_partials/helpers.R")
 source(helpers_path)
 
-# Function to load themes from ontology config
-load_themes_from_config <- function(project_root) {
-  themes_yml_path <- file.path(project_root, "data/ontology/scripts/config/themes.yml")
-  
-  if (!file.exists(themes_yml_path)) {
-    warning("themes.yml not found at ", themes_yml_path, ", using fallback themes")
-    # Fallback to hardcoded themes if config file not found
-    return(list(
-      list(id = "stock-assessment-terms", label = "Stock Assessment Methods"),
-      list(id = "genetics-terms", label = "Genetics and GSI"),
-      list(id = "legislation-terms", label = "Legislation and Policy"),
-      list(id = "benchmarks-terms", label = "Biological Benchmarks and Indicators"),
-      list(id = "hatchery-enhancement-terms", label = "Hatchery and Enhancement")
-    ))
+# Discover themes from config or term-table metadata
+load_themes <- function(project_root, include_desc = FALSE) {
+  # Prefer the authoritative ontology config in the sibling dfo-salmon-ontology repo
+  themes_yml_candidates <- c(
+    file.path(project_root, "..", "dfo-salmon-ontology", "scripts", "config", "themes.yml"),
+    file.path(project_root, "data/ontology/scripts/config/themes.yml")
+  )
+  themes_yml_path <- themes_yml_candidates[file.exists(themes_yml_candidates)][1]
+  term_tables_dir <- file.path(project_root, "data/ontology/release/artifacts/term-tables")
+
+  # 1) Prefer themes.yml if present and valid
+  if (!is.na(themes_yml_path) && file.exists(themes_yml_path)) {
+    themes_config <- tryCatch({
+      read_yaml(themes_yml_path)
+    }, error = function(e) {
+      warning("Failed to read themes.yml: ", e$message)
+      NULL
+    })
+
+    if (!is.null(themes_config) && !is.null(themes_config$themes)) {
+      return(lapply(themes_config$themes, function(theme) {
+        csv_filename <- theme$output_csv %||% paste0(theme$id, ".csv")
+        theme_id <- sub("\\.csv$", "", csv_filename)
+        list(
+          id = theme_id,
+          label = theme$label,
+          desc = if (include_desc) theme$desc %||% "" else NULL
+        )
+      }))
+    }
   }
-  
-  # Read YAML config
-  themes_config <- tryCatch({
-    read_yaml(themes_yml_path)
-  }, error = function(e) {
-    warning("Failed to read themes.yml: ", e$message, ", using fallback themes")
-    return(NULL)
-  })
-  
-  if (is.null(themes_config) || is.null(themes_config$themes)) {
-    warning("themes.yml is empty or invalid, using fallback themes")
-    return(list(
-      list(id = "stock-assessment-terms", label = "Stock Assessment Methods"),
-      list(id = "genetics-terms", label = "Genetics and GSI"),
-      list(id = "legislation-terms", label = "Legislation and Policy"),
-      list(id = "benchmarks-terms", label = "Biological Benchmarks and Indicators"),
-      list(id = "hatchery-enhancement-terms", label = "Hatchery and Enhancement")
-    ))
+
+  # 2) Discover from .meta.json files beside term tables
+  meta_files <- list.files(term_tables_dir, pattern = "\\.meta\\.json$", full.names = TRUE)
+  if (length(meta_files) > 0) {
+    themes <- lapply(meta_files, function(meta_path) {
+      meta <- tryCatch(fromJSON(meta_path), error = function(e) NULL) %||% list()
+      theme_id <- sub("\\.meta\\.json$", "", basename(meta_path))
+      label <- meta$label %||% meta$theme %||% toTitleCase(gsub("-", " ", theme_id))
+      desc <- meta$description %||% ""
+      list(
+        id = theme_id,
+        label = label,
+        desc = if (include_desc) desc else NULL
+      )
+    })
+
+    # Sort themes by label for stable UI
+    themes <- themes[order(tolower(sapply(themes, function(t) t$label)))]
+    return(themes)
   }
-  
-  # Convert YAML structure to R list format
-  # Use output_csv field directly (already has correct hyphenated format)
-  themes <- lapply(themes_config$themes, function(theme) {
-    # Extract theme ID from CSV filename (remove .csv extension)
-    csv_filename <- theme$output_csv %||% paste0(theme$id, ".csv")
-    theme_id <- sub("\\.csv$", "", csv_filename)
-    
-    list(
-      id = theme_id,
-      label = theme$label
-    )
-  })
-  
-  return(themes)
+
+  # 3) Fallback to legacy hardcoded list
+  warning("No themes.yml or meta files found; using fallback themes")
+  return(list(
+    list(id = "stock-assessment-terms", label = "Stock Assessment Methods"),
+    list(id = "genetics-terms", label = "Genetics and GSI"),
+    list(id = "legislation-terms", label = "Legislation and Policy"),
+    list(id = "benchmarks-terms", label = "Biological Benchmarks and Indicators"),
+    list(id = "hatchery-enhancement-terms", label = "Hatchery and Enhancement")
+  ))
 }
 
 # Load themes dynamically
-themes <- load_themes_from_config(project_root)
+themes <- load_themes(project_root, include_desc = FALSE)
 
 # Load all term tables
 all_terms <- list()
@@ -104,13 +121,13 @@ for (theme_idx in seq_along(themes)) {
   current_theme <- themes[[theme_idx]]
   current_theme_label <- as.character(current_theme$label)
   current_theme_id <- as.character(current_theme$id)
-  
-  csv_path <- file.path(project_root, "data/ontology/release/artifacts/term-tables", 
+
+  csv_path <- file.path(project_root, "data/ontology/release/artifacts/term-tables",
                         paste0(current_theme_id, ".csv"))
   result <- load_dataset(csv_path)
   df <- result$data
   meta <- result$metadata
-  
+
   if (!is.null(df) && nrow(df) > 0) {
     for (i in seq_len(nrow(df))) {
       row <- df[i, ]
@@ -194,23 +211,99 @@ dashboard_html <- paste0(
   '</div>'
 )
 
-# Create search HTML with JavaScript
-# Use proper string concatenation to avoid quote issues
+theme_counts <- as.list(terms_by_theme[order(terms_by_theme, decreasing = TRUE)])
+max_theme_count <- if (length(theme_counts) > 0) max(unlist(theme_counts)) else 1
+theme_rows <- paste0(
+  vapply(names(theme_counts), function(name) {
+    count <- theme_counts[[name]]
+    width_pct <- if (max_theme_count > 0) round((count / max_theme_count) * 100) else 0
+    sprintf(
+      '<div class="theme-bar">
+         <div class="theme-bar-label">%s</div>
+         <div class="theme-bar-track">
+           <div class="theme-bar-fill" style="width:%s%%"></div>
+         </div>
+         <div class="theme-bar-count">%s</div>
+       </div>',
+      htmlEscape(name), width_pct, count
+    )
+  }, FUN.VALUE = character(1)),
+  collapse = ""
+)
+
+summary_html <- paste0(
+  '<div class="summary-strip">',
+  '  <div class="summary-line"><strong>Total terms:</strong> ', total_terms,
+  ' &nbsp;|&nbsp; <strong>Themes:</strong> ', length(themes), '</div>',
+  '  <div class="theme-bars">', theme_rows, '</div>',
+  '</div>'
+)
+
 search_html_parts <- c(
   '<style>',
   '  #vocab-search-input {',
   '    border: 2px solid #446c8a !important;',
   '    transition: border-color 0.2s, box-shadow 0.2s;',
   '  }',
+  '  .search-tip {',
+  '    font-size: 0.95rem;',
+  '    color: #495057;',
+  '    margin: 0 0 0.5rem 0;',
+  '  }',
   '  #vocab-search-input:focus {',
   '    outline: none;',
   '    border-color: #2c5282 !important;',
   '    box-shadow: 0 0 0 3px rgba(68, 108, 138, 0.1);',
   '  }',
+  '  .search-tip {',
+  '    font-size: 0.95rem;',
+  '    color: #495057;',
+  '    margin: 0 0 0.5rem 0;',
+  '  }',
+  '  .summary-strip {',
+  '    border: 1px solid #e9ecef;',
+  '    border-radius: 6px;',
+  '    background: #f8f9fa;',
+  '    padding: 0.75rem 1rem;',
+  '    margin-bottom: 0.75rem;',
+  '  }',
+  '  .summary-line {',
+  '    font-size: 0.95rem;',
+  '    color: #495057;',
+  '    margin-bottom: 0.5rem;',
+  '  }',
+  '  .theme-bars {',
+  '    display: grid;',
+  '    gap: 0.35rem;',
+  '  }',
+  '  .theme-bar {',
+  '    display: grid;',
+  '    grid-template-columns: 1fr 3fr auto;',
+  '    gap: 0.5rem;',
+  '    align-items: center;',
+  '    font-size: 0.9rem;',
+  '    color: #495057;',
+  '  }',
+  '  .theme-bar-track {',
+  '    background: #f1f3f5;',
+  '    border-radius: 4px;',
+  '    overflow: hidden;',
+  '    height: 8px;',
+  '  }',
+  '  .theme-bar-fill {',
+  '    height: 8px;',
+  '    background: #446c8a;',
+  '  }',
+  '  .theme-bar-count {',
+  '    font-size: 0.85rem;',
+  '    color: #6c757d;',
+  '  }',
   '</style>',
   '<div id="vocab-search-container">',
-  paste0('  ', dashboard_html),
-  '  <div style="margin-top: 1.5rem; margin-bottom: 1.5rem;">',
+  summary_html,
+  '<h2 style="margin: 0.35rem 0;">Search</h2>',
+  '  <div class="search-tip">Search matches across term names, definitions, and related terms. Use multiple words to narrow results (e.g., “reference point harvest”).</div>',
+  '  <div style="margin: 0 0 1.25rem 0;">',
   '    <input ',
   '      type="text" ',
   '      id="vocab-search-input" ',
@@ -280,7 +373,6 @@ search_html_parts <- c(
   '        sourceHtml = "<a href=\\"" + sourceLink + "\\" target=\\"_blank\\" rel=\\"noopener\\" style=\\"font-size: 0.9rem; color: #446c8a;\\">" + sourceLink + "</a>";',
   '      }',
   '      ',
-  '      const themeId = term.theme_id || "";',
   '      const themeName = term.theme || "";',
   '      const termName = term.term_name || "";',
   '      const definition = term.definition || "No definition available";',
@@ -334,12 +426,9 @@ knitr::raw_html(search_html)
 
 ## Browse by Theme
 
-Use the tabs below to explore terms organized by theme:
-
 ```{r}
 #| echo: false
 #| warning: false
-library(here)
 library(htmltools)
 library(knitr)
 library(htmlwidgets)
@@ -382,365 +471,113 @@ if (!exists("yaml")) {
   library(yaml)
 }
 
-# Function to load themes from ontology config (with optional desc field)
-load_themes_from_config_with_desc <- function(project_root) {
-  themes_yml_path <- file.path(project_root, "data/ontology/scripts/config/themes.yml")
-  
-  if (!file.exists(themes_yml_path)) {
-    warning("themes.yml not found at ", themes_yml_path, ", using fallback themes")
-    # Fallback to hardcoded themes if config file not found
-    return(list(
-      list(id = "stock-assessment-terms", label = "Stock Assessment Methods", 
-           desc = "enumeration and escapement related vocabularies"),
-      list(id = "genetics-terms", label = "Genetics and GSI", 
-           desc = "laboratory, assay, and reporting constructs"),
-      list(id = "legislation-terms", label = "Legislation and Policy", 
-           desc = "policy frameworks and status designations"),
-      list(id = "benchmarks-terms", label = "Biological Benchmarks and Indicators", 
-           desc = "conservation limits, reference points, and indicators"),
-      list(id = "hatchery-enhancement-terms", label = "Hatchery and Enhancement", 
-           desc = "hatchery facilities, production, and salmon origin classifications")
-    ))
-  }
-  
-  # Read YAML config
-  themes_config <- tryCatch({
-    read_yaml(themes_yml_path)
-  }, error = function(e) {
-    warning("Failed to read themes.yml: ", e$message, ", using fallback themes")
-    return(NULL)
-  })
-  
-  if (is.null(themes_config) || is.null(themes_config$themes)) {
-    warning("themes.yml is empty or invalid, using fallback themes")
-    return(list(
-      list(id = "stock-assessment-terms", label = "Stock Assessment Methods", 
-           desc = "enumeration and escapement related vocabularies"),
-      list(id = "genetics-terms", label = "Genetics and GSI", 
-           desc = "laboratory, assay, and reporting constructs"),
-      list(id = "legislation-terms", label = "Legislation and Policy", 
-           desc = "policy frameworks and status designations"),
-      list(id = "benchmarks-terms", label = "Biological Benchmarks and Indicators", 
-           desc = "conservation limits, reference points, and indicators"),
-      list(id = "hatchery-enhancement-terms", label = "Hatchery and Enhancement", 
-           desc = "hatchery facilities, production, and salmon origin classifications")
-    ))
-  }
-  
-  # Convert YAML structure to R list format with optional desc field
-  themes <- lapply(themes_config$themes, function(theme) {
-    # Extract theme ID from CSV filename (remove .csv extension)
-    csv_filename <- theme$output_csv %||% paste0(theme$id, ".csv")
-    theme_id <- sub("\\.csv$", "", csv_filename)
-    
-    list(
-      id = theme_id,
-      label = theme$label,
-      desc = theme$desc %||% ""  # Optional description field
-    )
-  })
-  
-  return(themes)
-}
+themes_with_desc <- load_themes(project_root, include_desc = TRUE)
 
-# Load themes dynamically
-themes <- load_themes_from_config_with_desc(project_root)
-
-# Build tab buttons HTML
-tab_buttons <- character()
-for (idx in seq_along(themes)) {
-  theme <- themes[[idx]]
-  theme_id <- theme$id
-  theme_label <- theme$label
-  active_class <- if (idx == 1) "active" else ""
-  tab_buttons <- c(tab_buttons, 
-    paste0('<button class="theme-tab-btn ', active_class, '" data-theme="', theme_id, 
-           '" data-index="', idx - 1, '">', theme_label, '</button>'))
-}
+themes <- themes_with_desc
 
 # Store theme data for rendering
 theme_data <- list()
 for (idx in seq_along(themes)) {
   theme <- themes[[idx]]
   theme_id <- theme$id
-  csv_path <- file.path(project_root, "data/ontology/release/artifacts/term-tables", 
+  csv_path <- file.path(project_root, "data/ontology/release/artifacts/term-tables",
                         paste0(theme_id, ".csv"))
   result <- load_dataset(csv_path)
   theme_data[[theme_id]] <- list(
     df = result$data,
     meta = result$metadata,
-    label = theme$label
+    label = theme$label,
+    desc = theme$desc %||% ""
   )
 }
 
-# Build tabs structure using htmltools
-# This ensures Quarto can detect htmlwidgets and include JavaScript dependencies
-
-# Create tab buttons as HTML
-tab_buttons_html <- HTML(paste(tab_buttons, collapse = ''))
-
-# Build panels with widgets
-panels <- list()
+# Build accordion sections (one per theme)
+accordion_sections <- list()
 for (idx in seq_along(themes)) {
   theme <- themes[[idx]]
   theme_id <- theme$id
   theme_info <- theme_data[[theme_id]]
   df <- theme_info$df
-  meta <- theme_info$meta
-  
-  display_class <- if (idx == 1) "block" else "none"
-  
-  # Build panel content
-  panel_content <- list()
-  
-  if (is.null(df) || nrow(df) == 0) {
-    panel_content <- tags$p("Term table not found. Run the ontology extraction workflow to generate term tables.")
+  desc <- theme_info$desc %||% ""
+
+  panel_content <- if (is.null(df) || nrow(df) == 0) {
+    tags$p("Term table not found. Run the ontology extraction workflow to generate term tables.")
   } else {
-    # Add theme column to dataframe - ensure correct theme label is assigned
-    theme_label <- theme$label
-    df$theme <- theme_label
-    
-    # Render table using reactable - this will be detected by Quarto
-    table_output <- render_table(df, theme_label = theme_label)
-    panel_content <- c(panel_content, list(table_output))
+    render_table(df, theme_label = theme$label)
   }
-  
-  # Create panel div
-  panels[[idx]] <- tags$div(
-    class = "theme-tab-panel",
-    id = paste0("panel-", theme_id),
-    style = paste0("display: ", display_class, ";"),
-    panel_content
+
+  accordion_sections[[idx]] <- tags$section(
+    id = paste0("theme-", theme_id),
+    class = "theme-accordion-item",
+    tags$button(
+      class = "theme-accordion-toggle",
+      `data-target` = paste0("panel-", theme_id),
+      style = "width: 100%; text-align: left; padding: 0.75rem 1rem; border: 1px solid #dee2e6; background: #f8f9fa; border-radius: 6px; font-weight: 600; color: #495057; display: flex; justify-content: space-between; align-items: center;",
+      tags$span(theme$label),
+      tags$span(if (nzchar(desc)) desc else "")
+    ),
+    tags$div(
+      id = paste0("panel-", theme_id),
+      class = "theme-accordion-panel",
+      style = "display: none; margin-top: 0.35rem;",
+      panel_content
+    )
   )
 }
 
-# Build the complete structure
 tabs_container <- tags$div(
-  class = "theme-tabs-container",
-  tags$div(
-    class = "theme-tabs-buttons",
-    tab_buttons_html
-  ),
-  tags$div(
-    class = "theme-tabs-content",
-    panels
-  ),
+  class = "theme-accordion-container",
+  tags$p(style = "margin: 0.25rem 0 0.5rem 0; color: #495057;",
+         "Click a category to expand and view its terms."),
+  accordion_sections,
   tags$style(HTML('
-    .theme-tabs-container {
-      margin-top: 2rem;
+    .theme-accordion-container {
+      margin-top: 1rem;
+      display: grid;
+      gap: 0.75rem;
     }
-    .theme-tabs-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      border-bottom: 2px solid #dee2e6;
-      margin-bottom: 1.5rem;
+    .theme-accordion-item {
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      padding: 0.5rem;
+      background: #fff;
     }
-    .theme-tab-btn {
-      padding: 0.75rem 1.5rem;
-      background: #f8f9fa;
-      border: none;
-      border-bottom: 3px solid transparent;
+    .theme-accordion-toggle {
       cursor: pointer;
-      font-size: 1rem;
-      color: #495057;
-      transition: all 0.2s;
-      margin-bottom: -2px;
     }
-    .theme-tab-btn:hover {
-      background: #e9ecef;
-      color: #446c8a;
+    .theme-accordion-toggle.open {
+      background: #fff;
+      border-color: #ced4da;
     }
-    .theme-tab-btn.active {
-      background: white;
-      color: #446c8a;
-      border-bottom-color: #446c8a;
-      font-weight: 600;
-    }
-    .theme-tabs-content {
-      min-height: 400px;
-    }
-    .theme-tab-panel {
-      animation: fadeIn 0.3s;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    .provenance-callout {
-      margin-bottom: 1rem;
+    .theme-accordion-panel {
+      padding: 0.5rem 0.25rem 0.25rem 0.25rem;
     }
   ')),
   tags$script(HTML("
     (function() {
-      // Get terms data from the search script's scope
-      let terms = [];
-      try {
-        // Try to access terms from the search script
-        if (typeof window.allTermsData !== \"undefined\") {
-          terms = window.allTermsData;
-        }
-      } catch(e) {
-        console.warn(\"Could not access terms data:\", e);
-      }
-      
-      const tabButtons = document.querySelectorAll(\".theme-tab-btn\");
-      const tabPanels = document.querySelectorAll(\".theme-tab-panel\");
-      
-      tabButtons.forEach(btn => {
-        btn.addEventListener(\"click\", function() {
-          const themeId = this.getAttribute(\"data-theme\");
-          
-          // Remove active class from all buttons
-          tabButtons.forEach(b => b.classList.remove(\"active\"));
-          // Add active class to clicked button
-          this.classList.add(\"active\");
-          
-          // Hide all panels
-          tabPanels.forEach(panel => {
-            panel.style.display = \"none\";
-          });
-          
-          // Show selected panel
-          const selectedPanel = document.getElementById(\"panel-\" + themeId);
-          if (selectedPanel) {
-            selectedPanel.style.display = \"block\";
+      const toggles = document.querySelectorAll('.theme-accordion-toggle');
+      toggles.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const targetId = this.getAttribute('data-target');
+          const panel = document.getElementById(targetId);
+          if (!panel) return;
+
+          const isOpen = panel.style.display === 'block';
+          document.querySelectorAll('.theme-accordion-panel').forEach(p => { p.style.display = 'none'; });
+          document.querySelectorAll('.theme-accordion-toggle').forEach(b => { b.classList.remove('open'); });
+
+          if (!isOpen) {
+            panel.style.display = 'block';
+            this.classList.add('open');
           }
         });
       });
-      
-      // Handle related term link clicks - show card with term details
-      function handleRelatedTermClick(e) {
-        e.preventDefault();
-        const link = e.target.closest(\".related-term-link\");
-        if (!link) return;
-        
-        const termName = link.getAttribute(\"data-term-name\");
-        const termUri = link.getAttribute(\"data-term-uri\");
-        const relation = link.getAttribute(\"title\") || \"\";
-        
-        // Try to get terms from window scope (set by search script)
-        if (terms.length === 0 && typeof window.allTermsData !== \"undefined\") {
-          terms = window.allTermsData;
-        }
-        
-        // Find the term in the loaded terms data
-        const term = terms.length > 0 ? terms.find(function(t) {
-          return t.term_name === termName || t.canonical_uri === termUri;
-        }) : null;
-        
-        // Create modal card
-        const modal = document.createElement(\"div\");
-        modal.className = \"related-term-modal\";
-        modal.style.cssText = \"position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); display: flex; justify-content: center; align-items: center; z-index: 10000; padding: 1rem;\";
-        
-        const card = document.createElement(\"div\");
-        card.className = \"related-term-card\";
-        card.style.cssText = \"background: white; border-radius: 0.5rem; padding: 2rem; max-width: 600px; max-height: 80vh; overflow-y: auto; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); position: relative;\";
-        
-        if (term) {
-          const sourceText = term.definition_source_text || \"\";
-          const sourceLink = term.definition_source_link || \"\";
-          let sourceHtml = \"\";
-          if (sourceLink) {
-            sourceHtml = \"<a href=\\\"\" + sourceLink + \"\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\" style=\\\"font-size: 0.9rem; color: #446c8a;\\\">\" + (sourceText || sourceLink) + \"</a>\";
-          } else if (sourceText) {
-            sourceHtml = sourceText;
-          }
-          
-          const relationHtml = relation ? \"<p style=\\\"margin: 0 0 1rem 0; color: #6c757d; font-size: 0.9rem;\\\"><strong>Relation:</strong> \" + escapeHtml(relation) + \"</p>\" : \"\";
-          const sourceHtmlPart = sourceHtml ? \"<p style=\\\"margin: 0.5rem 0; font-size: 0.9rem; color: #6c757d; font-style: italic;\\\"><strong>Source:</strong> \" + sourceHtml + \"</p>\" : \"\";
-          
-          card.innerHTML = \"<button class=\\\"close-modal\\\" style=\\\"position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #666; padding: 0.25rem 0.5rem;\\\">&times;</button>\" +
-            \"<h2 style=\\\"margin: 0 0 1rem 0; color: #446c8a; font-size: 1.5rem;\\\">\" + escapeHtml(term.term_name) + \"</h2>\" +
-            relationHtml +
-            \"<p style=\\\"margin: 0 0 1rem 0; color: #495057; line-height: 1.6;\\\">\" + escapeHtml(term.definition || \"No definition available\") + \"</p>\" +
-            sourceHtmlPart +
-            \"<div style=\\\"margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #dee2e6;\\\">\" +
-            \"<p style=\\\"margin: 0.5rem 0; font-size: 0.9rem;\\\"><strong>Theme:</strong> <span style=\\\"color: #6c757d;\\\">\" + escapeHtml(term.theme || \"Unknown\") + \"</span></p>\" +
-            \"<p style=\\\"margin: 0.5rem 0; font-size: 0.9rem;\\\"><strong>Term ID:</strong> <a href=\\\"\" + escapeHtml(term.canonical_uri) + \"\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\" style=\\\"color: #446c8a; font-family: monospace; font-size: 0.85em; word-break: break-all;\\\">\" + escapeHtml(term.canonical_uri) + \"</a></p>\" +
-            \"</div>\";
-        } else {
-          const relationHtml = relation ? \"<p style=\\\"margin: 0 0 1rem 0; color: #6c757d; font-size: 0.9rem;\\\"><strong>Relation:</strong> \" + escapeHtml(relation) + \"</p>\" : \"\";
-          card.innerHTML = \"<button class=\\\"close-modal\\\" style=\\\"position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #666; padding: 0.25rem 0.5rem;\\\">&times;</button>\" +
-            \"<h2 style=\\\"margin: 0 0 1rem 0; color: #446c8a; font-size: 1.5rem;\\\">\" + escapeHtml(termName) + \"</h2>\" +
-            relationHtml +
-            \"<p style=\\\"margin: 0 0 1rem 0; color: #495057;\\\">Term details not available. This term may be from an external vocabulary.</p>\" +
-            \"<div style=\\\"margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #dee2e6;\\\">\" +
-            \"<p style=\\\"margin: 0.5rem 0; font-size: 0.9rem;\\\"><strong>Term ID:</strong> <a href=\\\"\" + escapeHtml(termUri) + \"\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\" style=\\\"color: #446c8a; font-family: monospace; font-size: 0.85em; word-break: break-all;\\\">\" + escapeHtml(termUri) + \"</a></p>\" +
-            \"</div>\";
-        }
-        
-        modal.appendChild(card);
-        document.body.appendChild(modal);
-        
-        // Close modal handlers
-        const closeModal = function() {
-          document.body.removeChild(modal);
-        };
-        
-        card.querySelector(\".close-modal\").addEventListener(\"click\", closeModal);
-        modal.addEventListener(\"click\", function(e) {
-          if (e.target === modal) {
-            closeModal();
-          }
-        });
-        
-        // Close on Escape key
-        const escapeHandler = function(e) {
-          if (e.key === \"Escape\") {
-            closeModal();
-            document.removeEventListener(\"keydown\", escapeHandler);
-          }
-        };
-        document.addEventListener(\"keydown\", escapeHandler);
-      }
-      
-      // Helper function to escape HTML
-      function escapeHtml(text) {
-        const div = document.createElement(\"div\");
-        div.textContent = text;
-        return div.innerHTML;
-      }
-      
-      // Add event listeners for related term links
-      // Use event delegation since links are in reactable tables
-      document.addEventListener(\"click\", function(e) {
-        if (e.target.closest(\".related-term-link\")) {
-          handleRelatedTermClick(e);
-        }
-      });
+
     })();
-  ")),
-  tags$style(HTML('
-    .related-term-link:hover {
-      text-decoration: underline !important;
-      color: #2c5282 !important;
-    }
-    .related-term-card {
-      animation: fadeIn 0.2s ease-in;
-    }
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: scale(0.95);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-    .close-modal:hover {
-      color: #000 !important;
-      background: #f0f0f0 !important;
-      border-radius: 0.25rem;
-    }
-  '))
+  "))
 )
 
 # Output the complete structure
-# Using tagList ensures Quarto processes widgets correctly
-# Return the tagList - Quarto will handle rendering and widget detection
 tabs_container
 ```
 

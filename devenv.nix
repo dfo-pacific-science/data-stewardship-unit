@@ -1,6 +1,22 @@
 { pkgs, ... }:
 
-{
+let
+  rWithPkgs = pkgs.rWrapper.override {
+    packages = with pkgs.rPackages; [
+      readr
+      jsonlite
+      yaml
+      dplyr
+      tidyr
+      tibble
+      purrr
+      htmltools
+      htmlwidgets
+      reactable
+      knitr
+    ];
+  };
+in {
   # ---------------------------
   # Python env: core tools
   # ---------------------------
@@ -23,6 +39,7 @@
   # ---------------------------
   languages.r = {
     enable = true;
+    package = rWithPkgs;
   };
 
   # ---------------------------
@@ -34,18 +51,6 @@
     gh
     jq
     nodejs_22
-    # R wrapper with core packages
-    (rWrapper.override {
-      packages = with rPackages; [
-        readr
-        jsonlite
-        yaml
-        dplyr
-        tidyr
-        tibble
-        purrr
-      ];
-    })
   ];
 
   # ---------------------------
@@ -54,6 +59,7 @@
   env = {
     # Set R library path if needed
     R_LIBS_USER = "$DEVENV_PROFILE/lib/R/library";
+    QUARTO_R = "${rWithPkgs}/bin/R";
   };
 
   # ---------------------------
@@ -68,7 +74,7 @@
     echo "Node version: $(node --version)"
     echo ""
     echo "R core packages from Nix:"
-    echo "  - readr, jsonlite, yaml, dplyr, tidyr, tibble, purrr"
+    echo "  - readr, jsonlite, yaml, dplyr, tidyr, tibble, purrr, htmltools, htmlwidgets, reactable, knitr"
     echo ""
     echo "For project-specific / long-tail R packages, use {renv}:"
     echo "  - In R: renv::init()      # once per project"
