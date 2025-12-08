@@ -61,9 +61,9 @@ load_themes <- function(project_root, include_desc = FALSE) {
 
   # 1) Prefer themes.yml if present and valid
   if (!is.na(themes_yml_path) && file.exists(themes_yml_path)) {
-    themes_config <- tryCatch({
-      read_yaml(themes_yml_path)
-    }, error = function(e) {
+  themes_config <- tryCatch({
+    read_yaml(themes_yml_path)
+  }, error = function(e) {
       warning("Failed to read themes.yml: ", e$message)
       NULL
     })
@@ -101,15 +101,7 @@ load_themes <- function(project_root, include_desc = FALSE) {
     return(themes)
   }
 
-  # 3) Fallback to legacy hardcoded list
-  warning("No themes.yml or meta files found; using fallback themes")
-  return(list(
-    list(id = "stock-assessment-terms", label = "Stock Assessment Methods"),
-    list(id = "genetics-terms", label = "Genetics and GSI"),
-    list(id = "legislation-terms", label = "Legislation and Policy"),
-    list(id = "benchmarks-terms", label = "Biological Benchmarks and Indicators"),
-    list(id = "hatchery-enhancement-terms", label = "Hatchery and Enhancement")
-  ))
+  stop("No themes.yml or meta files found; sync term tables from dfo-salmon-ontology.")
 }
 
 # Load themes dynamically
@@ -167,49 +159,6 @@ terms_with_related <- sum(sapply(all_terms, function(x) {
 # Create JavaScript searchable index
 # Escape JSON properly for embedding in JavaScript
 terms_json <- toJSON(all_terms, auto_unbox = TRUE, pretty = TRUE)
-
-# Build dashboard HTML
-theme_items <- paste0(sapply(names(terms_by_theme), function(theme_name) {
-  count <- terms_by_theme[[theme_name]]
-  paste0(
-    '<div style="display: flex; justify-content: space-between; align-items: center; padding: 0.5rem; background: #f8f9fa; border-radius: 0.25rem;">',
-    '  <span style="font-size: 0.9rem; color: #6c757d;">', theme_name, '</span>',
-    '  <span style="font-weight: 600; color: #446c8a;">', count, '</span>',
-    '</div>'
-  )
-}), collapse = '')
-
-dashboard_html <- paste0(
-  '<div id="vocab-dashboard" style="background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 0.5rem; padding: 1.5rem;">',
-  '  <h3 style="margin: 0 0 1rem 0; color: #446c8a; font-size: 1.1rem;">Vocabulary Summary</h3>',
-  '  <div style="display: grid; gap: 1rem;">',
-  '    <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: white; border-radius: 0.25rem;">',
-  '      <span style="color: #495057; font-weight: 500;">Total Terms</span>',
-  '      <span style="font-size: 1.5rem; font-weight: 600; color: #446c8a;">', total_terms, '</span>',
-  '    </div>',
-  '    <div style="padding: 0.75rem; background: white; border-radius: 0.25rem;">',
-  '      <div style="color: #495057; font-weight: 500; margin-bottom: 0.75rem;">Terms by Theme</div>',
-  '      <div style="display: grid; gap: 0.5rem;">',
-  theme_items,
-  '      </div>',
-  '    </div>',
-  '    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">',
-  '      <div style="padding: 0.75rem; background: white; border-radius: 0.25rem; text-align: center;">',
-  '        <div style="font-size: 1.25rem; font-weight: 600; color: #446c8a;">', terms_with_definitions, '</div>',
-  '        <div style="font-size: 0.85rem; color: #6c757d; margin-top: 0.25rem;">With Definitions</div>',
-  '      </div>',
-  '      <div style="padding: 0.75rem; background: white; border-radius: 0.25rem; text-align: center;">',
-  '        <div style="font-size: 1.25rem; font-weight: 600; color: #446c8a;">', terms_with_sources, '</div>',
-  '        <div style="font-size: 0.85rem; color: #6c757d; margin-top: 0.25rem;">With Sources</div>',
-  '      </div>',
-  '    </div>',
-  '    <div style="padding: 0.75rem; background: white; border-radius: 0.25rem; text-align: center;">',
-  '      <div style="font-size: 1.25rem; font-weight: 600; color: #446c8a;">', terms_with_related, '</div>',
-  '      <div style="font-size: 0.85rem; color: #6c757d; margin-top: 0.25rem;">With Related Terms</div>',
-  '    </div>',
-  '  </div>',
-  '</div>'
-)
 
 theme_counts <- as.list(terms_by_theme[order(terms_by_theme, decreasing = TRUE)])
 max_theme_count <- if (length(theme_counts) > 0) max(unlist(theme_counts)) else 1
@@ -517,10 +466,10 @@ for (idx in seq_along(themes)) {
       tags$span(if (nzchar(desc)) desc else "")
     ),
     tags$div(
-      id = paste0("panel-", theme_id),
+    id = paste0("panel-", theme_id),
       class = "theme-accordion-panel",
       style = "display: none; margin-top: 0.35rem;",
-      panel_content
+    panel_content
     )
   )
 }

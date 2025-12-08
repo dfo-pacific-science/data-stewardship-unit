@@ -149,13 +149,6 @@ render_table <- function(df, theme_label = "") {
       }
     ),
 
-    # Theme
-    theme = colDef(
-      name = "Theme",
-      minWidth = 100,
-      resizable = TRUE
-    ),
-
     # Related Terms - render as clickable links
     related_terms = colDef(
       name = "Related Terms",
