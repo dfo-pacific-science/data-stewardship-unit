@@ -126,7 +126,7 @@
     "href": "reference_info/ontology/formal-documentation.html",
     "title": "GC DFO Salmon Ontology",
     "section": "",
-    "text": "The complete GC DFO Salmon Ontology documentation is available at:\n👉 https://w3id.org/gcdfo/salmon\nThis documentation includes:\n\n\nFormal class hierarchies and relationships\n\n\n\nProperty definitions and constraints\n\n\n\nAxiomatic relationships and inference rules\n\n\n\nComplete ontology structure and imports\n\n\n\n\n\nThe ontology source can be accessed in the FADS DSU Salmon Ontology GitHub\nFor curated, human-friendly term tables organized by theme, see the Controlled Vocabulary & Thesauri page. These tables focus on Controlled Vocabularies and Thesauri extracted from the full ontology.",
+    "text": "The complete GC DFO Salmon Ontology documentation is available at:\n👉 https://w3id.org/gcdfo/salmon\nThis documentation includes:\n\n\nFormal class hierarchies and relationships\nProperty definitions and constraints\nAxiomatic relationships and inference rules\nComplete ontology structure and imports\n\n\nThe ontology source can be accessed in the FADS DSU Salmon Ontology GitHub\nFor curated, human-friendly term tables organized by theme, see the Controlled Vocabulary & Thesauri page. These tables focus on Controlled Vocabularies and Thesauri extracted from the full ontology.",
     "crumbs": [
       "FADS Internal Wiki",
       "Reference Info",
