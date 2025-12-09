@@ -373,7 +373,7 @@ search_html <- paste(search_html_parts, collapse = "\n")
 knitr::raw_html(search_html)
 ```
 
-## Browse by Theme
+## Browse All Terms
 
 ```{r}
 #| echo: false
@@ -420,114 +420,309 @@ if (!exists("yaml")) {
   library(yaml)
 }
 
+# Load themes and combine all term tables
 themes_with_desc <- load_themes(project_root, include_desc = TRUE)
 
-themes <- themes_with_desc
-
-# Store theme data for rendering
-theme_data <- list()
-for (idx in seq_along(themes)) {
-  theme <- themes[[idx]]
+combined_terms <- list()
+for (theme in themes_with_desc) {
   theme_id <- theme$id
-  csv_path <- file.path(project_root, "data/ontology/release/artifacts/term-tables",
-                        paste0(theme_id, ".csv"))
-  result <- load_dataset(csv_path)
-  theme_data[[theme_id]] <- list(
-    df = result$data,
-    meta = result$metadata,
-    label = theme$label,
-    desc = theme$desc %||% ""
+  csv_path <- file.path(
+    project_root,
+    "data/ontology/release/artifacts/term-tables",
+    paste0(theme_id, ".csv")
   )
+  result <- load_dataset(csv_path)
+  df <- result$data
+
+  if (!is.null(df) && nrow(df) > 0) {
+    df$theme <- theme$label
+    df$theme_id <- theme_id
+    combined_terms[[length(combined_terms) + 1]] <- df
+  }
 }
 
-# Build accordion sections (one per theme)
-accordion_sections <- list()
-for (idx in seq_along(themes)) {
-  theme <- themes[[idx]]
-  theme_id <- theme$id
-  theme_info <- theme_data[[theme_id]]
-  df <- theme_info$df
-  desc <- theme_info$desc %||% ""
+if (length(combined_terms) == 0) {
+  tags$p("No term tables found. Run the ontology extraction workflow to generate term tables.")
+} else {
+  terms_df <- do.call(rbind, combined_terms)
 
-  panel_content <- if (is.null(df) || nrow(df) == 0) {
-    tags$p("Term table not found. Run the ontology extraction workflow to generate term tables.")
-  } else {
-    render_table(df, theme_label = theme$label)
+  # Ensure required columns exist
+  required_cols <- c(
+    "theme", "theme_id", "term_name", "definition", "definition_source",
+    "related_terms", "canonical_uri", "widoco_link",
+    "definition_source_text", "definition_source_link"
+  )
+  for (col in required_cols) {
+    if (!col %in% names(terms_df)) {
+      terms_df[[col]] <- ""
+    }
   }
+  terms_df[is.na(terms_df)] <- ""
 
-  accordion_sections[[idx]] <- tags$section(
-    id = paste0("theme-", theme_id),
-    class = "theme-accordion-item",
-    tags$button(
-      class = "theme-accordion-toggle",
-      `data-target` = paste0("panel-", theme_id),
-      style = "width: 100%; text-align: left; padding: 0.75rem 1rem; border: 1px solid #dee2e6; background: #f8f9fa; border-radius: 6px; font-weight: 600; color: #495057; display: flex; justify-content: space-between; align-items: center;",
-      tags$span(theme$label),
-      tags$span(if (nzchar(desc)) desc else "")
+  # Theme choices for the filter UI
+  theme_choices <- vapply(
+    themes_with_desc,
+    function(t) t$label,
+    FUN.VALUE = character(1)
+  )
+
+  # Custom column definitions (reuse logic from helpers)
+  theme_filter_method <- JS("
+    function(rows, columnId, filterValue) {
+      if (!filterValue || filterValue.length === 0) return rows;
+      return rows.filter(function(row) {
+        return filterValue.includes(row.values[columnId]);
+      });
+    }
+  ")
+
+  term_table <- reactable(
+    terms_df,
+    columns = list(
+      theme = colDef(
+        name = "Theme",
+        minWidth = 140,
+        filterMethod = theme_filter_method
+      ),
+      term_name = colDef(
+        name = "Term Name",
+        minWidth = 140,
+        resizable = TRUE
+      ),
+      definition = colDef(
+        name = "Definition",
+        minWidth = 320,
+        resizable = TRUE
+      ),
+      definition_source = colDef(
+        name = "Definition Source",
+        minWidth = 200,
+        resizable = TRUE,
+        html = TRUE,
+        cell = function(value, index) {
+          row <- terms_df[index, ]
+
+          clean_value <- function(val) {
+            if (is.null(val) || is.na(val) || val == "nan" || val == "none" || val == "") {
+              return("")
+            }
+            return(as.character(val))
+          }
+
+          is_url_iri <- function(val) {
+            val <- clean_value(val)
+            if (val == "") return(FALSE)
+            return(startsWith(val, "http://") || startsWith(val, "https://") ||
+                     startsWith(val, "urn:") || startsWith(val, "doi:"))
+          }
+
+          make_link <- function(url) {
+            HTML(paste0(
+              '<a href="', htmlEscape(url, attribute = TRUE),
+              '" target="_blank" rel="noopener" style="color: #446c8a;">',
+              htmlEscape(url), '</a>'
+            ))
+          }
+
+          source_link <- clean_value(row$definition_source_link)
+          source_text <- clean_value(row$definition_source_text)
+          source_raw <- clean_value(row$definition_source)
+
+          if (is_url_iri(source_link)) {
+            return(make_link(source_link))
+          }
+          if (is_url_iri(source_raw)) {
+            return(make_link(source_raw))
+          }
+
+          if (source_text != "") {
+            return(HTML(htmlEscape(source_text)))
+          }
+          if (source_raw != "") {
+            return(HTML(htmlEscape(source_raw)))
+          }
+
+          HTML('<span class=\"coming-soon\">Not available</span>')
+        }
+      ),
+      related_terms = colDef(
+        name = "Related Terms",
+        minWidth = 120,
+        resizable = TRUE,
+        html = TRUE,
+        cell = function(value, index) {
+          if (is.null(value) || is.na(value) || value == "" || value == "nan") {
+            return(HTML('<span class=\"coming-soon\">None</span>'))
+          }
+
+          terms_str <- as.character(value)
+          if (terms_str == "") {
+            return(HTML('<span class=\"coming-soon\">None</span>'))
+          }
+
+          term_parts <- strsplit(terms_str, "; ")[[1]]
+          links <- character(0)
+          for (term_part in term_parts) {
+            term_part <- trimws(term_part)
+            if (term_part == "") next
+
+            match <- regmatches(
+              term_part,
+              regexec("^(.+?)\\s+\\(([^)]+)\\)\\s+\\[(.+?)\\]$", term_part)
+            )[[1]]
+
+            if (length(match) >= 4) {
+              term_name <- match[2]
+              relation <- match[3]
+              uri <- match[4]
+
+              link_html <- paste0(
+                '<a href=\"#\" ',
+                'class=\"related-term-link\" ',
+                'data-term-name=\"', htmlEscape(term_name, attribute = TRUE), '\" ',
+                'data-term-uri=\"', htmlEscape(uri, attribute = TRUE), '\" ',
+                'style=\"color: #446c8a; text-decoration: none; margin-right: 0.5rem; display: inline-block;\" ',
+                'title=\"', htmlEscape(relation, attribute = TRUE), '\">',
+                htmlEscape(term_name),
+                '</a>'
+              )
+              links <- c(links, link_html)
+            } else {
+              links <- c(links, htmlEscape(term_part))
+            }
+          }
+
+          if (length(links) == 0) {
+            return(HTML('<span class=\"coming-soon\">None</span>'))
+          }
+
+          HTML(paste(links, collapse = " "))
+        }
+      ),
+      canonical_uri = colDef(
+        name = "Term ID",
+        minWidth = 200,
+        resizable = TRUE,
+        html = TRUE,
+        cell = function(value, index) {
+          if (is.null(value) || is.na(value) || value == "" || value == "nan") {
+            return(HTML('<span class=\"coming-soon\">Unavailable</span>'))
+          }
+          uri <- htmlEscape(value)
+          HTML(paste0(
+            '<a href="', htmlEscape(uri, attribute = TRUE),
+            '" target="_blank" rel="noopener" style="color: #446c8a; font-family: monospace; font-size: 0.9em;">',
+            uri, '</a>'
+          ))
+        }
+      ),
+      theme_id = colDef(show = FALSE),
+      widoco_link = colDef(show = FALSE),
+      definition_source_text = colDef(show = FALSE),
+      definition_source_link = colDef(show = FALSE)
+    ),
+    defaultColDef = colDef(
+      minWidth = 120,
+      resizable = TRUE,
+      filterable = FALSE
+    ),
+    resizable = TRUE,
+    searchable = TRUE,
+    filterable = FALSE,
+    defaultPageSize = 25,
+    showPageSizeOptions = TRUE,
+    pageSizeOptions = c(10, 25, 50, 100),
+    theme = reactableTheme(
+      headerStyle = list(
+        backgroundColor = "#f8f9fa",
+        borderBottom = "1px solid #dee2e6"
+      ),
+      stripedColor = "#f8f9fa"
+    ),
+    elementId = "all-terms-table"
+  )
+
+  term_table <- htmlwidgets::onRender(
+    term_table,
+    HTML('
+      function(el, x) {
+        const style = document.createElement("style");
+        style.textContent = `
+          .coming-soon {
+            color: #666;
+            font-style: italic;
+          }
+        `;
+        document.head.appendChild(style);
+      }
+    ')
+  )
+
+  # Build theme filter UI with multi-select checkboxes
+  filter_controls <- tags$div(
+    id = "theme-filter-container",
+    style = "border: 1px solid #e9ecef; border-radius: 6px; padding: 0.75rem 1rem; background: #f8f9fa; margin-bottom: 0.75rem;",
+    tags$div(
+      style = "display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;",
+      tags$strong("Filter by theme"),
+      tags$span(style = "font-size: 0.9rem; color: #6c757d;", "Use checkboxes to show one or more themes.")
     ),
     tags$div(
-    id = paste0("panel-", theme_id),
-      class = "theme-accordion-panel",
-      style = "display: none; margin-top: 0.35rem;",
-    panel_content
+      style = "display: flex; flex-wrap: wrap; gap: 0.75rem;",
+      lapply(theme_choices, function(label) {
+        tags$label(
+          style = "display: flex; align-items: center; gap: 0.35rem; font-size: 0.95rem; color: #495057;",
+          tags$input(
+            type = "checkbox",
+            value = label,
+            checked = "checked",
+            style = "accent-color: #446c8a;"
+          ),
+          label
+        )
+      })
+    )
+  )
+
+  filter_script <- tags$script(HTML("
+    (function() {
+      const container = document.getElementById('theme-filter-container');
+      const tableId = 'all-terms-table';
+      if (!container) return;
+
+      const checkboxes = container.querySelectorAll('input[type=\"checkbox\"]');
+
+      function applyThemeFilter() {
+        const selected = Array.from(checkboxes)
+          .filter(cb => cb.checked)
+          .map(cb => cb.value);
+
+        if (selected.length === 0 || selected.length === checkboxes.length) {
+          Reactable.resetFilter(tableId, 'theme');
+        } else {
+          Reactable.setFilter(tableId, 'theme', selected);
+        }
+      }
+
+      checkboxes.forEach(cb => cb.addEventListener('change', applyThemeFilter));
+
+      if (window.Reactable && Reactable.onReady) {
+        Reactable.onReady(tableId, applyThemeFilter);
+      } else {
+        document.addEventListener('DOMContentLoaded', applyThemeFilter);
+        setTimeout(applyThemeFilter, 300);
+      }
+    })();
+  "))
+
+  browsable(
+    tagList(
+      filter_controls,
+      term_table,
+      filter_script
     )
   )
 }
-
-tabs_container <- tags$div(
-  class = "theme-accordion-container",
-  tags$p(style = "margin: 0.25rem 0 0.5rem 0; color: #495057;",
-         "Click a category to expand and view its terms."),
-  accordion_sections,
-  tags$style(HTML('
-    .theme-accordion-container {
-      margin-top: 1rem;
-      display: grid;
-      gap: 0.75rem;
-    }
-    .theme-accordion-item {
-      border: 1px solid #e9ecef;
-      border-radius: 8px;
-      padding: 0.5rem;
-      background: #fff;
-    }
-    .theme-accordion-toggle {
-      cursor: pointer;
-    }
-    .theme-accordion-toggle.open {
-      background: #fff;
-      border-color: #ced4da;
-    }
-    .theme-accordion-panel {
-      padding: 0.5rem 0.25rem 0.25rem 0.25rem;
-    }
-  ')),
-  tags$script(HTML("
-    (function() {
-      const toggles = document.querySelectorAll('.theme-accordion-toggle');
-      toggles.forEach(btn => {
-        btn.addEventListener('click', function() {
-          const targetId = this.getAttribute('data-target');
-          const panel = document.getElementById(targetId);
-          if (!panel) return;
-
-          const isOpen = panel.style.display === 'block';
-          document.querySelectorAll('.theme-accordion-panel').forEach(p => { p.style.display = 'none'; });
-          document.querySelectorAll('.theme-accordion-toggle').forEach(b => { b.classList.remove('open'); });
-
-          if (!isOpen) {
-            panel.style.display = 'block';
-            this.classList.add('open');
-          }
-        });
-      });
-
-    })();
-  "))
-)
-
-# Output the complete structure
-tabs_container
 ```
 
 ## About the Vocabulary Structure

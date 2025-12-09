@@ -3,90 +3,89 @@ format: html
 profile: english
 ---
 
-# FADS Open Science Documentation Hub 🐟💾
+# FADS Open Science Hub 🐟💾
 
 Welcome to the Fishery & Assessment Data Section (FADS) Open Science Documentation Hub! This is the public facing portion of our internal [FADS Wiki](https://086gc.sharepoint.com/:u:/r/sites/FisheryAssessmentDataSectionWiki/SitePages/CollabHome.aspx?csf=1&web=1&e=tkJJk4) on SharePoint.
 
-Here, we work in the open and share our knowledge to **enable open data science collaboration with a broad community** not only within DFO but also externally with academics, NGOs, and Indigenous groups. 
+Here, we work in the open and share our knowledge to **enable open data science collaboration with a broad community**.
 
-Whether you're a seasoned data steward or just starting out, this hub is designed to provide you with the resources you need to navigate the world of salmon data stewardship and management within DFO 📚✨
+### Search the hub 🔍
 
-To keep documentation organized, useful, and easy to navigate docs are grouped into four clear categories:
+```{=html}
+<div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+  <button class="btn btn-primary" type="button" onclick="if (window.quartoOpenSearch) { window.quartoOpenSearch(); } else { const el = document.querySelector('.quarto-search-button'); if (el) el.click(); }">
+    Search all articles
+  </button>
+  <span style="color: #444;">or press <strong>Ctrl/Cmd + K</strong> to open search.</span>
+</div>
+```
+
+### Latest articles 📰
+
+The newest additions from our guides, reference info, tutorials, and deep dives:
+
+```{r}
+#| echo: false
+#| results: asis
+
+library(yaml)
+
+dirs <- c("how_to_guides", "reference_info", "tutorials", "deep_dives")
+
+read_meta <- function(path) {
+  lines <- readLines(path, warn = FALSE)
+  if (length(lines) < 2 || lines[1] != "---") return(list())
+  end <- which(lines[-1] == "---")
+  if (!length(end)) return(list())
+  # adjust because we searched lines[-1]
+  end_idx <- end[1] + 1
+  yaml_text <- paste(lines[2:end_idx], collapse = "\n")
+  tryCatch(yaml::yaml.load(yaml_text), error = function(...) list())
+}
+
+`%||%` <- function(a, b) if (is.null(a) || is.na(a)) b else a
+
+collect_entries <- function() {
+  files <- unlist(lapply(dirs, function(d) {
+    list.files(d, pattern = "\\.qmd$", recursive = TRUE, full.names = TRUE)
+  }))
+  if (length(files) == 0) {
+    return(data.frame(path = character(), title = character(), date = as.Date(character())))
+  }
+  entries <- lapply(files, function(f) {
+    meta <- read_meta(f)
+    title <- meta$title %||% tools::toTitleCase(gsub("-", " ", tools::file_path_sans_ext(basename(f))))
+    date_val <- meta$date
+    if (is.null(date_val) || length(date_val) == 0) date_val <- NA
+    date_parsed <- suppressWarnings(as.Date(date_val))
+    if (length(date_parsed) == 0 || is.na(date_parsed)) date_parsed <- as.Date(file.info(f)$mtime)
+    list(path = f, title = title, date = date_parsed)
+  })
+  do.call(rbind, lapply(entries, as.data.frame))
+}
+
+df <- collect_entries()
+if (!nrow(df)) {
+  cat("- No articles found yet.\n")
+  knitr::knit_exit()
+}
+df <- df[order(df$date, decreasing = TRUE), ]
+df <- head(df, 5)
+
+for (i in seq_len(nrow(df))) {
+  rel <- gsub("\\.qmd$", ".html", df$path[i])
+  cat(sprintf("- [%s](%s) — %s\n", df$title[i], rel, format(as.Date(df$date[i]), "%Y-%m-%d")))
+}
+```
 
 ------------------------------------------------------------------------
 
-#### ️1. How-to Guides 🛠
+### Browse by category 📂
 
-Quick, practical instructions for specific tasks.\
-Perfect for when you're asking:\
-\> *"How do I do this specific thing?"*
-
-Examples:
-
--   How to request access to datasets stored in the cloud 🔐\
--   How to submit a metadata record 📤\
--   How to clean up an Excel file before uploading 🧼
-
-------------------------------------------------------------------------
-
-#### 2. Reference Info 📘
-
-The deep, detailed, no-fluff facts about tools, terms, and standards.\
-Use these when you need precision or technical definitions.
-
-Examples:
-
--   Using terms from controlled vocabularies like Darwin Core 🧾
--   On hosting data and code 🫙
--   Tools, including reccomended R packages 🧑🏾‍💻
-
-------------------------------------------------------------------------
-
-#### 3. Tutorials 🎓
-
-Structured, step-by-step lessons that help you **learn** by doing.\
-Ideal for onboarding or skill-building.
-
-Examples:
-
--   A walk through on using Power BI with our datasets 📊
--   Intro to working with Synapse Notebooks 🧠
--   How to support controlled vocabularies 🔤
-
-------------------------------------------------------------------------
-
-#### 4. Deep dives 🧠
-
-Thoughtful writeups and explanations on the **why** behind the work.\
-Great for context, decision-making, or just satisfying your inner data philosopher.
-
-Examples:
-
--   Why metadata quality matters 🧼
--   Data lifecycle management explained 🌱➡️🌳
--   The theory behind our access protocols 🚦
-
-------------------------------------------------------------------------
-
-### Getting Started 🛠️
-
-🧭 Start exploring using the navigation menu on your left to dive in!
-
-❔ Learn more about what resources are available on the [About page](dsu_documentation.qmd).
-
-🔍 Use the search bar at the top right to find specific topics or resources.
-
------------------------------------------------------------------------
-
-### Contribute & Collaborate! 🤝
-
-This documentation is a **living resource** — always evolving and improving.\
-We'd love your feedback, suggestions, and ideas! 🗣️
-
-You can even contribute directly to the documentation! See our Contributing Guide for more details. Spotted something confusing? Missing a topic? Got an awesome tip to share?\
-➡️ Reach out to us anytime — we're listening 👂 and always happy to help!
-
-Happy stewarding! 🐟✨
+- How-to Guides 🛠 — quick task-focused steps (e.g., access requests, cleanup tips).
+- Reference Info 📘 — definitions, standards, and tooling details (e.g., vocabularies, hosting, recommended R packages).
+- Tutorials 🎓 — structured lessons to learn by doing (e.g., Power BI walkthroughs, Synapse notebooks).
+- Deep dives 🧠 — context and rationale (e.g., metadata quality, data lifecycle, access protocols).
 
 -----------------------------------------------------------------------
 

@@ -1,6 +1,6 @@
 project:
   type: website
-  title: "FADS Open Science Documentation Hub"
+  title: "FADS Open Science Hub"
   output-dir: ./_site
   render:
     - "*.qmd"
@@ -53,6 +53,7 @@ website:
             contents:
               - reference_info/data_standards/controlled-vocabulary-thesauri.qmd
               - reference_info/ontology/formal-documentation.qmd
+              - reference_info/data_standards/salmon-data-exchange-package.qmd
           - reference_info/dwc-obis-gbif.qmd
           - reference_info/openDataPractices.qmd
           - reference_info/publishing_data_externally.qmd
