@@ -6,3 +6,8 @@ data/ontology/
 /docs/
 docs/
 
+# Exclude agent/internal configuration files
+AGENTS.md
+project-specific-instructions.md
+agent-config/
+agent-config/**

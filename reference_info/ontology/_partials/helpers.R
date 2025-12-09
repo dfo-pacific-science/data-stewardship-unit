@@ -25,12 +25,12 @@ library(htmltools)
 library(htmlwidgets)
 
 #' Load CSV dataset and metadata
-#' 
+#'
 #' @param csv_path Path to CSV file
 #' @return List with 'data' (data.frame or NULL) and 'metadata' (list)
 load_dataset <- function(csv_path) {
   meta_path <- sub("\\.csv$", ".meta.json", csv_path)
-  
+
   # Load CSV if it exists
   data <- NULL
   if (file.exists(csv_path)) {
@@ -38,13 +38,13 @@ load_dataset <- function(csv_path) {
     # Replace NA with empty strings for consistency
     data[is.na(data)] <- ""
   }
-  
+
   # Load metadata if it exists
   metadata <- list()
   if (file.exists(meta_path)) {
     metadata <- fromJSON(meta_path, simplifyVector = FALSE)
   }
-  
+
   return(list(data = data, metadata = metadata))
 }
 
@@ -52,7 +52,7 @@ load_dataset <- function(csv_path) {
 `%||%` <- function(x, y) if (is.null(x)) y else x
 
 #' Render the ontology term table with reactable
-#' 
+#'
 #' @param df Data frame with term data
 #' @param theme_label Theme label for the table
 #' @return reactable object
@@ -60,26 +60,21 @@ render_table <- function(df, theme_label = "") {
   if (is.null(df) || nrow(df) == 0) {
     return(NULL)
   }
-  
-  # Ensure all required columns exist
-  required_cols <- c("term_name", "definition", "definition_source", 
+
+  # Ensure all required columns exist (theme is handled by tabs, not displayed)
+  required_cols <- c("term_name", "definition", "definition_source",
                      "related_terms", "canonical_uri", "widoco_link",
-                     "definition_source_text", "definition_source_link", "theme")
-  
+                     "definition_source_text", "definition_source_link")
+
   for (col in required_cols) {
     if (!col %in% names(df)) {
       df[[col]] <- ""
     }
   }
-  
-  # Ensure theme column is set if provided
-  if (theme_label != "" && (!"theme" %in% names(df) || all(df$theme == ""))) {
-    df$theme <- theme_label
-  }
-  
+
   # Replace NA with empty strings
   df[is.na(df)] <- ""
-  
+
   # Create custom column definitions
   col_defs <- list(
     # Term Name
@@ -88,14 +83,14 @@ render_table <- function(df, theme_label = "") {
       minWidth = 100,
       resizable = TRUE
     ),
-    
+
     # Definition - wider column
     definition = colDef(
       name = "Definition",
       minWidth = 300,
       resizable = TRUE
     ),
-    
+
     # Definition Source - coalesced with preference: IRI/URL, then text citation
     definition_source = colDef(
       name = "Definition Source",
@@ -104,7 +99,7 @@ render_table <- function(df, theme_label = "") {
       html = TRUE,
       cell = function(value, index) {
         row <- df[index, ]
-        
+
         # Helper to clean and check if value is empty/invalid
         clean_value <- function(val) {
           if (is.null(val) || is.na(val) || val == "nan" || val == "none" || val == "") {
@@ -112,15 +107,15 @@ render_table <- function(df, theme_label = "") {
           }
           return(as.character(val))
         }
-        
+
         # Helper to check if value is a URL/IRI
         is_url_iri <- function(val) {
           val <- clean_value(val)
           if (val == "") return(FALSE)
-          return(startsWith(val, "http://") || startsWith(val, "https://") || 
+          return(startsWith(val, "http://") || startsWith(val, "https://") ||
                  startsWith(val, "urn:") || startsWith(val, "doi:"))
         }
-        
+
         # Helper to create link HTML
         make_link <- function(url) {
           return(HTML(paste0(
@@ -129,11 +124,11 @@ render_table <- function(df, theme_label = "") {
             htmlEscape(url), '</a>'
           )))
         }
-        
+
         source_link <- clean_value(row$definition_source_link)
         source_text <- clean_value(row$definition_source_text)
         source_raw <- clean_value(row$definition_source)
-        
+
         # Preference: IRI/URL first (from source_link, then source_raw), then text citation
         if (is_url_iri(source_link)) {
           return(make_link(source_link))
@@ -141,7 +136,7 @@ render_table <- function(df, theme_label = "") {
         if (is_url_iri(source_raw)) {
           return(make_link(source_raw))
         }
-        
+
         # Fall back to text citation
         if (source_text != "") {
           return(HTML(htmlEscape(source_text)))
@@ -149,18 +144,11 @@ render_table <- function(df, theme_label = "") {
         if (source_raw != "") {
           return(HTML(htmlEscape(source_raw)))
         }
-        
+
         return(HTML('<span class="coming-soon">Not available</span>'))
       }
     ),
-    
-    # Theme
-    theme = colDef(
-      name = "Theme",
-      minWidth = 100,
-      resizable = TRUE
-    ),
-    
+
     # Related Terms - render as clickable links
     related_terms = colDef(
       name = "Related Terms",
@@ -171,31 +159,31 @@ render_table <- function(df, theme_label = "") {
         if (is.null(value) || is.na(value) || value == "" || value == "nan") {
           return(HTML('<span class="coming-soon">None</span>'))
         }
-        
+
         # Parse related terms: format is "Term Name (relation) [URI]; Term Name2 (relation) [URI]"
         terms_str <- as.character(value)
         if (terms_str == "") {
           return(HTML('<span class="coming-soon">None</span>'))
         }
-        
+
         # Split by semicolon to get individual terms
         term_parts <- strsplit(terms_str, "; ")[[1]]
-        
+
         # Parse each term: "Term Name (relation) [URI]"
         links <- character(0)
         for (term_part in term_parts) {
           term_part <- trimws(term_part)
           if (term_part == "") next
-          
+
           # Extract term name, relation, and URI using regex
           # Pattern: "Term Name (relation) [URI]"
           match <- regmatches(term_part, regexec("^(.+?)\\s+\\(([^)]+)\\)\\s+\\[(.+?)\\]$", term_part))[[1]]
-          
+
           if (length(match) >= 4) {
             term_name <- match[2]
             relation <- match[3]
             uri <- match[4]
-            
+
             # Create clickable link with data attributes
             link_html <- paste0(
               '<a href="#" ',
@@ -213,15 +201,15 @@ render_table <- function(df, theme_label = "") {
             links <- c(links, htmlEscape(term_part))
           }
         }
-        
+
         if (length(links) == 0) {
           return(HTML('<span class="coming-soon">None</span>'))
         }
-        
+
         return(HTML(paste(links, collapse = " ")))
       }
     ),
-    
+
     # Term ID (formerly Canonical URI) - as hyperlink
     canonical_uri = colDef(
       name = "Term ID",
@@ -241,7 +229,7 @@ render_table <- function(df, theme_label = "") {
       }
     )
   )
-  
+
   # Hide metadata columns that shouldn't be displayed
   col_defs$source_version <- colDef(show = FALSE)
   col_defs$source_timestamp <- colDef(show = FALSE)
@@ -249,7 +237,7 @@ render_table <- function(df, theme_label = "") {
   col_defs$definition_source_text <- colDef(show = FALSE)
   col_defs$definition_source_link <- colDef(show = FALSE)
   col_defs$widoco_link <- colDef(show = FALSE)
-  
+
   # Create reactable table
   # Use defaultColDef to ensure all columns are shown unless explicitly hidden
   table <- reactable(
@@ -273,9 +261,9 @@ render_table <- function(df, theme_label = "") {
       ),
       stripedColor = "#f8f9fa"
     ),
-    elementId = "ontology-term-table"
+    elementId = NULL  # unique widget IDs per panel
   )
-  
+
   # Add CSS using onRender to avoid changing widget structure
   table <- htmlwidgets::onRender(
     table,
@@ -284,7 +272,7 @@ render_table <- function(df, theme_label = "") {
         // Add CSS
         const style = document.createElement("style");
         style.textContent = `
-          .ontology-term-table .coming-soon {
+          .coming-soon {
             color: #666;
             font-style: italic;
           }
@@ -293,9 +281,7 @@ render_table <- function(df, theme_label = "") {
       }
     ')
   )
-  
+
   # Return the table widget directly (not wrapped)
   return(table)
 }
-
-

@@ -60,3 +60,17 @@ fabric/66c682a0-fdf3-49f5-b985-e8bd4dd14a70/SynapseNotebook/82de2f33-bfa0-409f-8
 **/*.quarto_ipynb
 .venv/
 .DS_Store
+
+# Nix / devenv
+.devenv/
+.devenv.flake.nix
+devenv.local.nix
+.direnv/
+result*
+
+AGENTS.md
+
+agent-config/
+.cursor/
+project-specific-instructions.md
+.cursorignore
