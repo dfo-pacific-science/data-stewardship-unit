@@ -44,18 +44,19 @@ css: styles/custom.css
 <!-- Open Access Services Section -->
 <h2 class="portfolio-section-header">Open Access Services</h2>
 
-<!-- Project 2: DFO Salmon Ontology -->
+<!-- Project 2: GC DFO Salmon Ontology -->
 <div class="card portfolio-card" data-modal="modal-project-2" style="cursor: pointer;">
   <div class="card-header">
     <div class="d-flex justify-content-between align-items-center">
-      <strong>DFO Salmon Ontology</strong>
+      <strong>GC DFO Salmon Ontology</strong>
       <span class="badge portfolio-status-badge" style="background-color: #2196f3;">Testing</span>
     </div>
     <div class="mt-2">
       <p class="text-muted mb-2" style="font-size: 0.9rem;">A structured vocabulary and knowledge representation system for salmon data to improve interoperability and data integration.</p>
     </div>
     <div class="mt-2 d-flex justify-content-between align-items-center">
-      <a href="#" class="text-muted" onclick="event.stopPropagation();">[URL placeholder]</a>
+      <p><a href="https://dfo-pacific-science.github.io/dfo-salmon-ontology/" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">View Ontology</a></p>
+          <p><a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">View Repository</a></p>
     </div>
   </div>
 </div>
@@ -65,16 +66,16 @@ css: styles/custom.css
   <div class="portfolio-modal-overlay"></div>
   <div class="portfolio-modal-content">
     <div class="portfolio-modal-header">
-      <h3>DFO Salmon Ontology</h3>
+      <h3>GC DFO Salmon Ontology</h3>
       <button class="portfolio-modal-close" type="button" aria-label="Close">×</button>
     </div>
     <div class="portfolio-modal-body">
       <div class="mb-3">
         <span class="badge portfolio-status-badge" style="background-color: #2196f3;">Testing</span>
       </div>
-      <p>[Description placeholder - detailed project information will be added here]</p>
+      <p>The GC DFO Salmon Ontology is a data stewardship and operational process ontology designed to provide a semantic framework for managing, integrating, and stewarding Pacific salmon data across Fisheries and Oceans Canada (DFO). Its goal is to make salmon data interoperable, discoverable, and analyzable with minimal friction for scientists, data stewards, and managers.</p>
       <div class="portfolio-screenshot-container">
-        <p class="text-center text-muted mb-0">📷 Screenshot coming soon</p>
+        <img src="images/data_projects/ontology.png" alt="GC DFO Salmon Ontology homepage" class="img-fluid" style="max-width: 100%; height: auto; border-radius: 4px;">
       </div>
     </div>
   </div>
