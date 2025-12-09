@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Brett Johnson, Data Stewardship Unit (DFO Pacific Region Science Branch)">
 
-<title>security-context – FADS Open Science Documentation Hub</title>
+<title>Salmon Data Exchange Package Specification – FADS Open Science Hub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +24,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../images/logo.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-da81e24ee94f0f4792e29cc7c23703aa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-da81e24ee94f0f4792e29cc7c23703aa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,8 +80,8 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">FADS Open Science Documentation Hub</span>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">FADS Open Science Hub</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -94,15 +95,15 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">FADS Internal Wiki</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../fads-portfolio.html"> 
+    <a class="nav-link" href="../../fads-portfolio.html"> 
 <span class="menu-text">Data Services</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../reference_info/data_standards/controlled-vocabulary-thesauri.html" aria-current="page"> 
+    <a class="nav-link active" href="../../reference_info/data_standards/controlled-vocabulary-thesauri.html" aria-current="page"> 
 <span class="menu-text">Salmon Data Standards</span></a>
   </li>  
 </ul>
@@ -131,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Reference Info</li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/controlled-vocabulary-thesauri.html">Salmon Data Standards</a></li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/salmon-data-exchange-package.html">Salmon Data Exchange Package Specification</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -145,8 +146,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
-      <img src="../images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -167,19 +168,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../how_to_guides/databricks_r_studio.html" class="sidebar-item-text sidebar-link">
+  <a href="../../how_to_guides/databricks_r_studio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Connect to the Azure Lakehouse from R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../how_to_guides/openGovernmentPortalR.html" class="sidebar-item-text sidebar-link">
+  <a href="../../how_to_guides/openGovernmentPortalR.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Accessing Spatial Data from the Open Government Portal</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../how_to_guides/sharepoint_r.html" class="sidebar-item-text sidebar-link">
+  <a href="../../how_to_guides/sharepoint_r.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Access Data in SharePoint from R</span></a>
   </div>
 </li>
@@ -187,51 +188,57 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Reference Info</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Salmon Data Standards</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference_info/data_standards/controlled-vocabulary-thesauri.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Controlled Vocabulary &amp; Thesauri</span></a>
+  <a href="../../reference_info/data_standards/controlled-vocabulary-thesauri.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DFO Salmon Data Standards</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference_info/ontology/formal-documentation.html" class="sidebar-item-text sidebar-link">
+  <a href="../../reference_info/ontology/formal-documentation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DFO Salmon Ontology</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../reference_info/data_standards/salmon-data-exchange-package.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Salmon Data Exchange Package Specification</span></a>
   </div>
 </li>
       </ul>
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference_info/dwc-obis-gbif.html" class="sidebar-item-text sidebar-link">
+  <a href="../../reference_info/dwc-obis-gbif.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Darwin Core, GBIF, and OBIS Reference Guide</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference_info/openDataPractices.html" class="sidebar-item-text sidebar-link">
+  <a href="../../reference_info/openDataPractices.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data Practices for Open Science – 3 Quick Tips</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference_info/publishing_data_externally.html" class="sidebar-item-text sidebar-link">
+  <a href="../../reference_info/publishing_data_externally.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hosting Data and Code</span></a>
   </div>
 </li>
@@ -246,7 +253,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference_info/tools/r_packages.html" class="sidebar-item-text sidebar-link">
+  <a href="../../reference_info/tools/r_packages.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">R Packages</span></a>
   </div>
 </li>
@@ -265,7 +272,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/support_controlled_vocabs.html" class="sidebar-item-text sidebar-link">
+  <a href="../../tutorials/support_controlled_vocabs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Support Controlled Vocabularies</span></a>
   </div>
 </li>
@@ -282,7 +289,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../deep_dives/Stock Assessment Data 101 for Fisheries Science Reports.html" class="sidebar-item-text sidebar-link">
+  <a href="../../deep_dives/Stock Assessment Data 101 for Fisheries Science Reports.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Fisheries Science Reports – Data and Stats 101</span></a>
   </div>
 </li>
@@ -298,301 +305,539 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#security-context" id="toc-security-context" class="nav-link active" data-scroll-target="#security-context">Security Context</a>
-  <ul class="collapse">
-  <li><a href="#security-assessment" id="toc-security-assessment" class="nav-link" data-scroll-target="#security-assessment">Security Assessment</a>
-  <ul class="collapse">
-  <li><a href="#current-security-posture" id="toc-current-security-posture" class="nav-link" data-scroll-target="#current-security-posture">Current Security Posture</a></li>
-  <li><a href="#known-vulnerabilities" id="toc-known-vulnerabilities" class="nav-link" data-scroll-target="#known-vulnerabilities">Known Vulnerabilities</a></li>
-  <li><a href="#security-controls-in-place" id="toc-security-controls-in-place" class="nav-link" data-scroll-target="#security-controls-in-place">Security Controls in Place</a></li>
-  </ul></li>
-  <li><a href="#authentication-authorization" id="toc-authentication-authorization" class="nav-link" data-scroll-target="#authentication-authorization">Authentication &amp; Authorization</a>
-  <ul class="collapse">
-  <li><a href="#authentication-mechanisms" id="toc-authentication-mechanisms" class="nav-link" data-scroll-target="#authentication-mechanisms">Authentication Mechanisms</a></li>
-  <li><a href="#authorization-model" id="toc-authorization-model" class="nav-link" data-scroll-target="#authorization-model">Authorization Model</a></li>
-  <li><a href="#user-management" id="toc-user-management" class="nav-link" data-scroll-target="#user-management">User Management</a></li>
-  </ul></li>
-  <li><a href="#data-protection" id="toc-data-protection" class="nav-link" data-scroll-target="#data-protection">Data Protection</a>
-  <ul class="collapse">
-  <li><a href="#data-classification" id="toc-data-classification" class="nav-link" data-scroll-target="#data-classification">Data Classification</a></li>
-  <li><a href="#encryption" id="toc-encryption" class="nav-link" data-scroll-target="#encryption">Encryption</a></li>
-  <li><a href="#data-handling" id="toc-data-handling" class="nav-link" data-scroll-target="#data-handling">Data Handling</a></li>
-  </ul></li>
-  <li><a href="#network-infrastructure-security" id="toc-network-infrastructure-security" class="nav-link" data-scroll-target="#network-infrastructure-security">Network &amp; Infrastructure Security</a>
-  <ul class="collapse">
-  <li><a href="#network-security" id="toc-network-security" class="nav-link" data-scroll-target="#network-security">Network Security</a></li>
-  <li><a href="#infrastructure-security" id="toc-infrastructure-security" class="nav-link" data-scroll-target="#infrastructure-security">Infrastructure Security</a></li>
-  <li><a href="#monitoring-logging" id="toc-monitoring-logging" class="nav-link" data-scroll-target="#monitoring-logging">Monitoring &amp; Logging</a></li>
-  </ul></li>
-  <li><a href="#application-security" id="toc-application-security" class="nav-link" data-scroll-target="#application-security">Application Security</a>
-  <ul class="collapse">
-  <li><a href="#input-validation" id="toc-input-validation" class="nav-link" data-scroll-target="#input-validation">Input Validation</a></li>
-  <li><a href="#output-security" id="toc-output-security" class="nav-link" data-scroll-target="#output-security">Output Security</a></li>
-  <li><a href="#api-security" id="toc-api-security" class="nav-link" data-scroll-target="#api-security">API Security</a></li>
-  </ul></li>
-  <li><a href="#compliance-standards" id="toc-compliance-standards" class="nav-link" data-scroll-target="#compliance-standards">Compliance &amp; Standards</a>
-  <ul class="collapse">
-  <li><a href="#regulatory-compliance" id="toc-regulatory-compliance" class="nav-link" data-scroll-target="#regulatory-compliance">Regulatory Compliance</a></li>
-  <li><a href="#security-standards" id="toc-security-standards" class="nav-link" data-scroll-target="#security-standards">Security Standards</a></li>
-  <li><a href="#security-testing" id="toc-security-testing" class="nav-link" data-scroll-target="#security-testing">Security Testing</a></li>
-  </ul></li>
-  <li><a href="#incident-response" id="toc-incident-response" class="nav-link" data-scroll-target="#incident-response">Incident Response</a>
-  <ul class="collapse">
-  <li><a href="#security-incidents" id="toc-security-incidents" class="nav-link" data-scroll-target="#security-incidents">Security Incidents</a></li>
-  <li><a href="#response-plan" id="toc-response-plan" class="nav-link" data-scroll-target="#response-plan">Response Plan</a></li>
-  </ul></li>
-  <li><a href="#security-recommendations" id="toc-security-recommendations" class="nav-link" data-scroll-target="#security-recommendations">Security Recommendations</a>
-  <ul class="collapse">
-  <li><a href="#immediate-actions" id="toc-immediate-actions" class="nav-link" data-scroll-target="#immediate-actions">Immediate Actions</a></li>
-  <li><a href="#future-improvements" id="toc-future-improvements" class="nav-link" data-scroll-target="#future-improvements">Future Improvements</a></li>
-  </ul></li>
-  </ul></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">1</span> Overview</a></li>
+  <li><a href="#design-goals" id="toc-design-goals" class="nav-link" data-scroll-target="#design-goals"><span class="header-section-number">2</span> Design Goals</a></li>
+  <li><a href="#package-layout" id="toc-package-layout" class="nav-link" data-scroll-target="#package-layout"><span class="header-section-number">3</span> Package Layout</a></li>
+  <li><a href="#identifiers-and-conventions" id="toc-identifiers-and-conventions" class="nav-link" data-scroll-target="#identifiers-and-conventions"><span class="header-section-number">4</span> Identifiers and Conventions</a></li>
+  <li><a href="#dataset.csv-schema" id="toc-dataset.csv-schema" class="nav-link" data-scroll-target="#dataset.csv-schema"><span class="header-section-number">5</span> <code>dataset.csv</code> Schema</a></li>
+  <li><a href="#tables.csv-schema" id="toc-tables.csv-schema" class="nav-link" data-scroll-target="#tables.csv-schema"><span class="header-section-number">6</span> <code>tables.csv</code> Schema</a></li>
+  <li><a href="#column_dictionary.csv-schema" id="toc-column_dictionary.csv-schema" class="nav-link" data-scroll-target="#column_dictionary.csv-schema"><span class="header-section-number">7</span> <code>column_dictionary.csv</code> Schema</a></li>
+  <li><a href="#codes.csv-schema" id="toc-codes.csv-schema" class="nav-link" data-scroll-target="#codes.csv-schema"><span class="header-section-number">8</span> <code>codes.csv</code> Schema</a></li>
+  <li><a href="#relationship-to-ontology-r-package-and-gpt" id="toc-relationship-to-ontology-r-package-and-gpt" class="nav-link" data-scroll-target="#relationship-to-ontology-r-package-and-gpt"><span class="header-section-number">9</span> Relationship to Ontology, R Package, and GPT</a></li>
+  <li><a href="#versioning-and-backwards-compatibility" id="toc-versioning-and-backwards-compatibility" class="nav-link" data-scroll-target="#versioning-and-backwards-compatibility"><span class="header-section-number">10</span> Versioning and Backwards Compatibility</a></li>
+  <li><a href="#implementation-notes" id="toc-implementation-notes" class="nav-link" data-scroll-target="#implementation-notes"><span class="header-section-number">11</span> Implementation Notes</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/agent-config/security-context.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/agent-config/security-context.md" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/reference_info/data_standards/salmon-data-exchange-package.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/reference_info/data_standards/salmon-data-exchange-package.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Reference Info</li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/controlled-vocabulary-thesauri.html">Salmon Data Standards</a></li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/salmon-data-exchange-package.html">Salmon Data Exchange Package Specification</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Salmon Data Exchange Package Specification</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="security-context" class="level1">
-<h1>Security Context</h1>
-<p><strong>This file tracks security assessments, vulnerabilities, and security-related decisions for the project.</strong></p>
-<section id="security-assessment" class="level2">
-<h2 class="anchored" data-anchor-id="security-assessment">Security Assessment</h2>
-<section id="current-security-posture" class="level3">
-<h3 class="anchored" data-anchor-id="current-security-posture">Current Security Posture</h3>
-<ul>
-<li><strong>Overall Risk Level</strong>: [Low/Medium/High] - [Date of last assessment]</li>
-<li><strong>Security Maturity</strong>: [Basic/Intermediate/Advanced]</li>
-<li><strong>Compliance Requirements</strong>: [e.g., SOC2, GDPR, HIPAA, PCI-DSS]</li>
-<li><strong>Last Security Review</strong>: [Date]</li>
-</ul>
-</section>
-<section id="known-vulnerabilities" class="level3">
-<h3 class="anchored" data-anchor-id="known-vulnerabilities">Known Vulnerabilities</h3>
-<ul>
-<li><strong>Vulnerability</strong>: [Description]</li>
-<li><strong>Severity</strong>: [Critical/High/Medium/Low]</li>
-<li><strong>Status</strong>: [Open/In Progress/Fixed/False Positive]</li>
-<li><strong>CVE/Reference</strong>: [If applicable]</li>
-<li><strong>Mitigation</strong>: [How it’s being addressed]</li>
-</ul>
-</section>
-<section id="security-controls-in-place" class="level3">
-<h3 class="anchored" data-anchor-id="security-controls-in-place">Security Controls in Place</h3>
-<ul>
-<li><strong>Authentication</strong>: [How users are authenticated]</li>
-<li><strong>Authorization</strong>: [How access is controlled]</li>
-<li><strong>Data Encryption</strong>: [At rest and in transit]</li>
-<li><strong>Input Validation</strong>: [How inputs are sanitized]</li>
-<li><strong>Output Encoding</strong>: [How outputs are encoded]</li>
-</ul>
-</section>
-</section>
-<section id="authentication-authorization" class="level2">
-<h2 class="anchored" data-anchor-id="authentication-authorization">Authentication &amp; Authorization</h2>
-<section id="authentication-mechanisms" class="level3">
-<h3 class="anchored" data-anchor-id="authentication-mechanisms">Authentication Mechanisms</h3>
-<ul>
-<li><strong>Primary Method</strong>: [e.g., JWT, OAuth, session-based]</li>
-<li><strong>Multi-Factor Authentication</strong>: [Enabled/Disabled - details]</li>
-<li><strong>Password Policy</strong>: [Requirements for passwords]</li>
-<li><strong>Session Management</strong>: [How sessions are handled]</li>
-<li><strong>Token Management</strong>: [How tokens are generated, stored, refreshed]</li>
-</ul>
-</section>
-<section id="authorization-model" class="level3">
-<h3 class="anchored" data-anchor-id="authorization-model">Authorization Model</h3>
-<ul>
-<li><strong>Access Control</strong>: [RBAC, ABAC, custom]</li>
-<li><strong>Role Definitions</strong>: [What roles exist and their permissions]</li>
-<li><strong>Permission Matrix</strong>: [Who can do what]</li>
-<li><strong>API Security</strong>: [How API endpoints are protected]</li>
-</ul>
-</section>
-<section id="user-management" class="level3">
-<h3 class="anchored" data-anchor-id="user-management">User Management</h3>
-<ul>
-<li><strong>User Registration</strong>: [How users sign up]</li>
-<li><strong>Account Verification</strong>: [Email/phone verification process]</li>
-<li><strong>Password Reset</strong>: [How passwords are reset]</li>
-<li><strong>Account Lockout</strong>: [Policies for failed login attempts]</li>
-</ul>
-</section>
-</section>
-<section id="data-protection" class="level2">
-<h2 class="anchored" data-anchor-id="data-protection">Data Protection</h2>
-<section id="data-classification" class="level3">
-<h3 class="anchored" data-anchor-id="data-classification">Data Classification</h3>
-<ul>
-<li><strong>Public Data</strong>: [What data is public]</li>
-<li><strong>Internal Data</strong>: [What data is internal only]</li>
-<li><strong>Confidential Data</strong>: [What data is confidential]</li>
-<li><strong>Restricted Data</strong>: [What data is highly restricted]</li>
-</ul>
-</section>
-<section id="encryption" class="level3">
-<h3 class="anchored" data-anchor-id="encryption">Encryption</h3>
-<ul>
-<li><strong>Data at Rest</strong>: [How data is encrypted when stored]</li>
-<li><strong>Data in Transit</strong>: [How data is encrypted when transmitted]</li>
-<li><strong>Key Management</strong>: [How encryption keys are managed]</li>
-<li><strong>Algorithm Used</strong>: [What encryption algorithms are used]</li>
-</ul>
-</section>
-<section id="data-handling" class="level3">
-<h3 class="anchored" data-anchor-id="data-handling">Data Handling</h3>
-<ul>
-<li><strong>Data Collection</strong>: [What data is collected and why]</li>
-<li><strong>Data Storage</strong>: [Where and how data is stored]</li>
-<li><strong>Data Retention</strong>: [How long data is kept]</li>
-<li><strong>Data Deletion</strong>: [How data is securely deleted]</li>
-<li><strong>Data Sharing</strong>: [When and how data is shared]</li>
-</ul>
-</section>
-</section>
-<section id="network-infrastructure-security" class="level2">
-<h2 class="anchored" data-anchor-id="network-infrastructure-security">Network &amp; Infrastructure Security</h2>
-<section id="network-security" class="level3">
-<h3 class="anchored" data-anchor-id="network-security">Network Security</h3>
-<ul>
-<li><strong>Firewall Rules</strong>: [Network access controls]</li>
-<li><strong>VPN Requirements</strong>: [If VPN is required for access]</li>
-<li><strong>DDoS Protection</strong>: [Protection against DDoS attacks]</li>
-<li><strong>Network Segmentation</strong>: [How networks are segmented]</li>
-</ul>
-</section>
-<section id="infrastructure-security" class="level3">
-<h3 class="anchored" data-anchor-id="infrastructure-security">Infrastructure Security</h3>
-<ul>
-<li><strong>Server Hardening</strong>: [Security measures on servers]</li>
-<li><strong>Container Security</strong>: [If using containers]</li>
-<li><strong>Cloud Security</strong>: [Cloud provider security measures]</li>
-<li><strong>Backup Security</strong>: [How backups are secured]</li>
-</ul>
-</section>
-<section id="monitoring-logging" class="level3">
-<h3 class="anchored" data-anchor-id="monitoring-logging">Monitoring &amp; Logging</h3>
-<ul>
-<li><strong>Security Monitoring</strong>: [What is monitored]</li>
-<li><strong>Log Collection</strong>: [What logs are collected]</li>
-<li><strong>Incident Response</strong>: [How security incidents are handled]</li>
-<li><strong>Audit Trail</strong>: [What activities are logged]</li>
-</ul>
-</section>
-</section>
-<section id="application-security" class="level2">
-<h2 class="anchored" data-anchor-id="application-security">Application Security</h2>
-<section id="input-validation" class="level3">
-<h3 class="anchored" data-anchor-id="input-validation">Input Validation</h3>
-<ul>
-<li><strong>Client-Side Validation</strong>: [What validation happens in the browser]</li>
-<li><strong>Server-Side Validation</strong>: [What validation happens on the server]</li>
-<li><strong>File Upload Security</strong>: [How file uploads are secured]</li>
-<li><strong>SQL Injection Prevention</strong>: [Measures against SQL injection]</li>
-</ul>
-</section>
-<section id="output-security" class="level3">
-<h3 class="anchored" data-anchor-id="output-security">Output Security</h3>
-<ul>
-<li><strong>XSS Prevention</strong>: [Measures against cross-site scripting]</li>
-<li><strong>CSRF Protection</strong>: [Measures against cross-site request forgery]</li>
-<li><strong>Content Security Policy</strong>: [CSP headers and policies]</li>
-<li><strong>Secure Headers</strong>: [Security headers implemented]</li>
-</ul>
-</section>
-<section id="api-security" class="level3">
-<h3 class="anchored" data-anchor-id="api-security">API Security</h3>
-<ul>
-<li><strong>API Authentication</strong>: [How APIs are authenticated]</li>
-<li><strong>Rate Limiting</strong>: [API rate limiting policies]</li>
-<li><strong>Input Sanitization</strong>: [How API inputs are sanitized]</li>
-<li><strong>Error Handling</strong>: [How errors are handled securely]</li>
-</ul>
-</section>
-</section>
-<section id="compliance-standards" class="level2">
-<h2 class="anchored" data-anchor-id="compliance-standards">Compliance &amp; Standards</h2>
-<section id="regulatory-compliance" class="level3">
-<h3 class="anchored" data-anchor-id="regulatory-compliance">Regulatory Compliance</h3>
-<ul>
-<li><strong>GDPR</strong>: [General Data Protection Regulation compliance]</li>
-<li><strong>CCPA</strong>: [California Consumer Privacy Act compliance]</li>
-<li><strong>HIPAA</strong>: [Health Insurance Portability and Accountability Act compliance]</li>
-<li><strong>SOX</strong>: [Sarbanes-Oxley Act compliance]</li>
-</ul>
-</section>
-<section id="security-standards" class="level3">
-<h3 class="anchored" data-anchor-id="security-standards">Security Standards</h3>
-<ul>
-<li><strong>OWASP Top 10</strong>: [Addressing OWASP vulnerabilities]</li>
-<li><strong>NIST Framework</strong>: [National Institute of Standards and Technology]</li>
-<li><strong>ISO 27001</strong>: [Information security management]</li>
-<li><strong>SOC 2</strong>: [Service Organization Control 2]</li>
-</ul>
-</section>
-<section id="security-testing" class="level3">
-<h3 class="anchored" data-anchor-id="security-testing">Security Testing</h3>
-<ul>
-<li><strong>Penetration Testing</strong>: [When last performed]</li>
-<li><strong>Vulnerability Scanning</strong>: [Regular scanning schedule]</li>
-<li><strong>Code Review</strong>: [Security-focused code reviews]</li>
-<li><strong>Dependency Scanning</strong>: [Checking for vulnerable dependencies]</li>
-</ul>
-</section>
-</section>
-<section id="incident-response" class="level2">
-<h2 class="anchored" data-anchor-id="incident-response">Incident Response</h2>
-<section id="security-incidents" class="level3">
-<h3 class="anchored" data-anchor-id="security-incidents">Security Incidents</h3>
-<ul>
-<li><strong>Incident</strong>: [Description of security incident]</li>
-<li><strong>Date</strong>: [When it occurred]</li>
-<li><strong>Impact</strong>: [What was affected]</li>
-<li><strong>Response</strong>: [How it was handled]</li>
-<li><strong>Lessons Learned</strong>: [What was learned]</li>
-</ul>
-</section>
-<section id="response-plan" class="level3">
-<h3 class="anchored" data-anchor-id="response-plan">Response Plan</h3>
-<ul>
-<li><strong>Contact Information</strong>: [Who to contact for security issues]</li>
-<li><strong>Escalation Process</strong>: [How to escalate security issues]</li>
-<li><strong>Communication Plan</strong>: [How to communicate about incidents]</li>
-<li><strong>Recovery Procedures</strong>: [How to recover from incidents]</li>
-</ul>
-</section>
-</section>
-<section id="security-recommendations" class="level2">
-<h2 class="anchored" data-anchor-id="security-recommendations">Security Recommendations</h2>
-<section id="immediate-actions" class="level3">
-<h3 class="anchored" data-anchor-id="immediate-actions">Immediate Actions</h3>
-<ul>
-<li><strong>Action</strong>: [What needs to be done immediately]</li>
-<li><strong>Priority</strong>: [High/Medium/Low]</li>
-<li><strong>Effort</strong>: [Estimated effort required]</li>
-<li><strong>Impact</strong>: [Why it’s important]</li>
-</ul>
-</section>
-<section id="future-improvements" class="level3">
-<h3 class="anchored" data-anchor-id="future-improvements">Future Improvements</h3>
-<ul>
-<li><strong>Improvement</strong>: [What could be improved]</li>
-<li><strong>Benefit</strong>: [Why it would be valuable]</li>
-<li><strong>Timeline</strong>: [When it could be implemented]</li>
-<li><strong>Resources</strong>: [What resources would be needed]</li>
-</ul>
-<hr>
-<p><strong>Last Updated</strong>: [YYYY-MM-DD]<br>
-<strong>Updated By</strong>: [Who made the last update]<br>
-<strong>Next Security Review</strong>: [When the next review should be conducted]<br>
-<strong>Security Contact</strong>: [Who to contact for security questions]</p>
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Brett Johnson, Data Stewardship Unit (DFO Pacific Region Science Branch) </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<section id="overview" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Overview</h1>
+<p>The <strong>Salmon Data Exchange Package (SDEP)</strong> is a lightweight, frictionless-style specification for exchanging salmon datasets between scientists, assessment biologists, and data stewards.</p>
+<p>It is designed to:</p>
+<ul>
+<li>Be <strong>simple to adopt</strong> with Excel and CSV files.</li>
+<li>Be <strong>tool-friendly</strong> for R/Python packages and custom GPT assistants.</li>
+<li>Be <strong>ontology-aware</strong>, linking columns and codes to the <strong>DFO Salmon Ontology</strong> and related vocabularies.</li>
+<li>Be compatible with frictionless data packages and Darwin Core–style semantic layers without forcing a single rigid schema.</li>
+</ul>
+<p>Each SDEP instance is a small directory of CSV data files plus a set of metadata CSVs that describe the dataset, tables, columns, and controlled codes.</p>
 </section>
+<section id="design-goals" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Design Goals</h1>
+<ul>
+<li><strong>Interoperable but flexible</strong>: support multiple schemas (FSAR, SPSR-like, project-specific) while providing shared semantics via URIs.</li>
+<li><strong>FRICTIONLESS-compatible</strong>: align conceptually with frictionless/datapackage ideas so existing tooling can be reused or extended.</li>
+<li><strong>Ontology-linked</strong>: allow columns and codes to reference DFO Salmon Ontology and SKOS vocab IRIs.</li>
+<li><strong>Incremental adoption</strong>: existing tables can be wrapped in a package with minimal changes (no need to refactor everything at once).</li>
+<li><strong>Machine- and human-readable</strong>: scientists can work in spreadsheets; machines can consume the same metadata.</li>
+</ul>
 </section>
+<section id="package-layout" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Package Layout</h1>
+<p>A Salmon Data Exchange Package consists of:</p>
+<ul>
+<li>One <strong>root directory</strong> (e.g., <code>SDEP_myproject/</code>) containing:
+<ul>
+<li><code>dataset.csv</code> – dataset-level metadata.</li>
+<li><code>tables.csv</code> – one row per logical table.</li>
+<li><code>column_dictionary.csv</code> – one row per column in each table.</li>
+<li><code>codes.csv</code> – optional: controlled value lists and SKOS links.</li>
+</ul></li>
+<li>One or more <strong>data files</strong> (typically CSV) referenced from <code>tables.csv</code>, usually in a <code>data/</code> subdirectory.</li>
+</ul>
+<p>Minimal example layout:</p>
+<ul>
+<li><code>dataset.csv</code></li>
+<li><code>tables.csv</code></li>
+<li><code>column_dictionary.csv</code></li>
+<li><code>codes.csv</code> (optional for fully numeric or unconstrained columns)</li>
+<li><code>data/your_table_1.csv</code></li>
+<li><code>data/your_table_2.csv</code></li>
+<li>etc.</li>
+</ul>
+<p>The SDEP spec does <strong>not</strong> prescribe a single canonical salmon schema. Instead, it standardizes the <strong>metadata</strong> about whatever schema a project uses and ties it to ontology and vocabularies.</p>
+</section>
+<section id="identifiers-and-conventions" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Identifiers and Conventions</h1>
+<ul>
+<li><code>dataset_id</code>
+<ul>
+<li>Short string identifier unique within your organization or project (e.g., <code>fsar_spsr_chinook_2025</code>).</li>
+<li>Used to link rows across <code>dataset.csv</code>, <code>tables.csv</code>, <code>column_dictionary.csv</code>, and <code>codes.csv</code>.</li>
+</ul></li>
+<li><code>table_id</code>
+<ul>
+<li>Short ID unique within a dataset (e.g., <code>cu_year_index</code>, <code>survey_events</code>).</li>
+</ul></li>
+<li><code>column_name</code>
+<ul>
+<li>Exact column name as it appears in the data file (e.g., <code>TOTAL_SPAWNERS</code>, <code>run_size_total</code>).</li>
+</ul></li>
+<li>URIs / IRIs
+<ul>
+<li>Fields such as <code>dataset_iri</code>, <code>entity_iri</code>, <code>metric_iri</code>, <code>dimension_iri</code>, <code>concept_scheme_iri</code>, <code>concept_iri</code>, <code>unit_iri</code> should use persistent HTTP IRIs where available (e.g., w3id for DFO Salmon Ontology terms, vocabulary concepts, and units).</li>
+</ul></li>
+</ul>
+</section>
+<section id="dataset.csv-schema" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> <code>dataset.csv</code> Schema</h1>
+<p>One row per logical dataset (often one per SDEP directory). Can describe multiple related tables.</p>
+<p>Required columns:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 7%">
+<col style="width: 8%">
+<col style="width: 68%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>dataset_id</td>
+<td>string</td>
+<td>yes</td>
+<td>Stable identifier used to join to other metadata files.</td>
+</tr>
+<tr class="even">
+<td>title</td>
+<td>string</td>
+<td>yes</td>
+<td>Human-readable dataset title.</td>
+</tr>
+<tr class="odd">
+<td>description</td>
+<td>string</td>
+<td>yes</td>
+<td>Short description of the dataset contents and purpose.</td>
+</tr>
+<tr class="even">
+<td>creator</td>
+<td>string</td>
+<td>yes</td>
+<td>Name(s) of primary creator(s) or project.</td>
+</tr>
+<tr class="odd">
+<td>contact_name</td>
+<td>string</td>
+<td>yes</td>
+<td>Primary contact person.</td>
+</tr>
+<tr class="even">
+<td>contact_email</td>
+<td>string</td>
+<td>yes</td>
+<td>Contact email address.</td>
+</tr>
+<tr class="odd">
+<td>license</td>
+<td>string</td>
+<td>yes</td>
+<td>License name or URL (e.g., <code>CC-BY-4.0</code>).</td>
+</tr>
+<tr class="even">
+<td>temporal_start</td>
+<td>date</td>
+<td>no</td>
+<td>Start date or year covered by the dataset (ISO 8601 where possible).</td>
+</tr>
+<tr class="odd">
+<td>temporal_end</td>
+<td>date</td>
+<td>no</td>
+<td>End date or year covered by the dataset.</td>
+</tr>
+<tr class="even">
+<td>spatial_extent</td>
+<td>string</td>
+<td>no</td>
+<td>Textual description of spatial coverage (e.g., CUs, regions, coordinates).</td>
+</tr>
+<tr class="odd">
+<td>dataset_type</td>
+<td>string</td>
+<td>no</td>
+<td>High-level type (e.g., <code>cu_year_index</code>, <code>survey_timeseries</code>, <code>benchmark</code>).</td>
+</tr>
+<tr class="even">
+<td>dataset_iri</td>
+<td>string</td>
+<td>no</td>
+<td>IRI for this dataset in a catalog or knowledge graph.</td>
+</tr>
+<tr class="odd">
+<td>source_citation</td>
+<td>string</td>
+<td>no</td>
+<td>Free-text citation for publications, reports, or internal docs.</td>
+</tr>
+</tbody>
+</table>
+<p>Optional additional columns (implementation-specific):</p>
+<ul>
+<li><code>provenance_note</code> – narrative about data lineage.</li>
+<li><code>created</code> / <code>modified</code> – timestamps.</li>
+</ul>
+</section>
+<section id="tables.csv-schema" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> <code>tables.csv</code> Schema</h1>
+<p>One row per table in the package.</p>
+<p>Required columns:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 7%">
+<col style="width: 9%">
+<col style="width: 70%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>dataset_id</td>
+<td>string</td>
+<td>yes</td>
+<td>References <code>dataset_id</code> in <code>dataset.csv</code>.</td>
+</tr>
+<tr class="even">
+<td>table_id</td>
+<td>string</td>
+<td>yes</td>
+<td>Short ID for the table (e.g., <code>cu_year_index</code>).</td>
+</tr>
+<tr class="odd">
+<td>file_name</td>
+<td>string</td>
+<td>yes</td>
+<td>Relative path to the data file (e.g., <code>data/cu_year_index.csv</code>).</td>
+</tr>
+<tr class="even">
+<td>table_label</td>
+<td>string</td>
+<td>yes</td>
+<td>Human-readable label for the table.</td>
+</tr>
+<tr class="odd">
+<td>description</td>
+<td>string</td>
+<td>yes</td>
+<td>Description of what each row represents and how the table is used.</td>
+</tr>
+<tr class="even">
+<td>entity_type</td>
+<td>string</td>
+<td>no</td>
+<td>Human-readable entity type (e.g., <code>CU-year index</code>, <code>survey event</code>).</td>
+</tr>
+<tr class="odd">
+<td>entity_iri</td>
+<td>string</td>
+<td>no</td>
+<td>IRI of ontology class representing the row-level entity, if applicable.</td>
+</tr>
+<tr class="even">
+<td>primary_key</td>
+<td>string</td>
+<td>no</td>
+<td>Comma-separated list of columns forming a primary key (e.g., <code>cu_id,year</code>).</td>
+</tr>
+</tbody>
+</table>
+<p>Notes:</p>
+<ul>
+<li><code>entity_iri</code> should reference a class in the DFO Salmon Ontology (e.g., a CU-year index class, survey event class) when available.</li>
+<li><code>primary_key</code> is advisory; it guides downstream validation and graph loading.</li>
+</ul>
+</section>
+<section id="column_dictionary.csv-schema" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> <code>column_dictionary.csv</code> Schema</h1>
+<p>One row per column in each table. This is the core of how SDEP links data columns to ontology and vocabularies.</p>
+<p>Required columns:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 6%">
+<col style="width: 7%">
+<col style="width: 70%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>dataset_id</td>
+<td>string</td>
+<td>yes</td>
+<td>References <code>dataset_id</code> in <code>dataset.csv</code>.</td>
+</tr>
+<tr class="even">
+<td>table_id</td>
+<td>string</td>
+<td>yes</td>
+<td>References <code>table_id</code> in <code>tables.csv</code>.</td>
+</tr>
+<tr class="odd">
+<td>column_name</td>
+<td>string</td>
+<td>yes</td>
+<td>Exact column name in the data file.</td>
+</tr>
+<tr class="even">
+<td>column_label</td>
+<td>string</td>
+<td>yes</td>
+<td>Short human-readable label.</td>
+</tr>
+<tr class="odd">
+<td>column_description</td>
+<td>string</td>
+<td>yes</td>
+<td>Clear definition of the column’s meaning.</td>
+</tr>
+<tr class="even">
+<td>column_role</td>
+<td>string</td>
+<td>yes</td>
+<td>One of: <code>id</code>, <code>measure</code>, <code>dimension</code>, <code>flag</code>, <code>metadata</code>.</td>
+</tr>
+<tr class="odd">
+<td>value_type</td>
+<td>string</td>
+<td>yes</td>
+<td>Basic type: <code>integer</code>, <code>double</code>, <code>string</code>, <code>boolean</code>, <code>date</code>, <code>datetime</code>.</td>
+</tr>
+<tr class="even">
+<td>required</td>
+<td>boolean</td>
+<td>no</td>
+<td><code>TRUE</code> if the column is required for each row, otherwise <code>FALSE</code> or blank.</td>
+</tr>
+<tr class="odd">
+<td>unit_label</td>
+<td>string</td>
+<td>no</td>
+<td>Human-readable unit label (e.g., <code>number of fish</code>, <code>proportion</code>).</td>
+</tr>
+<tr class="even">
+<td>unit_iri</td>
+<td>string</td>
+<td>no</td>
+<td>IRI for the unit (e.g., UCUM or other unit ontology).</td>
+</tr>
+<tr class="odd">
+<td>metric_iri</td>
+<td>string</td>
+<td>no</td>
+<td>IRI for the <em>measurement type</em> in the DFO Salmon Ontology (e.g., escapement abundance).</td>
+</tr>
+<tr class="even">
+<td>dimension_iri</td>
+<td>string</td>
+<td>no</td>
+<td>IRI for a dimension concept (e.g., age class, life stage, brood year) if the column is a dim.</td>
+</tr>
+<tr class="odd">
+<td>concept_scheme_iri</td>
+<td>string</td>
+<td>no</td>
+<td>IRI of the SKOS concept scheme if the column’s values come from a controlled vocabulary.</td>
+</tr>
+<tr class="even">
+<td>concept_iri</td>
+<td>string</td>
+<td>no</td>
+<td>IRI for the SKOS concept represented by this column, when it acts as a direct concept column.</td>
+</tr>
+</tbody>
+</table>
+<p>Guidance:</p>
+<ul>
+<li>Use <code>column_role = "id"</code> for identifiers such as <code>cu_id</code>, <code>survey_event_id</code>.</li>
+<li>Use <code>column_role = "measure"</code> for numeric quantities (e.g., escapement, run size, exploitation rate).</li>
+<li>Use <code>column_role = "dimension"</code> for grouping variables (e.g., CU, year, age, fishery).</li>
+<li>Use <code>column_role = "flag"</code> for quality flags, indicator codes.</li>
+<li>Use <code>column_role = "metadata"</code> for columns that describe the dataset or row but are not used in primary analyses.</li>
+</ul>
+</section>
+<section id="codes.csv-schema" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> <code>codes.csv</code> Schema</h1>
+<p>Optional file used for columns that have controlled enumerated values (status codes, methods, gear, etc.). This is where SKOS vocabularies plug in.</p>
+<p>Each row corresponds to one code value for one column.</p>
+<p>Required columns:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 6%">
+<col style="width: 8%">
+<col style="width: 67%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>dataset_id</td>
+<td>string</td>
+<td>yes</td>
+<td>References <code>dataset_id</code> in <code>dataset.csv</code>.</td>
+</tr>
+<tr class="even">
+<td>table_id</td>
+<td>string</td>
+<td>yes</td>
+<td>References <code>table_id</code> in <code>tables.csv</code>.</td>
+</tr>
+<tr class="odd">
+<td>column_name</td>
+<td>string</td>
+<td>yes</td>
+<td>Name of the column in the data file that uses this code.</td>
+</tr>
+<tr class="even">
+<td>code_value</td>
+<td>string</td>
+<td>yes</td>
+<td>Stored value in the data (e.g., <code>R</code>, <code>Y</code>, <code>G</code>, <code>critical</code>, <code>adipose_intact</code>).</td>
+</tr>
+<tr class="odd">
+<td>code_label</td>
+<td>string</td>
+<td>no</td>
+<td>Human-readable label corresponding to the code.</td>
+</tr>
+<tr class="even">
+<td>code_description</td>
+<td>string</td>
+<td>no</td>
+<td>Longer description of what the code means.</td>
+</tr>
+<tr class="odd">
+<td>concept_scheme_iri</td>
+<td>string</td>
+<td>no</td>
+<td>IRI of the SKOS concept scheme (e.g., the DFO Salmon Status scheme).</td>
+</tr>
+<tr class="even">
+<td>concept_iri</td>
+<td>string</td>
+<td>no</td>
+<td>IRI of the specific SKOS concept that <code>code_value</code> represents.</td>
+</tr>
+</tbody>
+</table>
+<p>Guidance:</p>
+<ul>
+<li><code>code_value</code> must match exactly the values present in the data table.</li>
+<li><code>code_label</code> and <code>code_description</code> can be used to auto-generate documentation.</li>
+<li><code>concept_scheme_iri</code> and <code>concept_iri</code> enable alignment with the larger salmon ontology and SKOS vocabularies.</li>
+</ul>
+</section>
+<section id="relationship-to-ontology-r-package-and-gpt" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Relationship to Ontology, R Package, and GPT</h1>
+<ul>
+<li>The <strong>ontology</strong> defines the formal semantics for:
+<ul>
+<li>measurement types (<code>metric_iri</code>),</li>
+<li>entities (<code>entity_iri</code>),</li>
+<li>dimensions (<code>dimension_iri</code>),</li>
+<li>concept schemes and concepts (<code>concept_scheme_iri</code>, <code>concept_iri</code>).</li>
+</ul></li>
+<li>The <strong>R package</strong> will:
+<ul>
+<li>read SDEP metadata and data files,</li>
+<li>validate packages against this specification,</li>
+<li>join in ontology/vocabulary information,</li>
+<li>help reshape data into analysis-friendly tidy formats.</li>
+</ul></li>
+<li>The <strong>custom GPT</strong> will:
+<ul>
+<li>help users draft <code>column_dictionary.csv</code> and <code>codes.csv</code>,</li>
+<li>suggest ontology-aligned IRIs,</li>
+<li>assist in decomposing compound terms into multiple columns with appropriate roles and IRIs,</li>
+<li>propose SDEP-compliant package structures for new projects.</li>
+</ul></li>
+</ul>
+</section>
+<section id="versioning-and-backwards-compatibility" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Versioning and Backwards Compatibility</h1>
+<ul>
+<li>Include a <code>spec_version</code> field in <code>dataset.csv</code> in future iterations if needed (e.g., <code>sdep-0.1.0</code>).</li>
+<li>New columns should be added in a backwards-compatible way:
+<ul>
+<li>existing tooling must continue to work when extra columns are present.</li>
+</ul></li>
+<li>Breaking changes to required columns or semantics should bump the major version.</li>
+</ul>
+</section>
+<section id="implementation-notes" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Implementation Notes</h1>
+<ul>
+<li>CSV files should use UTF-8 encoding and a comma delimiter by default.</li>
+<li>Dates should follow ISO 8601 where possible (e.g., <code>YYYY-MM-DD</code>); years can be encoded as integers.</li>
+<li>R and Python tooling should treat missing optional columns as <code>NA</code>/<code>null</code> without failing.</li>
+<li>The spec is intentionally minimal; domain-specific extensions (e.g., FSAR/SPSR templates) can be layered on top as recommended profiles.</li>
+</ul>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -668,7 +913,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/dfo-pacific-science\.github\.io\/data-stewardship-unit\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1003,7 +1248,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/agent-config/security-context.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/agent-config/security-context.md" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/reference_info/data_standards/salmon-data-exchange-package.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/reference_info/data_standards/salmon-data-exchange-package.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This site was created with <a href="https://quarto.org/">Quarto</a> and is hosted with <a href="https://pages.github.com/">GitHub Pages</a>.</p>
 </div>
