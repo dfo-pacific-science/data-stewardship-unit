@@ -12,7 +12,7 @@ The Data Stewardship Unit (DSU) has created the **GC DFO Salmon Data Controlled 
 The vocabulary tables below consolidate definitions from the DFO Salmon Ontology, regulatory documents, scientific literature, internal guidelines, and other sources into organized, searchable references designed to improve semantic clarity across DFO Pacific.
 
 ::: {.callout-note}
-**Missing term or definition change?** Open a ticket at <https://github.com/dfo-pacific-science/dfo-salmon-ontology/issues> and include: the term name (or new term request), the definition you propose, the source citation/URL, any synonym, and—if applicable—the desired hierarchy placement. For relationship fixes, state the current relationship and the change you want. Prefer GitHub; if needed, email FADSDataStewardship-GestiondesdonneesSFDA@dfo-mpo.gc.ca (may be slower).
+**Missing term or definition change?** Open a ticket in the [GCDFO Salmon Ontology Tracker](https://github.com/dfo-pacific-science/dfo-salmon-ontology/issues) and include: the term name (or new term request), the definition you propose, the source citation/URL, any synonym, and—if applicable—the desired hierarchy placement. For relationship fixes, state the current relationship and the change you want. GitHub is preferred; if needed, email [FADS Data Stewardship Unit](FADSDataStewardship-GestiondesdonneesSFDA@dfo-mpo.gc.ca) (note: response time may be longer). See our [Contributing Guidelines](https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/CONTRIBUTING.md) for more details. 
 :::
 
 
