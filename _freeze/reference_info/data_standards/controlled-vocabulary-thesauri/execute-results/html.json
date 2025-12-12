@@ -1,0 +1,17 @@
+{
+  "hash": "4e1f5aa8e26c8cdc8ba67cc92fc96aad",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"DFO Salmon Data Standards\"\nsubtitle: \"Controlled Vocabulary & Thesauri\"\nfreeze: auto\neval: false\nformat:\n  html:\n    toc: true\n---\n\nThe Data Stewardship Unit (DSU) has created the **GC DFO Salmon Data Controlled Vocabulary**—a standardized, community-curated list of key terms and definitions related to salmon data collection, analysis, and policy within Fisheries and Oceans Canada (DFO) Pacific Region.\n\nThe vocabulary tables below consolidate definitions from the DFO Salmon Ontology, regulatory documents, scientific literature, internal guidelines, and other sources into organized, searchable references designed to improve semantic clarity across DFO Pacific.\n\n::: {.callout-note}\n**Missing term or definition change?** Open a ticket in the <a href=\"https://github.com/dfo-pacific-science/dfo-salmon-ontology/issues\" target=\"_blank\">GCDFO Salmon Ontology Tracker</a> and include: the term name (or new term request), the definition you propose, the source citation/URL, any synonym, and the desired hierarchy placement (if applicable). For relationship fixes, state the current relationship and the change you want. GitHub is preferred; if needed, email the <a href=\"mailto:FADSDataStewardship-GestiondesdonneesSFDA@dfo-mpo.gc.ca\">FADS Data Stewardship Unit</a> (note: response time may be longer). See our <a href=\"https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/CONTRIBUTING.md\" target=\"_blank\">Contributing Guidelines</a> for more details.\n:::\n\n\n\n\n## Browse All Terms\n\n\n::: {.cell}\n\n:::\n\n\n## About the Vocabulary Structure\n\nUnder the hood, the vocabulary is formatted in SKOS (Simple Knowledge Organization System), a W3C-recommended framework for representing controlled vocabularies and thesauri. By modeling terms and their relationships (broader, narrower, related), SKOS makes it easy to:\n\n- Maintain consistent labels, definitions, and concept hierarchies.\n- Share and integrate the vocabulary with other systems that understand RDF.\n\nThe vocabulary is intended to be a living document that evolves with the needs of the community. It is maintained by the Data Stewardship Unit (DSU) within the Fisheries and Assessment Data Section (FADS) in the Pacific Region of Fisheries and Oceans Canada (DFO).\n\nThe vocabulary is more than a simple glossary: it is a formally structured controlled vocabulary that uses the W3C-endorsed Simple Knowledge Organization System (SKOS), enabling machine-readable formats for integration into data systems, APIs, and web applications. For a deep-dive on the how and why of controlled vocabularies, see our guide: [Support Controlled Vocabularies](https://dfo-pacific-science.github.io/data-stewardship-unit/tutorials/support_controlled_vocabs.html).\n\n## Contributing\n\nFile a GitHub Issue at https://github.com/dfo-pacific-science/data-stewardship-unit/issues\n\nOr contact the Data Stewardship Unit.\n",
+    "supporting": [
+      "controlled-vocabulary-thesauri_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
