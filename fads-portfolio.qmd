@@ -97,49 +97,6 @@ css: styles/custom.css
   </div>
 </div>
 
-<!-- Project 6: Qualark Data System -->
-<div class="card portfolio-card" data-modal="modal-project-6" data-status="Piloting" style="cursor: pointer;">
-  <div class="card-header">
-    <div class="d-flex justify-content-between align-items-center">
-      <strong>Qualark Data System</strong>
-      <span class="badge portfolio-status-badge"></span>
-    </div>
-    <p class="text-muted mb-2" style="font-size: 0.9rem;">Shared PSC–DFO data system to move Qualark sonar counts quickly for in-season forecasting.</p>
-    <div class="mt-2 d-flex justify-content-between align-items-center">
-      <a href="#" class="text-muted" onclick="event.stopPropagation();">[URL placeholder]</a>
-    </div>
-  </div>
-</div>
-
-<!-- Modal for Project 6 -->
-<div class="portfolio-modal" id="modal-project-6">
-  <div class="portfolio-modal-overlay"></div>
-  <div class="portfolio-modal-content">
-    <div class="portfolio-modal-header">
-      <h3>Qualark Data System</h3>
-      <button class="portfolio-modal-close" type="button" aria-label="Close">×</button>
-    </div>
-    <div class="portfolio-modal-body">
-      <div class="mb-3">
-        <span class="badge portfolio-status-badge"></span>
-      </div>
-      <p><strong>Challenge:</strong> In-season Qualark sonar counts need to move quickly and reliably between PSC and DFO teams to support forecasting.</p>
-      <p><strong>Solution:</strong> A shared data system for Qualark test fishing that standardizes ingest, validation, and sharing of sonar-derived counts.</p>
-      <p><strong>Outcome:</strong> Faster access to trusted counts for biologists and stewards during the season, reducing manual transfers.</p>
-      <p><strong>Key Features:</strong></p>
-      <ul>
-        <li>Shared PSC–DFO data access for Qualark sonar counts</li>
-        <li>Standardized ingest and validation steps (details pending)</li>
-        <li>Planned delivery for in-season forecasting workflows</li>
-      </ul>
-      <p><em>More detail needed: workflows, tech stack, and access URL once available.</em></p>
-      <div class="portfolio-screenshot-container">
-        <p class="text-center text-muted mb-0">📷 Screenshot coming soon</p>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- Project 5: Salmon Outlook Enhancements -->
 <div class="card portfolio-card" data-modal="modal-project-5" data-status="In Development" style="cursor: pointer;">
   <div class="card-header">
@@ -278,7 +235,7 @@ css: styles/custom.css
 </div>
 
 <!-- Project 10: metasalmon  -->
-<div class="card portfolio-card" data-modal="modal-project-10" data-status="In Development" style="cursor: pointer;">
+<div class="card portfolio-card" data-modal="modal-project-10" data-status="Operational" style="cursor: pointer;">
   <div class="card-header">
     <div class="d-flex justify-content-between align-items-center">
       <strong>metasalmon R package</strong>
@@ -329,6 +286,49 @@ css: styles/custom.css
 
 <!-- Internal Services Section -->
 <h2 class="portfolio-section-header">Internal DFO Services</h2>
+
+<!-- Project 6: Qualark Data System -->
+<div class="card portfolio-card" data-modal="modal-project-6" data-status="Piloting" style="cursor: pointer;">
+  <div class="card-header">
+    <div class="d-flex justify-content-between align-items-center">
+      <strong>Qualark Data System</strong>
+      <span class="badge portfolio-status-badge"></span>
+    </div>
+    <p class="text-muted mb-2" style="font-size: 0.9rem;">Shared PSC–DFO data system to move Qualark sonar counts quickly for in-season run size estimates.</p>
+    <div class="mt-2 d-flex justify-content-between align-items-center">
+      <a href="#" class="text-muted" onclick="event.stopPropagation();">[URL placeholder]</a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Project 6 -->
+<div class="portfolio-modal" id="modal-project-6">
+  <div class="portfolio-modal-overlay"></div>
+  <div class="portfolio-modal-content">
+    <div class="portfolio-modal-header">
+      <h3>Qualark Data System</h3>
+      <button class="portfolio-modal-close" type="button" aria-label="Close">×</button>
+    </div>
+    <div class="portfolio-modal-body">
+      <div class="mb-3">
+        <span class="badge portfolio-status-badge"></span>
+      </div>
+      <p><strong>Challenge:</strong> In-season Qualark sonar counts need to move quickly and reliably between PSC and DFO teams to support forecasting.</p>
+      <p><strong>Solution:</strong> A shared data system for Qualark test fishing that standardizes ingest, validation, and sharing of sonar-derived counts.</p>
+      <p><strong>Outcome:</strong> Faster access to trusted counts for biologists and stewards during the season, reducing manual transfers.</p>
+      <p><strong>Key Features:</strong></p>
+      <ul>
+        <li>Shared PSC–DFO data access for Qualark sonar counts</li>
+        <li>Standardized ingest and validation steps (details pending)</li>
+        <li>Planned delivery for in-season forecasting workflows</li>
+      </ul>
+      <p><em>More detail needed: workflows, tech stack, and access URL once available.</em></p>
+      <div class="portfolio-screenshot-container">
+        <p class="text-center text-muted mb-0">📷 Screenshot coming soon</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Project 1: Salmon Population Summary Repository -->
 <div class="card portfolio-card" data-modal="modal-project-1" data-status="Piloting" style="cursor: pointer;">
