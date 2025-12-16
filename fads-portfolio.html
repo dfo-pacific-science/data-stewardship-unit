@@ -344,12 +344,16 @@ ul.task-list li input[type="checkbox"] {
   max-width: 100% !important;
   box-sizing: border-box;
 }
+
+.portfolio-status-badge {
+  color: #fff;
+}
 </style>
 <!-- Preamble -->
 <div style="width: 100%; max-width: 100%; overflow: hidden; box-sizing: border-box;">
   <div class="mb-4 portfolio-preamble" style="padding: 1.5rem; background-color: #f8f9fa; border-radius: 8px; margin-bottom: 2rem;">
     <p class="mb-0" style="font-size: 1.1rem; line-height: 1.6; color: #333;">
-      The Data Stewardship Unit (DSU) has developed a portfolio of data services to support DFO's salmon data management needs. Our services include both <strong>internal DFO platforms</strong> that streamline data access and analysis for staff, and <strong>open access services</strong> that make salmon data and knowledge publicly available to researchers, stakeholders, and the broader community.
+      The Data Stewardship Unit (DSU) has developed a number of data services to support DFO's salmon data management needs. Our services include both <strong>internal DFO platforms</strong> that streamline data access and analysis for staff, and <strong>open access services</strong> that make salmon data and knowledge publicly available to researchers, stakeholders, and the broader community.
     </p>
   </div>
 </div>
@@ -359,19 +363,17 @@ ul.task-list li input[type="checkbox"] {
 <!-- Open Access Services Section -->
 <h2 class="portfolio-section-header anchored">Open Access Services</h2>
 
-<!-- Project 2: GC DFO Salmon Ontology -->
-<div class="card portfolio-card" data-modal="modal-project-2" style="cursor: pointer;">
+<!-- Project 2: Salmon Data Standards -->
+<div class="card portfolio-card" data-modal="modal-project-2" data-status="Operational" style="cursor: pointer;">
   <div class="card-header">
     <div class="d-flex justify-content-between align-items-center">
-      <strong>GC DFO Salmon Ontology</strong>
-      <span class="badge portfolio-status-badge" style="background-color: #9c27b0;">In Review</span>
+      <strong>Salmon Data Standards</strong>
+      <span class="badge portfolio-status-badge"></span>
     </div>
-    <div class="mt-2">
-      <p class="text-muted mb-2" style="font-size: 0.9rem;">A structured vocabulary and knowledge representation system for salmon data to improve interoperability and data integration.</p>
-    </div>
+    <p class="text-muted mb-2" style="font-size: 0.9rem;">Controlled vocabularies and ontology so salmon terms, code lists, and metadata stay aligned across projects.</p>
     <div class="mt-2 d-flex justify-content-between align-items-center">
-      <p><a href="https://dfo-pacific-science.github.io/dfo-salmon-ontology/" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">View Ontology</a></p>
-          <p><a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">View Repository</a></p>
+      <a href="https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/data_standards/controlled-vocabulary-thesauri.html" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Terms &amp; Definitions</a>
+      <a href="https://dfo-pacific-science.github.io/dfo-salmon-ontology/" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Ontology</a>
     </div>
   </div>
 </div>
@@ -381,14 +383,28 @@ ul.task-list li input[type="checkbox"] {
   <div class="portfolio-modal-overlay"></div>
   <div class="portfolio-modal-content">
     <div class="portfolio-modal-header">
-      <h3 class="anchored">GC DFO Salmon Ontology</h3>
+      <h3 class="anchored">Salmon Data Standards</h3>
       <button class="portfolio-modal-close" type="button" aria-label="Close">×</button>
     </div>
     <div class="portfolio-modal-body">
       <div class="mb-3">
-        <span class="badge portfolio-status-badge" style="background-color: #9c27b0;">In Review</span>
+        <span class="badge portfolio-status-badge"></span>
       </div>
-      <p>The GC DFO Salmon Ontology is a data stewardship and operational process ontology designed to provide a semantic framework for managing, integrating, and stewarding Pacific salmon data across Fisheries and Oceans Canada (DFO). Its goal is to make salmon data interoperable, discoverable, and analyzable with minimal friction for scientists, data stewards, and managers.</p>
+      <p><strong>Challenge:</strong> Salmon data arrives with inconsistent terms and code lists, making cross-project integration and analysis slow and error-prone.</p>
+      <p><strong>Solution:</strong> A maintained set of SKOS controlled vocabularies plus the GC DFO Salmon Ontology that links concepts, code lists, and metadata fields.</p>
+      <p><strong>Outcome:</strong> Biologists and stewards can align columns, codes, and documentation quickly, improving interoperability and trust.</p>
+      <p><strong>Key Features:</strong></p>
+      <ul>
+        <li>Published term lists with definitions for salmon entities and attributes</li>
+        <li>Ontology that maps relationships between terms and code lists</li>
+        <li>Versioned HTML site and GitHub sources for transparency</li>
+        <li>Supports ontology-aware data packages and code lists</li>
+      </ul>
+      <p>
+        <a href="https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/data_standards/controlled-vocabulary-thesauri.html" target="_blank" rel="noopener noreferrer">Terms &amp; Definitions</a>
+        &nbsp;|&nbsp;
+        <a href="https://dfo-pacific-science.github.io/dfo-salmon-ontology/" target="_blank" rel="noopener noreferrer">Ontology</a>
+      </p>
       <div class="portfolio-screenshot-container">
         <img src="images/data_projects/ontology.png" alt="GC DFO Salmon Ontology homepage" class="img-fluid" style="max-width: 100%; height: auto; border-radius: 4px;">
       </div>
@@ -397,15 +413,13 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 <!-- Project 6: Qualark Data System -->
-<div class="card portfolio-card" data-modal="modal-project-6" style="cursor: pointer;">
+<div class="card portfolio-card" data-modal="modal-project-6" data-status="Piloting" style="cursor: pointer;">
   <div class="card-header">
     <div class="d-flex justify-content-between align-items-center">
       <strong>Qualark Data System</strong>
-      <span class="badge portfolio-status-badge" style="background-color: #ff9800;">In Development</span>
+      <span class="badge portfolio-status-badge"></span>
     </div>
-    <div class="mt-2">
-      <p class="text-muted mb-2" style="font-size: 0.9rem;">A data management system for Qualark salmon data to support research and management needs.</p>
-    </div>
+    <p class="text-muted mb-2" style="font-size: 0.9rem;">Shared PSC–DFO data system to move Qualark sonar counts quickly for in-season forecasting.</p>
     <div class="mt-2 d-flex justify-content-between align-items-center">
       <a href="#" class="text-muted" onclick="event.stopPropagation();">[URL placeholder]</a>
     </div>
@@ -422,9 +436,18 @@ ul.task-list li input[type="checkbox"] {
     </div>
     <div class="portfolio-modal-body">
       <div class="mb-3">
-        <span class="badge portfolio-status-badge" style="background-color: #ff9800;">In Development</span>
+        <span class="badge portfolio-status-badge"></span>
       </div>
-      <p>[Description placeholder - detailed project information will be added here]</p>
+      <p><strong>Challenge:</strong> In-season Qualark sonar counts need to move quickly and reliably between PSC and DFO teams to support forecasting.</p>
+      <p><strong>Solution:</strong> A shared data system for Qualark test fishing that standardizes ingest, validation, and sharing of sonar-derived counts.</p>
+      <p><strong>Outcome:</strong> Faster access to trusted counts for biologists and stewards during the season, reducing manual transfers.</p>
+      <p><strong>Key Features:</strong></p>
+      <ul>
+        <li>Shared PSC–DFO data access for Qualark sonar counts</li>
+        <li>Standardized ingest and validation steps (details pending)</li>
+        <li>Planned delivery for in-season forecasting workflows</li>
+      </ul>
+      <p><em>More detail needed: workflows, tech stack, and access URL once available.</em></p>
       <div class="portfolio-screenshot-container">
         <p class="text-center text-muted mb-0">📷 Screenshot coming soon</p>
       </div>
@@ -433,17 +456,16 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 <!-- Project 5: Salmon Outlook Enhancements -->
-<div class="card portfolio-card" data-modal="modal-project-5" style="cursor: pointer;">
+<div class="card portfolio-card" data-modal="modal-project-5" data-status="In Development" style="cursor: pointer;">
   <div class="card-header">
     <div class="d-flex justify-content-between align-items-center">
       <strong>Salmon Outlook Enhancements</strong>
-      <span class="badge portfolio-status-badge" style="background-color: #ff9800;">In Development</span>
+      <span class="badge portfolio-status-badge"></span>
     </div>
-    <div class="mt-2">
-      <p class="text-muted mb-2" style="font-size: 0.9rem;">Modernizing the annual Salmon Outlook process with streamlined data collection and automated product creation.</p>
-    </div>
+    <p class="text-muted mb-2" style="font-size: 0.9rem;">Structured data collection and automated products for the annual Salmon Outlook.</p>
     <div class="mt-2 d-flex justify-content-between align-items-center">
-      <a href="#" class="text-muted" onclick="event.stopPropagation();">[URL placeholder]</a>
+      <a href="https://github.com/dfo-pacific-science/salmon-outlook-report" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Repository</a>
+      <a href="#" class="text-muted" onclick="event.stopPropagation();">Survey Links (pending)</a>
     </div>
   </div>
 </div>
@@ -458,18 +480,20 @@ ul.task-list li input[type="checkbox"] {
     </div>
     <div class="portfolio-modal-body">
       <div class="mb-3">
-        <span class="badge portfolio-status-badge" style="background-color: #ff9800;">In Development</span>
+        <span class="badge portfolio-status-badge"></span>
       </div>
-      <p><strong>Background:</strong> The Salmon Outlook is an annual process that provides categorical and numeric estimates of abundance for the upcoming year by Stock Management Unit (SMU) and/or Conservation Unit (CU). These estimates help inform harvest planning decisions.</p>
-      <p><strong>Business Problem:</strong> The Section Head for Salmon Stock Assessment prepares these Outlooks every year, often with quick turnaround from data submission to presentation. In the past, contributing biologists entered results into Word documents, which were then copied into presentations and reports. A more efficient process has been requested.</p>
-      <p><strong>Objective:</strong> Modernize the data flow for Salmon Outlooks by streamlining data collection and product creation. This includes better ways to gather data (using surveys), improving final products (such as reorganized tables based on new Crosswalk data and more visually engaging presentations), and automating parts of the process to reduce manual work.</p>
-      <p><strong>Deliverables:</strong></p>
+      <p><strong>Challenge:</strong> Outlook data arrives quickly from many biologists and must be turned into tables, slides, and reports with little lead time.</p>
+      <p><strong>Solution:</strong> Survey123 forms to collect Outlook inputs plus R workflows that auto-generate presentations and reports.</p>
+      <p><strong>Outcome:</strong> Faster, repeatable Outlook products with clearer tables and less manual copy/paste.</p>
+      <p><strong>Key Features:</strong></p>
       <ul>
-        <li>Two Survey123 forms: one to collect Outlook information for each SMU and/or CU, and another to collect additional metrics (management targets, reference points, etc.) when the data become available.</li>
-        <li>R code to create semi-automated presentations tailored for different audiences (e.g., executives, fisheries managers, external teams) and generate an automated report using R Markdown.</li>
-        <li>Documented, stored, and versioned data and code, including versioned code (Zenodo), raw survey data stored in the Salmon Population Summary Repository, and submission of raw data (current and possibly historical) to the Open Government Portal.</li>
+        <li>Survey123 forms for Outlook inputs and follow-up metrics (targets, reference points)</li>
+        <li>R code to build tailored slide decks and automated reports</li>
+        <li>Versioned data and code storage with planned publication to Open Government Portal</li>
       </ul>
-      <p>The code for creating the presentations and final report are currently available on GitHub.</p>
+      <p>
+        <a href="https://github.com/dfo-pacific-science/salmon-outlook-report" target="_blank" rel="noopener noreferrer">Repository</a>
+      </p>
       <div class="portfolio-screenshot-container">
         <p class="text-center text-muted mb-0">📷 Screenshot coming soon</p>
       </div>
@@ -478,17 +502,16 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 <!-- Project 8: Salmon SMU-CU-DU Crosswalk -->
-<div class="card portfolio-card" data-modal="modal-project-8" style="cursor: pointer;">
+<div class="card portfolio-card" data-modal="modal-project-8" data-status="Operational" style="cursor: pointer;">
   <div class="card-header">
     <div class="d-flex justify-content-between align-items-center">
       <strong>Salmon SMU-CU-DU Crosswalk</strong>
-      <span class="badge portfolio-status-badge" style="background-color: #4caf50;">In Production</span>
+      <span class="badge portfolio-status-badge"></span>
     </div>
-    <div class="mt-2">
-      <p class="text-muted mb-2" style="font-size: 0.9rem;">An open-access data repository providing linkages between Stock Management Units, Conservation Units, and Designatable Units.</p>
-    </div>
+    <p class="text-muted mb-2" style="font-size: 0.9rem;">Open data linking SMUs, CUs, and DUs so assessments and reporting stay aligned.</p>
     <div class="mt-2 d-flex justify-content-between align-items-center">
-      <a href="https://github.com/dfo-pacific-science/Salmon-SMU-CU-DU-Crosswalk" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">View Repository</a>
+      <a href="https://github.com/dfo-pacific-science/Salmon-SMU-CU-DU-Crosswalk" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Repository</a>
+      <a href="#" class="text-muted" onclick="event.stopPropagation();">Data Access (link pending)</a>
     </div>
   </div>
 </div>
@@ -503,16 +526,15 @@ ul.task-list li input[type="checkbox"] {
     </div>
     <div class="portfolio-modal-body">
       <div class="mb-3">
-        <span class="badge portfolio-status-badge" style="background-color: #4caf50;">In Production</span>
+        <span class="badge portfolio-status-badge"></span>
       </div>
-      <p><strong>Business Problem:</strong> Salmon groups are managed and assessed at different organizational levels (Stock Management Units, Conservation Units, and Designatable Units), creating challenges in linking information across Science and Fisheries and Resource Management Branches, as well as across organizations (DFO and COSEWIC).</p>
-      <p><strong>Solution:</strong> The Salmon SMU-CU-DU Crosswalk is an open-access data repository that provides linkages between stock units, tracks CU revisions, and establishes a common vocabulary for DFO. The crosswalk table links Stock Management Units (SMU), Conservation Units (CU), and Designatable Units (DU) to help communicate and assess salmon stocks at distinct levels.</p>
-      <p><strong>Outcome:</strong> This crosswalk enables seamless communication between branches and organizations, supports consistent stock assessment, and provides version-controlled data that is reviewed and updated every three months to ensure accuracy.</p>
+      <p><strong>Challenge:</strong> Salmon groups are managed at SMU, CU, and DU levels, making it hard to join data and keep revisions straight.</p>
+      <p><strong>Solution:</strong> A published crosswalk that links SMU, CU, and DU identifiers, tracks CU revisions, and provides a common vocabulary.</p>
+      <p><strong>Outcome:</strong> Consistent assessments and communication across DFO and partners, with versioned releases every three months.</p>
       <p><strong>Key Features:</strong></p>
       <ul>
-        <li>Linkages between stock units (SMU, CU, DU)</li>
-        <li>CU revision tracking</li>
-        <li>Life history type information</li>
+        <li>Linkages between SMU, CU, and DU identifiers</li>
+        <li>CU revision tracking and life-history info</li>
         <li>Version-controlled releases with changelog</li>
         <li>Data dictionary for consistent interpretation</li>
       </ul>
@@ -524,15 +546,13 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 <!-- Project 9: Salmon Escapement Estimates Toolkit -->
-<div class="card portfolio-card" data-modal="modal-project-9" style="cursor: pointer;">
+<div class="card portfolio-card" data-modal="modal-project-9" data-status="Operational" style="cursor: pointer;">
   <div class="card-header">
     <div class="d-flex justify-content-between align-items-center">
       <strong>Salmon Escapement Estimates Toolkit</strong>
-      <span class="badge portfolio-status-badge" style="background-color: #4caf50;">In Production</span>
+      <span class="badge portfolio-status-badge"></span>
     </div>
-    <div class="mt-2">
-      <p class="text-muted mb-2" style="font-size: 0.9rem;">A web-based toolkit for classifying and analyzing salmon escapement estimates to support stock assessment.</p>
-    </div>
+    <p class="text-muted mb-2" style="font-size: 0.9rem;">Shiny app to classify and review salmon escapement estimates for stock assessment.</p>
     <div class="mt-2 d-flex justify-content-between align-items-center">
       <a href="https://dfo-pac-sci-dev.shinyapps.io/smn-escapement-toolkit/" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Access Toolkit</a>
     </div>
@@ -549,12 +569,20 @@ ul.task-list li input[type="checkbox"] {
     </div>
     <div class="portfolio-modal-body">
       <div class="mb-3">
-        <span class="badge portfolio-status-badge" style="background-color: #4caf50;">In Production</span>
+        <span class="badge portfolio-status-badge"></span>
       </div>
-      <p>[Description placeholder - detailed project information will be added here]</p>
+      <p><strong>Challenge:</strong> Escapement estimates need consistent classification and review to support stock assessments.</p>
+      <p><strong>Solution:</strong> A Shiny-based toolkit that walks users through classification and provides reference visuals.</p>
+      <p><strong>Outcome:</strong> More consistent escapement inputs and transparency for assessment teams.</p>
+      <p><strong>Key Features:</strong></p>
+      <ul>
+        <li>Guided classification workflow for escapement estimates</li>
+        <li>Hosted Shiny app for easy access</li>
+        <li>Screenshots and examples for training</li>
+      </ul>
       <p>
         <a href="https://dfo-pac-sci-dev.shinyapps.io/smn-escapement-toolkit/" target="_blank" rel="noopener noreferrer">
-          Access the Salmon Escapement Estimates Classification Toolkit
+          Access the Salmon Escapement Estimates Toolkit
         </a>
       </p>
       <div class="portfolio-screenshot-container">
@@ -565,17 +593,16 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 <!-- Project 10: metasalmon  -->
-<div class="card portfolio-card" data-modal="modal-project-10" style="cursor: pointer;">
+<div class="card portfolio-card" data-modal="modal-project-10" data-status="In Development" style="cursor: pointer;">
   <div class="card-header">
     <div class="d-flex justify-content-between align-items-center">
       <strong>metasalmon R package</strong>
-      <span class="badge portfolio-status-badge" style="background-color: #ff9800;">In Development</span>
+      <span class="badge portfolio-status-badge"></span>
     </div>
-    <div class="mt-2">
-      <p class="text-muted mb-2" style="font-size: 0.9rem;">R package for creating portable, ontology-aware Salmon Data Packages. Wrap your analysis-ready tables into Frictionless Data Packages extended with semantic fields (IRIs, concept schemes) that link to the DFO Salmon Ontology.</p>
-    </div>
+    <p class="text-muted mb-2" style="font-size: 0.9rem;">R package for ontology-aware salmon data packages with unified semantic fields and code lists.</p>
     <div class="mt-2 d-flex justify-content-between align-items-center">
-      <a href="https://dfo-pacific-science.github.io/metasalmon/" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">View Package Documentation</a>
+      <a href="https://dfo-pacific-science.github.io/metasalmon/" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Documentation</a>
+      <a href="https://github.com/dfo-pacific-science/metasalmon" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Repository</a>
     </div>
   </div>
 </div>
@@ -590,18 +617,19 @@ ul.task-list li input[type="checkbox"] {
     </div>
     <div class="portfolio-modal-body">
       <div class="mb-3">
-        <span class="badge portfolio-status-badge" style="background-color: #ff9800;">In Development</span>
+        <span class="badge portfolio-status-badge"></span>
       </div>
+      <p><strong>Challenge:</strong> Salmon data arrives as messy spreadsheets without standardized semantics, making it hard for biologists and stewards to align columns, code lists, and metadata to the evolving DFO Salmon Ontology.</p>
+      <p><strong>Solution:</strong> The Metasalmon 0.0.2 update unifies semantic fields (term_iri/term_type), streamlines code-list handling, and ships clear GPT/R workflows plus schemas and pkgdown docs to build frictionless-style CSV data packages.</p>
+      <p><strong>Outcome:</strong> Teams can rapidly produce ontology-aware, validated data packages and code lists that are ready for analysis, sharing, and future knowledge-graph ingestion—without inventing IRIs or guessing schemas.</p>
       <p><strong>Key Features:</strong></p>
       <ul>
-        <li>Dictionary inference: Automatically propose starter dictionaries from your data frames</li>
-        <li> Dictionary validation: Validate dictionary schemas and semantic fields</li>
-        <li>Data transformation: Apply dictionaries to rename columns, coerce types, and apply factor levels</li>
-        <li>Package creation: Assemble Frictionless Data Packages with salmon-specific semantic extensions</li>
-        <li>Package reading: Load packages back into R as tidy tibbles with metadata</li>
-        </ul>
-
-<p></p>
+        <li>Unified semantic fields (term_iri, term_type) across dictionary and codes schemas</li>
+        <li>SKOS concept schemes confined to code lists (concept_scheme_iri in codes.csv)</li>
+        <li>Updated GPT collaboration prompts and Custom GPT template to avoid invented IRIs</li>
+        <li>Validated R workflows (infer/validate/apply/package) with refreshed pkgdown docs and NEWS for 0.0.2</li>
+        <li>Clear ontology-gap handling with proposed terms and relationships (broader/narrower or superclass)</li>
+      </ul>
       <p>
         <a href="https://dfo-pacific-science.github.io/metasalmon/" target="_blank" rel="noopener noreferrer">
           View Package
@@ -618,17 +646,17 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="portfolio-section-header anchored">Internal DFO Services</h2>
 
 <!-- Project 1: Salmon Population Summary Repository -->
-<div class="card portfolio-card" data-modal="modal-project-1" style="cursor: pointer;">
+<div class="card portfolio-card" data-modal="modal-project-1" data-status="Piloting" style="cursor: pointer;">
   <div class="card-header">
     <div class="d-flex justify-content-between align-items-center">
       <strong>Salmon Population Summary Repository</strong>
-      <span class="badge portfolio-status-badge" style="background-color: #2196f3;">Testing</span>
+      <span class="badge portfolio-status-badge"></span>
     </div>
     <div class="mt-2">
       <p class="text-muted mb-2" style="font-size: 0.9rem;">A regional database that centralizes key salmon population index data to support stock assessments and improve transparency.</p>
     </div>
     <div class="mt-2 d-flex justify-content-between align-items-center">
-      <a href="http://ci-bc-eos-2/" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Access Repository</a>
+      <a href="http://ci-bc-eos-2/" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Open Application</a>
     </div>
   </div>
 </div>
@@ -643,18 +671,18 @@ ul.task-list li input[type="checkbox"] {
     </div>
     <div class="portfolio-modal-body">
       <div class="mb-3">
-        <span class="badge portfolio-status-badge" style="background-color: #2196f3;">Testing</span>
+        <span class="badge portfolio-status-badge"></span>
       </div>
-      <p><strong>Business Problem:</strong> Core salmon population index data, such as spawner abundance, catch, recruitment, and exploitation rates, are currently scattered across multiple local spreadsheets, custom databases, and program-specific data systems. This fragmentation creates major challenges in transparency, efficiency, succession, and trust. Critical derived indices used in stock assessments (e.g., recruitment estimates, exploitation rates, age-specific indices) are not accessible through any regional repository, despite being essential for routine FSAR production and strategic program evaluation.</p>
-      <p><strong>Solution:</strong> The Salmon Population Summary Repository is a regional database designed to compile, standardize, and store key salmon population index data and their associated metadata. SPSR does not replace existing source systems; instead, it centralizes derived indices and their documentation to ensure the data are FAIR (Findable, Accessible, Interoperable, and Reusable). The database will present standardized, regionally consistent datasets that support stock assessments, forecasting, indicator trending, strategic monitoring reviews, and inter-branch communication.</p>
-      <p><strong>Outcome:</strong> SPSR improves the quality, transparency, and efficiency of salmon stock assessments by providing a single, authoritative location for index data and methods. It supports FSAR production, strengthens succession planning by documenting assumptions and infilling methods, and enables program-level analyses such as monitoring performance reviews and identification of data gaps. Over time, SPSR will serve as a foundation for expanded analytical tools, additional indicator repositories, and open-data products.</p>
+      <p><strong>Challenge:</strong> Core salmon population index data (spawner, catch, recruitment, exploitation, age) sit in many spreadsheets and local systems, slowing FSAR production and reducing transparency.</p>
+      <p><strong>Solution:</strong> A regional SPSR database that centralizes derived indices and metadata without replacing source systems, making data FAIR and consistent.</p>
+      <p><strong>Outcome:</strong> Faster, more transparent assessments with versioned index data, documented methods, and better inter-branch communication.</p>
       <p><strong>Key Features:</strong></p>
       <ul>
-        <li>Regional compilation of index data: Spawner indices, catch indices, recruitment indices, exploitation rates, and hatchery contribution metrics at Population, CU, and SMU scales. CU revision tracking.</li>
-        <li>Metadata integration: Clearly documents methods, assumptions, infilling approaches, and data quality notes to support transparency and trust. Version-controlled releases with changelog.</li>
-        <li>Standardized stock reference data: Includes biological benchmarks, limit reference points, and removal references relevant to CUs and SMUs.</li>
-        <li>Support for standardized FSAR outputs: Curated data feeds for spawner, catch, recruitment, exploitation, and hatchery contribution trends.</li>
-        <li>Version-controlled releases: Ensures consistency over time, supports reproducible assessments, and enables orderly updates.</li>
+        <li>Regional compilation of spawner, catch, recruitment, exploitation, and hatchery metrics</li>
+        <li>Metadata on methods, assumptions, infilling, and data quality</li>
+        <li>Standardized reference data (benchmarks, limit/removal references)</li>
+        <li>Feeds for FSAR outputs and monitoring reviews</li>
+        <li>Version-controlled releases with changelog</li>
       </ul>
       <p>
         <a href="http://ci-bc-eos-2/" target="_blank" rel="noopener noreferrer">
@@ -669,17 +697,16 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 <!-- Project 3: Fishery Operations System Data Explorer -->
-<div class="card portfolio-card" data-modal="modal-project-3" style="cursor: pointer;">
+<div class="card portfolio-card" data-modal="modal-project-3" data-status="Operational" style="cursor: pointer;">
   <div class="card-header">
     <div class="d-flex justify-content-between align-items-center">
       <strong>Fishery Operations System Data Explorer</strong>
-      <span class="badge portfolio-status-badge" style="background-color: #4caf50;">In Production</span>
+      <span class="badge portfolio-status-badge"></span>
     </div>
-    <div class="mt-2">
-      <p class="text-muted mb-2" style="font-size: 0.9rem;">A self-service Power BI platform providing access to commercial salmon catch, openings, and fishing vessel activity data.</p>
-    </div>
+    <p class="text-muted mb-2" style="font-size: 0.9rem;">Self-service Power BI access to commercial salmon catch, openings, and vessel activity.</p>
     <div class="mt-2 d-flex justify-content-between align-items-center">
-      <a href="https://app.fabric.microsoft.com/Redirect?action=OpenReport&amp;appId=77d0b455-d761-4543-b126-999f29b0779f&amp;reportObjectId=2cc62024-3c0a-4bb8-b161-bec67f91d906&amp;ctid=1594fdae-a1d9-4405-915d-011467234338&amp;reportPage=28134eafb5d5b2d10df5&amp;pbi_source=appShareLink&amp;portalSessionId=7a41f3f6-47b9-4943-ae12-d0998bff6ee1" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Access Platform</a>
+      <a href="https://app.fabric.microsoft.com/Redirect?action=OpenReport&amp;appId=77d0b455-d761-4543-b126-999f29b0779f&amp;reportObjectId=2cc62024-3c0a-4bb8-b161-bec67f91d906&amp;ctid=1594fdae-a1d9-4405-915d-011467234338&amp;reportPage=28134eafb5d5b2d10df5&amp;pbi_source=appShareLink&amp;portalSessionId=7a41f3f6-47b9-4943-ae12-d0998bff6ee1" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Open Application</a>
+      <a href="#" class="text-muted" onclick="event.stopPropagation();">Documentation (pending)</a>
     </div>
   </div>
 </div>
@@ -694,16 +721,22 @@ ul.task-list li input[type="checkbox"] {
     </div>
     <div class="portfolio-modal-body">
       <div class="mb-3">
-        <span class="badge portfolio-status-badge" style="background-color: #4caf50;">In Production</span>
+        <span class="badge portfolio-status-badge"></span>
       </div>
-      <p><strong>Business Problem:</strong> Accessing summary statistics from the Fishery Operations System (FOS) Oracle database was inefficient, requiring SQL accounts or manual data requests, which created barriers for staff and burdened data custodians.</p>
-      <p><strong>Solution:</strong> The Fishery Operations System Internal Data Explorer is a self-service Power BI platform that allows DFO staff to access and download pre-computed summary statistics for commercial salmon catch, openings, and fishing vessel activity.
-      <br>
-      <a href="https://app.fabric.microsoft.com/Redirect?action=OpenReport&amp;appId=77d0b455-d761-4543-b126-999f29b0779f&amp;reportObjectId=2cc62024-3c0a-4bb8-b161-bec67f91d906&amp;ctid=1594fdae-a1d9-4405-915d-011467234338&amp;reportPage=28134eafb5d5b2d10df5&amp;pbi_source=appShareLink&amp;portalSessionId=7a41f3f6-47b9-4943-ae12-d0998bff6ee1" target="_blank" rel="noopener noreferrer">
-        Click here to access the FOS Data Explorer
-      </a>
+      <p><strong>Challenge:</strong> Staff needed FOS summary statistics but access required SQL accounts or manual data pulls from custodians.</p>
+      <p><strong>Solution:</strong> A self-service Power BI app with pre-computed commercial salmon catch, openings, and vessel activity summaries.</p>
+      <p><strong>Outcome:</strong> Faster access to trusted FOS summaries with less load on data custodians.</p>
+      <p><strong>Key Features:</strong></p>
+      <ul>
+        <li>Pre-computed catch, openings, and vessel activity summaries</li>
+        <li>Self-service Power BI access for authorized staff</li>
+        <li>Downloadable outputs for analysis and reporting</li>
+      </ul>
+      <p>
+        <a href="https://app.fabric.microsoft.com/Redirect?action=OpenReport&amp;appId=77d0b455-d761-4543-b126-999f29b0779f&amp;reportObjectId=2cc62024-3c0a-4bb8-b161-bec67f91d906&amp;ctid=1594fdae-a1d9-4405-915d-011467234338&amp;reportPage=28134eafb5d5b2d10df5&amp;pbi_source=appShareLink&amp;portalSessionId=7a41f3f6-47b9-4943-ae12-d0998bff6ee1" target="_blank" rel="noopener noreferrer">
+          Open the FOS Data Explorer
+        </a>
       </p>
-      <p><strong>Outcome:</strong> This platform streamlines data access, reduces reliance on requests to data custodians, and empowers staff with timely insights, improving efficiency, decision-making, and fisheries management.</p>
       <div class="portfolio-screenshot-container">
         <img src="images/data_projects/fos.jpeg" alt="Fishery Operations System Data Explorer dashboard showing commercial salmon catch insights" class="img-fluid" style="max-width: 100%; height: auto; border-radius: 4px;">
       </div>
@@ -712,11 +745,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 <!-- Project 4: Genetic Results Database -->
-<div class="card portfolio-card" data-modal="modal-project-4" style="cursor: pointer;">
+<div class="card portfolio-card" data-modal="modal-project-4" data-status="In Development" style="cursor: pointer;">
   <div class="card-header">
     <div class="d-flex justify-content-between align-items-center">
       <strong>Genetic Results Database</strong>
-      <span class="badge portfolio-status-badge" style="background-color: #ff9800;">In Development</span>
+      <span class="badge portfolio-status-badge"></span>
     </div>
     <div class="mt-2">
       <p class="text-muted mb-2" style="font-size: 0.9rem;">A centralized repository for genetic stock identification and parentage-based tagging results to improve consistency and integration across DFO programs.</p>
@@ -735,24 +768,22 @@ ul.task-list li input[type="checkbox"] {
       <h3 class="anchored">Genetic Results Database</h3>
       <button class="portfolio-modal-close" type="button" aria-label="Close">×</button>
     </div>
-    <div class="portfolio-modal-body">
+<div class="portfolio-modal-body">
       <div class="mb-3">
-        <span class="badge portfolio-status-badge" style="background-color: #ff9800;">In Development</span>
+        <span class="badge portfolio-status-badge"></span>
       </div>
-      <p><strong>Business Problem:</strong> Genetic stock identification (GSI) and parentage-based tagging (PBT) results are currently managed in a fragmented and inconsistent manner across DFO programs, labs, and regional groups. Over time, multiple teams have developed their own storage systems, file formats, and vocabulary for managing genetic results. This has led to duplicated effort, siloed repositories, inconsistent metadata, and frequent disruptions whenever MGL updates its reporting formats.</p>
-      <p>The Molecular Genetics Laboratory (MGL) that produces genetic results is not designed or resourced to serve as a long-term data custodian for diverse user groups. With the transition to repunit-level reporting, driven by the biological and statistical limitations of population-level resolution, genetic results have become "living data products" that change over time with new baselines, biomarkers, and analytical tools. Without a centralized system, programs struggle to maintain consistency, traceability, and interoperability across genetic datasets.</p>
-      <p><strong>Proposed Solution:</strong> The Genetic Results Database (GRD) is a centralized, well-documented repository designed to support long-term management, standardization, and integration of genetic results (GSI and PBT) generated by MGL and used by DFO programs. GRD will consolidate these results in one authoritative location, apply automated ingestion and validation pipelines, and align metadata, terminology, and data structure across users.</p>
-      <p>The goal is not to replace existing functional systems, but to determine whether a shared enterprise repository can meet the common needs of programs that rely on genetic results, improve data stewardship, and reduce inefficiencies.</p>
-      <p><strong>Outcome:</strong> The GRD will improve consistency, transparency, and efficiency in how genetic results are used across DFO. It will provide a single source of truth for GSI/PBT results, enable better integration with other systems, support mixed-stock fisheries analyses, and strengthen long-term stewardship. As genetic technologies evolve, GRD will ensure results remain traceable, comparable, and reusable over time.</p>
+      <p><strong>Challenge:</strong> GSI and PBT results are scattered across teams with differing formats and vocabularies, making reuse and integration difficult—especially as baselines and methods evolve.</p>
+      <p><strong>Solution:</strong> A centralized Genetic Results Database that ingests, validates, and standardizes GSI/PBT outputs with common metadata and terminology.</p>
+      <p><strong>Outcome:</strong> A single, traceable source for genetic results that supports mixed-stock analyses and interoperability with other systems.</p>
       <p><strong>Key Features:</strong></p>
       <ul>
-        <li>Centralized repository for all MGL-produced genetic results (GSI and PBT) used across DFO.</li>
-        <li>Standardized data structures and controlled vocabulary to harmonize terminology and reduce ambiguity.</li>
-        <li>Automated ingestion and validation workflows converting raw MGL output into clean, analysis-ready formats.</li>
-        <li>Comprehensive, version-controlled metadata for "living" genetic results: tracks baselines, biomarker sets, analytical methods, contributors, and processing history, while preserving historical context and accommodating updates as biomarkers, baselines, and analytical tools evolve.</li>
-        <li>Interoperability with other DFO systems (e.g., STAMP) to improve integration and data linkage.</li>
-        <li>Clear documentation, schema definitions, and onboarding materials to support consistent data use across programs.</li>
+        <li>Authoritative repository for GSI and PBT results</li>
+        <li>Standardized data structures and controlled vocabulary</li>
+        <li>Automated ingest and validation pipelines</li>
+        <li>Versioned metadata capturing baselines, biomarkers, methods, and processing history</li>
+        <li>Planned interoperability with systems like STAMP</li>
       </ul>
+      <p><em>Access URL and architecture details pending.</em></p>
       <div class="portfolio-screenshot-container">
         <p class="text-center text-muted mb-0">📷 Screenshot coming soon</p>
       </div>
@@ -761,17 +792,16 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 <!-- Project 7: Salmon Data Wiki -->
-<div class="card portfolio-card" data-modal="modal-project-7" style="cursor: pointer;">
+<div class="card portfolio-card" data-modal="modal-project-7" data-status="In Development" style="cursor: pointer;">
   <div class="card-header">
     <div class="d-flex justify-content-between align-items-center">
       <strong>Salmon Data Wiki</strong>
-      <span class="badge portfolio-status-badge" style="background-color: #9c27b0;">In Review</span>
+      <span class="badge portfolio-status-badge"></span>
     </div>
-    <div class="mt-2">
-      <p class="text-muted mb-2" style="font-size: 0.9rem;">A collaborative knowledge base documenting salmon data sources, methods, and best practices for DFO staff.</p>
-    </div>
+    <p class="text-muted mb-2" style="font-size: 0.9rem;">Collaborative wiki for salmon data sources, methods, and best practices.</p>
     <div class="mt-2 d-flex justify-content-between align-items-center">
       <a href="#" class="text-muted" onclick="event.stopPropagation();">[URL placeholder]</a>
+      <a href="#" class="text-muted" onclick="event.stopPropagation();">Contribute (pending)</a>
     </div>
   </div>
 </div>
@@ -786,9 +816,18 @@ ul.task-list li input[type="checkbox"] {
     </div>
     <div class="portfolio-modal-body">
       <div class="mb-3">
-        <span class="badge portfolio-status-badge" style="background-color: #9c27b0;">In Review</span>
+        <span class="badge portfolio-status-badge"></span>
       </div>
-      <p>[Description placeholder - detailed project information will be added here]</p>
+      <p><strong>Challenge:</strong> Knowledge about salmon data sources and methods is scattered across documents and teams.</p>
+      <p><strong>Solution:</strong> A collaborative wiki to collect data source guides, methods, and best practices for DFO staff.</p>
+      <p><strong>Outcome:</strong> Faster onboarding and more consistent practices for biologists, analysts, and stewards.</p>
+      <p><strong>Key Features (planned):</strong></p>
+      <ul>
+        <li>Pages for data sources, methods, and stewardship practices</li>
+        <li>Contribution workflow for teams to add and update content</li>
+        <li>Searchable, linkable entries across the site</li>
+      </ul>
+      <p><em>Needs: final URL, contribution process, and initial page list.</em></p>
       <div class="portfolio-screenshot-container">
         <p class="text-center text-muted mb-0">📷 Screenshot coming soon</p>
       </div>
@@ -806,6 +845,33 @@ document.addEventListener('DOMContentLoaded', function() {
   const modals = document.querySelectorAll('.portfolio-modal');
   const closeButtons = document.querySelectorAll('.portfolio-modal-close');
   const overlays = document.querySelectorAll('.portfolio-modal-overlay');
+
+  const statusColors = {
+    'planning': '#6f42c1',
+    'in development': '#ff9800',
+    'piloting': '#2196f3',
+    'operational': '#2e8b57'
+  };
+
+  function applyStatus(badge, status) {
+    if (!badge || !status) return;
+    const normalizedStatus = status.trim().toLowerCase();
+    badge.textContent = status;
+    badge.style.backgroundColor = statusColors[normalizedStatus] || '#6c757d';
+  }
+
+  // Set status text and color for each card and its modal badge from a single source of truth.
+  portfolioCards.forEach(card => {
+    const status = card.getAttribute('data-status');
+    const modalId = card.getAttribute('data-modal');
+    const modal = modalId ? document.getElementById(modalId) : null;
+
+    applyStatus(card.querySelector('.portfolio-status-badge'), status);
+
+    if (modal) {
+      applyStatus(modal.querySelector('.portfolio-status-badge'), status);
+    }
+  });
 
   // Open modal function
   function openModal(modalId) {
