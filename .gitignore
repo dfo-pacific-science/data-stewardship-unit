@@ -74,3 +74,8 @@ agent-config/
 .cursor/
 project-specific-instructions.md
 .cursorignore
+docs/adr/0001.md
+docs/plans/
+docs/entrypoints.md
+docs/tech-debt.md
+docs/todo-list.md

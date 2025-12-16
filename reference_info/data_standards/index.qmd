@@ -1,0 +1,34 @@
+---
+title: "Salmon Data Standards Hub"
+aliases: ["/salmon-standards"]
+format:
+  html:
+    toc: false
+    css: ../../styles/custom.css
+---
+
+Welcome. If you only do one thing today, **reuse published terms by adding URIs to your data dictionary** so escapement and assessment tables stay aligned.
+
+## 1) Do this now — reuse published terms in your data dictionary
+
+- Download the template: [Data Dictionary (xlsx)](data_dictionary_template.xlsx)
+- Open the vocabularies: [Controlled Vocabulary & Thesauri](controlled-vocabulary-thesauri.qmd)
+- Match your key columns (e.g., CU, brood year, escapement) to published terms and copy their URIs.
+- Paste the URIs into your dictionary (use `standard_term_uri` for columns; `concept_scheme_iri` for code lists if applicable).
+- Save and ship the dictionary with your data (or send it to DSU for a quick check).
+
+## 2) See it done — worked example with escapement data
+
+- Short demo (2–4 min) showing a CU-year table aligned to the vocabularies. *(Placeholder: add video link.)*
+- Example Salmon Data Exchange Package for escapement. *(Placeholder: add example package link.)*
+- Optional: validate the package with the R helper once you add URIs.
+
+## 3) Learn the details — standards, ontology, and tools
+
+- What this is: one-page overview. *(Placeholder: add one-pager link.)*
+- Controlled vocabularies & thesauri: [Browse terms](controlled-vocabulary-thesauri.qmd)
+- Salmon Data Exchange Package: [Specification](salmon-data-exchange-package.qmd)
+- DFO Salmon Ontology: [Formal documentation](../ontology/formal-documentation.qmd)
+- Tools: R package and Salmon GPT assistant (links coming soon).
+
+Everything else—emails, trainings, newsletters—should point back to this hub so people can act fast, get an example, or dive deeper.

@@ -2,10 +2,10 @@
 title: "DFO Salmon Data Standards"
 subtitle: "Controlled Vocabulary & Thesauri"
 freeze: auto
-eval: false
 format:
   html:
     toc: true
+    css: ../../styles/custom.css
 ---
 
 The Data Stewardship Unit (DSU) has created the **GC DFO Salmon Data Controlled Vocabulary**—a standardized, community-curated list of key terms and definitions related to salmon data collection, analysis, and policy within Fisheries and Oceans Canada (DFO) Pacific Region.
@@ -105,8 +105,8 @@ load_themes <- function(project_root, include_desc = FALSE) {
   stop("No themes.yml or meta files found; sync term tables from dfo-salmon-ontology.")
 }
 
-# Load themes dynamically
-themes <- load_themes(project_root, include_desc = FALSE)
+# Load themes dynamically (with descriptions to reuse downstream)
+themes <- load_themes(project_root, include_desc = TRUE)
 
 # Load all term tables
 all_terms <- list()
@@ -190,65 +190,6 @@ summary_html <- paste0(
 )
 
 search_html_parts <- c(
-  '<style>',
-  '  #vocab-search-input {',
-  '    border: 2px solid #446c8a !important;',
-  '    transition: border-color 0.2s, box-shadow 0.2s;',
-  '  }',
-  '  .search-tip {',
-  '    font-size: 0.95rem;',
-  '    color: #495057;',
-  '    margin: 0 0 0.5rem 0;',
-  '  }',
-  '  #vocab-search-input:focus {',
-  '    outline: none;',
-  '    border-color: #2c5282 !important;',
-  '    box-shadow: 0 0 0 3px rgba(68, 108, 138, 0.1);',
-  '  }',
-  '  .search-tip {',
-  '    font-size: 0.95rem;',
-  '    color: #495057;',
-  '    margin: 0 0 0.5rem 0;',
-  '  }',
-  '  .summary-strip {',
-  '    border: 1px solid #e9ecef;',
-  '    border-radius: 6px;',
-  '    background: #f8f9fa;',
-  '    padding: 0.75rem 1rem;',
-  '    margin-bottom: 0.75rem;',
-  '  }',
-  '  .summary-line {',
-  '    font-size: 0.95rem;',
-  '    color: #495057;',
-  '    margin-bottom: 0.5rem;',
-  '  }',
-  '  .theme-bars {',
-  '    display: grid;',
-  '    gap: 0.35rem;',
-  '  }',
-  '  .theme-bar {',
-  '    display: grid;',
-  '    grid-template-columns: 1fr 3fr auto;',
-  '    gap: 0.5rem;',
-  '    align-items: center;',
-  '    font-size: 0.9rem;',
-  '    color: #495057;',
-  '  }',
-  '  .theme-bar-track {',
-  '    background: #f1f3f5;',
-  '    border-radius: 4px;',
-  '    overflow: hidden;',
-  '    height: 8px;',
-  '  }',
-  '  .theme-bar-fill {',
-  '    height: 8px;',
-  '    background: #446c8a;',
-  '  }',
-  '  .theme-bar-count {',
-  '    font-size: 0.85rem;',
-  '    color: #6c757d;',
-  '  }',
-  '</style>',
   '<div id="vocab-search-container">',
   summary_html,
   '<h2 style="margin: 0.35rem 0;">Search</h2>',
@@ -371,6 +312,17 @@ search_html_parts <- c(
 )
 
 search_html <- paste(search_html_parts, collapse = "\n")
+
+# Share loaded themes and terms for reuse in the table chunk
+themes_with_desc <- themes
+if (length(all_terms) > 0) {
+  shared_terms_df <- do.call(rbind, lapply(all_terms, function(x) {
+    as.data.frame(x, stringsAsFactors = FALSE)
+  }))
+}
+# free memory from raw list now that we have a data frame copy
+rm(all_terms)
+
 knitr::raw_html(search_html)
 ```
 
@@ -421,31 +373,41 @@ if (!exists("yaml")) {
   library(yaml)
 }
 
-# Load themes and combine all term tables
-themes_with_desc <- load_themes(project_root, include_desc = TRUE)
+# Load themes and combine all term tables (reuse preloaded data when available)
+if (!exists("themes_with_desc")) {
+  themes_with_desc <- load_themes(project_root, include_desc = TRUE)
+}
 
-combined_terms <- list()
-for (theme in themes_with_desc) {
-  theme_id <- theme$id
-  csv_path <- file.path(
-    project_root,
-    "data/ontology/release/artifacts/term-tables",
-    paste0(theme_id, ".csv")
-  )
-  result <- load_dataset(csv_path)
-  df <- result$data
+terms_df <- NULL
+if (exists("shared_terms_df")) {
+  terms_df <- shared_terms_df
+} else {
+  combined_terms <- list()
+  for (theme in themes_with_desc) {
+    theme_id <- theme$id
+    csv_path <- file.path(
+      project_root,
+      "data/ontology/release/artifacts/term-tables",
+      paste0(theme_id, ".csv")
+    )
+    result <- load_dataset(csv_path)
+    df <- result$data
 
-  if (!is.null(df) && nrow(df) > 0) {
-    df$theme <- theme$label
-    df$theme_id <- theme_id
-    combined_terms[[length(combined_terms) + 1]] <- df
+    if (!is.null(df) && nrow(df) > 0) {
+      df$theme <- theme$label
+      df$theme_id <- theme_id
+      combined_terms[[length(combined_terms) + 1]] <- df
+    }
+  }
+
+  if (length(combined_terms) > 0) {
+    terms_df <- do.call(rbind, combined_terms)
   }
 }
 
-if (length(combined_terms) == 0) {
+if (is.null(terms_df)) {
   tags$p("No term tables found. Run the ontology extraction workflow to generate term tables.")
 } else {
-  terms_df <- do.call(rbind, combined_terms)
 
   # Ensure required columns exist
   required_cols <- c(
@@ -459,6 +421,29 @@ if (length(combined_terms) == 0) {
     }
   }
   terms_df[is.na(terms_df)] <- ""
+  # Normalize types to avoid factor coercion in reactable serialization
+  terms_df[] <- lapply(terms_df, function(col) {
+    if (is.factor(col)) return(as.character(col))
+    return(col)
+  })
+  # Deduplicate by canonical_uri when available, otherwise term_name; merge themes per term
+  terms_df$dedupe_key <- ifelse(
+    !is.na(terms_df$canonical_uri) & terms_df$canonical_uri != "",
+    terms_df$canonical_uri,
+    terms_df$term_name
+  )
+  grouped <- split(seq_len(nrow(terms_df)), terms_df$dedupe_key)
+  terms_df <- do.call(rbind, lapply(grouped, function(idx) {
+    rows <- terms_df[idx, , drop = FALSE]
+    primary <- rows[1, , drop = FALSE]
+    theme_labels <- unique(rows$theme)
+    primary$theme <- paste(theme_labels, collapse = " · ")
+    primary$theme_filter <- paste(theme_labels, collapse = "||")
+    primary
+  }))
+  terms_df$dedupe_key <- NULL
+  # Sort by term name for consistent ordering across filters
+  terms_df <- terms_df[order(tolower(terms_df$term_name)), ]
 
   # Theme choices for the filter UI
   theme_choices <- vapply(
@@ -470,9 +455,18 @@ if (length(combined_terms) == 0) {
   # Custom column definitions (reuse logic from helpers)
   theme_filter_method <- JS("
     function(rows, columnId, filterValue) {
+      if (filterValue === '__none__') return [];
       if (!filterValue || filterValue.length === 0) return rows;
+      const normalizedFilter = (filterValue || '')
+        .toString()
+        .split('||')
+        .map(function(v) { return (v || '').trim().toLowerCase(); })
+        .filter(Boolean);
+      if (normalizedFilter.length === 0) return rows;
       return rows.filter(function(row) {
-        return filterValue.includes(row.values[columnId]);
+        const value = (row.values['theme_filter'] || '').toString().trim().toLowerCase();
+        const valueParts = value.split('||').map(function(v){ return v.trim(); });
+        return valueParts.some(function(v) { return normalizedFilter.includes(v); });
       });
     }
   ")
@@ -483,6 +477,7 @@ if (length(combined_terms) == 0) {
       theme = colDef(
         name = "Theme",
         minWidth = 140,
+        filterable = TRUE,
         filterMethod = theme_filter_method
       ),
       term_name = colDef(
@@ -618,6 +613,7 @@ if (length(combined_terms) == 0) {
         }
       ),
       theme_id = colDef(show = FALSE),
+      theme_filter = colDef(show = FALSE),
       widoco_link = colDef(show = FALSE),
       definition_source_text = colDef(show = FALSE),
       definition_source_link = colDef(show = FALSE)
@@ -629,7 +625,9 @@ if (length(combined_terms) == 0) {
     ),
     resizable = TRUE,
     searchable = TRUE,
-    filterable = FALSE,
+    filterable = TRUE,
+    defaultSorted = "term_name",
+    rownames = FALSE,
     defaultPageSize = 25,
     showPageSizeOptions = TRUE,
     pageSizeOptions = c(10, 25, 50, 100),
@@ -643,45 +641,48 @@ if (length(combined_terms) == 0) {
     elementId = "all-terms-table"
   )
 
-  term_table <- htmlwidgets::onRender(
-    term_table,
-    HTML('
-      function(el, x) {
-        const style = document.createElement("style");
-        style.textContent = `
-          .coming-soon {
-            color: #666;
-            font-style: italic;
-          }
-        `;
-        document.head.appendChild(style);
-      }
-    ')
-  )
-
-  # Build theme filter UI with multi-select checkboxes
+  # Build theme filter UI as a dropdown with select/deselect all controls
   filter_controls <- tags$div(
     id = "theme-filter-container",
-    style = "border: 1px solid #e9ecef; border-radius: 6px; padding: 0.75rem 1rem; background: #f8f9fa; margin-bottom: 0.75rem;",
-    tags$div(
-      style = "display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;",
-      tags$strong("Filter by theme"),
-      tags$span(style = "font-size: 0.9rem; color: #6c757d;", "Use checkboxes to show one or more themes.")
-    ),
-    tags$div(
-      style = "display: flex; flex-wrap: wrap; gap: 0.75rem;",
-      lapply(theme_choices, function(label) {
-        tags$label(
-          style = "display: flex; align-items: center; gap: 0.35rem; font-size: 0.95rem; color: #495057;",
-          tags$input(
-            type = "checkbox",
-            value = label,
-            checked = "checked",
-            style = "accent-color: #446c8a;"
-          ),
-          label
+    style = "margin-bottom: 0.75rem;",
+    tags$details(
+      id = "theme-filter-dropdown",
+      class = "theme-filter-dropdown",
+      tags$summary(
+        tags$span(id = "theme-filter-summary", "Themes: all selected")
+      ),
+      tags$div(
+        style = "display: flex; flex-direction: column; gap: 0.75rem; padding-top: 0.5rem;",
+        tags$div(
+          style = "display: flex; gap: 0.5rem; flex-wrap: wrap;",
+          tags$button(
+            type = "button",
+            id = "select-all-themes",
+            style = "padding: 0.35rem 0.75rem; border: 1px solid #dee2e6; background: #f8f9fa; border-radius: 4px; cursor: pointer; color: #495057;"
+          , "Select all"),
+          tags$button(
+            type = "button",
+            id = "deselect-all-themes",
+            style = "padding: 0.35rem 0.75rem; border: 1px solid #dee2e6; background: #f8f9fa; border-radius: 4px; cursor: pointer; color: #495057;"
+          , "Deselect all")
+        ),
+        tags$div(
+          id = "theme-checkboxes",
+          style = "display: flex; flex-direction: column; gap: 0.35rem;",
+          lapply(theme_choices, function(label) {
+            tags$label(
+              style = "display: flex; align-items: center; gap: 0.35rem; font-size: 0.95rem; color: #495057;",
+              tags$input(
+                type = "checkbox",
+                value = label,
+                checked = "checked",
+                style = "accent-color: #446c8a;"
+              ),
+              label
+            )
+          })
         )
-      })
+      )
     )
   )
 
@@ -691,27 +692,66 @@ if (length(combined_terms) == 0) {
       const tableId = 'all-terms-table';
       if (!container) return;
 
-      const checkboxes = container.querySelectorAll('input[type=\"checkbox\"]');
+      const dropdown = document.getElementById('theme-filter-dropdown');
+      const summaryLabel = document.getElementById('theme-filter-summary');
+      const checkboxes = container.querySelectorAll('#theme-checkboxes input[type=\"checkbox\"]');
+      const selectAllBtn = document.getElementById('select-all-themes');
+      const deselectAllBtn = document.getElementById('deselect-all-themes');
 
       function applyThemeFilter() {
-        const selected = Array.from(checkboxes)
+        const selectedRaw = Array.from(checkboxes)
           .filter(cb => cb.checked)
-          .map(cb => cb.value);
+          .map(cb => (cb.value || '').toString().trim());
 
-        if (selected.length === 0 || selected.length === checkboxes.length) {
-          Reactable.resetFilter(tableId, 'theme');
+        if (selectedRaw.length === 0) {
+          // Empty selection: hide all rows to reflect no themes chosen
+          Reactable.setFilter(tableId, 'theme', '__none__');
+        } else if (selectedRaw.length === checkboxes.length) {
+          // All selected: clear the filter explicitly
+          Reactable.setFilter(tableId, 'theme', '');
         } else {
-          Reactable.setFilter(tableId, 'theme', selected);
+          Reactable.setFilter(tableId, 'theme', selectedRaw.join('||'));
+        }
+
+        if (summaryLabel) {
+          if (selectedRaw.length === 0) {
+            summaryLabel.textContent = 'Themes: none selected';
+          } else if (selectedRaw.length === checkboxes.length) {
+            summaryLabel.textContent = 'Themes: all selected';
+          } else {
+            summaryLabel.textContent = 'Themes: ' + selectedRaw.length + ' selected';
+          }
+        }
+      }
+
+      function setAll(checked) {
+        checkboxes.forEach(cb => { cb.checked = checked; });
+        applyThemeFilter();
+      }
+
+      function ensureReadyAndApply(attempts) {
+        if (window.Reactable && Reactable.setFilter && Reactable.resetFilter) {
+          applyThemeFilter();
+          return;
+        }
+        if (attempts <= 20) {
+          setTimeout(function() { ensureReadyAndApply(attempts + 1); }, 150);
         }
       }
 
       checkboxes.forEach(cb => cb.addEventListener('change', applyThemeFilter));
+      if (selectAllBtn) selectAllBtn.addEventListener('click', function(e) { e.preventDefault(); setAll(true); });
+      if (deselectAllBtn) deselectAllBtn.addEventListener('click', function(e) { e.preventDefault(); setAll(false); });
+
+      if (summaryLabel) {
+        summaryLabel.textContent = 'Themes: all selected';
+      }
 
       if (window.Reactable && Reactable.onReady) {
-        Reactable.onReady(tableId, applyThemeFilter);
+        Reactable.onReady(tableId, function() { ensureReadyAndApply(0); });
       } else {
-        document.addEventListener('DOMContentLoaded', applyThemeFilter);
-        setTimeout(applyThemeFilter, 300);
+        document.addEventListener('DOMContentLoaded', function() { ensureReadyAndApply(0); });
+        setTimeout(function() { ensureReadyAndApply(1); }, 300);
       }
     })();
   "))

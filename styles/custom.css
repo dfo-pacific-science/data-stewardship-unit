@@ -162,6 +162,15 @@
   color: #333;
 }
 
+.portfolio-card a {
+  color: #0d6efd !important;
+  text-decoration: underline;
+}
+
+.portfolio-card a:hover {
+  color: #0a58ca;
+}
+
 .portfolio-screenshot-container {
   background: linear-gradient(135deg, #f5f5f5 0%, #f0f0f0 100%);
   border: 2px dashed #ddd;
@@ -346,6 +355,15 @@
   line-height: 1.6;
 }
 
+.portfolio-modal-body a {
+  color: #0d6efd !important;
+  text-decoration: underline;
+}
+
+.portfolio-modal-body a:hover {
+  color: #0a58ca;
+}
+
 .portfolio-modal-body p {
   margin-bottom: 16px;
 }
@@ -386,8 +404,121 @@
     font-size: 1.25rem;
   }
 
-  .portfolio-modal-body {
-    padding: 20px;
-  }
+.portfolio-modal-body {
+  padding: 20px;
+}
 }
 
+/* DSU Controlled Vocabulary: search + summary styling */
+#vocab-search-input {
+  border: 2px solid #446c8a !important;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+#vocab-search-input:focus {
+  outline: none;
+  border-color: #2c5282 !important;
+  box-shadow: 0 0 0 3px rgba(68, 108, 138, 0.1);
+}
+.search-tip {
+  font-size: 0.95rem;
+  color: #495057;
+  margin: 0 0 0.5rem 0;
+}
+.summary-strip {
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  background: #f8f9fa;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+}
+.summary-line {
+  font-size: 0.95rem;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+.theme-bars {
+  display: grid;
+  gap: 0.35rem;
+}
+.theme-bar {
+  display: grid;
+  grid-template-columns: 1fr 3fr auto;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #495057;
+}
+.theme-bar-track {
+  background: #f1f3f5;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 8px;
+}
+.theme-bar-fill {
+  height: 8px;
+  background: #446c8a;
+}
+.theme-bar-count {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+/* Theme dropdown */
+#theme-filter-dropdown {
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  background: #f8f9fa;
+  padding: 0.65rem 0.9rem;
+}
+#theme-filter-dropdown summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #2c5282;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  padding-right: 1.2rem;
+}
+#theme-filter-dropdown summary::marker {
+  display: none;
+}
+#theme-filter-dropdown summary::after {
+  content: "\25be";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  color: #2c5282;
+}
+#theme-filter-dropdown[open] summary {
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+#theme-filter-dropdown[open] summary::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+#theme-filter-dropdown summary:hover {
+  background: #eef2f6;
+  border-radius: 4px;
+  padding: 0.2rem 0.35rem 0.2rem 0.35rem;
+}
+#theme-checkboxes label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+#theme-filter-dropdown button:hover {
+  background: #e9ecef;
+}
+
+/* Reactable tweaks */
+.coming-soon {
+  color: #666;
+  font-style: italic;
+}
+.rt-table .rt-tr.-filters {
+  display: none;
+}
