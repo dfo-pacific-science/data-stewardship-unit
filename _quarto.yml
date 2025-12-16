@@ -30,8 +30,7 @@ website:
       - text: "Data Services"
         href: fads-portfolio.qmd
       - text: "Salmon Data Standards"
-        href: reference_info/data_standards/index.qmd
-
+        href: reference_info/data_standards/controlled-vocabulary-thesauri.qmd
     tools:
       - icon: github
         menu:
