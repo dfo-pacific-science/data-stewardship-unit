@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.7.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,15 +34,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../images/logo.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-972cf70390dc11df476ac11b7b56006c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-da81e24ee94f0f4792e29cc7c23703aa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -148,8 +147,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
       <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="../../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <img src="../../images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -291,6 +289,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../deep_dives/results-network-graph.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Results Network Graph</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../deep_dives/Stock Assessment Data 101 for Fisheries Science Reports.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Fisheries Science Reports – Data and Stats 101</span></a>
   </div>
@@ -414,7 +418,7 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li>URIs / IRIs
 <ul>
-<li>Fields such as <code>dataset_iri</code>, <code>entity_iri</code>, <code>metric_iri</code>, <code>dimension_iri</code>, <code>concept_scheme_iri</code>, <code>concept_iri</code>, <code>unit_iri</code> should use persistent HTTP IRIs where available (e.g., w3id for DFO Salmon Ontology terms, vocabulary concepts, and units).</li>
+<li>Fields such as <code>dataset_iri</code>, <code>entity_iri</code>, <code>term_iri</code>, <code>concept_scheme_iri</code>, <code>unit_iri</code> should use persistent HTTP IRIs where available (e.g., w3id for DFO Salmon Ontology terms, vocabulary concepts, and units).</li>
 </ul></li>
 </ul>
 </section>
@@ -654,7 +658,7 @@ ul.task-list li input[type="checkbox"] {
 <td>column_role</td>
 <td>string</td>
 <td>yes</td>
-<td>One of: <code>id</code>, <code>measure</code>, <code>dimension</code>, <code>flag</code>, <code>metadata</code>.</td>
+<td>One of: <code>identifier</code>, <code>attribute</code>, <code>temporal</code>, <code>categorical</code>, <code>measurement</code>.</td>
 </tr>
 <tr class="odd">
 <td>value_type</td>
@@ -681,38 +685,28 @@ ul.task-list li input[type="checkbox"] {
 <td>IRI for the unit (e.g., UCUM or other unit ontology).</td>
 </tr>
 <tr class="odd">
-<td>metric_iri</td>
+<td>term_iri</td>
 <td>string</td>
 <td>no</td>
-<td>IRI for the <em>measurement type</em> in the DFO Salmon Ontology (e.g., escapement abundance).</td>
+<td>IRI for the ontology term (e.g., measurement type, dimension, concept) from the DFO Salmon Ontology.</td>
 </tr>
 <tr class="even">
-<td>dimension_iri</td>
+<td>term_type</td>
 <td>string</td>
 <td>no</td>
-<td>IRI for a dimension concept (e.g., age class, life stage, brood year) if the column is a dim.</td>
-</tr>
-<tr class="odd">
-<td>concept_scheme_iri</td>
-<td>string</td>
-<td>no</td>
-<td>IRI of the SKOS concept scheme if the column’s values come from a controlled vocabulary.</td>
-</tr>
-<tr class="even">
-<td>concept_iri</td>
-<td>string</td>
-<td>no</td>
-<td>IRI for the SKOS concept represented by this column, when it acts as a direct concept column.</td>
+<td>Type of ontology term (e.g., <code>owl_class</code>, <code>owl_object_property</code>, <code>skos_concept</code>).</td>
 </tr>
 </tbody>
 </table>
 <p>Guidance:</p>
 <ul>
-<li>Use <code>column_role = "id"</code> for identifiers such as <code>cu_id</code>, <code>survey_event_id</code>.</li>
-<li>Use <code>column_role = "measure"</code> for numeric quantities (e.g., escapement, run size, exploitation rate).</li>
-<li>Use <code>column_role = "dimension"</code> for grouping variables (e.g., CU, year, age, fishery).</li>
-<li>Use <code>column_role = "flag"</code> for quality flags, indicator codes.</li>
-<li>Use <code>column_role = "metadata"</code> for columns that describe the dataset or row but are not used in primary analyses.</li>
+<li>Use <code>column_role = "identifier"</code> for identifiers such as <code>cu_id</code>, <code>survey_event_id</code>, <code>POP_ID</code>.</li>
+<li>Use <code>column_role = "measurement"</code> for numeric quantities (e.g., escapement, run size, exploitation rate).</li>
+<li>Use <code>column_role = "temporal"</code> for time-related columns (e.g., year, date, datetime).</li>
+<li>Use <code>column_role = "categorical"</code> for columns with controlled vocabularies or enumerated values (e.g., species, run type, status codes).</li>
+<li>Use <code>column_role = "attribute"</code> for descriptive attributes that are not identifiers, measurements, temporal, or categorical (e.g., population name, waterbody name).</li>
+<li><code>term_iri</code> should reference a term in the DFO Salmon Ontology (e.g., measurement types, dimensions, concepts) when available.</li>
+<li><code>term_type</code> indicates the type of ontology term (e.g., <code>owl_class</code> for classes, <code>owl_object_property</code> for properties, <code>skos_concept</code> for SKOS concepts).</li>
 </ul>
 </section>
 <section id="codes.csv-schema" class="level1" data-number="8">
@@ -779,10 +773,16 @@ ul.task-list li input[type="checkbox"] {
 <td>IRI of the SKOS concept scheme (e.g., the DFO Salmon Status scheme).</td>
 </tr>
 <tr class="even">
-<td>concept_iri</td>
+<td>term_iri</td>
 <td>string</td>
 <td>no</td>
-<td>IRI of the specific SKOS concept that <code>code_value</code> represents.</td>
+<td>IRI of the specific ontology term (SKOS concept or other) that <code>code_value</code> represents.</td>
+</tr>
+<tr class="odd">
+<td>term_type</td>
+<td>string</td>
+<td>no</td>
+<td>Type of ontology term (e.g., <code>skos_concept</code>, <code>owl_class</code>).</td>
 </tr>
 </tbody>
 </table>
@@ -790,7 +790,8 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><code>code_value</code> must match exactly the values present in the data table.</li>
 <li><code>code_label</code> and <code>code_description</code> can be used to auto-generate documentation.</li>
-<li><code>concept_scheme_iri</code> and <code>concept_iri</code> enable alignment with the larger salmon ontology and SKOS vocabularies.</li>
+<li><code>concept_scheme_iri</code> identifies the SKOS concept scheme containing the controlled vocabulary.</li>
+<li><code>term_iri</code> and <code>term_type</code> enable alignment with the larger salmon ontology and SKOS vocabularies, linking each code value to its corresponding ontology term.</li>
 </ul>
 </section>
 <section id="relationship-to-ontology-r-package-and-gpt" class="level1" data-number="9">
@@ -798,10 +799,9 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>The <strong>ontology</strong> defines the formal semantics for:
 <ul>
-<li>measurement types (<code>metric_iri</code>),</li>
-<li>entities (<code>entity_iri</code>),</li>
-<li>dimensions (<code>dimension_iri</code>),</li>
-<li>concept schemes and concepts (<code>concept_scheme_iri</code>, <code>concept_iri</code>).</li>
+<li>measurement types, entities, dimensions, and concepts (via <code>term_iri</code> and <code>term_type</code>),</li>
+<li>entities (<code>entity_iri</code> in <code>tables.csv</code>),</li>
+<li>concept schemes (<code>concept_scheme_iri</code> in <code>codes.csv</code>).</li>
 </ul></li>
 <li>The <strong>R package</strong> will:
 <ul>
@@ -813,7 +813,7 @@ ul.task-list li input[type="checkbox"] {
 <li>The <strong>custom GPT</strong> will:
 <ul>
 <li>help users draft <code>column_dictionary.csv</code> and <code>codes.csv</code>,</li>
-<li>suggest ontology-aligned IRIs,</li>
+<li>suggest ontology-aligned IRIs and term types,</li>
 <li>assist in decomposing compound terms into multiple columns with appropriate roles and IRIs,</li>
 <li>propose SDEP-compliant package structures for new projects.</li>
 </ul></li>
@@ -894,14 +894,13 @@ ul.task-list li input[type="checkbox"] {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

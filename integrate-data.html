@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>tools – FADS Open Science Hub</title>
+<title>Integrate Data – FADS Open Science Hub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -70,6 +105,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="../../styles/custom.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -131,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Integrate Data</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -309,56 +345,457 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
-  <ul>
-  <li><a href="#tools-for-data-stewardship" id="toc-tools-for-data-stewardship" class="nav-link active" data-scroll-target="#tools-for-data-stewardship">🧰 Tools for Data Stewardship ⚙️📦</a>
   <ul class="collapse">
-  <li><a href="#this-page-is-under-construction" id="toc-this-page-is-under-construction" class="nav-link" data-scroll-target="#this-page-is-under-construction">🚧 This page is under construction! 🏗️</a>
-  <ul class="collapse">
-  <li><a href="#what-to-expect" id="toc-what-to-expect" class="nav-link" data-scroll-target="#what-to-expect">🔧 What to Expect</a></li>
-  <li><a href="#got-a-tool-to-share" id="toc-got-a-tool-to-share" class="nav-link" data-scroll-target="#got-a-tool-to-share">📩 Got a Tool to Share?</a></li>
-  </ul></li>
-  </ul></li>
+  <li><a href="#video-walkthrough" id="toc-video-walkthrough" class="nav-link active" data-scroll-target="#video-walkthrough">Video Walkthrough</a></li>
+  <li><a href="#cookbook-guide" id="toc-cookbook-guide" class="nav-link" data-scroll-target="#cookbook-guide">Cookbook Guide</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/tools.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/tools.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/integrate-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/integrate-data.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Integrate Data</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="tools-for-data-stewardship" class="level1">
-<h1>🧰 Tools for Data Stewardship ⚙️📦</h1>
-<p>Welcome to the <strong>Tools</strong> section of the DSU site! 🐟<br>
-Here you’ll find a curated set of apps, platforms, scripts, and templates that support your work as a data steward or data producer within the <strong>Pacific Region Science Branch</strong> of Fisheries and Oceans Canada. 🧪🌊</p>
-<hr>
-<section id="this-page-is-under-construction" class="level2">
-<h2 class="anchored" data-anchor-id="this-page-is-under-construction">🚧 This page is under construction! 🏗️</h2>
-<p>We’re actively gathering, building, and documenting the most useful tools for the job — so stay tuned! In the meantime, here’s a sneak peek at what’s coming:</p>
-<section id="what-to-expect" class="level3">
-<h3 class="anchored" data-anchor-id="what-to-expect">🔧 What to Expect</h3>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<style>
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.cookbook-section {
+  margin-top: 3rem;
+}
+
+.cookbook-step {
+  background: #f8f9fa;
+  border-left: 4px solid #446c8a;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+}
+
+.cookbook-step h3 {
+  margin-top: 0;
+  color: #446c8a;
+  font-size: 1.3rem;
+}
+
+.cookbook-step code {
+  background: #e9ecef;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.cookbook-step pre {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.cookbook-step pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+</style>
+<section id="video-walkthrough" class="level2">
+<h2 class="anchored" data-anchor-id="video-walkthrough">Video Walkthrough</h2>
+<div class="video-container">
+<p><iframe src="PLACEHOLDER_TELLA_VIDEO_URL?autoplay=1&amp;mute=0" allow="autoplay; encrypted-media" allowfullscreen=""> </iframe></p>
+</div>
+<p><em>Replace <code>PLACEHOLDER_TELLA_VIDEO_URL</code> with your Tella video embed URL. Add <code>?autoplay=1</code> to the URL for auto-play.</em></p>
+</section>
+<section id="cookbook-guide" class="level2">
+<h2 class="anchored" data-anchor-id="cookbook-guide">Cookbook Guide</h2>
+<div class="cookbook-section">
+<section id="step-1-identify-data-sources" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-identify-data-sources">Step 1: Identify Data Sources</h3>
+<div class="cookbook-step">
+<p><strong>What you need:</strong> - List of datasets you want to integrate - Understanding of what each dataset contains</p>
+<p><strong>How to do it:</strong></p>
+<ol type="1">
+<li><strong>Inventory your sources:</strong>
 <ul>
-<li>🗂 <strong>Data Dictionary and Metadata Templates</strong> (Excel + JSON)</li>
-<li>🤝 <strong>Data Management Agreement Templates</strong></li>
-<li>🧮 <strong>R &amp; Python Functions, Scripts, and Packages</strong> for data cleaning and reporting</li>
-<li>🔗 <strong>Links to External Tools</strong> (See Internal <a href="https://086gc.sharepoint.com/sites/FisheryAssessmentDataSectionWiki/SitePages/Data-Stewardship-Unit(1).aspx">DSU SharePoint Wiki</a> for internal tools)</li>
-<li>🧠 <strong>Toolkits for Data Stewards</strong> (checklists, walkthroughs, best practices)</li>
+<li>List all datasets to be integrated</li>
+<li>Document the source system or origin</li>
+<li>Note the temporal and geographic scope</li>
+</ul></li>
+<li><strong>Assess compatibility:</strong>
+<ul>
+<li>Review column names and structures</li>
+<li>Identify common fields (CU, year, etc.)</li>
+<li>Note differences in formats or codes</li>
+</ul></li>
+</ol>
+<p><strong>Example source inventory:</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 12%">
+<col style="width: 20%">
+<col style="width: 25%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dataset</th>
+<th>Source</th>
+<th>Key Columns</th>
+<th>Temporal Scope</th>
+<th>Geographic Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Escapement 2023</td>
+<td>Stream surveys</td>
+<td>CU, BY, Esc</td>
+<td>2023</td>
+<td>Fraser River CUs</td>
+</tr>
+<tr class="even">
+<td>Catch 2023</td>
+<td>FOS</td>
+<td>CU, Year, Catch</td>
+<td>2023</td>
+<td>All Areas</td>
+</tr>
+<tr class="odd">
+<td>Stock status</td>
+<td>SPSR</td>
+<td>CU, BY, Status</td>
+<td>2010-2023</td>
+<td>All CUs</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="step-2-map-common-fields" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-map-common-fields">Step 2: Map Common Fields</h3>
+<div class="cookbook-step">
+<p><strong>What you need:</strong> - Column lists from each dataset - Access to standard vocabularies</p>
+<p><strong>How to do it:</strong></p>
+<ol type="1">
+<li><strong>Identify common fields:</strong>
+<ul>
+<li>Geographic identifiers (CU, SMU, DU)</li>
+<li>Temporal fields (year, brood year)</li>
+<li>Biological measures (escapement, catch, spawners)</li>
+</ul></li>
+<li><strong>Create a field mapping table:</strong></li>
+</ol>
+<p><strong>Example field mapping:</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 18%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Source Dataset</th>
+<th>Source Column</th>
+<th>Standard Term</th>
+<th>Standard URI</th>
+<th>Target Column</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Escapement</td>
+<td>CU_code</td>
+<td>Conservation Unit</td>
+<td>http://purl.dataone.org/odo/SALMON_00000239</td>
+<td>CU</td>
+</tr>
+<tr class="even">
+<td>Escapement</td>
+<td>BY</td>
+<td>Brood Year</td>
+<td>http://purl.dataone.org/odo/SALMON_00000782</td>
+<td>BroodYear</td>
+</tr>
+<tr class="odd">
+<td>Catch</td>
+<td>CU</td>
+<td>Conservation Unit</td>
+<td>http://purl.dataone.org/odo/SALMON_00000239</td>
+<td>CU</td>
+</tr>
+<tr class="even">
+<td>Catch</td>
+<td>Year</td>
+<td>Return Year</td>
+<td>http://purl.dataone.org/odo/SALMON_00000891</td>
+<td>ReturnYear</td>
+</tr>
+</tbody>
+</table>
+<ol start="3" type="1">
+<li><strong>Resolve differences:</strong>
+<ul>
+<li>Standardize column names</li>
+<li>Align code values</li>
+<li>Convert units if needed</li>
+</ul></li>
+</ol>
+</div>
+</section>
+<section id="step-3-standardize-code-values" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-standardize-code-values">Step 3: Standardize Code Values</h3>
+<div class="cookbook-step">
+<p><strong>What you need:</strong> - Code lists from each dataset - Controlled vocabularies for codes</p>
+<p><strong>How to do it:</strong></p>
+<ol type="1">
+<li><strong>Extract unique values</strong> from categorical columns across all datasets</li>
+<li><strong>Map to standard codes</strong> using controlled vocabularies</li>
+<li><strong>Create transformation rules:</strong></li>
+</ol>
+<p><strong>Example code standardization:</strong></p>
+<pre class="csv"><code>source_dataset,source_column,source_value,standard_value,concept_scheme_uri
+Escapement,run_type,Spring,Spring Run,http://purl.dataone.org/odo/SALMON_00000456
+Escapement,run_type,S,Spring Run,http://purl.dataone.org/odo/SALMON_00000456
+Catch,run_type,SPRING,Spring Run,http://purl.dataone.org/odo/SALMON_00000456</code></pre>
+<ol start="4" type="1">
+<li><strong>Apply transformations</strong> to each dataset before integration</li>
+</ol>
+</div>
+</section>
+<section id="step-4-align-data-structures" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-align-data-structures">Step 4: Align Data Structures</h3>
+<div class="cookbook-step">
+<p><strong>What you need:</strong> - Standardized field mappings - Code transformations - Your source datasets</p>
+<p><strong>How to do it:</strong></p>
+<ol type="1">
+<li><strong>Rename columns</strong> to match standard names</li>
+<li><strong>Transform codes</strong> to standard values</li>
+<li><strong>Standardize data types</strong> (ensure numeric fields are numeric, dates are dates)</li>
+<li><strong>Handle missing values</strong> consistently</li>
+</ol>
+<p><strong>Example R code for alignment:</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Read source datasets</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>escapement <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"escapement_2023.csv"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>catch <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"catch_2023.csv"</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Standardize escapement data</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>escapement_std <span class="ot">&lt;-</span> escapement <span class="sc">%&gt;%</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">CU =</span> CU_code,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">BroodYear =</span> BY,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">Escapement =</span> Esc</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">BroodYear =</span> <span class="fu">as.integer</span>(BroodYear),</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">Escapement =</span> <span class="fu">as.numeric</span>(Escapement)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Standardize catch data</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>catch_std <span class="ot">&lt;-</span> catch <span class="sc">%&gt;%</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">CU =</span> CU,</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">ReturnYear =</span> Year,</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">Catch =</span> TotalCatch</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">ReturnYear =</span> <span class="fu">as.integer</span>(ReturnYear),</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">Catch =</span> <span class="fu">as.numeric</span>(Catch)</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Save standardized datasets</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(escapement_std, <span class="st">"escapement_standardized.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(catch_std, <span class="st">"catch_standardized.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="step-5-join-and-integrate" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-join-and-integrate">Step 5: Join and Integrate</h3>
+<div class="cookbook-step">
+<p><strong>What you need:</strong> - Standardized datasets - Join keys (common fields)</p>
+<p><strong>How to do it:</strong></p>
+<ol type="1">
+<li><strong>Identify join keys:</strong>
+<ul>
+<li>Common fields across datasets (CU, year, etc.)</li>
+<li>Ensure keys are standardized</li>
+</ul></li>
+<li><strong>Perform joins:</strong>
+<ul>
+<li>Use appropriate join type (inner, left, full)</li>
+<li>Handle one-to-many relationships</li>
+<li>Preserve data integrity</li>
+</ul></li>
+</ol>
+<p><strong>Example integration:</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Join escapement and catch data</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: Escapement uses BroodYear, Catch uses ReturnYear</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Need to align temporal fields</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>integrated <span class="ot">&lt;-</span> escapement_std <span class="sc">%&gt;%</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Convert brood year to return year (assuming 4-year cycle)</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ReturnYear =</span> BroodYear <span class="sc">+</span> <span class="dv">4</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    catch_std,</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"CU"</span>, <span class="st">"ReturnYear"</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Calculate exploitation rate</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">ExploitationRate =</span> <span class="fu">ifelse</span>(</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>      <span class="sc">!</span><span class="fu">is.na</span>(Catch) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(Escapement),</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>      Catch <span class="sc">/</span> (Catch <span class="sc">+</span> Escapement),</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>      <span class="cn">NA</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Save integrated dataset</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(integrated, <span class="st">"integrated_data.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Tips:</strong> - Document join logic and assumptions - Handle temporal mismatches carefully - Validate join results (check for unexpected duplicates or missing matches)</p>
+</div>
+</section>
+<section id="step-6-validate-integration" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-validate-integration">Step 6: Validate Integration</h3>
+<div class="cookbook-step">
+<p><strong>What you need:</strong> - Integrated dataset - Source datasets for comparison - Validation rules</p>
+<p><strong>How to do it:</strong></p>
+<ol type="1">
+<li><strong>Check completeness:</strong>
+<ul>
+<li>Verify expected records are present</li>
+<li>Identify missing matches</li>
+<li>Document exclusions</li>
+</ul></li>
+<li><strong>Validate relationships:</strong>
+<ul>
+<li>Check join keys are correct</li>
+<li>Verify calculated fields</li>
+<li>Ensure data ranges are reasonable</li>
+</ul></li>
+<li><strong>Compare summaries:</strong>
+<ul>
+<li>Compare totals before and after integration</li>
+<li>Check for unexpected changes</li>
+<li>Validate derived metrics</li>
+</ul></li>
+</ol>
+<p><strong>Example validation:</strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compare totals</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>escapement_total <span class="ot">&lt;-</span> <span class="fu">sum</span>(escapement_std<span class="sc">$</span>Escapement, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>catch_total <span class="ot">&lt;-</span> <span class="fu">sum</span>(catch_std<span class="sc">$</span>Catch, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>integrated_esc_total <span class="ot">&lt;-</span> <span class="fu">sum</span>(integrated<span class="sc">$</span>Escapement, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>integrated_catch_total <span class="ot">&lt;-</span> <span class="fu">sum</span>(integrated<span class="sc">$</span>Catch, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Check totals match</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">stopifnot</span>(<span class="fu">abs</span>(escapement_total <span class="sc">-</span> integrated_esc_total) <span class="sc">&lt;</span> <span class="fl">0.01</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="fu">stopifnot</span>(<span class="fu">abs</span>(catch_total <span class="sc">-</span> integrated_catch_total) <span class="sc">&lt;</span> <span class="fl">0.01</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Check for unexpected values</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(integrated<span class="sc">$</span>ExploitationRate)  <span class="co"># Should be between 0 and 1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="step-7-document-integration" class="level3">
+<h3 class="anchored" data-anchor-id="step-7-document-integration">Step 7: Document Integration</h3>
+<div class="cookbook-step">
+<p><strong>What you need:</strong> - Integrated dataset - Integration code/logic - Source metadata</p>
+<p><strong>How to do it:</strong></p>
+<ol type="1">
+<li><strong>Create integration documentation:</strong>
+<ul>
+<li>List all source datasets</li>
+<li>Document join logic and keys</li>
+<li>Note any transformations applied</li>
+<li>Record assumptions and decisions</li>
+</ul></li>
+<li><strong>Create integrated data dictionary:</strong>
+<ul>
+<li>Document all columns in integrated dataset</li>
+<li>Include standard term URIs</li>
+<li>Note source of each field</li>
+</ul></li>
+<li><strong>Version control:</strong>
+<ul>
+<li>Tag version of integrated dataset</li>
+<li>Document date of integration</li>
+<li>Note any issues or limitations</li>
+</ul></li>
+</ol>
+<p><strong>Example documentation template:</strong></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Integrated Dataset Documentation</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Source Datasets</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Escapement 2023 (source: stream surveys)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Catch 2023 (source: FOS)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Integration Date</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>2024-01-15</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## Join Logic</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Joined on CU and ReturnYear</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Escapement BroodYear converted to ReturnYear (BroodYear + 4)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## Transformations Applied</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Column name standardization</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Code value standardization</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>ExploitationRate calculation: Catch / (Catch + Escapement)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Known Issues</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Some CUs missing catch data for 2023</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Temporal alignment assumes 4-year cycle (may vary by CU)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</div>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
+<ul>
+<li>Review the <a href="controlled-vocabulary-thesauri.qmd">Controlled Vocabulary &amp; Thesauri</a> for standard terms</li>
+<li>Check the <a href="salmon-data-exchange-package.qmd">Salmon Data Exchange Package Specification</a> for integration patterns</li>
+<li>Explore <a href="../tools/r_packages.qmd">R tools</a> for automated integration workflows</li>
+<li>Contact the <a href="mailto:FADSDataStewardship-GestiondesdonneesSFDA@dfo-mpo.gc.ca">Data Stewardship Unit</a> for integration support</li>
 </ul>
-<hr>
-</section>
-<section id="got-a-tool-to-share" class="level3">
-<h3 class="anchored" data-anchor-id="got-a-tool-to-share">📩 Got a Tool to Share?</h3>
-<p>If you’ve built or used something you think could help others — whether it’s a handy Excel macro or a full-blown Shiny app — we’d love to include it here!<br>
-Send us a note and let’s make it easier for everyone to work smarter. 🤝💡</p>
-<hr>
-<p>🧭 <a href="https://086gc.sharepoint.com/sites/FisheryAssessmentDataSectionWiki/SitePages/Data-Stewardship-Unit(1).aspx">Return to the Internal DSU Wiki</a></p>
-<blockquote class="blockquote">
-<p><em>Tools don’t solve problems — people do. But the right tool helps a lot.</em> 🛠️🙂</p>
-</blockquote>
 
 
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -769,7 +1206,7 @@ Send us a note and let’s make it easier for everyone to work smarter. 🤝💡
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/tools.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/tools.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/integrate-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/integrate-data.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This site was created with <a href="https://quarto.org/">Quarto</a> and is hosted with <a href="https://pages.github.com/">GitHub Pages</a>.</p>
 </div>
