@@ -106,8 +106,7 @@ css: styles/custom.css
     </div>
     <p class="text-muted mb-2" style="font-size: 0.9rem;">Structured data collection and automated products for the annual Salmon Outlook.</p>
     <div class="mt-2 d-flex justify-content-between align-items-center">
-      <a href="https://github.com/dfo-pacific-science/salmon-outlook-report" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Repository</a>
-      <a href="#" class="text-muted" onclick="event.stopPropagation();">Survey Links (pending)</a>
+      <a href="https://github.com/dfo-pacific-science/salmon-outlook-report" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">GitHub Repository</a>
     </div>
   </div>
 </div>
@@ -134,7 +133,7 @@ css: styles/custom.css
         <li>Versioned data and code storage with planned publication to Open Government Portal</li>
       </ul>
       <p>
-        <a href="https://github.com/dfo-pacific-science/salmon-outlook-report" target="_blank" rel="noopener noreferrer">Repository</a>
+        <a href="https://github.com/dfo-pacific-science/salmon-outlook-report" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
       </p>
       <div class="portfolio-screenshot-container">
         <p class="text-center text-muted mb-0">📷 Screenshot coming soon</p>
@@ -152,7 +151,7 @@ css: styles/custom.css
     </div>
     <p class="text-muted mb-2" style="font-size: 0.9rem;">Open data linking SMUs, CUs, and DUs so assessments and reporting stay aligned.</p>
     <div class="mt-2 d-flex justify-content-between align-items-center">
-      <a href="https://github.com/dfo-pacific-science/Salmon-SMU-CU-DU-Crosswalk" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Repository</a>
+      <a href="https://github.com/dfo-pacific-science/Salmon-SMU-CU-DU-Crosswalk" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">GitHub Repository</a>
       <a href="#" class="text-muted" onclick="event.stopPropagation();">Data Access (link pending)</a>
     </div>
   </div>
@@ -244,7 +243,7 @@ css: styles/custom.css
     <p class="text-muted mb-2" style="font-size: 0.9rem;">R package for ontology-aware salmon data packages with unified semantic fields and code lists.</p>
     <div class="mt-2 d-flex justify-content-between align-items-center">
       <a href="https://dfo-pacific-science.github.io/metasalmon/" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Documentation</a>
-      <a href="https://github.com/dfo-pacific-science/metasalmon" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Repository</a>
+      <a href="https://github.com/dfo-pacific-science/metasalmon" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">GitHub Repository</a>
     </div>
   </div>
 </div>
