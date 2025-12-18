@@ -136,7 +136,7 @@ css: styles/custom.css
         <a href="https://github.com/dfo-pacific-science/salmon-outlook-report" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
       </p>
       <div class="portfolio-screenshot-container">
-        <p class="text-center text-muted mb-0">📷 Screenshot coming soon</p>
+        <img src="@images/data_projects/outlook_report.png" alt="Automated salmon outlook report example" class="img-fluid" style="max-width: 100%; height: auto; border-radius: 4px;">
       </div>
     </div>
   </div>
