@@ -1,5 +1,7 @@
 ---
 title: "Hosting Data and Code"
+topics:
+  - Publishing & Open Science
 version: "v1.0"
 last_updated: "2025-04-04"
 ---
@@ -73,7 +75,7 @@ Table 1. **External Platform Use Guidelines** for three data classifications of 
 - Requires metadata, data steward approval, and Open Government Licence.
 
 > 🔗 [Open Government Licence](https://open.canada.ca/en/open-government-licence-canada)  
-> 🔗 [Open Data Portal Submission Guide](https://open.canada.ca/en/submit-data)
+> 🔗 [Open Data Publishing Guidance](https://open.canada.ca/en/using-open-data)
 
 ---
 

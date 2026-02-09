@@ -1,5 +1,8 @@
 ---
 title: "Fisheries Science Reports -- Data and Stats 101"
+topics:
+  - Deep Dives
+  - Fisheries Science Reports
 format: html
 ---
 

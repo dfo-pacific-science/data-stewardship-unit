@@ -21,7 +21,7 @@ website:
   favicon: images/logo.png
 
   navbar:
-    search: true
+    search: false
     left:
       - text: "FADS Internal Wiki"
         href: https://086gc.sharepoint.com/:u:/r/sites/FisheryAssessmentDataSectionWiki/SitePages/CollabHome.aspx?csf=1&web=1&e=tkJJk4
@@ -30,7 +30,21 @@ website:
       - text: "Data Services"
         href: fads-portfolio.qmd
       - text: "Salmon Data Standards"
-        href: reference_info/data_standards/controlled-vocabulary-thesauri.qmd
+        menu:
+          - text: "Salmon Data Standards Home"
+            href: reference_info/data_standards/index.qmd
+          - text: "Publish Your Data"
+            href: reference_info/data_standards/publish-data.qmd
+          - text: "Standardize Your Data"
+            href: reference_info/data_standards/standardize-data.qmd
+          - text: "Integrate Data"
+            href: reference_info/data_standards/integrate-data.qmd
+          - text: "Controlled Vocabulary & Thesauri"
+            href: reference_info/data_standards/controlled-vocabulary-thesauri.qmd
+          - text: "Salmon Data Exchange Package"
+            href: reference_info/data_standards/salmon-data-exchange-package.qmd
+          - text: "GC DFO Salmon Ontology"
+            href: reference_info/ontology/formal-documentation.qmd
     tools:
       - icon: github
         menu:
@@ -45,22 +59,55 @@ website:
     style: docked
     background: light
     contents:
-      - auto: how_to_guides
-      - section: "Reference Info"
+      - text: "Home"
+        href: index.qmd
+      - section: "Getting Started"
         contents:
-          - section: "Salmon Data Standards"
-            contents:
-              - reference_info/data_standards/controlled-vocabulary-thesauri.qmd
-              - reference_info/ontology/formal-documentation.qmd
-              - reference_info/data_standards/salmon-data-exchange-package.qmd
-          - reference_info/dwc-obis-gbif.qmd
-          - reference_info/openDataPractices.qmd
-          - reference_info/publishing_data_externally.qmd
-          - section: "Tools"
-            contents:
-              - reference_info/tools/r_packages.qmd
-      - auto: tutorials
-      - auto: deep_dives
+          - href: about.qmd
+          - href: fads-portfolio.qmd
+          - text: "News & Updates"
+            href: blog/index.qmd
+          - href: reference_info/openDataPractices.qmd
+      - section: "Standards & Vocabulary"
+        contents:
+          - text: "Salmon Data Standards Hub"
+            href: reference_info/data_standards/index.qmd
+          - text: "Controlled Vocabulary & Thesauri"
+            href: reference_info/data_standards/controlled-vocabulary-thesauri.qmd
+          - href: tutorials/support_controlled_vocabs.qmd
+          - href: reference_info/ontology/formal-documentation.qmd
+          - href: reference_info/data_standards/salmon-data-exchange-package.qmd
+          - text: "Term Dictionary + Data Package + Salmon GPT"
+            href: reference_info/data_standards/ontology-data-package-gpt.qmd
+          - text: "Darwin Core / GBIF / OBIS"
+            href: reference_info/dwc-obis-gbif.qmd
+      - section: "Common Workflows"
+        contents:
+          - href: reference_info/data_standards/standardize-data.qmd
+          - href: reference_info/data_standards/integrate-data.qmd
+          - href: reference_info/data_standards/publish-data.qmd
+          - href: how_to_guides/fsar-data-standardization-workflow.qmd
+      - section: "Data Access & Platforms"
+        contents:
+          - href: how_to_guides/databricks_r_studio.qmd
+          - href: how_to_guides/sharepoint_r.qmd
+          - href: how_to_guides/openGovernmentPortalR.qmd
+      - section: "Publishing & Open Science"
+        contents:
+          - href: reference_info/publishing_data_externally.qmd
+      - section: "Cookbook"
+        contents:
+          - href: cookbook/index.qmd
+      - section: "Tools & Training"
+        contents:
+          - text: "Tools"
+            href: tools.qmd
+          - href: reference_info/tools/r_packages.qmd
+          - text: "Training Resources"
+            href: training-resources.qmd
+      - section: "Deep Dives"
+        contents:
+          - href: deep_dives/stock-assessment-data-101-for-fisheries-science-reports.qmd
     logo: images/logo.png
     search: true
 

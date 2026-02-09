@@ -1,0 +1,272 @@
+---
+title: "Standardize Your Data"
+topics:
+  - Workflows
+  - Standards & Vocabulary
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    css: ../../styles/custom.css
+---
+
+```{=html}
+<style>
+.cookbook-section {
+  margin-top: 3rem;
+}
+
+.cookbook-step {
+  background: #f8f9fa;
+  border-left: 4px solid #446c8a;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+}
+
+.cookbook-step h3 {
+  margin-top: 0;
+  color: #446c8a;
+  font-size: 1.3rem;
+}
+
+.cookbook-step code {
+  background: #e9ecef;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.cookbook-step pre {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.cookbook-step pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+</style>
+```
+
+## Cookbook Guide
+
+<div class="cookbook-section">
+
+### Step 1: Assess Your Current Data
+
+<div class="cookbook-step">
+
+**What you need:**
+- Your existing dataset
+- List of column names and their current meanings
+
+**How to do it:**
+
+1. Open your dataset and list all columns
+2. Document what each column represents in plain language
+3. Identify columns that might map to standard terms:
+   - Geographic identifiers (CU, SMU, DU)
+   - Temporal fields (brood year, return year)
+   - Biological measurements (escapement, spawners)
+   - Categorical codes (run type, life stage)
+
+**Example assessment:**
+
+| Current Column | What It Means | Potential Standard Term |
+|---------------|---------------|-------------------------|
+| `CU_code` | Conservation unit identifier | CU |
+| `BY` | Brood year | Brood Year |
+| `Esc` | Escapement count | Escapement |
+
+</div>
+
+### Step 2: Map to Standard Terms
+
+<div class="cookbook-step">
+
+**What you need:**
+- Your column assessment
+- Access to the [Controlled Vocabulary & Thesauri](controlled-vocabulary-thesauri.qmd)
+
+**How to do it:**
+
+1. For each column, search the vocabulary for matching terms
+2. Review term definitions to confirm they match your usage
+3. Copy the URI for each confirmed match
+4. Create a mapping table:
+
+**Example mapping:**
+
+```csv
+current_column,standard_term_label,standard_term_uri
+CU_code,Conservation Unit,http://purl.dataone.org/odo/SALMON_00000239
+BY,Brood Year,http://purl.dataone.org/odo/SALMON_00000782
+Esc,Escapement,http://purl.dataone.org/odo/SALMON_00000123
+```
+
+**Tips:**
+- If no exact match exists, find the closest broader term
+- Document any gaps for future vocabulary expansion
+- Consider synonyms and alternative names
+
+</div>
+
+### Step 3: Update Your Data Dictionary
+
+<div class="cookbook-step">
+
+**What you need:**
+- Your mapping table
+- [Data Dictionary Template](data_dictionary_template.xlsx)
+
+**How to do it:**
+
+1. Download the data dictionary template
+2. Create one row per column in your dataset
+3. Fill in required fields:
+   - `variable_name`: Your current column name
+   - `label`: Human-readable label
+   - `data_type`: Appropriate type (string, integer, float, boolean, categorical)
+   - `definition`: Clear explanation of what the column contains
+   - `standard_term_uri`: URI from your mapping (if available)
+   - `unit`: Unit of measurement (for numeric fields)
+   - `accepted_values`: List of valid values (for categorical fields)
+
+**Example dictionary entry:**
+
+```csv
+variable_name,label,data_type,definition,standard_term_uri,unit
+CU_code,Conservation Unit,string,The conservation unit identifier,http://purl.dataone.org/odo/SALMON_00000239,
+BY,Brood Year,integer,The year in which spawning occurred,http://purl.dataone.org/odo/SALMON_00000782,year
+Esc,Escapement,float,Number of fish returning to spawn,http://purl.dataone.org/odo/SALMON_00000123,number of fish
+```
+
+</div>
+
+### Step 4: Standardize Code Lists
+
+<div class="cookbook-step">
+
+**What you need:**
+- List of categorical columns
+- Access to controlled vocabularies for codes
+
+**How to do it:**
+
+1. Identify all categorical columns (run type, life stage, etc.)
+2. List all unique values currently in use
+3. Search for matching controlled vocabularies
+4. Map your values to standard codes
+5. Document mappings in `codes.csv`:
+
+**Example code mapping:**
+
+```csv
+variable_name,current_value,standard_value,concept_scheme_uri
+run_type,Spring,Spring Run,http://purl.dataone.org/odo/SALMON_00000456
+run_type,Summer,Summer Run,http://purl.dataone.org/odo/SALMON_00000457
+run_type,Fall,Fall Run,http://purl.dataone.org/odo/SALMON_00000458
+```
+
+**Tips:**
+- Create a lookup table for data transformation
+- Document any values that don't have standard equivalents
+- Consider creating a new controlled vocabulary if needed
+
+</div>
+
+### Step 5: Apply Standards to Your Data
+
+<div class="cookbook-step">
+
+**What you need:**
+- Standardized data dictionary
+- Code mappings
+- Your original dataset
+
+**How to do it:**
+
+1. **Rename columns** (optional): Update column names to match standard labels
+2. **Transform codes**: Replace current values with standard codes using your mapping
+3. **Validate data types**: Ensure numeric fields are properly formatted
+4. **Add metadata**: Include your data dictionary with the dataset
+
+**Example R code for transformation:**
+
+```r
+library(dplyr)
+
+# Read your data
+data <- read.csv("your_data.csv")
+
+# Apply code mappings
+code_mapping <- read.csv("code_mapping.csv")
+data <- data %>%
+  left_join(code_mapping, by = c("run_type" = "current_value")) %>%
+  mutate(run_type = standard_value) %>%
+  select(-current_value, -standard_value)
+
+# Validate data types
+data <- data %>%
+  mutate(
+    BY = as.integer(BY),
+    Esc = as.numeric(Esc)
+  )
+
+# Save standardized data
+write.csv(data, "standardized_data.csv", row.names = FALSE)
+```
+
+</div>
+
+### Step 6: Validate and Document
+
+<div class="cookbook-step">
+
+**What you need:**
+- Standardized dataset
+- Completed data dictionary
+- Validation checklist
+
+**How to do it:**
+
+1. **Validate completeness:**
+   - All columns have entries in the dictionary
+   - All URIs are valid and accessible
+   - Required fields are populated
+
+2. **Check consistency:**
+   - Code values match controlled vocabularies
+   - Data types are correct
+   - Units are documented
+
+3. **Document changes:**
+   - Create a changelog of transformations
+   - Note any assumptions or decisions made
+   - Record version information
+
+**Validation checklist:**
+- [ ] All columns documented in data dictionary
+- [ ] Standard term URIs included where available
+- [ ] Code lists mapped to controlled vocabularies
+- [ ] Data types validated
+- [ ] Units documented for numeric fields
+- [ ] Transformation steps documented
+
+</div>
+
+</div>
+
+## Next Steps
+
+- Review the [Controlled Vocabulary & Thesauri](controlled-vocabulary-thesauri.qmd) for available terms
+- Check the [Salmon Data Exchange Package Specification](salmon-data-exchange-package.qmd) for package structure
+- Explore [R tools](../tools/r_packages.qmd) for automated standardization
+- Contact the [Data Stewardship Unit](mailto:FADSDataStewardship-GestiondesdonneesSFDA@dfo-mpo.gc.ca) for support
+
+
