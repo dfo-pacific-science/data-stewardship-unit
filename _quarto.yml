@@ -77,6 +77,8 @@ website:
           - href: tutorials/support_controlled_vocabs.qmd
           - href: reference_info/ontology/formal-documentation.qmd
           - href: reference_info/data_standards/salmon-data-exchange-package.qmd
+          - text: "Semantic Salmon Data Ecosystem"
+            href: reference_info/data_standards/semantic-salmon-data-ecosystem.qmd
           - text: "Term Dictionary + Data Package + Salmon GPT"
             href: reference_info/data_standards/ontology-data-package-gpt.qmd
           - text: "Darwin Core / GBIF / OBIS"
