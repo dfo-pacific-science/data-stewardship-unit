@@ -21,6 +21,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -42,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-972cf70390dc11df476ac11b7b56006c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-00ef08af5e469c238d2d01fdff69a537.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -108,12 +143,8 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-salmon-data-standards">    
         <li>
-    <a class="dropdown-item" href="../../reference_info/data_standards/index.qmd">
+    <a class="dropdown-item" href="../../reference_info/data_standards/index.html">
  <span class="dropdown-text">Salmon Data Standards Home</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../reference_info/data_standards/publish-data.html">
- <span class="dropdown-text">Publish Your Data</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../reference_info/data_standards/standardize-data.html">
@@ -124,12 +155,24 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Integrate Data</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="../../reference_info/data_standards/publish-data.html">
+ <span class="dropdown-text">Publish Your Data</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../../reference_info/data_standards/controlled-vocabulary-thesauri.html">
  <span class="dropdown-text">Controlled Vocabulary &amp; Thesauri</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../reference_info/data_standards/salmon-data-exchange-package.html">
  <span class="dropdown-text">Salmon Data Exchange Package</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../reference_info/data_standards/semantic-salmon-data-ecosystem.html">
+ <span class="dropdown-text">Semantic Salmon Data Ecosystem</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../reference_info/data_standards/ontology-data-package-gpt.html">
+ <span class="dropdown-text">Term Dictionary + Data Package + Salmon GPT</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../reference_info/ontology/formal-documentation.html">
@@ -163,7 +206,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../reference_info/data_standards/index.qmd">Standards &amp; Vocabulary</a></li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/salmon-data-exchange-package.html">Salmon Data Exchange Package Specification</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../reference_info/data_standards/index.html">Standards &amp; Vocabulary</a></li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/salmon-data-exchange-package.html">Salmon Data Exchange Package Specification</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -218,14 +261,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../blog/index.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">News &amp; Updates</span></a>
+  <a href="../../reference_info/data_standards/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Salmon Data Standards Home</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../reference_info/openDataPractices.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data Practices for Open Science – 3 Quick Tips</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../blog/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">News &amp; Updates</span></a>
   </div>
 </li>
       </ul>
@@ -241,7 +290,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/data_standards/index.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../../reference_info/data_standards/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Salmon Data Standards Hub</span></a>
   </div>
 </li>
@@ -271,7 +320,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/data_standards/ontology-data-package-gpt.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../../reference_info/data_standards/semantic-salmon-data-ecosystem.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Semantic Salmon Data Ecosystem</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../reference_info/data_standards/ontology-data-package-gpt.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Term Dictionary + Data Package + Salmon GPT</span></a>
   </div>
 </li>
@@ -308,6 +363,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../../reference_info/data_standards/publish-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Publish Your Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../how_to_guides/fsar-data-standardization-workflow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FSAR Data Standardization Workflow</span></a>
   </div>
 </li>
       </ul>
@@ -367,6 +428,12 @@ ul.task-list li input[type="checkbox"] {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../cookbook/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cookbook</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -394,6 +461,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../../training-resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Training Resources</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../reference_info/glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary &amp; Acronyms</span></a>
   </div>
 </li>
       </ul>
@@ -434,15 +507,16 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#column_dictionary.csv-schema" id="toc-column_dictionary.csv-schema" class="nav-link" data-scroll-target="#column_dictionary.csv-schema"><span class="header-section-number">7</span> <code>column_dictionary.csv</code> Schema</a></li>
   <li><a href="#codes.csv-schema" id="toc-codes.csv-schema" class="nav-link" data-scroll-target="#codes.csv-schema"><span class="header-section-number">8</span> <code>codes.csv</code> Schema</a></li>
   <li><a href="#relationship-to-ontology-r-package-and-gpt" id="toc-relationship-to-ontology-r-package-and-gpt" class="nav-link" data-scroll-target="#relationship-to-ontology-r-package-and-gpt"><span class="header-section-number">9</span> Relationship to Ontology, R Package, and GPT</a></li>
-  <li><a href="#versioning-and-backwards-compatibility" id="toc-versioning-and-backwards-compatibility" class="nav-link" data-scroll-target="#versioning-and-backwards-compatibility"><span class="header-section-number">10</span> Versioning and Backwards Compatibility</a></li>
-  <li><a href="#implementation-notes" id="toc-implementation-notes" class="nav-link" data-scroll-target="#implementation-notes"><span class="header-section-number">11</span> Implementation Notes</a></li>
+  <li><a href="#validation-workflow" id="toc-validation-workflow" class="nav-link" data-scroll-target="#validation-workflow"><span class="header-section-number">10</span> Validation Workflow</a></li>
+  <li><a href="#versioning-and-backwards-compatibility" id="toc-versioning-and-backwards-compatibility" class="nav-link" data-scroll-target="#versioning-and-backwards-compatibility"><span class="header-section-number">11</span> Versioning and Backwards Compatibility</a></li>
+  <li><a href="#implementation-notes" id="toc-implementation-notes" class="nav-link" data-scroll-target="#implementation-notes"><span class="header-section-number">12</span> Implementation Notes</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/reference_info/data_standards/salmon-data-exchange-package.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/reference_info/data_standards/salmon-data-exchange-package.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../reference_info/data_standards/index.qmd">Standards &amp; Vocabulary</a></li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/salmon-data-exchange-package.html">Salmon Data Exchange Package Specification</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../reference_info/data_standards/index.html">Standards &amp; Vocabulary</a></li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/salmon-data-exchange-package.html">Salmon Data Exchange Package Specification</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Salmon Data Exchange Package Specification</h1>
 </div>
@@ -511,6 +585,11 @@ ul.task-list li input[type="checkbox"] {
 <li><code>data/your_table_1.csv</code></li>
 <li><code>data/your_table_2.csv</code></li>
 <li>etc.</li>
+</ul>
+<p>Downloadable starter assets:</p>
+<ul>
+<li><a href="examples/sdep-minimal-example.zip">Minimal SDEP example package (zip)</a></li>
+<li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/tree/main/reference_info/data_standards/examples/sdep-minimal-example">Browse example package files</a></li>
 </ul>
 <p>The SDEP spec does <strong>not</strong> prescribe a single canonical salmon schema. Instead, it standardizes the <strong>metadata</strong> about whatever schema a project uses and ties it to ontology and vocabularies.</p>
 </section>
@@ -812,6 +891,48 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
+<p><code>column_role</code> quick definitions:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Role</th>
+<th>When to use it</th>
+<th>Example columns</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>identifier</code></td>
+<td>Keys and IDs that identify rows/entities</td>
+<td><code>cu_id</code>, <code>survey_event_id</code>, <code>record_id</code></td>
+</tr>
+<tr class="even">
+<td><code>measurement</code></td>
+<td>Quantitative or measured values</td>
+<td><code>spawner_count</code>, <code>run_size</code>, <code>exploitation_rate</code></td>
+</tr>
+<tr class="odd">
+<td><code>temporal</code></td>
+<td>Time and date fields</td>
+<td><code>return_year</code>, <code>sample_date</code>, <code>datetime</code></td>
+</tr>
+<tr class="even">
+<td><code>categorical</code></td>
+<td>Controlled codes or enumerated classes</td>
+<td><code>status_code</code>, <code>species_code</code>, <code>run_timing</code></td>
+</tr>
+<tr class="odd">
+<td><code>attribute</code></td>
+<td>Descriptive attributes that are not IDs/time/measurements</td>
+<td><code>waterbody_name</code>, <code>observer_name</code>, <code>population_name</code></td>
+</tr>
+</tbody>
+</table>
 <p>Guidance:</p>
 <ul>
 <li>Use <code>column_role = "identifier"</code> for identifiers such as <code>cu_id</code>, <code>survey_event_id</code>, <code>POP_ID</code>.</li>
@@ -933,8 +1054,23 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="versioning-and-backwards-compatibility" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> Versioning and Backwards Compatibility</h1>
+<section id="validation-workflow" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Validation Workflow</h1>
+<p>Run validation locally before publishing.</p>
+<p>Typical local workflow (R):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(metasalmon)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>pkg_path <span class="ot">&lt;-</span> <span class="st">"path/to/sdep-package"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">validate_dictionary</span>(<span class="fu">file.path</span>(pkg_path, <span class="st">"column_dictionary.csv"</span>))</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">validate_semantics</span>(<span class="fu">file.path</span>(pkg_path, <span class="st">"column_dictionary.csv"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Related implementation guidance:</p>
+<ul>
+<li><a href="../../how_to_guides/fsar-data-standardization-workflow.html">FSAR Data Standardization Workflow</a></li>
+<li><a href="../../reference_info/data_standards/ontology-data-package-gpt.html">Term Dictionary + Data Package + Salmon GPT</a></li>
+</ul>
+</section>
+<section id="versioning-and-backwards-compatibility" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Versioning and Backwards Compatibility</h1>
 <ul>
 <li>Include a <code>spec_version</code> field in <code>dataset.csv</code> in future iterations if needed (e.g., <code>sdep-0.1.0</code>).</li>
 <li>New columns should be added in a backwards-compatible way:
@@ -944,8 +1080,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Breaking changes to required columns or semantics should bump the major version.</li>
 </ul>
 </section>
-<section id="implementation-notes" class="level1" data-number="11">
-<h1 data-number="11"><span class="header-section-number">11</span> Implementation Notes</h1>
+<section id="implementation-notes" class="level1" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span> Implementation Notes</h1>
 <ul>
 <li>CSV files should use UTF-8 encoding and a comma delimiter by default.</li>
 <li>Dates should follow ISO 8601 where possible (e.g., <code>YYYY-MM-DD</code>); years can be encoded as integers.</li>

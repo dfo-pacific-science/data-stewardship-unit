@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Support Controlled Vocabularies – FADS Open Science Hub</title>
+<title>FSAR Data Standardization Workflow – FADS Open Science Hub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,28 +20,63 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../images/logo.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-00ef08af5e469c238d2d01fdff69a537.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-00ef08af5e469c238d2d01fdff69a537.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -80,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">FADS Open Science Hub</span>
     </a>
   </div>
@@ -94,11 +129,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">FADS Internal Wiki</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../about.html" aria-current="page"> 
+    <a class="nav-link active" href="../about.html" aria-current="page"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../fads-portfolio.html"> 
+    <a class="nav-link" href="../fads-portfolio.html"> 
 <span class="menu-text">Data Services</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -107,39 +142,39 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-salmon-data-standards">    
         <li>
-    <a class="dropdown-item" href="../../reference_info/data_standards/index.html">
+    <a class="dropdown-item" href="../reference_info/data_standards/index.html">
  <span class="dropdown-text">Salmon Data Standards Home</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../reference_info/data_standards/standardize-data.html">
+    <a class="dropdown-item" href="../reference_info/data_standards/standardize-data.html">
  <span class="dropdown-text">Standardize Your Data</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../reference_info/data_standards/integrate-data.html">
+    <a class="dropdown-item" href="../reference_info/data_standards/integrate-data.html">
  <span class="dropdown-text">Integrate Data</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../reference_info/data_standards/publish-data.html">
+    <a class="dropdown-item" href="../reference_info/data_standards/publish-data.html">
  <span class="dropdown-text">Publish Your Data</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../reference_info/data_standards/controlled-vocabulary-thesauri.html">
+    <a class="dropdown-item" href="../reference_info/data_standards/controlled-vocabulary-thesauri.html">
  <span class="dropdown-text">Controlled Vocabulary &amp; Thesauri</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../reference_info/data_standards/salmon-data-exchange-package.html">
+    <a class="dropdown-item" href="../reference_info/data_standards/salmon-data-exchange-package.html">
  <span class="dropdown-text">Salmon Data Exchange Package</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../reference_info/data_standards/semantic-salmon-data-ecosystem.html">
+    <a class="dropdown-item" href="../reference_info/data_standards/semantic-salmon-data-ecosystem.html">
  <span class="dropdown-text">Semantic Salmon Data Ecosystem</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../reference_info/data_standards/ontology-data-package-gpt.html">
+    <a class="dropdown-item" href="../reference_info/data_standards/ontology-data-package-gpt.html">
  <span class="dropdown-text">Term Dictionary + Data Package + Salmon GPT</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../reference_info/ontology/formal-documentation.html">
+    <a class="dropdown-item" href="../reference_info/ontology/formal-documentation.html">
  <span class="dropdown-text">GC DFO Salmon Ontology</span></a>
   </li>  
     </ul>
@@ -170,7 +205,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Support Controlled Vocabularies</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../reference_info/data_standards/standardize-data.html">Common Workflows</a></li><li class="breadcrumb-item"><a href="../how_to_guides/fsar-data-standardization-workflow.html">FSAR Data Standardization Workflow</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -184,9 +219,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="../../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -198,7 +233,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -213,31 +248,31 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../about.html" class="sidebar-item-text sidebar-link">
+  <a href="../about.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About the DSU</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../fads-portfolio.html" class="sidebar-item-text sidebar-link">
+  <a href="../fads-portfolio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data Services</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/data_standards/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference_info/data_standards/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Salmon Data Standards Home</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/openDataPractices.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference_info/openDataPractices.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data Practices for Open Science – 3 Quick Tips</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../blog/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../blog/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">News &amp; Updates</span></a>
   </div>
 </li>
@@ -254,49 +289,49 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/data_standards/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference_info/data_standards/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Salmon Data Standards Hub</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/data_standards/controlled-vocabulary-thesauri.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference_info/data_standards/controlled-vocabulary-thesauri.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Controlled Vocabulary &amp; Thesauri</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tutorials/support_controlled_vocabs.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorials/support_controlled_vocabs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Support Controlled Vocabularies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/ontology/formal-documentation.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference_info/ontology/formal-documentation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">GC DFO Salmon Ontology</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/data_standards/salmon-data-exchange-package.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference_info/data_standards/salmon-data-exchange-package.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Salmon Data Exchange Package Specification</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/data_standards/semantic-salmon-data-ecosystem.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference_info/data_standards/semantic-salmon-data-ecosystem.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Semantic Salmon Data Ecosystem</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/data_standards/ontology-data-package-gpt.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference_info/data_standards/ontology-data-package-gpt.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Term Dictionary + Data Package + Salmon GPT</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/dwc-obis-gbif.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference_info/dwc-obis-gbif.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Darwin Core / GBIF / OBIS</span></a>
   </div>
 </li>
@@ -304,34 +339,34 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Common Workflows</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/data_standards/standardize-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference_info/data_standards/standardize-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Standardize Your Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/data_standards/integrate-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference_info/data_standards/integrate-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Integrate Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/data_standards/publish-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference_info/data_standards/publish-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Publish Your Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../how_to_guides/fsar-data-standardization-workflow.html" class="sidebar-item-text sidebar-link">
+  <a href="../how_to_guides/fsar-data-standardization-workflow.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">FSAR Data Standardization Workflow</span></a>
   </div>
 </li>
@@ -348,19 +383,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../how_to_guides/databricks_r_studio.html" class="sidebar-item-text sidebar-link">
+  <a href="../how_to_guides/databricks_r_studio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Connect to the Azure Lakehouse from R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../how_to_guides/sharepoint_r.html" class="sidebar-item-text sidebar-link">
+  <a href="../how_to_guides/sharepoint_r.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Access Data in SharePoint from R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../how_to_guides/openGovernmentPortalR.html" class="sidebar-item-text sidebar-link">
+  <a href="../how_to_guides/openGovernmentPortalR.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Accessing Spatial Data from the Open Government Portal</span></a>
   </div>
 </li>
@@ -377,7 +412,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/publishing_data_externally.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference_info/publishing_data_externally.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hosting Data and Code</span></a>
   </div>
 </li>
@@ -394,7 +429,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../cookbook/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../cookbook/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cookbook</span></a>
   </div>
 </li>
@@ -411,25 +446,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tools.html" class="sidebar-item-text sidebar-link">
+  <a href="../tools.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tools</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/tools/r_packages.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference_info/tools/r_packages.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">R Packages</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../training-resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../training-resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Training Resources</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/glossary.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference_info/glossary.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Glossary &amp; Acronyms</span></a>
   </div>
 </li>
@@ -446,7 +481,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../deep_dives/stock-assessment-data-101-for-fisheries-science-reports.html" class="sidebar-item-text sidebar-link">
+  <a href="../deep_dives/stock-assessment-data-101-for-fisheries-science-reports.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Fisheries Science Reports – Data and Stats 101</span></a>
   </div>
 </li>
@@ -461,34 +496,23 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
-  <ul>
-  <li><a href="#guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo" id="toc-guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo" class="nav-link active" data-scroll-target="#guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo">📘 Guide: End-to-End Process for Supporting Controlled Vocabularies in DFO</a>
   <ul class="collapse">
-  <li><a href="#step-1-scientist-submits-a-data-dictionary" id="toc-step-1-scientist-submits-a-data-dictionary" class="nav-link" data-scroll-target="#step-1-scientist-submits-a-data-dictionary">🧾 Step 1: Scientist Submits a Data Dictionary</a></li>
-  <li><a href="#step-2-validate-against-dfo-vocabulary" id="toc-step-2-validate-against-dfo-vocabulary" class="nav-link" data-scroll-target="#step-2-validate-against-dfo-vocabulary">🔍 Step 2: Validate Against DFO Vocabulary</a></li>
-  <li><a href="#step-3-consider-alignment-to-nceas-salmon-ontology" id="toc-step-3-consider-alignment-to-nceas-salmon-ontology" class="nav-link" data-scroll-target="#step-3-consider-alignment-to-nceas-salmon-ontology">🧠 Step 3: Consider Alignment to NCEAS Salmon Ontology</a></li>
-  <li><a href="#step-4-curate-and-extend-dfo-controlled-vocabularies" id="toc-step-4-curate-and-extend-dfo-controlled-vocabularies" class="nav-link" data-scroll-target="#step-4-curate-and-extend-dfo-controlled-vocabularies">🧰 Step 4: Curate and Extend DFO-Controlled Vocabularies</a></li>
-  <li><a href="#step-5-build-dfo-specific-ontology-for-salmon" id="toc-step-5-build-dfo-specific-ontology-for-salmon" class="nav-link" data-scroll-target="#step-5-build-dfo-specific-ontology-for-salmon">🧱 Step 5: Build DFO-Specific Ontology for Salmon</a></li>
-  <li><a href="#step-6-publish-and-reuse" id="toc-step-6-publish-and-reuse" class="nav-link" data-scroll-target="#step-6-publish-and-reuse">🔁 Step 6: Publish and Reuse</a></li>
-  </ul></li>
-  <li><a href="#why-bother-with-controlled-vocabularies-and-ontologies" id="toc-why-bother-with-controlled-vocabularies-and-ontologies" class="nav-link" data-scroll-target="#why-bother-with-controlled-vocabularies-and-ontologies">🤔 Why Bother with Controlled Vocabularies and Ontologies?</a>
-  <ul class="collapse">
-  <li><a href="#enhanced-data-discovery" id="toc-enhanced-data-discovery" class="nav-link" data-scroll-target="#enhanced-data-discovery">🔍 1. Enhanced Data Discovery</a></li>
-  <li><a href="#semi-automated-data-integration" id="toc-semi-automated-data-integration" class="nav-link" data-scroll-target="#semi-automated-data-integration">🔄 2. Semi-Automated Data Integration</a></li>
-  <li><a href="#smarter-applications-ai-beyond" id="toc-smarter-applications-ai-beyond" class="nav-link" data-scroll-target="#smarter-applications-ai-beyond">🧠 3. Smarter Applications (AI &amp; Beyond)</a></li>
-  <li><a href="#future-proof-interoperability" id="toc-future-proof-interoperability" class="nav-link" data-scroll-target="#future-proof-interoperability">🔗 4. Future-Proof Interoperability</a></li>
-  <li><a href="#better-metadata-better-stewardship" id="toc-better-metadata-better-stewardship" class="nav-link" data-scroll-target="#better-metadata-better-stewardship">🧰 5. Better Metadata, Better Stewardship</a></li>
-  </ul></li>
-  <li><a href="#tldr" id="toc-tldr" class="nav-link" data-scroll-target="#tldr">🧭 TL;DR</a></li>
+  <li><a href="#step-1-define-your-scope-and-data-classification" id="toc-step-1-define-your-scope-and-data-classification" class="nav-link active" data-scroll-target="#step-1-define-your-scope-and-data-classification">Step 1 — Define your scope and data classification</a></li>
+  <li><a href="#step-2-map-columns-to-controlled-vocabulary-terms" id="toc-step-2-map-columns-to-controlled-vocabulary-terms" class="nav-link" data-scroll-target="#step-2-map-columns-to-controlled-vocabulary-terms">Step 2 — Map columns to controlled vocabulary terms</a></li>
+  <li><a href="#step-3-build-an-sdep-package" id="toc-step-3-build-an-sdep-package" class="nav-link" data-scroll-target="#step-3-build-an-sdep-package">Step 3 — Build an SDEP package</a></li>
+  <li><a href="#step-4-validate-before-submissionpublication" id="toc-step-4-validate-before-submissionpublication" class="nav-link" data-scroll-target="#step-4-validate-before-submissionpublication">Step 4 — Validate before submission/publication</a></li>
+  <li><a href="#step-5-prepare-publication-package-and-provenance" id="toc-step-5-prepare-publication-package-and-provenance" class="nav-link" data-scroll-target="#step-5-prepare-publication-package-and-provenance">Step 5 — Prepare publication package and provenance</a></li>
+  <li><a href="#step-6-publish-and-cite" id="toc-step-6-publish-and-cite" class="nav-link" data-scroll-target="#step-6-publish-and-cite">Step 6 — Publish and cite</a></li>
+  <li><a href="#fsar-readiness-checklist" id="toc-fsar-readiness-checklist" class="nav-link" data-scroll-target="#fsar-readiness-checklist">FSAR readiness checklist</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/documentation_hub/how_to_guides/support_controlled_vocabs.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/documentation_hub/how_to_guides/support_controlled_vocabs.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/how_to_guides/fsar-data-standardization-workflow.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/how_to_guides/fsar-data-standardization-workflow.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../reference_info/data_standards/standardize-data.html">Common Workflows</a></li><li class="breadcrumb-item"><a href="../how_to_guides/fsar-data-standardization-workflow.html">FSAR Data Standardization Workflow</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Support Controlled Vocabularies</h1>
+<h1 class="title">FSAR Data Standardization Workflow</h1>
 </div>
 
 
@@ -505,171 +529,78 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo" class="level2">
-<h2 class="anchored" data-anchor-id="guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo">📘 Guide: End-to-End Process for Supporting Controlled Vocabularies in DFO</h2>
-<section id="step-1-scientist-submits-a-data-dictionary" class="level3">
-<h3 class="anchored" data-anchor-id="step-1-scientist-submits-a-data-dictionary">🧾 Step 1: Scientist Submits a Data Dictionary</h3>
+<p>Use this workflow when preparing salmon datasets for Fisheries Science Advisory Report (FSAR) analysis, review, and publication.</p>
+<section id="step-1-define-your-scope-and-data-classification" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-define-your-scope-and-data-classification">Step 1 — Define your scope and data classification</h2>
 <ul>
-<li>The scientist downloads and completes the <strong>data dictionary template</strong> (Excel)
-<ul>
-<li>They describe each variable: name, definition, method, units, etc.</li>
-<li>They may include URIs from known vocabularies if possible</li>
-</ul></li>
-<li>The spreadsheet includes:
-<ul>
-<li>A <code>README</code> sheet with instructions</li>
-<li>A <code>Metadata</code> tab for project-level context</li>
-<li>A <code>Data Dictionary</code> tab with one row per variable</li>
-</ul></li>
+<li>Confirm what dataset(s) and years are in scope for the FSAR.</li>
+<li>Confirm data classification and sharing constraints before publishing.</li>
+<li>Reference policy guidance: <a href="../reference_info/publishing_data_externally.html">Publishing Data Externally</a></li>
 </ul>
 </section>
-<section id="step-2-validate-against-dfo-vocabulary" class="level3">
-<h3 class="anchored" data-anchor-id="step-2-validate-against-dfo-vocabulary">🔍 Step 2: Validate Against DFO Vocabulary</h3>
+<section id="step-2-map-columns-to-controlled-vocabulary-terms" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-map-columns-to-controlled-vocabulary-terms">Step 2 — Map columns to controlled vocabulary terms</h2>
+<ol type="1">
+<li>Open <a href="../reference_info/data_standards/controlled-vocabulary-thesauri.html">Controlled Vocabulary &amp; Thesauri</a>.</li>
+<li>Search for canonical terms for each key variable (e.g., spawner abundance, brood year, CU identifiers).</li>
+<li>Capture the corresponding canonical URI for each mapped term.</li>
+</ol>
+</section>
+<section id="step-3-build-an-sdep-package" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-build-an-sdep-package">Step 3 — Build an SDEP package</h2>
+<p>Use the <a href="../reference_info/data_standards/salmon-data-exchange-package.html">SDEP specification</a>.</p>
+<p>At minimum, create:</p>
 <ul>
-<li>The data dictionary is passed into your <strong>R validation function</strong> (<code>validate_data_dictionary()</code>)</li>
-<li>It compares submitted variables to your <strong>reference vocabulary</strong>, hosted as JSON on GitHub Pages</li>
-<li>The validator returns:
+<li><code>dataset.csv</code></li>
+<li><code>tables.csv</code></li>
+<li><code>column_dictionary.csv</code></li>
+<li><code>data/*.csv</code></li>
+<li><code>codes.csv</code> (if categorical code lists apply)</li>
+</ul>
+<p>Starter assets:</p>
 <ul>
-<li>Matched terms</li>
-<li>Unmatched terms</li>
-<li>Suggested mappings using fuzzy logic (e.g., <code>stringdist</code> or Jaro-Winkler)</li>
-</ul></li>
-<li>The scientist or steward reviews and adjusts terms as needed</li>
+<li><a href="../reference_info/data_standards/examples/sdep-minimal-example.zip">Download minimal SDEP example (zip)</a></li>
+<li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/tree/main/reference_info/data_standards/examples/sdep-minimal-example">Browse template package files</a></li>
 </ul>
 </section>
-<section id="step-3-consider-alignment-to-nceas-salmon-ontology" class="level3">
-<h3 class="anchored" data-anchor-id="step-3-consider-alignment-to-nceas-salmon-ontology">🧠 Step 3: Consider Alignment to NCEAS Salmon Ontology</h3>
+<section id="step-4-validate-before-submissionpublication" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-validate-before-submissionpublication">Step 4 — Validate before submission/publication</h2>
+<p>If you are using Meta-SALMON-R locally, validate package structure and semantics before sharing.</p>
+<p>Example R workflow:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(metasalmon)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>pkg_path <span class="ot">&lt;-</span> <span class="st">"path/to/your/sdep-package"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Structure checks</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">validate_dictionary</span>(<span class="fu">file.path</span>(pkg_path, <span class="st">"column_dictionary.csv"</span>))</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Semantics checks (as available in your version)</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">validate_semantics</span>(<span class="fu">file.path</span>(pkg_path, <span class="st">"column_dictionary.csv"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="step-5-prepare-publication-package-and-provenance" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-prepare-publication-package-and-provenance">Step 5 — Prepare publication package and provenance</h2>
 <ul>
-<li>For each submitted or candidate term:
-<ul>
-<li>Use an automated lookup tool to check if a concept already exists in the <strong>NCEAS Salmon Ontology</strong>. Start by using the BioPortal Annotator or API to match term labels and definitions. Optionally, build a lightweight script that compares local vocabulary terms to the ontology by label, synonyms, or definition text using exact or fuzzy string matching. Consider integrating the result into your pipeline for batch validation.</li>
-<li>If it exists:
-<ul>
-<li>Use <code>skos:exactMatch</code> or <code>skos:closeMatch</code> in your <code>.ttl</code> (Turtle) or <code>.jsonld</code> RDF vocab files. These mappings are typically stored in the ontology files generated from your <code>.csv</code> source. Add a column like <code>exact_match_uri</code> or <code>close_match_uri</code> to your <code>.csv</code>, your export script can incorporate those values automatically during serialization to <code>.ttl</code> or <code>.jsonld</code>.</li>
-</ul></li>
-<li>If it doesn’t exist, but is broadly applicable:
-<ul>
-<li>Prepare a Pull Request or issue to suggest the term to the NCEAS maintainers</li>
-<li>Include:
-<ul>
-<li>Label, definition, synonyms</li>
-<li>Usage example or data sources</li>
-</ul></li>
-</ul></li>
-</ul></li>
+<li>Ensure source citations, contacts, and license are complete.</li>
+<li>Ensure table descriptions and column descriptions are clear to external users.</li>
+<li>Include a short README describing dataset scope and caveats.</li>
 </ul>
 </section>
-<section id="step-4-curate-and-extend-dfo-controlled-vocabularies" class="level3">
-<h3 class="anchored" data-anchor-id="step-4-curate-and-extend-dfo-controlled-vocabularies">🧰 Step 4: Curate and Extend DFO-Controlled Vocabularies</h3>
+<section id="step-6-publish-and-cite" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-publish-and-cite">Step 6 — Publish and cite</h2>
 <ul>
-<li>Maintain DFO vocabularies in GitHub as:
-<ul>
-<li><code>.csv</code> for editing</li>
-<li><code>.json</code> for R/python access and validation</li>
-<li><code>.jsonld</code> and <code>.ttl</code> for ontology use</li>
-</ul></li>
-<li>Assign <strong>persistent URIs</strong> using <code>https://w3id.org/dfo/spsi#term-id</code></li>
-<li>Organize vocabularies by data domain or project (e.g., monitoring, habitat, biology)</li>
+<li>Follow platform guidance and approvals: <a href="../reference_info/publishing_data_externally.html">Publishing Data Externally</a></li>
+<li>Include version/date metadata and citation details.</li>
 </ul>
 </section>
-<section id="step-5-build-dfo-specific-ontology-for-salmon" class="level3">
-<h3 class="anchored" data-anchor-id="step-5-build-dfo-specific-ontology-for-salmon">🧱 Step 5: Build DFO-Specific Ontology for Salmon</h3>
-<ul>
-<li>Extend your vocabularies with relationships:
-<ul>
-<li><code>broader</code>, <code>narrower</code>, <code>related</code></li>
-<li><code>hasUnit</code>, <code>hasMethod</code>, <code>derivedFrom</code></li>
-</ul></li>
-<li>Use tools like <code>rdflib</code> or <code>skosify</code> to model in Turtle or OWL</li>
-<li>Add namespace info:
-<ul>
-<li><code>@prefix dfo-spsi: &lt;https://w3id.org/dfo/spsi#&gt;</code></li>
-</ul></li>
-<li>Over time, link this to:
-<ul>
-<li>NCEAS ontology</li>
-<li>NERC units</li>
-<li>ENVO/OBI for environment/sample methods</li>
-</ul></li>
+<section id="fsar-readiness-checklist" class="level2">
+<h2 class="anchored" data-anchor-id="fsar-readiness-checklist">FSAR readiness checklist</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">Vocabulary mappings documented</label></li>
+<li><label><input type="checkbox">SDEP metadata files completed</label></li>
+<li><label><input type="checkbox">Validation run locally and issues resolved</label></li>
+<li><label><input type="checkbox">Data classification + approvals confirmed</label></li>
+<li><label><input type="checkbox">Publication metadata + citation completed</label></li>
 </ul>
-</section>
-<section id="step-6-publish-and-reuse" class="level3">
-<h3 class="anchored" data-anchor-id="step-6-publish-and-reuse">🔁 Step 6: Publish and Reuse</h3>
-<ul>
-<li>Host vocab on GitHub Pages + register URIs at w3id.org</li>
-<li>Link from your Quarto site (<code>/data-standards/vocab-index.html</code>)</li>
-<li>Allow download in multiple formats (JSON, JSON-LD, TTL)</li>
-<li>Use vocab in:
-<ul>
-<li>Data validation tools</li>
-<li>Metadata editors</li>
-<li>APIs and dashboards</li>
-<li>AI pipelines (semantic RAG, search, integration)</li>
-</ul></li>
-</ul>
-<hr>
-<p>This workflow will enable DFO Pacific to build a structured, version-controlled, and interoperable vocabulary and ontology infrastructure for salmon data, with clear ties to domain-wide standards and extensibility for AI use cases.</p>
-</section>
-</section>
-<section id="why-bother-with-controlled-vocabularies-and-ontologies" class="level2">
-<h2 class="anchored" data-anchor-id="why-bother-with-controlled-vocabularies-and-ontologies">🤔 Why Bother with Controlled Vocabularies and Ontologies?</h2>
-<p>It’s a fair question. Why invest all this time defining terms, aligning with ontologies, and assigning URIs?</p>
-<p>Because it <strong>unlocks a future where your data works harder for you.</strong> Controlled vocabularies and ontologies aren’t just academic exercises — they’re the foundation for <strong>better discovery, smarter integration, and automation</strong> across the science lifecycle.</p>
-<p>Here are some tangible ways this work adds value:</p>
-<hr>
-<section id="enhanced-data-discovery" class="level3">
-<h3 class="anchored" data-anchor-id="enhanced-data-discovery">🔍 1. Enhanced Data Discovery</h3>
-<blockquote class="blockquote">
-<p>“I know someone collected salmon smolt data… but where do I find it?”</p>
-</blockquote>
-<p>By tagging datasets, columns, and metadata with <strong>terms from your SPSI vocabulary</strong>, you enable: - Keyword search that actually understands synonyms and related terms - Filters based on data type, units, methods, or ecological domain - Smart discovery interfaces (e.g., “Show me everything related to juvenile survival”)</p>
-<p>➡️ Example: A data catalog that lets users search by controlled term rather than inconsistent column names across spreadsheets.</p>
-<hr>
-</section>
-<section id="semi-automated-data-integration" class="level3">
-<h3 class="anchored" data-anchor-id="semi-automated-data-integration">🔄 2. Semi-Automated Data Integration</h3>
-<blockquote class="blockquote">
-<p>“These datasets report the same metric but use different terms, formats, or units.”</p>
-</blockquote>
-<p>Using controlled terms with defined relationships (e.g., <code>broader</code>, <code>exactMatch</code>, <code>hasUnit</code>), you can: - Detect overlapping fields across submissions automatically - Align columns and units across multiple datasets - Standardize value domains (e.g., <code>Red/Green/Amber</code> vs <code>Critical/Stable/Concerned</code>)</p>
-<p>➡️ Example: A script that reads in new FSAR data and automatically maps it to the SPSR schema for validation and loading into a database.</p>
-<hr>
-</section>
-<section id="smarter-applications-ai-beyond" class="level3">
-<h3 class="anchored" data-anchor-id="smarter-applications-ai-beyond">🧠 3. Smarter Applications (AI &amp; Beyond)</h3>
-<blockquote class="blockquote">
-<p>“Can’t AI just figure this stuff out?”</p>
-</blockquote>
-<p>Only if you feed it structure.</p>
-<p>Controlled vocabularies and ontologies allow you to: - Ground large language models (LLMs) in your domain’s specific terminology - Build Retrieval-Augmented Generation (RAG) systems for question answering - Use semantic search tools to find relevant variables, concepts, and datasets - Train AI to assist in metadata generation, anomaly detection, or dataset classification</p>
-<p>➡️ Example: A chatbot that helps scientists describe their data using your vocabulary, or recommends matching fields from existing standards.</p>
-<hr>
-</section>
-<section id="future-proof-interoperability" class="level3">
-<h3 class="anchored" data-anchor-id="future-proof-interoperability">🔗 4. Future-Proof Interoperability</h3>
-<blockquote class="blockquote">
-<p>“What if we want to share this with other agencies or join a broader platform?”</p>
-</blockquote>
-<p>Standardized vocabularies with persistent URIs and ontology alignments (e.g., with NCEAS, ENVO, OBO) make it easy to: - Share DFO terms with external partners - Convert metadata to international schemas (e.g., Darwin Core, ISO 19115) - Plug into federated data platforms without starting over</p>
-<p>➡️ Example: Publishing your vocabulary to w3id.org lets others reference and reuse your terms as global identifiers.</p>
-<hr>
-</section>
-<section id="better-metadata-better-stewardship" class="level3">
-<h3 class="anchored" data-anchor-id="better-metadata-better-stewardship">🧰 5. Better Metadata, Better Stewardship</h3>
-<blockquote class="blockquote">
-<p>“I just want people to fill out metadata that makes sense.”</p>
-</blockquote>
-<p>Controlled vocabularies: - Reduce ambiguity - Improve machine readability - Make metadata easier to validate and automate</p>
-<p>➡️ Example: A dropdown menu in a data intake form linked to your vocab that auto-fills units, definitions, and example values — while storing clean, machine-readable metadata under the hood.</p>
-<hr>
-</section>
-</section>
-<section id="tldr" class="level2">
-<h2 class="anchored" data-anchor-id="tldr">🧭 TL;DR</h2>
-<p>Controlled vocabularies and ontologies are not the end — they’re the beginning.</p>
-<p>They allow you to: - Find data more easily - Integrate it more reliably - Build tools more effectively - And use AI more meaningfully</p>
-<p>They turn your data into infrastructure.</p>
-<p>And they help ensure that knowledge created today can be used, re-used, and trusted — long into the future.</p>
 
 
 </section>
@@ -1083,7 +1014,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/documentation_hub/how_to_guides/support_controlled_vocabs.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/documentation_hub/how_to_guides/support_controlled_vocabs.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/how_to_guides/fsar-data-standardization-workflow.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/how_to_guides/fsar-data-standardization-workflow.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This site was created with <a href="https://quarto.org/">Quarto</a> and is hosted with <a href="https://pages.github.com/">GitHub Pages</a>.</p>
 </div>

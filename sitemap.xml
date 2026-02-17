@@ -2,98 +2,126 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/tutorials/support_controlled_vocabs.html</loc>
-    <lastmod>2026-02-09T18:45:27.310Z</lastmod>
+    <lastmod>2026-02-17T18:40:16.903Z</lastmod>
   </url>
   <url>
     <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/tools.html</loc>
-    <lastmod>2026-02-09T18:45:27.306Z</lastmod>
+    <lastmod>2026-02-17T18:40:16.897Z</lastmod>
   </url>
   <url>
     <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/publishing_data_externally.html</loc>
-    <lastmod>2026-02-09T18:45:27.301Z</lastmod>
+    <lastmod>2026-02-17T18:40:16.889Z</lastmod>
   </url>
   <url>
     <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/ontology/formal-documentation.html</loc>
-    <lastmod>2026-02-09T18:45:27.296Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/data_standards/standardize-data.html</loc>
-    <lastmod>2026-02-09T18:45:27.293Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/data_standards/publish-data.html</loc>
-    <lastmod>2026-02-09T18:45:27.291Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/data_standards/controlled-vocabulary-thesauri.html</loc>
-    <lastmod>2026-02-09T18:45:27.290Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/sharepoint_r.html</loc>
-    <lastmod>2026-02-09T18:45:27.261Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/databricks_r_studio.html</loc>
-    <lastmod>2026-02-09T18:45:27.254Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/dsu_documentation.html</loc>
-    <lastmod>2026-02-09T18:45:27.249Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/documentation_hub/how_to_guides/sharepoint_r.html</loc>
-    <lastmod>2026-02-09T18:45:27.245Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/deep_dives/stock-assessment-data-101-for-fisheries-science-reports.html</loc>
-    <lastmod>2026-02-09T18:45:27.242Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/about.html</loc>
-    <lastmod>2026-02-09T18:45:27.237Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/documentation_hub/how_to_guides/databricks_r_studio.html</loc>
-    <lastmod>2026-02-09T18:45:27.242Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/documentation_hub/how_to_guides/support_controlled_vocabs.html</loc>
-    <lastmod>2026-02-09T18:45:27.247Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/fads-portfolio.html</loc>
-    <lastmod>2026-02-09T18:45:27.252Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/openGovernmentPortalR.html</loc>
-    <lastmod>2026-02-09T18:45:27.261Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/index.html</loc>
-    <lastmod>2026-02-09T18:45:27.288Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/data_standards/integrate-data.html</loc>
-    <lastmod>2026-02-09T18:45:27.290Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/data_standards/salmon-data-exchange-package.html</loc>
-    <lastmod>2026-02-09T18:45:27.291Z</lastmod>
+    <lastmod>2026-02-17T18:40:16.882Z</lastmod>
   </url>
   <url>
     <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/dwc-obis-gbif.html</loc>
-    <lastmod>2026-02-09T18:45:27.293Z</lastmod>
+    <lastmod>2026-02-17T18:40:16.877Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/data_standards/semantic-salmon-data-ecosystem.html</loc>
+    <lastmod>2026-02-17T18:49:15.388Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/data_standards/publish-data.html</loc>
+    <lastmod>2026-02-17T18:40:16.872Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/data_standards/integrate-data.html</loc>
+    <lastmod>2026-02-17T18:40:16.872Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/data_standards/controlled-vocabulary-thesauri.html</loc>
+    <lastmod>2026-02-17T19:38:38.489Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/sharepoint_r.html</loc>
+    <lastmod>2026-02-17T18:40:16.842Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/fsar-data-standardization-workflow.html</loc>
+    <lastmod>2026-02-17T18:53:19.676Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/fads-portfolio.html</loc>
+    <lastmod>2026-02-17T18:40:16.827Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/documentation_hub/how_to_guides/support_controlled_vocabs.html</loc>
+    <lastmod>2026-02-17T18:40:16.819Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/documentation_hub/how_to_guides/databricks_r_studio.html</loc>
+    <lastmod>2026-02-17T18:40:16.812Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/cookbook/index.html</loc>
+    <lastmod>2026-02-17T18:50:16.464Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/about.html</loc>
+    <lastmod>2026-02-17T18:40:16.803Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/blog/index.html</loc>
+    <lastmod>2026-02-17T18:50:16.460Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/deep_dives/stock-assessment-data-101-for-fisheries-science-reports.html</loc>
+    <lastmod>2026-02-17T18:40:16.812Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/documentation_hub/how_to_guides/sharepoint_r.html</loc>
+    <lastmod>2026-02-17T18:40:16.815Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/dsu_documentation.html</loc>
+    <lastmod>2026-02-17T18:40:16.823Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/databricks_r_studio.html</loc>
+    <lastmod>2026-02-17T18:40:16.831Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/how_to_guides/openGovernmentPortalR.html</loc>
+    <lastmod>2026-02-17T18:40:16.842Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/index.html</loc>
+    <lastmod>2026-02-17T18:40:16.868Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/data_standards/index.html</loc>
+    <lastmod>2026-02-17T18:53:16.127Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/data_standards/ontology-data-package-gpt.html</loc>
+    <lastmod>2026-02-17T18:50:16.452Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/data_standards/salmon-data-exchange-package.html</loc>
+    <lastmod>2026-02-17T18:53:22.847Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/data_standards/standardize-data.html</loc>
+    <lastmod>2026-02-17T18:40:16.876Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/glossary.html</loc>
+    <lastmod>2026-02-17T18:50:16.467Z</lastmod>
   </url>
   <url>
     <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/openDataPractices.html</loc>
-    <lastmod>2026-02-09T18:45:27.298Z</lastmod>
+    <lastmod>2026-02-17T18:40:16.886Z</lastmod>
   </url>
   <url>
     <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/tools/r_packages.html</loc>
-    <lastmod>2026-02-09T18:45:27.303Z</lastmod>
+    <lastmod>2026-02-17T18:40:16.893Z</lastmod>
   </url>
   <url>
     <loc>https://dfo-pacific-science.github.io/data-stewardship-unit/training-resources.html</loc>
-    <lastmod>2026-02-09T18:45:27.308Z</lastmod>
+    <lastmod>2026-02-17T18:40:16.900Z</lastmod>
   </url>
 </urlset>

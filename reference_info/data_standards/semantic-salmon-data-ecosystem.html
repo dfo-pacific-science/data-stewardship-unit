@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Brett Johnson, Data Stewardship Unit (DFO Pacific Region Science Branch)">
 
-<title>Support Controlled Vocabularies – FADS Open Science Hub</title>
+<title>The Semantic Salmon Data Ecosystem – FADS Open Science Hub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -170,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Support Controlled Vocabularies</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../reference_info/data_standards/index.html">Standards &amp; Vocabulary</a></li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/semantic-salmon-data-ecosystem.html">Semantic Salmon Data Ecosystem</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -245,13 +246,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Standards &amp; Vocabulary</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../reference_info/data_standards/index.html" class="sidebar-item-text sidebar-link">
@@ -284,7 +285,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/data_standards/semantic-salmon-data-ecosystem.html" class="sidebar-item-text sidebar-link">
+  <a href="../../reference_info/data_standards/semantic-salmon-data-ecosystem.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Semantic Salmon Data Ecosystem</span></a>
   </div>
 </li>
@@ -462,39 +463,35 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo" id="toc-guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo" class="nav-link active" data-scroll-target="#guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo">📘 Guide: End-to-End Process for Supporting Controlled Vocabularies in DFO</a>
-  <ul class="collapse">
-  <li><a href="#step-1-scientist-submits-a-data-dictionary" id="toc-step-1-scientist-submits-a-data-dictionary" class="nav-link" data-scroll-target="#step-1-scientist-submits-a-data-dictionary">🧾 Step 1: Scientist Submits a Data Dictionary</a></li>
-  <li><a href="#step-2-validate-against-dfo-vocabulary" id="toc-step-2-validate-against-dfo-vocabulary" class="nav-link" data-scroll-target="#step-2-validate-against-dfo-vocabulary">🔍 Step 2: Validate Against DFO Vocabulary</a></li>
-  <li><a href="#step-3-consider-alignment-to-nceas-salmon-ontology" id="toc-step-3-consider-alignment-to-nceas-salmon-ontology" class="nav-link" data-scroll-target="#step-3-consider-alignment-to-nceas-salmon-ontology">🧠 Step 3: Consider Alignment to NCEAS Salmon Ontology</a></li>
-  <li><a href="#step-4-curate-and-extend-dfo-controlled-vocabularies" id="toc-step-4-curate-and-extend-dfo-controlled-vocabularies" class="nav-link" data-scroll-target="#step-4-curate-and-extend-dfo-controlled-vocabularies">🧰 Step 4: Curate and Extend DFO-Controlled Vocabularies</a></li>
-  <li><a href="#step-5-build-dfo-specific-ontology-for-salmon" id="toc-step-5-build-dfo-specific-ontology-for-salmon" class="nav-link" data-scroll-target="#step-5-build-dfo-specific-ontology-for-salmon">🧱 Step 5: Build DFO-Specific Ontology for Salmon</a></li>
-  <li><a href="#step-6-publish-and-reuse" id="toc-step-6-publish-and-reuse" class="nav-link" data-scroll-target="#step-6-publish-and-reuse">🔁 Step 6: Publish and Reuse</a></li>
-  </ul></li>
-  <li><a href="#why-bother-with-controlled-vocabularies-and-ontologies" id="toc-why-bother-with-controlled-vocabularies-and-ontologies" class="nav-link" data-scroll-target="#why-bother-with-controlled-vocabularies-and-ontologies">🤔 Why Bother with Controlled Vocabularies and Ontologies?</a>
-  <ul class="collapse">
-  <li><a href="#enhanced-data-discovery" id="toc-enhanced-data-discovery" class="nav-link" data-scroll-target="#enhanced-data-discovery">🔍 1. Enhanced Data Discovery</a></li>
-  <li><a href="#semi-automated-data-integration" id="toc-semi-automated-data-integration" class="nav-link" data-scroll-target="#semi-automated-data-integration">🔄 2. Semi-Automated Data Integration</a></li>
-  <li><a href="#smarter-applications-ai-beyond" id="toc-smarter-applications-ai-beyond" class="nav-link" data-scroll-target="#smarter-applications-ai-beyond">🧠 3. Smarter Applications (AI &amp; Beyond)</a></li>
-  <li><a href="#future-proof-interoperability" id="toc-future-proof-interoperability" class="nav-link" data-scroll-target="#future-proof-interoperability">🔗 4. Future-Proof Interoperability</a></li>
-  <li><a href="#better-metadata-better-stewardship" id="toc-better-metadata-better-stewardship" class="nav-link" data-scroll-target="#better-metadata-better-stewardship">🧰 5. Better Metadata, Better Stewardship</a></li>
-  </ul></li>
-  <li><a href="#tldr" id="toc-tldr" class="nav-link" data-scroll-target="#tldr">🧭 TL;DR</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">1</span> Overview</a></li>
+  <li><a href="#dfo-salmon-ontology-and-controlled-vocabularies" id="toc-dfo-salmon-ontology-and-controlled-vocabularies" class="nav-link" data-scroll-target="#dfo-salmon-ontology-and-controlled-vocabularies"><span class="header-section-number">2</span> 1. DFO Salmon Ontology and controlled vocabularies</a></li>
+  <li><a href="#salmon-data-package-specification-sdep" id="toc-salmon-data-package-specification-sdep" class="nav-link" data-scroll-target="#salmon-data-package-specification-sdep"><span class="header-section-number">3</span> 2. SALMON Data Package Specification (SDEP)</a></li>
+  <li><a href="#metasalmonr-metasalmon" id="toc-metasalmonr-metasalmon" class="nav-link" data-scroll-target="#metasalmonr-metasalmon"><span class="header-section-number">4</span> 3. Meta‑SALMON‑R (metasalmon)</a></li>
+  <li><a href="#salmon-data-gpt-smngpt" id="toc-salmon-data-gpt-smngpt" class="nav-link" data-scroll-target="#salmon-data-gpt-smngpt"><span class="header-section-number">5</span> 4. SALMON Data GPT (smn‑gpt)</a></li>
+  <li><a href="#how-the-pieces-fit-together" id="toc-how-the-pieces-fit-together" class="nav-link" data-scroll-target="#how-the-pieces-fit-together"><span class="header-section-number">6</span> 5. How the pieces fit together</a></li>
+  <li><a href="#benefits-across-organizations" id="toc-benefits-across-organizations" class="nav-link" data-scroll-target="#benefits-across-organizations"><span class="header-section-number">7</span> 6. Benefits across organizations</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">8</span> 7. Next steps</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/documentation_hub/how_to_guides/support_controlled_vocabs.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/documentation_hub/how_to_guides/support_controlled_vocabs.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/reference_info/data_standards/semantic-salmon-data-ecosystem.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/reference_info/data_standards/semantic-salmon-data-ecosystem.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../reference_info/data_standards/index.html">Standards &amp; Vocabulary</a></li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/semantic-salmon-data-ecosystem.html">Semantic Salmon Data Ecosystem</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Support Controlled Vocabularies</h1>
+<h1 class="title">The Semantic Salmon Data Ecosystem</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Brett Johnson, Data Stewardship Unit (DFO Pacific Region Science Branch) </p>
+          </div>
+  </div>
     
   
     
@@ -505,171 +502,103 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo" class="level2">
-<h2 class="anchored" data-anchor-id="guide-end-to-end-process-for-supporting-controlled-vocabularies-in-dfo">📘 Guide: End-to-End Process for Supporting Controlled Vocabularies in DFO</h2>
-<section id="step-1-scientist-submits-a-data-dictionary" class="level3">
-<h3 class="anchored" data-anchor-id="step-1-scientist-submits-a-data-dictionary">🧾 Step 1: Scientist Submits a Data Dictionary</h3>
+<section id="overview" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Overview</h1>
+<p>The <strong>Semantic Salmon Data Ecosystem</strong> is a coordinated set of standards, ontologies, and tools that make it easier to create, share, and reuse salmon data across organizations. Rather than enforcing one rigid schema, the ecosystem links <strong>local datasets</strong> to a <strong>shared semantic layer</strong> so that data remain usable within programs and comparable across programs.</p>
+<p>At a high level, the ecosystem connects four core components:</p>
+<ol type="1">
+<li><strong>DFO Salmon Ontology + controlled vocabularies</strong> — a shared semantic backbone.</li>
+<li><strong>SALMON Data Package Specification (SDEP)</strong> — a lightweight metadata packaging standard.</li>
+<li><strong>Meta‑SALMON‑R (metasalmon)</strong> — validation and tooling that interprets packages.</li>
+<li><strong>SALMON Data GPT (smn‑gpt)</strong> — a guided assistant that helps users align datasets.</li>
+</ol>
+<p>Together these components reduce friction for data producers and improve interoperability for analysts, managers, and data stewards.</p>
+</section>
+<section id="dfo-salmon-ontology-and-controlled-vocabularies" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> 1. DFO Salmon Ontology and controlled vocabularies</h1>
+<p>The <strong>DFO Salmon Ontology</strong> provides formal definitions for salmon concepts, measurement types, demographic units, life stages, and other domain terms. It is paired with <strong>controlled vocabularies and thesauri</strong> extracted into human‑friendly tables. These vocabularies provide stable identifiers (IRIs) that can be referenced directly in datasets.</p>
+<p><strong>Why it matters:</strong></p>
 <ul>
-<li>The scientist downloads and completes the <strong>data dictionary template</strong> (Excel)
+<li>Prevents ambiguity across jurisdictions and programs</li>
+<li>Allows <strong>consistent interpretation</strong> of terms and codes</li>
+<li>Creates a shared language for analytics, integration, and AI workflows</li>
+</ul>
+<p>For formal documentation, see the GC DFO Salmon Ontology page in this hub: <a href="../../reference_info/ontology/formal-documentation.html">GC DFO Salmon Ontology</a>.</p>
+<p>For controlled vocabularies, see: <a href="../../reference_info/data_standards/controlled-vocabulary-thesauri.html">Controlled Vocabulary &amp; Thesauri</a>.</p>
+</section>
+<section id="salmon-data-package-specification-sdep" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> 2. SALMON Data Package Specification (SDEP)</h1>
+<p>The <strong>Salmon Data Exchange Package (SDEP)</strong> is a lightweight, frictionless‑style standard that wraps existing data tables with a small set of metadata files. It does <strong>not</strong> impose a single canonical schema; instead it standardizes <strong>metadata about the schema</strong> and links those metadata fields to ontology terms.</p>
+<p>Each SDEP package includes:</p>
 <ul>
-<li>They describe each variable: name, definition, method, units, etc.</li>
-<li>They may include URIs from known vocabularies if possible</li>
-</ul></li>
-<li>The spreadsheet includes:
+<li><code>dataset.csv</code> — dataset‑level metadata</li>
+<li><code>tables.csv</code> — table inventory and entity definitions</li>
+<li><code>column_dictionary.csv</code> — column‑level metadata + ontology links</li>
+<li><code>codes.csv</code> — optional controlled codes tied to SKOS concepts</li>
+</ul>
+<p><strong>Why it matters:</strong></p>
 <ul>
-<li>A <code>README</code> sheet with instructions</li>
-<li>A <code>Metadata</code> tab for project-level context</li>
-<li>A <code>Data Dictionary</code> tab with one row per variable</li>
-</ul></li>
+<li>Keeps adoption lightweight (Excel/CSV friendly)</li>
+<li>Creates <strong>machine‑readable metadata</strong> without forcing refactors</li>
+<li>Enables validation and automated semantic enrichment</li>
+</ul>
+<p>Spec reference: <a href="../../reference_info/data_standards/salmon-data-exchange-package.html">Salmon Data Exchange Package Specification</a>.</p>
+</section>
+<section id="metasalmonr-metasalmon" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 3. Meta‑SALMON‑R (metasalmon)</h1>
+<p>The <strong>Meta‑SALMON‑R</strong> package provides validation and automation around SDEP packages. It reads metadata files, checks compliance with the specification, and can join in ontology vocabulary information to enrich datasets.</p>
+<p>Typical capabilities include:</p>
+<ul>
+<li><strong>Validate</strong> package structure and required fields</li>
+<li><strong>Detect</strong> missing or inconsistent metadata</li>
+<li><strong>Join</strong> ontology labels and definitions into the metadata tables</li>
+<li><strong>Support</strong> downstream transformations and integration workflows</li>
+</ul>
+<p>This makes the semantic layer actionable, not just descriptive.</p>
+</section>
+<section id="salmon-data-gpt-smngpt" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> 4. SALMON Data GPT (smn‑gpt)</h1>
+<p>The <strong>SALMON Data GPT</strong> is a guided assistant that helps users build SDEP metadata and align datasets with ontology terms. It is particularly useful for data producers who are new to the standards.</p>
+<p>Typical capabilities include:</p>
+<ul>
+<li>Drafting <code>column_dictionary.csv</code> and <code>codes.csv</code></li>
+<li>Suggesting ontology‑aligned terms and IRIs</li>
+<li>Decomposing compound variables into standardized components</li>
+<li>Proposing SDEP‑compliant package layouts</li>
+</ul>
+<p>The GPT acts as a low‑barrier entry point into the ecosystem, while still producing standards‑compliant outputs that can be validated.</p>
+</section>
+<section id="how-the-pieces-fit-together" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> 5. How the pieces fit together</h1>
+<p>The ecosystem is designed as a <strong>pipeline</strong>:</p>
+<ol type="1">
+<li><strong>Ontology + vocabularies</strong> provide authoritative semantics.</li>
+<li><strong>SDEP</strong> packages datasets and links columns/codes to ontology terms.</li>
+<li><strong>Meta‑SALMON‑R</strong> validates and enriches packages.</li>
+<li><strong>SALMON Data GPT</strong> accelerates adoption and helps new users comply.</li>
+</ol>
+<p>This shared pipeline makes it easier for multiple organizations to publish consistent salmon data that remains locally useful but globally interoperable.</p>
+</section>
+<section id="benefits-across-organizations" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> 6. Benefits across organizations</h1>
+<ul>
+<li><strong>Faster integration</strong> between jurisdictions and programs</li>
+<li><strong>Reduced ambiguity</strong> in key salmon concepts</li>
+<li><strong>More reusable data products</strong> for assessments and decision support</li>
+<li><strong>Improved AI readiness</strong> by standardizing data semantics</li>
 </ul>
 </section>
-<section id="step-2-validate-against-dfo-vocabulary" class="level3">
-<h3 class="anchored" data-anchor-id="step-2-validate-against-dfo-vocabulary">🔍 Step 2: Validate Against DFO Vocabulary</h3>
+<section id="next-steps" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> 7. Next steps</h1>
+<p>The ecosystem will continue to evolve as standards mature and tools expand. Key near‑term priorities include:</p>
 <ul>
-<li>The data dictionary is passed into your <strong>R validation function</strong> (<code>validate_data_dictionary()</code>)</li>
-<li>It compares submitted variables to your <strong>reference vocabulary</strong>, hosted as JSON on GitHub Pages</li>
-<li>The validator returns:
-<ul>
-<li>Matched terms</li>
-<li>Unmatched terms</li>
-<li>Suggested mappings using fuzzy logic (e.g., <code>stringdist</code> or Jaro-Winkler)</li>
-</ul></li>
-<li>The scientist or steward reviews and adjusts terms as needed</li>
-</ul>
-</section>
-<section id="step-3-consider-alignment-to-nceas-salmon-ontology" class="level3">
-<h3 class="anchored" data-anchor-id="step-3-consider-alignment-to-nceas-salmon-ontology">🧠 Step 3: Consider Alignment to NCEAS Salmon Ontology</h3>
-<ul>
-<li>For each submitted or candidate term:
-<ul>
-<li>Use an automated lookup tool to check if a concept already exists in the <strong>NCEAS Salmon Ontology</strong>. Start by using the BioPortal Annotator or API to match term labels and definitions. Optionally, build a lightweight script that compares local vocabulary terms to the ontology by label, synonyms, or definition text using exact or fuzzy string matching. Consider integrating the result into your pipeline for batch validation.</li>
-<li>If it exists:
-<ul>
-<li>Use <code>skos:exactMatch</code> or <code>skos:closeMatch</code> in your <code>.ttl</code> (Turtle) or <code>.jsonld</code> RDF vocab files. These mappings are typically stored in the ontology files generated from your <code>.csv</code> source. Add a column like <code>exact_match_uri</code> or <code>close_match_uri</code> to your <code>.csv</code>, your export script can incorporate those values automatically during serialization to <code>.ttl</code> or <code>.jsonld</code>.</li>
-</ul></li>
-<li>If it doesn’t exist, but is broadly applicable:
-<ul>
-<li>Prepare a Pull Request or issue to suggest the term to the NCEAS maintainers</li>
-<li>Include:
-<ul>
-<li>Label, definition, synonyms</li>
-<li>Usage example or data sources</li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
-<section id="step-4-curate-and-extend-dfo-controlled-vocabularies" class="level3">
-<h3 class="anchored" data-anchor-id="step-4-curate-and-extend-dfo-controlled-vocabularies">🧰 Step 4: Curate and Extend DFO-Controlled Vocabularies</h3>
-<ul>
-<li>Maintain DFO vocabularies in GitHub as:
-<ul>
-<li><code>.csv</code> for editing</li>
-<li><code>.json</code> for R/python access and validation</li>
-<li><code>.jsonld</code> and <code>.ttl</code> for ontology use</li>
-</ul></li>
-<li>Assign <strong>persistent URIs</strong> using <code>https://w3id.org/dfo/spsi#term-id</code></li>
-<li>Organize vocabularies by data domain or project (e.g., monitoring, habitat, biology)</li>
-</ul>
-</section>
-<section id="step-5-build-dfo-specific-ontology-for-salmon" class="level3">
-<h3 class="anchored" data-anchor-id="step-5-build-dfo-specific-ontology-for-salmon">🧱 Step 5: Build DFO-Specific Ontology for Salmon</h3>
-<ul>
-<li>Extend your vocabularies with relationships:
-<ul>
-<li><code>broader</code>, <code>narrower</code>, <code>related</code></li>
-<li><code>hasUnit</code>, <code>hasMethod</code>, <code>derivedFrom</code></li>
-</ul></li>
-<li>Use tools like <code>rdflib</code> or <code>skosify</code> to model in Turtle or OWL</li>
-<li>Add namespace info:
-<ul>
-<li><code>@prefix dfo-spsi: &lt;https://w3id.org/dfo/spsi#&gt;</code></li>
-</ul></li>
-<li>Over time, link this to:
-<ul>
-<li>NCEAS ontology</li>
-<li>NERC units</li>
-<li>ENVO/OBI for environment/sample methods</li>
-</ul></li>
-</ul>
-</section>
-<section id="step-6-publish-and-reuse" class="level3">
-<h3 class="anchored" data-anchor-id="step-6-publish-and-reuse">🔁 Step 6: Publish and Reuse</h3>
-<ul>
-<li>Host vocab on GitHub Pages + register URIs at w3id.org</li>
-<li>Link from your Quarto site (<code>/data-standards/vocab-index.html</code>)</li>
-<li>Allow download in multiple formats (JSON, JSON-LD, TTL)</li>
-<li>Use vocab in:
-<ul>
-<li>Data validation tools</li>
-<li>Metadata editors</li>
-<li>APIs and dashboards</li>
-<li>AI pipelines (semantic RAG, search, integration)</li>
-</ul></li>
+<li>Expanding controlled vocabularies and term tables</li>
+<li>Improving package validation and automation tooling</li>
+<li>Tightening feedback loops between data producers and ontology maintainers</li>
+<li>Scaling GPT guidance to cover more datasets and workflows</li>
 </ul>
 <hr>
-<p>This workflow will enable DFO Pacific to build a structured, version-controlled, and interoperable vocabulary and ontology infrastructure for salmon data, with clear ties to domain-wide standards and extensibility for AI use cases.</p>
-</section>
-</section>
-<section id="why-bother-with-controlled-vocabularies-and-ontologies" class="level2">
-<h2 class="anchored" data-anchor-id="why-bother-with-controlled-vocabularies-and-ontologies">🤔 Why Bother with Controlled Vocabularies and Ontologies?</h2>
-<p>It’s a fair question. Why invest all this time defining terms, aligning with ontologies, and assigning URIs?</p>
-<p>Because it <strong>unlocks a future where your data works harder for you.</strong> Controlled vocabularies and ontologies aren’t just academic exercises — they’re the foundation for <strong>better discovery, smarter integration, and automation</strong> across the science lifecycle.</p>
-<p>Here are some tangible ways this work adds value:</p>
-<hr>
-<section id="enhanced-data-discovery" class="level3">
-<h3 class="anchored" data-anchor-id="enhanced-data-discovery">🔍 1. Enhanced Data Discovery</h3>
-<blockquote class="blockquote">
-<p>“I know someone collected salmon smolt data… but where do I find it?”</p>
-</blockquote>
-<p>By tagging datasets, columns, and metadata with <strong>terms from your SPSI vocabulary</strong>, you enable: - Keyword search that actually understands synonyms and related terms - Filters based on data type, units, methods, or ecological domain - Smart discovery interfaces (e.g., “Show me everything related to juvenile survival”)</p>
-<p>➡️ Example: A data catalog that lets users search by controlled term rather than inconsistent column names across spreadsheets.</p>
-<hr>
-</section>
-<section id="semi-automated-data-integration" class="level3">
-<h3 class="anchored" data-anchor-id="semi-automated-data-integration">🔄 2. Semi-Automated Data Integration</h3>
-<blockquote class="blockquote">
-<p>“These datasets report the same metric but use different terms, formats, or units.”</p>
-</blockquote>
-<p>Using controlled terms with defined relationships (e.g., <code>broader</code>, <code>exactMatch</code>, <code>hasUnit</code>), you can: - Detect overlapping fields across submissions automatically - Align columns and units across multiple datasets - Standardize value domains (e.g., <code>Red/Green/Amber</code> vs <code>Critical/Stable/Concerned</code>)</p>
-<p>➡️ Example: A script that reads in new FSAR data and automatically maps it to the SPSR schema for validation and loading into a database.</p>
-<hr>
-</section>
-<section id="smarter-applications-ai-beyond" class="level3">
-<h3 class="anchored" data-anchor-id="smarter-applications-ai-beyond">🧠 3. Smarter Applications (AI &amp; Beyond)</h3>
-<blockquote class="blockquote">
-<p>“Can’t AI just figure this stuff out?”</p>
-</blockquote>
-<p>Only if you feed it structure.</p>
-<p>Controlled vocabularies and ontologies allow you to: - Ground large language models (LLMs) in your domain’s specific terminology - Build Retrieval-Augmented Generation (RAG) systems for question answering - Use semantic search tools to find relevant variables, concepts, and datasets - Train AI to assist in metadata generation, anomaly detection, or dataset classification</p>
-<p>➡️ Example: A chatbot that helps scientists describe their data using your vocabulary, or recommends matching fields from existing standards.</p>
-<hr>
-</section>
-<section id="future-proof-interoperability" class="level3">
-<h3 class="anchored" data-anchor-id="future-proof-interoperability">🔗 4. Future-Proof Interoperability</h3>
-<blockquote class="blockquote">
-<p>“What if we want to share this with other agencies or join a broader platform?”</p>
-</blockquote>
-<p>Standardized vocabularies with persistent URIs and ontology alignments (e.g., with NCEAS, ENVO, OBO) make it easy to: - Share DFO terms with external partners - Convert metadata to international schemas (e.g., Darwin Core, ISO 19115) - Plug into federated data platforms without starting over</p>
-<p>➡️ Example: Publishing your vocabulary to w3id.org lets others reference and reuse your terms as global identifiers.</p>
-<hr>
-</section>
-<section id="better-metadata-better-stewardship" class="level3">
-<h3 class="anchored" data-anchor-id="better-metadata-better-stewardship">🧰 5. Better Metadata, Better Stewardship</h3>
-<blockquote class="blockquote">
-<p>“I just want people to fill out metadata that makes sense.”</p>
-</blockquote>
-<p>Controlled vocabularies: - Reduce ambiguity - Improve machine readability - Make metadata easier to validate and automate</p>
-<p>➡️ Example: A dropdown menu in a data intake form linked to your vocab that auto-fills units, definitions, and example values — while storing clean, machine-readable metadata under the hood.</p>
-<hr>
-</section>
-</section>
-<section id="tldr" class="level2">
-<h2 class="anchored" data-anchor-id="tldr">🧭 TL;DR</h2>
-<p>Controlled vocabularies and ontologies are not the end — they’re the beginning.</p>
-<p>They allow you to: - Find data more easily - Integrate it more reliably - Build tools more effectively - And use AI more meaningfully</p>
-<p>They turn your data into infrastructure.</p>
-<p>And they help ensure that knowledge created today can be used, re-used, and trusted — long into the future.</p>
+<p><em>This overview is intended as a 2–3 page introduction for data producers and analysts. It emphasizes adoption and interoperability rather than formal ontology theory.</em></p>
 
 
 </section>
@@ -1083,7 +1012,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/documentation_hub/how_to_guides/support_controlled_vocabs.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/documentation_hub/how_to_guides/support_controlled_vocabs.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/reference_info/data_standards/semantic-salmon-data-ecosystem.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/reference_info/data_standards/semantic-salmon-data-ecosystem.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This site was created with <a href="https://quarto.org/">Quarto</a> and is hosted with <a href="https://pages.github.com/">GitHub Pages</a>.</p>
 </div>
