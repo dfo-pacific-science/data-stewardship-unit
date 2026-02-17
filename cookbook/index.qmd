@@ -1,0 +1,19 @@
+---
+title: "Cookbook"
+format: html
+---
+
+Task-focused recipes for recurring data stewardship workflows.
+
+## Current recipes
+
+- [Standardize Your Data](../reference_info/data_standards/standardize-data.qmd)
+- [Integrate Data](../reference_info/data_standards/integrate-data.qmd)
+- [Publish Your Data](../reference_info/data_standards/publish-data.qmd)
+- [FSAR Data Standardization Workflow](../how_to_guides/fsar-data-standardization-workflow.qmd)
+
+## Coming next
+
+- SDEP validation troubleshooting
+- Controlled vocabulary request walkthrough
+- Publication checklists by data class

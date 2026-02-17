@@ -1,0 +1,4 @@
+dataset_id,table_id,column_name,code_value,code_label,code_description,concept_scheme_iri,term_iri,term_type
+fsar_demo_chinook_2025,cu_year_index,status_code,G,Green,Status at/above reference point,,,
+fsar_demo_chinook_2025,cu_year_index,status_code,Y,Yellow,Status near reference point,,,
+fsar_demo_chinook_2025,cu_year_index,status_code,R,Red,Status below reference point,,,
