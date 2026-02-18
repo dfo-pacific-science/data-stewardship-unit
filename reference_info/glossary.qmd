@@ -1,0 +1,39 @@
+---
+title: "Glossary & Acronyms"
+format:
+  html:
+    toc: true
+---
+
+A quick reference for common terms used across the FADS Open Science Hub.
+
+## Acronyms
+
+| Acronym | Meaning |
+|---|---|
+| CSAS | Canadian Science Advisory Secretariat |
+| DFO | Fisheries and Oceans Canada |
+| DSU | Data Stewardship Unit |
+| FADS | Fisheries and Assessment Data Section |
+| FSAR | Fisheries Science Advisory Report |
+| IRI | Internationalized Resource Identifier |
+| SDEP | Salmon Data Exchange Package |
+| SKOS | Simple Knowledge Organization System |
+| URI | Uniform Resource Identifier |
+
+## Common terms
+
+### Controlled vocabulary
+A curated set of approved terms and definitions used consistently across datasets.
+
+### Ontology
+A formal representation of domain concepts, relationships, and identifiers that supports machine-readable interoperability.
+
+### Data package
+A structured bundle of data files plus metadata files describing schema, meaning, and provenance.
+
+### Column dictionary
+A metadata table documenting each variable (column) in a dataset, including data type, role, and semantic mapping.
+
+### Concept scheme
+A SKOS collection organizing related concepts, often used for controlled codes.

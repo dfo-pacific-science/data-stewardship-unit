@@ -1,0 +1,13 @@
+---
+title: "News & Updates"
+format: html
+---
+
+This section tracks notable updates to standards, workflows, and tooling.
+
+For now, follow updates through:
+
+- The [GitHub repository](https://github.com/dfo-pacific-science/data-stewardship-unit)
+- The [Salmon Data Standards Hub](../reference_info/data_standards/index.qmd)
+
+More structured release notes will be added here.

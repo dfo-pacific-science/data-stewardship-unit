@@ -1,0 +1,5 @@
+dataset_id,table_id,column_name,column_label,column_description,column_role,value_type,required,unit_label,unit_iri,term_iri,term_type
+fsar_demo_chinook_2025,cu_year_index,cu_id,Conservation Unit ID,Identifier for the conservation unit,identifier,string,TRUE,,,,
+fsar_demo_chinook_2025,cu_year_index,return_year,Return Year,Year fish returned for spawning,temporal,integer,TRUE,year,,,
+fsar_demo_chinook_2025,cu_year_index,spawner_count,Spawner Count,Estimated number of spawners,measurement,double,TRUE,number of fish,,,
+fsar_demo_chinook_2025,cu_year_index,status_code,Status Code,Conservation status code for the CU-year,categorical,string,FALSE,,,,

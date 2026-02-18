@@ -5,89 +5,254 @@ profile: english
 
 # FADS Open Science Hub 🐟💾
 
-Welcome to the Fishery & Assessment Data Section (FADS) Open Science Documentation Hub! This is the public facing portion of our internal [FADS Wiki](https://086gc.sharepoint.com/:u:/r/sites/FisheryAssessmentDataSectionWiki/SitePages/CollabHome.aspx?csf=1&web=1&e=tkJJk4) on SharePoint.
+```{=html}
+<section class="home-hero">
+  <p class="home-eyebrow">Fisheries & Assessment Data Section</p>
+  <h2>Practical standards, workflows, and tools for reproducible salmon data stewardship</h2>
+  <p class="home-subhead">
+    Use this hub to standardize data, package it correctly, and publish with confidence.
+  </p>
+  <div class="home-cta-row">
+    <a class="home-cta home-cta-primary" href="reference_info/data_standards/index.html">Start with Salmon Data Standards</a>
+    <a class="home-cta" href="how_to_guides/fsar-data-standardization-workflow.html">Run the FSAR workflow</a>
+    <a class="home-cta" href="reference_info/data_standards/controlled-vocabulary-thesauri.html">Find terms & definitions</a>
+  </div>
+</section>
+```
 
-Here, we work in the open and share our knowledge to **enable open data science collaboration with a broad community**.
-
-### Search the hub 🔍
+## Start by goal
 
 ```{=html}
-<div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
-  <button class="btn btn-primary" type="button" onclick="if (window.quartoOpenSearch) { window.quartoOpenSearch(); } else { const el = document.querySelector('.quarto-search-button'); if (el) el.click(); }">
-    Search all articles
-  </button>
-  <span style="color: #444;">or press <strong>Ctrl/Cmd + K</strong> to open search.</span>
+<div class="home-card-grid">
+  <a class="home-card" href="how_to_guides/fsar-data-standardization-workflow.html">
+    <h3>Prepare an FSAR package</h3>
+    <p>Follow the end-to-end workflow with validation and packaging checkpoints.</p>
+  </a>
+  <a class="home-card" href="reference_info/data_standards/controlled-vocabulary-thesauri.html">
+    <h3>Find controlled terms</h3>
+    <p>Search standardized terms, definitions, and related concepts for consistent usage.</p>
+  </a>
+  <a class="home-card" href="reference_info/data_standards/salmon-data-exchange-package.html">
+    <h3>Build an SDEP package</h3>
+    <p>Use the Salmon Data Exchange Package specification and starter artifacts.</p>
+  </a>
+  <a class="home-card" href="reference_info/publishing_data_externally.html">
+    <h3>Publish data externally</h3>
+    <p>Review publishing pathways and open science guidance for external release.</p>
+  </a>
 </div>
 ```
 
-### Latest articles 📰
+## Featured pathways
 
-The newest additions from our guides, reference info, tutorials, and deep dives:
+```{=html}
+<div class="home-path-shelf">
+  <a class="home-path-card" href="reference_info/data_standards/index.html">
+    <span class="home-path-badge">Foundation</span>
+    <h3>Standards first</h3>
+    <p>Get oriented on the shared model, term governance, and SDEP structure before implementation.</p>
+  </a>
+  <a class="home-path-card" href="how_to_guides/fsar-data-standardization-workflow.html">
+    <span class="home-path-badge">Workflow</span>
+    <h3>FSAR delivery path</h3>
+    <p>Move from source data through validation and packaging with a practical, end-to-end checklist.</p>
+  </a>
+  <a class="home-path-card" href="reference_info/publishing_data_externally.html">
+    <span class="home-path-badge">Publishing</span>
+    <h3>External release</h3>
+    <p>Choose publication routes and prepare outputs aligned with open science constraints.</p>
+  </a>
+</div>
+```
+
+## Latest updates
 
 ```{r}
 #| echo: false
 #| results: asis
 
-library(yaml)
+suppressPackageStartupMessages(library(yaml))
 
-dirs <- c("how_to_guides", "reference_info", "tutorials", "deep_dives")
+dirs <- c("how_to_guides", "reference_info", "tutorials", "deep_dives", "cookbook", "blog")
 
 read_meta <- function(path) {
   lines <- readLines(path, warn = FALSE)
   if (length(lines) < 2 || lines[1] != "---") return(list())
   end <- which(lines[-1] == "---")
   if (!length(end)) return(list())
-  # adjust because we searched lines[-1]
   end_idx <- end[1] + 1
-  yaml_text <- paste(lines[2:end_idx], collapse = "\n")
+  yaml_text <- paste(lines[2:(end_idx - 1)], collapse = "\n")
   tryCatch(yaml::yaml.load(yaml_text), error = function(...) list())
 }
 
-`%||%` <- function(a, b) if (is.null(a) || is.na(a)) b else a
+`%||%` <- function(a, b) if (is.null(a) || is.na(a) || identical(a, "")) b else a
+
+path_type <- function(path) {
+  if (grepl("^how_to_guides/", path)) return("How-to")
+  if (grepl("^reference_info/", path)) return("Reference")
+  if (grepl("^tutorials/", path)) return("Tutorial")
+  if (grepl("^deep_dives/", path)) return("Deep dive")
+  if (grepl("^cookbook/", path)) return("Cookbook")
+  if (grepl("^blog/", path)) return("News")
+  return("Guide")
+}
+
+read_time_min <- function(path) {
+  txt <- paste(readLines(path, warn = FALSE), collapse = "\n")
+  txt_no_code <- gsub("(?s)```.*?```", "", txt, perl = TRUE)
+  words <- strsplit(txt_no_code, "[[:space:]]+")[[1]]
+  words <- words[words != ""]
+  max(1, round(length(words) / 220))
+}
 
 collect_entries <- function() {
   files <- unlist(lapply(dirs, function(d) {
+    if (!dir.exists(d)) return(character())
     list.files(d, pattern = "\\.qmd$", recursive = TRUE, full.names = TRUE)
   }))
-  if (length(files) == 0) {
-    return(data.frame(path = character(), title = character(), date = as.Date(character())))
-  }
+
   entries <- lapply(files, function(f) {
     meta <- read_meta(f)
     title <- meta$title %||% tools::toTitleCase(gsub("-", " ", tools::file_path_sans_ext(basename(f))))
     date_val <- meta$date
-    if (is.null(date_val) || length(date_val) == 0) date_val <- NA
     date_parsed <- suppressWarnings(as.Date(date_val))
-    if (length(date_parsed) == 0 || is.na(date_parsed)) date_parsed <- as.Date(file.info(f)$mtime)
-    list(path = f, title = title, date = date_parsed)
+    if (length(date_parsed) == 0 || is.na(date_parsed)) {
+      date_parsed <- as.Date(file.info(f)$mtime)
+    }
+    rel_html <- gsub("\\.qmd$", ".html", f)
+
+    list(
+      path = f,
+      href = rel_html,
+      title = title,
+      type = path_type(f),
+      date = date_parsed,
+      read_time = read_time_min(f)
+    )
   })
-  do.call(rbind, lapply(entries, as.data.frame))
+
+  df <- do.call(rbind, lapply(entries, as.data.frame, stringsAsFactors = FALSE))
+  df$date <- as.Date(df$date)
+  df <- df[order(df$date, decreasing = TRUE), ]
+  rownames(df) <- NULL
+  df
 }
 
-df <- collect_entries()
-if (!nrow(df)) {
-  cat("- No articles found yet.\n")
-  knitr::knit_exit()
-}
-df <- df[order(df$date, decreasing = TRUE), ]
-df <- head(df, 5)
+entries <- collect_entries()
+latest <- head(entries, 6)
 
-for (i in seq_len(nrow(df))) {
-  rel <- gsub("\\.qmd$", ".html", df$path[i])
-  cat(sprintf("- [%s](%s) — %s\n", df$title[i], rel, format(as.Date(df$date[i]), "%Y-%m-%d")))
+cat('<div class="home-latest-list">')
+for (i in seq_len(nrow(latest))) {
+  cat(sprintf(
+    '<a class="home-latest-item" href="%s"><span class="home-latest-title">%s</span><span class="home-latest-meta">%s · %s · %s min read</span></a>',
+    latest$href[i],
+    latest$title[i],
+    latest$type[i],
+    format(as.Date(latest$date[i]), "%Y-%m-%d"),
+    latest$read_time[i]
+  ))
+}
+cat('</div>')
+```
+
+## Browse all articles
+
+```{=html}
+<p>Scroll and scan everything in one place, or filter by title/type with the quick search box.</p>
+<div class="home-filter-row">
+  <input id="article-search" type="text" placeholder="Filter articles (e.g., FSAR, vocabulary, publish)" class="home-article-search" />
+  <div class="home-type-filters" role="group" aria-label="Filter by article type">
+    <button type="button" class="home-type-filter is-active" data-type="all">All</button>
+    <button type="button" class="home-type-filter" data-type="how-to">How-to</button>
+    <button type="button" class="home-type-filter" data-type="reference">Reference</button>
+    <button type="button" class="home-type-filter" data-type="tutorial">Tutorial</button>
+    <button type="button" class="home-type-filter" data-type="deep dive">Deep dive</button>
+    <button type="button" class="home-type-filter" data-type="cookbook">Cookbook</button>
+    <button type="button" class="home-type-filter" data-type="news">News</button>
+  </div>
+</div>
+<div class="home-table-count" id="article-count"></div>
+<div class="home-article-table-wrap">
+  <table class="home-article-table" id="article-table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Type</th>
+        <th>Updated</th>
+        <th>Read time</th>
+      </tr>
+    </thead>
+    <tbody>
+```
+
+```{r}
+#| echo: false
+#| results: asis
+for (i in seq_len(nrow(entries))) {
+  type_value <- tolower(entries$type[i])
+  cat(sprintf(
+    '<tr data-type="%s"><td><a href="%s">%s</a></td><td><span class="home-type-chip">%s</span></td><td>%s</td><td>%s min</td></tr>\n',
+    type_value,
+    entries$href[i],
+    entries$title[i],
+    entries$type[i],
+    format(as.Date(entries$date[i]), "%Y-%m-%d"),
+    entries$read_time[i]
+  ))
 }
 ```
 
-------------------------------------------------------------------------
+```{=html}
+    </tbody>
+  </table>
+</div>
 
-### Browse by category 📂
+<script>
+(function () {
+  const input = document.getElementById('article-search');
+  const table = document.getElementById('article-table');
+  const count = document.getElementById('article-count');
+  const typeButtons = Array.from(document.querySelectorAll('.home-type-filter'));
+  if (!input || !table) return;
 
-- How-to Guides 🛠 — quick task-focused steps (e.g., access requests, cleanup tips).
-- Reference Info 📘 — definitions, standards, and tooling details (e.g., vocabularies, hosting, recommended R packages).
-- Tutorials 🎓 — structured lessons to learn by doing (e.g., Power BI walkthroughs, Synapse notebooks).
-- Deep dives 🧠 — context and rationale (e.g., metadata quality, data lifecycle, access protocols).
+  const rows = Array.from(table.querySelectorAll('tbody tr'));
+  let activeType = 'all';
 
------------------------------------------------------------------------
+  function applyFilters() {
+    const q = input.value.toLowerCase().trim();
+    let visible = 0;
 
+    rows.forEach((row) => {
+      const txt = row.textContent.toLowerCase();
+      const rowType = row.getAttribute('data-type') || '';
+      const matchesSearch = txt.includes(q);
+      const matchesType = activeType === 'all' || rowType === activeType;
+      const show = matchesSearch && matchesType;
+      row.style.display = show ? '' : 'none';
+      if (show) visible += 1;
+    });
+
+    if (count) {
+      count.textContent = `${visible} article${visible === 1 ? '' : 's'} shown`;
+    }
+  }
+
+  input.addEventListener('input', applyFilters);
+
+  typeButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      activeType = btn.dataset.type || 'all';
+      typeButtons.forEach((b) => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      applyFilters();
+    });
+  });
+
+  applyFilters();
+})();
+</script>
+```
+
+---
 
 ↩️ [Return to the Internal FADS SharePoint Wiki](https://086gc.sharepoint.com/:u:/r/sites/FisheryAssessmentDataSectionWiki/SitePages/CollabHome.aspx?csf=1&web=1&e=tkJJk4)
