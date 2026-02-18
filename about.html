@@ -70,6 +70,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="styles/custom.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed fullcontent quarto-light">
@@ -83,31 +84,28 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">FADS Open Science Hub</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://086gc.sharepoint.com/:u:/r/sites/FisheryAssessmentDataSectionWiki/SitePages/CollabHome.aspx?csf=1&amp;web=1&amp;e=tkJJk4"> 
-<span class="menu-text">FADS Internal Wiki</span></a>
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
-<span class="menu-text">About</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./fads-portfolio.html"> 
-<span class="menu-text">Data Services</span></a>
+    <a class="nav-link" href="./reference_info/data_standards/index.html"> 
+<span class="menu-text">Standards Hub</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-salmon-data-standards" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Salmon Data Standards</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-workflows" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Workflows</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-salmon-data-standards">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-workflows">    
         <li>
-    <a class="dropdown-item" href="./reference_info/data_standards/index.html">
- <span class="dropdown-text">Salmon Data Standards Home</span></a>
+    <a class="dropdown-item" href="./how_to_guides/fsar-data-standardization-workflow.html">
+ <span class="dropdown-text">FSAR Data Standardization Workflow</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./reference_info/data_standards/standardize-data.html">
@@ -121,34 +119,66 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="./reference_info/data_standards/publish-data.html">
  <span class="dropdown-text">Publish Your Data</span></a>
   </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-data-access" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Data Access</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-data-access">    
         <li>
-    <a class="dropdown-item" href="./reference_info/data_standards/controlled-vocabulary-thesauri.html">
- <span class="dropdown-text">Controlled Vocabulary &amp; Thesauri</span></a>
+    <a class="dropdown-item" href="./how_to_guides/databricks_r_studio.html">
+ <span class="dropdown-text">Connect to the Azure Lakehouse from R</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./reference_info/data_standards/salmon-data-exchange-package.html">
- <span class="dropdown-text">Salmon Data Exchange Package</span></a>
+    <a class="dropdown-item" href="./how_to_guides/sharepoint_r.html">
+ <span class="dropdown-text">Access Data in SharePoint from R</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./reference_info/data_standards/semantic-salmon-data-ecosystem.html">
- <span class="dropdown-text">Semantic Salmon Data Ecosystem</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./reference_info/data_standards/ontology-data-package-gpt.html">
- <span class="dropdown-text">Term Dictionary + Data Package + Salmon GPT</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./reference_info/ontology/formal-documentation.html">
- <span class="dropdown-text">GC DFO Salmon Ontology</span></a>
+    <a class="dropdown-item" href="./how_to_guides/openGovernmentPortalR.html">
+ <span class="dropdown-text">Accessing Spatial Data from the Open Government Portal</span></a>
   </li>  
     </ul>
   </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tools--training" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Tools &amp; Training</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-tools--training">    
+        <li>
+    <a class="dropdown-item" href="./tools.html">
+ <span class="dropdown-text">🧰 Tools for Data Stewardship ⚙️📦</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./training-resources.html">
+ <span class="dropdown-text">Training Resources</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./reference_info/glossary.html">
+ <span class="dropdown-text">Glossary &amp; Acronyms</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
     <div class="dropdown">
-      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-box-arrow-up-right"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://086gc.sharepoint.com/:u:/r/sites/FisheryAssessmentDataSectionWiki/SitePages/CollabHome.aspx?csf=1&amp;web=1&amp;e=tkJJk4">
+            FADS Internal Wiki
+            </a>
+          </li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-1" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-1">
           <li>
             <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/dfo-pacific-science/data-stewardship-unit">
             Source Code
@@ -224,14 +254,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference_info/data_standards/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Salmon Data Standards Home</span></a>
+  <a href="./reference_info/openDataPractices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Practices for Open Science – 3 Quick Tips</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference_info/openDataPractices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data Practices for Open Science – 3 Quick Tips</span></a>
+  <a href="./index.html#browse-all-articles" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Browse All Articles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
