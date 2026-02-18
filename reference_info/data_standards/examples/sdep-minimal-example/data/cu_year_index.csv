@@ -1,0 +1,7 @@
+cu_id,return_year,spawner_count,status_code
+CU_001,2022,12500,G
+CU_001,2023,11890,Y
+CU_001,2024,9800,R
+CU_002,2022,6400,Y
+CU_002,2023,7025,Y
+CU_002,2024,7550,G

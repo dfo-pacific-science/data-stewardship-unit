@@ -55,6 +55,11 @@ Minimal example layout:
 - `data/your_table_2.csv`
 - etc.
 
+Downloadable starter assets:
+
+- [Minimal SDEP example package (zip)](examples/sdep-minimal-example.zip)
+- [Browse example package files](https://github.com/dfo-pacific-science/data-stewardship-unit/tree/main/reference_info/data_standards/examples/sdep-minimal-example)
+
 The SDEP spec does **not** prescribe a single canonical salmon schema. Instead, it standardizes the **metadata** about whatever schema a project uses and ties it to ontology and vocabularies.
 
 # Identifiers and Conventions
@@ -142,6 +147,16 @@ Required columns:
 | term_iri            | string  | no       | IRI for the ontology term (e.g., measurement type, dimension, concept) from the DFO Salmon Ontology. |
 | term_type           | string  | no       | Type of ontology term (e.g., `owl_class`, `owl_object_property`, `skos_concept`).             |
 
+`column_role` quick definitions:
+
+| Role | When to use it | Example columns |
+|---|---|---|
+| `identifier` | Keys and IDs that identify rows/entities | `cu_id`, `survey_event_id`, `record_id` |
+| `measurement` | Quantitative or measured values | `spawner_count`, `run_size`, `exploitation_rate` |
+| `temporal` | Time and date fields | `return_year`, `sample_date`, `datetime` |
+| `categorical` | Controlled codes or enumerated classes | `status_code`, `species_code`, `run_timing` |
+| `attribute` | Descriptive attributes that are not IDs/time/measurements | `waterbody_name`, `observer_name`, `population_name` |
+
 Guidance:
 
 - Use `column_role = "identifier"` for identifiers such as `cu_id`, `survey_event_id`, `POP_ID`.
@@ -195,6 +210,25 @@ Guidance:
   - suggest ontology-aligned IRIs and term types,
   - assist in decomposing compound terms into multiple columns with appropriate roles and IRIs,
   - propose SDEP-compliant package structures for new projects.
+
+# Validation Workflow
+
+Run validation locally before publishing.
+
+Typical local workflow (R):
+
+```r
+library(metasalmon)
+
+pkg_path <- "path/to/sdep-package"
+validate_dictionary(file.path(pkg_path, "column_dictionary.csv"))
+validate_semantics(file.path(pkg_path, "column_dictionary.csv"))
+```
+
+Related implementation guidance:
+
+- [FSAR Data Standardization Workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd)
+- [Term Dictionary + Data Package + Salmon GPT](ontology-data-package-gpt.qmd)
 
 # Versioning and Backwards Compatibility
 

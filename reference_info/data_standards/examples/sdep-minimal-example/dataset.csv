@@ -1,0 +1,2 @@
+dataset_id,title,description,creator,contact_name,contact_email,license,temporal_start,temporal_end,spatial_extent,dataset_type,dataset_iri,source_citation
+fsar_demo_chinook_2025,Demo Chinook CU-Year Dataset,Minimal demonstration package for FSAR-style CU-year indicators,DFO Pacific Science Data Stewardship Unit,Data Stewardship Unit,FADSDataStewardship-GestiondesdonneesSFDA@dfo-mpo.gc.ca,CC-BY-4.0,2022-01-01,2024-12-31,Fraser River CUs,cu_year_index,,Internal demonstration dataset

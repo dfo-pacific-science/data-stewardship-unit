@@ -1,0 +1,75 @@
+---
+title: "FSAR Data Standardization Workflow"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+Use this workflow when preparing salmon datasets for Fisheries Science Advisory Report (FSAR) analysis, review, and publication.
+
+## Step 1 — Define your scope and data classification
+
+- Confirm what dataset(s) and years are in scope for the FSAR.
+- Confirm data classification and sharing constraints before publishing.
+- Reference policy guidance: [Publishing Data Externally](../reference_info/publishing_data_externally.qmd)
+
+## Step 2 — Map columns to controlled vocabulary terms
+
+1. Open [Controlled Vocabulary & Thesauri](../reference_info/data_standards/controlled-vocabulary-thesauri.qmd).
+2. Search for canonical terms for each key variable (e.g., spawner abundance, brood year, CU identifiers).
+3. Capture the corresponding canonical URI for each mapped term.
+
+## Step 3 — Build an SDEP package
+
+Use the [SDEP specification](../reference_info/data_standards/salmon-data-exchange-package.qmd).
+
+At minimum, create:
+
+- `dataset.csv`
+- `tables.csv`
+- `column_dictionary.csv`
+- `data/*.csv`
+- `codes.csv` (if categorical code lists apply)
+
+Starter assets:
+
+- [Download minimal SDEP example (zip)](../reference_info/data_standards/examples/sdep-minimal-example.zip)
+- [Browse template package files](https://github.com/dfo-pacific-science/data-stewardship-unit/tree/main/reference_info/data_standards/examples/sdep-minimal-example)
+
+## Step 4 — Validate before submission/publication
+
+If you are using Meta-SALMON-R locally, validate package structure and semantics before sharing.
+
+Example R workflow:
+
+```r
+library(metasalmon)
+
+pkg_path <- "path/to/your/sdep-package"
+
+# Structure checks
+validate_dictionary(file.path(pkg_path, "column_dictionary.csv"))
+
+# Semantics checks (as available in your version)
+validate_semantics(file.path(pkg_path, "column_dictionary.csv"))
+```
+
+## Step 5 — Prepare publication package and provenance
+
+- Ensure source citations, contacts, and license are complete.
+- Ensure table descriptions and column descriptions are clear to external users.
+- Include a short README describing dataset scope and caveats.
+
+## Step 6 — Publish and cite
+
+- Follow platform guidance and approvals: [Publishing Data Externally](../reference_info/publishing_data_externally.qmd)
+- Include version/date metadata and citation details.
+
+## FSAR readiness checklist
+
+- [ ] Vocabulary mappings documented
+- [ ] SDEP metadata files completed
+- [ ] Validation run locally and issues resolved
+- [ ] Data classification + approvals confirmed
+- [ ] Publication metadata + citation completed

@@ -1,0 +1,2 @@
+dataset_id,table_id,file_name,table_label,description,entity_type,entity_iri,primary_key
+fsar_demo_chinook_2025,cu_year_index,data/cu_year_index.csv,CU-Year Index,One row per CU and return year with spawner estimate,CU-year index,,"cu_id,return_year"

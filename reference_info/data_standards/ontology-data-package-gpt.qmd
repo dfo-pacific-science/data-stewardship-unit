@@ -1,0 +1,36 @@
+---
+title: "Term Dictionary + Data Package + Salmon GPT"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+This page explains how vocabulary terms, SDEP metadata, and guided tooling work together in practice.
+
+## Quick summary
+
+- The **term dictionary / controlled vocabulary** defines terms, labels, and semantic IDs.
+- The **SDEP package** captures dataset metadata in CSV form so data are machine-readable and interoperable.
+- **SALMON Data GPT** can help draft package metadata and suggest ontology-aligned mappings.
+
+## Practical workflow
+
+1. Start in the [Controlled Vocabulary & Thesauri](controlled-vocabulary-thesauri.qmd) page and find the right terms.
+2. Build your `column_dictionary.csv` using those terms and IRIs.
+3. Assemble your package using the [SDEP specification](salmon-data-exchange-package.qmd).
+4. Validate with local tooling (for example, Meta-SALMON-R workflows) before publishing.
+5. Use guided assistants (where available) to speed up mapping and metadata drafting.
+
+## Recommended artifacts
+
+- `dataset.csv` for dataset-level metadata
+- `tables.csv` for table inventory and entity declarations
+- `column_dictionary.csv` for column meaning + term links
+- `codes.csv` for controlled value sets
+
+## References
+
+- [Semantic Salmon Data Ecosystem overview](semantic-salmon-data-ecosystem.qmd)
+- [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)
+- [Support Controlled Vocabularies tutorial](../../tutorials/support_controlled_vocabs.qmd)

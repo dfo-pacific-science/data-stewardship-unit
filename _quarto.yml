@@ -34,16 +34,20 @@ website:
         menu:
           - text: "Salmon Data Standards Home"
             href: reference_info/data_standards/index.qmd
-          - text: "Publish Your Data"
-            href: reference_info/data_standards/publish-data.qmd
           - text: "Standardize Your Data"
             href: reference_info/data_standards/standardize-data.qmd
           - text: "Integrate Data"
             href: reference_info/data_standards/integrate-data.qmd
+          - text: "Publish Your Data"
+            href: reference_info/data_standards/publish-data.qmd
           - text: "Controlled Vocabulary & Thesauri"
             href: reference_info/data_standards/controlled-vocabulary-thesauri.qmd
           - text: "Salmon Data Exchange Package"
             href: reference_info/data_standards/salmon-data-exchange-package.qmd
+          - text: "Semantic Salmon Data Ecosystem"
+            href: reference_info/data_standards/semantic-salmon-data-ecosystem.qmd
+          - text: "Term Dictionary + Data Package + Salmon GPT"
+            href: reference_info/data_standards/ontology-data-package-gpt.qmd
           - text: "GC DFO Salmon Ontology"
             href: reference_info/ontology/formal-documentation.qmd
     tools:
@@ -66,9 +70,11 @@ website:
         contents:
           - href: about.qmd
           - href: fads-portfolio.qmd
+          - text: "Salmon Data Standards Home"
+            href: reference_info/data_standards/index.qmd
+          - href: reference_info/openDataPractices.qmd
           - text: "News & Updates"
             href: blog/index.qmd
-          - href: reference_info/openDataPractices.qmd
       - section: "Standards & Vocabulary"
         contents:
           - text: "Salmon Data Standards Hub"
@@ -78,6 +84,8 @@ website:
           - href: tutorials/support_controlled_vocabs.qmd
           - href: reference_info/ontology/formal-documentation.qmd
           - href: reference_info/data_standards/salmon-data-exchange-package.qmd
+          - text: "Semantic Salmon Data Ecosystem"
+            href: reference_info/data_standards/semantic-salmon-data-ecosystem.qmd
           - text: "Term Dictionary + Data Package + Salmon GPT"
             href: reference_info/data_standards/ontology-data-package-gpt.qmd
           - text: "Darwin Core / GBIF / OBIS"
@@ -106,6 +114,8 @@ website:
           - href: reference_info/tools/r_packages.qmd
           - text: "Training Resources"
             href: training-resources.qmd
+          - text: "Glossary & Acronyms"
+            href: reference_info/glossary.qmd
       - section: "Deep Dives"
         contents:
           - href: deep_dives/stock-assessment-data-101-for-fisheries-science-reports.qmd
