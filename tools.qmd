@@ -4,7 +4,7 @@ format: html
 
 # 🧰 Tools for Data Stewardship ⚙️📦
 
-Welcome to the **Tools** section of the DSU site! 🐟  
+Welcome to the **Tools** section of the FADS Open Science Hub! 🐟  
 Here you'll find a curated set of apps, platforms, scripts, and templates that support your work as a data steward or data producer within the **Pacific Region Science Branch** of Fisheries and Oceans Canada. 🧪🌊
 
 ---
