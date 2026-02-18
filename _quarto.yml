@@ -12,6 +12,7 @@ freeze: auto
 format:
   html:
     theme: cosmo
+    css: styles/custom.css
     toc: true
     grid:
       sidebar-width: 300px
