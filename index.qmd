@@ -43,6 +43,28 @@ profile: english
 </div>
 ```
 
+## Featured pathways
+
+```{=html}
+<div class="home-path-shelf">
+  <a class="home-path-card" href="reference_info/data_standards/index.html">
+    <span class="home-path-badge">Foundation</span>
+    <h3>Standards first</h3>
+    <p>Get oriented on the shared model, term governance, and SDEP structure before implementation.</p>
+  </a>
+  <a class="home-path-card" href="how_to_guides/fsar-data-standardization-workflow.html">
+    <span class="home-path-badge">Workflow</span>
+    <h3>FSAR delivery path</h3>
+    <p>Move from source data through validation and packaging with a practical, end-to-end checklist.</p>
+  </a>
+  <a class="home-path-card" href="reference_info/publishing_data_externally.html">
+    <span class="home-path-badge">Publishing</span>
+    <h3>External release</h3>
+    <p>Choose publication routes and prepare outputs aligned with open science constraints.</p>
+  </a>
+</div>
+```
+
 ## Latest updates
 
 ```{r}
@@ -137,7 +159,19 @@ cat('</div>')
 
 ```{=html}
 <p>Scroll and scan everything in one place, or filter by title/type with the quick search box.</p>
-<input id="article-search" type="text" placeholder="Filter articles (e.g., FSAR, vocabulary, publish)" class="home-article-search" />
+<div class="home-filter-row">
+  <input id="article-search" type="text" placeholder="Filter articles (e.g., FSAR, vocabulary, publish)" class="home-article-search" />
+  <div class="home-type-filters" role="group" aria-label="Filter by article type">
+    <button type="button" class="home-type-filter is-active" data-type="all">All</button>
+    <button type="button" class="home-type-filter" data-type="how-to">How-to</button>
+    <button type="button" class="home-type-filter" data-type="reference">Reference</button>
+    <button type="button" class="home-type-filter" data-type="tutorial">Tutorial</button>
+    <button type="button" class="home-type-filter" data-type="deep dive">Deep dive</button>
+    <button type="button" class="home-type-filter" data-type="cookbook">Cookbook</button>
+    <button type="button" class="home-type-filter" data-type="news">News</button>
+  </div>
+</div>
+<div class="home-table-count" id="article-count"></div>
 <div class="home-article-table-wrap">
   <table class="home-article-table" id="article-table">
     <thead>
@@ -155,8 +189,10 @@ cat('</div>')
 #| echo: false
 #| results: asis
 for (i in seq_len(nrow(entries))) {
+  type_value <- tolower(entries$type[i])
   cat(sprintf(
-    '<tr><td><a href="%s">%s</a></td><td>%s</td><td>%s</td><td>%s min</td></tr>\n',
+    '<tr data-type="%s"><td><a href="%s">%s</a></td><td><span class="home-type-chip">%s</span></td><td>%s</td><td>%s min</td></tr>\n',
+    type_value,
     entries$href[i],
     entries$title[i],
     entries$type[i],
@@ -175,15 +211,44 @@ for (i in seq_len(nrow(entries))) {
 (function () {
   const input = document.getElementById('article-search');
   const table = document.getElementById('article-table');
+  const count = document.getElementById('article-count');
+  const typeButtons = Array.from(document.querySelectorAll('.home-type-filter'));
   if (!input || !table) return;
+
   const rows = Array.from(table.querySelectorAll('tbody tr'));
-  input.addEventListener('input', function () {
-    const q = this.value.toLowerCase().trim();
+  let activeType = 'all';
+
+  function applyFilters() {
+    const q = input.value.toLowerCase().trim();
+    let visible = 0;
+
     rows.forEach((row) => {
       const txt = row.textContent.toLowerCase();
-      row.style.display = txt.includes(q) ? '' : 'none';
+      const rowType = row.getAttribute('data-type') || '';
+      const matchesSearch = txt.includes(q);
+      const matchesType = activeType === 'all' || rowType === activeType;
+      const show = matchesSearch && matchesType;
+      row.style.display = show ? '' : 'none';
+      if (show) visible += 1;
+    });
+
+    if (count) {
+      count.textContent = `${visible} article${visible === 1 ? '' : 's'} shown`;
+    }
+  }
+
+  input.addEventListener('input', applyFilters);
+
+  typeButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      activeType = btn.dataset.type || 'all';
+      typeButtons.forEach((b) => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      applyFilters();
     });
   });
+
+  applyFilters();
 })();
 </script>
 ```

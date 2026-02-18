@@ -14,8 +14,9 @@ The current site has strong content but the front page feels static and index-li
 - [x] (2026-02-18 20:52Z) Implemented Phase 1 homepage redesign in `index.qmd` with modern hero, quick-start cards, and scrollable all-articles table.
 - [x] (2026-02-18 20:55Z) Added homepage-specific modern styles in `styles/custom.css` and wired global stylesheet in `_quarto.yml`.
 - [x] (2026-02-18 21:07Z) Rendered site locally (`quarto render index.qmd`, `quarto render`) and validated output generation.
-- [ ] Open PR with Phase 1 changes and summary.
-- [ ] Phase 2 (future): simplify top-level nav and reduce repeated deep-link exposure.
+- [x] (2026-02-18 21:10Z) Opened PR with Phase 1 changes and summary: https://github.com/dfo-pacific-science/data-stewardship-unit/pull/148
+- [x] (2026-02-18 22:10Z) Added cookbook-inspired homepage polish pass (featured pathway shelf + type-chip catalog filtering) to active PR branch.
+- [ ] Phase 2 (future): simplify top-level nav and reduce repeated deep-link exposure beyond homepage.
 - [ ] Phase 3 (future): duplicate-content cleanup and redirect inventory policy.
 
 ## Surprises & Discoveries
