@@ -22,7 +22,9 @@ The current site has strong content but the front page feels static and index-li
 - [x] (2026-02-18 22:58Z) Closed superseded PRs #145, #146, and #147 with references to consolidated integration in #148.
 - [x] (2026-02-18 23:08Z) Executed next stage: simplified top-level navbar and reduced repeated deep-link exposure in `_quarto.yml`.
 - [x] (2026-02-18 23:12Z) Re-rendered full site (`quarto render`) after nav simplification; build succeeded without prior unresolved nav-link warnings.
-- [ ] Phase 3 (future): duplicate-content cleanup and redirect inventory policy.
+- [x] (2026-02-18 22:49Z) Merged consolidated PR #148 to `main` (merge commit: `871eab8`).
+- [x] (2026-02-18 22:53Z) Ran `quarto publish gh-pages --no-browser` (deploy commit: `edab79f`; published to GitHub Pages).
+- [x] (2026-02-18 23:00Z) Closed this ExecPlan as complete for Phase 1+2 scope. Deferred Phase 3 (duplicate/redirect governance) to a follow-on plan.
 
 ## Surprises & Discoveries
 
@@ -60,7 +62,16 @@ The current site has strong content but the front page feels static and index-li
 
 ## Outcomes & Retrospective
 
-The branch now delivers: (1) homepage modernization, (2) integrated nav/UAT work from prior open PRs, and (3) a Phase 2 navbar simplification pass that reduces top-level clutter. This improves end-to-end coherence and first-visit orientation. Remaining gaps are governance-oriented: duplicate-route/content cleanup and explicit redirect policy.
+Delivered outcomes:
+
+1. Homepage modernization (hero, quick paths, featured pathways, article catalog with filtering).
+2. Integrated nav/UAT/documentation work from prior PRs into one merge surface.
+3. Top-level navbar simplification to reduce cognitive load.
+4. Consolidated merge to `main` via PR #148 and successful manual publish to GitHub Pages.
+
+Net effect: clearer entry points, improved discovery, and a single coherent information flow from homepage to standards/workflow content.
+
+Deferred scope: duplicate-route/content cleanup and explicit redirect governance. These are intentionally moved to a follow-on ExecPlan so this plan can be closed cleanly.
 
 ## Context and Orientation
 
@@ -74,56 +85,66 @@ Important terms:
 
 - **Quick-start cards**: task-first entry points to common workflows.
 - **All-articles table**: complete list of `.qmd` content, converted to links and displayed in a searchable, scrollable table.
-- **Phase 1**: homepage UX modernization only.
+- **Phase 1 + 2 scope**: homepage modernization plus top-level navigation simplification.
 
 ## Plan of Work
 
-Phase 1 modifies homepage experience only.
+Executed in three stages:
 
-1. Update `index.qmd` with:
-   - modern hero section and primary calls to action,
-   - “start by goal” cards,
-   - an all-articles table that users can scroll and scan.
-2. Update styling in `styles/custom.css` using homepage-scoped selectors.
-3. Register `styles/custom.css` in `_quarto.yml` so styles apply consistently.
-4. Render with Quarto and verify `_site/index.html` builds successfully.
-5. Commit and open PR with scope and validation notes.
+1. **Phase 1 (Homepage modernization):**
+   - Update `index.qmd` with modern hero, task cards, featured pathways, and a full article catalog.
+   - Update `styles/custom.css` with homepage-scoped visual system.
+   - Register global CSS in `_quarto.yml`.
+2. **Integration stage:**
+   - Merge open related PR branches (#147, #145; #146 superseded by #147 content) into one consolidated branch/PR.
+   - Re-render entire site and verify coherence.
+3. **Phase 2 (Navigation simplification):**
+   - Simplify top-level navbar in `_quarto.yml` and reduce deep-link duplication at the top level.
+   - Re-render and publish manually (`quarto publish`) due CI publishing issues.
 
 ## Concrete Steps
 
-Run from repository root `/Users/alan/code/data-stewardship-unit`:
+Executed from repository root `/Users/alan/code/data-stewardship-unit`:
 
-1. `quarto render index.qmd`
-2. `quarto render`
-3. `git status --short`
-4. `git add _quarto.yml index.qmd styles/custom.css docs/plans/2026-02-18-homepage-ux-modernization-phase1.md`
-5. `git commit -m "feat(home): modernize homepage and add all-articles table (phase 1)"`
-6. `git push -u origin alan/homepage-ux-phase1`
-7. `gh pr create --base main --head alan/homepage-ux-phase1 --title "Homepage UX Phase 1: modern hero + quick paths + all-articles table" --body <body-file>`
+1. Implement homepage and style changes (`index.qmd`, `styles/custom.css`, `_quarto.yml`).
+2. Validate with:
+   - `quarto render index.qmd`
+   - `quarto render`
+3. Create and iterate PR #148 on branch `alan/homepage-ux-phase1`.
+4. Integrate related branches:
+   - `git merge --no-ff origin/alan/nav-fixes-semantic-uat`
+   - `git merge --no-ff origin/claude/salmon-data-standardization-N8GOM`
+5. Close superseded PRs (#145, #146, #147).
+6. Merge consolidated PR #148 to `main`.
+7. Publish site manually:
+   - `quarto publish gh-pages --no-browser`
 
-Expected results:
+Observed results:
 
-- Quarto render succeeds.
-- Homepage shows updated hero/cards/table.
-- PR is open against `main`.
+- Full site render succeeded repeatedly after each stage.
+- Consolidated PR merged to `main`.
+- Site published successfully to GitHub Pages.
 
 ## Validation and Acceptance
 
-Functional acceptance:
+Functional acceptance (achieved):
 
-- Open `_site/index.html` and confirm:
-  - hero and CTA block render,
-  - quick-start cards render and links work,
-  - all-articles table appears with all site pages and is scrollable.
+- `_site/index.html` shows modern hero, quick paths, featured pathways, and full article catalog with search/type filtering.
+- Navigation reflects simplified top-level IA with clearer primary paths.
 
-Build acceptance:
+Build acceptance (achieved):
 
-- `quarto render` completes without errors.
+- `quarto render` completed successfully after phase 1, after integration stage, and after phase 2 nav changes.
 
-UX acceptance:
+Deployment acceptance (achieved):
 
-- A first-time user can identify where to start within 5 seconds.
-- A returning user can locate a specific page via table scan/filter rather than sidebar drilling.
+- `quarto publish gh-pages --no-browser` succeeded and published to:
+  - https://dfo-pacific-science.github.io/data-stewardship-unit/
+
+UX acceptance (qualitative):
+
+- First-visit orientation improved by stronger homepage hierarchy and explicit pathways.
+- Content discovery improved through the all-articles browse table and reduced top-nav clutter.
 
 ## Idempotence and Recovery
 
@@ -134,11 +155,13 @@ UX acceptance:
 
 ## Artifacts and Notes
 
-Planned evidence to attach in PR:
+Execution evidence:
 
-- Before/after homepage screenshot snippets.
-- `quarto render` success transcript.
-- Short list of changed files.
+- Consolidated PR: https://github.com/dfo-pacific-science/data-stewardship-unit/pull/148
+- Merge commit to `main`: `871eab8`
+- Publish commit to `gh-pages`: `edab79f`
+- Superseded PRs closed: #145, #146, #147
+- Successful `quarto render` and `quarto publish` transcripts captured in session logs.
 
 ## Interfaces and Dependencies
 
@@ -151,3 +174,4 @@ Planned evidence to attach in PR:
 Revision note (2026-02-18): Initial plan created and immediately executed for Phase 1 implementation + PR creation.
 Revision note (2026-02-18, later): Updated to reflect integration of open PR branches #147 and #145 into the active homepage PR branch.
 Revision note (2026-02-18, latest): Recorded superseded PR closure and Phase 2 navbar simplification execution.
+Revision note (2026-02-18, final): Marked plan complete after merge-to-main and manual `quarto publish` deployment.
