@@ -26,9 +26,9 @@ To run the website locally, follow these steps in the terminal:
    - Install pre-commit: `pip install pre-commit` or `brew install pre-commit`
    - Install hooks: `pre-commit install`
 5. Preview the website by running `quarto preview` or build with `quarto render`
-6. To publish the site, merge commits to the main branch. For information on publishing, refer to the contribution information below.
+6. To publish the site, run `quarto publish gh-pages --no-browser` from your local environment.
 
-**Note:** The website must be built locally. CSV validation happens automatically via pre-commit hooks before commits. GitHub Actions only renders and publishes the Quarto website.
+**Note:** The website must be built and published locally. CSV validation happens automatically via pre-commit hooks before commits. The GitHub publish workflow is manual-only (`workflow_dispatch`) to avoid failing push notifications when CI runners lack R.
 
 ## Ontology term tables workflow
 

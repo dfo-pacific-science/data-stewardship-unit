@@ -1,9 +1,8 @@
 on:
+  # Manual-only publish workflow.
+  # We publish from local (`quarto publish`) because CI runners do not include R,
+  # and this project renders multiple R-backed pages.
   workflow_dispatch:
-  push:
-    branches: [main]
-  repository_dispatch:
-    types: [ontology-term-tables-updated]
 
 name: Quarto Publish
 
