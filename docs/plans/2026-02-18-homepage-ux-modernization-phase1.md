@@ -19,7 +19,9 @@ The current site has strong content but the front page feels static and index-li
 - [x] (2026-02-18 22:33Z) Merged open PR branch `alan/nav-fixes-semantic-uat` (#147) into `alan/homepage-ux-phase1` and validated integrated content paths.
 - [x] (2026-02-18 22:34Z) Merged open PR branch `claude/salmon-data-standardization-N8GOM` (#145) into `alan/homepage-ux-phase1`.
 - [x] (2026-02-18 22:39Z) Re-rendered full site (`quarto render`) after branch integrations; build succeeded.
-- [ ] Phase 2 (future): simplify top-level nav and reduce repeated deep-link exposure beyond homepage.
+- [x] (2026-02-18 22:58Z) Closed superseded PRs #145, #146, and #147 with references to consolidated integration in #148.
+- [x] (2026-02-18 23:08Z) Executed next stage: simplified top-level navbar and reduced repeated deep-link exposure in `_quarto.yml`.
+- [x] (2026-02-18 23:12Z) Re-rendered full site (`quarto render`) after nav simplification; build succeeded without prior unresolved nav-link warnings.
 - [ ] Phase 3 (future): duplicate-content cleanup and redirect inventory policy.
 
 ## Surprises & Discoveries
@@ -48,9 +50,17 @@ The current site has strong content but the front page feels static and index-li
   Rationale: User explicitly requested integration; this consolidates review into one branch/PR and removes overlap between homepage UX changes and nav/UAT fixes.
   Date/Author: 2026-02-18 / Alan
 
+- Decision: Close PRs #145/#146/#147 as superseded once their contents were confirmed in #148.
+  Rationale: Reduces reviewer confusion and keeps one authoritative merge surface.
+  Date/Author: 2026-02-18 / Alan
+
+- Decision: Execute Phase 2 as navbar simplification in `_quarto.yml` (leaner top-level IA, push deep links to sidebar/content pages).
+  Rationale: Aligns with UX goal to reduce cognitive load and better match modern cookbook-style top-level navigation.
+  Date/Author: 2026-02-18 / Alan
+
 ## Outcomes & Retrospective
 
-Phase 1 now produces a modernized front door and improved discovery while also incorporating open nav/UAT documentation work from #147 and #145. This improves end-to-end coherence (homepage + destination pages). Remaining gaps are governance-oriented: nav simplification at the top level and duplicate-route/content cleanup policy.
+The branch now delivers: (1) homepage modernization, (2) integrated nav/UAT work from prior open PRs, and (3) a Phase 2 navbar simplification pass that reduces top-level clutter. This improves end-to-end coherence and first-visit orientation. Remaining gaps are governance-oriented: duplicate-route/content cleanup and explicit redirect policy.
 
 ## Context and Orientation
 
@@ -140,3 +150,4 @@ Planned evidence to attach in PR:
 
 Revision note (2026-02-18): Initial plan created and immediately executed for Phase 1 implementation + PR creation.
 Revision note (2026-02-18, later): Updated to reflect integration of open PR branches #147 and #145 into the active homepage PR branch.
+Revision note (2026-02-18, latest): Recorded superseded PR closure and Phase 2 navbar simplification execution.
