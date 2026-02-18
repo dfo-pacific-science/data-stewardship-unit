@@ -16,6 +16,9 @@ The current site has strong content but the front page feels static and index-li
 - [x] (2026-02-18 21:07Z) Rendered site locally (`quarto render index.qmd`, `quarto render`) and validated output generation.
 - [x] (2026-02-18 21:10Z) Opened PR with Phase 1 changes and summary: https://github.com/dfo-pacific-science/data-stewardship-unit/pull/148
 - [x] (2026-02-18 22:10Z) Added cookbook-inspired homepage polish pass (featured pathway shelf + type-chip catalog filtering) to active PR branch.
+- [x] (2026-02-18 22:33Z) Merged open PR branch `alan/nav-fixes-semantic-uat` (#147) into `alan/homepage-ux-phase1` and validated integrated content paths.
+- [x] (2026-02-18 22:34Z) Merged open PR branch `claude/salmon-data-standardization-N8GOM` (#145) into `alan/homepage-ux-phase1`.
+- [x] (2026-02-18 22:39Z) Re-rendered full site (`quarto render`) after branch integrations; build succeeded.
 - [ ] Phase 2 (future): simplify top-level nav and reduce repeated deep-link exposure beyond homepage.
 - [ ] Phase 3 (future): duplicate-content cleanup and redirect inventory policy.
 
@@ -24,7 +27,8 @@ The current site has strong content but the front page feels static and index-li
 - The homepage already included dynamic “latest articles” generation with R, which can be reused for the all-articles table.
 - `styles/custom.css` existed but was only referenced page-by-page, so homepage modernization required either inline CSS or global stylesheet wiring.
 - There is at least one exact duplicate content file: `tutorials/support_controlled_vocabs.qmd` and `documentation_hub/how_to_guides/support_controlled_vocabs.qmd`.
-- Full-project render emits pre-existing Quarto warnings about unresolved `.qmd` links from global navigation contexts; these are not introduced by this phase and should be handled in a dedicated nav cleanup phase.
+- Before integrating #147, full-project render emitted unresolved `.qmd` nav-link warnings from global navigation contexts.
+- After integrating #147, those unresolved nav-link warnings disappeared in local render, confirming the nav/content additions closed those gaps.
 
 ## Decision Log
 
@@ -40,9 +44,13 @@ The current site has strong content but the front page feels static and index-li
   Rationale: Meets explicit requirement for a complete article table without introducing new backend dependencies.
   Date/Author: 2026-02-18 / Alan
 
+- Decision: Integrate open PR work (#147 and #145) directly into the active homepage branch instead of leaving parallel open review tracks.
+  Rationale: User explicitly requested integration; this consolidates review into one branch/PR and removes overlap between homepage UX changes and nav/UAT fixes.
+  Date/Author: 2026-02-18 / Alan
+
 ## Outcomes & Retrospective
 
-Phase 1 produces a modernized front door and improves discovery without changing core content. It does not yet resolve nav-level duplication or content-duplicate governance. Those are queued for later phases to keep this PR reviewable and low risk.
+Phase 1 now produces a modernized front door and improved discovery while also incorporating open nav/UAT documentation work from #147 and #145. This improves end-to-end coherence (homepage + destination pages). Remaining gaps are governance-oriented: nav simplification at the top level and duplicate-route/content cleanup policy.
 
 ## Context and Orientation
 
@@ -131,3 +139,4 @@ Planned evidence to attach in PR:
 ---
 
 Revision note (2026-02-18): Initial plan created and immediately executed for Phase 1 implementation + PR creation.
+Revision note (2026-02-18, later): Updated to reflect integration of open PR branches #147 and #145 into the active homepage PR branch.
