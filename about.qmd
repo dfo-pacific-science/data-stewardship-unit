@@ -1,5 +1,5 @@
 ---
-title: "About the DSU"
+title: "About FADS Data Stewardship"
 about:
   template: jolla
   image: images/logo.png

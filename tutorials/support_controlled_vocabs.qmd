@@ -1,6 +1,8 @@
 ---
 title: Support Controlled Vocabularies
 format: html
+redirect_from:
+  - /documentation_hub/how_to_guides/support_controlled_vocabs
 ---
 
 ## 📘 Guide: End-to-End Process for Supporting Controlled Vocabularies in DFO

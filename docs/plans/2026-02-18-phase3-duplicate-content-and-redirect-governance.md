@@ -11,20 +11,31 @@ After the homepage + navigation improvements, remaining UX friction comes from d
 ## Progress
 
 - [x] (2026-02-18 23:16Z) Created follow-on ExecPlan for post-launch cleanup.
-- [ ] Inventory all `.qmd` pages and identify exact duplicates, near-duplicates, and redirect wrappers.
-- [ ] Define canonical destinations and deprecation rules for legacy paths.
-- [ ] Implement selected cleanup changes (safe, low-risk set first).
-- [ ] Re-render + manual publish.
+- [x] (2026-02-18 23:22Z) Built inventory tool (`scripts/content_route_inventory.py`) and generated `content-routing-inventory-2026-02-18.md`.
+- [x] (2026-02-18 23:24Z) Defined canonical/alias governance in `CONTENT_ROUTING_POLICY.md`.
+- [x] (2026-02-18 23:29Z) Implemented low-risk cleanup: converted `documentation_hub/how_to_guides/support_controlled_vocabs.qmd` to redirect wrapper and set canonical `redirect_from` on tutorial page.
+- [x] (2026-02-18 23:31Z) Updated remaining site-name references aligned to FADS hub naming (`about.qmd`, `tools.qmd`, `reference_info/tools/r_packages.qmd`, `training-resources.qmd`).
+- [x] (2026-02-18 23:36Z) Re-rendered full site (`quarto render`) after cleanup; build succeeded.
+- [ ] Open PR, include issue-closing keywords, merge to main, and publish.
 
 ## Surprises & Discoveries
 
-- Exact duplicate confirmed: `tutorials/support_controlled_vocabs.qmd` and `documentation_hub/how_to_guides/support_controlled_vocabs.qmd`.
+- Exact duplicate confirmed and now resolved: `tutorials/support_controlled_vocabs.qmd` and `documentation_hub/how_to_guides/support_controlled_vocabs.qmd`.
 - Several legacy redirect wrappers remain useful for historical links; deleting them without a policy would be risky.
+- Inventory after cleanup shows `Exact duplicate pages: 0`, with four explicit redirect wrappers retained for legacy route continuity.
 
 ## Decision Log
 
 - Decision: Run Phase 3 as a separate ExecPlan rather than extending the merged Phase 1/2 plan.
   Rationale: Keeps change scope reviewable and preserves clear closure for shipped work.
+  Date/Author: 2026-02-18 / Alan
+
+- Decision: Convert duplicate legacy page content into redirect wrappers instead of deleting alias paths.
+  Rationale: Preserves backward compatibility for bookmarked/shared URLs while restoring single-source content ownership.
+  Date/Author: 2026-02-18 / Alan
+
+- Decision: Include issue-closing keywords in the Phase 3 PR for relevant IA/site-label cleanup issues.
+  Rationale: Keeps GitHub workflow tidy by auto-closing stale issues once merged.
   Date/Author: 2026-02-18 / Alan
 
 ## Outcomes & Retrospective
