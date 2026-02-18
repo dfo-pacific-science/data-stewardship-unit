@@ -16,7 +16,8 @@ After the homepage + navigation improvements, remaining UX friction comes from d
 - [x] (2026-02-18 23:29Z) Implemented low-risk cleanup: converted `documentation_hub/how_to_guides/support_controlled_vocabs.qmd` to redirect wrapper and set canonical `redirect_from` on tutorial page.
 - [x] (2026-02-18 23:31Z) Updated remaining site-name references aligned to FADS hub naming (`about.qmd`, `tools.qmd`, `reference_info/tools/r_packages.qmd`, `training-resources.qmd`).
 - [x] (2026-02-18 23:36Z) Re-rendered full site (`quarto render`) after cleanup; build succeeded.
-- [ ] Open PR, include issue-closing keywords, merge to main, and publish.
+- [x] (2026-02-18 23:43Z) Opened PR #149 with issue-closing keywords and merged to `main` (merge commit: `dfce23d`).
+- [x] (2026-02-18 23:47Z) Published manually with `quarto publish gh-pages --no-browser` (deploy commit: `9b9676d`).
 
 ## Surprises & Discoveries
 
@@ -40,7 +41,22 @@ After the homepage + navigation improvements, remaining UX friction comes from d
 
 ## Outcomes & Retrospective
 
-Pending execution.
+Phase 3 completed successfully.
+
+Delivered outcomes:
+
+1. Introduced repeatable route inventory tooling and a generated inventory snapshot.
+2. Added explicit canonical/alias routing policy for maintainers.
+3. Removed the only exact duplicate-content page by converting the legacy copy to a redirect wrapper.
+4. Preserved legacy path continuity while enforcing canonical ownership.
+5. Closed relevant IA/site-label issues automatically via PR merge:
+   - #136
+   - #134
+6. Published updated site to GitHub Pages after merge.
+
+What remains out of scope:
+
+- Broader historical issue backlog unrelated to current IA routing cleanup.
 
 ## Context and Orientation
 
@@ -77,9 +93,19 @@ Primary files/areas:
 
 ## Artifacts and Notes
 
-- To be filled during implementation.
+- PR: https://github.com/dfo-pacific-science/data-stewardship-unit/pull/149
+- Merge commit (`main`): `dfce23d`
+- Publish commit (`gh-pages`): `9b9676d`
+- Closed issues: #136, #134
+- Inventory artifact: `content-routing-inventory-2026-02-18.md`
+- Policy artifact: `CONTENT_ROUTING_POLICY.md`
 
 ## Interfaces and Dependencies
 
 - Quarto render/publish workflow.
 - Existing redirect/meta-refresh pages.
+
+---
+
+Revision note (2026-02-18): Plan created for duplicate-content and redirect governance cleanup.
+Revision note (2026-02-18, final): Recorded PR merge, issue auto-closure, publish completion, and final outcomes.
