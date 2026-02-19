@@ -73,84 +73,20 @@ execute:
 #| echo: false
 #| results: asis
 
-suppressPackageStartupMessages(library(yaml))
+source("scripts/article_dates.R")
 
-dirs <- c("how_to_guides", "reference_info", "tutorials", "deep_dives", "cookbook", "blog")
-
-read_meta <- function(path) {
-  lines <- readLines(path, warn = FALSE)
-  if (length(lines) < 2 || lines[1] != "---") return(list())
-  end <- which(lines[-1] == "---")
-  if (!length(end)) return(list())
-  end_idx <- end[1] + 1
-  yaml_text <- paste(lines[2:(end_idx - 1)], collapse = "\n")
-  tryCatch(yaml::yaml.load(yaml_text), error = function(...) list())
-}
-
-`%||%` <- function(a, b) if (is.null(a) || is.na(a) || identical(a, "")) b else a
-
-path_type <- function(path) {
-  if (grepl("^how_to_guides/", path)) return("How-to")
-  if (grepl("^reference_info/", path)) return("Reference")
-  if (grepl("^tutorials/", path)) return("Tutorial")
-  if (grepl("^deep_dives/", path)) return("Deep dive")
-  if (grepl("^cookbook/", path)) return("Cookbook")
-  if (grepl("^blog/", path)) return("News")
-  return("Guide")
-}
-
-read_time_min <- function(path) {
-  txt <- paste(readLines(path, warn = FALSE), collapse = "\n")
-  txt_no_code <- gsub("(?s)```.*?```", "", txt, perl = TRUE)
-  words <- strsplit(txt_no_code, "[[:space:]]+")[[1]]
-  words <- words[words != ""]
-  max(1, round(length(words) / 220))
-}
-
-collect_entries <- function() {
-  files <- unlist(lapply(dirs, function(d) {
-    if (!dir.exists(d)) return(character())
-    list.files(d, pattern = "\\.qmd$", recursive = TRUE, full.names = TRUE)
-  }))
-
-  entries <- lapply(files, function(f) {
-    meta <- read_meta(f)
-    title <- meta$title %||% tools::toTitleCase(gsub("-", " ", tools::file_path_sans_ext(basename(f))))
-    date_val <- meta$date
-    date_parsed <- suppressWarnings(as.Date(date_val))
-    if (length(date_parsed) == 0 || is.na(date_parsed)) {
-      date_parsed <- as.Date(file.info(f)$mtime)
-    }
-    rel_html <- gsub("\\.qmd$", ".html", f)
-
-    list(
-      path = f,
-      href = rel_html,
-      title = title,
-      type = path_type(f),
-      date = date_parsed,
-      read_time = read_time_min(f)
-    )
-  })
-
-  df <- do.call(rbind, lapply(entries, as.data.frame, stringsAsFactors = FALSE))
-  df$date <- as.Date(df$date)
-  df <- df[order(df$date, decreasing = TRUE), ]
-  rownames(df) <- NULL
-  df
-}
-
-entries <- collect_entries()
+entries <- collect_article_entries(root = ".")
 latest <- head(entries, 6)
 
 cat('<div class="home-latest-list">')
 for (i in seq_len(nrow(latest))) {
   cat(sprintf(
-    '<a class="home-latest-item" href="%s"><span class="home-latest-title">%s</span><span class="home-latest-meta">%s · %s · %s min read</span></a>',
+    '<a class="home-latest-item" href="%s"><span class="home-latest-title">%s</span><span class="home-latest-meta">%s · Published %s · Updated %s · %s min read</span></a>',
     latest$href[i],
     latest$title[i],
     latest$type[i],
-    format(as.Date(latest$date[i]), "%Y-%m-%d"),
+    format(as.Date(latest$published_date[i]), "%Y-%m-%d"),
+    format(as.Date(latest$updated_date[i]), "%Y-%m-%d"),
     latest$read_time[i]
   ))
 }
@@ -180,6 +116,7 @@ cat('</div>')
       <tr>
         <th>Title</th>
         <th>Type</th>
+        <th>Published</th>
         <th>Updated</th>
         <th>Read time</th>
       </tr>
@@ -193,12 +130,13 @@ cat('</div>')
 for (i in seq_len(nrow(entries))) {
   type_value <- tolower(entries$type[i])
   cat(sprintf(
-    '<tr data-type="%s"><td><a href="%s">%s</a></td><td><span class="home-type-chip">%s</span></td><td>%s</td><td>%s min</td></tr>\n',
+    '<tr data-type="%s"><td><a href="%s">%s</a></td><td><span class="home-type-chip">%s</span></td><td>%s</td><td>%s</td><td>%s min</td></tr>\n',
     type_value,
     entries$href[i],
     entries$title[i],
     entries$type[i],
-    format(as.Date(entries$date[i]), "%Y-%m-%d"),
+    format(as.Date(entries$published_date[i]), "%Y-%m-%d"),
+    format(as.Date(entries$updated_date[i]), "%Y-%m-%d"),
     entries$read_time[i]
   ))
 }
