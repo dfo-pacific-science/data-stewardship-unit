@@ -1,6 +1,8 @@
 ---
 format: html
 profile: english
+execute:
+  freeze: false
 ---
 
 # FADS Open Science Hub 🐟💾
