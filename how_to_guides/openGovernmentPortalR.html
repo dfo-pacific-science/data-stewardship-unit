@@ -590,7 +590,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Note that much of this content has been expanded from a <a href="https://github.com/AtlanticR/R_Git_Support/blob/main/open_data.Rmd">similar tutorial created in the DFO Maritimes Region</a>, but with DFO Pacific examples. Other clarifying comments have also been added.</p>
 <section id="loading-packages" class="level3">
 <h3 class="anchored" data-anchor-id="loading-packages">Loading packages</h3>
-<p>This tutorial uses several spatial packages that require system libraries. If those dependencies are not installed locally, code chunks are skipped so site rendering can still complete.</p>
+<p>This tutorial uses several spatial packages that require system libraries. If those dependencies are not installed locally, code chunks are skipped so site rendering can still complete. Static map outputs are cached under <code>images/openDataSpatial/rendered/</code> so published pages keep map images even when spatial dependencies are unavailable.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>spatial_packages <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"arcpullr"</span>, <span class="st">"dplyr"</span>, <span class="st">"ggplot2"</span>, <span class="st">"ggspatial"</span>,</span>
