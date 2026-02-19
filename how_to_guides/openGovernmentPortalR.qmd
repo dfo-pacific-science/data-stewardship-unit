@@ -30,7 +30,7 @@ Note that much of this content has been expanded from a [similar tutorial create
 
 ### Loading packages
 
-This tutorial uses several spatial packages that require system libraries. If those dependencies are not installed locally, code chunks are skipped so site rendering can still complete.
+This tutorial uses several spatial packages that require system libraries. If those dependencies are not installed locally, code chunks are skipped so site rendering can still complete. Static map outputs are cached under `images/openDataSpatial/rendered/` so published pages keep map images even when spatial dependencies are unavailable.
 
 ```{r setup-librarian, message=FALSE, warning=FALSE, error=FALSE}
 spatial_packages <- c(
@@ -57,6 +57,29 @@ if (!spatial_ready) {
 }
 if (!ckan_ready) {
   cat("> Note: CKAN API examples are skipped in this render because `ckanr` is not installed.\n")
+}
+```
+
+```{r map-cache, include=FALSE}
+map_cache_dir <- "../images/openDataSpatial/rendered"
+dir.create(map_cache_dir, recursive = TRUE, showWarnings = FALSE)
+
+use_cached_map <- function(filename, plot_expr = NULL, width = 10, height = 7, dpi = 150, force = FALSE) {
+  out_file <- file.path(map_cache_dir, filename)
+
+  if ((force || !file.exists(out_file)) && !is.null(plot_expr)) {
+    if (!spatial_ready) {
+      stop("Cannot generate map cache because required spatial packages are unavailable.")
+    }
+    p <- force(plot_expr)
+    ggplot2::ggsave(out_file, plot = p, width = width, height = height, dpi = dpi)
+  }
+
+  if (!file.exists(out_file)) {
+    stop("Cached map not found: ", out_file)
+  }
+
+  knitr::include_graphics(out_file)
 }
 ```
 
@@ -99,27 +122,27 @@ coast = ne_countries(scale = 10, returnclass = c("sf"), continent = "North Ameri
 
 Because the coastline basemap data span all of North America, it may be useful to crop the plot to the bounding box of the data (BC coast). The `st_bbox()` function from the `sf` package allows you to get the bounding box of a spatial object. You can use the `xlim` and `ylim` arguments in the `coord_sf()` function to set the limits of the x and y axes.
 
-```{r depot-map, warning=FALSE, message=FALSE, eval=spatial_ready}
+```{r depot-map, warning=FALSE, message=FALSE, echo=FALSE}
+if (spatial_ready) {
+  # Define lat/lon bounds of your dataset
+  bounds = st_bbox(salmonDepots)
 
-# Define lat/lon bounds of your dataset
-bounds = st_bbox(salmonDepots)
+  depot_plot <- ggplot()+
+    geom_sf(data = coast, fill = "lightgrey")+
+    geom_sf(data = salmonDepots, size = 3.5, aes(fill = ACCESSIBILITY___ACCESSIBILITÉ), pch = 21, alpha = 0.85)+
+    coord_sf(xlim = c(bounds["xmin"], bounds["xmax"]),
+      ylim = c(bounds["ymin"], bounds["ymax"]))+
+    annotation_north_arrow(location = "tr", which_north = "true", style = north_arrow_minimal)+
+    annotation_scale(location = "bl", text_cex = 0.8)+
+    scale_fill_discrete(name = "Accessibility")+
+    theme_bw()
 
-ggplot()+
-  geom_sf(data = coast, fill = "lightgrey")+
-  geom_sf(data = salmonDepots, size = 3.5, aes(fill = ACCESSIBILITY___ACCESSIBILITÉ), pch = 21, alpha = 0.85)+
-  coord_sf(xlim = c(bounds["xmin"], bounds["xmax"]),
-    ylim = c(bounds["ymin"], bounds["ymax"]))+
-  # I'm not always convinced maps north arrows need to be added when the lat/lon is specified but some people insist!
-  # Add north arrow to the top right (tr) of the map. It points to "true" north, not magnetic north
-  annotation_north_arrow(location = "tr", which_north = "true",
-                         #height = unit(0.7, "cm"), width = unit(0.7, "cm"),
-                         style = north_arrow_minimal)+
-  # Also, scale bars shouldn't be added when you're this zoomed out, but here's how to add one anyway to the bottom left (bl):
-  annotation_scale(location = "bl", text_cex = 0.8)+
-  scale_fill_discrete(name = "Accessibility")+
-  theme_bw() # tidies up the visuals 
-  
+  use_cached_map("depot-map.png", plot_expr = depot_plot)
+} else {
+  use_cached_map("depot-map.png")
+}
 ```
+
 
 ## Accessing file geodatabases
 
@@ -174,30 +197,30 @@ for(l in layers$name){
 
 ### Map the data
 
-```{r dock-map, warning=FALSE, message=FALSE, eval=spatial_ready}
+```{r dock-map, warning=FALSE, message=FALSE, echo=FALSE}
+if (spatial_ready) {
+  invisible(st_crs(docks)) # NAD 83
+  invisible(st_crs(coast)) # WGS 84
 
-# Note that the coordinate reference system of these two layers are different
-invisible(st_crs(docks)) # NAD 83
-invisible(st_crs(coast)) # WGS 84
+  docks = st_transform(docks, st_crs(coast))
+  boundsDocks = st_bbox(docks)
 
-# To plot with ggplot, one of them has to be reprojected. I've transformed the docks CRS to match the coastline CRS 
-docks = st_transform(docks, st_crs(coast))
+  dock_plot <- ggplot()+
+    geom_sf(data = coast, fill = "lightgrey")+
+    geom_sf(data = docks, size = 3.5, pch = 21, aes(fill = region), alpha = 0.65)+
+    coord_sf(
+      xlim = c(boundsDocks["xmin"], boundsDocks["xmax"]),
+      ylim = c(boundsDocks["ymin"], boundsDocks["ymax"])
+    ) +
+    scale_fill_discrete(name = "Region")+
+    theme_bw()
 
-# Redefine the bounds of the layer of interest
-boundsDocks = st_bbox(docks)
-
-# Make a map of the docks
-ggplot()+
-  geom_sf(data = coast, fill = "lightgrey")+
-  geom_sf(data = docks, size = 3.5, pch = 21, aes(fill = region), alpha = 0.65)+
-  coord_sf(
-    xlim = c(boundsDocks["xmin"], boundsDocks["xmax"]),
-    ylim = c(boundsDocks["ymin"], boundsDocks["ymax"])
-  ) +
-  scale_fill_discrete(name = "Region")+
-  theme_bw()
-
+  use_cached_map("dock-map.png", plot_expr = dock_plot)
+} else {
+  use_cached_map("dock-map.png")
+}
 ```
+
 
 ## Plotting raster data
 
@@ -234,31 +257,28 @@ Unfortunately, raster data in this format cannot be directly mapped with `ggplot
 
 If you read through [the metadata](https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/recreational_vessel_traffic_model_for_british_columbia/MapServer), you'll see that that many types of data are available in this geodatabase (e.g., point data, raster, vector grid). The data being plotted in this example below is the *surveyeffort* raster dataset, which is specified using the `sub` argument in the `rast()` function.
 
-```{r survey-raster, warning=FALSE, message=FALSE, eval=spatial_ready}
+```{r survey-raster, warning=FALSE, message=FALSE, echo=FALSE}
+if (spatial_ready) {
+  surveyRast = rast(boat_file, sub = "surveyeffort")
+  rast_proj = project(surveyRast, coast)
+  rast_df = as.data.frame(rast_proj, xy = TRUE)
+  boundsRast = with(rast_df, c(xmin = min(x), xmax = max(x), ymin = min(y), ymax = max(y)))
 
-# Turn the "survey effort" data into raster format
-surveyRast = rast(boat_file, sub = "surveyeffort")
+  raster_plot <- ggplot()+
+    geom_tile(data = rast_df, aes(x=x, y=y, fill = Recreational_Boating_Data_Model)) +
+    geom_sf(data = coast, fill = "lightgrey")+
+    scale_fill_viridis_c(option = "magma")+
+    coord_sf(xlim = c(boundsRast["xmin"], boundsRast["xmax"]),
+                  ylim = c(boundsRast["ymin"], boundsRast["ymax"]))+
+    labs(x = NULL, y = NULL)+
+    theme_bw()
 
-# Use the project function to project to WGS 84 (i.e., to match the CRS of the coastline file)
-rast_proj = project(surveyRast, coast)
-
-# Convert it to a dataframe. Keep the coordinate info
-rast_df = as.data.frame(rast_proj, xy = TRUE) 
-
-# Get the bounds for this. Using different code than above, since this is a regular data frame 
-boundsRast = with(rast_df, c(xmin = min(x), xmax = max(x), ymin = min(y), ymax = max(y)))
-
-# Plot it with geom_tile and add the coast data as well
-ggplot()+
-  geom_tile(data = rast_df, aes(x=x, y=y, fill = Recreational_Boating_Data_Model)) +
-  geom_sf(data = coast, fill = "lightgrey")+
-  scale_fill_viridis_c(option = "magma")+
-  coord_sf(xlim = c(boundsRast["xmin"], boundsRast["xmax"]),
-                ylim = c(boundsRast["ymin"], boundsRast["ymax"]))+
-  labs(x = NULL, y = NULL)+
-  theme_bw()
-
+  use_cached_map("survey-raster.png", plot_expr = raster_plot)
+} else {
+  use_cached_map("survey-raster.png")
+}
 ```
+
 
 ### Making Leaflet Maps
 
