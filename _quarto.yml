@@ -2,6 +2,8 @@ project:
   type: website
   title: "FADS Open Science Hub"
   output-dir: ./_site
+  pre-render:
+    - scripts/setup_analytics.R
   render:
     - "*.qmd"
     - "!data/ontology/**"
@@ -13,6 +15,8 @@ format:
   html:
     theme: cosmo
     css: styles/custom.css
+    include-in-header:
+      - _includes/analytics.html
     toc: true
     grid:
       sidebar-width: 300px

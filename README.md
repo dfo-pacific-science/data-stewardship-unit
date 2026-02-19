@@ -37,6 +37,60 @@ To run the website locally, follow these steps in the terminal:
 - This repo does **not** regenerate tables; pre-commit here only validates the CSV/meta files already synced.
 - To run validation manually here: `nix run nixpkgs#pre-commit -- run --all-files` inside `devenv shell`.
 
+## Analytics + Most-read setup
+
+This site uses **Plausible** by default because it is privacy-friendly, lightweight, and simple for a static GitHub Pages deployment.
+
+### Analytics instrumentation (build-time)
+
+A Quarto pre-render script generates `_includes/analytics.html` from environment variables:
+
+- `DSU_ANALYTICS_PROVIDER` (default: `plausible`; options: `plausible`, `ga4`, `none`)
+- `PLAUSIBLE_DOMAIN` (default: `dfo-pacific-science.github.io`)
+- `PLAUSIBLE_SRC` (optional, default: `https://plausible.io/js/script.js`)
+- `GA4_MEASUREMENT_ID` (required only when `DSU_ANALYTICS_PROVIDER=ga4`)
+
+Run locally to verify include generation:
+
+```bash
+Rscript scripts/setup_analytics.R
+```
+
+### Top articles refresh (Plausible API)
+
+`data/top_articles.json` is refreshed by `scripts/refresh_top_articles.py` using Plausible Stats API data.
+
+Required for live API refresh:
+
+- `PLAUSIBLE_API_TOKEN`
+- `PLAUSIBLE_SITE_ID` (or fallback: `PLAUSIBLE_DOMAIN`)
+
+Optional:
+
+- `PLAUSIBLE_API_BASE` (default: `https://plausible.io`)
+- `TOP_ARTICLES_PERIOD` (default: `7d`)
+
+Run manually:
+
+```bash
+python scripts/refresh_top_articles.py
+```
+
+If API credentials are missing, the script exits successfully and preserves existing `data/top_articles.json`.
+
+### Daily automation
+
+GitHub Actions workflow `.github/workflows/refresh-top-articles.yml`:
+
+- runs daily + manual dispatch
+- refreshes `data/top_articles.json`
+- commits changes if data changed
+
+Configure repository secrets/variables:
+
+- **Secrets:** `PLAUSIBLE_API_TOKEN`, `PLAUSIBLE_SITE_ID`
+- **Variables (optional):** `PLAUSIBLE_DOMAIN`, `PLAUSIBLE_API_BASE`
+
 ## Contributing
 
 If you would like to contribute to this project, please follow the guidelines in [CONTRIBUTING.md](CONTRIBUTING.md).

@@ -93,6 +93,39 @@ for (i in seq_len(nrow(latest))) {
 cat('</div>')
 ```
 
+## Most read this week
+
+```{r}
+#| echo: false
+#| results: asis
+
+suppressPackageStartupMessages(library(jsonlite))
+
+top_articles_path <- "data/top_articles.json"
+if (!file.exists(top_articles_path)) {
+  cat('<p><em>Most-read analytics are not available yet. Check back soon.</em></p>')
+} else {
+  top_data <- tryCatch(jsonlite::fromJSON(top_articles_path), error = function(e) NULL)
+  items <- if (!is.null(top_data) && !is.null(top_data$items)) top_data$items else NULL
+
+  if (is.null(items) || nrow(items) == 0) {
+    cat('<p><em>Most-read analytics are not available yet. Check back soon.</em></p>')
+  } else {
+    top_n <- head(items, 5)
+    cat('<ol class="home-most-read">')
+    for (i in seq_len(nrow(top_n))) {
+      cat(sprintf(
+        '<li><a href="%s">%s</a><span class="home-most-read-meta">%s views</span></li>',
+        top_n$path[i],
+        top_n$title[i],
+        format(top_n$pageviews[i], big.mark = ",")
+      ))
+    }
+    cat('</ol>')
+  }
+}
+```
+
 ## Browse all articles
 
 ```{=html}

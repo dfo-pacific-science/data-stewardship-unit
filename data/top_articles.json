@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-02-19T00:00:00Z",
+  "source": {
+    "provider": "sample",
+    "site_id": "local",
+    "period": "7d",
+    "api_base": "https://plausible.io"
+  },
+  "items": [
+    {
+      "path": "reference_info/data_standards/controlled-vocabulary-thesauri.html",
+      "title": "Controlled Vocabulary and Thesauri",
+      "visitors": 52,
+      "pageviews": 88,
+      "visit_duration": 1640
+    },
+    {
+      "path": "how_to_guides/fsar-data-standardization-workflow.html",
+      "title": "FSAR Data Standardization Workflow",
+      "visitors": 48,
+      "pageviews": 79,
+      "visit_duration": 1510
+    },
+    {
+      "path": "reference_info/data_standards/salmon-data-exchange-package.html",
+      "title": "Salmon Data Exchange Package",
+      "visitors": 39,
+      "pageviews": 65,
+      "visit_duration": 1180
+    },
+    {
+      "path": "reference_info/publishing_data_externally.html",
+      "title": "Publishing Data Externally",
+      "visitors": 31,
+      "pageviews": 57,
+      "visit_duration": 1020
+    },
+    {
+      "path": "how_to_guides/openGovernmentPortalR.html",
+      "title": "Open Government Portal with R",
+      "visitors": 28,
+      "pageviews": 44,
+      "visit_duration": 870
+    }
+  ]
+}
