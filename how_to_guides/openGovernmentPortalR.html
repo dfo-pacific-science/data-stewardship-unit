@@ -645,23 +645,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Because the coastline basemap data span all of North America, it may be useful to crop the plot to the bounding box of the data (BC coast). The <code>st_bbox()</code> function from the <code>sf</code> package allows you to get the bounding box of a spatial object. You can use the <code>xlim</code> and <code>ylim</code> arguments in the <code>coord_sf()</code> function to set the limits of the x and y axes.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define lat/lon bounds of your dataset</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>bounds <span class="ot">=</span> <span class="fu">st_bbox</span>(salmonDepots)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>()<span class="sc">+</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> coast, <span class="at">fill =</span> <span class="st">"lightgrey"</span>)<span class="sc">+</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> salmonDepots, <span class="at">size =</span> <span class="fl">3.5</span>, <span class="fu">aes</span>(<span class="at">fill =</span> ACCESSIBILITY___ACCESSIBILITÉ), <span class="at">pch =</span> <span class="dv">21</span>, <span class="at">alpha =</span> <span class="fl">0.85</span>)<span class="sc">+</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">xlim =</span> <span class="fu">c</span>(bounds[<span class="st">"xmin"</span>], bounds[<span class="st">"xmax"</span>]),</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylim =</span> <span class="fu">c</span>(bounds[<span class="st">"ymin"</span>], bounds[<span class="st">"ymax"</span>]))<span class="sc">+</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># I'm not always convinced maps north arrows need to be added when the lat/lon is specified but some people insist!</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Add north arrow to the top right (tr) of the map. It points to "true" north, not magnetic north</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotation_north_arrow</span>(<span class="at">location =</span> <span class="st">"tr"</span>, <span class="at">which_north =</span> <span class="st">"true"</span>,</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>                         <span class="co">#height = unit(0.7, "cm"), width = unit(0.7, "cm"),</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>                         <span class="at">style =</span> north_arrow_minimal)<span class="sc">+</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Also, scale bars shouldn't be added when you're this zoomed out, but here's how to add one anyway to the bottom left (bl):</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotation_scale</span>(<span class="at">location =</span> <span class="st">"bl"</span>, <span class="at">text_cex =</span> <span class="fl">0.8</span>)<span class="sc">+</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_discrete</span>(<span class="at">name =</span> <span class="st">"Accessibility"</span>)<span class="sc">+</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="co"># tidies up the visuals </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="../images/openDataSpatial/rendered/depot-map.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -673,67 +663,54 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="creating-temporary-directories">Creating temporary directories</h3>
 <p>For exploring data, it is often helpful to create temporary directories to store and extract data. This can be easier than downloading the data directly and setting your directories.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a temporary directory to store the downloaded zip file</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>temp_dir <span class="ot">=</span> <span class="fu">tempdir</span>()</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the path for the downloaded zip file inside the temp directory</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>zip_file <span class="ot">=</span> <span class="fu">file.path</span>(temp_dir, <span class="st">"zipPath.gdb.zip"</span>)</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the directory where the zip contents will be extracted</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># This is a relative path, so files will be extracted into the current working directory</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>unzip_dir <span class="ot">=</span> <span class="fu">file.path</span>(<span class="st">"extracted_fgdb"</span>)</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Download the dataset zip file. To get the correct link, follow the same steps as in the Pacific Recreational Fishery Salmon Head Depots example above, but with the "FDGB/GDB" item in Data and resources </span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/049770ef-6cb3-44ee-afc8-5d77d6200a12/attachments/floating_infrastructure-docks.gdb.zip"</span>,</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">destfile =</span> zip_file,</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">mode =</span> <span class="st">"wb"</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the extraction directory if it doesn't already exist</span></span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(unzip_dir, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Unzip the downloaded file into the extraction directory</span></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span>(zip_file, <span class="at">exdir =</span> unzip_dir)</span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="co"># List the files extracted to verify contents</span></span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>(unzip_dir)</span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the layers available in the extracted .gdb file</span></span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the name from the list.files() command. This should match the name of the gdb from the URL above</span></span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>layers <span class="ot">=</span> <span class="fu">st_layers</span>(<span class="fu">file.path</span>(unzip_dir, <span class="st">"floating_infrastructure-docks.gdb"</span>))</span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Turn layers from a list into a dataframe</span></span>
-<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="co"># layers has 1 entry called docks, so now a df called 'docks' will be created</span></span>
-<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(l <span class="cf">in</span> layers<span class="sc">$</span>name){</span>
-<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Reading layer: "</span>, l)</span>
-<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">assign</span>(l, <span class="fu">st_read</span>(<span class="fu">file.path</span>(unzip_dir, <span class="st">"floating_infrastructure-docks.gdb"</span>), <span class="at">layer =</span> l, <span class="at">quiet =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a temporary directory to store the downloaded zip file</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>temp_dir <span class="ot">=</span> <span class="fu">tempdir</span>()</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the path for the downloaded zip file inside the temp directory</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>zip_file <span class="ot">=</span> <span class="fu">file.path</span>(temp_dir, <span class="st">"zipPath.gdb.zip"</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the directory where the zip contents will be extracted</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># This is a relative path, so files will be extracted into the current working directory</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>unzip_dir <span class="ot">=</span> <span class="fu">file.path</span>(<span class="st">"extracted_fgdb"</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Download the dataset zip file. To get the correct link, follow the same steps as in the Pacific Recreational Fishery Salmon Head Depots example above, but with the "FDGB/GDB" item in Data and resources </span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/049770ef-6cb3-44ee-afc8-5d77d6200a12/attachments/floating_infrastructure-docks.gdb.zip"</span>,</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">destfile =</span> zip_file,</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">mode =</span> <span class="st">"wb"</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the extraction directory if it doesn't already exist</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(unzip_dir, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Unzip the downloaded file into the extraction directory</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span>(zip_file, <span class="at">exdir =</span> unzip_dir)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="co"># List the files extracted to verify contents</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>(unzip_dir)</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the layers available in the extracted .gdb file</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy the name from the list.files() command. This should match the name of the gdb from the URL above</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>layers <span class="ot">=</span> <span class="fu">st_layers</span>(<span class="fu">file.path</span>(unzip_dir, <span class="st">"floating_infrastructure-docks.gdb"</span>))</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Turn layers from a list into a dataframe</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a><span class="co"># layers has 1 entry called docks, so now a df called 'docks' will be created</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(l <span class="cf">in</span> layers<span class="sc">$</span>name){</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Reading layer: "</span>, l)</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">assign</span>(l, <span class="fu">st_read</span>(<span class="fu">file.path</span>(unzip_dir, <span class="st">"floating_infrastructure-docks.gdb"</span>), <span class="at">layer =</span> l, <span class="at">quiet =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="map-the-data" class="level3">
 <h3 class="anchored" data-anchor-id="map-the-data">Map the data</h3>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Note that the coordinate reference system of these two layers are different</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">invisible</span>(<span class="fu">st_crs</span>(docks)) <span class="co"># NAD 83</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">invisible</span>(<span class="fu">st_crs</span>(coast)) <span class="co"># WGS 84</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># To plot with ggplot, one of them has to be reprojected. I've transformed the docks CRS to match the coastline CRS </span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>docks <span class="ot">=</span> <span class="fu">st_transform</span>(docks, <span class="fu">st_crs</span>(coast))</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Redefine the bounds of the layer of interest</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>boundsDocks <span class="ot">=</span> <span class="fu">st_bbox</span>(docks)</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Make a map of the docks</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>()<span class="sc">+</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> coast, <span class="at">fill =</span> <span class="st">"lightgrey"</span>)<span class="sc">+</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> docks, <span class="at">size =</span> <span class="fl">3.5</span>, <span class="at">pch =</span> <span class="dv">21</span>, <span class="fu">aes</span>(<span class="at">fill =</span> region), <span class="at">alpha =</span> <span class="fl">0.65</span>)<span class="sc">+</span></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_sf</span>(</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlim =</span> <span class="fu">c</span>(boundsDocks[<span class="st">"xmin"</span>], boundsDocks[<span class="st">"xmax"</span>]),</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylim =</span> <span class="fu">c</span>(boundsDocks[<span class="st">"ymin"</span>], boundsDocks[<span class="st">"ymax"</span>])</span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_discrete</span>(<span class="at">name =</span> <span class="st">"Region"</span>)<span class="sc">+</span></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="../images/openDataSpatial/rendered/dock-map.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -742,24 +719,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>An example is shown here for accessing and plotting raster data stored in a geodatabase. You can follow the example in the <a href="https://github.com/AtlanticR/R_Git_Support/blob/main/open_data.Rmd">Maritimes tutorial</a> for accessing raster data from tiff files, if you are interested.</p>
 <p>The example I’m using is from the <a href="https://open.canada.ca/data/dataset/fed5f00f-7b17-4ac2-95d6-f1a73858dac0">recreational vessel traffic model on the BC coast</a>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Follow steps above to create a temporary folder to download &amp; extract geodatabase info</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>temp_dir <span class="ot">=</span> <span class="fu">tempdir</span>()</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>zip_file <span class="ot">=</span> <span class="fu">file.path</span>(temp_dir, <span class="st">"bc_boating_model.zip"</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>unzip_dir <span class="ot">=</span> <span class="fu">file.path</span>(temp_dir, <span class="st">"bc_boating_data"</span>)</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Download the dataset zip file. To get the correct link, follow the same steps as in the Pacific Recreational Fishery Salmon Head Depots example above, but with the "FDGB/GDB" item in Data and resources</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">url =</span> <span class="st">"https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/fed5f00f-7b17-4ac2-95d6-f1a73858dac0/attachments/Recreational_Boating_Data_Model.gdb.zip"</span>,</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">destfile =</span> zip_file,</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">mode =</span> <span class="st">"wb"</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Unzip the contents</span></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(unzip_dir, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span>(zip_file, <span class="at">exdir =</span> unzip_dir)</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="co"># List the file names you just downloaded </span></span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>boat_file <span class="ot">=</span> <span class="fu">list.files</span>(unzip_dir, <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Follow steps above to create a temporary folder to download &amp; extract geodatabase info</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>temp_dir <span class="ot">=</span> <span class="fu">tempdir</span>()</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>zip_file <span class="ot">=</span> <span class="fu">file.path</span>(temp_dir, <span class="st">"bc_boating_model.zip"</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>unzip_dir <span class="ot">=</span> <span class="fu">file.path</span>(temp_dir, <span class="st">"bc_boating_data"</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Download the dataset zip file. To get the correct link, follow the same steps as in the Pacific Recreational Fishery Salmon Head Depots example above, but with the "FDGB/GDB" item in Data and resources</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">url =</span> <span class="st">"https://api-proxy.edh-cde.dfo-mpo.gc.ca/catalogue/records/fed5f00f-7b17-4ac2-95d6-f1a73858dac0/attachments/Recreational_Boating_Data_Model.gdb.zip"</span>,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">destfile =</span> zip_file,</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">mode =</span> <span class="st">"wb"</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Unzip the contents</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(unzip_dir, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span>(zip_file, <span class="at">exdir =</span> unzip_dir)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co"># List the file names you just downloaded </span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>boat_file <span class="ot">=</span> <span class="fu">list.files</span>(unzip_dir, <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="mapping-the-survey-effort-data-with-ggplot" class="level2">
@@ -767,42 +744,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Unfortunately, raster data in this format cannot be directly mapped with <code>ggplot</code>. But, you can convert it to a data frame and keep the coordinate positions.</p>
 <p>If you read through <a href="https://egisp.dfo-mpo.gc.ca/arcgis/rest/services/open_data_donnees_ouvertes/recreational_vessel_traffic_model_for_british_columbia/MapServer">the metadata</a>, you’ll see that that many types of data are available in this geodatabase (e.g., point data, raster, vector grid). The data being plotted in this example below is the <em>surveyeffort</em> raster dataset, which is specified using the <code>sub</code> argument in the <code>rast()</code> function.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Turn the "survey effort" data into raster format</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>surveyRast <span class="ot">=</span> <span class="fu">rast</span>(boat_file, <span class="at">sub =</span> <span class="st">"surveyeffort"</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the project function to project to WGS 84 (i.e., to match the CRS of the coastline file)</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>rast_proj <span class="ot">=</span> <span class="fu">project</span>(surveyRast, coast)</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert it to a dataframe. Keep the coordinate info</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>rast_df <span class="ot">=</span> <span class="fu">as.data.frame</span>(rast_proj, <span class="at">xy =</span> <span class="cn">TRUE</span>) </span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the bounds for this. Using different code than above, since this is a regular data frame </span></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>boundsRast <span class="ot">=</span> <span class="fu">with</span>(rast_df, <span class="fu">c</span>(<span class="at">xmin =</span> <span class="fu">min</span>(x), <span class="at">xmax =</span> <span class="fu">max</span>(x), <span class="at">ymin =</span> <span class="fu">min</span>(y), <span class="at">ymax =</span> <span class="fu">max</span>(y)))</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot it with geom_tile and add the coast data as well</span></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>()<span class="sc">+</span></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="at">data =</span> rast_df, <span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y, <span class="at">fill =</span> Recreational_Boating_Data_Model)) <span class="sc">+</span></span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> coast, <span class="at">fill =</span> <span class="st">"lightgrey"</span>)<span class="sc">+</span></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"magma"</span>)<span class="sc">+</span></span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">xlim =</span> <span class="fu">c</span>(boundsRast[<span class="st">"xmin"</span>], boundsRast[<span class="st">"xmax"</span>]),</span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>                <span class="at">ylim =</span> <span class="fu">c</span>(boundsRast[<span class="st">"ymin"</span>], boundsRast[<span class="st">"ymax"</span>]))<span class="sc">+</span></span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="cn">NULL</span>)<span class="sc">+</span></span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="../images/openDataSpatial/rendered/survey-raster.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
 </div>
 <section id="making-leaflet-maps" class="level3">
 <h3 class="anchored" data-anchor-id="making-leaflet-maps">Making Leaflet Maps</h3>
 <p><a href="https://rstudio.github.io/leaflet/">Leaflet maps</a> are interactive maps that can be a great way to explore data. Leaflet maps can also be great for point data, since you can create <a href="https://rstudio.github.io/leaflet/articles/popups.html">popup labels</a> where you can click and view your attribute data.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert raster to leaflet-compatible format</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>pal <span class="ot">=</span> <span class="fu">colorNumeric</span>(<span class="at">palette =</span> <span class="st">"magma"</span>, <span class="at">domain =</span> <span class="fu">values</span>(rast_proj), <span class="at">na.color =</span> <span class="st">"transparent"</span>)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create leaflet map</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addProviderTiles</span>(providers<span class="sc">$</span>Esri.OceanBasemap) <span class="sc">%&gt;%</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addRasterImage</span>(rast_proj, <span class="at">colors =</span> pal, <span class="at">opacity =</span> <span class="fl">0.7</span>, <span class="at">project =</span> T) <span class="sc">%&gt;%</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addLegend</span>(<span class="at">pal =</span> pal, <span class="at">values =</span> <span class="fu">values</span>(rast_proj),</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">title =</span> <span class="st">"Survey Effort"</span>,</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>            <span class="at">position =</span> <span class="st">"bottomright"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert raster to leaflet-compatible format</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>pal <span class="ot">=</span> <span class="fu">colorNumeric</span>(<span class="at">palette =</span> <span class="st">"magma"</span>, <span class="at">domain =</span> <span class="fu">values</span>(rast_proj), <span class="at">na.color =</span> <span class="st">"transparent"</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create leaflet map</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addProviderTiles</span>(providers<span class="sc">$</span>Esri.OceanBasemap) <span class="sc">%&gt;%</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addRasterImage</span>(rast_proj, <span class="at">colors =</span> pal, <span class="at">opacity =</span> <span class="fl">0.7</span>, <span class="at">project =</span> T) <span class="sc">%&gt;%</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addLegend</span>(<span class="at">pal =</span> pal, <span class="at">values =</span> <span class="fu">values</span>(rast_proj),</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">title =</span> <span class="st">"Survey Effort"</span>,</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>            <span class="at">position =</span> <span class="st">"bottomright"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>
@@ -816,29 +779,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="downloading-data">Downloading data</h3>
 <p>We’ll use the <a href="https://open.canada.ca/data/dataset/3cc03bbf-d59f-4812-996e-ddc52e0ba99e">Pacific Recreational Fishery Salmon Head Depots</a> data as an example. We can use the <code>ckanr</code> package to extract the ArcGIS REST URL by referencing the UUID. This may seem like an extra step while you’re writing your code, but it will save you time in the long run if the URLs change (it can happen!!)</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>ckanr<span class="sc">::</span><span class="fu">ckanr_setup</span>(<span class="st">"https://open.canada.ca/data"</span>)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>uuid <span class="ot">=</span> <span class="st">"3cc03bbf-d59f-4812-996e-ddc52e0ba99e"</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>pkg <span class="ot">=</span> ckanr<span class="sc">::</span><span class="fu">package_show</span>(uuid)</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>resources <span class="ot">=</span> pkg<span class="sc">$</span>resources</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>df_resources <span class="ot">=</span> <span class="fu">as.data.frame</span>(<span class="fu">do.call</span>(rbind, resources))</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Now you can grab the correct ESRI Rest URL ("url"). Make sure to search for that format, and also specify you want the English ("En") version and not French</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>salmon_url <span class="ot">=</span> <span class="fu">unlist</span>(df_resources[df_resources<span class="sc">$</span>format <span class="sc">==</span> <span class="st">"ESRI REST"</span> <span class="sc">&amp;</span> <span class="fu">sapply</span>(df_resources<span class="sc">$</span>language, <span class="cf">function</span>(x) <span class="st">"en"</span> <span class="sc">%in%</span> x), <span class="st">"url"</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>ckanr<span class="sc">::</span><span class="fu">ckanr_setup</span>(<span class="st">"https://open.canada.ca/data"</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>uuid <span class="ot">=</span> <span class="st">"3cc03bbf-d59f-4812-996e-ddc52e0ba99e"</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>pkg <span class="ot">=</span> ckanr<span class="sc">::</span><span class="fu">package_show</span>(uuid)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>resources <span class="ot">=</span> pkg<span class="sc">$</span>resources</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>df_resources <span class="ot">=</span> <span class="fu">as.data.frame</span>(<span class="fu">do.call</span>(rbind, resources))</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Now you can grab the correct ESRI Rest URL ("url"). Make sure to search for that format, and also specify you want the English ("En") version and not French</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>salmon_url <span class="ot">=</span> <span class="fu">unlist</span>(df_resources[df_resources<span class="sc">$</span>format <span class="sc">==</span> <span class="st">"ESRI REST"</span> <span class="sc">&amp;</span> <span class="fu">sapply</span>(df_resources<span class="sc">$</span>language, <span class="cf">function</span>(x) <span class="st">"en"</span> <span class="sc">%in%</span> x), <span class="st">"url"</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="searching-for-data" class="level3">
 <h3 class="anchored" data-anchor-id="searching-for-data">Searching for data</h3>
 <p>You can also use the <code>ckanr</code> package to search for data using the <code>package_search()</code> function. You can use the <code>q</code> argument to search for key words, and the <code>fq</code> argument to specify file types.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>ckanr<span class="sc">::</span><span class="fu">ckanr_setup</span>(<span class="st">"https://open.canada.ca/data"</span>)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>search_results <span class="ot">=</span> ckanr<span class="sc">::</span><span class="fu">package_search</span>(<span class="at">q =</span> <span class="st">"Pacific salmon"</span>)</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>search_results <span class="co"># Note that UUID also shows up here after the &lt;CKAN Package&gt; text</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co"># You  can also search specifically for spatial data (e.g., shapefiles, geodatabases, etc.) by specifying the fq argument</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>search_results <span class="ot">=</span> ckanr<span class="sc">::</span><span class="fu">package_search</span>(</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">q =</span> <span class="st">"Pacific salmon"</span>,</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">fq =</span> <span class="st">'res_format:(SHP OR GDB OR GeoJSON OR KML OR CSV)'</span> <span class="co"># CSVs sometimes contain spatial data, sometimes not</span></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>ckanr<span class="sc">::</span><span class="fu">ckanr_setup</span>(<span class="st">"https://open.canada.ca/data"</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>search_results <span class="ot">=</span> ckanr<span class="sc">::</span><span class="fu">package_search</span>(<span class="at">q =</span> <span class="st">"Pacific salmon"</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>search_results <span class="co"># Note that UUID also shows up here after the &lt;CKAN Package&gt; text</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># You  can also search specifically for spatial data (e.g., shapefiles, geodatabases, etc.) by specifying the fq argument</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>search_results <span class="ot">=</span> ckanr<span class="sc">::</span><span class="fu">package_search</span>(</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">q =</span> <span class="st">"Pacific salmon"</span>,</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">fq =</span> <span class="st">'res_format:(SHP OR GDB OR GeoJSON OR KML OR CSV)'</span> <span class="co"># CSVs sometimes contain spatial data, sometimes not</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 
