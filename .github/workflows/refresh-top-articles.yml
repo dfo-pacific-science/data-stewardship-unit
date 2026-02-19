@@ -1,0 +1,43 @@
+name: Refresh top articles
+
+on:
+  schedule:
+    - cron: '23 13 * * *' # daily ~05:23 PST/06:23 PDT
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Refresh top articles data
+        env:
+          PLAUSIBLE_API_TOKEN: ${{ secrets.PLAUSIBLE_API_TOKEN }}
+          PLAUSIBLE_SITE_ID: ${{ secrets.PLAUSIBLE_SITE_ID }}
+          PLAUSIBLE_DOMAIN: ${{ vars.PLAUSIBLE_DOMAIN }}
+          PLAUSIBLE_API_BASE: ${{ vars.PLAUSIBLE_API_BASE }}
+          TOP_ARTICLES_PERIOD: 7d
+        run: |
+          python scripts/refresh_top_articles.py
+
+      - name: Commit changes if needed
+        run: |
+          if git diff --quiet data/top_articles.json; then
+            echo "No top-article changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/top_articles.json
+          git commit -m "chore: refresh top articles data"
+          git push
