@@ -80,3 +80,10 @@ Assistant tools can help draft mappings and package metadata, but they do not re
 - more consistent semantics across teams
 - cleaner FSAR-to-repository pathways
 - better machine-readability for integration and downstream analytics
+
+# 8. Suggested next reads
+
+- [FSAR to SPSR: End-to-End Example](../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd)
+- [IRI and Identifier Policy](iri-identifier-policy.qmd)
+- [Class vs SKOS Decision Tree](../ontology/class-vs-skos-decision-tree.qmd)
+- [How to Request a New Ontology Term](../ontology/request-new-term.qmd)

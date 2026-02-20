@@ -1,0 +1,43 @@
+---
+title: "IRI and Identifier Policy (Practical)"
+format: html
+---
+
+This page defines practical rules for identifiers across DSU standards and workflows.
+
+## Core rule
+
+Use **full canonical IRIs** for semantic term links.
+
+Canonical base: `https://w3id.org/gcdfo/salmon#`
+
+## What goes where
+
+- Human-facing name → label fields (`rdfs:label`, `skos:prefLabel`, or local `label` columns)
+- Machine code value → code fields (e.g., `skos:notation`, coded columns)
+- Stable term identifier → full IRI in semantic link columns (e.g., `standard_term_iri`)
+
+## Do / Don’t
+
+### Do
+
+- store full `https://w3id.org/gcdfo/salmon#...` IRIs in mapping metadata
+- preserve the exact IRI used at publication/submission time
+- document crosswalks when terms are replaced
+
+### Don’t
+
+- use partial/abbreviated IRIs in package metadata
+- put machine IDs into display labels
+- silently swap identifiers without change notes
+
+## Example mapping row
+
+```csv
+variable_name,label,standard_term_iri
+Esc,Escapement,https://w3id.org/gcdfo/salmon#Escapement
+```
+
+## Why this matters
+
+Consistent full IRIs reduce ambiguity and make SDEP validation, SPSR intake, and downstream integration more reliable.

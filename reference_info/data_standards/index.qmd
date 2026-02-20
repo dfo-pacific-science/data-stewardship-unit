@@ -11,11 +11,27 @@ This hub is the **starting point** for standardizing, integrating, and publishin
 ## Start here (common tasks)
 
 - **I need to prepare data for an FSAR** → [FSAR Data Standardization Workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd)
+- **I need to submit FSAR data to SPSR** → [FSAR to SPSR: End-to-End Example](../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd) and [SDEP + SPSR Intake Path](ontology-data-package-gpt.qmd)
 - **I need standard terms and definitions** → [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)
 - **I need package structure/spec details** → [Salmon Data Exchange Package Specification](salmon-data-exchange-package.qmd)
+- **I need practical identifier rules** → [IRI and Identifier Policy](iri-identifier-policy.qmd)
 - **I need to understand how ontology + SDEP + tools fit together** → [Semantic Salmon Data Ecosystem](semantic-salmon-data-ecosystem.qmd)
 - **I need to publish data** → [Publish Your Data](publish-data.qmd) and [Publishing Data Externally](../publishing_data_externally.qmd)
-- **I need to submit FSAR data to SPSR** → [FSAR Data Standardization Workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd) and [SDEP + SPSR Intake Path](ontology-data-package-gpt.qmd)
+
+## Start by role
+
+- **Data producer (scientist/analyst)**
+  - [Standardize Your Data](standardize-data.qmd)
+  - [Integrate Data](integrate-data.qmd)
+  - [FSAR to SPSR: End-to-End Example](../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd)
+- **Ontology contributor**
+  - [Ontology Conventions Guidebook](../ontology/conventions/index.qmd)
+  - [Class vs SKOS Decision Tree](../ontology/class-vs-skos-decision-tree.qmd)
+  - [How to Request a New Ontology Term](../ontology/request-new-term.qmd)
+- **Data steward/reviewer**
+  - [SDEP + SPSR Intake Path](ontology-data-package-gpt.qmd)
+  - [IRI and Identifier Policy](iri-identifier-policy.qmd)
+  - [Publishing Data Externally](../publishing_data_externally.qmd)
 
 ## Standards map
 
@@ -24,17 +40,21 @@ Use these to anchor variable meaning to shared definitions and stable IRIs.
 
 - [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)
 - [Ontology Conventions Guidebook](../ontology/conventions/index.qmd)
+- [Class vs SKOS Decision Tree](../ontology/class-vs-skos-decision-tree.qmd)
+- [How to Request a New Ontology Term](../ontology/request-new-term.qmd)
 
 ### 2) Package your dataset with SDEP
 Use SDEP metadata files to describe your dataset, tables, columns, and controlled codes.
 
 - [Salmon Data Exchange Package Specification](salmon-data-exchange-package.qmd)
+- [IRI and Identifier Policy](iri-identifier-policy.qmd)
 - [SDEP + SPSR Intake Path](ontology-data-package-gpt.qmd)
 
 ### 3) Use implementation workflows
 - [Standardize Your Data](standardize-data.qmd)
 - [Integrate Data](integrate-data.qmd)
 - [FSAR Data Standardization Workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd)
+- [FSAR to SPSR: End-to-End Example](../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd)
 
 ## Downloadable starter template
 

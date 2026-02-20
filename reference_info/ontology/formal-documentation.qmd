@@ -35,4 +35,6 @@ It is based on the canonical `docs/CONVENTIONS.md` in the [`dfo-salmon-ontology`
 - [OWL properties](conventions/owl-properties.qmd)
 - [SKOS vocabularies](conventions/skos-vocabularies.qmd)
 - [Provenance and maintenance](conventions/provenance-maintenance.qmd)
+- [Class vs SKOS Decision Tree](class-vs-skos-decision-tree.qmd)
+- [How to Request a New Ontology Term](request-new-term.qmd)
 - [Full conventions (canonical source)](conventions/full.qmd)

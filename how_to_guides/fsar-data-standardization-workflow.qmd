@@ -8,6 +8,8 @@ format:
 
 Use this workflow when preparing salmon datasets for Fisheries Science Advisory Report (FSAR) analysis, review, and operational intake.
 
+If you want a concrete walkthrough, use the companion page: [FSAR to SPSR: End-to-End Example](fsar-to-spsr-end-to-end-example.qmd).
+
 ## Step 1 — Define scope, classification, and destination
 
 - Confirm dataset scope (what, where, when).

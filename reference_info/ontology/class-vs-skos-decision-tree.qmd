@@ -1,0 +1,37 @@
+---
+title: "Class vs SKOS Concept: Decision Tree"
+format: html
+---
+
+Use this quick decision tree when modeling a new term.
+
+## Decision tree
+
+1. Is this a controlled value/code list item (picklist term)?
+   - **Yes** → model as **SKOS concept**
+   - **No** → continue
+
+2. Does it need logical class semantics (subclassing, restrictions, reasoning)?
+   - **Yes** → model as **OWL class/property**
+   - **No** → continue
+
+3. Is it mostly lexical terminology with broader/narrower relationships?
+   - **Yes** → model as **SKOS concept**
+   - **No** → model as **OWL class/property**
+
+## Practical examples
+
+- "Sonar counting" as method term in a code list → **SKOS concept**
+- "Conservation Unit" as domain entity class → **OWL class**
+- "aboutStock" relation between measurement and stock → **OWL object property**
+
+## Guardrails
+
+- avoid modeling the same meaning as both SKOS concept and OWL class by default
+- keep SKOS for terminology governance and controlled values
+- keep OWL for logical model structure and inferencing
+
+See also:
+
+- [Ontology Conventions Guidebook](conventions/index.qmd)
+- [How to Request a New Ontology Term](request-new-term.qmd)

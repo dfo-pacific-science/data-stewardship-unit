@@ -1,0 +1,65 @@
+---
+title: "How to Request a New Ontology Term"
+format:
+  html:
+    toc: true
+---
+
+Use this process when you cannot find a suitable existing term in the DFO Salmon Ontology.
+
+## Before requesting
+
+1. Search existing ontology docs: [GC DFO Salmon Ontology](formal-documentation.qmd)
+2. Check conventions: [Ontology Conventions Guidebook](conventions/index.qmd)
+3. Confirm the concept is not already represented under another label/synonym.
+
+## Minimum request package
+
+Include:
+
+- proposed label
+- plain-language definition
+- concept type (OWL class/property or SKOS concept)
+- expected parent class or concept scheme
+- usage example from a real workflow (FSAR/SPSR/SDEP)
+- provenance/source reference (if available)
+- why existing terms are insufficient
+
+## Decision criteria
+
+A strong request should:
+
+- solve a real recurring use case
+- avoid semantic duplication
+- fit existing naming and modeling conventions
+- improve interoperability or data quality
+
+## Suggested issue template
+
+```markdown
+## Proposed term
+Label: ...
+Type: OWL class / OWL property / SKOS concept
+
+## Definition
+...
+
+## Placement
+Parent class or concept scheme: ...
+
+## Example usage
+...
+
+## Why existing terms do not work
+...
+
+## Source/provenance
+...
+```
+
+## After approval
+
+1. Add term in ontology repository.
+2. Regenerate docs/release artifacts.
+3. Update DSU guidance pages that reference this area.
+4. Update SDEP/SPSR mappings if intake workflows are affected.
