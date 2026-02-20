@@ -1,116 +1,82 @@
 ---
 title: "The Semantic Salmon Data Ecosystem"
-author: "Brett Johnson, Data Stewardship Unit (DFO Pacific Region Science Branch)"
+author: "Data Stewardship Unit (DFO Pacific Region Science Branch)"
 format:
   html:
     toc: true
-    toc-depth: 3
+    toc-depth: 2
     number-sections: true
-execute:
-  echo: false
-  warning: false
-  message: false
 ---
 
 # Overview
 
-The **Semantic Salmon Data Ecosystem** is a coordinated set of standards, ontologies, and tools that make it easier to create, share, and reuse salmon data across organizations. Rather than enforcing one rigid schema, the ecosystem links **local datasets** to a **shared semantic layer** so that data remain usable within programs and comparable across programs.
+The **Semantic Salmon Data Ecosystem** connects standards, ontology terms, package metadata, validation tooling, and operational upload pathways so salmon data can move from local analysis into reusable systems.
 
-At a high level, the ecosystem connects four core components:
+At a high level, the ecosystem has five working parts:
 
-1. **DFO Salmon Ontology + controlled vocabularies** — a shared semantic backbone.
-2. **SALMON Data Package Specification (SDEP)** — a lightweight metadata packaging standard.
-3. **Meta‑SALMON‑R (metasalmon)** — validation and tooling that interprets packages.
-4. **SALMON Data GPT (smn‑gpt)** — a guided assistant that helps users align datasets.
+1. **DFO Salmon Ontology** — canonical terms and semantics
+2. **SDEP (Salmon Data Exchange Package)** — structured metadata packaging
+3. **Validation tooling (Meta-SALMON-R, related checks)** — quality control
+4. **SPSR (Salmon Population Summary Repository)** — intake and operational publishing path for many FSAR workflows
+5. **Guided assistants (optional)** — acceleration layer for drafting mappings and metadata
 
-Together these components reduce friction for data producers and improve interoperability for analysts, managers, and data stewards.
+# 1. DFO Salmon Ontology (canonical semantic layer)
 
-# 1. DFO Salmon Ontology and controlled vocabularies
+The ontology provides shared definitions and persistent IRIs for key domain concepts.
 
-The **DFO Salmon Ontology** provides formal definitions for salmon concepts, measurement types, demographic units, life stages, and other domain terms. It is paired with **ontology documentation and contributor guidebook** extracted into human‑friendly tables. These vocabularies provide stable identifiers (IRIs) that can be referenced directly in datasets.
+- Canonical docs: [GC DFO Salmon Ontology](../ontology/formal-documentation.qmd)
+- Contributor guidance: [Ontology Conventions Guidebook](../ontology/conventions/index.qmd)
 
-**Why it matters:**
+# 2. SDEP (package layer)
 
-- Prevents ambiguity across jurisdictions and programs
-- Allows **consistent interpretation** of terms and codes
-- Creates a shared language for analytics, integration, and AI workflows
+SDEP standardizes package metadata without forcing one rigid dataset schema.
 
-For formal documentation, see the GC DFO Salmon Ontology page in this hub: [GC DFO Salmon Ontology](../ontology/formal-documentation.qmd).
+Core files:
 
-For controlled vocabularies, see: [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd).
+- `dataset.csv`
+- `tables.csv`
+- `column_dictionary.csv`
+- `codes.csv` (when controlled values apply)
 
-# 2. SALMON Data Package Specification (SDEP)
+Spec reference: [Salmon Data Exchange Package Specification](salmon-data-exchange-package.qmd)
 
-The **Salmon Data Exchange Package (SDEP)** is a lightweight, frictionless‑style standard that wraps existing data tables with a small set of metadata files. It does **not** impose a single canonical schema; instead it standardizes **metadata about the schema** and links those metadata fields to ontology terms.
+# 3. Validation tooling (quality layer)
 
-Each SDEP package includes:
+Validation tooling checks package structure and semantic consistency before submission.
 
-- `dataset.csv` — dataset‑level metadata
-- `tables.csv` — table inventory and entity definitions
-- `column_dictionary.csv` — column‑level metadata + ontology links
-- `codes.csv` — optional controlled codes tied to SKOS concepts
+Typical checks include:
 
-**Why it matters:**
+- required columns/files present
+- value types and requiredness
+- IRI formatting and ontology-link consistency
+- controlled vocabulary/code-list alignment
 
-- Keeps adoption lightweight (Excel/CSV friendly)
-- Creates **machine‑readable metadata** without forcing refactors
-- Enables validation and automated semantic enrichment
+# 4. SPSR (operational intake layer)
 
-Spec reference: [Salmon Data Exchange Package Specification](salmon-data-exchange-package.qmd).
+For FSAR-oriented contributions, SPSR is a major operational destination.
 
-# 3. Meta‑SALMON‑R (metasalmon)
+- Docs: <https://spsr.dfo-mpo.gc.ca/documentation/>
+- Upload wizard: <https://spsr.dfo-mpo.gc.ca/wizard/1/>
+- Templates endpoint: <https://spsr.dfo-mpo.gc.ca/download_sdp_templates>
+- Repo: <https://github.com/dfo-pacific-science/salmon-population-summary-repository>
 
-The **Meta‑SALMON‑R** package provides validation and automation around SDEP packages. It reads metadata files, checks compliance with the specification, and can join in ontology vocabulary information to enrich datasets.
+This creates a practical bridge from standards work to real upload and review workflows.
 
-Typical capabilities include:
+# 5. Guided assistants (optional acceleration)
 
-- **Validate** package structure and required fields
-- **Detect** missing or inconsistent metadata
-- **Join** ontology labels and definitions into the metadata tables
-- **Support** downstream transformations and integration workflows
+Assistant tools can help draft mappings and package metadata, but they do not replace validation or governance. They are best used as **drafting aids**.
 
-This makes the semantic layer actionable, not just descriptive.
+# 6. End-to-end flow
 
-# 4. SALMON Data GPT (smn‑gpt)
+1. Map terms to ontology IRIs
+2. Build SDEP metadata
+3. Validate package
+4. Upload via SPSR workflow (for applicable FSAR datasets)
+5. Iterate from validation/reviewer feedback
 
-The **SALMON Data GPT** is a guided assistant that helps users build SDEP metadata and align datasets with ontology terms. It is particularly useful for data producers who are new to the standards.
+# 7. Why this matters
 
-Typical capabilities include:
-
-- Drafting `column_dictionary.csv` and `codes.csv`
-- Suggesting ontology‑aligned terms and IRIs
-- Decomposing compound variables into standardized components
-- Proposing SDEP‑compliant package layouts
-
-The GPT acts as a low‑barrier entry point into the ecosystem, while still producing standards‑compliant outputs that can be validated.
-
-# 5. How the pieces fit together
-
-The ecosystem is designed as a **pipeline**:
-
-1. **Ontology + vocabularies** provide authoritative semantics.
-2. **SDEP** packages datasets and links columns/codes to ontology terms.
-3. **Meta‑SALMON‑R** validates and enriches packages.
-4. **SALMON Data GPT** accelerates adoption and helps new users comply.
-
-This shared pipeline makes it easier for multiple organizations to publish consistent salmon data that remains locally useful but globally interoperable.
-
-# 6. Benefits across organizations
-
-- **Faster integration** between jurisdictions and programs
-- **Reduced ambiguity** in key salmon concepts
-- **More reusable data products** for assessments and decision support
-- **Improved AI readiness** by standardizing data semantics
-
-# 7. Next steps
-
-The ecosystem will continue to evolve as standards mature and tools expand. Key near‑term priorities include:
-
-- Expanding controlled vocabularies and term tables
-- Improving package validation and automation tooling
-- Tightening feedback loops between data producers and ontology maintainers
-- Scaling GPT guidance to cover more datasets and workflows
-
----
-
-*This overview is intended as a 2–3 page introduction for data producers and analysts. It emphasizes adoption and interoperability rather than formal ontology theory.*
+- lower onboarding friction for data producers
+- more consistent semantics across teams
+- cleaner FSAR-to-repository pathways
+- better machine-readability for integration and downstream analytics

@@ -35,4 +35,4 @@ It is based on the canonical `docs/CONVENTIONS.md` in the [`dfo-salmon-ontology`
 - [OWL properties](conventions/owl-properties.qmd)
 - [SKOS vocabularies](conventions/skos-vocabularies.qmd)
 - [Provenance and maintenance](conventions/provenance-maintenance.qmd)
-- [Full (raw)](conventions/full.qmd)
+- [Full conventions (canonical source)](conventions/full.qmd)

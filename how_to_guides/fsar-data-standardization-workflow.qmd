@@ -6,70 +6,84 @@ format:
     toc-depth: 2
 ---
 
-Use this workflow when preparing salmon datasets for Fisheries Science Advisory Report (FSAR) analysis, review, and publication.
+Use this workflow when preparing salmon datasets for Fisheries Science Advisory Report (FSAR) analysis, review, and operational intake.
 
-## Step 1 — Define your scope and data classification
+## Step 1 — Define scope, classification, and destination
 
-- Confirm what dataset(s) and years are in scope for the FSAR.
-- Confirm data classification and sharing constraints before publishing.
-- Reference policy guidance: [Publishing Data Externally](../reference_info/publishing_data_externally.qmd)
+- Confirm dataset scope (what, where, when).
+- Confirm data classification and sharing constraints.
+- Confirm whether this package is intended for SPSR intake, external publication, or both.
+- Policy guidance: [Publishing Data Externally](../reference_info/publishing_data_externally.qmd)
 
-## Step 2 — Map columns to controlled vocabulary terms
+## Step 2 — Map columns to canonical ontology terms
 
 1. Open [GC DFO Salmon Ontology documentation](../reference_info/ontology/formal-documentation.qmd).
-2. Search for canonical terms for each key variable (e.g., spawner abundance, brood year, CU identifiers).
-3. Capture the corresponding canonical URI for each mapped term.
+2. Map core variables (CU identifiers, year fields, key measurements).
+3. Record **full** canonical IRIs for mapped terms.
 
 ## Step 3 — Build an SDEP package
 
 Use the [SDEP specification](../reference_info/data_standards/salmon-data-exchange-package.qmd).
 
-At minimum, create:
+At minimum:
 
 - `dataset.csv`
 - `tables.csv`
 - `column_dictionary.csv`
 - `data/*.csv`
-- `codes.csv` (if categorical code lists apply)
+- `codes.csv` (when categorical code lists apply)
 
 Starter assets:
 
 - [Download minimal SDEP example (zip)](../reference_info/data_standards/examples/sdep-minimal-example.zip)
 - [Browse template package files](https://github.com/dfo-pacific-science/data-stewardship-unit/tree/main/reference_info/data_standards/examples/sdep-minimal-example)
 
-## Step 4 — Validate before submission/publication
+## Step 4 — Validate package quality
 
-If you are using Meta-SALMON-R locally, validate package structure and semantics before sharing.
+Run structural and semantic checks before submission.
 
-Example R workflow:
+Example R checks:
 
 ```r
 library(metasalmon)
 
 pkg_path <- "path/to/your/sdep-package"
 
-# Structure checks
 validate_dictionary(file.path(pkg_path, "column_dictionary.csv"))
-
-# Semantics checks (as available in your version)
 validate_semantics(file.path(pkg_path, "column_dictionary.csv"))
 ```
 
-## Step 5 — Prepare publication package and provenance
+## Step 5 — Prepare SPSR upload files (FSAR priority path)
 
-- Ensure source citations, contacts, and license are complete.
-- Ensure table descriptions and column descriptions are clear to external users.
-- Include a short README describing dataset scope and caveats.
+For FSAR-oriented contributions, SPSR is a major operational intake target.
 
-## Step 6 — Publish and cite
+- Confirm column names and metadata are consistent with your selected SPSR intake profile.
+- Ensure provenance notes are explicit for transformed/derived values.
+- Keep the package and upload files versioned together.
 
-- Follow platform guidance and approvals: [Publishing Data Externally](../reference_info/publishing_data_externally.qmd)
-- Include version/date metadata and citation details.
+Useful SPSR references:
+
+- Repo: <https://github.com/dfo-pacific-science/salmon-population-summary-repository>
+- App docs: <https://spsr.dfo-mpo.gc.ca/documentation/>
+- Upload wizard: <https://spsr.dfo-mpo.gc.ca/wizard/1/>
+- Templates endpoint: <https://spsr.dfo-mpo.gc.ca/download_sdp_templates>
+
+## Step 6 — Upload and review in SPSR
+
+- Upload via SPSR wizard.
+- Resolve validation feedback.
+- Re-upload if needed until intake checks are clean.
+- Record upload metadata/version in your project notes.
+
+## Step 7 — Publish externally (if in scope and approved)
+
+- Follow policy + approvals for external release.
+- Include citation/version metadata and release notes.
 
 ## FSAR readiness checklist
 
-- [ ] Vocabulary mappings documented
-- [ ] SDEP metadata files completed
-- [ ] Validation run locally and issues resolved
-- [ ] Data classification + approvals confirmed
-- [ ] Publication metadata + citation completed
+- [ ] Scope and classification confirmed
+- [ ] Vocabulary mappings documented with full IRIs
+- [ ] SDEP files completed and validated
+- [ ] SPSR upload completed (or intake exceptions documented)
+- [ ] External publication requirements completed (if applicable)

@@ -776,3 +776,41 @@
 .home-most-read { margin: 0.5rem 0 1.5rem; padding-left: 1.25rem; }
 .home-most-read li { margin: 0.45rem 0; }
 .home-most-read-meta { margin-left: 0.55rem; color: #5a6b7c; font-size: 0.92rem; }
+
+/* Shared cookbook workflow blocks */
+.cookbook-section {
+  margin-top: 2rem;
+}
+
+.cookbook-step {
+  background: #f8f9fa;
+  border-left: 4px solid #446c8a;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+
+.cookbook-step h3 {
+  margin-top: 0;
+  color: #446c8a;
+}
+
+.cookbook-step code {
+  background: #e9ecef;
+  padding: 0.15rem 0.35rem;
+  border-radius: 3px;
+}
+
+.cookbook-step pre {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 0.9rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.cookbook-step pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}

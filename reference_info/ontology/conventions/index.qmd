@@ -22,4 +22,4 @@ Source note: this guidebook is derived from the canonical `docs/CONVENTIONS.md` 
 
 ## Full single-page version
 
-- [Full (raw)](full.qmd)
+- [Full conventions (canonical source)](full.qmd)

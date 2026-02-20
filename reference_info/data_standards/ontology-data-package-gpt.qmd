@@ -1,36 +1,61 @@
 ---
-title: "Term Dictionary + Data Package + Salmon GPT"
+title: "SDEP + SPSR Intake Path"
 format:
   html:
     toc: true
     toc-depth: 2
 ---
 
-This page explains how vocabulary terms, SDEP metadata, and guided tooling work together in practice.
+Use this page when your goal is to move from **mapped data** to a **submission-ready package** and upload path for SPSR.
+
+::: {.callout-note}
+This page is for **packaging and intake**.
+
+If you need to propose new vocabulary terms or ontology changes, use [Controlled Vocabulary Governance Workflow](../../tutorials/support_controlled_vocabs.qmd).
+:::
 
 ## Quick summary
 
-- The **term dictionary / controlled vocabulary** defines terms, labels, and semantic IDs.
-- The **SDEP package** captures dataset metadata in CSV form so data are machine-readable and interoperable.
-- **SALMON Data GPT** can help draft package metadata and suggest ontology-aligned mappings.
+- The **DFO Salmon Ontology** provides canonical term IRIs.
+- **SDEP** provides package metadata structure (`dataset.csv`, `tables.csv`, `column_dictionary.csv`, `codes.csv`).
+- **SPSR** is a primary operational destination for FSAR-oriented uploads.
+- Guided assistants can help draft mappings, but package validation remains the quality gate.
 
 ## Practical workflow
 
-1. Start in the [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd) page and find the right terms.
-2. Build your `column_dictionary.csv` using those terms and IRIs.
-3. Assemble your package using the [SDEP specification](salmon-data-exchange-package.qmd).
-4. Validate with local tooling (for example, Meta-SALMON-R workflows) before publishing.
-5. Use guided assistants (where available) to speed up mapping and metadata drafting.
+1. Find canonical terms in [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd).
+2. Build `column_dictionary.csv` with full IRIs (no shortened/partial URIs).
+3. Assemble package files using [SDEP specification](salmon-data-exchange-package.qmd).
+4. Validate locally (e.g., Meta-SALMON-R checks).
+5. Prepare SPSR-compatible upload CSV(s).
+6. Upload through SPSR wizard and review validation feedback.
+
+## SPSR touchpoints
+
+- App documentation: <https://spsr.dfo-mpo.gc.ca/documentation/>
+- Upload wizard: <https://spsr.dfo-mpo.gc.ca/wizard/1/>
+- Template package endpoint: <https://spsr.dfo-mpo.gc.ca/download_sdp_templates>
+- Repo: <https://github.com/dfo-pacific-science/salmon-population-summary-repository>
 
 ## Recommended artifacts
 
 - `dataset.csv` for dataset-level metadata
-- `tables.csv` for table inventory and entity declarations
-- `column_dictionary.csv` for column meaning + term links
+- `tables.csv` for table inventory and entities
+- `column_dictionary.csv` for column semantics + term links
 - `codes.csv` for controlled value sets
+- upload-ready data CSV(s) matching your selected intake profile
+
+## Validation gates
+
+Before upload, confirm:
+
+- all required metadata fields are present
+- all semantic links use canonical full IRIs
+- categorical values are mapped to controlled concepts
+- provenance notes are present for major transformations
 
 ## References
 
-- [Semantic Salmon Data Ecosystem overview](semantic-salmon-data-ecosystem.qmd)
-- [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)
-- [Support Controlled Vocabularies tutorial](../../tutorials/support_controlled_vocabs.qmd)
+- [Semantic Salmon Data Ecosystem](semantic-salmon-data-ecosystem.qmd)
+- [FSAR Data Standardization Workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd)
+- [Controlled Vocabulary Governance Workflow](../../tutorials/support_controlled_vocabs.qmd)

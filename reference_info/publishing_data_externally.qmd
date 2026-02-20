@@ -6,9 +6,9 @@ version: "v1.0"
 last_updated: "2025-04-04"
 ---
 
-This guide is intended for scientists and technical staff in the DFO Pacific Region Science Branch. It outlines what is allowed, restricted, or prohibited when using internal and external platforms (e.g., Sharepoint, GitHub, Zenodo, Google Drive) to manage and share DFO Science data, code, and metadata, including during Fishery Science Advisory Report (FSAR) workflows.
+This guide is intended for scientists and technical staff in the DFO Pacific Region Science Branch. It outlines what is allowed, restricted, or prohibited when using internal and external platforms (e.g., SharePoint, GitHub, Zenodo, Google Drive) to manage and share DFO Science data, code, and metadata, including during Fisheries Science Advisory Report (FSAR) workflows.
 
-For FSAR workflows, we recommend authors save their data in the Sharepoint for the Pacific Salmon Data MS Team. All data should be accompanied by a data dictionary with a README. Github can be used to host the code associated with analyses. 
+For FSAR workflows, we recommend authors store data in the SharePoint site for the Pacific Salmon Data MS Team. All data should be accompanied by a data dictionary and README. GitHub can be used to host analysis code.
 
 ---
 
@@ -18,7 +18,7 @@ Table 1. **External Platform Use Guidelines** for three data classifications of 
 |--------------|------------------------|------------------|------------------|----------|
 | **SharePoint** | ✅ | ✅ | ✅ | SharePoint can also be used to share protected data with external CSAS participants or reviewers by submitting a request for email approval from the Regional Director of Science. Attach approval email to [this Assystnet ticket](http://assystselfservice.ent.dfo-mpo.ca/assystnet/application.jsp#serviceOfferings/285) |
 | **GitHub (public repo)** | Code: ✅ yes. Data:⚠️ only allowed after internal DFO release approval | ❌ Prohibited | ❌ Prohibited | Public GitHub repos are only for non-sensitive code or metadata. Must go through internal DFO public data release process even for unclassified data. |
-| **GitHub (private repo)** | ✅ Before release approval and sharing with specific collaborators | ⚠️ Discouraged | ❌ Prohibited | Useful for sharing non-sensitive (usally derived) data with external reviewers or CSAS participants; not for Protected data (ie. raw data). |
+| **GitHub (private repo)** | ✅ Before release approval and sharing with specific collaborators | ⚠️ Discouraged | ❌ Prohibited | Useful for sharing non-sensitive (usually derived) data with external reviewers or CSAS participants; not for Protected data (i.e., raw data). |
 | **GitHub Codespaces** | ✅  | ❌ | ❌ | Don't use for Protected data or model outputs. |
 | **GitHub Copilot** | ✅ | ❌ | ❌ | Never input Protected code/data. |
 | **Zenodo / Figshare / Dryad** | ✅ after FSAR approval | ❌ | ❌ | Good for quickly getting datasets published with DOIs. Must be followed up with publication to Open Government Portal |
@@ -46,7 +46,7 @@ Table 1. **External Platform Use Guidelines** for three data classifications of 
 
 ### ✅ GitHub (Public and Private)
 - **Recommended for**: Non-sensitive, unclassified code, metadata schemas, documentation, workflows.
-- **Allowed**: Unclassified data/code only. Data must go through the Approvals and Internal publishing process before being posted anywhere public.
+- **Allowed**: Unclassified data/code only. Data must go through the approvals and internal publishing process before being posted publicly.
 - **Private repos**: Use for drafting and collaboration before public release. Do not use for long-term data storage.
 - **FSAR Guidance**: Releasing data in a public GitHub repo before approval by CSAS and before the release has been approved by the Regional Director of Science is a breach of the Access to Information Act and/or Privacy Act.
 
@@ -85,7 +85,7 @@ Table 1. **External Platform Use Guidelines** for three data classifications of 
 - Managed by the Marine Spatial Data Infrastructure System and the Enterprise Data Hub
 [Follow the official steps here](https://intranet.ent.dfo-mpo.ca/science/en/node/1478)
 
-FOr the steps specific to Approvals and Publishing see step 4 for the [Release Criteria Checklist](https://intranet.ent.dfo-mpo.ca/science/sites/science/files/release_criteria_checklist_open_government.pdf)  
+For steps specific to approvals and publishing, see Step 4 of the [Release Criteria Checklist](https://intranet.ent.dfo-mpo.ca/science/sites/science/files/release_criteria_checklist_open_government.pdf).
 
 
 ### ⏳ When to Release?

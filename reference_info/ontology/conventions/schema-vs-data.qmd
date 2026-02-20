@@ -1,217 +1,54 @@
-# Schema vs data (TBox vs ABox)
+---
+title: "Schema vs Data (TBox vs ABox)"
+---
 
-(The table of contents below mirrors the structure of the guide for easy navigation.)
+::: {.callout-note}
+Derived from canonical `docs/CONVENTIONS.md` in the `dfo-salmon-ontology` repo.
+:::
 
-📚
+## Why this split matters
 
+The ontology file should stay focused on **schema** (types, properties, definitions). Actual observations and measurements belong in **data files/databases**.
 
-(Use the links above to jump to the relevant section in this Markdown, especially if viewing through WIDOCO or
+## TBox (schema) belongs in ontology
 
-GitHub.)
+Examples:
 
-SurveyEvent
+- class definitions (`owl:Class`)
+- property definitions (`owl:ObjectProperty`, `owl:DatatypeProperty`)
+- concept schemes (`skos:ConceptScheme`)
+- logical axioms and constraints
 
-GeneticSample
+## ABox (instance data) belongs in data graphs
 
-Stock
+Examples:
 
-Stock
+- specific survey events
+- specific count values
+- year/location-specific records
+- dataset-specific observations
 
-:SkeenaSnorkelSurvey2022_001
+## Practical rule of thumb
 
-EscapementSurveyEvent
+If the triple changes every season/year/report, it is probably **ABox data**, not ontology schema.
 
-rdf:type
+## Example
 
-:FraserCohoStock
-
-SonarCounting
-
-skos:Concept
-
-Measurement
-
-Stock
-
-dfo:hasMember
-
-dfo:aboutStock
-
-
-ManagementUnit
-
-ConservationUnit
-
-dwc:measurementValue
-
-1250
-
-schema
-
-data
-
-ontology/dfo-salmon.ttl
-
-only if
-
-EscapementSurveyEvent
-
-Stock
-
-Measurement
-
-ConservationUnit
-
-usesEnumerationMethod
-
-aboutStock
-
-hasMember
-
-proportion
-
-:SnorkelSurvey
-
-:SonarCounting
-
-skos:Concept
-
-:EscapementMethodScheme
-
-owl:equivalentClass
-
-owl:equivalentProperty
-
-rdfs:subClassOf
-
-:SkeenaSurvey2022_Aug15
-
-
-survey-2022.ttl
-
-In the ontology (schema) file:
-
-data/
-
+```turtle
+# TBox (schema)
 :EscapementSurveyEvent a owl:Class ;
+  rdfs:label "Escapement Survey Event"@en ;
+  IAO:0000115 "A survey event used to estimate escapement."@en ;
+  rdfs:isDefinedBy <https://w3id.org/gcdfo/salmon> .
 
-rdfs:label "Escapement Survey Event"@en ;
+# ABox (instance data)
+:SkeenaSurveyEvent2024 a :EscapementSurveyEvent ;
+  dwc:eventDate "2024-08-15"^^xsd:date ;
+  :measuredVisits 6 .
+```
 
-IAO:0000115 "A salmon escapement survey at a particular time and place,
+## Implication for DSU/SDEP/SPSR workflows
 
-measuring spawning metrics."@en ;
-
-rdfs:subClassOf dwc:Event ;
-
-# aligning with Darwin Core's Event class
-
-rdfs:isDefinedBy <https://w3id.org/gcdfo/salmon> .
-
-:SnorkelSurvey a skos:Concept ;
-
-skos:prefLabel "Snorkel Survey"@en ;
-
-skos:definition
-
-"A survey method where observers count fish while snorkeling in the
-
-stream."@en ;
-
-skos:inScheme :EscapementMethodScheme ;
-
-rdfs:isDefinedBy <https://w3id.org/gcdfo/salmon> .
-
-In a separate data file (e.g., data/escapement-2022.ttl ):
-
-# Individual survey event in 2022 using snorkel method
-
-:SkeenaEscapementSurvey_2022_08_15 a :EscapementSurveyEvent ;
-
-dfo:usesEnumerationMethod :SnorkelSurvey ;
-
-# link to the SKOS concept
-
-dfo:measuredVisits 6 ;
-
-# datatype property (6
-
-visits)
-
-dfo:measuredReachCoverage 0.85 ;
-
-# 85% reach coverage
-
-dwc:eventDate "2022-08-15"^^xsd:date ;
-
-
-dfo:locatedIn :SkeenaRiverWatershed .
-
-# suppose we have a property for location
-
-EscapementSurveyEvent means
-
-SnorkelSurvey
-
-(For more on this, see also [W3C Best Practice] on separating ontology TBox from data ABox, and OBO’s stance on
-
-release files.)
-
-Stock
-
-EscapementSurveyEvent
-
-dwc:Event
-
-ForkLength
-
-concrete or conceptual entities
-
-ConservationUnit
-
-that might appear in dropdown lists
-
-skos:Concept
-
-categorical values, methods, classifications,
-
-terms
-
-
-skos:broader
-
-skos:narrower
-
-skos:Concept
-
-rdfs:subClassOf
-
-SonarCounting
-
-dfo:usesMethod
-
-Female
-
-Male
-
-Red Zone
-
-subClassOf
-
-Stock
-
-rdf:type
-
-
-rdf:type
-
-Population
-
-(For the curious: W3C’s SKOS Reference notes that treating OWL classes as instances of skos:Concept leads to OWL
-
-Full semantics
-
-5
-
-. Our approach using separate SKOS individuals avoids this issue entirely.)
-
-OBI:0001479
+- ontology repository defines shared semantics
+- SDEP + SPSR workflows carry the actual dataset instances
+- keep these layers separate so standards can evolve without rewriting historical data

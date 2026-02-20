@@ -1,35 +1,44 @@
 ---
+title: "Tools for Data Stewardship"
 format: html
 ---
 
-# 🧰 Tools for Data Stewardship ⚙️📦
+This page lists practical tools used across the FADS Open Science Hub workflows.
 
-Welcome to the **Tools** section of the FADS Open Science Hub! 🐟  
-Here you'll find a curated set of apps, platforms, scripts, and templates that support your work as a data steward or data producer within the **Pacific Region Science Branch** of Fisheries and Oceans Canada. 🧪🌊
+## Core platforms
 
----
+### Salmon Population Summary Repository (SPSR)
 
-## 🚧 This page is under construction! 🏗️
+Operational intake and exploration platform for salmon population data, including wizard-based contribution flows.
 
-We're actively gathering, building, and documenting the most useful tools for the job — so stay tuned! In the meantime, here’s a sneak peek at what’s coming:
+- Docs hub: <https://spsr.dfo-mpo.gc.ca/documentation/>
+- Upload wizard: <https://spsr.dfo-mpo.gc.ca/wizard/1/>
+- Repo: <https://github.com/dfo-pacific-science/salmon-population-summary-repository>
 
-### 🔧 What to Expect
+### DFO Salmon Ontology
 
-- 🗂 **Data Dictionary and Metadata Templates**  (Excel + JSON)
-- 🤝 **Data Management Agreement Templates**
-- 🧮 **R & Python Functions, Scripts, and Packages** for data cleaning and reporting
-- 🔗 **Links to External Tools** (See Internal [DSU SharePoint Wiki](https://086gc.sharepoint.com/sites/FisheryAssessmentDataSectionWiki/SitePages/Data-Stewardship-Unit(1).aspx) for internal tools)
-- 🧠 **Toolkits for Data Stewards** (checklists, walkthroughs, best practices)
+Canonical semantic source for terms and identifiers.
 
----
+- WIDOCO docs: <https://w3id.org/gcdfo/salmon>
+- Repo: <https://github.com/dfo-pacific-science/dfo-salmon-ontology>
 
-### 📩 Got a Tool to Share?
+## Packaging and validation
 
-If you’ve built or used something you think could help others — whether it’s a handy Excel macro or a full-blown Shiny app — we’d love to include it here!  
-Send us a note and let’s make it easier for everyone to work smarter. 🤝💡
+### Salmon Data Exchange Package (SDEP)
 
----
+Metadata package structure used across standards and intake workflows.
 
-🧭 [Return to the Internal DSU Wiki](https://086gc.sharepoint.com/sites/FisheryAssessmentDataSectionWiki/SitePages/Data-Stewardship-Unit(1).aspx)
+- Spec: [Salmon Data Exchange Package](reference_info/data_standards/salmon-data-exchange-package.qmd)
+- Intake guidance: [SDEP + SPSR Intake Path](reference_info/data_standards/ontology-data-package-gpt.qmd)
 
-> _Tools don't solve problems — people do. But the right tool helps a lot._ 🛠️🙂
+### Meta-SALMON-R
+
+R-based tooling for validating and working with SDEP-style metadata.
+
+- Hub context: [R Packages](reference_info/tools/r_packages.qmd)
+
+## Internal coordination and support
+
+- DSU standards hub: [Salmon Data Standards Hub](reference_info/data_standards/index.qmd)
+- Contact: <mailto:FADSDataStewardship-GestiondesdonneesSFDA@dfo-mpo.gc.ca>
+- Internal wiki: <https://086gc.sharepoint.com/sites/FisheryAssessmentDataSectionWiki/SitePages/Data-Stewardship-Unit(1).aspx>

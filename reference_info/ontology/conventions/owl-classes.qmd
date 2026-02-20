@@ -1,133 +1,53 @@
-# OWL classes
+---
+title: "OWL Classes"
+---
 
-:YourClassName a owl:Class .
+::: {.callout-note}
+Derived from canonical `docs/CONVENTIONS.md` in the `dfo-salmon-ontology` repo.
+:::
 
-rdfs:label
+## Required pattern
 
-:GeneticSample rdfs:label "Genetic Sample"@en .
+Every class should include:
 
-(Make sure the label is singular noun (in most cases) and describes the essence of the class. Use plural only if the
-concept itself is plural by nature (rare). Only one   rdfs:label   per language is allowed — no duplicates.)
+- `a owl:Class`
+- `rdfs:label "..."@en`
+- `IAO:0000115 "..."@en`
+- `rdfs:isDefinedBy <https://w3id.org/gcdfo/salmon>`
 
-IAO:0000115
+Optional but recommended:
 
-:GeneticSample IAO:0000115 "A biological sample taken from a fish (e.g., a fin clip
+- `IAO:0000119` (text citation)
+- `dcterms:source` (resolvable source URI)
+- `IAO:0000112` (example usage)
 
-or scale) for genetic analysis."@en .
+## Authoring template
 
-(Avoid using the class name in the definition if possible. Ensure the definition would make sense to someone
-
-outside the project. Aim for necessary and sufficient conditions in natural language — what is it, and how is it
-
-different from related things.)
-:GeneticSample rdfs:isDefinedBy <https://w3id.org/gcdfo/salmon> .
-
-rdfs:isDefinedBy
-
-:EscapementSurveyEvent rdfs:subClassOf dwc:Event .
-
-rdfs:subClassOf
-
-rdfs:subClassOf
-
-SpawnerEstimationSurvey
-
-
-SpawnerEstimationSurvey subClassOf usesMethod some EnumerationMethod
-
-owl:disjointWith
-
-MaleFish
-
-FemaleFish
-
-dcterms:source
-
-dcterms:source
-
-IAO:0000119
-
-IAO:0000119
-
-:BaselineGeneticDataset IAO:0000115 "A dataset consisting of genetic profiles used
-
-as a reference for stock identification."@en ;
-
-IAO:0000119   "Definition   adapted   from   DFO   (2020)   Genetic   Baseline
-
-documentation."@en ;
-
-dcterms:source <https://doi.org/10.1234/dfogenetics.2020.baseline> .
-
-(This shows someone where the definition came from or where to find more info. It’s optional but very useful,
-
-especially for technical terms.)
-
-IAO:0000112
-
-:Stock IAO:0000112 "Example: The Fraser River Late-Run sockeye stock is a stock that
-
-has specific genetic and life history characteristics."@en .
-
-rdfs:comment
-
-rdfs:comment
-
-oboInOwl:hasExactSynonym "Alternative Name"@en
-
-oboInOwl:hasBroadSynonym
-
-...hasNarrowSynonym
-
-...hasRelatedSynonym
-
-skos:altLabel
-
-skos:altLabel
-
-skos:altLabel
-
-dcterms:subject
-
-gcdfo:module
-
-
+```turtle
 :ConservationUnit a owl:Class ;
+  rdfs:label "Conservation Unit"@en ;
+  IAO:0000115 "A biologically meaningful salmon management unit used for conservation and assessment."@en ;
+  rdfs:isDefinedBy <https://w3id.org/gcdfo/salmon> ;
+  IAO:0000119 "DFO policy source text"@en ;
+  dcterms:source <https://example.org/source> .
+```
 
-rdfs:label "Conservation Unit"@en ;
+## Hierarchy guidance
 
-IAO:0000115 "A group of wild Pacific salmon sufficiently isolated that
+- Use `rdfs:subClassOf` for true “is-a” relationships.
+- Use `owl:disjointWith` when classes are mutually exclusive.
+- Use `owl:equivalentClass` only when meanings are truly identical.
 
-evolutionarily significant differences develop, used as a unit for conservation
+## Common mistakes to avoid
 
-and management."@en ;
+- definition repeating label without adding meaning
+- creating duplicate classes for the same concept
+- using instance examples as class definitions
+- mixing SKOS concept semantics into class axioms without design intent
 
-rdfs:subClassOf :StockAggregation ;
+## Quick quality checks
 
-# say we have a class for stock
-
-groupings
-
-rdfs:subClassOf RO:0002161 ;
-
-# for example, RO:0002161 could be
-
-'population group' if exists
-
-rdfs:isDefinedBy <https://w3id.org/gcdfo/salmon> ;
-
-oboInOwl:hasExactSynonym "CU"@en ;
-
-IAO:0000119 "DFO (2005) Wild Salmon Policy glossary"@en ;
-
-dcterms:source <http://publications.gc.ca/collections/collection_2018/mpo-dfo/
-
-Fs23-604-2005-eng.pdf> .
-
-owl:equivalentClass
-
-OBI:Specimen
-
-WaterSample
-
-OBI:Specimen
+- [ ] clear singular label
+- [ ] non-circular definition
+- [ ] correct parent class
+- [ ] provenance included when available

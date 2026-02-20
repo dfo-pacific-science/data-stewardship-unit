@@ -180,7 +180,7 @@ css: styles/custom.css
         <li>Data dictionary for consistent interpretation</li>
       </ul>
       <div class="portfolio-screenshot-container">
-        <p class="text-center text-muted mb-0">📷 Screenshot coming soon</p>
+        <p class="text-center text-muted mb-0">Preview image not included</p>
       </div>
     </div>
   </div>
@@ -323,7 +323,7 @@ css: styles/custom.css
       </ul>
       <p><em>More detail needed: workflows, tech stack, and access URL once available.</em></p>
       <div class="portfolio-screenshot-container">
-        <p class="text-center text-muted mb-0">📷 Screenshot coming soon</p>
+        <p class="text-center text-muted mb-0">Preview image not included</p>
       </div>
     </div>
   </div>
@@ -469,7 +469,7 @@ css: styles/custom.css
       </ul>
       <p><em>Access URL and architecture details pending.</em></p>
       <div class="portfolio-screenshot-container">
-        <p class="text-center text-muted mb-0">📷 Screenshot coming soon</p>
+        <p class="text-center text-muted mb-0">Preview image not included</p>
       </div>
     </div>
   </div>
@@ -513,7 +513,7 @@ css: styles/custom.css
       </ul>
       <p><em>Needs: final URL, contribution process, and initial page list.</em></p>
       <div class="portfolio-screenshot-container">
-        <p class="text-center text-muted mb-0">📷 Screenshot coming soon</p>
+        <p class="text-center text-muted mb-0">Preview image not included</p>
       </div>
     </div>
   </div>

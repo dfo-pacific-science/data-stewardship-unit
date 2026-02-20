@@ -1,203 +1,51 @@
-# Quick reference
+---
+title: "Quick Reference"
+---
 
-# Ontology Conventions
+::: {.callout-note}
+Derived from canonical `docs/CONVENTIONS.md` in the `dfo-salmon-ontology` repo.
+:::
 
-> Extracted from: *DFO Salmon Ontology Conventions – Compliance and Improvement Analysis* (downloaded markdown) > > This page includes the **conventions guide content** and omits the earlier analysis/preamble where possible.
+## Essential elements (minimum)
 
-(This rewritten guide integrates the analysis and recommendations above. It is structured for clarity, with minimal
+### OWL terms (classes and properties)
 
-redundancy, and aligns with OWL 2 DL, OBO Foundry principles, and contributor usability. All key modeling rules
+- `rdfs:label "..."@en`
+- `IAO:0000115 "..."@en`
+- `rdfs:isDefinedBy <https://w3id.org/gcdfo/salmon>`
+- optional provenance: `IAO:0000119` and/or `dcterms:source`
 
-are retained.)
+### SKOS concepts (controlled vocabulary terms)
 
+- `skos:prefLabel "..."@en`
+- `skos:inScheme :YourScheme`
+- recommended: `skos:definition "..."@en`
+- `rdfs:isDefinedBy <https://w3id.org/gcdfo/salmon>`
+- optional code: `skos:notation "CODE"^^ex:CodeDatatype`
 
-## How
+## Naming conventions
 
-If you’re an experienced contributor looking for a quick reference, this section is for you. It summarizes the most
+- Classes: `PascalCase` (e.g., `EscapementMeasurement`)
+- Properties: `lowerCamelCase` (e.g., `aboutStock`)
+- SKOS concepts: `PascalCase` (e.g., `SonarCounting`)
 
-essential conventions at a glance.
+## Key decision rule: SKOS vs OWL
 
-OWL classes/properties: rdfs:label "Preferred Name"@en
+- use **SKOS** for code lists, picklists, and lexical hierarchies
+- use **OWL** for logical class models and inferencing
+- avoid modeling the same concept as both unless explicitly approved
 
+## Non-negotiables
 
-SKOS concepts: skos:prefLabel "Preferred Name"@en
+- keep ontology schema separate from instance data
+- use full canonical IRIs
+- do not put codes in labels
+- use provenance fields consistently
 
-(Use English labels; one preferred label per language.)
+## Quality gate checklist
 
-OWL classes/properties: IAO:0000115 "Concise definition of the term."@en
-
-SKOS concepts:
-
-skos:definition   "Concise   definition   of   the   concept."@en
-
-(Aim for 1–2 sentences capturing the meaning. Avoid circular phrasing.)
-
-(This IRI points to our ontology and signals where the term is defined. Include it for every term.)
-
-rdfs:isDefinedBy <https://w3id.org/gcdfo/salmon>
-
-"CODE"^^ex:DataType
-
-dcterms:identifier   "DFO-SALMON:000123"
-
-skos:notation
-
-(Do  not  put   IDs   or   codes   in   the   rdfs:label!   Keep   labels   readable,   and   use   skos:notation   or
-dcterms:identifier  for machine-oriented codes.)
-
-IAO:0000119 "Reference for definition."@en
-
-dcterms:source <DOI or URL>
-
-(Include these if the definition was taken from or inspired by an external source. They give credit and
-
-context.)
-
-context."@en
-
-IAO:0000112 "Example usage of this term in a sentence or
-
-(Optional, but great for clarity. Provide if the meaning might be unclear or the reviewer requested it.)
-
-oboInOwl:hasExactSynonym   "Synonym   Term"@en
-
-skos:altLabel
-
-(Optional. Use OBO’s synonym properties for classes/properties with scope (exact, broad, narrow, related)
-. For SKOS, you can use multiple  skos:altLabel  entries for informal synonyms or abbreviations.
-
-98
-
-Mark all alt labels with language tags.)
-
-EscapementSurveyEvent
-
-GeneticSample
-
-aboutStock
-
-hasMember
-
-usesMethod
-
-SonarCounting
-
-Type2
-
-
-### Rationale
-
-salmon.ttl
-
-Why:
-
-Chinook_SpeciesCode
-
-dfo-
-
-Stock
-
-SurveyEvent
-
-Measurement
-
-Never model the same term as both an OWL class and a SKOS concept
-
-is a type of
-
-hasMember
-
-hasMemberCU
-
-hasMemberStock
-
-hasMember
-
-:FraserCUCoho
-
-### Example
-hasMemberStock :FraserCohoStock
-
-:BCInteriorMU hasMemberCU :FraserCUCoho
-
-:BCInteriorMU
-
-hasMember :FraserCohoStock
-
-### Tip
-
-a owl:TransitiveProperty
-
-
-dwc:measurementType
-
-dwciri:measurementType
-
-dwc:measurementValue
-
-dwc:measurementUnit
-
-dwciri:measurementUnit
-
-dfo:aboutStock
-
-dfo:observedDuring
-
-dfo:usesMethod
-
-(These properties are defined in our ontology or reused; see Measurement Patterns for details.)
-
-### Example
-EscapementMeasurement
-
-rdfs:subClassOf sosa:Observation
-
-:SomeObservation
-
-rdf:type iop:Variable
-
-### Example
-
-RO:0002351 (has member)
-
-dfo:hasMember
-
-rdfs:seeAlso
-
-owl:equivalentClass
-
-owl:equivalentProperty
-
-rdfs:seeAlso
-
-not OWL reasoning
-
-
-EscapementSurveyEvent
-
-dfo:measuredVisits
-
-### Example
-dfo:usesEnumerationMethod
-
-dfo:measuredVisits ≥
-
-EscapementSurveyEvent
-
-### Bottom line
-
-ENVO:lake
-
-owl:ObjectProperty
-
-owl:DatatypeProperty
-
-report
-
-robot reason
-
-verify
-
-dwc:Event
-
-owl:Thing
+- [ ] required annotations present
+- [ ] definition is clear and non-circular
+- [ ] no duplicate concept introduced
+- [ ] placement in hierarchy/scheme is correct
+- [ ] examples and provenance included where useful
