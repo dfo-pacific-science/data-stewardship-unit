@@ -57,8 +57,8 @@ css: styles/custom.css
     </div>
     <p class="text-muted mb-2" style="font-size: 0.9rem;">Controlled vocabularies and ontology so salmon terms, code lists, and metadata stay aligned across projects.</p>
     <div class="mt-2 d-flex justify-content-between align-items-center">
-      <a href="https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/data_standards/controlled-vocabulary-thesauri.html" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Terms & Definitions</a>
-      <a href="https://dfo-pacific-science.github.io/dfo-salmon-ontology/" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Ontology</a>
+      <a href="https://dfo-pacific-science.github.io/dfo-salmon-ontology/" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Ontology (WIDOCO)</a>
+      <a href="https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/ontology/conventions/index.html" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Contributor Guidebook</a>
     </div>
   </div>
 </div>
@@ -86,9 +86,9 @@ css: styles/custom.css
         <li>Supports ontology-aware data packages and code lists</li>
       </ul>
       <p>
-        <a href="https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/data_standards/controlled-vocabulary-thesauri.html" target="_blank" rel="noopener noreferrer">Terms & Definitions</a>
+        <a href="https://dfo-pacific-science.github.io/dfo-salmon-ontology/" target="_blank" rel="noopener noreferrer">Ontology (WIDOCO)</a>
         &nbsp;|&nbsp;
-        <a href="https://dfo-pacific-science.github.io/dfo-salmon-ontology/" target="_blank" rel="noopener noreferrer">Ontology</a>
+        <a href="https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/ontology/conventions/index.html" target="_blank" rel="noopener noreferrer">Contributor Guidebook</a>
       </p>
       <div class="portfolio-screenshot-container">
         <img src="images/data_projects/ontology.png" alt="GC DFO Salmon Ontology homepage" class="img-fluid" style="max-width: 100%; height: auto; border-radius: 4px;">

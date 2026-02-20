@@ -2,19 +2,37 @@
 title: "GC DFO Salmon Ontology"
 format:
   html:
-    toc: false
+    toc: true
 ---
 
-The complete **GC DFO Salmon Ontology documentation** is available at:
+## Formal ontology documentation
+
+The complete formal ontology documentation is published at:
 
 **👉 [https://w3id.org/gcdfo/salmon](https://dfo-pacific-science.github.io/dfo-salmon-ontology/)**
 
-This documentation includes:
-<p> - Formal class hierarchies and relationships 
-- Property definitions and constraints 
-- Axiomatic relationships and inference rules 
-- Complete ontology structure and imports </p>
+This includes:
 
-The ontology source can be accessed in the [FADS DSU Salmon Ontology GitHub](https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/w3id-deploy/docs/gcdfo.ttl)
+- Class hierarchies and logical axioms
+- Object/data property definitions
+- Imports and alignment structure
+- Release ontology artifacts
 
-For curated, human-friendly term tables organized by theme, see the [Controlled Vocabulary & Thesauri](../data_standards/controlled-vocabulary-thesauri.qmd) page. These tables focus on **Controlled Vocabularies and Thesauri** extracted from the full ontology.
+Ontology source (TTL):
+
+- [dfo-salmon-ontology/docs/gcdfo.ttl](https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/w3id-deploy/docs/gcdfo.ttl)
+
+## Contributor guidebook (user-first)
+
+The user-first conventions guidebook is now integrated into this site:
+
+- [Conventions guidebook index](conventions/index.qmd)
+- [Quick reference](conventions/quick-reference.qmd)
+- [Schema vs data (TBox vs ABox)](conventions/schema-vs-data.qmd)
+- [OWL classes](conventions/owl-classes.qmd)
+- [OWL properties](conventions/owl-properties.qmd)
+- [SKOS vocabularies](conventions/skos-vocabularies.qmd)
+- [Provenance and maintenance](conventions/provenance-maintenance.qmd)
+- [Full (raw)](conventions/full.qmd)
+
+For curated, human-friendly term tables organized by theme, see [Controlled Vocabulary & Thesauri](../data_standards/controlled-vocabulary-thesauri.qmd).

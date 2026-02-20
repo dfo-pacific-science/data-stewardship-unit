@@ -17,7 +17,7 @@ execute:
   <div class="home-cta-row">
     <a class="home-cta home-cta-primary" href="reference_info/data_standards/index.html">Start with Salmon Data Standards</a>
     <a class="home-cta" href="how_to_guides/fsar-data-standardization-workflow.html">Run the FSAR workflow</a>
-    <a class="home-cta" href="reference_info/data_standards/controlled-vocabulary-thesauri.html">Find terms & definitions</a>
+    <a class="home-cta" href="reference_info/ontology/formal-documentation.html">Browse ontology documentation</a>
   </div>
 </section>
 ```
@@ -30,9 +30,9 @@ execute:
     <h3>Prepare an FSAR package</h3>
     <p>Follow the end-to-end workflow with validation and packaging checkpoints.</p>
   </a>
-  <a class="home-card" href="reference_info/data_standards/controlled-vocabulary-thesauri.html">
-    <h3>Find controlled terms</h3>
-    <p>Search standardized terms, definitions, and related concepts for consistent usage.</p>
+  <a class="home-card" href="reference_info/ontology/formal-documentation.html">
+    <h3>Browse ontology reference</h3>
+    <p>Use the canonical WIDOCO site for classes, properties, and term identifiers.</p>
   </a>
   <a class="home-card" href="reference_info/data_standards/salmon-data-exchange-package.html">
     <h3>Build an SDEP package</h3>

@@ -1,0 +1,21 @@
+---
+title: "Ontology Conventions Guidebook"
+---
+
+This guidebook is the user-first conventions guide for contributors working in the GC DFO Salmon Ontology ecosystem.
+
+## Start here
+
+- [Quick reference](quick-reference.qmd)
+
+## Core modeling guidance
+
+- [Schema vs data (TBox vs ABox)](schema-vs-data.qmd)
+- [OWL classes](owl-classes.qmd)
+- [OWL properties](owl-properties.qmd)
+- [SKOS vocabularies](skos-vocabularies.qmd)
+- [Provenance and maintenance](provenance-maintenance.qmd)
+
+## Full single-page version
+
+- [Full (raw)](full.qmd)
