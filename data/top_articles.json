@@ -8,8 +8,8 @@
   },
   "items": [
     {
-      "path": "reference_info/data_standards/controlled-vocabulary-thesauri.html",
-      "title": "Controlled Vocabulary and Thesauri",
+      "path": "reference_info/ontology/formal-documentation.html",
+      "title": "GC DFO Salmon Ontology",
       "visitors": 52,
       "pageviews": 88,
       "visit_duration": 1640

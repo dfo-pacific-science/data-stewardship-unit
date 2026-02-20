@@ -362,7 +362,7 @@ summary(integrated$ExploitationRate)  # Should be between 0 and 1
 
 ## Next Steps
 
-- Review the [Controlled Vocabulary & Thesauri](controlled-vocabulary-thesauri.qmd) for standard terms
+- Review the [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd) for standard terms
 - Check the [Salmon Data Exchange Package Specification](salmon-data-exchange-package.qmd) for integration patterns
 - Explore [R tools](../tools/r_packages.qmd) for automated integration workflows
 - Contact the [Data Stewardship Unit](mailto:FADSDataStewardship-GestiondesdonneesSFDA@dfo-mpo.gc.ca) for integration support

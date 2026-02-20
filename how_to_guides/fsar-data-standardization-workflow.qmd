@@ -16,7 +16,7 @@ Use this workflow when preparing salmon datasets for Fisheries Science Advisory 
 
 ## Step 2 — Map columns to controlled vocabulary terms
 
-1. Open [Controlled Vocabulary & Thesauri](../reference_info/data_standards/controlled-vocabulary-thesauri.qmd).
+1. Open [GC DFO Salmon Ontology documentation](../reference_info/ontology/formal-documentation.qmd).
 2. Search for canonical terms for each key variable (e.g., spawner abundance, brood year, CU identifiers).
 3. Capture the corresponding canonical URI for each mapped term.
 

@@ -35,4 +35,4 @@ The user-first conventions guidebook is now integrated into this site:
 - [Provenance and maintenance](conventions/provenance-maintenance.qmd)
 - [Full (raw)](conventions/full.qmd)
 
-For curated, human-friendly term tables organized by theme, see [Controlled Vocabulary & Thesauri](../data_standards/controlled-vocabulary-thesauri.qmd).
+For practical modeling guidance, see the [Ontology Conventions Guidebook](conventions/index.qmd).

@@ -16,7 +16,7 @@ This page explains how vocabulary terms, SDEP metadata, and guided tooling work 
 
 ## Practical workflow
 
-1. Start in the [Controlled Vocabulary & Thesauri](controlled-vocabulary-thesauri.qmd) page and find the right terms.
+1. Start in the [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd) page and find the right terms.
 2. Build your `column_dictionary.csv` using those terms and IRIs.
 3. Assemble your package using the [SDEP specification](salmon-data-exchange-package.qmd).
 4. Validate with local tooling (for example, Meta-SALMON-R workflows) before publishing.

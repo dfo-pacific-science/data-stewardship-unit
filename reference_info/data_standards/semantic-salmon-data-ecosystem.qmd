@@ -27,7 +27,7 @@ Together these components reduce friction for data producers and improve interop
 
 # 1. DFO Salmon Ontology and controlled vocabularies
 
-The **DFO Salmon Ontology** provides formal definitions for salmon concepts, measurement types, demographic units, life stages, and other domain terms. It is paired with **controlled vocabularies and thesauri** extracted into human‑friendly tables. These vocabularies provide stable identifiers (IRIs) that can be referenced directly in datasets.
+The **DFO Salmon Ontology** provides formal definitions for salmon concepts, measurement types, demographic units, life stages, and other domain terms. It is paired with **ontology documentation and contributor guidebook** extracted into human‑friendly tables. These vocabularies provide stable identifiers (IRIs) that can be referenced directly in datasets.
 
 **Why it matters:**
 
@@ -37,7 +37,7 @@ The **DFO Salmon Ontology** provides formal definitions for salmon concepts, mea
 
 For formal documentation, see the GC DFO Salmon Ontology page in this hub: [GC DFO Salmon Ontology](../ontology/formal-documentation.qmd).
 
-For controlled vocabularies, see: [Controlled Vocabulary & Thesauri](controlled-vocabulary-thesauri.qmd).
+For controlled vocabularies, see: [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd).
 
 # 2. SALMON Data Package Specification (SDEP)
 

@@ -91,7 +91,7 @@ format:
 
 **What you need:**
 - Your column assessment
-- Access to the [Controlled Vocabulary & Thesauri](controlled-vocabulary-thesauri.qmd)
+- Access to the [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)
 
 **How to do it:**
 
@@ -264,7 +264,7 @@ write.csv(data, "standardized_data.csv", row.names = FALSE)
 
 ## Next Steps
 
-- Review the [Controlled Vocabulary & Thesauri](controlled-vocabulary-thesauri.qmd) for available terms
+- Review the [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd) for available terms
 - Check the [Salmon Data Exchange Package Specification](salmon-data-exchange-package.qmd) for package structure
 - Explore [R tools](../tools/r_packages.qmd) for automated standardization
 - Contact the [Data Stewardship Unit](mailto:FADSDataStewardship-GestiondesdonneesSFDA@dfo-mpo.gc.ca) for support
