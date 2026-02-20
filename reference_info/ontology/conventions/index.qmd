@@ -4,6 +4,10 @@ title: "Ontology Conventions Guidebook"
 
 This guidebook is the user-first conventions guide for contributors working in the GC DFO Salmon Ontology ecosystem.
 
+::: {.callout-note}
+Source note: this guidebook is derived from the canonical `docs/CONVENTIONS.md` file in the [`dfo-salmon-ontology`](https://github.com/dfo-pacific-science/dfo-salmon-ontology) repository. If there is any mismatch, treat the canonical file as the source of truth.
+:::
+
 ## Start here
 
 - [Quick reference](quick-reference.qmd)

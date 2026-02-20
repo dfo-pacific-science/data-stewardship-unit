@@ -9,7 +9,7 @@ format:
 
 The complete formal ontology documentation is published at:
 
-**👉 [https://w3id.org/gcdfo/salmon](https://dfo-pacific-science.github.io/dfo-salmon-ontology/)**
+**👉 [https://w3id.org/gcdfo/salmon](https://w3id.org/gcdfo/salmon)**
 
 This includes:
 
@@ -24,7 +24,9 @@ Ontology source (TTL):
 
 ## Contributor guidebook (user-first)
 
-The user-first conventions guidebook is now integrated into this site:
+The user-first conventions guidebook is now integrated into this site.
+
+It is based on the canonical `docs/CONVENTIONS.md` in the [`dfo-salmon-ontology`](https://github.com/dfo-pacific-science/dfo-salmon-ontology) repository.
 
 - [Conventions guidebook index](conventions/index.qmd)
 - [Quick reference](conventions/quick-reference.qmd)
@@ -34,5 +36,3 @@ The user-first conventions guidebook is now integrated into this site:
 - [SKOS vocabularies](conventions/skos-vocabularies.qmd)
 - [Provenance and maintenance](conventions/provenance-maintenance.qmd)
 - [Full (raw)](conventions/full.qmd)
-
-For practical modeling guidance, see the [Ontology Conventions Guidebook](conventions/index.qmd).
