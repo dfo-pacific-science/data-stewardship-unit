@@ -42,7 +42,7 @@ Use this structure for each changelog item:
 ### 2026-02-20 — semantic system entry path made explicit
 
 - **Area:** standardize/publish workflow pages
-- **Change:** made DFO Ontology → SDEP → Meta-SALMON-R (MetaSAMN) → Salmon Data GPT → SPSR path prominent at top of key workflow pages.
+- **Change:** made DFO Ontology → SDEP → metasalmon → Salmon Data GPT → SPSR path prominent at top of key workflow pages.
 - **Reason:** make the intended system flow obvious during standardization and publishing.
 - **Impact:** data producers should follow the explicit entry path before upload or external release.
 - **Links:**

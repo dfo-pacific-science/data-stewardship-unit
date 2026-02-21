@@ -31,7 +31,7 @@ Metadata package structure used across standards and intake workflows.
 - Spec: [Salmon Data Exchange Package](reference_info/data_standards/salmon-data-exchange-package.qmd)
 - Intake guidance: [SDEP + SPSR Intake Path](reference_info/data_standards/ontology-data-package-gpt.qmd)
 
-### Meta-SALMON-R
+### metasalmon
 
 R-based tooling for validating and working with SDEP-style metadata.
 

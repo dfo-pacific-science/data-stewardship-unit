@@ -25,7 +25,7 @@ format:
   <ol>
     <li><strong>DFO Salmon Ontology</strong> mappings are finalized</li>
     <li><strong>SDEP</strong> package metadata is complete</li>
-    <li><strong>Meta-SALMON-R (MetaSAMN)</strong> validation is clean</li>
+    <li><strong>metasalmon</strong> validation is clean</li>
     <li><strong>Salmon Data GPT</strong> (optional) is used only to draft, not to bypass validation</li>
   </ol>
   <p>For FSAR flows, submit to SPSR intake first, then handle external publication approvals if in scope.</p>

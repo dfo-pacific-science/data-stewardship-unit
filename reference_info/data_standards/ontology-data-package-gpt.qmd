@@ -26,7 +26,7 @@ If you need to propose new vocabulary terms or ontology changes, use [Controlled
 
 - The **DFO Salmon Ontology** provides canonical term IRIs.
 - **SDEP** provides package metadata structure (`dataset.csv`, `tables.csv`, `column_dictionary.csv`, `codes.csv`).
-- **Meta-SALMON-R (MetaSAMN)** supports package validation.
+- **metasalmon** supports package validation.
 - **Salmon Data GPT** can help draft mappings/metadata.
 - **SPSR** is a primary operational destination for FSAR-oriented uploads.
 
@@ -37,7 +37,7 @@ Guided assistants can help draft content, but validation remains the quality gat
 1. Find canonical terms in [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd).
 2. Build `column_dictionary.csv` with full IRIs (no shortened/partial URIs).
 3. Assemble package files using [SDEP specification](salmon-data-exchange-package.qmd).
-4. Validate locally (e.g., Meta-SALMON-R checks).
+4. Validate locally (e.g., metasalmon checks).
 5. Prepare SPSR-compatible upload CSV(s).
 6. Upload through SPSR wizard and review validation feedback.
 

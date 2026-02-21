@@ -25,7 +25,7 @@ format:
   <ol>
     <li><strong>DFO Salmon Ontology</strong> for canonical term IRIs</li>
     <li><strong>SDEP</strong> for package metadata structure</li>
-    <li><strong>Meta-SALMON-R (MetaSAMN)</strong> for validation checks</li>
+    <li><strong>metasalmon</strong> for validation checks</li>
     <li><strong>Salmon Data GPT</strong> as an optional drafting assistant</li>
   </ol>
   <p>Then move into SPSR intake for FSAR workflows.</p>
