@@ -50,6 +50,17 @@ Use this structure for each changelog item:
   - [Publish Your Data](publish-data.qmd)
   - [The Semantic Salmon Data Ecosystem](semantic-salmon-data-ecosystem.qmd)
 
+### 2026-02-20 — branded semantic start page added
+
+- **Area:** standards IA + homepage/navigation
+- **Change:** added a branded front-door page for the full path, with one primary CTA: **Start my FSAR intake path**.
+- **Reason:** provide a single obvious entry point before users branch into detailed pages.
+- **Impact:** new users can start from one page and follow the canonical sequence without guessing navigation order.
+- **Links:**
+  - [Semantic Salmon System — Start Here](semantic-salmon-system.qmd)
+  - [FSAR to SPSR: End-to-End Example](../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd)
+  - [Salmon Data Standards Hub](index.qmd)
+
 ## Quality checks (CI)
 
 Automated checks are configured to catch:

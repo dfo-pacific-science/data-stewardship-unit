@@ -30,8 +30,14 @@ website:
     left:
       - text: "Home"
         href: index.qmd
-      - text: "Standards Hub"
-        href: reference_info/data_standards/index.qmd
+      - text: "Semantic System"
+        menu:
+          - text: "Start Here"
+            href: reference_info/data_standards/semantic-salmon-system.qmd
+          - text: "Salmon Data Standards Hub"
+            href: reference_info/data_standards/index.qmd
+          - text: "SDEP + SPSR Intake Path"
+            href: reference_info/data_standards/ontology-data-package-gpt.qmd
       - text: "Workflows"
         menu:
           - href: how_to_guides/fsar-data-standardization-workflow.qmd
@@ -81,6 +87,8 @@ website:
             href: blog/index.qmd
       - section: "Standards & Vocabulary"
         contents:
+          - text: "Semantic Salmon System — Start Here"
+            href: reference_info/data_standards/semantic-salmon-system.qmd
           - text: "Salmon Data Standards Hub"
             href: reference_info/data_standards/index.qmd
           - href: reference_info/ontology/formal-documentation.qmd

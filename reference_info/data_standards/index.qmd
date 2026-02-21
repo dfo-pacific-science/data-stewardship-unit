@@ -8,8 +8,13 @@ format:
 
 This hub is the **starting point** for standardizing, integrating, and publishing salmon data with shared semantics.
 
+For the branded front-door view of the full system path, start here:
+
+- [Semantic Salmon System — Start Here](semantic-salmon-system.qmd)
+
 ## Start here (common tasks)
 
+- **I need the full system path first** → [Semantic Salmon System — Start Here](semantic-salmon-system.qmd)
 - **I need to prepare data for an FSAR** → [FSAR Data Standardization Workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd)
 - **I need to submit FSAR data to SPSR** → [FSAR to SPSR: End-to-End Example](../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd) and [SDEP + SPSR Intake Path](ontology-data-package-gpt.qmd)
 - **I need standard terms and definitions** → [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)

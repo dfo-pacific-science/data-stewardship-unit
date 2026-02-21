@@ -21,19 +21,20 @@ format:
 
 ```{=html}
 <div class="semantic-entry">
-  <h3>Use this 4-part system in order</h3>
+  <h3>Use this 5-part system in order</h3>
   <ol>
     <li><strong>DFO Salmon Ontology</strong> for canonical term IRIs</li>
     <li><strong>SDEP</strong> for package metadata structure</li>
     <li><strong>metasalmon</strong> for validation checks</li>
     <li><strong>Salmon Data GPT</strong> as an optional drafting assistant</li>
+    <li><strong>SPSR</strong> for operational FSAR intake</li>
   </ol>
-  <p>Then move into SPSR intake for FSAR workflows.</p>
 </div>
 ```
 
 Quick links:
 
+- [Semantic Salmon System — Start Here](semantic-salmon-system.qmd)
 - [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)
 - [Salmon Data Exchange Package Specification](salmon-data-exchange-package.qmd)
 - [SDEP + SPSR Intake Path](ontology-data-package-gpt.qmd)

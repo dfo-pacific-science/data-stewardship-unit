@@ -27,13 +27,14 @@ format:
     <li><strong>SDEP</strong> package metadata is complete</li>
     <li><strong>metasalmon</strong> validation is clean</li>
     <li><strong>Salmon Data GPT</strong> (optional) is used only to draft, not to bypass validation</li>
+    <li><strong>SPSR</strong> intake is complete for FSAR-oriented workflows</li>
   </ol>
-  <p>For FSAR flows, submit to SPSR intake first, then handle external publication approvals if in scope.</p>
 </div>
 ```
 
 Quick links:
 
+- [Semantic Salmon System — Start Here](semantic-salmon-system.qmd)
 - [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)
 - [Salmon Data Exchange Package Specification](salmon-data-exchange-package.qmd)
 - [SDEP + SPSR Intake Path](ontology-data-package-gpt.qmd)

@@ -1,0 +1,78 @@
+---
+title: "Semantic Salmon System — Start Here"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+```{=html}
+<section class="semantic-system-hero">
+  <p class="semantic-system-eyebrow">DFO Pacific Science • Data Stewardship Unit</p>
+  <h2>The front door for semantic salmon data workflows</h2>
+  <p>
+    Use one system, one order: ontology terms, package metadata, validation, assisted drafting, and SPSR intake.
+  </p>
+  <div class="semantic-system-cta-row">
+    <a class="semantic-system-cta semantic-system-cta-primary" href="../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd">Start my FSAR intake path</a>
+    <a class="semantic-system-cta" href="ontology-data-package-gpt.qmd">Go to SDEP + SPSR Intake Path</a>
+  </div>
+</section>
+```
+
+```{=html}
+<div class="status-badge-row">
+  <span class="status-badge status-canonical">Canonical Workflow</span>
+  <span class="status-badge status-active">Operational</span>
+  <span class="status-badge status-guidance">Contributor Friendly</span>
+</div>
+```
+
+## The system flow
+
+```{=html}
+<div class="semantic-system-flow" role="list" aria-label="Semantic Salmon System flow">
+  <div class="semantic-system-node" role="listitem">
+    <h3>1) DFO Salmon Ontology</h3>
+    <p>Use canonical term definitions and IRIs.</p>
+    <a href="../ontology/formal-documentation.qmd">Open ontology docs</a>
+  </div>
+  <div class="semantic-system-arrow" aria-hidden="true">→</div>
+  <div class="semantic-system-node" role="listitem">
+    <h3>2) SDEP</h3>
+    <p>Package dataset metadata in a standard structure.</p>
+    <a href="salmon-data-exchange-package.qmd">Open SDEP spec</a>
+  </div>
+  <div class="semantic-system-arrow" aria-hidden="true">→</div>
+  <div class="semantic-system-node" role="listitem">
+    <h3>3) metasalmon</h3>
+    <p>Run quality and validation checks before intake.</p>
+    <a href="../../tools.qmd">Open tools page</a>
+  </div>
+  <div class="semantic-system-arrow" aria-hidden="true">→</div>
+  <div class="semantic-system-node" role="listitem">
+    <h3>4) Salmon Data GPT (optional)</h3>
+    <p>Draft mappings and package metadata faster.</p>
+    <a href="ontology-data-package-gpt.qmd">See intake guidance</a>
+  </div>
+  <div class="semantic-system-arrow" aria-hidden="true">→</div>
+  <div class="semantic-system-node" role="listitem">
+    <h3>5) SPSR Intake</h3>
+    <p>Upload through the operational FSAR-oriented pathway.</p>
+    <a href="https://spsr.dfo-mpo.gc.ca/wizard/1/">Open SPSR upload wizard</a>
+  </div>
+</div>
+```
+
+## What to use this page for
+
+- new contributors who need the shortest correct path
+- analysts preparing FSAR datasets for submission
+- reviewers checking if a package is intake-ready
+
+## Quick launch paths
+
+- [Start my FSAR intake path](../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd)
+- [FSAR Data Standardization Workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd)
+- [SDEP + SPSR Intake Path](ontology-data-package-gpt.qmd)
+- [The Semantic Salmon Data Ecosystem (deeper architecture)](semantic-salmon-data-ecosystem.qmd)

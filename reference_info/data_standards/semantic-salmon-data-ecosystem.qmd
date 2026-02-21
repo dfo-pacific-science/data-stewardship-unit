@@ -31,6 +31,7 @@ The **Semantic Salmon Data Ecosystem** (Semantic Salmon System) connects standar
     <li><strong>Salmon Data GPT</strong> — optional drafting/acceleration assistant</li>
     <li><strong>SPSR</strong> — operational intake path for many FSAR workflows</li>
   </ol>
+  <p><a href="semantic-salmon-system.qmd">Open the branded start page for this full path</a>.</p>
 </div>
 ```
 
