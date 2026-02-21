@@ -17,6 +17,7 @@ This hub is the **starting point** for standardizing, integrating, and publishin
 - **I need practical identifier rules** → [IRI and Identifier Policy](iri-identifier-policy.qmd)
 - **I need to understand how ontology + SDEP + tools fit together** → [Semantic Salmon Data Ecosystem](semantic-salmon-data-ecosystem.qmd)
 - **I need to publish data** → [Publish Your Data](publish-data.qmd) and [Publishing Data Externally](../publishing_data_externally.qmd)
+- **I need recent changes/status** → [Standards & Workflow Changelog](changelog.qmd)
 
 ## Start by role
 
@@ -55,6 +56,9 @@ Use SDEP metadata files to describe your dataset, tables, columns, and controlle
 - [Integrate Data](integrate-data.qmd)
 - [FSAR Data Standardization Workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd)
 - [FSAR to SPSR: End-to-End Example](../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd)
+
+### 4) Track what changed
+- [Standards & Workflow Changelog](changelog.qmd)
 
 ## Downloadable starter template
 

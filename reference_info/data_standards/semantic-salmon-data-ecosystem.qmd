@@ -10,7 +10,29 @@ format:
 
 # Overview
 
-The **Semantic Salmon Data Ecosystem** connects standards, ontology terms, package metadata, validation tooling, and operational upload pathways so salmon data can move from local analysis into reusable systems.
+The **Semantic Salmon Data Ecosystem** (Semantic Salmon System) connects standards, ontology terms, package metadata, validation tooling, and operational upload pathways so salmon data can move from local analysis into reusable systems.
+
+```{=html}
+<div class="status-badge-row">
+  <span class="status-badge status-canonical">Canonical Architecture</span>
+  <span class="status-badge status-active">Active Workflows</span>
+  <span class="status-badge status-guidance">Contributor Guidance</span>
+</div>
+```
+
+## Entry path (what to use, in order)
+
+```{=html}
+<div class="semantic-entry">
+  <ol>
+    <li><strong>DFO Salmon Ontology</strong> — canonical semantics</li>
+    <li><strong>SDEP</strong> — package metadata structure</li>
+    <li><strong>Meta-SALMON-R (MetaSAMN)</strong> — validation and quality control</li>
+    <li><strong>Salmon Data GPT</strong> — optional drafting/acceleration assistant</li>
+    <li><strong>SPSR</strong> — operational intake path for many FSAR workflows</li>
+  </ol>
+</div>
+```
 
 At a high level, the ecosystem has five working parts:
 
@@ -18,7 +40,7 @@ At a high level, the ecosystem has five working parts:
 2. **SDEP (Salmon Data Exchange Package)** — structured metadata packaging
 3. **Validation tooling (Meta-SALMON-R, related checks)** — quality control
 4. **SPSR (Salmon Population Summary Repository)** — intake and operational publishing path for many FSAR workflows
-5. **Guided assistants (optional)** — acceleration layer for drafting mappings and metadata
+5. **Salmon Data GPT / guided assistants (optional)** — acceleration layer for drafting mappings and metadata
 
 # 1. DFO Salmon Ontology (canonical semantic layer)
 

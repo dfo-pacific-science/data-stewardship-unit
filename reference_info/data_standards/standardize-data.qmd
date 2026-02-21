@@ -9,6 +9,36 @@ format:
     toc-depth: 2
 ---
 
+```{=html}
+<div class="status-badge-row">
+  <span class="status-badge status-active">Active Workflow</span>
+  <span class="status-badge status-canonical">Canonical Terms Required</span>
+  <span class="status-badge status-guidance">FSAR + SPSR Ready</span>
+</div>
+```
+
+## Semantic Salmon System — entry path (start here)
+
+```{=html}
+<div class="semantic-entry">
+  <h3>Use this 4-part system in order</h3>
+  <ol>
+    <li><strong>DFO Salmon Ontology</strong> for canonical term IRIs</li>
+    <li><strong>SDEP</strong> for package metadata structure</li>
+    <li><strong>Meta-SALMON-R (MetaSAMN)</strong> for validation checks</li>
+    <li><strong>Salmon Data GPT</strong> as an optional drafting assistant</li>
+  </ol>
+  <p>Then move into SPSR intake for FSAR workflows.</p>
+</div>
+```
+
+Quick links:
+
+- [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)
+- [Salmon Data Exchange Package Specification](salmon-data-exchange-package.qmd)
+- [SDEP + SPSR Intake Path](ontology-data-package-gpt.qmd)
+- [FSAR to SPSR: End-to-End Example](../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd)
+
 ## Cookbook Guide
 
 <div class="cookbook-section">

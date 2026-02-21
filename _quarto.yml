@@ -99,6 +99,8 @@ website:
             href: reference_info/data_standards/semantic-salmon-data-ecosystem.qmd
           - text: "SDEP + SPSR Intake Path"
             href: reference_info/data_standards/ontology-data-package-gpt.qmd
+          - text: "Standards & Workflow Changelog"
+            href: reference_info/data_standards/changelog.qmd
           - text: "Darwin Core / GBIF / OBIS"
             href: reference_info/dwc-obis-gbif.qmd
       - section: "Common Workflows"

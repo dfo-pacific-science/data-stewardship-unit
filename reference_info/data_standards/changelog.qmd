@@ -1,0 +1,60 @@
+---
+title: "Standards & Workflow Changelog"
+format:
+  html:
+    toc: true
+---
+
+This changelog tracks user-facing changes to standards guidance, ontology workflow docs, and FSAR/SPSR integration paths.
+
+```{=html}
+<div class="status-badge-row">
+  <span class="status-badge status-canonical">Canonical</span>
+  <span class="status-badge status-active">Active</span>
+  <span class="status-badge status-guidance">Guidance</span>
+</div>
+```
+
+## Entry template
+
+Use this structure for each changelog item:
+
+- **Date:** YYYY-MM-DD
+- **Area:** ontology / SDEP / FSAR workflow / SPSR intake / publishing
+- **Change:** what changed
+- **Reason:** why it changed
+- **Impact:** who should care and what to do next
+- **Links:** PR/issue/pages
+
+## 2026-02
+
+### 2026-02-20 — ontology docs consolidation + FSAR/SPSR alignment
+
+- **Area:** ontology + standards hub + workflows
+- **Change:** integrated ontology conventions guidebook into DSU docs; retired duplicate term explorer path; rewired standards pages around canonical ontology docs + SDEP + SPSR intake.
+- **Reason:** reduce duplication and keep one formal source of truth.
+- **Impact:** contributors should use WIDOCO + conventions guidebook for term semantics and use updated FSAR/SPSR workflow pages for intake.
+- **Links:**
+  - [PR #151](https://github.com/dfo-pacific-science/data-stewardship-unit/pull/151)
+  - [GC DFO Salmon Ontology](../ontology/formal-documentation.qmd)
+  - [SDEP + SPSR Intake Path](ontology-data-package-gpt.qmd)
+
+### 2026-02-20 — semantic system entry path made explicit
+
+- **Area:** standardize/publish workflow pages
+- **Change:** made DFO Ontology → SDEP → Meta-SALMON-R (MetaSAMN) → Salmon Data GPT → SPSR path prominent at top of key workflow pages.
+- **Reason:** make the intended system flow obvious during standardization and publishing.
+- **Impact:** data producers should follow the explicit entry path before upload or external release.
+- **Links:**
+  - [Standardize Your Data](standardize-data.qmd)
+  - [Publish Your Data](publish-data.qmd)
+  - [The Semantic Salmon Data Ecosystem](semantic-salmon-data-ecosystem.qmd)
+
+## Quality checks (CI)
+
+Automated checks are configured to catch:
+
+- legacy namespace/content patterns in active docs
+- broken internal local links in active `.qmd` pages
+
+CI workflow file: `.github/workflows/docs-quality.yml`
