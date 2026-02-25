@@ -8,7 +8,7 @@
 
 <meta name="author" content="Brett Johnson, Data Stewardship Unit (DFO Pacific Region Science Branch)">
 
-<title>Salmon Data Exchange Package Specification – FADS Open Science Hub</title>
+<title>Salmon data package specification – FADS Open Science Hub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -148,7 +148,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
         <li>
     <a class="dropdown-item" href="../../reference_info/data_standards/ontology-data-package-gpt.html">
- <span class="dropdown-text">SDEP + SPSR Intake Path</span></a>
+ <span class="dropdown-text">Salmon data package + SPSR intake path</span></a>
   </li>  
     </ul>
   </li>
@@ -253,7 +253,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../reference_info/data_standards/semantic-salmon-system.html">Standards &amp; Vocabulary</a></li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/salmon-data-exchange-package.html">Salmon Data Exchange Package Specification</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../reference_info/data_standards/semantic-salmon-system.html">Standards &amp; Vocabulary</a></li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/salmon-data-exchange-package.html">Salmon data package specification</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -380,7 +380,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../reference_info/data_standards/salmon-data-exchange-package.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Salmon Data Exchange Package Specification</span></a>
+ <span class="menu-text">Salmon data package specification</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -398,7 +398,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../reference_info/data_standards/ontology-data-package-gpt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">SDEP + SPSR Intake Path</span></a>
+ <span class="menu-text">Salmon data package + SPSR intake path</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -599,9 +599,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../reference_info/data_standards/semantic-salmon-system.html">Standards &amp; Vocabulary</a></li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/salmon-data-exchange-package.html">Salmon Data Exchange Package Specification</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../reference_info/data_standards/semantic-salmon-system.html">Standards &amp; Vocabulary</a></li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/salmon-data-exchange-package.html">Salmon data package specification</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Salmon Data Exchange Package Specification</h1>
+<h1 class="title">Salmon data package specification</h1>
 </div>
 
 
@@ -624,9 +624,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<p><strong>Canonical markdown source:</strong> <a href="https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md" class="uri">https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md</a></p>
+<p>This page provides a DSU-hosted copy/overview. For canonical field definitions and version history, use the GitHub source above.</p>
 <section id="overview" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Overview</h1>
-<p>The <strong>Salmon Data Exchange Package (SDEP)</strong> is a lightweight, frictionless-style specification for exchanging salmon datasets between scientists, assessment biologists, and data stewards.</p>
+<p>The <strong>salmon data package (SDP)</strong> is a lightweight, frictionless-style specification for exchanging salmon datasets between scientists, assessment biologists, and data stewards.</p>
 <p>It is designed to:</p>
 <ul>
 <li>Be <strong>simple to adopt</strong> with Excel and CSV files.</li>
@@ -634,7 +636,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Be <strong>ontology-aware</strong>, linking columns and codes to the <strong>DFO Salmon Ontology</strong> and related vocabularies.</li>
 <li>Be compatible with frictionless data packages and Darwin Core–style semantic layers without forcing a single rigid schema.</li>
 </ul>
-<p>Each SDEP instance is a small directory of CSV data files plus a set of metadata CSVs that describe the dataset, tables, columns, and controlled codes.</p>
+<p>Each salmon data package instance is a small directory of CSV data files plus a set of metadata CSVs that describe the dataset, tables, columns, and controlled codes.</p>
 </section>
 <section id="design-goals" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Design Goals</h1>
@@ -648,9 +650,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="package-layout" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Package Layout</h1>
-<p>A Salmon Data Exchange Package consists of:</p>
+<p>A salmon data package consists of:</p>
 <ul>
-<li>One <strong>root directory</strong> (e.g., <code>SDEP_myproject/</code>) containing:
+<li>One <strong>root directory</strong> (e.g., <code>sdp_myproject/</code>) containing:
 <ul>
 <li><code>dataset.csv</code> – dataset-level metadata.</li>
 <li><code>tables.csv</code> – one row per logical table.</li>
@@ -671,10 +673,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>Downloadable starter assets:</p>
 <ul>
-<li><a href="examples/sdep-minimal-example.zip">Minimal SDEP example package (zip)</a></li>
+<li><a href="examples/sdep-minimal-example.zip">Minimal salmon data package example (zip)</a></li>
 <li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/tree/main/reference_info/data_standards/examples/sdep-minimal-example">Browse example package files</a></li>
 </ul>
-<p>The SDEP spec does <strong>not</strong> prescribe a single canonical salmon schema. Instead, it standardizes the <strong>metadata</strong> about whatever schema a project uses and ties it to ontology and vocabularies.</p>
+<p>The salmon data package specification does <strong>not</strong> prescribe a single canonical salmon schema. Instead, it standardizes the <strong>metadata</strong> about whatever schema a project uses and ties it to ontology and vocabularies.</p>
 </section>
 <section id="identifiers-and-conventions" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Identifiers and Conventions</h1>
@@ -700,7 +702,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="dataset.csv-schema" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> <code>dataset.csv</code> Schema</h1>
-<p>One row per logical dataset (often one per SDEP directory). Can describe multiple related tables.</p>
+<p>One row per logical dataset (often one per salmon data package directory). Can describe multiple related tables.</p>
 <p>Required columns:</p>
 <table class="caption-top table">
 <colgroup>
@@ -882,7 +884,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="column_dictionary.csv-schema" class="level1" data-number="7">
 <h1 data-number="7"><span class="header-section-number">7</span> <code>column_dictionary.csv</code> Schema</h1>
-<p>One row per column in each table. This is the core of how SDEP links data columns to ontology and vocabularies.</p>
+<p>One row per column in each table. This is the core of how the salmon data package links data columns to ontology and vocabularies.</p>
 <p>Required columns:</p>
 <table class="caption-top table">
 <colgroup>
@@ -1123,7 +1125,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 <li>The <strong>R package</strong> will:
 <ul>
-<li>read SDEP metadata and data files,</li>
+<li>read salmon data package metadata and data files,</li>
 <li>validate packages against this specification,</li>
 <li>join in ontology/vocabulary information,</li>
 <li>help reshape data into analysis-friendly tidy formats.</li>
@@ -1133,7 +1135,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>help users draft <code>column_dictionary.csv</code> and <code>codes.csv</code>,</li>
 <li>suggest ontology-aligned IRIs and term types,</li>
 <li>assist in decomposing compound terms into multiple columns with appropriate roles and IRIs,</li>
-<li>propose SDEP-compliant package structures for new projects.</li>
+<li>propose package structures compliant with the salmon data package specification for new projects.</li>
 </ul></li>
 </ul>
 </section>
@@ -1143,19 +1145,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Typical local workflow (R):</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(metasalmon)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>pkg_path <span class="ot">&lt;-</span> <span class="st">"path/to/sdep-package"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>pkg_path <span class="ot">&lt;-</span> <span class="st">"path/to/salmon-data-package"</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">validate_dictionary</span>(<span class="fu">file.path</span>(pkg_path, <span class="st">"column_dictionary.csv"</span>))</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">validate_semantics</span>(<span class="fu">file.path</span>(pkg_path, <span class="st">"column_dictionary.csv"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Related implementation guidance:</p>
 <ul>
 <li><a href="../../how_to_guides/fsar-data-standardization-workflow.html">FSAR Data Standardization Workflow</a></li>
-<li><a href="../../reference_info/data_standards/ontology-data-package-gpt.html">SDEP + SPSR Intake Path</a></li>
+<li><a href="../../reference_info/data_standards/ontology-data-package-gpt.html">Salmon data package + SPSR intake path</a></li>
 </ul>
 </section>
 <section id="versioning-and-backwards-compatibility" class="level1" data-number="11">
 <h1 data-number="11"><span class="header-section-number">11</span> Versioning and Backwards Compatibility</h1>
 <ul>
-<li>Include a <code>spec_version</code> field in <code>dataset.csv</code> in future iterations if needed (e.g., <code>sdep-0.1.0</code>).</li>
+<li>Include a <code>spec_version</code> field in <code>dataset.csv</code> in future iterations if needed (e.g., <code>sdp-0.1.0</code>).</li>
 <li>New columns should be added in a backwards-compatible way:
 <ul>
 <li>existing tooling must continue to work when extra columns are present.</li>

@@ -4,7 +4,7 @@
     "href": "tutorials/support_controlled_vocabs.html",
     "title": "Controlled Vocabulary Governance Workflow",
     "section": "",
-    "text": "Use this workflow when you need to add, revise, or align controlled terms used in salmon datasets, SDEP metadata, and SPSR uploads.",
+    "text": "Use this workflow when you need to add, revise, or align controlled terms used in salmon datasets, salmon data package metadata, and SPSR uploads.",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
@@ -76,7 +76,7 @@
     "href": "tutorials/support_controlled_vocabs.html#step-5-review-and-decision",
     "title": "Controlled Vocabulary Governance Workflow",
     "section": "Step 5 — Review and decision",
-    "text": "Step 5 — Review and decision\nApply a light governance check:\n\nno duplicate meaning\ndefinition is testable and non-circular\nnaming is consistent\naligns with competency questions and downstream workflows\nimpact on SDEP and SPSR is documented",
+    "text": "Step 5 — Review and decision\nApply a light governance check:\n\nno duplicate meaning\ndefinition is testable and non-circular\nnaming is consistent\naligns with competency questions and downstream workflows\nimpact on salmon data package and SPSR workflows is documented",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
@@ -100,7 +100,7 @@
     "href": "tutorials/support_controlled_vocabs.html#step-7-sync-downstream-systems-including-spsr",
     "title": "Controlled Vocabulary Governance Workflow",
     "section": "Step 7 — Sync downstream systems (including SPSR)",
-    "text": "Step 7 — Sync downstream systems (including SPSR)\nWhen term changes affect intake:\n\nupdate SDEP templates (column_dictionary.csv, codes.csv examples)\nupdate SPSR upload guidance and controlled-value references\nrun one end-to-end test through SPSR wizard with the updated term usage\n\nUseful SPSR references:\n\nRepo: https://github.com/dfo-pacific-science/salmon-population-summary-repository\nIn-app documentation hub: https://spsr.dfo-mpo.gc.ca/documentation/\nUpload wizard: https://spsr.dfo-mpo.gc.ca/wizard/1/",
+    "text": "Step 7 — Sync downstream systems (including SPSR)\nWhen term changes affect intake:\n\nupdate salmon data package templates (column_dictionary.csv, codes.csv examples)\nupdate SPSR upload guidance and controlled-value references\nrun one end-to-end test through SPSR wizard with the updated term usage\n\nUseful SPSR references:\n\nRepo: https://github.com/dfo-pacific-science/salmon-population-summary-repository\nIn-app documentation hub: https://spsr.dfo-mpo.gc.ca/documentation/\nUpload wizard: https://spsr.dfo-mpo.gc.ca/wizard/1/",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
@@ -112,7 +112,7 @@
     "href": "tutorials/support_controlled_vocabs.html#quick-checklist",
     "title": "Controlled Vocabulary Governance Workflow",
     "section": "Quick checklist",
-    "text": "Quick checklist\n\nExisting term reuse checked first\nCorrect OWL vs SKOS modeling choice\nDefinition + provenance complete\nDownstream SDEP/SPSR impacts assessed\nDocs and examples updated",
+    "text": "Quick checklist\n\nExisting term reuse checked first\nCorrect OWL vs SKOS modeling choice\nDefinition + provenance complete\nDownstream salmon data package/SPSR impacts assessed\nDocs and examples updated",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
@@ -148,7 +148,7 @@
     "href": "tools.html#packaging-and-validation",
     "title": "Tools for Data Stewardship",
     "section": "Packaging and validation",
-    "text": "Packaging and validation\n\nSalmon Data Exchange Package (SDEP)\nMetadata package structure used across standards and intake workflows.\n\nSpec: Salmon Data Exchange Package\nIntake guidance: SDEP + SPSR Intake Path\n\n\n\nmetasalmon\nR-based tooling for validating and working with SDEP-style metadata.\n\nHub context: R Packages",
+    "text": "Packaging and validation\n\nSalmon data package (SDP)\nMetadata package structure used across standards and intake workflows.\n\nSpec overview: Salmon data package specification\nCanonical markdown spec: https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md\nIntake guidance: Salmon data package + SPSR intake path\n\n\n\nmetasalmon\nR-based tooling for validating and working with salmon data package metadata.\n\nHub context: R Packages",
     "crumbs": [
       "Home",
       "Tools & Training",
@@ -256,7 +256,7 @@
     "href": "reference_info/ontology/request-new-term.html#minimum-request-package",
     "title": "How to Request a New Ontology Term",
     "section": "Minimum request package",
-    "text": "Minimum request package\nInclude:\n\nproposed label\nplain-language definition\nconcept type (OWL class/property or SKOS concept)\nexpected parent class or concept scheme\nusage example from a real workflow (FSAR/SPSR/SDEP)\nprovenance/source reference (if available)\nwhy existing terms are insufficient",
+    "text": "Minimum request package\nInclude:\n\nproposed label\nplain-language definition\nconcept type (OWL class/property or SKOS concept)\nexpected parent class or concept scheme\nusage example from a real workflow (FSAR/SPSR/salmon data package)\nprovenance/source reference (if available)\nwhy existing terms are insufficient",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
@@ -292,7 +292,7 @@
     "href": "reference_info/ontology/request-new-term.html#after-approval",
     "title": "How to Request a New Ontology Term",
     "section": "After approval",
-    "text": "After approval\n\nAdd term in ontology repository.\nRegenerate docs/release artifacts.\nUpdate DSU guidance pages that reference this area.\nUpdate SDEP/SPSR mappings if intake workflows are affected.",
+    "text": "After approval\n\nAdd term in ontology repository.\nRegenerate docs/release artifacts.\nUpdate DSU guidance pages that reference this area.\nUpdate salmon data package/SPSR mappings if intake workflows are affected.",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
@@ -629,7 +629,7 @@
     "href": "reference_info/data_standards/semantic-salmon-system.html",
     "title": "Semantic Salmon System — Start Here",
     "section": "",
-    "text": "DFO Pacific Science • Data Stewardship Unit\n  \n  \n    Use one system, one order: ontology terms, package metadata, validation, assisted drafting, and SPSR intake.\n  \n  \n    Start my FSAR intake path\n    Go to SDEP + SPSR Intake Path",
+    "text": "Canonical specification (Markdown): Salmon data package specification\nThis page is a high-level overview of the workflow. For complete package details and field requirements, use the canonical specification above.",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
@@ -641,7 +641,19 @@
     "href": "reference_info/data_standards/semantic-salmon-system.html#the-system-flow",
     "title": "Semantic Salmon System — Start Here",
     "section": "The system flow",
-    "text": "The system flow\n\n  \n    1) DFO Salmon Ontology\n    Use canonical term definitions and IRIs.\n    Open ontology docs\n  \n  →\n  \n    2) SDEP\n    Package dataset metadata in a standard structure.\n    Open SDEP spec\n  \n  →\n  \n    3) metasalmon\n    Run quality and validation checks before intake.\n    Open tools page\n  \n  →\n  \n    4) Salmon Data GPT (optional)\n    Draft mappings and package metadata faster.\n    See intake guidance\n  \n  →\n  \n    5) SPSR Intake\n    Upload through the operational FSAR-oriented pathway.\n    Open SPSR upload wizard",
+    "text": "The system flow\n\n  \n    1) DFO Salmon Ontology\n    Use canonical term definitions and IRIs.\n    Open ontology docs\n  \n  →\n  \n    2) Salmon data package\n    Package dataset metadata in a standard structure.\n    Open SDP spec\n  \n  →\n  \n    3) metasalmon\n    Run quality and validation checks before intake.\n    Open tools page\n  \n  →\n  \n    4) Salmon Data GPT (optional)\n    Draft mappings and package metadata faster.\n    See intake guidance\n  \n  →\n  \n    5) SPSR Intake\n    Upload through the operational FSAR-oriented pathway.\n    Open SPSR upload wizard",
+    "crumbs": [
+      "Home",
+      "Standards & Vocabulary",
+      "Semantic Salmon System — Start Here"
+    ]
+  },
+  {
+    "objectID": "reference_info/data_standards/semantic-salmon-system.html#salmon-data-package-overview-diagram",
+    "href": "reference_info/data_standards/semantic-salmon-system.html#salmon-data-package-overview-diagram",
+    "title": "Semantic Salmon System — Start Here",
+    "section": "Salmon data package overview (diagram)",
+    "text": "Salmon data package overview (diagram)\n\n\n\nSalmon data package diagram showing metadata files (dataset.csv, tables.csv, columns.csv, codes.csv) linked to package data tables.\n\n\nFor complete structure and field-level requirements, use the canonical salmon data package specification.",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
@@ -665,7 +677,7 @@
     "href": "reference_info/data_standards/semantic-salmon-system.html#quick-launch-paths",
     "title": "Semantic Salmon System — Start Here",
     "section": "Quick launch paths",
-    "text": "Quick launch paths\n\nStart my FSAR intake path\nFSAR Data Standardization Workflow\nSDEP + SPSR Intake Path\nThe Semantic Salmon Data Ecosystem (deeper architecture)",
+    "text": "Quick launch paths\n\nStart my FSAR intake path\nFSAR Data Standardization Workflow\nSalmon data package + SPSR intake path\nThe Semantic Salmon Data Ecosystem (deeper architecture)",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
@@ -675,97 +687,97 @@
   {
     "objectID": "reference_info/data_standards/salmon-data-exchange-package.html",
     "href": "reference_info/data_standards/salmon-data-exchange-package.html",
-    "title": "Salmon Data Exchange Package Specification",
+    "title": "Salmon data package specification",
     "section": "",
-    "text": "1 Overview\nThe Salmon Data Exchange Package (SDEP) is a lightweight, frictionless-style specification for exchanging salmon datasets between scientists, assessment biologists, and data stewards.\nIt is designed to:\n\nBe simple to adopt with Excel and CSV files.\nBe tool-friendly for R/Python packages and custom GPT assistants.\nBe ontology-aware, linking columns and codes to the DFO Salmon Ontology and related vocabularies.\nBe compatible with frictionless data packages and Darwin Core–style semantic layers without forcing a single rigid schema.\n\nEach SDEP instance is a small directory of CSV data files plus a set of metadata CSVs that describe the dataset, tables, columns, and controlled codes.\n\n\n2 Design Goals\n\nInteroperable but flexible: support multiple schemas (FSAR, SPSR-like, project-specific) while providing shared semantics via URIs.\nFRICTIONLESS-compatible: align conceptually with frictionless/datapackage ideas so existing tooling can be reused or extended.\nOntology-linked: allow columns and codes to reference DFO Salmon Ontology and SKOS vocab IRIs.\nIncremental adoption: existing tables can be wrapped in a package with minimal changes (no need to refactor everything at once).\nMachine- and human-readable: scientists can work in spreadsheets; machines can consume the same metadata.\n\n\n\n3 Package Layout\nA Salmon Data Exchange Package consists of:\n\nOne root directory (e.g., SDEP_myproject/) containing:\n\ndataset.csv – dataset-level metadata.\ntables.csv – one row per logical table.\ncolumn_dictionary.csv – one row per column in each table.\ncodes.csv – optional: controlled value lists and SKOS links.\n\nOne or more data files (typically CSV) referenced from tables.csv, usually in a data/ subdirectory.\n\nMinimal example layout:\n\ndataset.csv\ntables.csv\ncolumn_dictionary.csv\ncodes.csv (optional for fully numeric or unconstrained columns)\ndata/your_table_1.csv\ndata/your_table_2.csv\netc.\n\nDownloadable starter assets:\n\nMinimal SDEP example package (zip)\nBrowse example package files\n\nThe SDEP spec does not prescribe a single canonical salmon schema. Instead, it standardizes the metadata about whatever schema a project uses and ties it to ontology and vocabularies.\n\n\n4 Identifiers and Conventions\n\ndataset_id\n\nShort string identifier unique within your organization or project (e.g., fsar_spsr_chinook_2025).\nUsed to link rows across dataset.csv, tables.csv, column_dictionary.csv, and codes.csv.\n\ntable_id\n\nShort ID unique within a dataset (e.g., cu_year_index, survey_events).\n\ncolumn_name\n\nExact column name as it appears in the data file (e.g., TOTAL_SPAWNERS, run_size_total).\n\nURIs / IRIs\n\nFields such as dataset_iri, entity_iri, term_iri, concept_scheme_iri, unit_iri should use persistent HTTP IRIs where available (e.g., w3id for DFO Salmon Ontology terms, vocabulary concepts, and units).\n\n\n\n\n5 dataset.csv Schema\nOne row per logical dataset (often one per SDEP directory). Can describe multiple related tables.\nRequired columns:\n\n\n\n\n\n\n\n\n\nColumn\nType\nRequired\nDescription\n\n\n\n\ndataset_id\nstring\nyes\nStable identifier used to join to other metadata files.\n\n\ntitle\nstring\nyes\nHuman-readable dataset title.\n\n\ndescription\nstring\nyes\nShort description of the dataset contents and purpose.\n\n\ncreator\nstring\nyes\nName(s) of primary creator(s) or project.\n\n\ncontact_name\nstring\nyes\nPrimary contact person.\n\n\ncontact_email\nstring\nyes\nContact email address.\n\n\nlicense\nstring\nyes\nLicense name or URL (e.g., CC-BY-4.0).\n\n\ntemporal_start\ndate\nno\nStart date or year covered by the dataset (ISO 8601 where possible).\n\n\ntemporal_end\ndate\nno\nEnd date or year covered by the dataset.\n\n\nspatial_extent\nstring\nno\nTextual description of spatial coverage (e.g., CUs, regions, coordinates).\n\n\ndataset_type\nstring\nno\nHigh-level type (e.g., cu_year_index, survey_timeseries, benchmark).\n\n\ndataset_iri\nstring\nno\nIRI for this dataset in a catalog or knowledge graph.\n\n\nsource_citation\nstring\nno\nFree-text citation for publications, reports, or internal docs.\n\n\n\nOptional additional columns (implementation-specific):\n\nprovenance_note – narrative about data lineage.\ncreated / modified – timestamps.\n\n\n\n6 tables.csv Schema\nOne row per table in the package.\nRequired columns:\n\n\n\n\n\n\n\n\n\nColumn\nType\nRequired\nDescription\n\n\n\n\ndataset_id\nstring\nyes\nReferences dataset_id in dataset.csv.\n\n\ntable_id\nstring\nyes\nShort ID for the table (e.g., cu_year_index).\n\n\nfile_name\nstring\nyes\nRelative path to the data file (e.g., data/cu_year_index.csv).\n\n\ntable_label\nstring\nyes\nHuman-readable label for the table.\n\n\ndescription\nstring\nyes\nDescription of what each row represents and how the table is used.\n\n\nentity_type\nstring\nno\nHuman-readable entity type (e.g., CU-year index, survey event).\n\n\nentity_iri\nstring\nno\nIRI of ontology class representing the row-level entity, if applicable.\n\n\nprimary_key\nstring\nno\nComma-separated list of columns forming a primary key (e.g., cu_id,year).\n\n\n\nNotes:\n\nentity_iri should reference a class in the DFO Salmon Ontology (e.g., a CU-year index class, survey event class) when available.\nprimary_key is advisory; it guides downstream validation and graph loading.\n\n\n\n7 column_dictionary.csv Schema\nOne row per column in each table. This is the core of how SDEP links data columns to ontology and vocabularies.\nRequired columns:\n\n\n\n\n\n\n\n\n\nColumn\nType\nRequired\nDescription\n\n\n\n\ndataset_id\nstring\nyes\nReferences dataset_id in dataset.csv.\n\n\ntable_id\nstring\nyes\nReferences table_id in tables.csv.\n\n\ncolumn_name\nstring\nyes\nExact column name in the data file.\n\n\ncolumn_label\nstring\nyes\nShort human-readable label.\n\n\ncolumn_description\nstring\nyes\nClear definition of the column’s meaning.\n\n\ncolumn_role\nstring\nyes\nOne of: identifier, attribute, temporal, categorical, measurement.\n\n\nvalue_type\nstring\nyes\nBasic type: integer, double, string, boolean, date, datetime.\n\n\nrequired\nboolean\nno\nTRUE if the column is required for each row, otherwise FALSE or blank.\n\n\nunit_label\nstring\nno\nHuman-readable unit label (e.g., number of fish, proportion).\n\n\nunit_iri\nstring\nno\nIRI for the unit (e.g., UCUM or other unit ontology).\n\n\nterm_iri\nstring\nno\nIRI for the ontology term (e.g., measurement type, dimension, concept) from the DFO Salmon Ontology.\n\n\nterm_type\nstring\nno\nType of ontology term (e.g., owl_class, owl_object_property, skos_concept).\n\n\n\ncolumn_role quick definitions:\n\n\n\n\n\n\n\n\nRole\nWhen to use it\nExample columns\n\n\n\n\nidentifier\nKeys and IDs that identify rows/entities\ncu_id, survey_event_id, record_id\n\n\nmeasurement\nQuantitative or measured values\nspawner_count, run_size, exploitation_rate\n\n\ntemporal\nTime and date fields\nreturn_year, sample_date, datetime\n\n\ncategorical\nControlled codes or enumerated classes\nstatus_code, species_code, run_timing\n\n\nattribute\nDescriptive attributes that are not IDs/time/measurements\nwaterbody_name, observer_name, population_name\n\n\n\nGuidance:\n\nUse column_role = \"identifier\" for identifiers such as cu_id, survey_event_id, POP_ID.\nUse column_role = \"measurement\" for numeric quantities (e.g., escapement, run size, exploitation rate).\nUse column_role = \"temporal\" for time-related columns (e.g., year, date, datetime).\nUse column_role = \"categorical\" for columns with controlled vocabularies or enumerated values (e.g., species, run type, status codes).\nUse column_role = \"attribute\" for descriptive attributes that are not identifiers, measurements, temporal, or categorical (e.g., population name, waterbody name).\nterm_iri should reference a term in the DFO Salmon Ontology (e.g., measurement types, dimensions, concepts) when available.\nterm_type indicates the type of ontology term (e.g., owl_class for classes, owl_object_property for properties, skos_concept for SKOS concepts).\n\n\n\n8 codes.csv Schema\nOptional file used for columns that have controlled enumerated values (status codes, methods, gear, etc.). This is where SKOS vocabularies plug in.\nEach row corresponds to one code value for one column.\nRequired columns:\n\n\n\n\n\n\n\n\n\nColumn\nType\nRequired\nDescription\n\n\n\n\ndataset_id\nstring\nyes\nReferences dataset_id in dataset.csv.\n\n\ntable_id\nstring\nyes\nReferences table_id in tables.csv.\n\n\ncolumn_name\nstring\nyes\nName of the column in the data file that uses this code.\n\n\ncode_value\nstring\nyes\nStored value in the data (e.g., R, Y, G, critical, adipose_intact).\n\n\ncode_label\nstring\nno\nHuman-readable label corresponding to the code.\n\n\ncode_description\nstring\nno\nLonger description of what the code means.\n\n\nconcept_scheme_iri\nstring\nno\nIRI of the SKOS concept scheme (e.g., the DFO Salmon Status scheme).\n\n\nterm_iri\nstring\nno\nIRI of the specific ontology term (SKOS concept or other) that code_value represents.\n\n\nterm_type\nstring\nno\nType of ontology term (e.g., skos_concept, owl_class).\n\n\n\nGuidance:\n\ncode_value must match exactly the values present in the data table.\ncode_label and code_description can be used to auto-generate documentation.\nconcept_scheme_iri identifies the SKOS concept scheme containing the controlled vocabulary.\nterm_iri and term_type enable alignment with the larger salmon ontology and SKOS vocabularies, linking each code value to its corresponding ontology term.\n\n\n\n9 Relationship to Ontology, R Package, and GPT\n\nThe ontology defines the formal semantics for:\n\nmeasurement types, entities, dimensions, and concepts (via term_iri and term_type),\nentities (entity_iri in tables.csv),\nconcept schemes (concept_scheme_iri in codes.csv).\n\nThe R package will:\n\nread SDEP metadata and data files,\nvalidate packages against this specification,\njoin in ontology/vocabulary information,\nhelp reshape data into analysis-friendly tidy formats.\n\nThe custom GPT will:\n\nhelp users draft column_dictionary.csv and codes.csv,\nsuggest ontology-aligned IRIs and term types,\nassist in decomposing compound terms into multiple columns with appropriate roles and IRIs,\npropose SDEP-compliant package structures for new projects.\n\n\n\n\n10 Validation Workflow\nRun validation locally before publishing.\nTypical local workflow (R):\nlibrary(metasalmon)\n\npkg_path &lt;- \"path/to/sdep-package\"\nvalidate_dictionary(file.path(pkg_path, \"column_dictionary.csv\"))\nvalidate_semantics(file.path(pkg_path, \"column_dictionary.csv\"))\nRelated implementation guidance:\n\nFSAR Data Standardization Workflow\nSDEP + SPSR Intake Path\n\n\n\n11 Versioning and Backwards Compatibility\n\nInclude a spec_version field in dataset.csv in future iterations if needed (e.g., sdep-0.1.0).\nNew columns should be added in a backwards-compatible way:\n\nexisting tooling must continue to work when extra columns are present.\n\nBreaking changes to required columns or semantics should bump the major version.\n\n\n\n12 Implementation Notes\n\nCSV files should use UTF-8 encoding and a comma delimiter by default.\nDates should follow ISO 8601 where possible (e.g., YYYY-MM-DD); years can be encoded as integers.\nR and Python tooling should treat missing optional columns as NA/null without failing.\nThe spec is intentionally minimal; domain-specific extensions (e.g., FSAR/SPSR templates) can be layered on top as recommended profiles.",
+    "text": "Canonical markdown source: https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md\nThis page provides a DSU-hosted copy/overview. For canonical field definitions and version history, use the GitHub source above.\n\n1 Overview\nThe salmon data package (SDP) is a lightweight, frictionless-style specification for exchanging salmon datasets between scientists, assessment biologists, and data stewards.\nIt is designed to:\n\nBe simple to adopt with Excel and CSV files.\nBe tool-friendly for R/Python packages and custom GPT assistants.\nBe ontology-aware, linking columns and codes to the DFO Salmon Ontology and related vocabularies.\nBe compatible with frictionless data packages and Darwin Core–style semantic layers without forcing a single rigid schema.\n\nEach salmon data package instance is a small directory of CSV data files plus a set of metadata CSVs that describe the dataset, tables, columns, and controlled codes.\n\n\n2 Design Goals\n\nInteroperable but flexible: support multiple schemas (FSAR, SPSR-like, project-specific) while providing shared semantics via URIs.\nFRICTIONLESS-compatible: align conceptually with frictionless/datapackage ideas so existing tooling can be reused or extended.\nOntology-linked: allow columns and codes to reference DFO Salmon Ontology and SKOS vocab IRIs.\nIncremental adoption: existing tables can be wrapped in a package with minimal changes (no need to refactor everything at once).\nMachine- and human-readable: scientists can work in spreadsheets; machines can consume the same metadata.\n\n\n\n3 Package Layout\nA salmon data package consists of:\n\nOne root directory (e.g., sdp_myproject/) containing:\n\ndataset.csv – dataset-level metadata.\ntables.csv – one row per logical table.\ncolumn_dictionary.csv – one row per column in each table.\ncodes.csv – optional: controlled value lists and SKOS links.\n\nOne or more data files (typically CSV) referenced from tables.csv, usually in a data/ subdirectory.\n\nMinimal example layout:\n\ndataset.csv\ntables.csv\ncolumn_dictionary.csv\ncodes.csv (optional for fully numeric or unconstrained columns)\ndata/your_table_1.csv\ndata/your_table_2.csv\netc.\n\nDownloadable starter assets:\n\nMinimal salmon data package example (zip)\nBrowse example package files\n\nThe salmon data package specification does not prescribe a single canonical salmon schema. Instead, it standardizes the metadata about whatever schema a project uses and ties it to ontology and vocabularies.\n\n\n4 Identifiers and Conventions\n\ndataset_id\n\nShort string identifier unique within your organization or project (e.g., fsar_spsr_chinook_2025).\nUsed to link rows across dataset.csv, tables.csv, column_dictionary.csv, and codes.csv.\n\ntable_id\n\nShort ID unique within a dataset (e.g., cu_year_index, survey_events).\n\ncolumn_name\n\nExact column name as it appears in the data file (e.g., TOTAL_SPAWNERS, run_size_total).\n\nURIs / IRIs\n\nFields such as dataset_iri, entity_iri, term_iri, concept_scheme_iri, unit_iri should use persistent HTTP IRIs where available (e.g., w3id for DFO Salmon Ontology terms, vocabulary concepts, and units).\n\n\n\n\n5 dataset.csv Schema\nOne row per logical dataset (often one per salmon data package directory). Can describe multiple related tables.\nRequired columns:\n\n\n\n\n\n\n\n\n\nColumn\nType\nRequired\nDescription\n\n\n\n\ndataset_id\nstring\nyes\nStable identifier used to join to other metadata files.\n\n\ntitle\nstring\nyes\nHuman-readable dataset title.\n\n\ndescription\nstring\nyes\nShort description of the dataset contents and purpose.\n\n\ncreator\nstring\nyes\nName(s) of primary creator(s) or project.\n\n\ncontact_name\nstring\nyes\nPrimary contact person.\n\n\ncontact_email\nstring\nyes\nContact email address.\n\n\nlicense\nstring\nyes\nLicense name or URL (e.g., CC-BY-4.0).\n\n\ntemporal_start\ndate\nno\nStart date or year covered by the dataset (ISO 8601 where possible).\n\n\ntemporal_end\ndate\nno\nEnd date or year covered by the dataset.\n\n\nspatial_extent\nstring\nno\nTextual description of spatial coverage (e.g., CUs, regions, coordinates).\n\n\ndataset_type\nstring\nno\nHigh-level type (e.g., cu_year_index, survey_timeseries, benchmark).\n\n\ndataset_iri\nstring\nno\nIRI for this dataset in a catalog or knowledge graph.\n\n\nsource_citation\nstring\nno\nFree-text citation for publications, reports, or internal docs.\n\n\n\nOptional additional columns (implementation-specific):\n\nprovenance_note – narrative about data lineage.\ncreated / modified – timestamps.\n\n\n\n6 tables.csv Schema\nOne row per table in the package.\nRequired columns:\n\n\n\n\n\n\n\n\n\nColumn\nType\nRequired\nDescription\n\n\n\n\ndataset_id\nstring\nyes\nReferences dataset_id in dataset.csv.\n\n\ntable_id\nstring\nyes\nShort ID for the table (e.g., cu_year_index).\n\n\nfile_name\nstring\nyes\nRelative path to the data file (e.g., data/cu_year_index.csv).\n\n\ntable_label\nstring\nyes\nHuman-readable label for the table.\n\n\ndescription\nstring\nyes\nDescription of what each row represents and how the table is used.\n\n\nentity_type\nstring\nno\nHuman-readable entity type (e.g., CU-year index, survey event).\n\n\nentity_iri\nstring\nno\nIRI of ontology class representing the row-level entity, if applicable.\n\n\nprimary_key\nstring\nno\nComma-separated list of columns forming a primary key (e.g., cu_id,year).\n\n\n\nNotes:\n\nentity_iri should reference a class in the DFO Salmon Ontology (e.g., a CU-year index class, survey event class) when available.\nprimary_key is advisory; it guides downstream validation and graph loading.\n\n\n\n7 column_dictionary.csv Schema\nOne row per column in each table. This is the core of how the salmon data package links data columns to ontology and vocabularies.\nRequired columns:\n\n\n\n\n\n\n\n\n\nColumn\nType\nRequired\nDescription\n\n\n\n\ndataset_id\nstring\nyes\nReferences dataset_id in dataset.csv.\n\n\ntable_id\nstring\nyes\nReferences table_id in tables.csv.\n\n\ncolumn_name\nstring\nyes\nExact column name in the data file.\n\n\ncolumn_label\nstring\nyes\nShort human-readable label.\n\n\ncolumn_description\nstring\nyes\nClear definition of the column’s meaning.\n\n\ncolumn_role\nstring\nyes\nOne of: identifier, attribute, temporal, categorical, measurement.\n\n\nvalue_type\nstring\nyes\nBasic type: integer, double, string, boolean, date, datetime.\n\n\nrequired\nboolean\nno\nTRUE if the column is required for each row, otherwise FALSE or blank.\n\n\nunit_label\nstring\nno\nHuman-readable unit label (e.g., number of fish, proportion).\n\n\nunit_iri\nstring\nno\nIRI for the unit (e.g., UCUM or other unit ontology).\n\n\nterm_iri\nstring\nno\nIRI for the ontology term (e.g., measurement type, dimension, concept) from the DFO Salmon Ontology.\n\n\nterm_type\nstring\nno\nType of ontology term (e.g., owl_class, owl_object_property, skos_concept).\n\n\n\ncolumn_role quick definitions:\n\n\n\n\n\n\n\n\nRole\nWhen to use it\nExample columns\n\n\n\n\nidentifier\nKeys and IDs that identify rows/entities\ncu_id, survey_event_id, record_id\n\n\nmeasurement\nQuantitative or measured values\nspawner_count, run_size, exploitation_rate\n\n\ntemporal\nTime and date fields\nreturn_year, sample_date, datetime\n\n\ncategorical\nControlled codes or enumerated classes\nstatus_code, species_code, run_timing\n\n\nattribute\nDescriptive attributes that are not IDs/time/measurements\nwaterbody_name, observer_name, population_name\n\n\n\nGuidance:\n\nUse column_role = \"identifier\" for identifiers such as cu_id, survey_event_id, POP_ID.\nUse column_role = \"measurement\" for numeric quantities (e.g., escapement, run size, exploitation rate).\nUse column_role = \"temporal\" for time-related columns (e.g., year, date, datetime).\nUse column_role = \"categorical\" for columns with controlled vocabularies or enumerated values (e.g., species, run type, status codes).\nUse column_role = \"attribute\" for descriptive attributes that are not identifiers, measurements, temporal, or categorical (e.g., population name, waterbody name).\nterm_iri should reference a term in the DFO Salmon Ontology (e.g., measurement types, dimensions, concepts) when available.\nterm_type indicates the type of ontology term (e.g., owl_class for classes, owl_object_property for properties, skos_concept for SKOS concepts).\n\n\n\n8 codes.csv Schema\nOptional file used for columns that have controlled enumerated values (status codes, methods, gear, etc.). This is where SKOS vocabularies plug in.\nEach row corresponds to one code value for one column.\nRequired columns:\n\n\n\n\n\n\n\n\n\nColumn\nType\nRequired\nDescription\n\n\n\n\ndataset_id\nstring\nyes\nReferences dataset_id in dataset.csv.\n\n\ntable_id\nstring\nyes\nReferences table_id in tables.csv.\n\n\ncolumn_name\nstring\nyes\nName of the column in the data file that uses this code.\n\n\ncode_value\nstring\nyes\nStored value in the data (e.g., R, Y, G, critical, adipose_intact).\n\n\ncode_label\nstring\nno\nHuman-readable label corresponding to the code.\n\n\ncode_description\nstring\nno\nLonger description of what the code means.\n\n\nconcept_scheme_iri\nstring\nno\nIRI of the SKOS concept scheme (e.g., the DFO Salmon Status scheme).\n\n\nterm_iri\nstring\nno\nIRI of the specific ontology term (SKOS concept or other) that code_value represents.\n\n\nterm_type\nstring\nno\nType of ontology term (e.g., skos_concept, owl_class).\n\n\n\nGuidance:\n\ncode_value must match exactly the values present in the data table.\ncode_label and code_description can be used to auto-generate documentation.\nconcept_scheme_iri identifies the SKOS concept scheme containing the controlled vocabulary.\nterm_iri and term_type enable alignment with the larger salmon ontology and SKOS vocabularies, linking each code value to its corresponding ontology term.\n\n\n\n9 Relationship to Ontology, R Package, and GPT\n\nThe ontology defines the formal semantics for:\n\nmeasurement types, entities, dimensions, and concepts (via term_iri and term_type),\nentities (entity_iri in tables.csv),\nconcept schemes (concept_scheme_iri in codes.csv).\n\nThe R package will:\n\nread salmon data package metadata and data files,\nvalidate packages against this specification,\njoin in ontology/vocabulary information,\nhelp reshape data into analysis-friendly tidy formats.\n\nThe custom GPT will:\n\nhelp users draft column_dictionary.csv and codes.csv,\nsuggest ontology-aligned IRIs and term types,\nassist in decomposing compound terms into multiple columns with appropriate roles and IRIs,\npropose package structures compliant with the salmon data package specification for new projects.\n\n\n\n\n10 Validation Workflow\nRun validation locally before publishing.\nTypical local workflow (R):\nlibrary(metasalmon)\n\npkg_path &lt;- \"path/to/salmon-data-package\"\nvalidate_dictionary(file.path(pkg_path, \"column_dictionary.csv\"))\nvalidate_semantics(file.path(pkg_path, \"column_dictionary.csv\"))\nRelated implementation guidance:\n\nFSAR Data Standardization Workflow\nSalmon data package + SPSR intake path\n\n\n\n11 Versioning and Backwards Compatibility\n\nInclude a spec_version field in dataset.csv in future iterations if needed (e.g., sdp-0.1.0).\nNew columns should be added in a backwards-compatible way:\n\nexisting tooling must continue to work when extra columns are present.\n\nBreaking changes to required columns or semantics should bump the major version.\n\n\n\n12 Implementation Notes\n\nCSV files should use UTF-8 encoding and a comma delimiter by default.\nDates should follow ISO 8601 where possible (e.g., YYYY-MM-DD); years can be encoded as integers.\nR and Python tooling should treat missing optional columns as NA/null without failing.\nThe spec is intentionally minimal; domain-specific extensions (e.g., FSAR/SPSR templates) can be layered on top as recommended profiles.",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
-      "Salmon Data Exchange Package Specification"
+      "Salmon data package specification"
     ]
   },
   {
     "objectID": "reference_info/data_standards/ontology-data-package-gpt.html",
     "href": "reference_info/data_standards/ontology-data-package-gpt.html",
-    "title": "SDEP + SPSR Intake Path",
+    "title": "Salmon data package + SPSR intake path",
     "section": "",
-    "text": "Use this page when your goal is to move from mapped data to a submission-ready package and upload path for SPSR.",
+    "text": "Use this page when your goal is to move from mapped data to a submission-ready package and upload path for SPSR.\nCanonical package specification (Markdown): https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
-      "SDEP + SPSR Intake Path"
+      "Salmon data package + SPSR intake path"
     ]
   },
   {
     "objectID": "reference_info/data_standards/ontology-data-package-gpt.html#quick-summary",
     "href": "reference_info/data_standards/ontology-data-package-gpt.html#quick-summary",
-    "title": "SDEP + SPSR Intake Path",
+    "title": "Salmon data package + SPSR intake path",
     "section": "Quick summary",
-    "text": "Quick summary\n\nThe DFO Salmon Ontology provides canonical term IRIs.\nSDEP provides package metadata structure (dataset.csv, tables.csv, column_dictionary.csv, codes.csv).\nmetasalmon supports package validation.\nSalmon Data GPT can help draft mappings/metadata.\nSPSR is a primary operational destination for FSAR-oriented uploads.\n\nGuided assistants can help draft content, but validation remains the quality gate.",
+    "text": "Quick summary\n\nThe DFO Salmon Ontology provides canonical term IRIs.\nThe salmon data package (SDP) provides package metadata structure (dataset.csv, tables.csv, column_dictionary.csv, codes.csv).\nmetasalmon supports package validation.\nSalmon Data GPT can help draft mappings/metadata.\nSPSR is a primary operational destination for FSAR-oriented uploads.\n\nCurrent SPSR direction is CUYear-first intake with WSP-aligned status fields and FSAR fishery fields coexisting in one upload pathway; use current template downloads and avoid relying on stale local copies.\nGuided assistants can help draft content, but validation remains the quality gate.",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
-      "SDEP + SPSR Intake Path"
+      "Salmon data package + SPSR intake path"
     ]
   },
   {
     "objectID": "reference_info/data_standards/ontology-data-package-gpt.html#practical-workflow",
     "href": "reference_info/data_standards/ontology-data-package-gpt.html#practical-workflow",
-    "title": "SDEP + SPSR Intake Path",
+    "title": "Salmon data package + SPSR intake path",
     "section": "Practical workflow",
-    "text": "Practical workflow\n\nFind canonical terms in GC DFO Salmon Ontology documentation.\nBuild column_dictionary.csv with full IRIs (no shortened/partial URIs).\nAssemble package files using SDEP specification.\nValidate locally (e.g., metasalmon checks).\nPrepare SPSR-compatible upload CSV(s).\nUpload through SPSR wizard and review validation feedback.",
+    "text": "Practical workflow\n\nFind canonical terms in GC DFO Salmon Ontology documentation.\nBuild column_dictionary.csv with full IRIs (no shortened/partial URIs).\nAssemble package files using Salmon data package specification.\nValidate locally (e.g., metasalmon checks).\nPrepare SPSR-compatible upload CSV(s).\nUpload through SPSR wizard and review validation feedback.",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
-      "SDEP + SPSR Intake Path"
+      "Salmon data package + SPSR intake path"
     ]
   },
   {
     "objectID": "reference_info/data_standards/ontology-data-package-gpt.html#spsr-touchpoints",
     "href": "reference_info/data_standards/ontology-data-package-gpt.html#spsr-touchpoints",
-    "title": "SDEP + SPSR Intake Path",
+    "title": "Salmon data package + SPSR intake path",
     "section": "SPSR touchpoints",
     "text": "SPSR touchpoints\n\nApp documentation: https://spsr.dfo-mpo.gc.ca/documentation/\nUpload wizard: https://spsr.dfo-mpo.gc.ca/wizard/1/\nTemplate package endpoint: https://spsr.dfo-mpo.gc.ca/download_sdp_templates\nRepo: https://github.com/dfo-pacific-science/salmon-population-summary-repository",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
-      "SDEP + SPSR Intake Path"
+      "Salmon data package + SPSR intake path"
     ]
   },
   {
     "objectID": "reference_info/data_standards/ontology-data-package-gpt.html#recommended-artifacts",
     "href": "reference_info/data_standards/ontology-data-package-gpt.html#recommended-artifacts",
-    "title": "SDEP + SPSR Intake Path",
+    "title": "Salmon data package + SPSR intake path",
     "section": "Recommended artifacts",
     "text": "Recommended artifacts\n\ndataset.csv for dataset-level metadata\ntables.csv for table inventory and entities\ncolumn_dictionary.csv for column semantics + term links\ncodes.csv for controlled value sets\nupload-ready data CSV(s) matching your selected intake profile",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
-      "SDEP + SPSR Intake Path"
+      "Salmon data package + SPSR intake path"
     ]
   },
   {
     "objectID": "reference_info/data_standards/ontology-data-package-gpt.html#validation-gates",
     "href": "reference_info/data_standards/ontology-data-package-gpt.html#validation-gates",
-    "title": "SDEP + SPSR Intake Path",
+    "title": "Salmon data package + SPSR intake path",
     "section": "Validation gates",
     "text": "Validation gates\nBefore upload, confirm:\n\nall required metadata fields are present\nall semantic links use canonical full IRIs\ncategorical values are mapped to controlled concepts\nprovenance notes are present for major transformations",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
-      "SDEP + SPSR Intake Path"
+      "Salmon data package + SPSR intake path"
     ]
   },
   {
     "objectID": "reference_info/data_standards/ontology-data-package-gpt.html#references",
     "href": "reference_info/data_standards/ontology-data-package-gpt.html#references",
-    "title": "SDEP + SPSR Intake Path",
+    "title": "Salmon data package + SPSR intake path",
     "section": "References",
     "text": "References\n\nSemantic Salmon Data Ecosystem\nFSAR Data Standardization Workflow\nControlled Vocabulary Governance Workflow",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
-      "SDEP + SPSR Intake Path"
+      "Salmon data package + SPSR intake path"
     ]
   },
   {
@@ -773,7 +785,7 @@
     "href": "reference_info/data_standards/integrate-data.html",
     "title": "Integrate Data",
     "section": "",
-    "text": "Document each source dataset:\n\nowner/source system\ntemporal scope\ngeographic scope\nkey identifiers\nknown caveats\n\nExample inventory:\n\n\n\n\n\n\n\n\n\n\nDataset\nSource\nKey Columns\nTemporal Scope\nGeographic Scope\n\n\n\n\nEscapement series\nSurvey program\nCU_code, BY, Esc\n2010–2024\nFraser CUs\n\n\nCatch series\nFOS\nCU, Year, Catch\n2010–2024\nMultiple areas\n\n\nStatus outputs\nSPSR\nCU, BY, STATUS\n2010–2024\nAll CUs\n\n\n\n\n\n\n\n\nCreate a crosswalk from source fields to target standard fields and canonical IRIs.\nExample (illustrative — verify exact term IRIs in WIDOCO):\n\n\n\n\n\n\n\n\n\n\nSource Dataset\nSource Column\nStandard Label\nStandard IRI\nTarget Column\n\n\n\n\nEscapement\nCU_code\nConservation Unit\nhttps://w3id.org/gcdfo/salmon#ConservationUnit\nCU\n\n\nEscapement\nBY\nBrood Year\nhttps://w3id.org/gcdfo/salmon#BroodYear\nBroodYear\n\n\nCatch\nYear\nReturn Year\nhttps://w3id.org/gcdfo/salmon#ReturnYear\nReturnYear\n\n\n\nUse full IRIs only.\n\n\n\n\n\nNormalize categorical values before joining.\nsource_dataset,source_column,source_value,standard_value,concept_iri\nEscapement,run_type,Spring,Spring Run,https://w3id.org/gcdfo/salmon#SpringRun\nEscapement,run_type,S,Spring Run,https://w3id.org/gcdfo/salmon#SpringRun\nCatch,run_type,SPRING,Spring Run,https://w3id.org/gcdfo/salmon#SpringRun\n\n\n\n\n\n\nalign column names\nalign data types\nalign temporal semantics (brood year vs return year)\ndocument all transformation assumptions\n\n\n\n\n\n\n\ndefine join keys and expected cardinality\nrun joins in script\ncheck for dropped/unmatched records\ncompute derived fields only after validating joins\n\n\n\n\n\n\nValidation checks:\n\nsource totals vs integrated totals\nrow counts by key strata (CU/year/etc.)\nderived metric sanity checks (ranges, null rate)\nunresolved mapping exceptions list\n\n\n\n\n\n\nPackage the integrated output with:\n\nupdated column_dictionary.csv\ncode mappings (codes.csv)\nintegration README (logic + assumptions)\n\nThen continue to SDEP + SPSR Intake Path if this dataset is moving into SPSR/FSAR workflows.",
+    "text": "Document each source dataset:\n\nowner/source system\ntemporal scope\ngeographic scope\nkey identifiers\nknown caveats\n\nExample inventory:\n\n\n\n\n\n\n\n\n\n\nDataset\nSource\nKey Columns\nTemporal Scope\nGeographic Scope\n\n\n\n\nEscapement series\nSurvey program\nCU_code, BY, Esc\n2010–2024\nFraser CUs\n\n\nCatch series\nFOS\nCU, Year, Catch\n2010–2024\nMultiple areas\n\n\nStatus outputs\nSPSR\nCU, BY, STATUS\n2010–2024\nAll CUs\n\n\n\n\n\n\n\n\nCreate a crosswalk from source fields to target standard fields and canonical IRIs.\nExample (illustrative — verify exact term IRIs in WIDOCO):\n\n\n\n\n\n\n\n\n\n\nSource Dataset\nSource Column\nStandard Label\nStandard IRI\nTarget Column\n\n\n\n\nEscapement\nCU_code\nConservation Unit\nhttps://w3id.org/gcdfo/salmon#ConservationUnit\nCU\n\n\nEscapement\nBY\nBrood Year\nhttps://w3id.org/gcdfo/salmon#BroodYear\nBroodYear\n\n\nCatch\nYear\nReturn Year\nhttps://w3id.org/gcdfo/salmon#ReturnYear\nReturnYear\n\n\n\nUse full IRIs only.\n\n\n\n\n\nNormalize categorical values before joining.\nsource_dataset,source_column,source_value,standard_value,concept_iri\nEscapement,run_type,Spring,Spring Run,https://w3id.org/gcdfo/salmon#SpringRun\nEscapement,run_type,S,Spring Run,https://w3id.org/gcdfo/salmon#SpringRun\nCatch,run_type,SPRING,Spring Run,https://w3id.org/gcdfo/salmon#SpringRun\n\n\n\n\n\n\nalign column names\nalign data types\nalign temporal semantics (brood year vs return year)\ndocument all transformation assumptions\n\n\n\n\n\n\n\ndefine join keys and expected cardinality\nrun joins in script\ncheck for dropped/unmatched records\ncompute derived fields only after validating joins\n\n\n\n\n\n\nValidation checks:\n\nsource totals vs integrated totals\nrow counts by key strata (CU/year/etc.)\nderived metric sanity checks (ranges, null rate)\nunresolved mapping exceptions list\n\n\n\n\n\n\nPackage the integrated output with:\n\nupdated column_dictionary.csv\ncode mappings (codes.csv)\nintegration README (logic + assumptions)\n\nThen continue to Salmon data package + SPSR intake path if this dataset is moving into SPSR/FSAR workflows.",
     "crumbs": [
       "Home",
       "Common Workflows",
@@ -785,7 +797,7 @@
     "href": "reference_info/data_standards/integrate-data.html#cookbook-guide",
     "title": "Integrate Data",
     "section": "",
-    "text": "Document each source dataset:\n\nowner/source system\ntemporal scope\ngeographic scope\nkey identifiers\nknown caveats\n\nExample inventory:\n\n\n\n\n\n\n\n\n\n\nDataset\nSource\nKey Columns\nTemporal Scope\nGeographic Scope\n\n\n\n\nEscapement series\nSurvey program\nCU_code, BY, Esc\n2010–2024\nFraser CUs\n\n\nCatch series\nFOS\nCU, Year, Catch\n2010–2024\nMultiple areas\n\n\nStatus outputs\nSPSR\nCU, BY, STATUS\n2010–2024\nAll CUs\n\n\n\n\n\n\n\n\nCreate a crosswalk from source fields to target standard fields and canonical IRIs.\nExample (illustrative — verify exact term IRIs in WIDOCO):\n\n\n\n\n\n\n\n\n\n\nSource Dataset\nSource Column\nStandard Label\nStandard IRI\nTarget Column\n\n\n\n\nEscapement\nCU_code\nConservation Unit\nhttps://w3id.org/gcdfo/salmon#ConservationUnit\nCU\n\n\nEscapement\nBY\nBrood Year\nhttps://w3id.org/gcdfo/salmon#BroodYear\nBroodYear\n\n\nCatch\nYear\nReturn Year\nhttps://w3id.org/gcdfo/salmon#ReturnYear\nReturnYear\n\n\n\nUse full IRIs only.\n\n\n\n\n\nNormalize categorical values before joining.\nsource_dataset,source_column,source_value,standard_value,concept_iri\nEscapement,run_type,Spring,Spring Run,https://w3id.org/gcdfo/salmon#SpringRun\nEscapement,run_type,S,Spring Run,https://w3id.org/gcdfo/salmon#SpringRun\nCatch,run_type,SPRING,Spring Run,https://w3id.org/gcdfo/salmon#SpringRun\n\n\n\n\n\n\nalign column names\nalign data types\nalign temporal semantics (brood year vs return year)\ndocument all transformation assumptions\n\n\n\n\n\n\n\ndefine join keys and expected cardinality\nrun joins in script\ncheck for dropped/unmatched records\ncompute derived fields only after validating joins\n\n\n\n\n\n\nValidation checks:\n\nsource totals vs integrated totals\nrow counts by key strata (CU/year/etc.)\nderived metric sanity checks (ranges, null rate)\nunresolved mapping exceptions list\n\n\n\n\n\n\nPackage the integrated output with:\n\nupdated column_dictionary.csv\ncode mappings (codes.csv)\nintegration README (logic + assumptions)\n\nThen continue to SDEP + SPSR Intake Path if this dataset is moving into SPSR/FSAR workflows.",
+    "text": "Document each source dataset:\n\nowner/source system\ntemporal scope\ngeographic scope\nkey identifiers\nknown caveats\n\nExample inventory:\n\n\n\n\n\n\n\n\n\n\nDataset\nSource\nKey Columns\nTemporal Scope\nGeographic Scope\n\n\n\n\nEscapement series\nSurvey program\nCU_code, BY, Esc\n2010–2024\nFraser CUs\n\n\nCatch series\nFOS\nCU, Year, Catch\n2010–2024\nMultiple areas\n\n\nStatus outputs\nSPSR\nCU, BY, STATUS\n2010–2024\nAll CUs\n\n\n\n\n\n\n\n\nCreate a crosswalk from source fields to target standard fields and canonical IRIs.\nExample (illustrative — verify exact term IRIs in WIDOCO):\n\n\n\n\n\n\n\n\n\n\nSource Dataset\nSource Column\nStandard Label\nStandard IRI\nTarget Column\n\n\n\n\nEscapement\nCU_code\nConservation Unit\nhttps://w3id.org/gcdfo/salmon#ConservationUnit\nCU\n\n\nEscapement\nBY\nBrood Year\nhttps://w3id.org/gcdfo/salmon#BroodYear\nBroodYear\n\n\nCatch\nYear\nReturn Year\nhttps://w3id.org/gcdfo/salmon#ReturnYear\nReturnYear\n\n\n\nUse full IRIs only.\n\n\n\n\n\nNormalize categorical values before joining.\nsource_dataset,source_column,source_value,standard_value,concept_iri\nEscapement,run_type,Spring,Spring Run,https://w3id.org/gcdfo/salmon#SpringRun\nEscapement,run_type,S,Spring Run,https://w3id.org/gcdfo/salmon#SpringRun\nCatch,run_type,SPRING,Spring Run,https://w3id.org/gcdfo/salmon#SpringRun\n\n\n\n\n\n\nalign column names\nalign data types\nalign temporal semantics (brood year vs return year)\ndocument all transformation assumptions\n\n\n\n\n\n\n\ndefine join keys and expected cardinality\nrun joins in script\ncheck for dropped/unmatched records\ncompute derived fields only after validating joins\n\n\n\n\n\n\nValidation checks:\n\nsource totals vs integrated totals\nrow counts by key strata (CU/year/etc.)\nderived metric sanity checks (ranges, null rate)\nunresolved mapping exceptions list\n\n\n\n\n\n\nPackage the integrated output with:\n\nupdated column_dictionary.csv\ncode mappings (codes.csv)\nintegration README (logic + assumptions)\n\nThen continue to Salmon data package + SPSR intake path if this dataset is moving into SPSR/FSAR workflows.",
     "crumbs": [
       "Home",
       "Common Workflows",
@@ -797,7 +809,7 @@
     "href": "reference_info/data_standards/integrate-data.html#next-steps",
     "title": "Integrate Data",
     "section": "Next Steps",
-    "text": "Next Steps\n\nGC DFO Salmon Ontology documentation\nSDEP specification\nFSAR workflow",
+    "text": "Next Steps\n\nGC DFO Salmon Ontology documentation\nSalmon data package specification\nFSAR workflow",
     "crumbs": [
       "Home",
       "Common Workflows",
@@ -821,7 +833,7 @@
     "href": "reference_info/data_standards/changelog.html#entry-template",
     "title": "Standards & Workflow Changelog",
     "section": "Entry template",
-    "text": "Entry template\nUse this structure for each changelog item:\n\nDate: YYYY-MM-DD\nArea: ontology / SDEP / FSAR workflow / SPSR intake / publishing\nChange: what changed\nReason: why it changed\nImpact: who should care and what to do next\nLinks: PR/issue/pages",
+    "text": "Entry template\nUse this structure for each changelog item:\n\nDate: YYYY-MM-DD\nArea: ontology / salmon data package / FSAR workflow / SPSR intake / publishing\nChange: what changed\nReason: why it changed\nImpact: who should care and what to do next\nLinks: PR/issue/pages",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
@@ -833,7 +845,7 @@
     "href": "reference_info/data_standards/changelog.html#section",
     "title": "Standards & Workflow Changelog",
     "section": "2026-02",
-    "text": "2026-02\n\n2026-02-20 — ontology docs consolidation + FSAR/SPSR alignment\n\nArea: ontology + standards hub + workflows\nChange: integrated ontology conventions guidebook into DSU docs; retired duplicate term explorer path; rewired standards pages around canonical ontology docs + SDEP + SPSR intake.\nReason: reduce duplication and keep one formal source of truth.\nImpact: contributors should use WIDOCO + conventions guidebook for term semantics and use updated FSAR/SPSR workflow pages for intake.\nLinks:\n\nPR #151\nGC DFO Salmon Ontology\nSDEP + SPSR Intake Path\n\n\n\n\n2026-02-20 — semantic system entry path made explicit\n\nArea: standardize/publish workflow pages\nChange: made DFO Ontology → SDEP → metasalmon → Salmon Data GPT → SPSR path prominent at top of key workflow pages.\nReason: make the intended system flow obvious during standardization and publishing.\nImpact: data producers should follow the explicit entry path before upload or external release.\nLinks:\n\nStandardize Your Data\nPublish Your Data\nThe Semantic Salmon Data Ecosystem\n\n\n\n\n2026-02-20 — branded semantic start page added\n\nArea: standards IA + homepage/navigation\nChange: added a branded front-door page for the full path, with one primary CTA: Start my FSAR intake path.\nReason: provide a single obvious entry point before users branch into detailed pages.\nImpact: new users can start from one page and follow the canonical sequence without guessing navigation order.\nLinks:\n\nSemantic Salmon System — Start Here\nFSAR to SPSR: End-to-End Example\nSalmon Data Standards Hub",
+    "text": "2026-02\n\n2026-02-25 — terminology normalization + FSAR workflow refresh\n\nArea: salmon data package + FSAR workflow + SPSR intake\nChange: replaced user-facing SDEP wording with “salmon data package”/“SDP”; added canonical markdown spec links to smn-data-pkg; updated FSAR workflow guidance to reflect current SPSR CUYear-first intake direction and template-first upload prep.\nReason: keep terminology aligned with current naming and reduce confusion between overview pages and canonical spec sources.\nImpact: contributors should use “salmon data package” wording in docs and rely on SPSR template endpoint + canonical GitHub specification for field-level implementation details.\nLinks:\n\nFSAR Data Standardization Workflow\nSalmon data package specification\nhttps://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md\nhttps://github.com/dfo-pacific-science/salmon-population-summary-repository/blob/master/docs/plans/2026-02-18-spsr-production-ready-unified-execplan.md\n\n\n\n\n2026-02-20 — ontology docs consolidation + FSAR/SPSR alignment\n\nArea: ontology + standards hub + workflows\nChange: integrated ontology conventions guidebook into DSU docs; retired duplicate term explorer path; rewired standards pages around canonical ontology docs + salmon data package + SPSR intake.\nReason: reduce duplication and keep one formal source of truth.\nImpact: contributors should use WIDOCO + conventions guidebook for term semantics and use updated FSAR/SPSR workflow pages for intake.\nLinks:\n\nPR #151\nGC DFO Salmon Ontology\nSalmon data package + SPSR intake path\n\n\n\n\n2026-02-20 — semantic system entry path made explicit\n\nArea: standardize/publish workflow pages\nChange: made DFO Ontology → salmon data package → metasalmon → Salmon Data GPT → SPSR path prominent at top of key workflow pages.\nReason: make the intended system flow obvious during standardization and publishing.\nImpact: data producers should follow the explicit entry path before upload or external release.\nLinks:\n\nStandardize Your Data\nPublish Your Data\nThe Semantic Salmon Data Ecosystem\n\n\n\n\n2026-02-20 — branded semantic start page added\n\nArea: standards IA + homepage/navigation\nChange: added a branded front-door page for the full path, with one primary CTA: Start my FSAR intake path.\nReason: provide a single obvious entry point before users branch into detailed pages.\nImpact: new users can start from one page and follow the canonical sequence without guessing navigation order.\nLinks:\n\nSemantic Salmon System — Start Here\nFSAR to SPSR: End-to-End Example\nSalmon Data Standards Hub",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
@@ -937,11 +949,11 @@
     ]
   },
   {
-    "objectID": "how_to_guides/fsar-to-spsr-end-to-end-example.html#step-3-build-minimal-sdep-metadata",
-    "href": "how_to_guides/fsar-to-spsr-end-to-end-example.html#step-3-build-minimal-sdep-metadata",
+    "objectID": "how_to_guides/fsar-to-spsr-end-to-end-example.html#step-3-build-minimal-salmon-data-package-metadata",
+    "href": "how_to_guides/fsar-to-spsr-end-to-end-example.html#step-3-build-minimal-salmon-data-package-metadata",
     "title": "FSAR to SPSR: End-to-End Example",
-    "section": "Step 3 — Build minimal SDEP metadata",
-    "text": "Step 3 — Build minimal SDEP metadata\nCreate:\n\ndataset.csv\ntables.csv\ncolumn_dictionary.csv\ncodes.csv (if categorical values are present)\n\nReference: Salmon Data Exchange Package Specification",
+    "section": "Step 3 — Build minimal salmon data package metadata",
+    "text": "Step 3 — Build minimal salmon data package metadata\nCreate:\n\ndataset.csv\ntables.csv\ncolumn_dictionary.csv\ncodes.csv (if categorical values are present)\n\nReference: Salmon data package specification",
     "crumbs": [
       "Home",
       "Common Workflows",
@@ -989,7 +1001,7 @@
     "href": "how_to_guides/fsar-to-spsr-end-to-end-example.html#deliverables-checklist",
     "title": "FSAR to SPSR: End-to-End Example",
     "section": "Deliverables checklist",
-    "text": "Deliverables checklist\n\nmapped field table with canonical IRIs\ncomplete minimal SDEP metadata files\nvalidated upload file(s)\nSPSR submission completed\nversion/provenance notes archived",
+    "text": "Deliverables checklist\n\nmapped field table with canonical IRIs\ncomplete minimal salmon data package metadata files\nvalidated upload file(s)\nSPSR submission completed\nversion/provenance notes archived",
     "crumbs": [
       "Home",
       "Common Workflows",
@@ -1135,7 +1147,7 @@
     "href": "blog/index.html#recent-updates",
     "title": "News & Updates",
     "section": "Recent updates",
-    "text": "Recent updates\n\n2026-02 — Ontology documentation consolidation\n\nintegrated ontology conventions guidebook into DSU docs\nremoved duplicate in-site term explorer path\nset WIDOCO as formal canonical reference path\n\n\n\n2026-02 — FSAR workflow alignment for SPSR\n\nclarified SPSR as a primary intake pathway for FSAR-oriented datasets\nadded SPSR links in standards/workflow pages\naligned package/intake guidance around SDEP + wizard flow",
+    "text": "Recent updates\n\n2026-02 — Ontology documentation consolidation\n\nintegrated ontology conventions guidebook into DSU docs\nremoved duplicate in-site term explorer path\nset WIDOCO as formal canonical reference path\n\n\n\n2026-02 — FSAR workflow alignment for SPSR\n\nclarified SPSR as a primary intake pathway for FSAR-oriented datasets\nadded SPSR links in standards/workflow pages\naligned package/intake guidance around salmon data package + wizard flow",
     "crumbs": [
       "Home",
       "Getting Started",
@@ -1207,7 +1219,7 @@
     "href": "cookbook/index.html#coming-next",
     "title": "Cookbook",
     "section": "Coming next",
-    "text": "Coming next\n\nSDEP validation troubleshooting\nControlled vocabulary request walkthrough\nPublication checklists by data class",
+    "text": "Coming next\n\nsalmon data package validation troubleshooting\nControlled vocabulary request walkthrough\nPublication checklists by data class",
     "crumbs": [
       "Home",
       "Cookbook",
@@ -1245,7 +1257,7 @@
     "href": "how_to_guides/fsar-data-standardization-workflow.html",
     "title": "FSAR Data Standardization Workflow",
     "section": "",
-    "text": "Use this workflow when preparing salmon datasets for Fisheries Science Advisory Report (FSAR) analysis, review, and operational intake.\nIf you want a concrete walkthrough, use the companion page: FSAR to SPSR: End-to-End Example.",
+    "text": "Use this workflow when preparing salmon datasets for Fisheries Science Advisory Report (FSAR) analysis, review, and operational SPSR intake.\nCanonical package specification (Markdown): Salmon data package specification\nIf you want a concrete walkthrough, use the companion page: FSAR to SPSR: End-to-End Example.",
     "crumbs": [
       "Home",
       "Common Workflows",
@@ -1277,11 +1289,11 @@
     ]
   },
   {
-    "objectID": "how_to_guides/fsar-data-standardization-workflow.html#step-3-build-an-sdep-package",
-    "href": "how_to_guides/fsar-data-standardization-workflow.html#step-3-build-an-sdep-package",
+    "objectID": "how_to_guides/fsar-data-standardization-workflow.html#step-3-build-a-salmon-data-package",
+    "href": "how_to_guides/fsar-data-standardization-workflow.html#step-3-build-a-salmon-data-package",
     "title": "FSAR Data Standardization Workflow",
-    "section": "Step 3 — Build an SDEP package",
-    "text": "Step 3 — Build an SDEP package\nUse the SDEP specification.\nAt minimum:\n\ndataset.csv\ntables.csv\ncolumn_dictionary.csv\ndata/*.csv\ncodes.csv (when categorical code lists apply)\n\nStarter assets:\n\nDownload minimal SDEP example (zip)\nBrowse template package files",
+    "section": "Step 3 — Build a salmon data package",
+    "text": "Step 3 — Build a salmon data package\nUse the salmon data package specification.\nAt minimum:\n\ndataset.csv\ntables.csv\ncolumn_dictionary.csv\ndata/*.csv\ncodes.csv (when categorical code lists apply)\n\nStarter assets:\n\nDownload minimal salmon data package example (zip)\nBrowse template package files",
     "crumbs": [
       "Home",
       "Common Workflows",
@@ -1293,7 +1305,7 @@
     "href": "how_to_guides/fsar-data-standardization-workflow.html#step-4-validate-package-quality",
     "title": "FSAR Data Standardization Workflow",
     "section": "Step 4 — Validate package quality",
-    "text": "Step 4 — Validate package quality\nRun structural and semantic checks before submission.\nExample R checks:\nlibrary(metasalmon)\n\npkg_path &lt;- \"path/to/your/sdep-package\"\n\nvalidate_dictionary(file.path(pkg_path, \"column_dictionary.csv\"))\nvalidate_semantics(file.path(pkg_path, \"column_dictionary.csv\"))",
+    "text": "Step 4 — Validate package quality\nRun structural and semantic checks before submission.\nExample R checks:\nlibrary(metasalmon)\n\npkg_path &lt;- \"path/to/your/salmon-data-package\"\n\nvalidate_dictionary(file.path(pkg_path, \"column_dictionary.csv\"))\nvalidate_semantics(file.path(pkg_path, \"column_dictionary.csv\"))",
     "crumbs": [
       "Home",
       "Common Workflows",
@@ -1301,11 +1313,11 @@
     ]
   },
   {
-    "objectID": "how_to_guides/fsar-data-standardization-workflow.html#step-5-prepare-spsr-upload-files-fsar-priority-path",
-    "href": "how_to_guides/fsar-data-standardization-workflow.html#step-5-prepare-spsr-upload-files-fsar-priority-path",
+    "objectID": "how_to_guides/fsar-data-standardization-workflow.html#step-5-align-to-current-spsr-intake-direction-cuyear-first",
+    "href": "how_to_guides/fsar-data-standardization-workflow.html#step-5-align-to-current-spsr-intake-direction-cuyear-first",
     "title": "FSAR Data Standardization Workflow",
-    "section": "Step 5 — Prepare SPSR upload files (FSAR priority path)",
-    "text": "Step 5 — Prepare SPSR upload files (FSAR priority path)\nFor FSAR-oriented contributions, SPSR is a major operational intake target.\n\nConfirm column names and metadata are consistent with your selected SPSR intake profile.\nEnsure provenance notes are explicit for transformed/derived values.\nKeep the package and upload files versioned together.\n\nUseful SPSR references:\n\nRepo: https://github.com/dfo-pacific-science/salmon-population-summary-repository\nApp docs: https://spsr.dfo-mpo.gc.ca/documentation/\nUpload wizard: https://spsr.dfo-mpo.gc.ca/wizard/1/\nTemplates endpoint: https://spsr.dfo-mpo.gc.ca/download_sdp_templates",
+    "section": "Step 5 — Align to current SPSR intake direction (CUYear-first)",
+    "text": "Step 5 — Align to current SPSR intake direction (CUYear-first)\nBased on current SPSR execution direction, prepare uploads as one unified CU-year intake path:\n\nStart from current SPSR templates: https://spsr.dfo-mpo.gc.ca/download_sdp_templates\nTreat WSP CU assessment fields as the canonical status/benchmark layer.\nKeep FSAR fishery fields (catch, age, exploitation, etc.) as complementary data on the same CU-year pathway.\nDo not assume equivalence for similarly named fields (for example, FSAR TOTAL_SPAWNERS vs WSP SpnForAbd_Total); document mapping assumptions explicitly.\nKeep provenance explicit for transformed/derived values (for example, data source, year type, and method notes where applicable).\nKeep package metadata and upload CSV(s) versioned together.\n\nUseful SPSR references:\n\nRepo: https://github.com/dfo-pacific-science/salmon-population-summary-repository\nApp docs: https://spsr.dfo-mpo.gc.ca/documentation/\nUpload wizard: https://spsr.dfo-mpo.gc.ca/wizard/1/",
     "crumbs": [
       "Home",
       "Common Workflows",
@@ -1317,7 +1329,7 @@
     "href": "how_to_guides/fsar-data-standardization-workflow.html#step-6-upload-and-review-in-spsr",
     "title": "FSAR Data Standardization Workflow",
     "section": "Step 6 — Upload and review in SPSR",
-    "text": "Step 6 — Upload and review in SPSR\n\nUpload via SPSR wizard.\nResolve validation feedback.\nRe-upload if needed until intake checks are clean.\nRecord upload metadata/version in your project notes.",
+    "text": "Step 6 — Upload and review in SPSR\n\nUpload via SPSR wizard.\nResolve validation feedback.\nRe-upload if needed until intake checks are clean.\nRecord accepted upload version, intake date, and any profile-specific notes.",
     "crumbs": [
       "Home",
       "Common Workflows",
@@ -1341,7 +1353,7 @@
     "href": "how_to_guides/fsar-data-standardization-workflow.html#fsar-readiness-checklist",
     "title": "FSAR Data Standardization Workflow",
     "section": "FSAR readiness checklist",
-    "text": "FSAR readiness checklist\n\nScope and classification confirmed\nVocabulary mappings documented with full IRIs\nSDEP files completed and validated\nSPSR upload completed (or intake exceptions documented)\nExternal publication requirements completed (if applicable)",
+    "text": "FSAR readiness checklist\n\nScope and classification confirmed\nVocabulary mappings documented with full IRIs\nSalmon data package files completed and validated\nSPSR template-aligned upload files prepared and submitted\nIntake assumptions/provenance notes archived\nExternal publication requirements completed (if applicable)",
     "crumbs": [
       "Home",
       "Common Workflows",
@@ -1437,7 +1449,7 @@
     "href": "index.html",
     "title": "FADS Open Science Hub 🐟💾",
     "section": "",
-    "text": "Fisheries & Assessment Data Section\n  \n  \n    Use this hub to standardize data, package it correctly, and publish with confidence.\n  \n  \n    Start with the Semantic Salmon System\n    Run the FSAR workflow\n    Browse ontology documentation\n  \n\n\n\n\n  \n    \n    Follow the canonical sequence: ontology → SDEP → metasalmon → Salmon Data GPT → SPSR.\n  \n  \n    \n    Follow the end-to-end workflow with validation and packaging checkpoints.\n  \n  \n    \n    Use the canonical WIDOCO site for classes, properties, and term identifiers.\n  \n  \n    \n    Use the Salmon Data Exchange Package specification and starter artifacts.\n  \n  \n    \n    Review publishing pathways and open science guidance for external release.\n  \n\n\n\n\n\n  \n    Start Here\n    \n    Get the full end-to-end sequence front and center before diving into details.\n  \n  \n    Workflow\n    \n    Move from source data through validation and packaging with a practical, end-to-end checklist.\n  \n  \n    Publishing\n    \n    Choose publication routes and prepare outputs aligned with open science constraints.\n  \n\n\n\n\n\nFSAR to SPSR: End-to-End ExampleHow-to · Published 2026-02-20 · Updated 2026-02-20 · 1 min readStandards & Workflow ChangelogReference · Published 2026-02-20 · Updated 2026-02-20 · 2 min readIRI and Identifier Policy (Practical)Reference · Published 2026-02-20 · Updated 2026-02-20 · 1 min readSemantic Salmon System — Start HereReference · Published 2026-02-20 · Updated 2026-02-20 · 1 min readClass vs SKOS Concept: Decision TreeReference · Published 2026-02-20 · Updated 2026-02-20 · 1 min readFull Conventions (Canonical Source)Reference · Published 2026-02-20 · Updated 2026-02-20 · 1 min read\n\n\n\n\n\n\nGC DFO Salmon Ontology88 views\n\n\nFSAR Data Standardization Workflow79 views\n\n\nSalmon Data Exchange Package65 views\n\n\nPublishing Data Externally57 views\n\n\nOpen Government Portal with R44 views\n\n\n\n\n\nScroll and scan everything in one place, or filter by title/type with the quick search box.\n\n  \n  \n    All\n    How-to\n    Reference\n    Tutorial\n    Deep dive\n    Cookbook\n    News\n  \n\n\n\n  \n    \n      \n        Title\n        Type\n        Published\n        Updated\n        Read time\n      \n    \n    \n\n\nFSAR to SPSR: End-to-End Example\n\n\nHow-to\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nStandards & Workflow Changelog\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n2 min\n\n\n\n\nIRI and Identifier Policy (Practical)\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nSemantic Salmon System — Start Here\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nClass vs SKOS Concept: Decision Tree\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nFull Conventions (Canonical Source)\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nOntology Conventions Guidebook\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nOWL Classes\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nOWL Properties\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nProvenance and Maintenance\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nQuick Reference\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nSchema vs Data (TBox vs ABox)\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nSKOS Vocabularies\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nHow to Request a New Ontology Term\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nFSAR Data Standardization Workflow\n\n\nHow-to\n\n\n2026-02-17\n\n\n2026-02-20\n\n\n2 min\n\n\n\n\nSDEP + SPSR Intake Path\n\n\nReference\n\n\n2026-02-17\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nNews & Updates\n\n\nNews\n\n\n2026-02-17\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nThe Semantic Salmon Data Ecosystem\n\n\nReference\n\n\n2026-02-11\n\n\n2026-02-20\n\n\n2 min\n\n\n\n\nIntegrate Data\n\n\nReference\n\n\n2026-02-09\n\n\n2026-02-20\n\n\n2 min\n\n\n\n\nPublish Your Data\n\n\nReference\n\n\n2026-02-09\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nStandardize Your Data\n\n\nReference\n\n\n2026-02-09\n\n\n2026-02-20\n\n\n2 min\n\n\n\n\nSalmon Data Standards Hub\n\n\nReference\n\n\n2025-12-16\n\n\n2026-02-20\n\n\n2 min\n\n\n\n\nSalmon Data Exchange Package Specification\n\n\nReference\n\n\n2025-12-08\n\n\n2026-02-20\n\n\n8 min\n\n\n\n\nGC DFO Salmon Ontology\n\n\nReference\n\n\n2025-11-04\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nDarwin Core, GBIF, and OBIS Reference Guide\n\n\nReference\n\n\n2025-04-10\n\n\n2026-02-20\n\n\n2 min\n\n\n\n\nControlled Vocabulary Governance Workflow\n\n\nTutorial\n\n\n2025-04-10\n\n\n2026-02-20\n\n\n2 min\n\n\n\n\nR Packages\n\n\nReference\n\n\n2025-06-06\n\n\n2026-02-18\n\n\n1 min\n\n\n\n\nGlossary & Acronyms\n\n\nReference\n\n\n2026-02-17\n\n\n2026-02-17\n\n\n1 min\n\n\n\n\nCookbook\n\n\nCookbook\n\n\n2026-02-17\n\n\n2026-02-17\n\n\n1 min\n\n\n\n\nFisheries Science Reports – Data and Stats 101\n\n\nDeep dive\n\n\n2025-06-16\n\n\n2026-02-09\n\n\n5 min\n\n\n\n\nConnect to the Azure Lakehouse from R\n\n\nHow-to\n\n\n2025-03-13\n\n\n2025-10-03\n\n\n7 min\n\n\n\n\nAccessing Spatial Data from the Open Government Portal\n\n\nHow-to\n\n\n2025-08-11\n\n\n2025-08-11\n\n\n6 min\n\n\n\n\nData Practices for Open Science – 3 Quick Tips\n\n\nReference\n\n\n2025-07-23\n\n\n2025-07-23\n\n\n3 min\n\n\n\n\nAccess Data in SharePoint from R\n\n\nHow-to\n\n\n2025-03-31\n\n\n2025-06-09\n\n\n2 min\n\n\n\n\nHosting Data and Code\n\n\nReference\n\n\n2025-04-04\n\n\n2025-04-04\n\n\n4 min\n\n\n    \n  \n\n\n\n\n↩︎️ Return to the Internal FADS SharePoint Wiki",
+    "text": "Fisheries & Assessment Data Section\n  \n  \n    Use this hub to standardize data, package it correctly, and publish with confidence.\n  \n  \n    Start with the Semantic Salmon System\n    Run the FSAR workflow\n    Browse ontology documentation\n  \n\n\n\n\n  \n    \n    Follow the canonical sequence: ontology → salmon data package → metasalmon → Salmon Data GPT → SPSR.\n  \n  \n    \n    Follow the end-to-end workflow with validation and packaging checkpoints.\n  \n  \n    \n    Use the canonical WIDOCO site for classes, properties, and term identifiers.\n  \n  \n    \n    Use the salmon data package specification and starter artifacts.\n  \n  \n    \n    Review publishing pathways and open science guidance for external release.\n  \n\n\n\n\n\n  \n    Start Here\n    \n    Get the full end-to-end sequence front and center before diving into details.\n  \n  \n    Workflow\n    \n    Move from source data through validation and packaging with a practical, end-to-end checklist.\n  \n  \n    Publishing\n    \n    Choose publication routes and prepare outputs aligned with open science constraints.\n  \n\n\n\n\n\nFSAR to SPSR: End-to-End ExampleHow-to · Published 2026-02-20 · Updated 2026-02-25 · 1 min readStandards & Workflow ChangelogReference · Published 2026-02-20 · Updated 2026-02-25 · 2 min readIRI and Identifier Policy (Practical)Reference · Published 2026-02-20 · Updated 2026-02-25 · 1 min readSemantic Salmon System — Start HereReference · Published 2026-02-20 · Updated 2026-02-25 · 1 min readProvenance and MaintenanceReference · Published 2026-02-20 · Updated 2026-02-25 · 1 min readSchema vs Data (TBox vs ABox)Reference · Published 2026-02-20 · Updated 2026-02-25 · 1 min read\n\n\n\n\n\n\nGC DFO Salmon Ontology88 views\n\n\nFSAR Data Standardization Workflow79 views\n\n\nSalmon data package specification65 views\n\n\nPublishing Data Externally57 views\n\n\nOpen Government Portal with R44 views\n\n\n\n\n\nScroll and scan everything in one place, or filter by title/type with the quick search box.\n\n  \n  \n    All\n    How-to\n    Reference\n    Tutorial\n    Deep dive\n    Cookbook\n    News\n  \n\n\n\n  \n    \n      \n        Title\n        Type\n        Published\n        Updated\n        Read time\n      \n    \n    \n\n\nFSAR to SPSR: End-to-End Example\n\n\nHow-to\n\n\n2026-02-20\n\n\n2026-02-25\n\n\n1 min\n\n\n\n\nStandards & Workflow Changelog\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-25\n\n\n2 min\n\n\n\n\nIRI and Identifier Policy (Practical)\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-25\n\n\n1 min\n\n\n\n\nSemantic Salmon System — Start Here\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-25\n\n\n1 min\n\n\n\n\nProvenance and Maintenance\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-25\n\n\n1 min\n\n\n\n\nSchema vs Data (TBox vs ABox)\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-25\n\n\n1 min\n\n\n\n\nHow to Request a New Ontology Term\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-25\n\n\n1 min\n\n\n\n\nFSAR Data Standardization Workflow\n\n\nHow-to\n\n\n2026-02-17\n\n\n2026-02-25\n\n\n2 min\n\n\n\n\nSalmon data package + SPSR intake path\n\n\nReference\n\n\n2026-02-17\n\n\n2026-02-25\n\n\n1 min\n\n\n\n\nGlossary & Acronyms\n\n\nReference\n\n\n2026-02-17\n\n\n2026-02-25\n\n\n1 min\n\n\n\n\nCookbook\n\n\nCookbook\n\n\n2026-02-17\n\n\n2026-02-25\n\n\n1 min\n\n\n\n\nNews & Updates\n\n\nNews\n\n\n2026-02-17\n\n\n2026-02-25\n\n\n1 min\n\n\n\n\nThe Semantic Salmon Data Ecosystem\n\n\nReference\n\n\n2026-02-11\n\n\n2026-02-25\n\n\n2 min\n\n\n\n\nIntegrate Data\n\n\nReference\n\n\n2026-02-09\n\n\n2026-02-25\n\n\n2 min\n\n\n\n\nPublish Your Data\n\n\nReference\n\n\n2026-02-09\n\n\n2026-02-25\n\n\n1 min\n\n\n\n\nStandardize Your Data\n\n\nReference\n\n\n2026-02-09\n\n\n2026-02-25\n\n\n2 min\n\n\n\n\nSalmon Data Standards Hub\n\n\nReference\n\n\n2025-12-16\n\n\n2026-02-25\n\n\n2 min\n\n\n\n\nSalmon data package specification\n\n\nReference\n\n\n2025-12-08\n\n\n2026-02-25\n\n\n8 min\n\n\n\n\nControlled Vocabulary Governance Workflow\n\n\nTutorial\n\n\n2025-04-10\n\n\n2026-02-25\n\n\n2 min\n\n\n\n\nClass vs SKOS Concept: Decision Tree\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nFull Conventions (Canonical Source)\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nOntology Conventions Guidebook\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nOWL Classes\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nOWL Properties\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nQuick Reference\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nSKOS Vocabularies\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nGC DFO Salmon Ontology\n\n\nReference\n\n\n2025-11-04\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nDarwin Core, GBIF, and OBIS Reference Guide\n\n\nReference\n\n\n2025-04-10\n\n\n2026-02-20\n\n\n2 min\n\n\n\n\nR Packages\n\n\nReference\n\n\n2025-06-06\n\n\n2026-02-18\n\n\n1 min\n\n\n\n\nFisheries Science Reports – Data and Stats 101\n\n\nDeep dive\n\n\n2025-06-16\n\n\n2026-02-09\n\n\n5 min\n\n\n\n\nConnect to the Azure Lakehouse from R\n\n\nHow-to\n\n\n2025-03-13\n\n\n2025-10-03\n\n\n7 min\n\n\n\n\nAccessing Spatial Data from the Open Government Portal\n\n\nHow-to\n\n\n2025-08-11\n\n\n2025-08-11\n\n\n6 min\n\n\n\n\nData Practices for Open Science – 3 Quick Tips\n\n\nReference\n\n\n2025-07-23\n\n\n2025-07-23\n\n\n3 min\n\n\n\n\nAccess Data in SharePoint from R\n\n\nHow-to\n\n\n2025-03-31\n\n\n2025-06-09\n\n\n2 min\n\n\n\n\nHosting Data and Code\n\n\nReference\n\n\n2025-04-04\n\n\n2025-04-04\n\n\n4 min\n\n\n    \n  \n\n\n\n\n↩︎️ Return to the Internal FADS SharePoint Wiki",
     "crumbs": [
       "Home"
     ]
@@ -1447,7 +1459,7 @@
     "href": "index.html#start-by-goal",
     "title": "FADS Open Science Hub 🐟💾",
     "section": "",
-    "text": "Follow the canonical sequence: ontology → SDEP → metasalmon → Salmon Data GPT → SPSR.\n  \n  \n    \n    Follow the end-to-end workflow with validation and packaging checkpoints.\n  \n  \n    \n    Use the canonical WIDOCO site for classes, properties, and term identifiers.\n  \n  \n    \n    Use the Salmon Data Exchange Package specification and starter artifacts.\n  \n  \n    \n    Review publishing pathways and open science guidance for external release.",
+    "text": "Follow the canonical sequence: ontology → salmon data package → metasalmon → Salmon Data GPT → SPSR.\n  \n  \n    \n    Follow the end-to-end workflow with validation and packaging checkpoints.\n  \n  \n    \n    Use the canonical WIDOCO site for classes, properties, and term identifiers.\n  \n  \n    \n    Use the salmon data package specification and starter artifacts.\n  \n  \n    \n    Review publishing pathways and open science guidance for external release.",
     "crumbs": [
       "Home"
     ]
@@ -1467,7 +1479,7 @@
     "href": "index.html#latest-updates",
     "title": "FADS Open Science Hub 🐟💾",
     "section": "",
-    "text": "FSAR to SPSR: End-to-End ExampleHow-to · Published 2026-02-20 · Updated 2026-02-20 · 1 min readStandards & Workflow ChangelogReference · Published 2026-02-20 · Updated 2026-02-20 · 2 min readIRI and Identifier Policy (Practical)Reference · Published 2026-02-20 · Updated 2026-02-20 · 1 min readSemantic Salmon System — Start HereReference · Published 2026-02-20 · Updated 2026-02-20 · 1 min readClass vs SKOS Concept: Decision TreeReference · Published 2026-02-20 · Updated 2026-02-20 · 1 min readFull Conventions (Canonical Source)Reference · Published 2026-02-20 · Updated 2026-02-20 · 1 min read",
+    "text": "FSAR to SPSR: End-to-End ExampleHow-to · Published 2026-02-20 · Updated 2026-02-25 · 1 min readStandards & Workflow ChangelogReference · Published 2026-02-20 · Updated 2026-02-25 · 2 min readIRI and Identifier Policy (Practical)Reference · Published 2026-02-20 · Updated 2026-02-25 · 1 min readSemantic Salmon System — Start HereReference · Published 2026-02-20 · Updated 2026-02-25 · 1 min readProvenance and MaintenanceReference · Published 2026-02-20 · Updated 2026-02-25 · 1 min readSchema vs Data (TBox vs ABox)Reference · Published 2026-02-20 · Updated 2026-02-25 · 1 min read",
     "crumbs": [
       "Home"
     ]
@@ -1477,7 +1489,7 @@
     "href": "index.html#most-read-this-week",
     "title": "FADS Open Science Hub 🐟💾",
     "section": "",
-    "text": "GC DFO Salmon Ontology88 views\n\n\nFSAR Data Standardization Workflow79 views\n\n\nSalmon Data Exchange Package65 views\n\n\nPublishing Data Externally57 views\n\n\nOpen Government Portal with R44 views",
+    "text": "GC DFO Salmon Ontology88 views\n\n\nFSAR Data Standardization Workflow79 views\n\n\nSalmon data package specification65 views\n\n\nPublishing Data Externally57 views\n\n\nOpen Government Portal with R44 views",
     "crumbs": [
       "Home"
     ]
@@ -1487,7 +1499,7 @@
     "href": "index.html#browse-all-articles",
     "title": "FADS Open Science Hub 🐟💾",
     "section": "",
-    "text": "Scroll and scan everything in one place, or filter by title/type with the quick search box.\n\n  \n  \n    All\n    How-to\n    Reference\n    Tutorial\n    Deep dive\n    Cookbook\n    News\n  \n\n\n\n  \n    \n      \n        Title\n        Type\n        Published\n        Updated\n        Read time\n      \n    \n    \n\n\nFSAR to SPSR: End-to-End Example\n\n\nHow-to\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nStandards & Workflow Changelog\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n2 min\n\n\n\n\nIRI and Identifier Policy (Practical)\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nSemantic Salmon System — Start Here\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nClass vs SKOS Concept: Decision Tree\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nFull Conventions (Canonical Source)\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nOntology Conventions Guidebook\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nOWL Classes\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nOWL Properties\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nProvenance and Maintenance\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nQuick Reference\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nSchema vs Data (TBox vs ABox)\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nSKOS Vocabularies\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nHow to Request a New Ontology Term\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nFSAR Data Standardization Workflow\n\n\nHow-to\n\n\n2026-02-17\n\n\n2026-02-20\n\n\n2 min\n\n\n\n\nSDEP + SPSR Intake Path\n\n\nReference\n\n\n2026-02-17\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nNews & Updates\n\n\nNews\n\n\n2026-02-17\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nThe Semantic Salmon Data Ecosystem\n\n\nReference\n\n\n2026-02-11\n\n\n2026-02-20\n\n\n2 min\n\n\n\n\nIntegrate Data\n\n\nReference\n\n\n2026-02-09\n\n\n2026-02-20\n\n\n2 min\n\n\n\n\nPublish Your Data\n\n\nReference\n\n\n2026-02-09\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nStandardize Your Data\n\n\nReference\n\n\n2026-02-09\n\n\n2026-02-20\n\n\n2 min\n\n\n\n\nSalmon Data Standards Hub\n\n\nReference\n\n\n2025-12-16\n\n\n2026-02-20\n\n\n2 min\n\n\n\n\nSalmon Data Exchange Package Specification\n\n\nReference\n\n\n2025-12-08\n\n\n2026-02-20\n\n\n8 min\n\n\n\n\nGC DFO Salmon Ontology\n\n\nReference\n\n\n2025-11-04\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nDarwin Core, GBIF, and OBIS Reference Guide\n\n\nReference\n\n\n2025-04-10\n\n\n2026-02-20\n\n\n2 min\n\n\n\n\nControlled Vocabulary Governance Workflow\n\n\nTutorial\n\n\n2025-04-10\n\n\n2026-02-20\n\n\n2 min\n\n\n\n\nR Packages\n\n\nReference\n\n\n2025-06-06\n\n\n2026-02-18\n\n\n1 min\n\n\n\n\nGlossary & Acronyms\n\n\nReference\n\n\n2026-02-17\n\n\n2026-02-17\n\n\n1 min\n\n\n\n\nCookbook\n\n\nCookbook\n\n\n2026-02-17\n\n\n2026-02-17\n\n\n1 min\n\n\n\n\nFisheries Science Reports – Data and Stats 101\n\n\nDeep dive\n\n\n2025-06-16\n\n\n2026-02-09\n\n\n5 min\n\n\n\n\nConnect to the Azure Lakehouse from R\n\n\nHow-to\n\n\n2025-03-13\n\n\n2025-10-03\n\n\n7 min\n\n\n\n\nAccessing Spatial Data from the Open Government Portal\n\n\nHow-to\n\n\n2025-08-11\n\n\n2025-08-11\n\n\n6 min\n\n\n\n\nData Practices for Open Science – 3 Quick Tips\n\n\nReference\n\n\n2025-07-23\n\n\n2025-07-23\n\n\n3 min\n\n\n\n\nAccess Data in SharePoint from R\n\n\nHow-to\n\n\n2025-03-31\n\n\n2025-06-09\n\n\n2 min\n\n\n\n\nHosting Data and Code\n\n\nReference\n\n\n2025-04-04\n\n\n2025-04-04\n\n\n4 min\n\n\n    \n  \n\n\n\n\n↩︎️ Return to the Internal FADS SharePoint Wiki",
+    "text": "Scroll and scan everything in one place, or filter by title/type with the quick search box.\n\n  \n  \n    All\n    How-to\n    Reference\n    Tutorial\n    Deep dive\n    Cookbook\n    News\n  \n\n\n\n  \n    \n      \n        Title\n        Type\n        Published\n        Updated\n        Read time\n      \n    \n    \n\n\nFSAR to SPSR: End-to-End Example\n\n\nHow-to\n\n\n2026-02-20\n\n\n2026-02-25\n\n\n1 min\n\n\n\n\nStandards & Workflow Changelog\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-25\n\n\n2 min\n\n\n\n\nIRI and Identifier Policy (Practical)\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-25\n\n\n1 min\n\n\n\n\nSemantic Salmon System — Start Here\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-25\n\n\n1 min\n\n\n\n\nProvenance and Maintenance\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-25\n\n\n1 min\n\n\n\n\nSchema vs Data (TBox vs ABox)\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-25\n\n\n1 min\n\n\n\n\nHow to Request a New Ontology Term\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-25\n\n\n1 min\n\n\n\n\nFSAR Data Standardization Workflow\n\n\nHow-to\n\n\n2026-02-17\n\n\n2026-02-25\n\n\n2 min\n\n\n\n\nSalmon data package + SPSR intake path\n\n\nReference\n\n\n2026-02-17\n\n\n2026-02-25\n\n\n1 min\n\n\n\n\nGlossary & Acronyms\n\n\nReference\n\n\n2026-02-17\n\n\n2026-02-25\n\n\n1 min\n\n\n\n\nCookbook\n\n\nCookbook\n\n\n2026-02-17\n\n\n2026-02-25\n\n\n1 min\n\n\n\n\nNews & Updates\n\n\nNews\n\n\n2026-02-17\n\n\n2026-02-25\n\n\n1 min\n\n\n\n\nThe Semantic Salmon Data Ecosystem\n\n\nReference\n\n\n2026-02-11\n\n\n2026-02-25\n\n\n2 min\n\n\n\n\nIntegrate Data\n\n\nReference\n\n\n2026-02-09\n\n\n2026-02-25\n\n\n2 min\n\n\n\n\nPublish Your Data\n\n\nReference\n\n\n2026-02-09\n\n\n2026-02-25\n\n\n1 min\n\n\n\n\nStandardize Your Data\n\n\nReference\n\n\n2026-02-09\n\n\n2026-02-25\n\n\n2 min\n\n\n\n\nSalmon Data Standards Hub\n\n\nReference\n\n\n2025-12-16\n\n\n2026-02-25\n\n\n2 min\n\n\n\n\nSalmon data package specification\n\n\nReference\n\n\n2025-12-08\n\n\n2026-02-25\n\n\n8 min\n\n\n\n\nControlled Vocabulary Governance Workflow\n\n\nTutorial\n\n\n2025-04-10\n\n\n2026-02-25\n\n\n2 min\n\n\n\n\nClass vs SKOS Concept: Decision Tree\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nFull Conventions (Canonical Source)\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nOntology Conventions Guidebook\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nOWL Classes\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nOWL Properties\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nQuick Reference\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nSKOS Vocabularies\n\n\nReference\n\n\n2026-02-20\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nGC DFO Salmon Ontology\n\n\nReference\n\n\n2025-11-04\n\n\n2026-02-20\n\n\n1 min\n\n\n\n\nDarwin Core, GBIF, and OBIS Reference Guide\n\n\nReference\n\n\n2025-04-10\n\n\n2026-02-20\n\n\n2 min\n\n\n\n\nR Packages\n\n\nReference\n\n\n2025-06-06\n\n\n2026-02-18\n\n\n1 min\n\n\n\n\nFisheries Science Reports – Data and Stats 101\n\n\nDeep dive\n\n\n2025-06-16\n\n\n2026-02-09\n\n\n5 min\n\n\n\n\nConnect to the Azure Lakehouse from R\n\n\nHow-to\n\n\n2025-03-13\n\n\n2025-10-03\n\n\n7 min\n\n\n\n\nAccessing Spatial Data from the Open Government Portal\n\n\nHow-to\n\n\n2025-08-11\n\n\n2025-08-11\n\n\n6 min\n\n\n\n\nData Practices for Open Science – 3 Quick Tips\n\n\nReference\n\n\n2025-07-23\n\n\n2025-07-23\n\n\n3 min\n\n\n\n\nAccess Data in SharePoint from R\n\n\nHow-to\n\n\n2025-03-31\n\n\n2025-06-09\n\n\n2 min\n\n\n\n\nHosting Data and Code\n\n\nReference\n\n\n2025-04-04\n\n\n2025-04-04\n\n\n4 min\n\n\n    \n  \n\n\n\n\n↩︎️ Return to the Internal FADS SharePoint Wiki",
     "crumbs": [
       "Home"
     ]
@@ -1509,7 +1521,7 @@
     "href": "reference_info/data_standards/index.html#start-here-common-tasks",
     "title": "Salmon Data Standards Hub",
     "section": "Start here (common tasks)",
-    "text": "Start here (common tasks)\n\nI need the full system path first → Semantic Salmon System — Start Here\nI need to prepare data for an FSAR → FSAR Data Standardization Workflow\nI need to submit FSAR data to SPSR → FSAR to SPSR: End-to-End Example and SDEP + SPSR Intake Path\nI need standard terms and definitions → GC DFO Salmon Ontology documentation\nI need package structure/spec details → Salmon Data Exchange Package Specification\nI need practical identifier rules → IRI and Identifier Policy\nI need to understand how ontology + SDEP + tools fit together → Semantic Salmon Data Ecosystem\nI need to publish data → Publish Your Data and Publishing Data Externally\nI need recent changes/status → Standards & Workflow Changelog",
+    "text": "Start here (common tasks)\n\nI need the full system path first → Semantic Salmon System — Start Here\nI need to prepare data for an FSAR → FSAR Data Standardization Workflow\nI need to submit FSAR data to SPSR → FSAR to SPSR: End-to-End Example and Salmon data package + SPSR intake path\nI need standard terms and definitions → GC DFO Salmon Ontology documentation\nI need package structure/spec details → Salmon data package specification\nI need canonical markdown spec source → https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md\nI need practical identifier rules → IRI and Identifier Policy\nI need to understand how ontology + salmon data package + tools fit together → Semantic Salmon Data Ecosystem\nI need to publish data → Publish Your Data and Publishing Data Externally\nI need recent changes/status → Standards & Workflow Changelog",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
@@ -1521,7 +1533,7 @@
     "href": "reference_info/data_standards/index.html#start-by-role",
     "title": "Salmon Data Standards Hub",
     "section": "Start by role",
-    "text": "Start by role\n\nData producer (scientist/analyst)\n\nStandardize Your Data\nIntegrate Data\nFSAR to SPSR: End-to-End Example\n\nOntology contributor\n\nOntology Conventions Guidebook\nClass vs SKOS Decision Tree\nHow to Request a New Ontology Term\n\nData steward/reviewer\n\nSDEP + SPSR Intake Path\nIRI and Identifier Policy\nPublishing Data Externally",
+    "text": "Start by role\n\nData producer (scientist/analyst)\n\nStandardize Your Data\nIntegrate Data\nFSAR to SPSR: End-to-End Example\n\nOntology contributor\n\nOntology Conventions Guidebook\nClass vs SKOS Decision Tree\nHow to Request a New Ontology Term\n\nData steward/reviewer\n\nSalmon data package + SPSR intake path\nIRI and Identifier Policy\nPublishing Data Externally",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
@@ -1533,7 +1545,7 @@
     "href": "reference_info/data_standards/index.html#standards-map",
     "title": "Salmon Data Standards Hub",
     "section": "Standards map",
-    "text": "Standards map\n\n1) Controlled vocabularies and ontology\nUse these to anchor variable meaning to shared definitions and stable IRIs.\n\nGC DFO Salmon Ontology documentation\nOntology Conventions Guidebook\nClass vs SKOS Decision Tree\nHow to Request a New Ontology Term\n\n\n\n2) Package your dataset with SDEP\nUse SDEP metadata files to describe your dataset, tables, columns, and controlled codes.\n\nSalmon Data Exchange Package Specification\nIRI and Identifier Policy\nSDEP + SPSR Intake Path\n\n\n\n3) Use implementation workflows\n\nStandardize Your Data\nIntegrate Data\nFSAR Data Standardization Workflow\nFSAR to SPSR: End-to-End Example\n\n\n\n4) Track what changed\n\nStandards & Workflow Changelog",
+    "text": "Standards map\n\n1) Controlled vocabularies and ontology\nUse these to anchor variable meaning to shared definitions and stable IRIs.\n\nGC DFO Salmon Ontology documentation\nOntology Conventions Guidebook\nClass vs SKOS Decision Tree\nHow to Request a New Ontology Term\n\n\n\n2) Package your dataset with a salmon data package\nUse salmon data package metadata files to describe your dataset, tables, columns, and controlled codes.\n\nSalmon data package specification\nIRI and Identifier Policy\nSalmon data package + SPSR intake path\n\n\n\n3) Use implementation workflows\n\nStandardize Your Data\nIntegrate Data\nFSAR Data Standardization Workflow\nFSAR to SPSR: End-to-End Example\n\n\n\n4) Track what changed\n\nStandards & Workflow Changelog",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
@@ -1545,7 +1557,7 @@
     "href": "reference_info/data_standards/index.html#downloadable-starter-template",
     "title": "Salmon Data Standards Hub",
     "section": "Downloadable starter template",
-    "text": "Downloadable starter template\nA minimal starter package is available here:\n\nDownload minimal SDEP example (zip)\nBrowse example files in repo",
+    "text": "Downloadable starter template\nA minimal starter package is available here:\n\nDownload minimal salmon data package example (zip)\nBrowse example files in repo",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
@@ -1629,7 +1641,7 @@
     "href": "reference_info/data_standards/iri-identifier-policy.html#why-this-matters",
     "title": "IRI and Identifier Policy (Practical)",
     "section": "Why this matters",
-    "text": "Why this matters\nConsistent full IRIs reduce ambiguity and make SDEP validation, SPSR intake, and downstream integration more reliable.",
+    "text": "Why this matters\nConsistent full IRIs reduce ambiguity and make salmon data package validation, SPSR intake, and downstream integration more reliable.",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
@@ -1653,7 +1665,7 @@
     "href": "reference_info/data_standards/publish-data.html#semantic-salmon-system-entry-path-front-and-center",
     "title": "Publish Your Data",
     "section": "Semantic Salmon System — entry path (front and center)",
-    "text": "Semantic Salmon System — entry path (front and center)\n\n  Before publishing, confirm this chain is complete\n  \n    DFO Salmon Ontology mappings are finalized\n    SDEP package metadata is complete\n    metasalmon validation is clean\n    Salmon Data GPT (optional) is used only to draft, not to bypass validation\n    SPSR intake is complete for FSAR-oriented workflows\n  \n\nQuick links:\n\nSemantic Salmon System — Start Here\nGC DFO Salmon Ontology documentation\nSalmon Data Exchange Package Specification\nSDEP + SPSR Intake Path\nFSAR to SPSR: End-to-End Example",
+    "text": "Semantic Salmon System — entry path (front and center)\n\n  Before publishing, confirm this chain is complete\n  \n    DFO Salmon Ontology mappings are finalized\n    Salmon data package metadata is complete\n    metasalmon validation is clean\n    Salmon Data GPT (optional) is used only to draft, not to bypass validation\n    SPSR intake is complete for FSAR-oriented workflows\n  \n\nQuick links:\n\nSemantic Salmon System — Start Here\nGC DFO Salmon Ontology documentation\nSalmon data package specification\nSalmon data package + SPSR intake path\nFSAR to SPSR: End-to-End Example",
     "crumbs": [
       "Home",
       "Common Workflows",
@@ -1665,7 +1677,7 @@
     "href": "reference_info/data_standards/publish-data.html#cookbook-guide",
     "title": "Publish Your Data",
     "section": "Cookbook Guide",
-    "text": "Cookbook Guide\n\n\nStep 1: Finalize Metadata\n\nEnsure your dataset has:\n\ncomplete data dictionary entries\nclear definitions and units\ncanonical full IRIs for mapped terms\ncontact + provenance + license details\n\n\n\n\nStep 2: Verify Semantic Links\n\nUse GC DFO Salmon Ontology documentation to verify that term IRIs are current and resolvable.\nExample row:\nvariable_name,label,data_type,definition,standard_term_iri\nCU,Conservation Unit,string,The conservation unit identifier,https://w3id.org/gcdfo/salmon#ConservationUnit\nDo not use partial URIs.\n\n\n\nStep 3: Build Release-Ready Package\n\nPrepare the package structure expected by your destination workflow:\n\ndataset.csv\ntables.csv\ncolumn_dictionary.csv\ncodes.csv (if needed)\ndata files in data/\n\nReference: Salmon Data Exchange Package Specification\n\n\n\nStep 4: Validate Before Submission\n\nRun validation checks before upload/publication:\n\nrequired fields complete\ndata types and date formats valid\ncode lists consistent\nall IRI links present and syntactically valid\n\n\n\n\nStep 5: Submit to SPSR for FSAR Workflows (when applicable)\n\nFor many FSAR-oriented datasets, SPSR is the operational intake path.\n\nSPSR docs: https://spsr.dfo-mpo.gc.ca/documentation/\nSPSR upload wizard: https://spsr.dfo-mpo.gc.ca/wizard/1/\nSPSR templates endpoint: https://spsr.dfo-mpo.gc.ca/download_sdp_templates\n\nUpload only after internal quality checks are complete.\n\n\n\nStep 6: Publish Externally (if approved)\n\nFor external/public release, follow policy and approval requirements:\n\nPublishing Data Externally\n\nKeep internal intake (e.g., SPSR) and external publication pathways clearly documented.",
+    "text": "Cookbook Guide\n\n\nStep 1: Finalize Metadata\n\nEnsure your dataset has:\n\ncomplete data dictionary entries\nclear definitions and units\ncanonical full IRIs for mapped terms\ncontact + provenance + license details\n\n\n\n\nStep 2: Verify Semantic Links\n\nUse GC DFO Salmon Ontology documentation to verify that term IRIs are current and resolvable.\nExample row:\nvariable_name,label,data_type,definition,standard_term_iri\nCU,Conservation Unit,string,The conservation unit identifier,https://w3id.org/gcdfo/salmon#ConservationUnit\nDo not use partial URIs.\n\n\n\nStep 3: Build Release-Ready Package\n\nPrepare the package structure expected by your destination workflow:\n\ndataset.csv\ntables.csv\ncolumn_dictionary.csv\ncodes.csv (if needed)\ndata files in data/\n\nReference: Salmon data package specification\n\n\n\nStep 4: Validate Before Submission\n\nRun validation checks before upload/publication:\n\nrequired fields complete\ndata types and date formats valid\ncode lists consistent\nall IRI links present and syntactically valid\n\n\n\n\nStep 5: Submit to SPSR for FSAR Workflows (when applicable)\n\nFor many FSAR-oriented datasets, SPSR is the operational intake path.\n\nSPSR docs: https://spsr.dfo-mpo.gc.ca/documentation/\nSPSR upload wizard: https://spsr.dfo-mpo.gc.ca/wizard/1/\nSPSR templates endpoint: https://spsr.dfo-mpo.gc.ca/download_sdp_templates\n\nUpload only after internal quality checks are complete.\n\n\n\nStep 6: Publish Externally (if approved)\n\nFor external/public release, follow policy and approval requirements:\n\nPublishing Data Externally\n\nKeep internal intake (e.g., SPSR) and external publication pathways clearly documented.",
     "crumbs": [
       "Home",
       "Common Workflows",
@@ -1677,7 +1689,7 @@
     "href": "reference_info/data_standards/publish-data.html#next-steps",
     "title": "Publish Your Data",
     "section": "Next Steps",
-    "text": "Next Steps\n\nFSAR Data Standardization Workflow\nSDEP + SPSR Intake Path\nPublishing Data Externally",
+    "text": "Next Steps\n\nFSAR Data Standardization Workflow\nSalmon data package + SPSR intake path\nPublishing Data Externally",
     "crumbs": [
       "Home",
       "Common Workflows",
@@ -1689,7 +1701,7 @@
     "href": "reference_info/data_standards/semantic-salmon-data-ecosystem.html",
     "title": "The Semantic Salmon Data Ecosystem",
     "section": "",
-    "text": "The Semantic Salmon Data Ecosystem (Semantic Salmon System) connects standards, ontology terms, package metadata, validation tooling, and operational upload pathways so salmon data can move from local analysis into reusable systems.\n\n  Canonical Architecture\n  Active Workflows\n  Contributor Guidance\n\n\n\n\n  \n    DFO Salmon Ontology — canonical semantics\n    SDEP — package metadata structure\n    metasalmon — validation and quality control\n    Salmon Data GPT — optional drafting/acceleration assistant\n    SPSR — operational intake path for many FSAR workflows\n  \n  Open the branded start page for this full path.\n\nAt a high level, the ecosystem has five working parts:\n\nDFO Salmon Ontology — canonical terms and semantics\nSDEP (Salmon Data Exchange Package) — structured metadata packaging\nValidation tooling (metasalmon, related checks) — quality control\nSPSR (Salmon Population Summary Repository) — intake and operational publishing path for many FSAR workflows\nSalmon Data GPT / guided assistants (optional) — acceleration layer for drafting mappings and metadata",
+    "text": "The Semantic Salmon Data Ecosystem (Semantic Salmon System) connects standards, ontology terms, package metadata, validation tooling, and operational upload pathways so salmon data can move from local analysis into reusable systems.\n\n  Canonical Architecture\n  Active Workflows\n  Contributor Guidance\n\n\n\n\n  \n    DFO Salmon Ontology — canonical semantics\n    Salmon data package — package metadata structure\n    metasalmon — validation and quality control\n    Salmon Data GPT — optional drafting/acceleration assistant\n    SPSR — operational intake path for many FSAR workflows\n  \n  Open the branded start page for this full path.\n\nAt a high level, the ecosystem has five working parts:\n\nDFO Salmon Ontology — canonical terms and semantics\nSalmon data package (SDP) — structured metadata packaging\nValidation tooling (metasalmon, related checks) — quality control\nSPSR (Salmon Population Summary Repository) — intake and operational publishing path for many FSAR workflows\nSalmon Data GPT / guided assistants (optional) — acceleration layer for drafting mappings and metadata",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
@@ -1701,7 +1713,7 @@
     "href": "reference_info/data_standards/semantic-salmon-data-ecosystem.html#entry-path-what-to-use-in-order",
     "title": "The Semantic Salmon Data Ecosystem",
     "section": "",
-    "text": "DFO Salmon Ontology — canonical semantics\n    SDEP — package metadata structure\n    metasalmon — validation and quality control\n    Salmon Data GPT — optional drafting/acceleration assistant\n    SPSR — operational intake path for many FSAR workflows\n  \n  Open the branded start page for this full path.\n\nAt a high level, the ecosystem has five working parts:\n\nDFO Salmon Ontology — canonical terms and semantics\nSDEP (Salmon Data Exchange Package) — structured metadata packaging\nValidation tooling (metasalmon, related checks) — quality control\nSPSR (Salmon Population Summary Repository) — intake and operational publishing path for many FSAR workflows\nSalmon Data GPT / guided assistants (optional) — acceleration layer for drafting mappings and metadata",
+    "text": "DFO Salmon Ontology — canonical semantics\n    Salmon data package — package metadata structure\n    metasalmon — validation and quality control\n    Salmon Data GPT — optional drafting/acceleration assistant\n    SPSR — operational intake path for many FSAR workflows\n  \n  Open the branded start page for this full path.\n\nAt a high level, the ecosystem has five working parts:\n\nDFO Salmon Ontology — canonical terms and semantics\nSalmon data package (SDP) — structured metadata packaging\nValidation tooling (metasalmon, related checks) — quality control\nSPSR (Salmon Population Summary Repository) — intake and operational publishing path for many FSAR workflows\nSalmon Data GPT / guided assistants (optional) — acceleration layer for drafting mappings and metadata",
     "crumbs": [
       "Home",
       "Standards & Vocabulary",
@@ -1725,7 +1737,7 @@
     "href": "reference_info/data_standards/standardize-data.html#semantic-salmon-system-entry-path-start-here",
     "title": "Standardize Your Data",
     "section": "Semantic Salmon System — entry path (start here)",
-    "text": "Semantic Salmon System — entry path (start here)\n\n  Use this 5-part system in order\n  \n    DFO Salmon Ontology for canonical term IRIs\n    SDEP for package metadata structure\n    metasalmon for validation checks\n    Salmon Data GPT as an optional drafting assistant\n    SPSR for operational FSAR intake\n  \n\nQuick links:\n\nSemantic Salmon System — Start Here\nGC DFO Salmon Ontology documentation\nSalmon Data Exchange Package Specification\nSDEP + SPSR Intake Path\nFSAR to SPSR: End-to-End Example",
+    "text": "Semantic Salmon System — entry path (start here)\n\n  Use this 5-part system in order\n  \n    DFO Salmon Ontology for canonical term IRIs\n    Salmon data package for package metadata structure\n    metasalmon for validation checks\n    Salmon Data GPT as an optional drafting assistant\n    SPSR for operational FSAR intake\n  \n\nQuick links:\n\nSemantic Salmon System — Start Here\nGC DFO Salmon Ontology documentation\nSalmon data package specification\nSalmon data package + SPSR intake path\nFSAR to SPSR: End-to-End Example",
     "crumbs": [
       "Home",
       "Common Workflows",
@@ -1749,7 +1761,7 @@
     "href": "reference_info/data_standards/standardize-data.html#next-steps",
     "title": "Standardize Your Data",
     "section": "Next Steps",
-    "text": "Next Steps\n\nSalmon Data Standards Hub\nSDEP specification\nSDEP + SPSR Intake Path\nData Stewardship Unit contact",
+    "text": "Next Steps\n\nSalmon Data Standards Hub\nSalmon data package specification\nSalmon data package + SPSR intake path\nData Stewardship Unit contact",
     "crumbs": [
       "Home",
       "Common Workflows",
@@ -1773,7 +1785,7 @@
     "href": "reference_info/glossary.html#acronyms",
     "title": "Glossary & Acronyms",
     "section": "Acronyms",
-    "text": "Acronyms\n\n\n\nAcronym\nMeaning\n\n\n\n\nCSAS\nCanadian Science Advisory Secretariat\n\n\nDFO\nFisheries and Oceans Canada\n\n\nDSU\nData Stewardship Unit\n\n\nFADS\nFisheries and Assessment Data Section\n\n\nFSAR\nFisheries Science Advisory Report\n\n\nIRI\nInternationalized Resource Identifier\n\n\nSDEP\nSalmon Data Exchange Package\n\n\nSKOS\nSimple Knowledge Organization System\n\n\nURI\nUniform Resource Identifier",
+    "text": "Acronyms\n\n\n\nAcronym\nMeaning\n\n\n\n\nCSAS\nCanadian Science Advisory Secretariat\n\n\nDFO\nFisheries and Oceans Canada\n\n\nDSU\nData Stewardship Unit\n\n\nFADS\nFisheries and Assessment Data Section\n\n\nFSAR\nFisheries Science Advisory Report\n\n\nIRI\nInternationalized Resource Identifier\n\n\nSDP\nSalmon data package\n\n\nSKOS\nSimple Knowledge Organization System\n\n\nURI\nUniform Resource Identifier\n\n\n\nLegacy usage note: some older documents may still use SDEP; current naming in this hub is salmon data package (SDP).",
     "crumbs": [
       "Home",
       "Tools & Training",
@@ -1867,7 +1879,7 @@
     "href": "reference_info/ontology/conventions/provenance-maintenance.html#maintenance-cadence",
     "title": "Provenance and Maintenance",
     "section": "Maintenance cadence",
-    "text": "Maintenance cadence\nFor every material ontology update:\n\nupdate/add terms with required annotations\nvalidate consistency and quality checks\nregenerate docs/release artifacts\nupdate DSU guidebook pages if conventions changed\ncommunicate downstream impact (SDEP templates, SPSR guidance, validators)"
+    "text": "Maintenance cadence\nFor every material ontology update:\n\nupdate/add terms with required annotations\nvalidate consistency and quality checks\nregenerate docs/release artifacts\nupdate DSU guidebook pages if conventions changed\ncommunicate downstream impact (salmon data package templates, SPSR guidance, validators)"
   },
   {
     "objectID": "reference_info/ontology/conventions/provenance-maintenance.html#quality-checks-before-merge",
@@ -1926,11 +1938,11 @@
     "text": "Example\n# TBox (schema)\n:EscapementSurveyEvent a owl:Class ;\n  rdfs:label \"Escapement Survey Event\"@en ;\n  IAO:0000115 \"A survey event used to estimate escapement.\"@en ;\n  rdfs:isDefinedBy &lt;https://w3id.org/gcdfo/salmon&gt; .\n\n# ABox (instance data)\n:SkeenaSurveyEvent2024 a :EscapementSurveyEvent ;\n  dwc:eventDate \"2024-08-15\"^^xsd:date ;\n  :measuredVisits 6 ."
   },
   {
-    "objectID": "reference_info/ontology/conventions/schema-vs-data.html#implication-for-dsusdepspsr-workflows",
-    "href": "reference_info/ontology/conventions/schema-vs-data.html#implication-for-dsusdepspsr-workflows",
+    "objectID": "reference_info/ontology/conventions/schema-vs-data.html#implication-for-dsu-salmon-data-package-spsr-workflows",
+    "href": "reference_info/ontology/conventions/schema-vs-data.html#implication-for-dsu-salmon-data-package-spsr-workflows",
     "title": "Schema vs Data (TBox vs ABox)",
-    "section": "Implication for DSU/SDEP/SPSR workflows",
-    "text": "Implication for DSU/SDEP/SPSR workflows\n\nontology repository defines shared semantics\nSDEP + SPSR workflows carry the actual dataset instances\nkeep these layers separate so standards can evolve without rewriting historical data"
+    "section": "Implication for DSU salmon data package / SPSR workflows",
+    "text": "Implication for DSU salmon data package / SPSR workflows\n\nontology repository defines shared semantics\nsalmon data package + SPSR workflows carry the actual dataset instances\nkeep these layers separate so standards can evolve without rewriting historical data"
   },
   {
     "objectID": "reference_info/ontology/formal-documentation.html",

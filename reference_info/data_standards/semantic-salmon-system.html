@@ -112,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="../../reference_info/data_standards/ontology-data-package-gpt.html">
- <span class="dropdown-text">SDEP + SPSR Intake Path</span></a>
+ <span class="dropdown-text">Salmon data package + SPSR intake path</span></a>
   </li>  
     </ul>
   </li>
@@ -344,7 +344,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../reference_info/data_standards/salmon-data-exchange-package.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Salmon Data Exchange Package Specification</span></a>
+ <span class="menu-text">Salmon data package specification</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -362,7 +362,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../reference_info/data_standards/ontology-data-package-gpt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">SDEP + SPSR Intake Path</span></a>
+ <span class="menu-text">Salmon data package + SPSR intake path</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -546,6 +546,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul class="collapse">
   <li><a href="#the-system-flow" id="toc-the-system-flow" class="nav-link active" data-scroll-target="#the-system-flow">The system flow</a></li>
+  <li><a href="#salmon-data-package-overview-diagram" id="toc-salmon-data-package-overview-diagram" class="nav-link" data-scroll-target="#salmon-data-package-overview-diagram">Salmon data package overview (diagram)</a></li>
   <li><a href="#what-to-use-this-page-for" id="toc-what-to-use-this-page-for" class="nav-link" data-scroll-target="#what-to-use-this-page-for">What to use this page for</a></li>
   <li><a href="#quick-launch-paths" id="toc-quick-launch-paths" class="nav-link" data-scroll-target="#quick-launch-paths">Quick launch paths</a></li>
   </ul>
@@ -573,6 +574,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p><strong>Canonical specification (Markdown):</strong> <a href="https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md">Salmon data package specification</a></p>
+<p>This page is a high-level overview of the workflow. For complete package details and field requirements, use the canonical specification above.</p>
 <section class="semantic-system-hero">
   <p class="semantic-system-eyebrow">DFO Pacific Science • Data Stewardship Unit</p>
   <h2 class="anchored">The front door for semantic salmon data workflows</h2>
@@ -581,7 +584,7 @@ ul.task-list li input[type="checkbox"] {
   </p>
   <div class="semantic-system-cta-row">
     <a class="semantic-system-cta semantic-system-cta-primary" href="../../how_to_guides/fsar-to-spsr-end-to-end-example.html">Start my FSAR intake path</a>
-    <a class="semantic-system-cta" href="../../reference_info/data_standards/ontology-data-package-gpt.html">Go to SDEP + SPSR Intake Path</a>
+    <a class="semantic-system-cta" href="../../reference_info/data_standards/ontology-data-package-gpt.html">Go to salmon data package + SPSR intake path</a>
   </div>
 </section>
 <div class="status-badge-row">
@@ -599,9 +602,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   <div class="semantic-system-arrow" aria-hidden="true">→</div>
   <div class="semantic-system-node" role="listitem">
-    <h3 class="anchored">2) SDEP</h3>
+    <h3 class="anchored">2) Salmon data package</h3>
     <p>Package dataset metadata in a standard structure.</p>
-    <a href="../../reference_info/data_standards/salmon-data-exchange-package.html">Open SDEP spec</a>
+    <a href="../../reference_info/data_standards/salmon-data-exchange-package.html">Open SDP spec</a>
   </div>
   <div class="semantic-system-arrow" aria-hidden="true">→</div>
   <div class="semantic-system-node" role="listitem">
@@ -623,6 +626,16 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </div>
 </section>
+<section id="salmon-data-package-overview-diagram" class="level2">
+<h2 class="anchored" data-anchor-id="salmon-data-package-overview-diagram">Salmon data package overview (diagram)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/data_standards/smn-data-pkg.png" class="img-fluid figure-img" alt="Diagram of the salmon data package structure with metadata files linked to table data files."></p>
+<figcaption>Salmon data package diagram showing metadata files (<code>dataset.csv</code>, <code>tables.csv</code>, <code>columns.csv</code>, <code>codes.csv</code>) linked to package data tables.</figcaption>
+</figure>
+</div>
+<p>For complete structure and field-level requirements, use the <a href="https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md">canonical salmon data package specification</a>.</p>
+</section>
 <section id="what-to-use-this-page-for" class="level2">
 <h2 class="anchored" data-anchor-id="what-to-use-this-page-for">What to use this page for</h2>
 <ul>
@@ -636,7 +649,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><a href="../../how_to_guides/fsar-to-spsr-end-to-end-example.html">Start my FSAR intake path</a></li>
 <li><a href="../../how_to_guides/fsar-data-standardization-workflow.html">FSAR Data Standardization Workflow</a></li>
-<li><a href="../../reference_info/data_standards/ontology-data-package-gpt.html">SDEP + SPSR Intake Path</a></li>
+<li><a href="../../reference_info/data_standards/ontology-data-package-gpt.html">Salmon data package + SPSR intake path</a></li>
 <li><a href="../../reference_info/data_standards/semantic-salmon-data-ecosystem.html">The Semantic Salmon Data Ecosystem (deeper architecture)</a></li>
 </ul>
 

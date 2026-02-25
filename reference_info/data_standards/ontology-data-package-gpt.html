@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SDEP + SPSR Intake Path – FADS Open Science Hub</title>
+<title>Salmon data package + SPSR intake path – FADS Open Science Hub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -112,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="../../reference_info/data_standards/ontology-data-package-gpt.html">
- <span class="dropdown-text">SDEP + SPSR Intake Path</span></a>
+ <span class="dropdown-text">Salmon data package + SPSR intake path</span></a>
   </li>  
     </ul>
   </li>
@@ -217,7 +217,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../reference_info/data_standards/semantic-salmon-system.html">Standards &amp; Vocabulary</a></li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/ontology-data-package-gpt.html">SDEP + SPSR Intake Path</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../reference_info/data_standards/semantic-salmon-system.html">Standards &amp; Vocabulary</a></li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/ontology-data-package-gpt.html">Salmon data package + SPSR intake path</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -344,7 +344,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../reference_info/data_standards/salmon-data-exchange-package.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Salmon Data Exchange Package Specification</span></a>
+ <span class="menu-text">Salmon data package specification</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -362,7 +362,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../reference_info/data_standards/ontology-data-package-gpt.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">SDEP + SPSR Intake Path</span></a>
+ <span class="menu-text">Salmon data package + SPSR intake path</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -557,9 +557,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../reference_info/data_standards/semantic-salmon-system.html">Standards &amp; Vocabulary</a></li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/ontology-data-package-gpt.html">SDEP + SPSR Intake Path</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../reference_info/data_standards/semantic-salmon-system.html">Standards &amp; Vocabulary</a></li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/ontology-data-package-gpt.html">Salmon data package + SPSR intake path</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">SDEP + SPSR Intake Path</h1>
+<h1 class="title">Salmon data package + SPSR intake path</h1>
 </div>
 
 
@@ -577,9 +577,10 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Use this page when your goal is to move from <strong>mapped data</strong> to a <strong>submission-ready package</strong> and upload path for SPSR.</p>
+<p><strong>Canonical package specification (Markdown):</strong> <a href="https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md" class="uri">https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md</a></p>
 <div class="status-badge-row">
   <span class="status-badge status-active">Operational Intake Path</span>
-  <span class="status-badge status-canonical">Ontology + SDEP Required</span>
+  <span class="status-badge status-canonical">Ontology + salmon data package required</span>
   <span class="status-badge status-guidance">FSAR-Oriented</span>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -600,11 +601,12 @@ Note
 <h2 class="anchored" data-anchor-id="quick-summary">Quick summary</h2>
 <ul>
 <li>The <strong>DFO Salmon Ontology</strong> provides canonical term IRIs.</li>
-<li><strong>SDEP</strong> provides package metadata structure (<code>dataset.csv</code>, <code>tables.csv</code>, <code>column_dictionary.csv</code>, <code>codes.csv</code>).</li>
+<li>The <strong>salmon data package (SDP)</strong> provides package metadata structure (<code>dataset.csv</code>, <code>tables.csv</code>, <code>column_dictionary.csv</code>, <code>codes.csv</code>).</li>
 <li><strong>metasalmon</strong> supports package validation.</li>
 <li><strong>Salmon Data GPT</strong> can help draft mappings/metadata.</li>
 <li><strong>SPSR</strong> is a primary operational destination for FSAR-oriented uploads.</li>
 </ul>
+<p>Current SPSR direction is CUYear-first intake with WSP-aligned status fields and FSAR fishery fields coexisting in one upload pathway; use current template downloads and avoid relying on stale local copies.</p>
 <p>Guided assistants can help draft content, but validation remains the quality gate.</p>
 </section>
 <section id="practical-workflow" class="level2">
@@ -612,7 +614,7 @@ Note
 <ol type="1">
 <li>Find canonical terms in <a href="../../reference_info/ontology/formal-documentation.html">GC DFO Salmon Ontology documentation</a>.</li>
 <li>Build <code>column_dictionary.csv</code> with full IRIs (no shortened/partial URIs).</li>
-<li>Assemble package files using <a href="../../reference_info/data_standards/salmon-data-exchange-package.html">SDEP specification</a>.</li>
+<li>Assemble package files using <a href="../../reference_info/data_standards/salmon-data-exchange-package.html">Salmon data package specification</a>.</li>
 <li>Validate locally (e.g., metasalmon checks).</li>
 <li>Prepare SPSR-compatible upload CSV(s).</li>
 <li>Upload through SPSR wizard and review validation feedback.</li>

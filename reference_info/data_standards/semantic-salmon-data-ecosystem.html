@@ -113,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="../../reference_info/data_standards/ontology-data-package-gpt.html">
- <span class="dropdown-text">SDEP + SPSR Intake Path</span></a>
+ <span class="dropdown-text">Salmon data package + SPSR intake path</span></a>
   </li>  
     </ul>
   </li>
@@ -345,7 +345,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../reference_info/data_standards/salmon-data-exchange-package.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Salmon Data Exchange Package Specification</span></a>
+ <span class="menu-text">Salmon data package specification</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -363,7 +363,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../reference_info/data_standards/ontology-data-package-gpt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">SDEP + SPSR Intake Path</span></a>
+ <span class="menu-text">Salmon data package + SPSR intake path</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -551,7 +551,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#entry-path-what-to-use-in-order" id="toc-entry-path-what-to-use-in-order" class="nav-link" data-scroll-target="#entry-path-what-to-use-in-order"><span class="header-section-number">1.1</span> Entry path (what to use, in order)</a></li>
   </ul></li>
   <li><a href="#dfo-salmon-ontology-canonical-semantic-layer" id="toc-dfo-salmon-ontology-canonical-semantic-layer" class="nav-link" data-scroll-target="#dfo-salmon-ontology-canonical-semantic-layer"><span class="header-section-number">2</span> 1. DFO Salmon Ontology (canonical semantic layer)</a></li>
-  <li><a href="#sdep-package-layer" id="toc-sdep-package-layer" class="nav-link" data-scroll-target="#sdep-package-layer"><span class="header-section-number">3</span> 2. SDEP (package layer)</a></li>
+  <li><a href="#salmon-data-package-package-layer" id="toc-salmon-data-package-package-layer" class="nav-link" data-scroll-target="#salmon-data-package-package-layer"><span class="header-section-number">3</span> 2. Salmon data package (package layer)</a></li>
   <li><a href="#validation-tooling-quality-layer" id="toc-validation-tooling-quality-layer" class="nav-link" data-scroll-target="#validation-tooling-quality-layer"><span class="header-section-number">4</span> 3. Validation tooling (quality layer)</a></li>
   <li><a href="#spsr-operational-intake-layer" id="toc-spsr-operational-intake-layer" class="nav-link" data-scroll-target="#spsr-operational-intake-layer"><span class="header-section-number">5</span> 4. SPSR (operational intake layer)</a></li>
   <li><a href="#guided-assistants-optional-acceleration" id="toc-guided-assistants-optional-acceleration" class="nav-link" data-scroll-target="#guided-assistants-optional-acceleration"><span class="header-section-number">6</span> 5. Guided assistants (optional acceleration)</a></li>
@@ -602,7 +602,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="semantic-entry">
   <ol>
     <li><strong>DFO Salmon Ontology</strong> — canonical semantics</li>
-    <li><strong>SDEP</strong> — package metadata structure</li>
+    <li><strong>Salmon data package</strong> — package metadata structure</li>
     <li><strong>metasalmon</strong> — validation and quality control</li>
     <li><strong>Salmon Data GPT</strong> — optional drafting/acceleration assistant</li>
     <li><strong>SPSR</strong> — operational intake path for many FSAR workflows</li>
@@ -612,7 +612,7 @@ ul.task-list li input[type="checkbox"] {
 <p>At a high level, the ecosystem has five working parts:</p>
 <ol type="1">
 <li><strong>DFO Salmon Ontology</strong> — canonical terms and semantics</li>
-<li><strong>SDEP (Salmon Data Exchange Package)</strong> — structured metadata packaging</li>
+<li><strong>Salmon data package (SDP)</strong> — structured metadata packaging</li>
 <li><strong>Validation tooling (metasalmon, related checks)</strong> — quality control</li>
 <li><strong>SPSR (Salmon Population Summary Repository)</strong> — intake and operational publishing path for many FSAR workflows</li>
 <li><strong>Salmon Data GPT / guided assistants (optional)</strong> — acceleration layer for drafting mappings and metadata</li>
@@ -627,9 +627,9 @@ ul.task-list li input[type="checkbox"] {
 <li>Contributor guidance: <a href="../../reference_info/ontology/conventions/index.html">Ontology Conventions Guidebook</a></li>
 </ul>
 </section>
-<section id="sdep-package-layer" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> 2. SDEP (package layer)</h1>
-<p>SDEP standardizes package metadata without forcing one rigid dataset schema.</p>
+<section id="salmon-data-package-package-layer" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> 2. Salmon data package (package layer)</h1>
+<p>The salmon data package standardizes package metadata without forcing one rigid dataset schema.</p>
 <p>Core files:</p>
 <ul>
 <li><code>dataset.csv</code></li>
@@ -637,7 +637,7 @@ ul.task-list li input[type="checkbox"] {
 <li><code>column_dictionary.csv</code></li>
 <li><code>codes.csv</code> (when controlled values apply)</li>
 </ul>
-<p>Spec reference: <a href="../../reference_info/data_standards/salmon-data-exchange-package.html">Salmon Data Exchange Package Specification</a></p>
+<p>Spec reference: <a href="../../reference_info/data_standards/salmon-data-exchange-package.html">Salmon data package specification</a> (canonical markdown: <a href="https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md" class="uri">https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md</a>)</p>
 </section>
 <section id="validation-tooling-quality-layer" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> 3. Validation tooling (quality layer)</h1>
@@ -669,7 +669,7 @@ ul.task-list li input[type="checkbox"] {
 <h1 data-number="7"><span class="header-section-number">7</span> 6. End-to-end flow</h1>
 <ol type="1">
 <li>Map terms to ontology IRIs</li>
-<li>Build SDEP metadata</li>
+<li>Build salmon data package metadata</li>
 <li>Validate package</li>
 <li>Upload via SPSR workflow (for applicable FSAR datasets)</li>
 <li>Iterate from validation/reviewer feedback</li>

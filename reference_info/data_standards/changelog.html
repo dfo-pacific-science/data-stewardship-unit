@@ -112,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="../../reference_info/data_standards/ontology-data-package-gpt.html">
- <span class="dropdown-text">SDEP + SPSR Intake Path</span></a>
+ <span class="dropdown-text">Salmon data package + SPSR intake path</span></a>
   </li>  
     </ul>
   </li>
@@ -344,7 +344,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../reference_info/data_standards/salmon-data-exchange-package.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Salmon Data Exchange Package Specification</span></a>
+ <span class="menu-text">Salmon data package specification</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -362,7 +362,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../reference_info/data_standards/ontology-data-package-gpt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">SDEP + SPSR Intake Path</span></a>
+ <span class="menu-text">Salmon data package + SPSR intake path</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -548,6 +548,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#entry-template" id="toc-entry-template" class="nav-link active" data-scroll-target="#entry-template">Entry template</a></li>
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">2026-02</a>
   <ul class="collapse">
+  <li><a href="#terminology-normalization-fsar-workflow-refresh" id="toc-terminology-normalization-fsar-workflow-refresh" class="nav-link" data-scroll-target="#terminology-normalization-fsar-workflow-refresh">2026-02-25 — terminology normalization + FSAR workflow refresh</a></li>
   <li><a href="#ontology-docs-consolidation-fsarspsr-alignment" id="toc-ontology-docs-consolidation-fsarspsr-alignment" class="nav-link" data-scroll-target="#ontology-docs-consolidation-fsarspsr-alignment">2026-02-20 — ontology docs consolidation + FSAR/SPSR alignment</a></li>
   <li><a href="#semantic-system-entry-path-made-explicit" id="toc-semantic-system-entry-path-made-explicit" class="nav-link" data-scroll-target="#semantic-system-entry-path-made-explicit">2026-02-20 — semantic system entry path made explicit</a></li>
   <li><a href="#branded-semantic-start-page-added" id="toc-branded-semantic-start-page-added" class="nav-link" data-scroll-target="#branded-semantic-start-page-added">2026-02-20 — branded semantic start page added</a></li>
@@ -589,7 +590,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Use this structure for each changelog item:</p>
 <ul>
 <li><strong>Date:</strong> YYYY-MM-DD</li>
-<li><strong>Area:</strong> ontology / SDEP / FSAR workflow / SPSR intake / publishing</li>
+<li><strong>Area:</strong> ontology / salmon data package / FSAR workflow / SPSR intake / publishing</li>
 <li><strong>Change:</strong> what changed</li>
 <li><strong>Reason:</strong> why it changed</li>
 <li><strong>Impact:</strong> who should care and what to do next</li>
@@ -598,18 +599,34 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="section" class="level2">
 <h2 class="anchored" data-anchor-id="section">2026-02</h2>
+<section id="terminology-normalization-fsar-workflow-refresh" class="level3">
+<h3 class="anchored" data-anchor-id="terminology-normalization-fsar-workflow-refresh">2026-02-25 — terminology normalization + FSAR workflow refresh</h3>
+<ul>
+<li><strong>Area:</strong> salmon data package + FSAR workflow + SPSR intake</li>
+<li><strong>Change:</strong> replaced user-facing SDEP wording with “salmon data package”/“SDP”; added canonical markdown spec links to <code>smn-data-pkg</code>; updated FSAR workflow guidance to reflect current SPSR CUYear-first intake direction and template-first upload prep.</li>
+<li><strong>Reason:</strong> keep terminology aligned with current naming and reduce confusion between overview pages and canonical spec sources.</li>
+<li><strong>Impact:</strong> contributors should use “salmon data package” wording in docs and rely on SPSR template endpoint + canonical GitHub specification for field-level implementation details.</li>
+<li><strong>Links:</strong>
+<ul>
+<li><a href="../../how_to_guides/fsar-data-standardization-workflow.html">FSAR Data Standardization Workflow</a></li>
+<li><a href="../../reference_info/data_standards/salmon-data-exchange-package.html">Salmon data package specification</a></li>
+<li><a href="https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md" class="uri">https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md</a></li>
+<li><a href="https://github.com/dfo-pacific-science/salmon-population-summary-repository/blob/master/docs/plans/2026-02-18-spsr-production-ready-unified-execplan.md" class="uri">https://github.com/dfo-pacific-science/salmon-population-summary-repository/blob/master/docs/plans/2026-02-18-spsr-production-ready-unified-execplan.md</a></li>
+</ul></li>
+</ul>
+</section>
 <section id="ontology-docs-consolidation-fsarspsr-alignment" class="level3">
 <h3 class="anchored" data-anchor-id="ontology-docs-consolidation-fsarspsr-alignment">2026-02-20 — ontology docs consolidation + FSAR/SPSR alignment</h3>
 <ul>
 <li><strong>Area:</strong> ontology + standards hub + workflows</li>
-<li><strong>Change:</strong> integrated ontology conventions guidebook into DSU docs; retired duplicate term explorer path; rewired standards pages around canonical ontology docs + SDEP + SPSR intake.</li>
+<li><strong>Change:</strong> integrated ontology conventions guidebook into DSU docs; retired duplicate term explorer path; rewired standards pages around canonical ontology docs + salmon data package + SPSR intake.</li>
 <li><strong>Reason:</strong> reduce duplication and keep one formal source of truth.</li>
 <li><strong>Impact:</strong> contributors should use WIDOCO + conventions guidebook for term semantics and use updated FSAR/SPSR workflow pages for intake.</li>
 <li><strong>Links:</strong>
 <ul>
 <li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/pull/151">PR #151</a></li>
 <li><a href="../../reference_info/ontology/formal-documentation.html">GC DFO Salmon Ontology</a></li>
-<li><a href="../../reference_info/data_standards/ontology-data-package-gpt.html">SDEP + SPSR Intake Path</a></li>
+<li><a href="../../reference_info/data_standards/ontology-data-package-gpt.html">Salmon data package + SPSR intake path</a></li>
 </ul></li>
 </ul>
 </section>
@@ -617,7 +634,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="semantic-system-entry-path-made-explicit">2026-02-20 — semantic system entry path made explicit</h3>
 <ul>
 <li><strong>Area:</strong> standardize/publish workflow pages</li>
-<li><strong>Change:</strong> made DFO Ontology → SDEP → metasalmon → Salmon Data GPT → SPSR path prominent at top of key workflow pages.</li>
+<li><strong>Change:</strong> made DFO Ontology → salmon data package → metasalmon → Salmon Data GPT → SPSR path prominent at top of key workflow pages.</li>
 <li><strong>Reason:</strong> make the intended system flow obvious during standardization and publishing.</li>
 <li><strong>Impact:</strong> data producers should follow the explicit entry path before upload or external release.</li>
 <li><strong>Links:</strong>

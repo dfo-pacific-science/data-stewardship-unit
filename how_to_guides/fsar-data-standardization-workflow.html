@@ -147,7 +147,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
         <li>
     <a class="dropdown-item" href="../reference_info/data_standards/ontology-data-package-gpt.html">
- <span class="dropdown-text">SDEP + SPSR Intake Path</span></a>
+ <span class="dropdown-text">Salmon data package + SPSR intake path</span></a>
   </li>  
     </ul>
   </li>
@@ -379,7 +379,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../reference_info/data_standards/salmon-data-exchange-package.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Salmon Data Exchange Package Specification</span></a>
+ <span class="menu-text">Salmon data package specification</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -397,7 +397,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../reference_info/data_standards/ontology-data-package-gpt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">SDEP + SPSR Intake Path</span></a>
+ <span class="menu-text">Salmon data package + SPSR intake path</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -582,9 +582,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#step-1-define-scope-classification-and-destination" id="toc-step-1-define-scope-classification-and-destination" class="nav-link active" data-scroll-target="#step-1-define-scope-classification-and-destination">Step 1 — Define scope, classification, and destination</a></li>
   <li><a href="#step-2-map-columns-to-canonical-ontology-terms" id="toc-step-2-map-columns-to-canonical-ontology-terms" class="nav-link" data-scroll-target="#step-2-map-columns-to-canonical-ontology-terms">Step 2 — Map columns to canonical ontology terms</a></li>
-  <li><a href="#step-3-build-an-sdep-package" id="toc-step-3-build-an-sdep-package" class="nav-link" data-scroll-target="#step-3-build-an-sdep-package">Step 3 — Build an SDEP package</a></li>
+  <li><a href="#step-3-build-a-salmon-data-package" id="toc-step-3-build-a-salmon-data-package" class="nav-link" data-scroll-target="#step-3-build-a-salmon-data-package">Step 3 — Build a salmon data package</a></li>
   <li><a href="#step-4-validate-package-quality" id="toc-step-4-validate-package-quality" class="nav-link" data-scroll-target="#step-4-validate-package-quality">Step 4 — Validate package quality</a></li>
-  <li><a href="#step-5-prepare-spsr-upload-files-fsar-priority-path" id="toc-step-5-prepare-spsr-upload-files-fsar-priority-path" class="nav-link" data-scroll-target="#step-5-prepare-spsr-upload-files-fsar-priority-path">Step 5 — Prepare SPSR upload files (FSAR priority path)</a></li>
+  <li><a href="#step-5-align-to-current-spsr-intake-direction-cuyear-first" id="toc-step-5-align-to-current-spsr-intake-direction-cuyear-first" class="nav-link" data-scroll-target="#step-5-align-to-current-spsr-intake-direction-cuyear-first">Step 5 — Align to current SPSR intake direction (CUYear-first)</a></li>
   <li><a href="#step-6-upload-and-review-in-spsr" id="toc-step-6-upload-and-review-in-spsr" class="nav-link" data-scroll-target="#step-6-upload-and-review-in-spsr">Step 6 — Upload and review in SPSR</a></li>
   <li><a href="#step-7-publish-externally-if-in-scope-and-approved" id="toc-step-7-publish-externally-if-in-scope-and-approved" class="nav-link" data-scroll-target="#step-7-publish-externally-if-in-scope-and-approved">Step 7 — Publish externally (if in scope and approved)</a></li>
   <li><a href="#fsar-readiness-checklist" id="toc-fsar-readiness-checklist" class="nav-link" data-scroll-target="#fsar-readiness-checklist">FSAR readiness checklist</a></li>
@@ -613,7 +613,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Use this workflow when preparing salmon datasets for Fisheries Science Advisory Report (FSAR) analysis, review, and operational intake.</p>
+<p>Use this workflow when preparing salmon datasets for Fisheries Science Advisory Report (FSAR) analysis, review, and operational SPSR intake.</p>
+<p><strong>Canonical package specification (Markdown):</strong> <a href="https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md">Salmon data package specification</a></p>
 <p>If you want a concrete walkthrough, use the companion page: <a href="../how_to_guides/fsar-to-spsr-end-to-end-example.html">FSAR to SPSR: End-to-End Example</a>.</p>
 <section id="step-1-define-scope-classification-and-destination" class="level2">
 <h2 class="anchored" data-anchor-id="step-1-define-scope-classification-and-destination">Step 1 — Define scope, classification, and destination</h2>
@@ -632,9 +633,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Record <strong>full</strong> canonical IRIs for mapped terms.</li>
 </ol>
 </section>
-<section id="step-3-build-an-sdep-package" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-build-an-sdep-package">Step 3 — Build an SDEP package</h2>
-<p>Use the <a href="../reference_info/data_standards/salmon-data-exchange-package.html">SDEP specification</a>.</p>
+<section id="step-3-build-a-salmon-data-package" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-build-a-salmon-data-package">Step 3 — Build a salmon data package</h2>
+<p>Use the <a href="../reference_info/data_standards/salmon-data-exchange-package.html">salmon data package specification</a>.</p>
 <p>At minimum:</p>
 <ul>
 <li><code>dataset.csv</code></li>
@@ -645,7 +646,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>Starter assets:</p>
 <ul>
-<li><a href="../reference_info/data_standards/examples/sdep-minimal-example.zip">Download minimal SDEP example (zip)</a></li>
+<li><a href="../reference_info/data_standards/examples/sdep-minimal-example.zip">Download minimal salmon data package example (zip)</a></li>
 <li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/tree/main/reference_info/data_standards/examples/sdep-minimal-example">Browse template package files</a></li>
 </ul>
 </section>
@@ -655,25 +656,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Example R checks:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(metasalmon)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>pkg_path <span class="ot">&lt;-</span> <span class="st">"path/to/your/sdep-package"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>pkg_path <span class="ot">&lt;-</span> <span class="st">"path/to/your/salmon-data-package"</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">validate_dictionary</span>(<span class="fu">file.path</span>(pkg_path, <span class="st">"column_dictionary.csv"</span>))</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">validate_semantics</span>(<span class="fu">file.path</span>(pkg_path, <span class="st">"column_dictionary.csv"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="step-5-prepare-spsr-upload-files-fsar-priority-path" class="level2">
-<h2 class="anchored" data-anchor-id="step-5-prepare-spsr-upload-files-fsar-priority-path">Step 5 — Prepare SPSR upload files (FSAR priority path)</h2>
-<p>For FSAR-oriented contributions, SPSR is a major operational intake target.</p>
+<section id="step-5-align-to-current-spsr-intake-direction-cuyear-first" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-align-to-current-spsr-intake-direction-cuyear-first">Step 5 — Align to current SPSR intake direction (CUYear-first)</h2>
+<p>Based on current SPSR execution direction, prepare uploads as one unified CU-year intake path:</p>
 <ul>
-<li>Confirm column names and metadata are consistent with your selected SPSR intake profile.</li>
-<li>Ensure provenance notes are explicit for transformed/derived values.</li>
-<li>Keep the package and upload files versioned together.</li>
+<li>Start from current SPSR templates: <a href="https://spsr.dfo-mpo.gc.ca/download_sdp_templates" class="uri">https://spsr.dfo-mpo.gc.ca/download_sdp_templates</a></li>
+<li>Treat <strong>WSP CU assessment fields</strong> as the canonical status/benchmark layer.</li>
+<li>Keep <strong>FSAR fishery fields</strong> (catch, age, exploitation, etc.) as complementary data on the same CU-year pathway.</li>
+<li>Do not assume equivalence for similarly named fields (for example, FSAR <code>TOTAL_SPAWNERS</code> vs WSP <code>SpnForAbd_Total</code>); document mapping assumptions explicitly.</li>
+<li>Keep provenance explicit for transformed/derived values (for example, data source, year type, and method notes where applicable).</li>
+<li>Keep package metadata and upload CSV(s) versioned together.</li>
 </ul>
 <p>Useful SPSR references:</p>
 <ul>
 <li>Repo: <a href="https://github.com/dfo-pacific-science/salmon-population-summary-repository" class="uri">https://github.com/dfo-pacific-science/salmon-population-summary-repository</a></li>
 <li>App docs: <a href="https://spsr.dfo-mpo.gc.ca/documentation/" class="uri">https://spsr.dfo-mpo.gc.ca/documentation/</a></li>
 <li>Upload wizard: <a href="https://spsr.dfo-mpo.gc.ca/wizard/1/" class="uri">https://spsr.dfo-mpo.gc.ca/wizard/1/</a></li>
-<li>Templates endpoint: <a href="https://spsr.dfo-mpo.gc.ca/download_sdp_templates" class="uri">https://spsr.dfo-mpo.gc.ca/download_sdp_templates</a></li>
 </ul>
 </section>
 <section id="step-6-upload-and-review-in-spsr" class="level2">
@@ -682,7 +685,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Upload via SPSR wizard.</li>
 <li>Resolve validation feedback.</li>
 <li>Re-upload if needed until intake checks are clean.</li>
-<li>Record upload metadata/version in your project notes.</li>
+<li>Record accepted upload version, intake date, and any profile-specific notes.</li>
 </ul>
 </section>
 <section id="step-7-publish-externally-if-in-scope-and-approved" class="level2">
@@ -697,8 +700,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul class="task-list">
 <li><label><input type="checkbox">Scope and classification confirmed</label></li>
 <li><label><input type="checkbox">Vocabulary mappings documented with full IRIs</label></li>
-<li><label><input type="checkbox">SDEP files completed and validated</label></li>
-<li><label><input type="checkbox">SPSR upload completed (or intake exceptions documented)</label></li>
+<li><label><input type="checkbox">Salmon data package files completed and validated</label></li>
+<li><label><input type="checkbox">SPSR template-aligned upload files prepared and submitted</label></li>
+<li><label><input type="checkbox">Intake assumptions/provenance notes archived</label></li>
 <li><label><input type="checkbox">External publication requirements completed (if applicable)</label></li>
 </ul>
 
