@@ -24,16 +24,17 @@ Canonical semantic source for terms and identifiers.
 
 ## Packaging and validation
 
-### Salmon Data Exchange Package (SDEP)
+### Salmon data package (SDP)
 
 Metadata package structure used across standards and intake workflows.
 
-- Spec: [Salmon Data Exchange Package](reference_info/data_standards/salmon-data-exchange-package.qmd)
-- Intake guidance: [SDEP + SPSR Intake Path](reference_info/data_standards/ontology-data-package-gpt.qmd)
+- Spec overview: [Salmon data package specification](reference_info/data_standards/salmon-data-exchange-package.qmd)
+- Canonical markdown spec: <https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md>
+- Intake guidance: [Salmon data package + SPSR intake path](reference_info/data_standards/ontology-data-package-gpt.qmd)
 
 ### metasalmon
 
-R-based tooling for validating and working with SDEP-style metadata.
+R-based tooling for validating and working with salmon data package metadata.
 
 - Hub context: [R Packages](reference_info/tools/r_packages.qmd)
 

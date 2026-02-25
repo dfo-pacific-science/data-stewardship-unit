@@ -5,12 +5,12 @@ redirect_from:
   - /documentation_hub/how_to_guides/support_controlled_vocabs
 ---
 
-Use this workflow when you need to **add, revise, or align controlled terms** used in salmon datasets, SDEP metadata, and SPSR uploads.
+Use this workflow when you need to **add, revise, or align controlled terms** used in salmon datasets, salmon data package metadata, and SPSR uploads.
 
 ::: {.callout-note}
 This workflow is for **term governance**.
 
-If you are preparing a dataset package and uploading to SPSR, use [SDEP + SPSR Intake Path](../reference_info/data_standards/ontology-data-package-gpt.qmd).
+If you are preparing a dataset package and uploading to SPSR, use [Salmon data package + SPSR intake path](../reference_info/data_standards/ontology-data-package-gpt.qmd).
 :::
 
 ## Canonical source and namespace
@@ -65,7 +65,7 @@ Apply a light governance check:
 - definition is testable and non-circular
 - naming is consistent
 - aligns with competency questions and downstream workflows
-- impact on SDEP and SPSR is documented
+- impact on salmon data package and SPSR workflows is documented
 
 ## Step 6 — Implement and publish
 
@@ -80,7 +80,7 @@ After approval:
 
 When term changes affect intake:
 
-- update SDEP templates (`column_dictionary.csv`, `codes.csv` examples)
+- update salmon data package templates (`column_dictionary.csv`, `codes.csv` examples)
 - update SPSR upload guidance and controlled-value references
 - run one end-to-end test through SPSR wizard with the updated term usage
 
@@ -95,5 +95,5 @@ Useful SPSR references:
 - [ ] Existing term reuse checked first
 - [ ] Correct OWL vs SKOS modeling choice
 - [ ] Definition + provenance complete
-- [ ] Downstream SDEP/SPSR impacts assessed
+- [ ] Downstream salmon data package/SPSR impacts assessed
 - [ ] Docs and examples updated

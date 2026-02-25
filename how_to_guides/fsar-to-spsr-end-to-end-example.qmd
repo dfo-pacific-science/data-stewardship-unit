@@ -37,7 +37,7 @@ BY,Brood Year,https://w3id.org/gcdfo/salmon#BroodYear
 Esc,Escapement,https://w3id.org/gcdfo/salmon#Escapement
 ```
 
-## Step 3 — Build minimal SDEP metadata
+## Step 3 — Build minimal salmon data package metadata
 
 Create:
 
@@ -46,7 +46,7 @@ Create:
 - `column_dictionary.csv`
 - `codes.csv` (if categorical values are present)
 
-Reference: [Salmon Data Exchange Package Specification](../reference_info/data_standards/salmon-data-exchange-package.qmd)
+Reference: [Salmon data package specification](../reference_info/data_standards/salmon-data-exchange-package.qmd)
 
 ## Step 4 — Validate before upload
 
@@ -76,7 +76,7 @@ SPSR resources:
 ## Deliverables checklist
 
 - [ ] mapped field table with canonical IRIs
-- [ ] complete minimal SDEP metadata files
+- [ ] complete minimal salmon data package metadata files
 - [ ] validated upload file(s)
 - [ ] SPSR submission completed
 - [ ] version/provenance notes archived

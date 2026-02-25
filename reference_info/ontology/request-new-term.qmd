@@ -21,7 +21,7 @@ Include:
 - plain-language definition
 - concept type (OWL class/property or SKOS concept)
 - expected parent class or concept scheme
-- usage example from a real workflow (FSAR/SPSR/SDEP)
+- usage example from a real workflow (FSAR/SPSR/salmon data package)
 - provenance/source reference (if available)
 - why existing terms are insufficient
 
@@ -62,4 +62,4 @@ Parent class or concept scheme: ...
 1. Add term in ontology repository.
 2. Regenerate docs/release artifacts.
 3. Update DSU guidance pages that reference this area.
-4. Update SDEP/SPSR mappings if intake workflows are affected.
+4. Update salmon data package/SPSR mappings if intake workflows are affected.

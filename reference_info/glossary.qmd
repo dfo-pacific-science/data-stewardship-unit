@@ -17,9 +17,11 @@ A quick reference for common terms used across the FADS Open Science Hub.
 | FADS | Fisheries and Assessment Data Section |
 | FSAR | Fisheries Science Advisory Report |
 | IRI | Internationalized Resource Identifier |
-| SDEP | Salmon Data Exchange Package |
+| SDP | Salmon data package |
 | SKOS | Simple Knowledge Organization System |
 | URI | Uniform Resource Identifier |
+
+Legacy usage note: some older documents may still use **SDEP**; current naming in this hub is **salmon data package (SDP)**.
 
 ## Common terms
 

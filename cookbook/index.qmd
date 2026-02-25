@@ -14,6 +14,6 @@ Task-focused recipes for recurring data stewardship workflows.
 
 ## Coming next
 
-- SDEP validation troubleshooting
+- salmon data package validation troubleshooting
 - Controlled vocabulary request walkthrough
 - Publication checklists by data class

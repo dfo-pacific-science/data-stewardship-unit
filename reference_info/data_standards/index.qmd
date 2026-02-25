@@ -16,11 +16,12 @@ For the branded front-door view of the full system path, start here:
 
 - **I need the full system path first** → [Semantic Salmon System — Start Here](semantic-salmon-system.qmd)
 - **I need to prepare data for an FSAR** → [FSAR Data Standardization Workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd)
-- **I need to submit FSAR data to SPSR** → [FSAR to SPSR: End-to-End Example](../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd) and [SDEP + SPSR Intake Path](ontology-data-package-gpt.qmd)
+- **I need to submit FSAR data to SPSR** → [FSAR to SPSR: End-to-End Example](../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd) and [Salmon data package + SPSR intake path](ontology-data-package-gpt.qmd)
 - **I need standard terms and definitions** → [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)
-- **I need package structure/spec details** → [Salmon Data Exchange Package Specification](salmon-data-exchange-package.qmd)
+- **I need package structure/spec details** → [Salmon data package specification](salmon-data-exchange-package.qmd)
+- **I need canonical markdown spec source** → <https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md>
 - **I need practical identifier rules** → [IRI and Identifier Policy](iri-identifier-policy.qmd)
-- **I need to understand how ontology + SDEP + tools fit together** → [Semantic Salmon Data Ecosystem](semantic-salmon-data-ecosystem.qmd)
+- **I need to understand how ontology + salmon data package + tools fit together** → [Semantic Salmon Data Ecosystem](semantic-salmon-data-ecosystem.qmd)
 - **I need to publish data** → [Publish Your Data](publish-data.qmd) and [Publishing Data Externally](../publishing_data_externally.qmd)
 - **I need recent changes/status** → [Standards & Workflow Changelog](changelog.qmd)
 
@@ -35,7 +36,7 @@ For the branded front-door view of the full system path, start here:
   - [Class vs SKOS Decision Tree](../ontology/class-vs-skos-decision-tree.qmd)
   - [How to Request a New Ontology Term](../ontology/request-new-term.qmd)
 - **Data steward/reviewer**
-  - [SDEP + SPSR Intake Path](ontology-data-package-gpt.qmd)
+  - [Salmon data package + SPSR intake path](ontology-data-package-gpt.qmd)
   - [IRI and Identifier Policy](iri-identifier-policy.qmd)
   - [Publishing Data Externally](../publishing_data_externally.qmd)
 
@@ -49,12 +50,12 @@ Use these to anchor variable meaning to shared definitions and stable IRIs.
 - [Class vs SKOS Decision Tree](../ontology/class-vs-skos-decision-tree.qmd)
 - [How to Request a New Ontology Term](../ontology/request-new-term.qmd)
 
-### 2) Package your dataset with SDEP
-Use SDEP metadata files to describe your dataset, tables, columns, and controlled codes.
+### 2) Package your dataset with a salmon data package
+Use salmon data package metadata files to describe your dataset, tables, columns, and controlled codes.
 
-- [Salmon Data Exchange Package Specification](salmon-data-exchange-package.qmd)
+- [Salmon data package specification](salmon-data-exchange-package.qmd)
 - [IRI and Identifier Policy](iri-identifier-policy.qmd)
-- [SDEP + SPSR Intake Path](ontology-data-package-gpt.qmd)
+- [Salmon data package + SPSR intake path](ontology-data-package-gpt.qmd)
 
 ### 3) Use implementation workflows
 - [Standardize Your Data](standardize-data.qmd)
@@ -69,7 +70,7 @@ Use SDEP metadata files to describe your dataset, tables, columns, and controlle
 
 A minimal starter package is available here:
 
-- [Download minimal SDEP example (zip)](examples/sdep-minimal-example.zip)
+- [Download minimal salmon data package example (zip)](examples/sdep-minimal-example.zip)
 - [Browse example files in repo](https://github.com/dfo-pacific-science/data-stewardship-unit/tree/main/reference_info/data_standards/examples/sdep-minimal-example)
 
 ## Need help?

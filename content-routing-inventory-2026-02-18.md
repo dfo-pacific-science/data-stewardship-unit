@@ -26,7 +26,7 @@
 | reference_info/data_standards/integrate-data.qmd | Integrate Data | Reference | no | no |  |  |
 | reference_info/data_standards/ontology-data-package-gpt.qmd | Term Dictionary + Data Package + Salmon GPT | Reference | no | no |  |  |
 | reference_info/data_standards/publish-data.qmd | Publish Your Data | Reference | no | no |  |  |
-| reference_info/data_standards/salmon-data-exchange-package.qmd | Salmon Data Exchange Package Specification | Reference | no | no |  |  |
+| reference_info/data_standards/salmon-data-exchange-package.qmd | Salmon data package specification | Reference | no | no |  |  |
 | reference_info/data_standards/semantic-salmon-data-ecosystem.qmd | The Semantic Salmon Data Ecosystem | Reference | no | no |  |  |
 | reference_info/data_standards/standardize-data.qmd | Standardize Your Data | Reference | no | no |  |  |
 | reference_info/dwc-obis-gbif.qmd | Darwin Core, GBIF, and OBIS Reference Guide | Reference | no | no |  |  |

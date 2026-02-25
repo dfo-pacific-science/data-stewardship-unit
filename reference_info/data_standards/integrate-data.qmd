@@ -113,7 +113,7 @@ Package the integrated output with:
 - code mappings (`codes.csv`)
 - integration README (logic + assumptions)
 
-Then continue to [SDEP + SPSR Intake Path](ontology-data-package-gpt.qmd) if this dataset is moving into SPSR/FSAR workflows.
+Then continue to [Salmon data package + SPSR intake path](ontology-data-package-gpt.qmd) if this dataset is moving into SPSR/FSAR workflows.
 
 </div>
 
@@ -122,5 +122,5 @@ Then continue to [SDEP + SPSR Intake Path](ontology-data-package-gpt.qmd) if thi
 ## Next Steps
 
 - [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)
-- [SDEP specification](salmon-data-exchange-package.qmd)
+- [Salmon data package specification](salmon-data-exchange-package.qmd)
 - [FSAR workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd)

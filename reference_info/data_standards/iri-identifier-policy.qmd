@@ -40,4 +40,4 @@ Esc,Escapement,https://w3id.org/gcdfo/salmon#Escapement
 
 ## Why this matters
 
-Consistent full IRIs reduce ambiguity and make SDEP validation, SPSR intake, and downstream integration more reliable.
+Consistent full IRIs reduce ambiguity and make salmon data package validation, SPSR intake, and downstream integration more reliable.

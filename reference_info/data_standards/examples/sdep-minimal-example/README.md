@@ -1,6 +1,6 @@
-# Minimal SDEP Example
+# Minimal salmon data package example
 
-This folder is a minimal, runnable starter for the Salmon Data Exchange Package (SDEP).
+This folder is a minimal, runnable starter for the salmon data package (SDP).
 
 ## Contents
 

@@ -1,5 +1,5 @@
 ---
-title: "Salmon Data Exchange Package Specification"
+title: "Salmon data package specification"
 author: "Brett Johnson, Data Stewardship Unit (DFO Pacific Region Science Branch)"
 format:
   html:
@@ -13,9 +13,13 @@ execute:
   message: false
 ---
 
+**Canonical markdown source:** <https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md>
+
+This page provides a DSU-hosted copy/overview. For canonical field definitions and version history, use the GitHub source above.
+
 # Overview
 
-The **Salmon Data Exchange Package (SDEP)** is a lightweight, frictionless-style specification for exchanging salmon datasets between scientists, assessment biologists, and data stewards.
+The **salmon data package (SDP)** is a lightweight, frictionless-style specification for exchanging salmon datasets between scientists, assessment biologists, and data stewards.
 
 It is designed to:
 
@@ -24,7 +28,7 @@ It is designed to:
 - Be **ontology-aware**, linking columns and codes to the **DFO Salmon Ontology** and related vocabularies.
 - Be compatible with frictionless data packages and Darwin Core–style semantic layers without forcing a single rigid schema.
 
-Each SDEP instance is a small directory of CSV data files plus a set of metadata CSVs that describe the dataset, tables, columns, and controlled codes.
+Each salmon data package instance is a small directory of CSV data files plus a set of metadata CSVs that describe the dataset, tables, columns, and controlled codes.
 
 # Design Goals
 
@@ -36,9 +40,9 @@ Each SDEP instance is a small directory of CSV data files plus a set of metadata
 
 # Package Layout
 
-A Salmon Data Exchange Package consists of:
+A salmon data package consists of:
 
-- One **root directory** (e.g., `SDEP_myproject/`) containing:
+- One **root directory** (e.g., `sdp_myproject/`) containing:
   - `dataset.csv` – dataset-level metadata.
   - `tables.csv` – one row per logical table.
   - `column_dictionary.csv` – one row per column in each table.
@@ -57,10 +61,10 @@ Minimal example layout:
 
 Downloadable starter assets:
 
-- [Minimal SDEP example package (zip)](examples/sdep-minimal-example.zip)
+- [Minimal salmon data package example (zip)](examples/sdep-minimal-example.zip)
 - [Browse example package files](https://github.com/dfo-pacific-science/data-stewardship-unit/tree/main/reference_info/data_standards/examples/sdep-minimal-example)
 
-The SDEP spec does **not** prescribe a single canonical salmon schema. Instead, it standardizes the **metadata** about whatever schema a project uses and ties it to ontology and vocabularies.
+The salmon data package specification does **not** prescribe a single canonical salmon schema. Instead, it standardizes the **metadata** about whatever schema a project uses and ties it to ontology and vocabularies.
 
 # Identifiers and Conventions
 
@@ -79,7 +83,7 @@ The SDEP spec does **not** prescribe a single canonical salmon schema. Instead, 
 
 # `dataset.csv` Schema
 
-One row per logical dataset (often one per SDEP directory). Can describe multiple related tables.
+One row per logical dataset (often one per salmon data package directory). Can describe multiple related tables.
 
 Required columns:
 
@@ -128,7 +132,7 @@ Notes:
 
 # `column_dictionary.csv` Schema
 
-One row per column in each table. This is the core of how SDEP links data columns to ontology and vocabularies.
+One row per column in each table. This is the core of how the salmon data package links data columns to ontology and vocabularies.
 
 Required columns:
 
@@ -201,7 +205,7 @@ Guidance:
   - entities (`entity_iri` in `tables.csv`),
   - concept schemes (`concept_scheme_iri` in `codes.csv`).
 - The **R package** will:
-  - read SDEP metadata and data files,
+  - read salmon data package metadata and data files,
   - validate packages against this specification,
   - join in ontology/vocabulary information,
   - help reshape data into analysis-friendly tidy formats.
@@ -209,7 +213,7 @@ Guidance:
   - help users draft `column_dictionary.csv` and `codes.csv`,
   - suggest ontology-aligned IRIs and term types,
   - assist in decomposing compound terms into multiple columns with appropriate roles and IRIs,
-  - propose SDEP-compliant package structures for new projects.
+  - propose package structures compliant with the salmon data package specification for new projects.
 
 # Validation Workflow
 
@@ -220,7 +224,7 @@ Typical local workflow (R):
 ```r
 library(metasalmon)
 
-pkg_path <- "path/to/sdep-package"
+pkg_path <- "path/to/salmon-data-package"
 validate_dictionary(file.path(pkg_path, "column_dictionary.csv"))
 validate_semantics(file.path(pkg_path, "column_dictionary.csv"))
 ```
@@ -228,11 +232,11 @@ validate_semantics(file.path(pkg_path, "column_dictionary.csv"))
 Related implementation guidance:
 
 - [FSAR Data Standardization Workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd)
-- [SDEP + SPSR Intake Path](ontology-data-package-gpt.qmd)
+- [Salmon data package + SPSR intake path](ontology-data-package-gpt.qmd)
 
 # Versioning and Backwards Compatibility
 
-- Include a `spec_version` field in `dataset.csv` in future iterations if needed (e.g., `sdep-0.1.0`).
+- Include a `spec_version` field in `dataset.csv` in future iterations if needed (e.g., `sdp-0.1.0`).
 - New columns should be added in a backwards-compatible way:
   - existing tooling must continue to work when extra columns are present.
 - Breaking changes to required columns or semantics should bump the major version.

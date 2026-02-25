@@ -36,7 +36,7 @@ website:
             href: reference_info/data_standards/semantic-salmon-system.qmd
           - text: "Salmon Data Standards Hub"
             href: reference_info/data_standards/index.qmd
-          - text: "SDEP + SPSR Intake Path"
+          - text: "Salmon data package + SPSR intake path"
             href: reference_info/data_standards/ontology-data-package-gpt.qmd
       - text: "Workflows"
         menu:
@@ -105,7 +105,7 @@ website:
             href: reference_info/data_standards/iri-identifier-policy.qmd
           - text: "Semantic Salmon Data Ecosystem"
             href: reference_info/data_standards/semantic-salmon-data-ecosystem.qmd
-          - text: "SDEP + SPSR Intake Path"
+          - text: "Salmon data package + SPSR intake path"
             href: reference_info/data_standards/ontology-data-package-gpt.qmd
           - text: "Standards & Workflow Changelog"
             href: reference_info/data_standards/changelog.qmd
