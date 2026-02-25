@@ -7,354 +7,113 @@ format:
   html:
     toc: true
     toc-depth: 2
-    css: ../../styles/custom.css
 ---
-
-```{=html}
-<style>
-.cookbook-section {
-  margin-top: 3rem;
-}
-
-.cookbook-step {
-  background: #f8f9fa;
-  border-left: 4px solid #446c8a;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-radius: 4px;
-}
-
-.cookbook-step h3 {
-  margin-top: 0;
-  color: #446c8a;
-  font-size: 1.3rem;
-}
-
-.cookbook-step code {
-  background: #e9ecef;
-  padding: 0.2rem 0.4rem;
-  border-radius: 3px;
-  font-size: 0.9em;
-}
-
-.cookbook-step pre {
-  background: #2d2d2d;
-  color: #f8f8f2;
-  padding: 1rem;
-  border-radius: 4px;
-  overflow-x: auto;
-}
-
-.cookbook-step pre code {
-  background: transparent;
-  color: inherit;
-  padding: 0;
-}
-</style>
-```
 
 ## Cookbook Guide
 
 <div class="cookbook-section">
 
-### Step 1: Identify Data Sources
+### Step 1: Inventory Sources
 
 <div class="cookbook-step">
 
-**What you need:**
-- List of datasets you want to integrate
-- Understanding of what each dataset contains
+Document each source dataset:
 
-**How to do it:**
+- owner/source system
+- temporal scope
+- geographic scope
+- key identifiers
+- known caveats
 
-1. **Inventory your sources:**
-   - List all datasets to be integrated
-   - Document the source system or origin
-   - Note the temporal and geographic scope
-
-2. **Assess compatibility:**
-   - Review column names and structures
-   - Identify common fields (CU, year, etc.)
-   - Note differences in formats or codes
-
-**Example source inventory:**
+**Example inventory:**
 
 | Dataset | Source | Key Columns | Temporal Scope | Geographic Scope |
-|---------|--------|-------------|----------------|------------------|
-| Escapement 2023 | Stream surveys | CU, BY, Esc | 2023 | Fraser River CUs |
-| Catch 2023 | FOS | CU, Year, Catch | 2023 | All Areas |
-| Stock status | SPSR | CU, BY, Status | 2010-2023 | All CUs |
+|---|---|---|---|---|
+| Escapement series | Survey program | `CU_code`, `BY`, `Esc` | 2010–2024 | Fraser CUs |
+| Catch series | FOS | `CU`, `Year`, `Catch` | 2010–2024 | Multiple areas |
+| Status outputs | SPSR | `CU`, `BY`, `STATUS` | 2010–2024 | All CUs |
 
 </div>
 
-### Step 2: Map Common Fields
+### Step 2: Build a Common Semantic Map
 
 <div class="cookbook-step">
 
-**What you need:**
-- Column lists from each dataset
-- Access to standard vocabularies
+Create a crosswalk from source fields to target standard fields and canonical IRIs.
 
-**How to do it:**
+**Example (illustrative — verify exact term IRIs in WIDOCO):**
 
-1. **Identify common fields:**
-   - Geographic identifiers (CU, SMU, DU)
-   - Temporal fields (year, brood year)
-   - Biological measures (escapement, catch, spawners)
+| Source Dataset | Source Column | Standard Label | Standard IRI | Target Column |
+|---|---|---|---|---|
+| Escapement | `CU_code` | Conservation Unit | `https://w3id.org/gcdfo/salmon#ConservationUnit` | `CU` |
+| Escapement | `BY` | Brood Year | `https://w3id.org/gcdfo/salmon#BroodYear` | `BroodYear` |
+| Catch | `Year` | Return Year | `https://w3id.org/gcdfo/salmon#ReturnYear` | `ReturnYear` |
 
-2. **Create a field mapping table:**
-
-**Example field mapping:**
-
-| Source Dataset | Source Column | Standard Term | Standard URI | Target Column |
-|---------------|---------------|---------------|--------------|---------------|
-| Escapement | CU_code | Conservation Unit | http://purl.dataone.org/odo/SALMON_00000239 | CU |
-| Escapement | BY | Brood Year | http://purl.dataone.org/odo/SALMON_00000782 | BroodYear |
-| Catch | CU | Conservation Unit | http://purl.dataone.org/odo/SALMON_00000239 | CU |
-| Catch | Year | Return Year | http://purl.dataone.org/odo/SALMON_00000891 | ReturnYear |
-
-3. **Resolve differences:**
-   - Standardize column names
-   - Align code values
-   - Convert units if needed
+Use full IRIs only.
 
 </div>
 
-### Step 3: Standardize Code Values
+### Step 3: Harmonize Controlled Values
 
 <div class="cookbook-step">
 
-**What you need:**
-- Code lists from each dataset
-- Controlled vocabularies for codes
-
-**How to do it:**
-
-1. **Extract unique values** from categorical columns across all datasets
-2. **Map to standard codes** using controlled vocabularies
-3. **Create transformation rules:**
-
-**Example code standardization:**
+Normalize categorical values before joining.
 
 ```csv
-source_dataset,source_column,source_value,standard_value,concept_scheme_uri
-Escapement,run_type,Spring,Spring Run,http://purl.dataone.org/odo/SALMON_00000456
-Escapement,run_type,S,Spring Run,http://purl.dataone.org/odo/SALMON_00000456
-Catch,run_type,SPRING,Spring Run,http://purl.dataone.org/odo/SALMON_00000456
-```
-
-4. **Apply transformations** to each dataset before integration
-
-</div>
-
-### Step 4: Align Data Structures
-
-<div class="cookbook-step">
-
-**What you need:**
-- Standardized field mappings
-- Code transformations
-- Your source datasets
-
-**How to do it:**
-
-1. **Rename columns** to match standard names
-2. **Transform codes** to standard values
-3. **Standardize data types** (ensure numeric fields are numeric, dates are dates)
-4. **Handle missing values** consistently
-
-**Example R code for alignment:**
-
-```r
-library(dplyr)
-library(readr)
-
-# Read source datasets
-escapement <- read.csv("escapement_2023.csv")
-catch <- read.csv("catch_2023.csv")
-
-# Standardize escapement data
-escapement_std <- escapement %>%
-  rename(
-    CU = CU_code,
-    BroodYear = BY,
-    Escapement = Esc
-  ) %>%
-  mutate(
-    BroodYear = as.integer(BroodYear),
-    Escapement = as.numeric(Escapement)
-  )
-
-# Standardize catch data
-catch_std <- catch %>%
-  rename(
-    CU = CU,
-    ReturnYear = Year,
-    Catch = TotalCatch
-  ) %>%
-  mutate(
-    ReturnYear = as.integer(ReturnYear),
-    Catch = as.numeric(Catch)
-  )
-
-# Save standardized datasets
-write.csv(escapement_std, "escapement_standardized.csv", row.names = FALSE)
-write.csv(catch_std, "catch_standardized.csv", row.names = FALSE)
+source_dataset,source_column,source_value,standard_value,concept_iri
+Escapement,run_type,Spring,Spring Run,https://w3id.org/gcdfo/salmon#SpringRun
+Escapement,run_type,S,Spring Run,https://w3id.org/gcdfo/salmon#SpringRun
+Catch,run_type,SPRING,Spring Run,https://w3id.org/gcdfo/salmon#SpringRun
 ```
 
 </div>
 
-### Step 5: Join and Integrate
+### Step 4: Standardize Structures
 
 <div class="cookbook-step">
 
-**What you need:**
-- Standardized datasets
-- Join keys (common fields)
-
-**How to do it:**
-
-1. **Identify join keys:**
-   - Common fields across datasets (CU, year, etc.)
-   - Ensure keys are standardized
-
-2. **Perform joins:**
-   - Use appropriate join type (inner, left, full)
-   - Handle one-to-many relationships
-   - Preserve data integrity
-
-**Example integration:**
-
-```r
-# Join escapement and catch data
-# Note: Escapement uses BroodYear, Catch uses ReturnYear
-# Need to align temporal fields
-
-integrated <- escapement_std %>%
-  # Convert brood year to return year (assuming 4-year cycle)
-  mutate(ReturnYear = BroodYear + 4) %>%
-  left_join(
-    catch_std,
-    by = c("CU", "ReturnYear")
-  ) %>%
-  # Calculate exploitation rate
-  mutate(
-    ExploitationRate = ifelse(
-      !is.na(Catch) & !is.na(Escapement),
-      Catch / (Catch + Escapement),
-      NA
-    )
-  )
-
-# Save integrated dataset
-write.csv(integrated, "integrated_data.csv", row.names = FALSE)
-```
-
-**Tips:**
-- Document join logic and assumptions
-- Handle temporal mismatches carefully
-- Validate join results (check for unexpected duplicates or missing matches)
+- align column names
+- align data types
+- align temporal semantics (brood year vs return year)
+- document all transformation assumptions
 
 </div>
 
-### Step 6: Validate Integration
+### Step 5: Integrate with Explicit Join Logic
 
 <div class="cookbook-step">
 
-**What you need:**
-- Integrated dataset
-- Source datasets for comparison
-- Validation rules
-
-**How to do it:**
-
-1. **Check completeness:**
-   - Verify expected records are present
-   - Identify missing matches
-   - Document exclusions
-
-2. **Validate relationships:**
-   - Check join keys are correct
-   - Verify calculated fields
-   - Ensure data ranges are reasonable
-
-3. **Compare summaries:**
-   - Compare totals before and after integration
-   - Check for unexpected changes
-   - Validate derived metrics
-
-**Example validation:**
-
-```r
-# Compare totals
-escapement_total <- sum(escapement_std$Escapement, na.rm = TRUE)
-catch_total <- sum(catch_std$Catch, na.rm = TRUE)
-
-integrated_esc_total <- sum(integrated$Escapement, na.rm = TRUE)
-integrated_catch_total <- sum(integrated$Catch, na.rm = TRUE)
-
-# Check totals match
-stopifnot(abs(escapement_total - integrated_esc_total) < 0.01)
-stopifnot(abs(catch_total - integrated_catch_total) < 0.01)
-
-# Check for unexpected values
-summary(integrated$ExploitationRate)  # Should be between 0 and 1
-```
+- define join keys and expected cardinality
+- run joins in script
+- check for dropped/unmatched records
+- compute derived fields only after validating joins
 
 </div>
 
-### Step 7: Document Integration
+### Step 6: Validate the Integrated Output
 
 <div class="cookbook-step">
 
-**What you need:**
-- Integrated dataset
-- Integration code/logic
-- Source metadata
+Validation checks:
 
-**How to do it:**
+- source totals vs integrated totals
+- row counts by key strata (CU/year/etc.)
+- derived metric sanity checks (ranges, null rate)
+- unresolved mapping exceptions list
 
-1. **Create integration documentation:**
-   - List all source datasets
-   - Document join logic and keys
-   - Note any transformations applied
-   - Record assumptions and decisions
+</div>
 
-2. **Create integrated data dictionary:**
-   - Document all columns in integrated dataset
-   - Include standard term URIs
-   - Note source of each field
+### Step 7: Package for Reuse
 
-3. **Version control:**
-   - Tag version of integrated dataset
-   - Document date of integration
-   - Note any issues or limitations
+<div class="cookbook-step">
 
-**Example documentation template:**
+Package the integrated output with:
 
-```markdown
-# Integrated Dataset Documentation
+- updated `column_dictionary.csv`
+- code mappings (`codes.csv`)
+- integration README (logic + assumptions)
 
-## Source Datasets
-- Escapement 2023 (source: stream surveys)
-- Catch 2023 (source: FOS)
-
-## Integration Date
-2024-01-15
-
-## Join Logic
-- Joined on CU and ReturnYear
-- Escapement BroodYear converted to ReturnYear (BroodYear + 4)
-
-## Transformations Applied
-- Column name standardization
-- Code value standardization
-- ExploitationRate calculation: Catch / (Catch + Escapement)
-
-## Known Issues
-- Some CUs missing catch data for 2023
-- Temporal alignment assumes 4-year cycle (may vary by CU)
-```
+Then continue to [SDEP + SPSR Intake Path](ontology-data-package-gpt.qmd) if this dataset is moving into SPSR/FSAR workflows.
 
 </div>
 
@@ -362,8 +121,6 @@ summary(integrated$ExploitationRate)  # Should be between 0 and 1
 
 ## Next Steps
 
-- Review the [Controlled Vocabulary & Thesauri](controlled-vocabulary-thesauri.qmd) for standard terms
-- Check the [Salmon Data Exchange Package Specification](salmon-data-exchange-package.qmd) for integration patterns
-- Explore [R tools](../tools/r_packages.qmd) for automated integration workflows
-- Contact the [Data Stewardship Unit](mailto:FADSDataStewardship-GestiondesdonneesSFDA@dfo-mpo.gc.ca) for integration support
-
+- [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)
+- [SDEP specification](salmon-data-exchange-package.qmd)
+- [FSAR workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd)

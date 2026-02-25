@@ -776,3 +776,195 @@
 .home-most-read { margin: 0.5rem 0 1.5rem; padding-left: 1.25rem; }
 .home-most-read li { margin: 0.45rem 0; }
 .home-most-read-meta { margin-left: 0.55rem; color: #5a6b7c; font-size: 0.92rem; }
+
+/* Shared cookbook workflow blocks */
+.cookbook-section {
+  margin-top: 2rem;
+}
+
+.cookbook-step {
+  background: #f8f9fa;
+  border-left: 4px solid #446c8a;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+
+.cookbook-step h3 {
+  margin-top: 0;
+  color: #446c8a;
+}
+
+.cookbook-step code {
+  background: #e9ecef;
+  padding: 0.15rem 0.35rem;
+  border-radius: 3px;
+}
+
+.cookbook-step pre {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 0.9rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.cookbook-step pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+/* Status badges and semantic-system callouts */
+.status-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.35rem 0 0.8rem;
+}
+
+.status-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.status-canonical {
+  background: #e7f5ec;
+  border-color: #9bd3af;
+  color: #215f35;
+}
+
+.status-active {
+  background: #e8f1fb;
+  border-color: #a5c4e8;
+  color: #184b83;
+}
+
+.status-guidance {
+  background: #fff3e6;
+  border-color: #f0c79d;
+  color: #84511a;
+}
+
+.semantic-entry {
+  border: 1px solid #cfe0ee;
+  background: #f7fbff;
+  border-radius: 10px;
+  padding: 0.95rem 1rem;
+  margin: 0.6rem 0 1rem;
+}
+
+.semantic-entry h3 {
+  margin-top: 0;
+  margin-bottom: 0.45rem;
+}
+
+.semantic-entry ol {
+  margin-bottom: 0.4rem;
+}
+
+/* Semantic system branded entry page */
+.semantic-system-hero {
+  background: linear-gradient(140deg, #0c3048 0%, #1f5d82 55%, #5b8fb2 100%);
+  color: #fff;
+  border-radius: 14px;
+  padding: 1.4rem 1.4rem 1.2rem;
+  margin: 0 0 1rem;
+  box-shadow: 0 8px 24px rgba(17, 56, 86, 0.24);
+}
+
+.semantic-system-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.74rem;
+  font-weight: 700;
+  opacity: 0.9;
+  margin-bottom: 0.35rem;
+}
+
+.semantic-system-hero h2 {
+  color: #fff;
+  margin: 0 0 0.55rem;
+  font-size: 1.7rem;
+  line-height: 1.2;
+}
+
+.semantic-system-hero p {
+  margin-bottom: 0.7rem;
+  max-width: 72ch;
+}
+
+.semantic-system-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.semantic-system-cta {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.semantic-system-cta:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+.semantic-system-cta-primary {
+  background: #ffffff;
+  color: #1f5d82 !important;
+  border-color: #ffffff;
+}
+
+.semantic-system-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: stretch;
+  margin: 0.7rem 0 1rem;
+}
+
+.semantic-system-node {
+  flex: 1 1 220px;
+  border: 1px solid #d6e4ef;
+  border-radius: 10px;
+  padding: 0.8rem 0.9rem;
+  background: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.semantic-system-node h3 {
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+  font-size: 1rem;
+}
+
+.semantic-system-node p {
+  margin-bottom: 0.45rem;
+  color: #4f6170;
+}
+
+.semantic-system-arrow {
+  align-self: center;
+  font-size: 1.1rem;
+  color: #5f7f97;
+  padding: 0 0.1rem;
+}
+
+@media (max-width: 900px) {
+  .semantic-system-arrow {
+    display: none;
+  }
+}

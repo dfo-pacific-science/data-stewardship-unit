@@ -1,0 +1,55 @@
+---
+title: "SKOS Vocabularies"
+---
+
+::: {.callout-note}
+Derived from canonical `docs/CONVENTIONS.md` in the `dfo-salmon-ontology` repo.
+:::
+
+## When to use SKOS
+
+Use SKOS for controlled values, code lists, and terminology schemes where you need consistent labels and lightweight hierarchy.
+
+Use OWL (not SKOS) when you need class-level logical reasoning.
+
+## Required pattern for a SKOS concept
+
+- `a skos:Concept`
+- `skos:prefLabel "..."@en`
+- `skos:inScheme :YourScheme`
+- recommended: `skos:definition "..."@en`
+- `rdfs:isDefinedBy <https://w3id.org/gcdfo/salmon>`
+
+Optional:
+
+- `skos:altLabel`
+- `skos:broader` / `skos:narrower` / `skos:related`
+- `skos:notation` for machine code (typed literal)
+- `IAO:0000119` and `dcterms:source` for provenance
+
+## Template example
+
+```turtle
+ex:DFOCode a rdfs:Datatype .
+
+:SonarCounting a skos:Concept ;
+  skos:inScheme :EnumerationMethodScheme ;
+  skos:prefLabel "Sonar counting"@en ;
+  skos:definition "Counting fish using active acoustic methods."@en ;
+  skos:notation "ESC-001"^^ex:DFOCode ;
+  rdfs:isDefinedBy <https://w3id.org/gcdfo/salmon> .
+```
+
+## Common mistakes to avoid
+
+- putting machine codes into `skos:prefLabel`
+- forgetting `skos:inScheme`
+- using SKOS concepts as OWL classes in logical axioms
+- adding multiple `skos:prefLabel` values for the same language
+
+## Quick checks
+
+- [ ] one preferred label per language
+- [ ] belongs to the right scheme
+- [ ] definition is present for non-obvious concepts
+- [ ] notation datatype is explicit when codes are used

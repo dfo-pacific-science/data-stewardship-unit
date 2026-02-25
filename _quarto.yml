@@ -30,8 +30,14 @@ website:
     left:
       - text: "Home"
         href: index.qmd
-      - text: "Standards Hub"
-        href: reference_info/data_standards/index.qmd
+      - text: "Semantic System"
+        menu:
+          - text: "Start Here"
+            href: reference_info/data_standards/semantic-salmon-system.qmd
+          - text: "Salmon Data Standards Hub"
+            href: reference_info/data_standards/index.qmd
+          - text: "SDEP + SPSR Intake Path"
+            href: reference_info/data_standards/ontology-data-package-gpt.qmd
       - text: "Workflows"
         menu:
           - href: how_to_guides/fsar-data-standardization-workflow.qmd
@@ -81,17 +87,28 @@ website:
             href: blog/index.qmd
       - section: "Standards & Vocabulary"
         contents:
+          - text: "Semantic Salmon System — Start Here"
+            href: reference_info/data_standards/semantic-salmon-system.qmd
           - text: "Salmon Data Standards Hub"
             href: reference_info/data_standards/index.qmd
-          - text: "Controlled Vocabulary & Thesauri"
-            href: reference_info/data_standards/controlled-vocabulary-thesauri.qmd
-          - href: tutorials/support_controlled_vocabs.qmd
           - href: reference_info/ontology/formal-documentation.qmd
+          - text: "Ontology Conventions Guidebook"
+            href: reference_info/ontology/conventions/index.qmd
+          - text: "Class vs SKOS Decision Tree"
+            href: reference_info/ontology/class-vs-skos-decision-tree.qmd
+          - text: "How to Request a New Ontology Term"
+            href: reference_info/ontology/request-new-term.qmd
+          - text: "Controlled Vocabulary Governance Workflow"
+            href: tutorials/support_controlled_vocabs.qmd
           - href: reference_info/data_standards/salmon-data-exchange-package.qmd
+          - text: "IRI and Identifier Policy"
+            href: reference_info/data_standards/iri-identifier-policy.qmd
           - text: "Semantic Salmon Data Ecosystem"
             href: reference_info/data_standards/semantic-salmon-data-ecosystem.qmd
-          - text: "Term Dictionary + Data Package + Salmon GPT"
+          - text: "SDEP + SPSR Intake Path"
             href: reference_info/data_standards/ontology-data-package-gpt.qmd
+          - text: "Standards & Workflow Changelog"
+            href: reference_info/data_standards/changelog.qmd
           - text: "Darwin Core / GBIF / OBIS"
             href: reference_info/dwc-obis-gbif.qmd
       - section: "Common Workflows"
@@ -100,6 +117,7 @@ website:
           - href: reference_info/data_standards/integrate-data.qmd
           - href: reference_info/data_standards/publish-data.qmd
           - href: how_to_guides/fsar-data-standardization-workflow.qmd
+          - href: how_to_guides/fsar-to-spsr-end-to-end-example.qmd
       - section: "Data Access & Platforms"
         contents:
           - href: how_to_guides/databricks_r_studio.qmd

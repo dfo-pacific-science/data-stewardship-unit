@@ -7,51 +7,38 @@ format:
   html:
     toc: true
     toc-depth: 2
-    css: ../../styles/custom.css
 ---
 
 ```{=html}
-<style>
-.cookbook-section {
-  margin-top: 3rem;
-}
-
-.cookbook-step {
-  background: #f8f9fa;
-  border-left: 4px solid #446c8a;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-radius: 4px;
-}
-
-.cookbook-step h3 {
-  margin-top: 0;
-  color: #446c8a;
-  font-size: 1.3rem;
-}
-
-.cookbook-step code {
-  background: #e9ecef;
-  padding: 0.2rem 0.4rem;
-  border-radius: 3px;
-  font-size: 0.9em;
-}
-
-.cookbook-step pre {
-  background: #2d2d2d;
-  color: #f8f8f2;
-  padding: 1rem;
-  border-radius: 4px;
-  overflow-x: auto;
-}
-
-.cookbook-step pre code {
-  background: transparent;
-  color: inherit;
-  padding: 0;
-}
-</style>
+<div class="status-badge-row">
+  <span class="status-badge status-active">Active Workflow</span>
+  <span class="status-badge status-canonical">Canonical Terms Required</span>
+  <span class="status-badge status-guidance">FSAR + SPSR Ready</span>
+</div>
 ```
+
+## Semantic Salmon System — entry path (start here)
+
+```{=html}
+<div class="semantic-entry">
+  <h3>Use this 5-part system in order</h3>
+  <ol>
+    <li><strong>DFO Salmon Ontology</strong> for canonical term IRIs</li>
+    <li><strong>SDEP</strong> for package metadata structure</li>
+    <li><strong>metasalmon</strong> for validation checks</li>
+    <li><strong>Salmon Data GPT</strong> as an optional drafting assistant</li>
+    <li><strong>SPSR</strong> for operational FSAR intake</li>
+  </ol>
+</div>
+```
+
+Quick links:
+
+- [Semantic Salmon System — Start Here](semantic-salmon-system.qmd)
+- [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)
+- [Salmon Data Exchange Package Specification](salmon-data-exchange-package.qmd)
+- [SDEP + SPSR Intake Path](ontology-data-package-gpt.qmd)
+- [FSAR to SPSR: End-to-End Example](../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd)
 
 ## Cookbook Guide
 
@@ -62,201 +49,117 @@ format:
 <div class="cookbook-step">
 
 **What you need:**
-- Your existing dataset
-- List of column names and their current meanings
+- Your source dataset
+- A list of column names and meanings
 
 **How to do it:**
 
-1. Open your dataset and list all columns
-2. Document what each column represents in plain language
-3. Identify columns that might map to standard terms:
-   - Geographic identifiers (CU, SMU, DU)
-   - Temporal fields (brood year, return year)
-   - Biological measurements (escapement, spawners)
-   - Categorical codes (run type, life stage)
-
-**Example assessment:**
-
-| Current Column | What It Means | Potential Standard Term |
-|---------------|---------------|-------------------------|
-| `CU_code` | Conservation unit identifier | CU |
-| `BY` | Brood year | Brood Year |
-| `Esc` | Escapement count | Escapement |
+1. List all columns and describe each in plain language.
+2. Mark candidate fields for semantic mapping:
+   - identifiers (CU/SMU/population)
+   - time fields (brood year, return year, event date)
+   - measurements (escapement, abundance, catch)
+   - controlled codes (run type, method, status)
 
 </div>
 
-### Step 2: Map to Standard Terms
+### Step 2: Map to Canonical Terms
 
 <div class="cookbook-step">
 
 **What you need:**
-- Your column assessment
-- Access to the [Controlled Vocabulary & Thesauri](controlled-vocabulary-thesauri.qmd)
+- Column assessment from Step 1
+- [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)
 
 **How to do it:**
 
-1. For each column, search the vocabulary for matching terms
-2. Review term definitions to confirm they match your usage
-3. Copy the URI for each confirmed match
-4. Create a mapping table:
+1. Search for matching canonical terms.
+2. Confirm definitions match your intended meaning.
+3. Record the **full** canonical IRI for each mapping.
 
-**Example mapping:**
+**Example mapping (illustrative — confirm exact term IRIs in WIDOCO):**
 
 ```csv
-current_column,standard_term_label,standard_term_uri
-CU_code,Conservation Unit,http://purl.dataone.org/odo/SALMON_00000239
-BY,Brood Year,http://purl.dataone.org/odo/SALMON_00000782
-Esc,Escapement,http://purl.dataone.org/odo/SALMON_00000123
+current_column,standard_term_label,standard_term_iri
+CU_code,Conservation Unit,https://w3id.org/gcdfo/salmon#ConservationUnit
+BY,Brood Year,https://w3id.org/gcdfo/salmon#BroodYear
+Esc,Escapement,https://w3id.org/gcdfo/salmon#Escapement
 ```
 
-**Tips:**
-- If no exact match exists, find the closest broader term
-- Document any gaps for future vocabulary expansion
-- Consider synonyms and alternative names
+**Rule:** do not use partial/shortened URIs.
 
 </div>
 
-### Step 3: Update Your Data Dictionary
+### Step 3: Build or Update Your Data Dictionary
 
 <div class="cookbook-step">
 
-**What you need:**
-- Your mapping table
-- [Data Dictionary Template](data_dictionary_template.xlsx)
+Use one row per source column.
 
-**How to do it:**
+Minimum recommended fields:
 
-1. Download the data dictionary template
-2. Create one row per column in your dataset
-3. Fill in required fields:
-   - `variable_name`: Your current column name
-   - `label`: Human-readable label
-   - `data_type`: Appropriate type (string, integer, float, boolean, categorical)
-   - `definition`: Clear explanation of what the column contains
-   - `standard_term_uri`: URI from your mapping (if available)
-   - `unit`: Unit of measurement (for numeric fields)
-   - `accepted_values`: List of valid values (for categorical fields)
+- `variable_name`
+- `label`
+- `data_type`
+- `definition`
+- `standard_term_iri`
+- `unit` (where applicable)
+- `accepted_values` (for categorical fields)
 
-**Example dictionary entry:**
+**Example:**
 
 ```csv
-variable_name,label,data_type,definition,standard_term_uri,unit
-CU_code,Conservation Unit,string,The conservation unit identifier,http://purl.dataone.org/odo/SALMON_00000239,
-BY,Brood Year,integer,The year in which spawning occurred,http://purl.dataone.org/odo/SALMON_00000782,year
-Esc,Escapement,float,Number of fish returning to spawn,http://purl.dataone.org/odo/SALMON_00000123,number of fish
+variable_name,label,data_type,definition,standard_term_iri,unit
+CU_code,Conservation Unit,string,The conservation unit identifier,https://w3id.org/gcdfo/salmon#ConservationUnit,
+BY,Brood Year,integer,The year in which spawning occurred,https://w3id.org/gcdfo/salmon#BroodYear,year
+Esc,Escapement,float,Number of fish returning to spawn,https://w3id.org/gcdfo/salmon#Escapement,number of fish
 ```
 
 </div>
 
-### Step 4: Standardize Code Lists
+### Step 4: Standardize Controlled Values
 
 <div class="cookbook-step">
 
-**What you need:**
-- List of categorical columns
-- Access to controlled vocabularies for codes
+1. Identify categorical columns.
+2. List observed values.
+3. Map to controlled concepts and keep a mapping table.
 
-**How to do it:**
-
-1. Identify all categorical columns (run type, life stage, etc.)
-2. List all unique values currently in use
-3. Search for matching controlled vocabularies
-4. Map your values to standard codes
-5. Document mappings in `codes.csv`:
-
-**Example code mapping:**
+**Example:**
 
 ```csv
-variable_name,current_value,standard_value,concept_scheme_uri
-run_type,Spring,Spring Run,http://purl.dataone.org/odo/SALMON_00000456
-run_type,Summer,Summer Run,http://purl.dataone.org/odo/SALMON_00000457
-run_type,Fall,Fall Run,http://purl.dataone.org/odo/SALMON_00000458
-```
-
-**Tips:**
-- Create a lookup table for data transformation
-- Document any values that don't have standard equivalents
-- Consider creating a new controlled vocabulary if needed
-
-</div>
-
-### Step 5: Apply Standards to Your Data
-
-<div class="cookbook-step">
-
-**What you need:**
-- Standardized data dictionary
-- Code mappings
-- Your original dataset
-
-**How to do it:**
-
-1. **Rename columns** (optional): Update column names to match standard labels
-2. **Transform codes**: Replace current values with standard codes using your mapping
-3. **Validate data types**: Ensure numeric fields are properly formatted
-4. **Add metadata**: Include your data dictionary with the dataset
-
-**Example R code for transformation:**
-
-```r
-library(dplyr)
-
-# Read your data
-data <- read.csv("your_data.csv")
-
-# Apply code mappings
-code_mapping <- read.csv("code_mapping.csv")
-data <- data %>%
-  left_join(code_mapping, by = c("run_type" = "current_value")) %>%
-  mutate(run_type = standard_value) %>%
-  select(-current_value, -standard_value)
-
-# Validate data types
-data <- data %>%
-  mutate(
-    BY = as.integer(BY),
-    Esc = as.numeric(Esc)
-  )
-
-# Save standardized data
-write.csv(data, "standardized_data.csv", row.names = FALSE)
+variable_name,current_value,standard_value,concept_iri
+run_type,Spring,Spring Run,https://w3id.org/gcdfo/salmon#SpringRun
+run_type,Summer,Summer Run,https://w3id.org/gcdfo/salmon#SummerRun
+run_type,Fall,Fall Run,https://w3id.org/gcdfo/salmon#FallRun
 ```
 
 </div>
 
-### Step 6: Validate and Document
+### Step 5: Apply Transformations Reproducibly
 
 <div class="cookbook-step">
 
-**What you need:**
-- Standardized dataset
-- Completed data dictionary
-- Validation checklist
+- apply mappings in script (R/Python), not manually in ad-hoc spreadsheets
+- preserve source column traceability
+- validate data types and units after transformation
+- version your transformed output
 
-**How to do it:**
+</div>
 
-1. **Validate completeness:**
-   - All columns have entries in the dictionary
-   - All URIs are valid and accessible
-   - Required fields are populated
+### Step 6: Validate and Prepare for Intake
 
-2. **Check consistency:**
-   - Code values match controlled vocabularies
-   - Data types are correct
-   - Units are documented
+<div class="cookbook-step">
 
-3. **Document changes:**
-   - Create a changelog of transformations
-   - Note any assumptions or decisions made
-   - Record version information
+Before moving to package/upload:
 
-**Validation checklist:**
-- [ ] All columns documented in data dictionary
-- [ ] Standard term URIs included where available
-- [ ] Code lists mapped to controlled vocabularies
-- [ ] Data types validated
-- [ ] Units documented for numeric fields
-- [ ] Transformation steps documented
+- [ ] every column is documented
+- [ ] semantic links are canonical full IRIs
+- [ ] controlled values are mapped or flagged
+- [ ] units and assumptions are explicit
+- [ ] transformation steps are recorded
+
+If your destination is SPSR for FSAR workflows, continue with [FSAR Data Standardization Workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd).
 
 </div>
 
@@ -264,9 +167,7 @@ write.csv(data, "standardized_data.csv", row.names = FALSE)
 
 ## Next Steps
 
-- Review the [Controlled Vocabulary & Thesauri](controlled-vocabulary-thesauri.qmd) for available terms
-- Check the [Salmon Data Exchange Package Specification](salmon-data-exchange-package.qmd) for package structure
-- Explore [R tools](../tools/r_packages.qmd) for automated standardization
-- Contact the [Data Stewardship Unit](mailto:FADSDataStewardship-GestiondesdonneesSFDA@dfo-mpo.gc.ca) for support
-
-
+- [Salmon Data Standards Hub](index.qmd)
+- [SDEP specification](salmon-data-exchange-package.qmd)
+- [SDEP + SPSR Intake Path](ontology-data-package-gpt.qmd)
+- [Data Stewardship Unit contact](mailto:FADSDataStewardship-GestiondesdonneesSFDA@dfo-mpo.gc.ca)

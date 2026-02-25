@@ -3,11 +3,31 @@ title: "News & Updates"
 format: html
 ---
 
-This section tracks notable updates to standards, workflows, and tooling.
+This section tracks meaningful changes to standards, workflows, and documentation.
 
-For now, follow updates through:
+## Recent updates
 
-- The [GitHub repository](https://github.com/dfo-pacific-science/data-stewardship-unit)
-- The [Salmon Data Standards Hub](../reference_info/data_standards/index.qmd)
+### 2026-02 — Ontology documentation consolidation
 
-More structured release notes will be added here.
+- integrated ontology conventions guidebook into DSU docs
+- removed duplicate in-site term explorer path
+- set WIDOCO as formal canonical reference path
+
+### 2026-02 — FSAR workflow alignment for SPSR
+
+- clarified SPSR as a primary intake pathway for FSAR-oriented datasets
+- added SPSR links in standards/workflow pages
+- aligned package/intake guidance around SDEP + wizard flow
+
+## Where to monitor ongoing changes
+
+- GitHub commits and PRs: <https://github.com/dfo-pacific-science/data-stewardship-unit>
+- Issues and enhancement requests: <https://github.com/dfo-pacific-science/data-stewardship-unit/issues>
+
+## Suggest an update
+
+If a workflow or reference page is out of date, open an issue and include:
+
+- page URL
+- what is incorrect
+- proposed replacement text or links

@@ -7,159 +7,125 @@ format:
   html:
     toc: true
     toc-depth: 2
-    css: ../../styles/custom.css
 ---
 
 ```{=html}
-<style>
-.cookbook-section {
-  margin-top: 3rem;
-}
-
-.cookbook-step {
-  background: #f8f9fa;
-  border-left: 4px solid #446c8a;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-radius: 4px;
-}
-
-.cookbook-step h3 {
-  margin-top: 0;
-  color: #446c8a;
-  font-size: 1.3rem;
-}
-
-.cookbook-step code {
-  background: #e9ecef;
-  padding: 0.2rem 0.4rem;
-  border-radius: 3px;
-  font-size: 0.9em;
-}
-
-.cookbook-step pre {
-  background: #2d2d2d;
-  color: #f8f8f2;
-  padding: 1rem;
-  border-radius: 4px;
-  overflow-x: auto;
-}
-
-.cookbook-step pre code {
-  background: transparent;
-  color: inherit;
-  padding: 0;
-}
-</style>
+<div class="status-badge-row">
+  <span class="status-badge status-active">Active Workflow</span>
+  <span class="status-badge status-canonical">Canonical Terms Required</span>
+  <span class="status-badge status-guidance">Internal + External Paths</span>
+</div>
 ```
+
+## Semantic Salmon System — entry path (front and center)
+
+```{=html}
+<div class="semantic-entry">
+  <h3>Before publishing, confirm this chain is complete</h3>
+  <ol>
+    <li><strong>DFO Salmon Ontology</strong> mappings are finalized</li>
+    <li><strong>SDEP</strong> package metadata is complete</li>
+    <li><strong>metasalmon</strong> validation is clean</li>
+    <li><strong>Salmon Data GPT</strong> (optional) is used only to draft, not to bypass validation</li>
+    <li><strong>SPSR</strong> intake is complete for FSAR-oriented workflows</li>
+  </ol>
+</div>
+```
+
+Quick links:
+
+- [Semantic Salmon System — Start Here](semantic-salmon-system.qmd)
+- [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)
+- [Salmon Data Exchange Package Specification](salmon-data-exchange-package.qmd)
+- [SDEP + SPSR Intake Path](ontology-data-package-gpt.qmd)
+- [FSAR to SPSR: End-to-End Example](../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd)
 
 ## Cookbook Guide
 
 <div class="cookbook-section">
 
-### Step 1: Prepare Your Data Dictionary
+### Step 1: Finalize Metadata
 
 <div class="cookbook-step">
 
-**What you need:**
-- Your dataset (CSV or Excel file)
-- A data dictionary template
+Ensure your dataset has:
 
-**How to do it:**
+- complete data dictionary entries
+- clear definitions and units
+- canonical full IRIs for mapped terms
+- contact + provenance + license details
 
-1. Download the [Data Dictionary Template](data_dictionary_template.xlsx)
-2. Open your dataset and identify all columns
-3. For each column, fill in:
-   - `variable_name`: Exact column name from your data
-   - `label`: Human-readable description
-   - `data_type`: string, integer, float, boolean, or categorical
-   - `definition`: Plain-language explanation
-   - `standard_term_uri`: URI from the controlled vocabulary (if available)
+</div>
 
-**Example:**
+### Step 2: Verify Semantic Links
+
+<div class="cookbook-step">
+
+Use [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd) to verify that term IRIs are current and resolvable.
+
+**Example row:**
 
 ```csv
-variable_name,label,data_type,definition,standard_term_uri
-CU,Conservation Unit,string,The conservation unit identifier,http://purl.dataone.org/odo/SALMON_00000239
+variable_name,label,data_type,definition,standard_term_iri
+CU,Conservation Unit,string,The conservation unit identifier,https://w3id.org/gcdfo/salmon#ConservationUnit
 ```
+
+Do not use partial URIs.
 
 </div>
 
-### Step 2: Find Standard Terms
+### Step 3: Build Release-Ready Package
 
 <div class="cookbook-step">
 
-**What you need:**
-- Access to the [Controlled Vocabulary & Thesauri](controlled-vocabulary-thesauri.qmd)
+Prepare the package structure expected by your destination workflow:
 
-**How to do it:**
+- `dataset.csv`
+- `tables.csv`
+- `column_dictionary.csv`
+- `codes.csv` (if needed)
+- data files in `data/`
 
-1. Open the vocabulary page
-2. Search for terms matching your columns
-3. Copy the URI for each matching term
-4. Paste the URI into your data dictionary's `standard_term_uri` column
-
-**Tips:**
-- Start with common terms like CU, brood year, escapement
-- If a term doesn't exist, note it for future vocabulary updates
-- Use partial URIs if the full URI is too long
+Reference: [Salmon Data Exchange Package Specification](salmon-data-exchange-package.qmd)
 
 </div>
 
-### Step 3: Create Your Data Package
+### Step 4: Validate Before Submission
 
 <div class="cookbook-step">
 
-**What you need:**
-- Completed data dictionary
-- Your data files
-- Understanding of the [Salmon Data Exchange Package](salmon-data-exchange-package.qmd) specification
+Run validation checks before upload/publication:
 
-**How to do it:**
-
-1. Create a directory for your package: `SDEP_yourproject/`
-2. Place your data files in a `data/` subdirectory
-3. Create metadata files:
-   - `dataset.csv`: Dataset-level metadata
-   - `tables.csv`: Table descriptions
-   - `column_dictionary.csv`: Your completed data dictionary
-   - `codes.csv`: Controlled value lists (if applicable)
-
-**Example structure:**
-
-```
-SDEP_escapement_2023/
-├── dataset.csv
-├── tables.csv
-├── column_dictionary.csv
-├── codes.csv
-└── data/
-    └── escapement_data.csv
-```
+- required fields complete
+- data types and date formats valid
+- code lists consistent
+- all IRI links present and syntactically valid
 
 </div>
 
-### Step 4: Validate and Submit
+### Step 5: Submit to SPSR for FSAR Workflows (when applicable)
 
 <div class="cookbook-step">
 
-**What you need:**
-- Completed data package
-- Validation tools (optional)
+For many FSAR-oriented datasets, SPSR is the operational intake path.
 
-**How to do it:**
+- SPSR docs: <https://spsr.dfo-mpo.gc.ca/documentation/>
+- SPSR upload wizard: <https://spsr.dfo-mpo.gc.ca/wizard/1/>
+- SPSR templates endpoint: <https://spsr.dfo-mpo.gc.ca/download_sdp_templates>
 
-1. Review your data dictionary for completeness
-2. Verify all URIs are valid and accessible
-3. Check that required fields are filled
-4. Submit to the Data Stewardship Unit for review
+Upload only after internal quality checks are complete.
 
-**Validation checklist:**
-- [ ] All columns have definitions
-- [ ] Standard term URIs are included where available
-- [ ] Data types are correctly specified
-- [ ] Units are documented for numeric fields
-- [ ] Code lists reference controlled vocabularies
+</div>
+
+### Step 6: Publish Externally (if approved)
+
+<div class="cookbook-step">
+
+For external/public release, follow policy and approval requirements:
+
+- [Publishing Data Externally](../publishing_data_externally.qmd)
+
+Keep internal intake (e.g., SPSR) and external publication pathways clearly documented.
 
 </div>
 
@@ -167,8 +133,6 @@ SDEP_escapement_2023/
 
 ## Next Steps
 
-- Review the [Salmon Data Exchange Package Specification](salmon-data-exchange-package.qmd) for detailed requirements
-- Browse the [Controlled Vocabulary & Thesauri](controlled-vocabulary-thesauri.qmd) for available terms
-- Contact the [Data Stewardship Unit](mailto:FADSDataStewardship-GestiondesdonneesSFDA@dfo-mpo.gc.ca) for assistance
-
-
+- [FSAR Data Standardization Workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd)
+- [SDEP + SPSR Intake Path](ontology-data-package-gpt.qmd)
+- [Publishing Data Externally](../publishing_data_externally.qmd)

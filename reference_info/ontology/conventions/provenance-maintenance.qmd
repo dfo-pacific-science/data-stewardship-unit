@@ -1,0 +1,45 @@
+---
+title: "Provenance and Maintenance"
+---
+
+::: {.callout-note}
+Derived from canonical `docs/CONVENTIONS.md` in the `dfo-salmon-ontology` repo.
+:::
+
+## Minimal provenance pattern
+
+Use these fields consistently:
+
+- `IAO:0000115` — term definition text (required)
+- `IAO:0000119` — textual source/citation for definition (optional)
+- `dcterms:source` — resolvable URI for source material (optional but preferred)
+- `rdfs:isDefinedBy <https://w3id.org/gcdfo/salmon>` (required)
+
+## Keep identifiers and codes distinct
+
+- `dcterms:identifier` = textual internal identifier (when used)
+- `skos:notation` = scheme code (typed literal)
+- labels are human-facing and should not carry machine IDs/codes
+
+## Maintenance cadence
+
+For every material ontology update:
+
+1. update/add terms with required annotations
+2. validate consistency and quality checks
+3. regenerate docs/release artifacts
+4. update DSU guidebook pages if conventions changed
+5. communicate downstream impact (SDEP templates, SPSR guidance, validators)
+
+## Quality checks before merge
+
+- [ ] required annotation fields present
+- [ ] provenance fields are meaningful (not placeholders)
+- [ ] no duplicate concept labels with conflicting definitions
+- [ ] hierarchy/scheme placement reviewed
+- [ ] release notes prepared for user-facing changes
+
+## Canonical source links
+
+- Canonical file: <https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md>
+- Repository root: <https://github.com/dfo-pacific-science/dfo-salmon-ontology>

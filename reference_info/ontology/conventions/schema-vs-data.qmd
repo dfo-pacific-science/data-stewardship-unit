@@ -1,0 +1,54 @@
+---
+title: "Schema vs Data (TBox vs ABox)"
+---
+
+::: {.callout-note}
+Derived from canonical `docs/CONVENTIONS.md` in the `dfo-salmon-ontology` repo.
+:::
+
+## Why this split matters
+
+The ontology file should stay focused on **schema** (types, properties, definitions). Actual observations and measurements belong in **data files/databases**.
+
+## TBox (schema) belongs in ontology
+
+Examples:
+
+- class definitions (`owl:Class`)
+- property definitions (`owl:ObjectProperty`, `owl:DatatypeProperty`)
+- concept schemes (`skos:ConceptScheme`)
+- logical axioms and constraints
+
+## ABox (instance data) belongs in data graphs
+
+Examples:
+
+- specific survey events
+- specific count values
+- year/location-specific records
+- dataset-specific observations
+
+## Practical rule of thumb
+
+If the triple changes every season/year/report, it is probably **ABox data**, not ontology schema.
+
+## Example
+
+```turtle
+# TBox (schema)
+:EscapementSurveyEvent a owl:Class ;
+  rdfs:label "Escapement Survey Event"@en ;
+  IAO:0000115 "A survey event used to estimate escapement."@en ;
+  rdfs:isDefinedBy <https://w3id.org/gcdfo/salmon> .
+
+# ABox (instance data)
+:SkeenaSurveyEvent2024 a :EscapementSurveyEvent ;
+  dwc:eventDate "2024-08-15"^^xsd:date ;
+  :measuredVisits 6 .
+```
+
+## Implication for DSU/SDEP/SPSR workflows
+
+- ontology repository defines shared semantics
+- SDEP + SPSR workflows carry the actual dataset instances
+- keep these layers separate so standards can evolve without rewriting historical data

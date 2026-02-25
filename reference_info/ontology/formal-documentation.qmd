@@ -2,19 +2,39 @@
 title: "GC DFO Salmon Ontology"
 format:
   html:
-    toc: false
+    toc: true
 ---
 
-The complete **GC DFO Salmon Ontology documentation** is available at:
+## Formal ontology documentation
 
-**👉 [https://w3id.org/gcdfo/salmon](https://dfo-pacific-science.github.io/dfo-salmon-ontology/)**
+The complete formal ontology documentation is published at:
 
-This documentation includes:
-<p> - Formal class hierarchies and relationships 
-- Property definitions and constraints 
-- Axiomatic relationships and inference rules 
-- Complete ontology structure and imports </p>
+**👉 [https://w3id.org/gcdfo/salmon](https://w3id.org/gcdfo/salmon)**
 
-The ontology source can be accessed in the [FADS DSU Salmon Ontology GitHub](https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/w3id-deploy/docs/gcdfo.ttl)
+This includes:
 
-For curated, human-friendly term tables organized by theme, see the [Controlled Vocabulary & Thesauri](../data_standards/controlled-vocabulary-thesauri.qmd) page. These tables focus on **Controlled Vocabularies and Thesauri** extracted from the full ontology.
+- Class hierarchies and logical axioms
+- Object/data property definitions
+- Imports and alignment structure
+- Release ontology artifacts
+
+Ontology source (TTL):
+
+- [dfo-salmon-ontology/docs/gcdfo.ttl](https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/w3id-deploy/docs/gcdfo.ttl)
+
+## Contributor guidebook (user-first)
+
+The user-first conventions guidebook is now integrated into this site.
+
+It is based on the canonical `docs/CONVENTIONS.md` in the [`dfo-salmon-ontology`](https://github.com/dfo-pacific-science/dfo-salmon-ontology) repository.
+
+- [Conventions guidebook index](conventions/index.qmd)
+- [Quick reference](conventions/quick-reference.qmd)
+- [Schema vs data (TBox vs ABox)](conventions/schema-vs-data.qmd)
+- [OWL classes](conventions/owl-classes.qmd)
+- [OWL properties](conventions/owl-properties.qmd)
+- [SKOS vocabularies](conventions/skos-vocabularies.qmd)
+- [Provenance and maintenance](conventions/provenance-maintenance.qmd)
+- [Class vs SKOS Decision Tree](class-vs-skos-decision-tree.qmd)
+- [How to Request a New Ontology Term](request-new-term.qmd)
+- [Full conventions (canonical source)](conventions/full.qmd)

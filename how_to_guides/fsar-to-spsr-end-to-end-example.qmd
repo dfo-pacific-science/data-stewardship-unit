@@ -1,0 +1,82 @@
+---
+title: "FSAR to SPSR: End-to-End Example"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+This example shows one practical path from a local FSAR dataset to an SPSR upload-ready package.
+
+## Scenario
+
+You have a CU-level escapement time series and supporting metadata for an FSAR update.
+
+Goal: produce a validated package and submit through SPSR wizard.
+
+## Step 1 — Start with source data and assumptions
+
+Record:
+
+- source dataset file(s)
+- temporal scope
+- CU/SMU scope
+- key transformations already applied
+- known caveats
+
+## Step 2 — Map fields to canonical terms
+
+Use [GC DFO Salmon Ontology documentation](../reference_info/ontology/formal-documentation.qmd) to map core columns to canonical IRIs.
+
+Create a simple mapping table:
+
+```csv
+source_column,standard_label,standard_term_iri
+CU_code,Conservation Unit,https://w3id.org/gcdfo/salmon#ConservationUnit
+BY,Brood Year,https://w3id.org/gcdfo/salmon#BroodYear
+Esc,Escapement,https://w3id.org/gcdfo/salmon#Escapement
+```
+
+## Step 3 — Build minimal SDEP metadata
+
+Create:
+
+- `dataset.csv`
+- `tables.csv`
+- `column_dictionary.csv`
+- `codes.csv` (if categorical values are present)
+
+Reference: [Salmon Data Exchange Package Specification](../reference_info/data_standards/salmon-data-exchange-package.qmd)
+
+## Step 4 — Validate before upload
+
+Run local checks (structure + semantics) and fix issues before submission.
+
+## Step 5 — Prepare SPSR upload files
+
+Confirm that your upload file(s):
+
+- use the expected column naming/profile for your intake mode
+- include required metadata context
+- preserve traceability to source values
+
+SPSR resources:
+
+- docs: <https://spsr.dfo-mpo.gc.ca/documentation/>
+- wizard: <https://spsr.dfo-mpo.gc.ca/wizard/1/>
+- templates: <https://spsr.dfo-mpo.gc.ca/download_sdp_templates>
+
+## Step 6 — Submit and iterate
+
+1. Upload through wizard.
+2. Review validation output.
+3. Correct and resubmit as needed.
+4. Record accepted version and intake date.
+
+## Deliverables checklist
+
+- [ ] mapped field table with canonical IRIs
+- [ ] complete minimal SDEP metadata files
+- [ ] validated upload file(s)
+- [ ] SPSR submission completed
+- [ ] version/provenance notes archived

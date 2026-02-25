@@ -1,0 +1,34 @@
+name: Docs Quality Checks
+
+on:
+  pull_request:
+    paths:
+      - "**/*.qmd"
+      - "_quarto.yml"
+      - "scripts/check_qmd_*.py"
+      - ".github/workflows/docs-quality.yml"
+  push:
+    branches: [main]
+    paths:
+      - "**/*.qmd"
+      - "_quarto.yml"
+      - "scripts/check_qmd_*.py"
+      - ".github/workflows/docs-quality.yml"
+
+jobs:
+  docs-quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Pattern checks
+        run: python scripts/check_qmd_patterns.py
+
+      - name: Internal link checks
+        run: python scripts/check_qmd_links.py

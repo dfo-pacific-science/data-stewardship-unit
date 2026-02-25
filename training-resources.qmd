@@ -1,19 +1,23 @@
 ---
+title: "Training Resources"
 format: html
 ---
 
 ::: {.content-visible when-profile="english"}
 
-# Training Resources
+## Training Resources
 
-Welcome to the Training Resources page of the FADS Open Science Hub! Here, you will find a collection of training resources to enhance your skills and knowledge in data stewardship.
+A curated set of learning resources for data stewardship, reproducible workflows, and salmon assessment support.
 
-## Online Training Resources
+### Core skills
 
-- [Version Control with Git: Software Carpentry](https://swcarpentry.github.io/git-novice/)
-- [Data Analysis and Visualization in R for Ecologists: Software Carpentry](https://datacarpentry.org/R-ecology-lesson/)
+- [Version Control with Git (Software Carpentry)](https://swcarpentry.github.io/git-novice/)
+- [Data Analysis and Visualization in R for Ecologists](https://datacarpentry.org/R-ecology-lesson/)
 - [Data Analysis and Visualization in Python for Ecologists](https://datacarpentry.org/python-ecology-lesson/)
-- [Introduction to stock assessment](https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/index-eng.html)
+
+### Domain and policy context
+
+- [Introduction to stock assessment (DFO)](https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/index-eng.html)
 - [Canada School of Public Service Catalog](https://www.csps-efpc.gc.ca/catalogue/topics-eng.aspx)
 - [Microsoft Learn](https://learn.microsoft.com/en-us/training/browse/)
 
@@ -21,18 +25,20 @@ Welcome to the Training Resources page of the FADS Open Science Hub! Here, you w
 
 ::: {.content-visible when-profile="french"}
 
-# Formation
+## Ressources de formation
 
-Bienvenue sur la page des ressources de formation du site web de l'unité d'intendance des données ! Vous y trouverez une collection de ressources de formation pour améliorer vos compétences et vos connaissances en matière d'intendance des données.
+Une sélection de ressources pour l'intendance des données et les flux de travail reproductibles.
 
-## Ressources de formation en ligne
+### Compétences de base
 
-- Contrôle de version avec Git : charpenterie logicielle](https://swcarpentry.github.io/git-novice/)
-- [Analyse et visualisation de données en R pour les écologistes : charpenterie logicielle (en anglais seulement)](https://datacarpentry.org/R-ecology-lesson/)
-- [Analyse et visualisation de données en Python pour les écologistes(en anglais seulement)](https://datacarpentry.org/python-ecology-lesson/)
-- [Introduction à l'évaluation des stocks] (https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/index-fra.html)
+- [Contrôle de version avec Git (Software Carpentry)](https://swcarpentry.github.io/git-novice/)
+- [Analyse et visualisation de données en R pour les écologistes (en anglais)](https://datacarpentry.org/R-ecology-lesson/)
+- [Analyse et visualisation de données en Python pour les écologistes (en anglais)](https://datacarpentry.org/python-ecology-lesson/)
+
+### Contexte métier et politique
+
+- [Introduction à l'évaluation des stocks (MPO)](https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/index-fra.html)
 - [Catalogue de l'École de la fonction publique du Canada](https://www.csps-efpc.gc.ca/catalogue/topics-fra.aspx)
 - [Microsoft Learn](https://learn.microsoft.com/fr-ca/training/browse/)
-
 
 :::

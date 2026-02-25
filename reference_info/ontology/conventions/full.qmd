@@ -1,0 +1,15 @@
+---
+title: "Full Conventions (Canonical Source)"
+---
+
+This site keeps a curated, user-first conventions guide.
+
+For the complete and canonical source text, use:
+
+- <https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md>
+
+Repository:
+
+- <https://github.com/dfo-pacific-science/dfo-salmon-ontology>
+
+If there is any mismatch between DSU guidebook pages and the canonical file, treat the canonical file as authoritative.

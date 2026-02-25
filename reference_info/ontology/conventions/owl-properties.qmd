@@ -1,0 +1,62 @@
+---
+title: "OWL Properties"
+---
+
+::: {.callout-note}
+Derived from canonical `docs/CONVENTIONS.md` in the `dfo-salmon-ontology` repo.
+:::
+
+## Choose property type correctly
+
+- `owl:ObjectProperty` for links to another entity
+- `owl:DatatypeProperty` for literal values (numbers, strings, dates)
+
+## Required pattern
+
+For either property type:
+
+- declaration (`a owl:ObjectProperty` or `a owl:DatatypeProperty`)
+- `rdfs:label "..."@en`
+- `IAO:0000115 "..."@en`
+- `rdfs:isDefinedBy <https://w3id.org/gcdfo/salmon>`
+
+Optional but recommended:
+
+- `IAO:0000119`, `dcterms:source`, `IAO:0000112`
+
+## Domain/range guidance
+
+Use `rdfs:domain` and `rdfs:range` conservatively.
+
+Global domain/range statements propagate broadly in OWL. If a constraint is contextual rather than universal, prefer class restrictions and/or SHACL validation.
+
+## Naming convention
+
+Use lowerCamelCase from the subject perspective:
+
+- `aboutStock`
+- `usesMethod`
+- `hasMember`
+
+## Alignment guidance
+
+Before creating a new relation, check standard relation vocabularies (e.g., RO). Prefer reuse or alignment via:
+
+- `rdfs:subPropertyOf`
+- `owl:equivalentProperty`
+
+Avoid using `rdfs:seeAlso` as a semantic alignment substitute.
+
+## Template examples
+
+```turtle
+:aboutStock a owl:ObjectProperty ;
+  rdfs:label "about stock"@en ;
+  IAO:0000115 "Links a measurement or observation to the stock it describes."@en ;
+  rdfs:isDefinedBy <https://w3id.org/gcdfo/salmon> .
+
+:measurementValue a owl:DatatypeProperty ;
+  rdfs:label "measurement value"@en ;
+  IAO:0000115 "The recorded numeric value for a measurement."@en ;
+  rdfs:isDefinedBy <https://w3id.org/gcdfo/salmon> .
+```
