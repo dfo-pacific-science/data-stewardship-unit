@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Data Stewardship Unit (DFO Pacific Region Science Branch)">
 
-<title>The Semantic Salmon Data Ecosystem – FADS Open Science Hub</title>
+<title>Standards &amp; Workflow Changelog – FADS Open Science Hub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -218,7 +217,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../reference_info/data_standards/semantic-salmon-system.html">Standards &amp; Vocabulary</a></li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/semantic-salmon-data-ecosystem.html">Semantic Salmon Data Ecosystem</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../reference_info/data_standards/semantic-salmon-system.html">Standards &amp; Vocabulary</a></li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/changelog.html">Standards &amp; Workflow Changelog</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -356,7 +355,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/data_standards/semantic-salmon-data-ecosystem.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../reference_info/data_standards/semantic-salmon-data-ecosystem.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Semantic Salmon Data Ecosystem</span></a>
   </div>
 </li>
@@ -368,7 +367,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/data_standards/changelog.html" class="sidebar-item-text sidebar-link">
+  <a href="../../reference_info/data_standards/changelog.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Standards &amp; Workflow Changelog</span></a>
   </div>
 </li>
@@ -545,40 +544,30 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
+  <ul>
+  <li><a href="#entry-template" id="toc-entry-template" class="nav-link active" data-scroll-target="#entry-template">Entry template</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">2026-02</a>
   <ul class="collapse">
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">1</span> Overview</a>
-  <ul class="collapse">
-  <li><a href="#entry-path-what-to-use-in-order" id="toc-entry-path-what-to-use-in-order" class="nav-link" data-scroll-target="#entry-path-what-to-use-in-order"><span class="header-section-number">1.1</span> Entry path (what to use, in order)</a></li>
+  <li><a href="#ontology-docs-consolidation-fsarspsr-alignment" id="toc-ontology-docs-consolidation-fsarspsr-alignment" class="nav-link" data-scroll-target="#ontology-docs-consolidation-fsarspsr-alignment">2026-02-20 — ontology docs consolidation + FSAR/SPSR alignment</a></li>
+  <li><a href="#semantic-system-entry-path-made-explicit" id="toc-semantic-system-entry-path-made-explicit" class="nav-link" data-scroll-target="#semantic-system-entry-path-made-explicit">2026-02-20 — semantic system entry path made explicit</a></li>
+  <li><a href="#branded-semantic-start-page-added" id="toc-branded-semantic-start-page-added" class="nav-link" data-scroll-target="#branded-semantic-start-page-added">2026-02-20 — branded semantic start page added</a></li>
   </ul></li>
-  <li><a href="#dfo-salmon-ontology-canonical-semantic-layer" id="toc-dfo-salmon-ontology-canonical-semantic-layer" class="nav-link" data-scroll-target="#dfo-salmon-ontology-canonical-semantic-layer"><span class="header-section-number">2</span> 1. DFO Salmon Ontology (canonical semantic layer)</a></li>
-  <li><a href="#sdep-package-layer" id="toc-sdep-package-layer" class="nav-link" data-scroll-target="#sdep-package-layer"><span class="header-section-number">3</span> 2. SDEP (package layer)</a></li>
-  <li><a href="#validation-tooling-quality-layer" id="toc-validation-tooling-quality-layer" class="nav-link" data-scroll-target="#validation-tooling-quality-layer"><span class="header-section-number">4</span> 3. Validation tooling (quality layer)</a></li>
-  <li><a href="#spsr-operational-intake-layer" id="toc-spsr-operational-intake-layer" class="nav-link" data-scroll-target="#spsr-operational-intake-layer"><span class="header-section-number">5</span> 4. SPSR (operational intake layer)</a></li>
-  <li><a href="#guided-assistants-optional-acceleration" id="toc-guided-assistants-optional-acceleration" class="nav-link" data-scroll-target="#guided-assistants-optional-acceleration"><span class="header-section-number">6</span> 5. Guided assistants (optional acceleration)</a></li>
-  <li><a href="#end-to-end-flow" id="toc-end-to-end-flow" class="nav-link" data-scroll-target="#end-to-end-flow"><span class="header-section-number">7</span> 6. End-to-end flow</a></li>
-  <li><a href="#why-this-matters" id="toc-why-this-matters" class="nav-link" data-scroll-target="#why-this-matters"><span class="header-section-number">8</span> 7. Why this matters</a></li>
-  <li><a href="#suggested-next-reads" id="toc-suggested-next-reads" class="nav-link" data-scroll-target="#suggested-next-reads"><span class="header-section-number">9</span> 8. Suggested next reads</a></li>
+  <li><a href="#quality-checks-ci" id="toc-quality-checks-ci" class="nav-link" data-scroll-target="#quality-checks-ci">Quality checks (CI)</a></li>
   </ul>
-<div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/reference_info/data_standards/semantic-salmon-data-ecosystem.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/reference_info/data_standards/semantic-salmon-data-ecosystem.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/reference_info/data_standards/changelog.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/reference_info/data_standards/changelog.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../reference_info/data_standards/semantic-salmon-system.html">Standards &amp; Vocabulary</a></li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/semantic-salmon-data-ecosystem.html">Semantic Salmon Data Ecosystem</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../reference_info/data_standards/semantic-salmon-system.html">Standards &amp; Vocabulary</a></li><li class="breadcrumb-item"><a href="../../reference_info/data_standards/changelog.html">Standards &amp; Workflow Changelog</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">The Semantic Salmon Data Ecosystem</h1>
+<h1 class="title">Standards &amp; Workflow Changelog</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Data Stewardship Unit (DFO Pacific Region Science Branch) </p>
-          </div>
-  </div>
     
   
     
@@ -589,109 +578,80 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Overview</h1>
-<p>The <strong>Semantic Salmon Data Ecosystem</strong> (Semantic Salmon System) connects standards, ontology terms, package metadata, validation tooling, and operational upload pathways so salmon data can move from local analysis into reusable systems.</p>
+<p>This changelog tracks user-facing changes to standards guidance, ontology workflow docs, and FSAR/SPSR integration paths.</p>
 <div class="status-badge-row">
-  <span class="status-badge status-canonical">Canonical Architecture</span>
-  <span class="status-badge status-active">Active Workflows</span>
-  <span class="status-badge status-guidance">Contributor Guidance</span>
+  <span class="status-badge status-canonical">Canonical</span>
+  <span class="status-badge status-active">Active</span>
+  <span class="status-badge status-guidance">Guidance</span>
 </div>
-<section id="entry-path-what-to-use-in-order" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="entry-path-what-to-use-in-order"><span class="header-section-number">1.1</span> Entry path (what to use, in order)</h2>
-<div class="semantic-entry">
-  <ol>
-    <li><strong>DFO Salmon Ontology</strong> — canonical semantics</li>
-    <li><strong>SDEP</strong> — package metadata structure</li>
-    <li><strong>metasalmon</strong> — validation and quality control</li>
-    <li><strong>Salmon Data GPT</strong> — optional drafting/acceleration assistant</li>
-    <li><strong>SPSR</strong> — operational intake path for many FSAR workflows</li>
-  </ol>
-  <p><a href="../../reference_info/data_standards/semantic-salmon-system.html">Open the branded start page for this full path</a>.</p>
-</div>
-<p>At a high level, the ecosystem has five working parts:</p>
-<ol type="1">
-<li><strong>DFO Salmon Ontology</strong> — canonical terms and semantics</li>
-<li><strong>SDEP (Salmon Data Exchange Package)</strong> — structured metadata packaging</li>
-<li><strong>Validation tooling (metasalmon, related checks)</strong> — quality control</li>
-<li><strong>SPSR (Salmon Population Summary Repository)</strong> — intake and operational publishing path for many FSAR workflows</li>
-<li><strong>Salmon Data GPT / guided assistants (optional)</strong> — acceleration layer for drafting mappings and metadata</li>
-</ol>
-</section>
-</section>
-<section id="dfo-salmon-ontology-canonical-semantic-layer" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> 1. DFO Salmon Ontology (canonical semantic layer)</h1>
-<p>The ontology provides shared definitions and persistent IRIs for key domain concepts.</p>
+<section id="entry-template" class="level2">
+<h2 class="anchored" data-anchor-id="entry-template">Entry template</h2>
+<p>Use this structure for each changelog item:</p>
 <ul>
-<li>Canonical docs: <a href="../../reference_info/ontology/formal-documentation.html">GC DFO Salmon Ontology</a></li>
-<li>Contributor guidance: <a href="../../reference_info/ontology/conventions/index.html">Ontology Conventions Guidebook</a></li>
+<li><strong>Date:</strong> YYYY-MM-DD</li>
+<li><strong>Area:</strong> ontology / SDEP / FSAR workflow / SPSR intake / publishing</li>
+<li><strong>Change:</strong> what changed</li>
+<li><strong>Reason:</strong> why it changed</li>
+<li><strong>Impact:</strong> who should care and what to do next</li>
+<li><strong>Links:</strong> PR/issue/pages</li>
 </ul>
 </section>
-<section id="sdep-package-layer" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> 2. SDEP (package layer)</h1>
-<p>SDEP standardizes package metadata without forcing one rigid dataset schema.</p>
-<p>Core files:</p>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section">2026-02</h2>
+<section id="ontology-docs-consolidation-fsarspsr-alignment" class="level3">
+<h3 class="anchored" data-anchor-id="ontology-docs-consolidation-fsarspsr-alignment">2026-02-20 — ontology docs consolidation + FSAR/SPSR alignment</h3>
 <ul>
-<li><code>dataset.csv</code></li>
-<li><code>tables.csv</code></li>
-<li><code>column_dictionary.csv</code></li>
-<li><code>codes.csv</code> (when controlled values apply)</li>
-</ul>
-<p>Spec reference: <a href="../../reference_info/data_standards/salmon-data-exchange-package.html">Salmon Data Exchange Package Specification</a></p>
-</section>
-<section id="validation-tooling-quality-layer" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> 3. Validation tooling (quality layer)</h1>
-<p>Validation tooling checks package structure and semantic consistency before submission.</p>
-<p>Typical checks include:</p>
+<li><strong>Area:</strong> ontology + standards hub + workflows</li>
+<li><strong>Change:</strong> integrated ontology conventions guidebook into DSU docs; retired duplicate term explorer path; rewired standards pages around canonical ontology docs + SDEP + SPSR intake.</li>
+<li><strong>Reason:</strong> reduce duplication and keep one formal source of truth.</li>
+<li><strong>Impact:</strong> contributors should use WIDOCO + conventions guidebook for term semantics and use updated FSAR/SPSR workflow pages for intake.</li>
+<li><strong>Links:</strong>
 <ul>
-<li>required columns/files present</li>
-<li>value types and requiredness</li>
-<li>IRI formatting and ontology-link consistency</li>
-<li>controlled vocabulary/code-list alignment</li>
+<li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/pull/151">PR #151</a></li>
+<li><a href="../../reference_info/ontology/formal-documentation.html">GC DFO Salmon Ontology</a></li>
+<li><a href="../../reference_info/data_standards/ontology-data-package-gpt.html">SDEP + SPSR Intake Path</a></li>
+</ul></li>
 </ul>
 </section>
-<section id="spsr-operational-intake-layer" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> 4. SPSR (operational intake layer)</h1>
-<p>For FSAR-oriented contributions, SPSR is a major operational destination.</p>
+<section id="semantic-system-entry-path-made-explicit" class="level3">
+<h3 class="anchored" data-anchor-id="semantic-system-entry-path-made-explicit">2026-02-20 — semantic system entry path made explicit</h3>
 <ul>
-<li>Docs: <a href="https://spsr.dfo-mpo.gc.ca/documentation/" class="uri">https://spsr.dfo-mpo.gc.ca/documentation/</a></li>
-<li>Upload wizard: <a href="https://spsr.dfo-mpo.gc.ca/wizard/1/" class="uri">https://spsr.dfo-mpo.gc.ca/wizard/1/</a></li>
-<li>Templates endpoint: <a href="https://spsr.dfo-mpo.gc.ca/download_sdp_templates" class="uri">https://spsr.dfo-mpo.gc.ca/download_sdp_templates</a></li>
-<li>Repo: <a href="https://github.com/dfo-pacific-science/salmon-population-summary-repository" class="uri">https://github.com/dfo-pacific-science/salmon-population-summary-repository</a></li>
-</ul>
-<p>This creates a practical bridge from standards work to real upload and review workflows.</p>
-</section>
-<section id="guided-assistants-optional-acceleration" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> 5. Guided assistants (optional acceleration)</h1>
-<p>Assistant tools can help draft mappings and package metadata, but they do not replace validation or governance. They are best used as <strong>drafting aids</strong>.</p>
-</section>
-<section id="end-to-end-flow" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> 6. End-to-end flow</h1>
-<ol type="1">
-<li>Map terms to ontology IRIs</li>
-<li>Build SDEP metadata</li>
-<li>Validate package</li>
-<li>Upload via SPSR workflow (for applicable FSAR datasets)</li>
-<li>Iterate from validation/reviewer feedback</li>
-</ol>
-</section>
-<section id="why-this-matters" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> 7. Why this matters</h1>
+<li><strong>Area:</strong> standardize/publish workflow pages</li>
+<li><strong>Change:</strong> made DFO Ontology → SDEP → metasalmon → Salmon Data GPT → SPSR path prominent at top of key workflow pages.</li>
+<li><strong>Reason:</strong> make the intended system flow obvious during standardization and publishing.</li>
+<li><strong>Impact:</strong> data producers should follow the explicit entry path before upload or external release.</li>
+<li><strong>Links:</strong>
 <ul>
-<li>lower onboarding friction for data producers</li>
-<li>more consistent semantics across teams</li>
-<li>cleaner FSAR-to-repository pathways</li>
-<li>better machine-readability for integration and downstream analytics</li>
+<li><a href="../../reference_info/data_standards/standardize-data.html">Standardize Your Data</a></li>
+<li><a href="../../reference_info/data_standards/publish-data.html">Publish Your Data</a></li>
+<li><a href="../../reference_info/data_standards/semantic-salmon-data-ecosystem.html">The Semantic Salmon Data Ecosystem</a></li>
+</ul></li>
 </ul>
 </section>
-<section id="suggested-next-reads" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> 8. Suggested next reads</h1>
+<section id="branded-semantic-start-page-added" class="level3">
+<h3 class="anchored" data-anchor-id="branded-semantic-start-page-added">2026-02-20 — branded semantic start page added</h3>
 <ul>
+<li><strong>Area:</strong> standards IA + homepage/navigation</li>
+<li><strong>Change:</strong> added a branded front-door page for the full path, with one primary CTA: <strong>Start my FSAR intake path</strong>.</li>
+<li><strong>Reason:</strong> provide a single obvious entry point before users branch into detailed pages.</li>
+<li><strong>Impact:</strong> new users can start from one page and follow the canonical sequence without guessing navigation order.</li>
+<li><strong>Links:</strong>
+<ul>
+<li><a href="../../reference_info/data_standards/semantic-salmon-system.html">Semantic Salmon System — Start Here</a></li>
 <li><a href="../../how_to_guides/fsar-to-spsr-end-to-end-example.html">FSAR to SPSR: End-to-End Example</a></li>
-<li><a href="../../reference_info/data_standards/iri-identifier-policy.html">IRI and Identifier Policy</a></li>
-<li><a href="../../reference_info/ontology/class-vs-skos-decision-tree.html">Class vs SKOS Decision Tree</a></li>
-<li><a href="../../reference_info/ontology/request-new-term.html">How to Request a New Ontology Term</a></li>
+<li><a href="../../reference_info/data_standards/index.html">Salmon Data Standards Hub</a></li>
+</ul></li>
 </ul>
+</section>
+</section>
+<section id="quality-checks-ci" class="level2">
+<h2 class="anchored" data-anchor-id="quality-checks-ci">Quality checks (CI)</h2>
+<p>Automated checks are configured to catch:</p>
+<ul>
+<li>legacy namespace/content patterns in active docs</li>
+<li>broken internal local links in active <code>.qmd</code> pages</li>
+</ul>
+<p>CI workflow file: <code>.github/workflows/docs-quality.yml</code></p>
 
 
 </section>
@@ -1105,7 +1065,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/reference_info/data_standards/semantic-salmon-data-ecosystem.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/reference_info/data_standards/semantic-salmon-data-ecosystem.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/reference_info/data_standards/changelog.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/reference_info/data_standards/changelog.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This site was created with <a href="https://quarto.org/">Quarto</a> and is hosted with <a href="https://pages.github.com/">GitHub Pages</a>.</p>
 </div>
