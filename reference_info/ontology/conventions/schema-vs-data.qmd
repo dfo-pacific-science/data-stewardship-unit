@@ -47,8 +47,8 @@ If the triple changes every season/year/report, it is probably **ABox data**, no
   :measuredVisits 6 .
 ```
 
-## Implication for DSU/SDEP/SPSR workflows
+## Implication for DSU salmon data package / SPSR workflows
 
 - ontology repository defines shared semantics
-- SDEP + SPSR workflows carry the actual dataset instances
+- salmon data package + SPSR workflows carry the actual dataset instances
 - keep these layers separate so standards can evolve without rewriting historical data

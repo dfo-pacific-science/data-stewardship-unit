@@ -29,7 +29,7 @@ For every material ontology update:
 2. validate consistency and quality checks
 3. regenerate docs/release artifacts
 4. update DSU guidebook pages if conventions changed
-5. communicate downstream impact (SDEP templates, SPSR guidance, validators)
+5. communicate downstream impact (salmon data package templates, SPSR guidance, validators)
 
 ## Quality checks before merge
 

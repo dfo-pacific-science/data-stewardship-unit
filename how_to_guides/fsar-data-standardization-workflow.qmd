@@ -6,7 +6,9 @@ format:
     toc-depth: 2
 ---
 
-Use this workflow when preparing salmon datasets for Fisheries Science Advisory Report (FSAR) analysis, review, and operational intake.
+Use this workflow when preparing salmon datasets for Fisheries Science Advisory Report (FSAR) analysis, review, and operational SPSR intake.
+
+**Canonical package specification (Markdown):** [Salmon data package specification](https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md)
 
 If you want a concrete walkthrough, use the companion page: [FSAR to SPSR: End-to-End Example](fsar-to-spsr-end-to-end-example.qmd).
 
@@ -23,9 +25,9 @@ If you want a concrete walkthrough, use the companion page: [FSAR to SPSR: End-t
 2. Map core variables (CU identifiers, year fields, key measurements).
 3. Record **full** canonical IRIs for mapped terms.
 
-## Step 3 — Build an SDEP package
+## Step 3 — Build a salmon data package
 
-Use the [SDEP specification](../reference_info/data_standards/salmon-data-exchange-package.qmd).
+Use the [salmon data package specification](../reference_info/data_standards/salmon-data-exchange-package.qmd).
 
 At minimum:
 
@@ -37,7 +39,7 @@ At minimum:
 
 Starter assets:
 
-- [Download minimal SDEP example (zip)](../reference_info/data_standards/examples/sdep-minimal-example.zip)
+- [Download minimal salmon data package example (zip)](../reference_info/data_standards/examples/sdep-minimal-example.zip)
 - [Browse template package files](https://github.com/dfo-pacific-science/data-stewardship-unit/tree/main/reference_info/data_standards/examples/sdep-minimal-example)
 
 ## Step 4 — Validate package quality
@@ -49,33 +51,35 @@ Example R checks:
 ```r
 library(metasalmon)
 
-pkg_path <- "path/to/your/sdep-package"
+pkg_path <- "path/to/your/salmon-data-package"
 
 validate_dictionary(file.path(pkg_path, "column_dictionary.csv"))
 validate_semantics(file.path(pkg_path, "column_dictionary.csv"))
 ```
 
-## Step 5 — Prepare SPSR upload files (FSAR priority path)
+## Step 5 — Align to current SPSR intake direction (CUYear-first)
 
-For FSAR-oriented contributions, SPSR is a major operational intake target.
+Based on current SPSR execution direction, prepare uploads as one unified CU-year intake path:
 
-- Confirm column names and metadata are consistent with your selected SPSR intake profile.
-- Ensure provenance notes are explicit for transformed/derived values.
-- Keep the package and upload files versioned together.
+- Start from current SPSR templates: <https://spsr.dfo-mpo.gc.ca/download_sdp_templates>
+- Treat **WSP CU assessment fields** as the canonical status/benchmark layer.
+- Keep **FSAR fishery fields** (catch, age, exploitation, etc.) as complementary data on the same CU-year pathway.
+- Do not assume equivalence for similarly named fields (for example, FSAR `TOTAL_SPAWNERS` vs WSP `SpnForAbd_Total`); document mapping assumptions explicitly.
+- Keep provenance explicit for transformed/derived values (for example, data source, year type, and method notes where applicable).
+- Keep package metadata and upload CSV(s) versioned together.
 
 Useful SPSR references:
 
 - Repo: <https://github.com/dfo-pacific-science/salmon-population-summary-repository>
 - App docs: <https://spsr.dfo-mpo.gc.ca/documentation/>
 - Upload wizard: <https://spsr.dfo-mpo.gc.ca/wizard/1/>
-- Templates endpoint: <https://spsr.dfo-mpo.gc.ca/download_sdp_templates>
 
 ## Step 6 — Upload and review in SPSR
 
 - Upload via SPSR wizard.
 - Resolve validation feedback.
 - Re-upload if needed until intake checks are clean.
-- Record upload metadata/version in your project notes.
+- Record accepted upload version, intake date, and any profile-specific notes.
 
 ## Step 7 — Publish externally (if in scope and approved)
 
@@ -86,6 +90,7 @@ Useful SPSR references:
 
 - [ ] Scope and classification confirmed
 - [ ] Vocabulary mappings documented with full IRIs
-- [ ] SDEP files completed and validated
-- [ ] SPSR upload completed (or intake exceptions documented)
+- [ ] Salmon data package files completed and validated
+- [ ] SPSR template-aligned upload files prepared and submitted
+- [ ] Intake assumptions/provenance notes archived
 - [ ] External publication requirements completed (if applicable)

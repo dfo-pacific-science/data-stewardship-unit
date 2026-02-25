@@ -17,7 +17,7 @@ This section tracks meaningful changes to standards, workflows, and documentatio
 
 - clarified SPSR as a primary intake pathway for FSAR-oriented datasets
 - added SPSR links in standards/workflow pages
-- aligned package/intake guidance around SDEP + wizard flow
+- aligned package/intake guidance around salmon data package + wizard flow
 
 ## Where to monitor ongoing changes
 

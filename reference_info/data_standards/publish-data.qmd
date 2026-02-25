@@ -24,7 +24,7 @@ format:
   <h3>Before publishing, confirm this chain is complete</h3>
   <ol>
     <li><strong>DFO Salmon Ontology</strong> mappings are finalized</li>
-    <li><strong>SDEP</strong> package metadata is complete</li>
+    <li><strong>Salmon data package</strong> metadata is complete</li>
     <li><strong>metasalmon</strong> validation is clean</li>
     <li><strong>Salmon Data GPT</strong> (optional) is used only to draft, not to bypass validation</li>
     <li><strong>SPSR</strong> intake is complete for FSAR-oriented workflows</li>
@@ -36,8 +36,8 @@ Quick links:
 
 - [Semantic Salmon System — Start Here](semantic-salmon-system.qmd)
 - [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)
-- [Salmon Data Exchange Package Specification](salmon-data-exchange-package.qmd)
-- [SDEP + SPSR Intake Path](ontology-data-package-gpt.qmd)
+- [Salmon data package specification](salmon-data-exchange-package.qmd)
+- [Salmon data package + SPSR intake path](ontology-data-package-gpt.qmd)
 - [FSAR to SPSR: End-to-End Example](../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd)
 
 ## Cookbook Guide
@@ -86,7 +86,7 @@ Prepare the package structure expected by your destination workflow:
 - `codes.csv` (if needed)
 - data files in `data/`
 
-Reference: [Salmon Data Exchange Package Specification](salmon-data-exchange-package.qmd)
+Reference: [Salmon data package specification](salmon-data-exchange-package.qmd)
 
 </div>
 
@@ -134,5 +134,5 @@ Keep internal intake (e.g., SPSR) and external publication pathways clearly docu
 ## Next Steps
 
 - [FSAR Data Standardization Workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd)
-- [SDEP + SPSR Intake Path](ontology-data-package-gpt.qmd)
+- [Salmon data package + SPSR intake path](ontology-data-package-gpt.qmd)
 - [Publishing Data Externally](../publishing_data_externally.qmd)
