@@ -7,6 +7,12 @@ This section tracks meaningful changes to standards, workflows, and documentatio
 
 ## Recent updates
 
+### 2026-03 — Reflection: From Data Stewardship to Data Practice
+
+- new long-form reflection on DSU outcomes, lessons, and next-step recommendations
+- includes direct links to the ontology, SDIS, Salmon Data Package spec, metasalmon, and related tools/services
+- read it here: [From Data Stewardship to Data Practice](from-data-stewardship-to-data-practice.qmd)
+
 ### 2026-02 — Ontology documentation consolidation
 
 - integrated ontology conventions guidebook into DSU docs

@@ -1,0 +1,151 @@
+---
+title: "From Data Stewardship to Data Practice"
+subtitle: "Reflections on a Year and a Half of Salmon Data Work"
+author: "Brett Johnson"
+date: 2026-03-06
+categories:
+  - Reflections
+  - Data Stewardship
+  - Salmon Data
+format: html
+toc: true
+---
+
+As my time leading the Data Stewardship Unit in DFO’s Pacific Region Science Branch comes to an end and I prepare to move into a new role with the Pacific Salmon Commission, I have been reflecting on what the last year and a half of work actually showed.
+
+On paper, the unit had a fairly clear mandate: strengthen data governance, advance data stewardship culture, and help data producers publish findable, accessible, interoperable, and reusable data. But in practice, the work was never just about governance language, metadata fields, or technical tools. It was about working with people, and building tools that materially help them make salmon data easier to understand, easier to trust, easier to exchange, and easier to reuse in ways that support real scientific and management needs.
+
+That meant working at several levels at once. It meant helping people clarify roles and responsibilities. It meant building common language and standards where they were missing. It meant creating practical tools and workflows that lowered the effort required to do good stewardship. And it meant building relationships across programmes, sections, and divisions so that salmon data work did not remain isolated within local pockets of effort.
+
+Underneath all of that was a practical ambition: improve how salmon data, including biological data associated with salmon sampling, are managed within DFO, and improve access to DFO data for Indigenous communities, academics, NGOs, and other external users who need to understand and reuse it. The goal was not simply to create better documentation. It was to make the underlying system work better for the people producing data, the people analysing it, and the people making decisions with it.
+
+## What we set out to do
+
+The Data Stewardship Unit was created with three core goals.
+
+First, we wanted to strengthen data governance so that data producers had greater clarity about responsibilities as data trustees, stewards, and custodians. That sounds administrative, but it had very practical implications. Without clear roles, it is difficult to know who should define standards, who should maintain quality, who should approve change, who should support publication, and who should ensure that data products remain usable over time. Better governance was intended to help data products move more smoothly from local production into regional integration and decision-support use.
+
+Second, we wanted to advance stewardship culture. We wanted stewardship to be understood not as a one-time publishing exercise or a compliance burden, but as an ongoing practice embedded in scientific work. That meant encouraging people to continuously improve data quality, documentation, and standardization, and to think more explicitly about how their data might be interpreted or reused by others. It also meant strengthening regional coordination and shared understanding across a landscape where similar data problems were often being solved repeatedly in parallel.
+
+Third, we wanted to enable data producers to publish FAIR (Findable, Accessible, Interoperable and Reusable) data in a way that was actually useful in practice. For us, FAIR was never an abstract aspiration. It was tied directly to reproducible analyses, data standards, clearer data dictionaries, better metadata, and better exchange formats. It was about making it easier for someone else, whether inside or outside DFO, to understand what a dataset contains, how it was structured, what the fields mean, what codes were used, how it should be interpreted, and how it relates to broader salmon data standards.
+
+Those were the formal goals. The more practical version was this: make salmon data easier to steward, easier to integrate, and easier to use well.
+
+## What we accomplished
+
+*The most important outcomes were not just technical products. They were new ways of working, shared language, and a clearer path to useful data.*
+
+**Community and coordination.** One of the most important accomplishments was cultural and organizational rather than technical.
+
+The Pacific Salmon Data Community of Practice became a real knowledge exchange network. It created a venue where salmon biologists, data stewards, technicians, and others could learn about work happening outside their own programmes, sections, and divisions. In a large organization, useful knowledge often stays trapped within local teams, and similar problems get tackled multiple times without much coordination. The Community of Practice helped counter that. It made it easier for people to see the wider salmon data landscape, understand who was working on what, and identify common needs.
+
+Just as importantly, it helped surface shared pain points that the Data Stewardship Unit could work on directly. Rather than operating from a generic stewardship checklist, the unit focused on issues emerging from the community itself. Through task teams launched through the Community of Practice, we helped move several important pieces of work forward, including improved guidance for [escapement estimate types](https://github.com/dfo-pacific-science/escapement-estimate-type-tech-report), improvements to [salmon outlook reporting](https://github.com/dfo-pacific-science/salmon-outlook-report), better integration of [conservation-unit-based time series](https://github.com/dfo-pacific-science/salmon-population-summary-repository) in support of Fisheries Science Advisory processes, and improved [salmon naming standards](https://github.com/dfo-pacific-science/Salmon-SMU-CU-DU-Crosswalk). These may sound like niche technical topics, but they matter fundamentally to how DFO manages salmon because they shape how consistently data can be interpreted, compared, and reused across teams and over time.
+
+The Community of Practice also contributed to broader documentation and coordination. We improved visibility into the salmon data landscape through the salmon wiki, which helped make systems, datasets, and practices more legible to others. We also collaborated on a functional Qualark test fishery data system with Fraser Interior Area biologists, the Quantitative Assessment Methods Section, and the Pacific Salmon Commission. That work mattered not only as a product, but as an example of cross-team, cross-organization collaboration around a concrete scientific and operational need.
+
+**Shared standards and semantic foundations.** A second major accomplishment was building stronger semantic and technical foundations for interoperable salmon data. Late in the unit’s lifespan, we also produced a Salmon Data Integration System that brings together several stewardship elements that are often treated separately: standards, data packaging, semantic precision, abstraction layers, automation, and AI-assisted mapping.
+
+One of the most persistent problems in salmon data is not just that datasets are stored in different places or use different formats. It is that the meaning of fields is often unclear, inconsistently documented, or defined differently across datasets. Two columns can look similar and mean different things. Two fields can mean the same thing and be labeled differently. Codes can be locally understood but opaque outside the originating team. Too much context gets abstracted away from the data and held only in the minds of technicians, biologists, and research scientists. That creates friction in sharing, integration, analysis, interpretation, reporting, and decision transparency. It is a form of sociotechnical data-system debt.
+
+The [Salmon Data Integration System](https://br-johnson.github.io/salmon-data-integration-system/) was designed to address that problem by creating a more coherent workflow for standardizing and exchanging data. It includes the [DFO salmon ontology](https://dfo-pacific-science.github.io/dfo-salmon-ontology/) and [controlled vocabularies](https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/data_standards/index.html), the [Salmon Data Package specification](https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md), the [`metasalmon` R package](https://dfo-pacific-science.github.io/metasalmon/), and the [Salmon Data GPT assistant](https://chatgpt.com/g/g-69375eab4f608191863e8c23313a6f9f-salmon-data-standardizer). Together, these components provide a shared semantic foundation, a structured packaging model, practical helper functions, and lower-friction support for mapping and standardization.
+
+The ontology and controlled vocabulary gave us a canonical set of data standards and shared definitions. The point was not to create standards for their own sake, but to provide a common reference point so that data producers could describe their data in more consistent and interoperable ways. The Salmon Data Package specification provided the structure needed for the semantic precision of the ontology and controlled vocabulary to carry through into what datasets, tables, columns, and coded values actually mean. That structure matters because some tables and columns represent compound terms, entities, or properties, and their meaning cannot be captured clearly at the dataset level alone.
+
+A key strength of the specification is that it uses plain text CSV files, making it easy to inspect, work with, and process by both humans and machines. It supports reproducible data dictionaries and can be exported into XML for the Enterprise Data Hub, making publication to internal catalogues and the Open Government Portal much less manual.
+
+The `metasalmon` package made these workflows more usable in practice. It made it easier to build Salmon Data Packages, search for semantic mappings, validate content, and perform salmon-specific wrangling tasks that are useful in day-to-day work. In other words, it helped bridge the gap between standards on paper and standards in use. It reduced the amount of handwork required to package and standardize data and made the process more approachable for people already working in R-based workflows.
+
+The Salmon Data GPT added another layer of usability. It helps users compare their columns to existing standards, determine whether fields are equivalent to someone else’s, suggest candidate mappings, and identify where new terms may need to be added to the DFO salmon data standards. It effectively lowers the entry barrier for people who are not going to read an ontology document for fun on a Tuesday. That matters. AI is not the source of truth here, but it can make the standards much more accessible and much more actionable so long as a human stays in the loop to review, validate, and refine its outputs.
+
+**Real products and services.** A third accomplishment was demonstrating what good stewardship looks like in real products and services.
+
+The [Salmon Outlook Report enhancements](https://github.com/dfo-pacific-science/salmon-outlook-report) improved a key reporting workflow through a more reproducible approach. The [Salmon Population Summary Repository](http://ci-bc-eos-2/) created a clearer home for important fisheries management and wild salmon conservation data tied to Fisheries Act fish stock provisions and Wild Salmon Policy reporting in the Canadian Science Advisory Secretariat context. The [Genetic Results Database](https://dfo-pacific-science.github.io/data-stewardship-unit/fads-portfolio.html#modal-project-4) improved access to molecular genetics lab outputs, including genetic stock identification and parental-based tagging data, in ways that strengthened transparency, versioning, findability, accessibility, and interoperability. The [Fishery Operations System Data Explorer](https://app.fabric.microsoft.com/Redirect?action=OpenReport&appId=77d0b455-d761-4543-b126-999f29b0779f&reportObjectId=2cc62024-3c0a-4bb8-b161-bec67f91d906&ctid=1594fdae-a1d9-4405-915d-011467234338&reportPage=28134eafb5d5b2d10df5&pbi_source=appShareLink&portalSessionId=7a41f3f6-47b9-4943-ae12-d0998bff6ee1) gave users an intuitive way to explore, visualize, and export commercial salmon catch data, reducing both the barrier to obtaining clear summaries of what is happening in coastal British Columbia and the data-request burden on the FOS data custodian.
+
+What matters about these examples is not only that they exist. It is that they demonstrated that standards-based, reproducible, and more interoperable approaches can actually support meaningful salmon science and management needs. These were not toy examples. They were practical demonstrations of a different way of working.
+
+**A better delivery model.** A fourth accomplishment was showing that the delivery model matters as much as the technical architecture.
+
+In my view, some of the most effective work came from a science-led development model, with CDOS playing more of a supporting role. Embedded data science and stewardship support, working directly with salmon biologists on operational problems, proved far more effective than relying on high-level frameworks alone. When the people building the tools understand both the science and the stewardship challenge, the outputs tend to be more relevant, faster to deploy, more usable, and more grounded in actual pain points. That model also helped reveal what really needed to be standardized and what kinds of tooling were worth building.
+
+## What we learned
+
+> The fastest route to stewardship credibility was showing people an easier way to do better science in less time.
+
+**Lesson 1: Show, do not just tell.** The biggest lesson for me is that walking the walk matters more than talking the talk.
+
+There is no shortage of stewardship language, frameworks, maturity models, and strategic diagrams. Some of that has value. But I came away much more convinced that stewardship becomes real when it helps solve practical day-to-day problems for the people producing and using data. A polished framework is not enough. The strongest progress we made came from getting into the trenches and working with people on real data, real workflows, and real operational bottlenecks.
+
+That lesson changed how I think about stewardship work. Early on, I put more emphasis on trying to implement broader change-management style approaches and align with higher-level stewardship frameworks. Over time, it became clear that the most impactful path was more direct: work closely with biologists and other high-leverage practitioners, help solve the problems they are actually facing, and build the standards and tools through that work. That kind of approach generates its own credibility. You do not need a heavy change management model if you can show people a different and easier way to do better science in less time. When stewardship is experienced as materially useful, word spreads and adoption follows much more naturally than when it is introduced as doctrine.
+
+**Lesson 2: Embedded support matters.**
+
+The most effective model was not stewardship at arm’s length. It was having biologists, data stewards, and data scientists who deeply understood the domain working together on the same operational challenges. Domain context matters. Shared language matters. Credibility matters. It is easier to improve metadata, data quality, and interoperability when the people involved understand why the differences between terms, fields, and methods actually matter scientifically.
+
+If I were doing this again, I would likely start earlier with two kinds of relationships at once: working more closely with high-leverage and respected practitioners to secure traction on important needs, while also partnering closely with the teams and individuals who would actually need to implement and use the solutions. That combination of top-down leverage and bottom-up practicality is probably where the strongest progress happens.
+
+**Lesson 3: Not all infrastructure is enabling.**
+
+Some enterprise pathways were too slow, too over-engineered, or too difficult to operationalize for the specific needs of salmon science data work. A real turning point was being able to work in a secure Linux environment managed by CDOS that better supported scientist-led software development workflows. That removed a major source of friction and allowed more time to be spent actually building and iterating.
+
+This lesson is not about blaming individuals or dismissing cybersecurity requirements. Scientific data systems do need real security, governance, and accountability, and many people worked hard within difficult constraints. But cybersecurity cannot become a magic word that shuts down practical alternatives or justifies unusable workflows. What gets labeled "shadow IT" is often just science work finding a way to happen when the sanctioned path cannot meet the moment; the bigger risk is "enterprise overreach", where centralized control reaches too far into workflows it does not adequately understand. Scientists need secure, governed environments, but they also need room to build, test, and iterate with tools that fit the work, because when sensible work becomes a compliance quest, science slows to a crawl.
+
+**Lesson 4: Let the stack grow out of useful work.**
+
+In complex organizations, there is a temptation to define the whole architecture first and then try to fit every problem into it. My experience pushed me in the opposite direction. It is often more effective to meet teams where they are, solve specific high-value problems, build targeted and context-aware solutions, and let the broader stack emerge from repeated useful patterns. That does not mean abandoning standards or long-term architecture. It means grounding them in things that already work and already create value.
+
+**Lesson 5: Stewardship is as much social as technical.**
+
+The standards, packages, functions, and systems matter. But so do trust, relationships, shared understanding, and repeated opportunities for people to learn from one another. In some ways, the Community of Practice and the task team model were just as important as any particular technical artefact. They created the social infrastructure that allowed the technical work to be relevant and shared.
+
+## Where salmon data stewardship should go from here in DFO
+
+I am leaving this work optimistic, but not complacent.
+
+I think the Data Stewardship Unit demonstrated that good, practical progress can be made in a difficult environment. It showed that embedded stewardship and data science support can be highly effective. It showed that common language, better metadata, and reproducible packaging are not abstract luxuries. They are fundamental enablers for science, reporting, integration, and decision making. It also showed that when people are given practical tools and a shared place to exchange knowledge, a different kind of stewardship culture can begin to take shape.
+
+At the same time, none of this is self-sustaining by default. It would be very easy to lose momentum and drift back into older patterns where stewardship is fragmented, documentation is uneven, and data exchange remains more manual and ambiguous than it needs to be.
+
+*What needs to be protected now is not only the outputs, but the way of working that produced them.*
+
+So where should this go next?
+
+First, the Pacific Salmon Data Community of Practice should continue and remain community-owned. It has already proven useful as a venue for knowledge exchange, visibility across the salmon data landscape, and identification of common issues. That kind of cross-programme awareness is not automatic. It needs a home, and it needs dedicated stewardship capacity to support task teams and turn shared pain points into solutions that scale beyond individual programs and initiatives.
+
+Second, the standards and tools that were built need continued use, maintenance, and extension. The DFO salmon ontology, controlled vocabularies, Salmon Data Package specification, `metasalmon`, and related workflows should not be treated as finished side products. They should be used, tested, refined, and expanded through real work. Standards become stronger when people use them and push on their weak spots.
+
+Third, DFO should continue investing in embedded data stewardship and data science support close to the science teams. In my experience, that is where the strongest return came from. Stewardship is most effective when it is integrated into the work of producing, analysing, and sharing data, rather than positioned as a distant administrative layer.
+
+Fourth, the organization should keep focusing on a manageable set of high-value workflows and datasets that support mandated decisions and reports. Obvious targets include the data foundations needed for Wild Salmon Policy conservation-unit work, including the determination of limit reference points and the stock assessment processes that support them, as well as better integration of salmon reporting at the Stock Management Unit level with WSP conservation-unit time series and related work by groups such as the Pacific Salmon Foundation and Pacific Salmon Commission. There is always more to do than can be done. Progress is more likely when a few important areas are improved meaningfully than when everything is declared a priority and nothing gets enough support. Stewardship needs visible wins on core data issues tied to DFO’s mandate, ideally done in the open so the broader salmon research community can see, use, and contribute to the work.
+
+Finally, stewardship should be treated as core scientific infrastructure. It is not just a reporting add-on, a metadata side quest, or a compliance exercise. Good stewardship affects how easily science can be reproduced, how credibly information can be shared, how readily assessments can be updated, and how effectively knowledge can move between DFO and the wider salmon community.
+
+## A practical next step
+
+If there is one practical thing I would encourage people to do next, it is this:
+
+Take a snippet of a database schema or a data file that your team regularly publishes, shares, or struggles to interpret. Put it into the [Salmon Data GPT](https://chatgpt.com/g/g-69375eab4f608191863e8c23313a6f9f-salmon-data-standardizer) and ask it to standardize it. Then use that output to create your first [Salmon Data Package](https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md). Review what terms are already standardized, identify what is not yet covered, and propose additions to the [DFO salmon data standards](https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/data_standards/index.html) where needed.
+
+That may sound like a small exercise, but it gets at the heart of the issue. It forces clarity about meaning. It creates better metadata. It improves interoperability. It helps teams build shared language around their data rather than relying on local interpretation or memory. If enough teams start doing that, even incrementally, the region will be in a much better place for exchanging and reusing salmon data.
+
+For people outside DFO, I also hope this work helps make one thing more visible: there are a lot of good people inside the department working very hard in a difficult technological, administrative, and funding environment. The barriers to sharing data well are real. The red tape is real. The lack of clarity around delivery pathways and resourcing can be very real. But the effort to improve things is also real. My hope is that the work of the Data Stewardship Unit has made it easier for internal teams to share their work outward and easier for external partners to understand and engage with that work.
+
+The last year and a half did not solve salmon data stewardship in DFO. Nothing that tidy happened. But I do think we demonstrated something important: better salmon data practice is possible, and it is most effective when it is practical, embedded, standards-aware, and built with the science rather than simply layered on top of it.
+
+
+
+## Links to key projects and tools referenced in this reflection
+
+- [Data Stewardship Unit website](https://dfo-pacific-science.github.io/data-stewardship-unit/)
+- [DFO Salmon Ontology (WIDOCO)](https://dfo-pacific-science.github.io/dfo-salmon-ontology/)
+- [Salmon Data Integration System](https://br-johnson.github.io/salmon-data-integration-system/)
+- [Salmon Data Package specification](https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md)
+- [`metasalmon` R package](https://dfo-pacific-science.github.io/metasalmon/)
+- [Salmon Data GPT assistant](https://chatgpt.com/g/g-69375eab4f608191863e8c23313a6f9f-salmon-data-standardizer)
+- [Salmon Population Summary Repository](http://ci-bc-eos-2/)
+- [Fishery Operations System Data Explorer](https://app.fabric.microsoft.com/Redirect?action=OpenReport&appId=77d0b455-d761-4543-b126-999f29b0779f&reportObjectId=2cc62024-3c0a-4bb8-b161-bec67f91d906&ctid=1594fdae-a1d9-4405-915d-011467234338&reportPage=28134eafb5d5b2d10df5&pbi_source=appShareLink&portalSessionId=7a41f3f6-47b9-4943-ae12-d0998bff6ee1)
+- [Salmon Outlook report repository](https://github.com/dfo-pacific-science/salmon-outlook-report)
+- [Escapement estimate type guidance repository](https://github.com/dfo-pacific-science/escapement-estimate-type-tech-report)
+- [Salmon SMU-CU-DU crosswalk](https://github.com/dfo-pacific-science/Salmon-SMU-CU-DU-Crosswalk)
+- [Qualark Data System project page](https://dfo-pacific-science.github.io/data-stewardship-unit/fads-portfolio.html#modal-project-6)
+- [Genetic Results Database project page](https://dfo-pacific-science.github.io/data-stewardship-unit/fads-portfolio.html#modal-project-4)
+- [Salmon Data Wiki project page](https://dfo-pacific-science.github.io/data-stewardship-unit/fads-portfolio.html#modal-project-7)
