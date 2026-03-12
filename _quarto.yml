@@ -30,7 +30,7 @@ website:
     left:
       - text: "Home"
         href: index.qmd
-      - text: "Semantic System"
+      - text: "Data Integration System"
         menu:
           - text: "Start Here"
             href: reference_info/data_standards/semantic-salmon-system.qmd
@@ -87,7 +87,7 @@ website:
             href: blog/index.qmd
       - section: "Standards & Vocabulary"
         contents:
-          - text: "Semantic Salmon System — Start Here"
+          - text: "Salmon Data Integration System — Start Here"
             href: reference_info/data_standards/semantic-salmon-system.qmd
           - text: "Salmon Data Standards Hub"
             href: reference_info/data_standards/index.qmd

@@ -1,5 +1,5 @@
 ---
-title: "Semantic Salmon System — Start Here"
+title: "Salmon Data Integration System — Start Here"
 format:
   html:
     toc: true
@@ -13,7 +13,7 @@ This page is a high-level overview of the workflow. For complete package details
 ```{=html}
 <section class="semantic-system-hero">
   <p class="semantic-system-eyebrow">DFO Pacific Science • Data Stewardship Unit</p>
-  <h2>The front door for semantic salmon data workflows</h2>
+  <h2>The front door for salmon data integration workflows</h2>
   <p>
     Use one system, one order: ontology terms, package metadata, validation, assisted drafting, and SPSR intake.
   </p>
@@ -35,7 +35,7 @@ This page is a high-level overview of the workflow. For complete package details
 ## The system flow
 
 ```{=html}
-<div class="semantic-system-flow" role="list" aria-label="Semantic Salmon System flow">
+<div class="semantic-system-flow" role="list" aria-label="Salmon Data Integration System flow">
   <div class="semantic-system-node" role="listitem">
     <h3>1) DFO Salmon Ontology</h3>
     <p>Use canonical term definitions and IRIs.</p>

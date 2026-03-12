@@ -51,7 +51,7 @@ Use this structure for each changelog item:
   - [GC DFO Salmon Ontology](../ontology/formal-documentation.qmd)
   - [Salmon data package + SPSR intake path](ontology-data-package-gpt.qmd)
 
-### 2026-02-20 — semantic system entry path made explicit
+### 2026-02-20 — data integration system entry path made explicit
 
 - **Area:** standardize/publish workflow pages
 - **Change:** made DFO Ontology → salmon data package → metasalmon → Salmon Data GPT → SPSR path prominent at top of key workflow pages.
@@ -69,7 +69,7 @@ Use this structure for each changelog item:
 - **Reason:** provide a single obvious entry point before users branch into detailed pages.
 - **Impact:** new users can start from one page and follow the canonical sequence without guessing navigation order.
 - **Links:**
-  - [Semantic Salmon System — Start Here](semantic-salmon-system.qmd)
+  - [Salmon Data Integration System — Start Here](semantic-salmon-system.qmd)
   - [FSAR to SPSR: End-to-End Example](../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd)
   - [Salmon Data Standards Hub](index.qmd)
 

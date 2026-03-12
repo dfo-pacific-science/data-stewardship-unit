@@ -17,7 +17,7 @@ format:
 </div>
 ```
 
-## Semantic Salmon System — entry path (front and center)
+## Salmon Data Integration System — entry path (front and center)
 
 ```{=html}
 <div class="semantic-entry">
@@ -34,7 +34,7 @@ format:
 
 Quick links:
 
-- [Semantic Salmon System — Start Here](semantic-salmon-system.qmd)
+- [Salmon Data Integration System — Start Here](semantic-salmon-system.qmd)
 - [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)
 - [Salmon data package specification](salmon-data-exchange-package.qmd)
 - [Salmon data package + SPSR intake path](ontology-data-package-gpt.qmd)

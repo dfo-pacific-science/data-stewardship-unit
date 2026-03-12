@@ -10,7 +10,7 @@ format:
 
 # Overview
 
-The **Semantic Salmon Data Ecosystem** (Semantic Salmon System) connects standards, ontology terms, package metadata, validation tooling, and operational upload pathways so salmon data can move from local analysis into reusable systems.
+The **Semantic Salmon Data Ecosystem** (Salmon Data Integration System) connects standards, ontology terms, package metadata, validation tooling, and operational upload pathways so salmon data can move from local analysis into reusable systems.
 
 ```{=html}
 <div class="status-badge-row">
