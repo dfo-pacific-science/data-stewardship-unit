@@ -6,21 +6,26 @@ format:
     toc-depth: 2
 ---
 
-This example shows one practical path from a local FSAR dataset to an SPSR upload-ready package.
+This example shows one practical path from a local FSAR dataset to a package-first SPSR upload.
+
+If you want the shortest recipe for escapement data, start here: [CU/composite escapement estimates for package-first SPSR intake](../cookbook/cu-composite-escapement-estimates.qmd).
 
 ## Scenario
 
-You have a CU-level escapement time series and supporting metadata for an FSAR update.
+You have a **CU/composite escapement time series** and supporting metadata for an FSAR update.
 
-Goal: produce a validated package and submit through SPSR wizard.
+Goal: produce a validated salmon data package and submit through the SPSR route that matches the data grain.
 
-## Step 1 — Start with source data and assumptions
+The same package-first pattern also applies when the route scope is **SMU** or **Population**.
+
+## Step 1 — Start with source data, assumptions, and route scope
 
 Record:
 
 - source dataset file(s)
 - temporal scope
-- CU/SMU scope
+- CU, composite, SMU, or Population scope
+- intended SPSR route scope
 - key transformations already applied
 - known caveats
 
@@ -39,12 +44,19 @@ Esc,Escapement,https://w3id.org/gcdfo/salmon#Escapement
 
 ## Step 3 — Build minimal salmon data package metadata
 
-Create:
+Create the package in the canonical layout:
 
-- `dataset.csv`
-- `tables.csv`
-- `column_dictionary.csv`
-- `codes.csv` (if categorical values are present)
+```text
+my-salmon-data-package/
+├── datapackage.json          # optional
+├── metadata/
+│   ├── dataset.csv
+│   ├── tables.csv
+│   ├── column_dictionary.csv
+│   └── codes.csv             # optional
+└── data/
+    └── cu_composite_escapement.csv
+```
 
 Reference: [Salmon data package specification](../reference_info/data_standards/salmon-data-exchange-package.qmd)
 
@@ -52,13 +64,18 @@ Reference: [Salmon data package specification](../reference_info/data_standards/
 
 Run local checks (structure + semantics) and fix issues before submission.
 
-## Step 5 — Prepare SPSR upload files
+The package is the authoritative source. Do not wait until the SPSR upload step to discover missing metadata or term mismatches.
 
-Confirm that your upload file(s):
+## Step 5 — Prepare the SPSR route-scoped upload from the package
 
-- use the expected column naming/profile for your intake mode
-- include required metadata context
-- preserve traceability to source values
+1. Choose the route scope that matches the table grain:
+   - **CU/composite** for CU-level or combined CU composites
+   - **SMU** for SMU-level rollups
+   - **Population** for population-level rows
+2. Start from the current SPSR templates: <https://spsr.dfo-mpo.gc.ca/download_sdp_templates>
+3. Generate or align the upload CSV(s) from the same package metadata and data.
+4. Keep the route-scoped upload file(s) versioned with the package.
+5. If the submission is a **bulk upload**, use the same package-first path rather than a separate spreadsheet workflow.
 
 SPSR resources:
 
@@ -68,15 +85,18 @@ SPSR resources:
 
 ## Step 6 — Submit and iterate
 
-1. Upload through wizard.
+1. Upload through the wizard or approved bulk route.
 2. Review validation output.
-3. Correct and resubmit as needed.
-4. Record accepted version and intake date.
+3. Correct the package and regenerate upload files if needed.
+4. Resubmit until intake checks pass.
+5. Record accepted version, intake date, and route notes.
 
 ## Deliverables checklist
 
 - [ ] mapped field table with canonical IRIs
-- [ ] complete minimal salmon data package metadata files
-- [ ] validated upload file(s)
+- [ ] complete salmon data package metadata files in `metadata/`
+- [ ] validated data table(s) in `data/`
+- [ ] selected SPSR route scope documented
+- [ ] route-scoped upload file(s) prepared from the package
 - [ ] SPSR submission completed
-- [ ] version/provenance notes archived
+- [ ] version and provenance notes archived

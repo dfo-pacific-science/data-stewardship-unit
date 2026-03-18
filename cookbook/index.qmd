@@ -5,15 +5,18 @@ format: html
 
 Task-focused recipes for recurring data stewardship workflows.
 
+These recipes are intentionally short. They point back to the canonical workflow or reference page instead of duplicating the whole topic.
+
 ## Current recipes
 
-- [Standardize Your Data](../reference_info/data_standards/standardize-data.qmd)
-- [Integrate Data](../reference_info/data_standards/integrate-data.qmd)
-- [Publish Your Data](../reference_info/data_standards/publish-data.qmd)
-- [FSAR Data Standardization Workflow](../how_to_guides/fsar-data-standardization-workflow.qmd)
+- [CU/composite escapement estimates for package-first SPSR intake](cu-composite-escapement-estimates.qmd) — shortest path for packaging and submitting CU or CU-composite escapement data.
+- [Standardize Your Data](../reference_info/data_standards/standardize-data.qmd) — short entry recipe for turning source data into a standards-aligned package.
+- [Integrate Data](../reference_info/data_standards/integrate-data.qmd) — join and harmonize multiple sources with explicit semantic mapping.
+- [Publish Your Data](../reference_info/data_standards/publish-data.qmd) — choose the right internal or external release path.
+- [FSAR Data Standardization Workflow](../how_to_guides/fsar-data-standardization-workflow.qmd) — full end-to-end operational workflow.
 
 ## Coming next
 
 - salmon data package validation troubleshooting
-- Controlled vocabulary request walkthrough
-- Publication checklists by data class
+- controlled vocabulary request walkthrough
+- publication checklists by data class

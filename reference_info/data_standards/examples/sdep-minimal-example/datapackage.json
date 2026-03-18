@@ -1,0 +1,13 @@
+{
+  "name": "sdep-minimal-example",
+  "title": "Minimal salmon data package example",
+  "profile": "tabular-data-package",
+  "resources": [
+    {
+      "name": "cu_year_index",
+      "path": "data/cu_year_index.csv",
+      "format": "csv",
+      "mediatype": "text/csv"
+    }
+  ]
+}

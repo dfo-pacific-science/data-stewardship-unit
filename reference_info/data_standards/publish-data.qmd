@@ -12,124 +12,68 @@ format:
 ```{=html}
 <div class="status-badge-row">
   <span class="status-badge status-active">Active Workflow</span>
-  <span class="status-badge status-canonical">Canonical Terms Required</span>
+  <span class="status-badge status-canonical">Validation Required</span>
   <span class="status-badge status-guidance">Internal + External Paths</span>
 </div>
 ```
 
-## Salmon Data Integration System — entry path (front and center)
+Use this page when your dataset is nearly ready and you need to choose the correct **release path**.
 
-```{=html}
-<div class="semantic-entry">
-  <h3>Before publishing, confirm this chain is complete</h3>
-  <ol>
-    <li><strong>DFO Salmon Ontology</strong> mappings are finalized</li>
-    <li><strong>Salmon data package</strong> metadata is complete</li>
-    <li><strong>metasalmon</strong> validation is clean</li>
-    <li><strong>Salmon Data GPT</strong> (optional) is used only to draft, not to bypass validation</li>
-    <li><strong>SPSR</strong> intake is complete for FSAR-oriented workflows</li>
-  </ol>
-</div>
-```
+## Before publishing anything
 
-Quick links:
+Confirm this chain is complete:
 
-- [Salmon Data Integration System — Start Here](semantic-salmon-system.qmd)
-- [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)
-- [Salmon data package specification](salmon-data-exchange-package.qmd)
+1. ontology mappings are finalized
+2. the salmon data package is complete in `metadata/` + `data/`
+3. validation is clean
+4. provenance, contacts, and version notes are present
+5. required approvals are in place
+
+## Choose the destination path
+
+### Internal / SPSR path
+
+Use this when the dataset is moving into FSAR-oriented operational workflows.
+
+- keep the **salmon data package** as the source of truth
+- choose the SPSR route scope that matches the data grain:
+  - **CU/composite**
+  - **SMU**
+  - **Population**
+- generate wizard or bulk upload files from the same package
+- do not maintain a separate spreadsheet-only bulk path
+
+Canonical guidance:
+
 - [Salmon data package + SPSR intake path](ontology-data-package-gpt.qmd)
-- [FSAR to SPSR: End-to-End Example](../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd)
+- [FSAR Data Standardization Workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd)
 
-## Cookbook Guide
+### External / public release path
 
-<div class="cookbook-section">
+Use this when the dataset is approved for external publication.
 
-### Step 1: Finalize Metadata
+- follow classification and approval requirements
+- include citation, version, provenance, and licence information
+- document how the public release relates to any internal operational package
 
-<div class="cookbook-step">
-
-Ensure your dataset has:
-
-- complete data dictionary entries
-- clear definitions and units
-- canonical full IRIs for mapped terms
-- contact + provenance + license details
-
-</div>
-
-### Step 2: Verify Semantic Links
-
-<div class="cookbook-step">
-
-Use [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd) to verify that term IRIs are current and resolvable.
-
-**Example row:**
-
-```csv
-variable_name,label,data_type,definition,standard_term_iri
-CU,Conservation Unit,string,The conservation unit identifier,https://w3id.org/gcdfo/salmon#ConservationUnit
-```
-
-Do not use partial URIs.
-
-</div>
-
-### Step 3: Build Release-Ready Package
-
-<div class="cookbook-step">
-
-Prepare the package structure expected by your destination workflow:
-
-- `dataset.csv`
-- `tables.csv`
-- `column_dictionary.csv`
-- `codes.csv` (if needed)
-- data files in `data/`
-
-Reference: [Salmon data package specification](salmon-data-exchange-package.qmd)
-
-</div>
-
-### Step 4: Validate Before Submission
-
-<div class="cookbook-step">
-
-Run validation checks before upload/publication:
-
-- required fields complete
-- data types and date formats valid
-- code lists consistent
-- all IRI links present and syntactically valid
-
-</div>
-
-### Step 5: Submit to SPSR for FSAR Workflows (when applicable)
-
-<div class="cookbook-step">
-
-For many FSAR-oriented datasets, SPSR is the operational intake path.
-
-- SPSR docs: <https://spsr.dfo-mpo.gc.ca/documentation/>
-- SPSR upload wizard: <https://spsr.dfo-mpo.gc.ca/wizard/1/>
-- SPSR templates endpoint: <https://spsr.dfo-mpo.gc.ca/download_sdp_templates>
-
-Upload only after internal quality checks are complete.
-
-</div>
-
-### Step 6: Publish Externally (if approved)
-
-<div class="cookbook-step">
-
-For external/public release, follow policy and approval requirements:
+Canonical guidance:
 
 - [Publishing Data Externally](../publishing_data_externally.qmd)
 
-Keep internal intake (e.g., SPSR) and external publication pathways clearly documented.
+## Release checklist
 
-</div>
+- [ ] package metadata is complete and validated
+- [ ] release scope is clear (internal SPSR, external publication, or both)
+- [ ] route scope is documented for SPSR submissions
+- [ ] upload or release artifacts trace back to the same package version
+- [ ] approvals and contact information are current
+- [ ] release notes are archived
 
-</div>
+## Cookbook spotlight
+
+If your near-term publishing task is a CU/composite escapement submission, use the focused recipe:
+
+- [CU/composite escapement estimates for package-first SPSR intake](../../cookbook/cu-composite-escapement-estimates.qmd)
 
 ## Next Steps
 

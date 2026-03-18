@@ -15,7 +15,7 @@ execute:
 
 **Canonical markdown source:** <https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md>
 
-This page provides a DSU-hosted copy/overview. For canonical field definitions and version history, use the GitHub source above.
+This page provides a DSU-hosted copy and overview. For canonical field definitions and version history, use the GitHub source above.
 
 # Overview
 
@@ -23,67 +23,78 @@ The **salmon data package (SDP)** is a lightweight, frictionless-style specifica
 
 It is designed to:
 
-- Be **simple to adopt** with Excel and CSV files.
-- Be **tool-friendly** for R/Python packages and custom GPT assistants.
-- Be **ontology-aware**, linking columns and codes to the **DFO Salmon Ontology** and related vocabularies.
-- Be compatible with frictionless data packages and Darwin Core–style semantic layers without forcing a single rigid schema.
+- be **simple to adopt** with Excel and CSV files
+- be **tool-friendly** for R/Python packages and guided assistants
+- be **ontology-aware**, linking columns and codes to the **DFO Salmon Ontology** and related vocabularies
+- support package-first operational workflows such as SPSR intake without forcing one rigid dataset schema
 
-Each salmon data package instance is a small directory of CSV data files plus a set of metadata CSVs that describe the dataset, tables, columns, and controlled codes.
+Each salmon data package instance is a small directory of data files plus a set of metadata CSVs that describe the dataset, tables, columns, and controlled codes.
 
 # Design Goals
 
-- **Interoperable but flexible**: support multiple schemas (FSAR, SPSR-like, project-specific) while providing shared semantics via URIs.
-- **FRICTIONLESS-compatible**: align conceptually with frictionless/datapackage ideas so existing tooling can be reused or extended.
-- **Ontology-linked**: allow columns and codes to reference DFO Salmon Ontology and SKOS vocab IRIs.
-- **Incremental adoption**: existing tables can be wrapped in a package with minimal changes (no need to refactor everything at once).
-- **Machine- and human-readable**: scientists can work in spreadsheets; machines can consume the same metadata.
+- **Interoperable but flexible**: support multiple schemas (FSAR, SPSR-like, project-specific) while providing shared semantics via IRIs
+- **FRICTIONLESS-compatible**: align conceptually with frictionless and `datapackage.json` patterns so existing tooling can be reused or extended
+- **Ontology-linked**: allow columns and codes to reference DFO Salmon Ontology and SKOS vocab IRIs
+- **Incremental adoption**: existing tables can be wrapped in a package with minimal changes
+- **Machine- and human-readable**: scientists can work in spreadsheets; machines can consume the same metadata
 
 # Package Layout
 
 A salmon data package consists of:
 
-- One **root directory** (e.g., `sdp_myproject/`) containing:
-  - `dataset.csv` – dataset-level metadata.
-  - `tables.csv` – one row per logical table.
-  - `column_dictionary.csv` – one row per column in each table.
-  - `codes.csv` – optional: controlled value lists and SKOS links.
-- One or more **data files** (typically CSV) referenced from `tables.csv`, usually in a `data/` subdirectory.
+- one **root directory** (for example, `sdp_myproject/`)
+- an optional root **`datapackage.json`** for tooling that expects a frictionless-style entry file
+- a **`metadata/`** directory containing:
+  - `dataset.csv` — dataset-level metadata
+  - `tables.csv` — one row per logical table
+  - `column_dictionary.csv` — one row per column in each table
+  - `codes.csv` — optional controlled value lists and SKOS links
+- a **`data/`** directory containing one or more data tables referenced from `metadata/tables.csv`
 
 Minimal example layout:
 
-- `dataset.csv`
-- `tables.csv`
-- `column_dictionary.csv`
-- `codes.csv` (optional for fully numeric or unconstrained columns)
-- `data/your_table_1.csv`
-- `data/your_table_2.csv`
-- etc.
+```text
+sdp_myproject/
+├── datapackage.json          # optional
+├── metadata/
+│   ├── dataset.csv
+│   ├── tables.csv
+│   ├── column_dictionary.csv
+│   └── codes.csv             # optional
+└── data/
+    ├── your_table_1.csv
+    └── your_table_2.csv
+```
 
 Downloadable starter assets:
 
 - [Minimal salmon data package example (zip)](examples/sdep-minimal-example.zip)
 - [Browse example package files](https://github.com/dfo-pacific-science/data-stewardship-unit/tree/main/reference_info/data_standards/examples/sdep-minimal-example)
 
-The salmon data package specification does **not** prescribe a single canonical salmon schema. Instead, it standardizes the **metadata** about whatever schema a project uses and ties it to ontology and vocabularies.
+The salmon data package specification does **not** prescribe a single canonical salmon schema. Instead, it standardizes the **metadata** about whatever schema a project uses and ties it to ontology terms and vocabularies.
+
+::: {.callout-note}
+Older examples that place metadata CSVs at the package root should be treated as **legacy layout**. Use `metadata/` + `data/` for current work.
+:::
 
 # Identifiers and Conventions
 
 - `dataset_id`
-  - Short string identifier unique within your organization or project (e.g., `fsar_spsr_chinook_2025`).
-  - Used to link rows across `dataset.csv`, `tables.csv`, `column_dictionary.csv`, and `codes.csv`.
+  - Short string identifier unique within your organization or project (for example, `fsar_spsr_chinook_2025`)
+  - Used to link rows across `metadata/dataset.csv`, `metadata/tables.csv`, `metadata/column_dictionary.csv`, and `metadata/codes.csv`
 
 - `table_id`
-  - Short ID unique within a dataset (e.g., `cu_year_index`, `survey_events`).
+  - Short ID unique within a dataset (for example, `cu_year_index`, `survey_events`)
 
 - `column_name`
-  - Exact column name as it appears in the data file (e.g., `TOTAL_SPAWNERS`, `run_size_total`).
+  - Exact column name as it appears in the data file (for example, `TOTAL_SPAWNERS`, `run_size_total`)
 
 - URIs / IRIs
-  - Fields such as `dataset_iri`, `entity_iri`, `term_iri`, `concept_scheme_iri`, `unit_iri` should use persistent HTTP IRIs where available (e.g., w3id for DFO Salmon Ontology terms, vocabulary concepts, and units).
+  - Fields such as `dataset_iri`, `entity_iri`, `term_iri`, `concept_scheme_iri`, and `unit_iri` should use persistent HTTP IRIs where available
 
-# `dataset.csv` Schema
+# `metadata/dataset.csv` Schema
 
-One row per logical dataset (often one per salmon data package directory). Can describe multiple related tables.
+One row per logical dataset (often one per salmon data package directory). It can describe multiple related tables.
 
 Required columns:
 
@@ -95,20 +106,21 @@ Required columns:
 | creator         | string  | yes      | Name(s) of primary creator(s) or project.                                   |
 | contact_name    | string  | yes      | Primary contact person.                                                     |
 | contact_email   | string  | yes      | Contact email address.                                                      |
-| license         | string  | yes      | License name or URL (e.g., `CC-BY-4.0`).                                    |
-| temporal_start  | date    | no       | Start date or year covered by the dataset (ISO 8601 where possible).       |
-| temporal_end    | date    | no       | End date or year covered by the dataset.                                   |
-| spatial_extent  | string  | no       | Textual description of spatial coverage (e.g., CUs, regions, coordinates). |
-| dataset_type    | string  | no       | High-level type (e.g., `cu_year_index`, `survey_timeseries`, `benchmark`). |
+| license         | string  | yes      | License name or URL (for example, `CC-BY-4.0`).                             |
+| temporal_start  | date    | no       | Start date or year covered by the dataset (ISO 8601 where possible).        |
+| temporal_end    | date    | no       | End date or year covered by the dataset.                                    |
+| spatial_extent  | string  | no       | Textual description of spatial coverage.                                    |
+| dataset_type    | string  | no       | High-level type (for example, `cu_year_index`, `survey_timeseries`).        |
 | dataset_iri     | string  | no       | IRI for this dataset in a catalog or knowledge graph.                       |
-| source_citation | string  | no       | Free-text citation for publications, reports, or internal docs.            |
+| source_citation | string  | no       | Free-text citation for publications, reports, or internal docs.             |
 
 Optional additional columns (implementation-specific):
 
-- `provenance_note` – narrative about data lineage.
-- `created` / `modified` – timestamps.
+- `provenance_note` — narrative about data lineage
+- `created` / `modified` — timestamps
+- `spec_version` — package spec version tag when needed
 
-# `tables.csv` Schema
+# `metadata/tables.csv` Schema
 
 One row per table in the package.
 
@@ -116,64 +128,64 @@ Required columns:
 
 | Column       | Type   | Required | Description                                                                 |
 |--------------|--------|----------|-----------------------------------------------------------------------------|
-| dataset_id   | string | yes      | References `dataset_id` in `dataset.csv`.                                  |
-| table_id     | string | yes      | Short ID for the table (e.g., `cu_year_index`).                             |
-| file_name    | string | yes      | Relative path to the data file (e.g., `data/cu_year_index.csv`).           |
+| dataset_id   | string | yes      | References `dataset_id` in `metadata/dataset.csv`.                         |
+| table_id     | string | yes      | Short ID for the table (for example, `cu_year_index`).                     |
+| file_name    | string | yes      | Relative path to the data file (for example, `data/cu_year_index.csv`).    |
 | table_label  | string | yes      | Human-readable label for the table.                                         |
 | description  | string | yes      | Description of what each row represents and how the table is used.          |
-| entity_type  | string | no       | Human-readable entity type (e.g., `CU-year index`, `survey event`).        |
+| entity_type  | string | no       | Human-readable entity type (for example, `CU-year index`, `survey event`). |
 | entity_iri   | string | no       | IRI of ontology class representing the row-level entity, if applicable.     |
-| primary_key  | string | no       | Comma-separated list of columns forming a primary key (e.g., `cu_id,year`). |
+| primary_key  | string | no       | Comma-separated list of columns forming a primary key.                      |
 
 Notes:
 
-- `entity_iri` should reference a class in the DFO Salmon Ontology (e.g., a CU-year index class, survey event class) when available.
+- `entity_iri` should reference a class in the DFO Salmon Ontology when available.
 - `primary_key` is advisory; it guides downstream validation and graph loading.
 
-# `column_dictionary.csv` Schema
+# `metadata/column_dictionary.csv` Schema
 
-One row per column in each table. This is the core of how the salmon data package links data columns to ontology and vocabularies.
+One row per column in each table. This is the core of how the salmon data package links data columns to ontology terms and vocabularies.
 
 Required columns:
 
 | Column              | Type    | Required | Description                                                                                   |
 |---------------------|---------|----------|-----------------------------------------------------------------------------------------------|
-| dataset_id          | string  | yes      | References `dataset_id` in `dataset.csv`.                                                     |
-| table_id            | string  | yes      | References `table_id` in `tables.csv`.                                                        |
+| dataset_id          | string  | yes      | References `dataset_id` in `metadata/dataset.csv`.                                           |
+| table_id            | string  | yes      | References `table_id` in `metadata/tables.csv`.                                              |
 | column_name         | string  | yes      | Exact column name in the data file.                                                           |
 | column_label        | string  | yes      | Short human-readable label.                                                                   |
 | column_description  | string  | yes      | Clear definition of the column’s meaning.                                                     |
-| column_role         | string  | yes      | One of: `identifier`, `attribute`, `temporal`, `categorical`, `measurement`.                  |
-| value_type          | string  | yes      | Basic type: `integer`, `double`, `string`, `boolean`, `date`, `datetime`.                     |
+| column_role         | string  | yes      | One of: `identifier`, `attribute`, `temporal`, `categorical`, `measurement`.                 |
+| value_type          | string  | yes      | Basic type: `integer`, `double`, `string`, `boolean`, `date`, `datetime`.                    |
 | required            | boolean | no       | `TRUE` if the column is required for each row, otherwise `FALSE` or blank.                    |
-| unit_label          | string  | no       | Human-readable unit label (e.g., `number of fish`, `proportion`).                             |
-| unit_iri            | string  | no       | IRI for the unit (e.g., UCUM or other unit ontology).                                         |
-| term_iri            | string  | no       | IRI for the ontology term (e.g., measurement type, dimension, concept) from the DFO Salmon Ontology. |
-| term_type           | string  | no       | Type of ontology term (e.g., `owl_class`, `owl_object_property`, `skos_concept`).             |
+| unit_label          | string  | no       | Human-readable unit label (for example, `number of fish`, `proportion`).                      |
+| unit_iri            | string  | no       | IRI for the unit.                                                                             |
+| term_iri            | string  | no       | IRI for the ontology term from the DFO Salmon Ontology.                                       |
+| term_type           | string  | no       | Type of ontology term (for example, `owl_class`, `owl_object_property`, `skos_concept`).     |
 
 `column_role` quick definitions:
 
 | Role | When to use it | Example columns |
 |---|---|---|
-| `identifier` | Keys and IDs that identify rows/entities | `cu_id`, `survey_event_id`, `record_id` |
+| `identifier` | Keys and IDs that identify rows or entities | `cu_id`, `survey_event_id`, `record_id` |
 | `measurement` | Quantitative or measured values | `spawner_count`, `run_size`, `exploitation_rate` |
 | `temporal` | Time and date fields | `return_year`, `sample_date`, `datetime` |
 | `categorical` | Controlled codes or enumerated classes | `status_code`, `species_code`, `run_timing` |
-| `attribute` | Descriptive attributes that are not IDs/time/measurements | `waterbody_name`, `observer_name`, `population_name` |
+| `attribute` | Descriptive attributes that are not IDs, time, or measurements | `waterbody_name`, `observer_name`, `population_name` |
 
 Guidance:
 
 - Use `column_role = "identifier"` for identifiers such as `cu_id`, `survey_event_id`, `POP_ID`.
-- Use `column_role = "measurement"` for numeric quantities (e.g., escapement, run size, exploitation rate).
-- Use `column_role = "temporal"` for time-related columns (e.g., year, date, datetime).
-- Use `column_role = "categorical"` for columns with controlled vocabularies or enumerated values (e.g., species, run type, status codes).
-- Use `column_role = "attribute"` for descriptive attributes that are not identifiers, measurements, temporal, or categorical (e.g., population name, waterbody name).
-- `term_iri` should reference a term in the DFO Salmon Ontology (e.g., measurement types, dimensions, concepts) when available.
-- `term_type` indicates the type of ontology term (e.g., `owl_class` for classes, `owl_object_property` for properties, `skos_concept` for SKOS concepts).
+- Use `column_role = "measurement"` for numeric quantities such as escapement or run size.
+- Use `column_role = "temporal"` for time-related columns such as year or date.
+- Use `column_role = "categorical"` for columns with controlled vocabularies or enumerated values.
+- Use `column_role = "attribute"` for descriptive attributes that do not fit the other roles.
+- `term_iri` should reference a term in the DFO Salmon Ontology when available.
+- `term_type` indicates the type of ontology term.
 
-# `codes.csv` Schema
+# `metadata/codes.csv` Schema
 
-Optional file used for columns that have controlled enumerated values (status codes, methods, gear, etc.). This is where SKOS vocabularies plug in.
+Optional file used for columns that have controlled enumerated values (status codes, methods, gear, and so on). This is where SKOS vocabularies plug in.
 
 Each row corresponds to one code value for one column.
 
@@ -181,43 +193,60 @@ Required columns:
 
 | Column             | Type   | Required | Description                                                                  |
 |--------------------|--------|----------|------------------------------------------------------------------------------|
-| dataset_id         | string | yes      | References `dataset_id` in `dataset.csv`.                                   |
-| table_id           | string | yes      | References `table_id` in `tables.csv`.                                      |
+| dataset_id         | string | yes      | References `dataset_id` in `metadata/dataset.csv`.                          |
+| table_id           | string | yes      | References `table_id` in `metadata/tables.csv`.                             |
 | column_name        | string | yes      | Name of the column in the data file that uses this code.                    |
-| code_value         | string | yes      | Stored value in the data (e.g., `R`, `Y`, `G`, `critical`, `adipose_intact`). |
+| code_value         | string | yes      | Stored value in the data.                                                   |
 | code_label         | string | no       | Human-readable label corresponding to the code.                             |
 | code_description   | string | no       | Longer description of what the code means.                                  |
-| concept_scheme_iri | string | no       | IRI of the SKOS concept scheme (e.g., the DFO Salmon Status scheme).        |
-| term_iri           | string | no       | IRI of the specific ontology term (SKOS concept or other) that `code_value` represents. |
-| term_type          | string | no       | Type of ontology term (e.g., `skos_concept`, `owl_class`).                 |
+| concept_scheme_iri | string | no       | IRI of the SKOS concept scheme.                                             |
+| term_iri           | string | no       | IRI of the specific ontology term represented by `code_value`.              |
+| term_type          | string | no       | Type of ontology term (for example, `skos_concept`, `owl_class`).           |
 
 Guidance:
 
 - `code_value` must match exactly the values present in the data table.
 - `code_label` and `code_description` can be used to auto-generate documentation.
 - `concept_scheme_iri` identifies the SKOS concept scheme containing the controlled vocabulary.
-- `term_iri` and `term_type` enable alignment with the larger salmon ontology and SKOS vocabularies, linking each code value to its corresponding ontology term.
+- `term_iri` and `term_type` align each coded value with the broader ontology.
 
-# Relationship to Ontology, R Package, and GPT
+# Relationship to SPSR Intake
+
+For current operational workflows, the salmon data package is the package-first staging format for SPSR contributions.
+
+Working expectation:
+
+- prepare one salmon data package first
+- choose the SPSR route scope that matches the table grain
+- derive wizard or bulk upload files from the same package
+- keep upload files and package metadata versioned together
+
+Minimum route-scoped support story currently starts with:
+
+- **CU/composite**
+- **SMU**
+- **Population**
+
+# Relationship to Ontology, R Package, and Guided Assistants
 
 - The **ontology** defines the formal semantics for:
-  - measurement types, entities, dimensions, and concepts (via `term_iri` and `term_type`),
-  - entities (`entity_iri` in `tables.csv`),
-  - concept schemes (`concept_scheme_iri` in `codes.csv`).
-- The **R package** will:
-  - read salmon data package metadata and data files,
-  - validate packages against this specification,
-  - join in ontology/vocabulary information,
-  - help reshape data into analysis-friendly tidy formats.
-- The **custom GPT** will:
-  - help users draft `column_dictionary.csv` and `codes.csv`,
-  - suggest ontology-aligned IRIs and term types,
-  - assist in decomposing compound terms into multiple columns with appropriate roles and IRIs,
-  - propose package structures compliant with the salmon data package specification for new projects.
+  - measurement types, entities, dimensions, and concepts (via `term_iri` and `term_type`)
+  - entities (`entity_iri` in `metadata/tables.csv`)
+  - concept schemes (`concept_scheme_iri` in `metadata/codes.csv`)
+- The **R package** can:
+  - read salmon data package metadata and data files
+  - validate packages against this specification
+  - join in ontology and vocabulary information
+  - help reshape data into analysis-friendly formats
+- **Guided assistants** can:
+  - help users draft `metadata/column_dictionary.csv` and `metadata/codes.csv`
+  - suggest ontology-aligned IRIs and term types
+  - assist in decomposing compound terms into multiple columns with appropriate roles and IRIs
+  - propose package structures compliant with the salmon data package specification
 
 # Validation Workflow
 
-Run validation locally before publishing.
+Run validation locally before publishing or intake.
 
 Typical local workflow (R):
 
@@ -225,25 +254,25 @@ Typical local workflow (R):
 library(metasalmon)
 
 pkg_path <- "path/to/salmon-data-package"
-validate_dictionary(file.path(pkg_path, "column_dictionary.csv"))
-validate_semantics(file.path(pkg_path, "column_dictionary.csv"))
+validate_dictionary(file.path(pkg_path, "metadata", "column_dictionary.csv"))
+validate_semantics(file.path(pkg_path, "metadata", "column_dictionary.csv"))
 ```
 
 Related implementation guidance:
 
 - [FSAR Data Standardization Workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd)
 - [Salmon data package + SPSR intake path](ontology-data-package-gpt.qmd)
+- [CU/composite escapement estimates for package-first SPSR intake](../../cookbook/cu-composite-escapement-estimates.qmd)
 
 # Versioning and Backwards Compatibility
 
-- Include a `spec_version` field in `dataset.csv` in future iterations if needed (e.g., `sdp-0.1.0`).
-- New columns should be added in a backwards-compatible way:
-  - existing tooling must continue to work when extra columns are present.
+- Include a `spec_version` field in `metadata/dataset.csv` when needed.
+- New columns should be added in a backwards-compatible way.
 - Breaking changes to required columns or semantics should bump the major version.
 
 # Implementation Notes
 
 - CSV files should use UTF-8 encoding and a comma delimiter by default.
-- Dates should follow ISO 8601 where possible (e.g., `YYYY-MM-DD`); years can be encoded as integers.
-- R and Python tooling should treat missing optional columns as `NA`/`null` without failing.
-- The spec is intentionally minimal; domain-specific extensions (e.g., FSAR/SPSR templates) can be layered on top as recommended profiles.
+- Dates should follow ISO 8601 where possible (for example, `YYYY-MM-DD`); years can be encoded as integers.
+- R and Python tooling should treat missing optional columns as `NA` or `null` without failing.
+- The specification is intentionally minimal; domain-specific extensions (for example, SPSR route profiles) can be layered on top as recommended profiles.

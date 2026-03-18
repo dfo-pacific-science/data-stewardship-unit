@@ -7,6 +7,12 @@ This section tracks meaningful changes to standards, workflows, and documentatio
 
 ## Recent updates
 
+### 2026-03 — CU/composite escapement cookbook surfaced
+
+- added a focused recipe for [CU/composite escapement estimates for package-first SPSR intake](../cookbook/cu-composite-escapement-estimates.qmd)
+- linked the recipe from the standards hub, tools page, workflow pages, and portfolio content
+- kept the detailed workflow guidance canonical instead of cloning it into a separate blog post
+
 ### 2026-03 — Reflection: From Data Stewardship to Data Practice
 
 - new long-form reflection on DSU outcomes, lessons, and next-step recommendations
@@ -22,8 +28,8 @@ This section tracks meaningful changes to standards, workflows, and documentatio
 ### 2026-02 — FSAR workflow alignment for SPSR
 
 - clarified SPSR as a primary intake pathway for FSAR-oriented datasets
-- added SPSR links in standards/workflow pages
-- aligned package/intake guidance around salmon data package + wizard flow
+- aligned guidance around the package-first salmon data package route
+- updated workflow pages so wizard and bulk uploads trace back to the same package
 
 ## Where to monitor ongoing changes
 

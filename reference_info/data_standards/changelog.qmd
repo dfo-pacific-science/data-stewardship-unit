@@ -26,14 +26,28 @@ Use this structure for each changelog item:
 - **Impact:** who should care and what to do next
 - **Links:** PR/issue/pages
 
+## 2026-03
+
+### 2026-03-17 — package-first SPSR route + cookbook surfacing
+
+- **Area:** salmon data package + SPSR intake + cookbook
+- **Change:** updated active standards and workflow pages to use the canonical `metadata/` + `data/` package layout, clarified that wizard and bulk uploads converge on the same package-first SPSR route, made minimum route-scoped support explicit for **CU/composite**, **SMU**, and **Population**, and surfaced a focused CU/composite escapement cookbook recipe.
+- **Reason:** keep public guidance aligned with the current SPSR / SDP direction and reduce duplicate instructions spread across overview pages.
+- **Impact:** contributors should build one salmon data package first, then derive the route-scoped SPSR upload from that package; escapement contributors should start with the focused cookbook recipe when they want the shortest path.
+- **Links:**
+  - [Salmon data package + SPSR intake path](ontology-data-package-gpt.qmd)
+  - [FSAR Data Standardization Workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd)
+  - [CU/composite escapement estimates for package-first SPSR intake](../../cookbook/cu-composite-escapement-estimates.qmd)
+  - [Salmon data package specification](salmon-data-exchange-package.qmd)
+
 ## 2026-02
 
 ### 2026-02-25 — terminology normalization + FSAR workflow refresh
 
 - **Area:** salmon data package + FSAR workflow + SPSR intake
-- **Change:** replaced user-facing SDEP wording with “salmon data package”/“SDP”; added canonical markdown spec links to `smn-data-pkg`; updated FSAR workflow guidance to reflect current SPSR CUYear-first intake direction and template-first upload prep.
+- **Change:** replaced user-facing SDEP wording with “salmon data package” / “SDP”; added canonical markdown spec links to `smn-data-pkg`; updated FSAR workflow guidance to reflect the then-current CU-year template alignment and template-first upload preparation.
 - **Reason:** keep terminology aligned with current naming and reduce confusion between overview pages and canonical spec sources.
-- **Impact:** contributors should use “salmon data package” wording in docs and rely on SPSR template endpoint + canonical GitHub specification for field-level implementation details.
+- **Impact:** contributors should use “salmon data package” wording in docs and rely on the SPSR template endpoint + canonical GitHub specification for field-level implementation details.
 - **Links:**
   - [FSAR Data Standardization Workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd)
   - [Salmon data package specification](salmon-data-exchange-package.qmd)
@@ -54,7 +68,7 @@ Use this structure for each changelog item:
 ### 2026-02-20 — data integration system entry path made explicit
 
 - **Area:** standardize/publish workflow pages
-- **Change:** made DFO Ontology → salmon data package → metasalmon → Salmon Data GPT → SPSR path prominent at top of key workflow pages.
+- **Change:** made DFO Ontology → salmon data package → metasalmon → Salmon Data GPT → SPSR path prominent at the top of key workflow pages.
 - **Reason:** make the intended system flow obvious during standardization and publishing.
 - **Impact:** data producers should follow the explicit entry path before upload or external release.
 - **Links:**

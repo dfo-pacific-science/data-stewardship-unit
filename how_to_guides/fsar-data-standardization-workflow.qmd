@@ -6,7 +6,7 @@ format:
     toc-depth: 2
 ---
 
-Use this workflow when preparing salmon datasets for Fisheries Science Advisory Report (FSAR) analysis, review, and operational SPSR intake.
+Use this workflow when preparing salmon datasets for Fisheries Science Advisory Report (FSAR) analysis, review, and SPSR intake.
 
 **Canonical package specification (Markdown):** [Salmon data package specification](https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md)
 
@@ -29,18 +29,26 @@ If you want a concrete walkthrough, use the companion page: [FSAR to SPSR: End-t
 
 Use the [salmon data package specification](../reference_info/data_standards/salmon-data-exchange-package.qmd).
 
-At minimum:
+Use the canonical layout:
 
-- `dataset.csv`
-- `tables.csv`
-- `column_dictionary.csv`
-- `data/*.csv`
-- `codes.csv` (when categorical code lists apply)
+```text
+my-salmon-data-package/
+├── datapackage.json          # optional
+├── metadata/
+│   ├── dataset.csv
+│   ├── tables.csv
+│   ├── column_dictionary.csv
+│   └── codes.csv             # optional
+└── data/
+    └── your_table.csv
+```
 
 Starter assets:
 
 - [Download minimal salmon data package example (zip)](../reference_info/data_standards/examples/sdep-minimal-example.zip)
 - [Browse template package files](https://github.com/dfo-pacific-science/data-stewardship-unit/tree/main/reference_info/data_standards/examples/sdep-minimal-example)
+
+Treat this package as the source of truth for both validation and any SPSR upload files you generate later.
 
 ## Step 4 — Validate package quality
 
@@ -53,20 +61,28 @@ library(metasalmon)
 
 pkg_path <- "path/to/your/salmon-data-package"
 
-validate_dictionary(file.path(pkg_path, "column_dictionary.csv"))
-validate_semantics(file.path(pkg_path, "column_dictionary.csv"))
+validate_dictionary(file.path(pkg_path, "metadata", "column_dictionary.csv"))
+validate_semantics(file.path(pkg_path, "metadata", "column_dictionary.csv"))
 ```
 
-## Step 5 — Align to current SPSR intake direction (CUYear-first)
+## Step 5 — Prepare route-scoped SPSR intake from the package
 
-Based on current SPSR execution direction, prepare uploads as one unified CU-year intake path:
+Use the package to prepare the current SPSR upload profile that matches your data grain.
 
-- Start from current SPSR templates: <https://spsr.dfo-mpo.gc.ca/download_sdp_templates>
-- Treat **WSP CU assessment fields** as the canonical status/benchmark layer.
-- Keep **FSAR fishery fields** (catch, age, exploitation, etc.) as complementary data on the same CU-year pathway.
-- Do not assume equivalence for similarly named fields (for example, FSAR `TOTAL_SPAWNERS` vs WSP `SpnForAbd_Total`); document mapping assumptions explicitly.
-- Keep provenance explicit for transformed/derived values (for example, data source, year type, and method notes where applicable).
-- Keep package metadata and upload CSV(s) versioned together.
+Minimum route-scoped support story:
+
+- **CU/composite**
+- **SMU**
+- **Population**
+
+Current working rules:
+
+- start from the current SPSR templates: <https://spsr.dfo-mpo.gc.ca/download_sdp_templates>
+- keep the **salmon data package** as the authoritative source, not a side spreadsheet
+- if you are doing a **bulk upload**, use the same package-first route rather than a separate workflow
+- document mapping assumptions explicitly when similarly named fields are not equivalent
+- keep provenance explicit for transformed or derived values
+- keep package metadata and route-scoped upload CSV(s) versioned together
 
 Useful SPSR references:
 
@@ -74,12 +90,14 @@ Useful SPSR references:
 - App docs: <https://spsr.dfo-mpo.gc.ca/documentation/>
 - Upload wizard: <https://spsr.dfo-mpo.gc.ca/wizard/1/>
 
+If you are preparing CU/composite escapement estimates, use the focused recipe: [CU/composite escapement estimates for package-first SPSR intake](../cookbook/cu-composite-escapement-estimates.qmd).
+
 ## Step 6 — Upload and review in SPSR
 
-- Upload via SPSR wizard.
+- Upload via SPSR wizard or the current approved bulk route.
 - Resolve validation feedback.
 - Re-upload if needed until intake checks are clean.
-- Record accepted upload version, intake date, and any profile-specific notes.
+- Record accepted upload version, intake date, and any route-specific notes.
 
 ## Step 7 — Publish externally (if in scope and approved)
 
@@ -91,6 +109,7 @@ Useful SPSR references:
 - [ ] Scope and classification confirmed
 - [ ] Vocabulary mappings documented with full IRIs
 - [ ] Salmon data package files completed and validated
-- [ ] SPSR template-aligned upload files prepared and submitted
-- [ ] Intake assumptions/provenance notes archived
+- [ ] SPSR route scope selected (CU/composite, SMU, or Population)
+- [ ] Route-scoped upload files prepared from the package and submitted
+- [ ] Intake assumptions and provenance notes archived
 - [ ] External publication requirements completed (if applicable)

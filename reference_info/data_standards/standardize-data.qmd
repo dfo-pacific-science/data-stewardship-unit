@@ -13,161 +13,50 @@ format:
 <div class="status-badge-row">
   <span class="status-badge status-active">Active Workflow</span>
   <span class="status-badge status-canonical">Canonical Terms Required</span>
-  <span class="status-badge status-guidance">FSAR + SPSR Ready</span>
+  <span class="status-badge status-guidance">Package-first</span>
 </div>
 ```
 
-## Salmon Data Integration System — entry path (start here)
+Use this page when you need the **shortest correct path** from a messy source dataset to a standards-aligned salmon data package.
 
-```{=html}
-<div class="semantic-entry">
-  <h3>Use this 5-part system in order</h3>
-  <ol>
-    <li><strong>DFO Salmon Ontology</strong> for canonical term IRIs</li>
-    <li><strong>Salmon data package</strong> for package metadata structure</li>
-    <li><strong>metasalmon</strong> for validation checks</li>
-    <li><strong>Salmon Data GPT</strong> as an optional drafting assistant</li>
-    <li><strong>SPSR</strong> for operational FSAR intake</li>
-  </ol>
-</div>
-```
+This page is intentionally concise. For full package details or SPSR intake rules, use the linked canonical pages.
 
-Quick links:
+## Start here
 
-- [Salmon Data Integration System — Start Here](semantic-salmon-system.qmd)
-- [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)
-- [Salmon data package specification](salmon-data-exchange-package.qmd)
-- [Salmon data package + SPSR intake path](ontology-data-package-gpt.qmd)
+1. **Map your columns to canonical terms**
+   - Use [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)
+   - Record the **full** IRI for each mapped field
+2. **Build a salmon data package**
+   - Use the canonical layout: `metadata/` + `data/` with optional root `datapackage.json`
+   - Use the [Salmon data package specification](salmon-data-exchange-package.qmd)
+3. **Validate before you upload or publish**
+   - Run **metasalmon** or equivalent checks against `metadata/column_dictionary.csv`
+4. **Choose your destination path**
+   - SPSR / FSAR intake → [Salmon data package + SPSR intake path](ontology-data-package-gpt.qmd)
+   - External release → [Publish Your Data](publish-data.qmd)
+
+## Minimal standardization checklist
+
+- [ ] scope and grain are clear
+- [ ] identifiers, time fields, measurements, and controlled values are mapped
+- [ ] canonical IRIs are recorded in `metadata/column_dictionary.csv`
+- [ ] package structure follows `metadata/` + `data/`
+- [ ] validation passes before downstream submission
+
+## Cookbook spotlight
+
+If you are working with escapement data, use the focused recipe:
+
+- [CU/composite escapement estimates for package-first SPSR intake](../../cookbook/cu-composite-escapement-estimates.qmd)
+
+For a longer implementation walkthrough, use:
+
+- [FSAR Data Standardization Workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd)
 - [FSAR to SPSR: End-to-End Example](../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd)
-
-## Cookbook Guide
-
-<div class="cookbook-section">
-
-### Step 1: Assess Your Current Data
-
-<div class="cookbook-step">
-
-**What you need:**
-- Your source dataset
-- A list of column names and meanings
-
-**How to do it:**
-
-1. List all columns and describe each in plain language.
-2. Mark candidate fields for semantic mapping:
-   - identifiers (CU/SMU/population)
-   - time fields (brood year, return year, event date)
-   - measurements (escapement, abundance, catch)
-   - controlled codes (run type, method, status)
-
-</div>
-
-### Step 2: Map to Canonical Terms
-
-<div class="cookbook-step">
-
-**What you need:**
-- Column assessment from Step 1
-- [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)
-
-**How to do it:**
-
-1. Search for matching canonical terms.
-2. Confirm definitions match your intended meaning.
-3. Record the **full** canonical IRI for each mapping.
-
-**Example mapping (illustrative — confirm exact term IRIs in WIDOCO):**
-
-```csv
-current_column,standard_term_label,standard_term_iri
-CU_code,Conservation Unit,https://w3id.org/gcdfo/salmon#ConservationUnit
-BY,Brood Year,https://w3id.org/gcdfo/salmon#BroodYear
-Esc,Escapement,https://w3id.org/gcdfo/salmon#Escapement
-```
-
-**Rule:** do not use partial/shortened URIs.
-
-</div>
-
-### Step 3: Build or Update Your Data Dictionary
-
-<div class="cookbook-step">
-
-Use one row per source column.
-
-Minimum recommended fields:
-
-- `variable_name`
-- `label`
-- `data_type`
-- `definition`
-- `standard_term_iri`
-- `unit` (where applicable)
-- `accepted_values` (for categorical fields)
-
-**Example:**
-
-```csv
-variable_name,label,data_type,definition,standard_term_iri,unit
-CU_code,Conservation Unit,string,The conservation unit identifier,https://w3id.org/gcdfo/salmon#ConservationUnit,
-BY,Brood Year,integer,The year in which spawning occurred,https://w3id.org/gcdfo/salmon#BroodYear,year
-Esc,Escapement,float,Number of fish returning to spawn,https://w3id.org/gcdfo/salmon#Escapement,number of fish
-```
-
-</div>
-
-### Step 4: Standardize Controlled Values
-
-<div class="cookbook-step">
-
-1. Identify categorical columns.
-2. List observed values.
-3. Map to controlled concepts and keep a mapping table.
-
-**Example:**
-
-```csv
-variable_name,current_value,standard_value,concept_iri
-run_type,Spring,Spring Run,https://w3id.org/gcdfo/salmon#SpringRun
-run_type,Summer,Summer Run,https://w3id.org/gcdfo/salmon#SummerRun
-run_type,Fall,Fall Run,https://w3id.org/gcdfo/salmon#FallRun
-```
-
-</div>
-
-### Step 5: Apply Transformations Reproducibly
-
-<div class="cookbook-step">
-
-- apply mappings in script (R/Python), not manually in ad-hoc spreadsheets
-- preserve source column traceability
-- validate data types and units after transformation
-- version your transformed output
-
-</div>
-
-### Step 6: Validate and Prepare for Intake
-
-<div class="cookbook-step">
-
-Before moving to package/upload:
-
-- [ ] every column is documented
-- [ ] semantic links are canonical full IRIs
-- [ ] controlled values are mapped or flagged
-- [ ] units and assumptions are explicit
-- [ ] transformation steps are recorded
-
-If your destination is SPSR for FSAR workflows, continue with [FSAR Data Standardization Workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd).
-
-</div>
-
-</div>
 
 ## Next Steps
 
-- [Salmon Data Standards Hub](index.qmd)
+- [Salmon Data Integration System — Start Here](semantic-salmon-system.qmd)
 - [Salmon data package specification](salmon-data-exchange-package.qmd)
 - [Salmon data package + SPSR intake path](ontology-data-package-gpt.qmd)
 - [Data Stewardship Unit contact](mailto:FADSDataStewardship-GestiondesdonneesSFDA@dfo-mpo.gc.ca)

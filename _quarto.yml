@@ -41,6 +41,7 @@ website:
       - text: "Workflows"
         menu:
           - href: how_to_guides/fsar-data-standardization-workflow.qmd
+          - href: cookbook/cu-composite-escapement-estimates.qmd
           - href: reference_info/data_standards/standardize-data.qmd
           - href: reference_info/data_standards/integrate-data.qmd
           - href: reference_info/data_standards/publish-data.qmd
@@ -129,6 +130,7 @@ website:
       - section: "Cookbook"
         contents:
           - href: cookbook/index.qmd
+          - href: cookbook/cu-composite-escapement-estimates.qmd
       - section: "Tools & Training"
         contents:
           - text: "Tools"

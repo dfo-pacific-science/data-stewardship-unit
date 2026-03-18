@@ -26,10 +26,10 @@ The **Semantic Salmon Data Ecosystem** (Salmon Data Integration System) connects
 <div class="semantic-entry">
   <ol>
     <li><strong>DFO Salmon Ontology</strong> — canonical semantics</li>
-    <li><strong>Salmon data package</strong> — package metadata structure</li>
+    <li><strong>Salmon data package</strong> — canonical package structure</li>
     <li><strong>metasalmon</strong> — validation and quality control</li>
     <li><strong>Salmon Data GPT</strong> — optional drafting/acceleration assistant</li>
-    <li><strong>SPSR</strong> — operational intake path for many FSAR workflows</li>
+    <li><strong>SPSR</strong> — package-first operational intake path</li>
   </ol>
   <p><a href="semantic-salmon-system.qmd">Open the branded start page for this full path</a>.</p>
 </div>
@@ -54,12 +54,19 @@ The ontology provides shared definitions and persistent IRIs for key domain conc
 
 The salmon data package standardizes package metadata without forcing one rigid dataset schema.
 
-Core files:
+Canonical layout:
 
-- `dataset.csv`
-- `tables.csv`
-- `column_dictionary.csv`
-- `codes.csv` (when controlled values apply)
+```text
+my-salmon-data-package/
+├── datapackage.json          # optional
+├── metadata/
+│   ├── dataset.csv
+│   ├── tables.csv
+│   ├── column_dictionary.csv
+│   └── codes.csv             # optional
+└── data/
+    └── *.csv
+```
 
 Spec reference: [Salmon data package specification](salmon-data-exchange-package.qmd) (canonical markdown: <https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md>)
 
@@ -69,10 +76,11 @@ Validation tooling checks package structure and semantic consistency before subm
 
 Typical checks include:
 
-- required columns/files present
+- required columns and files present
 - value types and requiredness
 - IRI formatting and ontology-link consistency
-- controlled vocabulary/code-list alignment
+- controlled vocabulary and code-list alignment
+- provenance completeness for transformed fields
 
 # 4. SPSR (operational intake layer)
 
@@ -83,7 +91,11 @@ For FSAR-oriented contributions, SPSR is a major operational destination.
 - Templates endpoint: <https://spsr.dfo-mpo.gc.ca/download_sdp_templates>
 - Repo: <https://github.com/dfo-pacific-science/salmon-population-summary-repository>
 
-This creates a practical bridge from standards work to real upload and review workflows.
+Current working direction:
+
+- use a **package-first** route
+- derive wizard or bulk upload files from the same package
+- support route-scoped intake beginning with **CU/composite**, **SMU**, and **Population**
 
 # 5. Guided assistants (optional acceleration)
 
@@ -92,10 +104,10 @@ Assistant tools can help draft mappings and package metadata, but they do not re
 # 6. End-to-end flow
 
 1. Map terms to ontology IRIs
-2. Build salmon data package metadata
+2. Build salmon data package metadata in `metadata/`
 3. Validate package
-4. Upload via SPSR workflow (for applicable FSAR datasets)
-5. Iterate from validation/reviewer feedback
+4. Generate the appropriate SPSR route-scoped upload from the package
+5. Iterate from validation or reviewer feedback
 
 # 7. Why this matters
 
@@ -103,10 +115,11 @@ Assistant tools can help draft mappings and package metadata, but they do not re
 - more consistent semantics across teams
 - cleaner FSAR-to-repository pathways
 - better machine-readability for integration and downstream analytics
+- fewer parallel spreadsheet-only workflows drifting away from canonical metadata
 
 # 8. Suggested next reads
 
+- [Salmon data package + SPSR intake path](ontology-data-package-gpt.qmd)
 - [FSAR to SPSR: End-to-End Example](../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd)
+- [CU/composite escapement estimates for package-first SPSR intake](../../cookbook/cu-composite-escapement-estimates.qmd)
 - [IRI and Identifier Policy](iri-identifier-policy.qmd)
-- [Class vs SKOS Decision Tree](../ontology/class-vs-skos-decision-tree.qmd)
-- [How to Request a New Ontology Term](../ontology/request-new-term.qmd)
