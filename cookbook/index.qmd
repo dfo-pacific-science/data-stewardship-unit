@@ -7,6 +7,8 @@ Task-focused recipes for recurring data stewardship workflows.
 
 These recipes are intentionally short. They point back to the canonical workflow or reference page instead of duplicating the whole topic.
 
+For CU/composite escapement work, the maintained operational cookbook now lives in the separate `dfo-pacific-science/cu-escapement-data-cookbook` repo; the page here is just the FADS hub pointer.
+
 ## Current recipes
 
 - [CU/composite escapement estimates for package-first SPSR intake](cu-composite-escapement-estimates.qmd) — shortest path for packaging and submitting CU or CU-composite escapement data.

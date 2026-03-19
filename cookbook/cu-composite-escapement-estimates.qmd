@@ -1,105 +1,40 @@
 ---
 title: "CU/composite escapement estimates for package-first SPSR intake"
 published_date: 2026-03-17
-updated_date: 2026-03-17
+updated_date: 2026-03-19
 format:
   html:
-    toc: true
-    toc-depth: 2
+    toc: false
 ---
 
-Use this recipe when you have **CU-level** or **CU-composite** escapement estimates and need the shortest correct path into SPSR.
+Use this page as an **orientation note only**.
 
-```{=html}
-<div class="status-badge-row">
-  <span class="status-badge status-active">Cookbook</span>
-  <span class="status-badge status-canonical">Package-first</span>
-  <span class="status-badge status-guidance">Escapement</span>
-</div>
-```
+::: {.callout-important}
+The operational source of truth for the CU/composite escapement workflow now
+lives in [`dfo-pacific-science/cu-escapement-data-cookbook`](https://github.com/dfo-pacific-science/cu-escapement-data-cookbook).
 
-## Quick summary
+The FADS Open Science Hub keeps surrounding reference docs and links, but it is
+**not** the working cookbook home.
+:::
 
-- Start with a **salmon data package**, not a standalone upload spreadsheet.
-- The canonical package layout is **`metadata/` + `data/`**, with optional root `datapackage.json`.
-- The same package-first pattern supports **CU/composite**, **SMU**, and **Population** routes.
-- Bulk uploads should use the same package-first source, not a separate branch of ad hoc spreadsheets.
-- If you need estimate classification context, use the [Salmon Escapement Estimates Toolkit](https://dfo-pac-sci-dev.shinyapps.io/smn-escapement-toolkit/).
+## Use the cookbook repo for the actual workflow
 
-## 1) Confirm the route scope
+Go there when you need to:
 
-Choose the SPSR route scope that matches the grain of the table you are packaging:
+- follow the maintained CU/composite processing recipe,
+- run the SPSR package pre-flight helper,
+- update the package-first handoff pattern,
+- keep the operational cookbook in one place.
 
-- **CU/composite** — one row per CU-year or CU-composite-year estimate
-- **SMU** — one row per SMU-year estimate
-- **Population** — one row per population-year estimate
+## Short path
 
-This recipe is written for **CU/composite** data, but the same package structure carries forward when the data grain changes.
+1. Build the canonical CU/WSP bundle in the cookbook/species-prep flow.
+2. If you need an SPSR handoff, run the cookbook repo pre-flight helper against the Salmon Data Package.
+3. Derive wizard or bulk upload files from that validated package.
 
-## 2) Assemble the package first
+## Reference pages that still live here
 
-Use the canonical layout:
-
-```text
-my-salmon-data-package/
-├── datapackage.json          # optional
-├── metadata/
-│   ├── dataset.csv
-│   ├── tables.csv
-│   ├── column_dictionary.csv
-│   └── codes.csv             # optional
-└── data/
-    └── cu_composite_escapement.csv
-```
-
-Keep the package as the source of truth for both validation and SPSR submission.
-
-## 3) Capture the minimum semantics and provenance
-
-At minimum, document:
-
-- the CU or composite identifier
-- the year field used by the dataset
-- the escapement value and unit
-- estimate type or method context when relevant
-- provenance notes for transformations, rollups, or composite rules
-
-Use [GC DFO Salmon Ontology documentation](../reference_info/ontology/formal-documentation.qmd) for canonical IRIs, and record them in `metadata/column_dictionary.csv`.
-
-## 4) Validate before you touch SPSR
-
-Run local checks before generating upload files.
-
-```r
-library(metasalmon)
-
-pkg_path <- "path/to/your/salmon-data-package"
-
-validate_dictionary(file.path(pkg_path, "metadata", "column_dictionary.csv"))
-validate_semantics(file.path(pkg_path, "metadata", "column_dictionary.csv"))
-```
-
-Fix package issues first. It is cheaper than discovering the same problems during intake.
-
-## 5) Prepare the SPSR upload from the package
-
-- download the current templates: <https://spsr.dfo-mpo.gc.ca/download_sdp_templates>
-- choose the **CU/composite** route profile that matches the data grain
-- generate or align the route-scoped upload CSV(s) from the same package
-- keep upload files versioned with the package metadata and data
-- if submitting in bulk, use the same package-first route
-
-If you later need to provide **SMU** or **Population** rollups, keep the package-first pattern and switch the route/profile to match the new table grain.
-
-## 6) Submit and archive the accepted version
-
-1. Upload through the SPSR wizard or approved bulk route.
-2. Resolve any intake feedback by correcting the package and regenerating the upload file.
-3. Record the accepted version, intake date, and route notes.
-
-## Related pages
-
+- [Salmon data package specification](../reference_info/data_standards/salmon-data-exchange-package.qmd)
 - [Salmon data package + SPSR intake path](../reference_info/data_standards/ontology-data-package-gpt.qmd)
 - [FSAR Data Standardization Workflow](../how_to_guides/fsar-data-standardization-workflow.qmd)
 - [FSAR to SPSR: End-to-End Example](../how_to_guides/fsar-to-spsr-end-to-end-example.qmd)
-- [Salmon data package specification](../reference_info/data_standards/salmon-data-exchange-package.qmd)
