@@ -248,13 +248,7 @@ Minimum route-scoped support story currently starts with:
 
 Run validation locally before publishing or intake.
 
-Fastest path from the repo root:
-
-```bash
-Rscript scripts/validate_spsr_package.R path/to/salmon-data-package
-```
-
-That helper calls the new end-to-end validator:
+Generic R path:
 
 ```r
 metasalmon::validate_salmon_datapackage(
@@ -263,7 +257,10 @@ metasalmon::validate_salmon_datapackage(
 )
 ```
 
-Use `--require-iris` (or `require_iris = TRUE`) when you want the pre-flight check to fail on missing measurement IRIs.
+Use `require_iris = TRUE` when you want the pre-flight check to fail on missing measurement IRIs.
+
+Project-specific helper scripts should live in the repo that owns the workflow
+(for example, the CU escapement cookbook), not in the FADS Open Science Hub repo.
 
 ::: {.callout-note}
 Use `value_type = "number"` for numeric measurements such as escapement counts. Older examples that say `double` should be updated before running the current validator.

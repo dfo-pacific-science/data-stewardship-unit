@@ -17,14 +17,7 @@ This folder is a minimal, runnable starter for the salmon data package (SDP).
 2. Replace sample metadata values in the files under `metadata/`.
 3. Replace `data/cu_year_index.csv` with your own table(s).
 4. Keep column names aligned between your data files and `metadata/column_dictionary.csv`.
-5. From the repo root, run the pre-flight validator before you derive SPSR upload files.
-
-```bash
-Rscript scripts/validate_spsr_package.R \
-  reference_info/data_standards/examples/sdep-minimal-example
-```
-
-Use `--require-iris` once you have filled in measurement IRIs and want missing semantics to fail validation.
+5. Validate the package with `metasalmon::validate_salmon_datapackage()` (or your project-owned helper wrapper) before deriving downstream upload files.
 
 ## Notes
 
