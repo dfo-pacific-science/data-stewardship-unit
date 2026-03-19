@@ -1,7 +1,7 @@
 ---
 title: "CU/composite escapement estimates for package-first SPSR intake"
 published_date: 2026-03-17
-updated_date: 2026-03-17
+updated_date: 2026-03-19
 format:
   html:
     toc: true
@@ -66,20 +66,30 @@ At minimum, document:
 
 Use [GC DFO Salmon Ontology documentation](../reference_info/ontology/formal-documentation.qmd) for canonical IRIs, and record them in `metadata/column_dictionary.csv`.
 
-## 4) Validate before you touch SPSR
+## 4) Run the one-command pre-flight check
 
-Run local checks before generating upload files.
+From the repo root, run the package validator before you generate any SPSR upload files.
 
-```r
-library(metasalmon)
-
-pkg_path <- "path/to/your/salmon-data-package"
-
-validate_dictionary(file.path(pkg_path, "metadata", "column_dictionary.csv"))
-validate_semantics(file.path(pkg_path, "metadata", "column_dictionary.csv"))
+```bash
+Rscript scripts/validate_spsr_package.R path/to/your/salmon-data-package
 ```
 
-Fix package issues first. It is cheaper than discovering the same problems during intake.
+Use `--require-iris` once the measurement semantics are finalized and you want the check to fail on missing IRIs.
+
+```bash
+Rscript scripts/validate_spsr_package.R path/to/your/salmon-data-package --require-iris
+```
+
+If you prefer to stay in R, the helper is a thin wrapper around the new end-to-end validator:
+
+```r
+metasalmon::validate_salmon_datapackage(
+  "path/to/your/salmon-data-package",
+  require_iris = FALSE
+)
+```
+
+Treat this as the SPSR pre-flight gate. It catches package/data mismatches, coded-value drift, and dictionary/semantic problems before intake does.
 
 ## 5) Prepare the SPSR upload from the package
 

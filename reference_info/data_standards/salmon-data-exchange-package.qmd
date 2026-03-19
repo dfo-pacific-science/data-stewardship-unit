@@ -156,7 +156,7 @@ Required columns:
 | column_label        | string  | yes      | Short human-readable label.                                                                   |
 | column_description  | string  | yes      | Clear definition of the column’s meaning.                                                     |
 | column_role         | string  | yes      | One of: `identifier`, `attribute`, `temporal`, `categorical`, `measurement`.                 |
-| value_type          | string  | yes      | Basic type: `integer`, `double`, `string`, `boolean`, `date`, `datetime`.                    |
+| value_type          | string  | yes      | Basic type: `integer`, `number`, `string`, `boolean`, `date`, `datetime`.                    |
 | required            | boolean | no       | `TRUE` if the column is required for each row, otherwise `FALSE` or blank.                    |
 | unit_label          | string  | no       | Human-readable unit label (for example, `number of fish`, `proportion`).                      |
 | unit_iri            | string  | no       | IRI for the unit.                                                                             |
@@ -248,15 +248,26 @@ Minimum route-scoped support story currently starts with:
 
 Run validation locally before publishing or intake.
 
-Typical local workflow (R):
+Fastest path from the repo root:
+
+```bash
+Rscript scripts/validate_spsr_package.R path/to/salmon-data-package
+```
+
+That helper calls the new end-to-end validator:
 
 ```r
-library(metasalmon)
-
-pkg_path <- "path/to/salmon-data-package"
-validate_dictionary(file.path(pkg_path, "metadata", "column_dictionary.csv"))
-validate_semantics(file.path(pkg_path, "metadata", "column_dictionary.csv"))
+metasalmon::validate_salmon_datapackage(
+  "path/to/salmon-data-package",
+  require_iris = FALSE
+)
 ```
+
+Use `--require-iris` (or `require_iris = TRUE`) when you want the pre-flight check to fail on missing measurement IRIs.
+
+::: {.callout-note}
+Use `value_type = "number"` for numeric measurements such as escapement counts. Older examples that say `double` should be updated before running the current validator.
+:::
 
 Related implementation guidance:
 
