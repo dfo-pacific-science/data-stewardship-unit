@@ -20,7 +20,7 @@ Current SPSR direction is **package-first**. Build one salmon data package first
 
 - **I need the full system path first** → [Salmon Data Integration System — Start Here](semantic-salmon-system.qmd)
 - **I need to prepare data for an FSAR** → [FSAR Data Standardization Workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd)
-- **I need to submit FSAR data to SPSR** → [FSAR to SPSR: End-to-End Example](../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd) and [Salmon data package + SPSR intake path](ontology-data-package-gpt.qmd)
+- **I need to submit FSAR data to SPSR** → [FSAR to SPSR: End-to-End Example](../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd) and [Salmon data package + guided review + SPSR intake path](ontology-data-package-gpt.qmd)
 - **I need a focused CU/composite escapement recipe** → [CU/composite escapement estimates for package-first SPSR intake](../../cookbook/cu-composite-escapement-estimates.qmd)
 - **I need standard terms and definitions** → [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)
 - **I need package structure/spec details** → [Salmon data package specification](salmon-data-exchange-package.qmd)
@@ -42,7 +42,7 @@ Current SPSR direction is **package-first**. Build one salmon data package first
   - [Class vs SKOS Decision Tree](../ontology/class-vs-skos-decision-tree.qmd)
   - [How to Request a New Ontology Term](../ontology/request-new-term.qmd)
 - **Data steward/reviewer**
-  - [Salmon data package + SPSR intake path](ontology-data-package-gpt.qmd)
+  - [Salmon data package + guided review + SPSR intake path](ontology-data-package-gpt.qmd)
   - [IRI and Identifier Policy](iri-identifier-policy.qmd)
   - [Publishing Data Externally](../publishing_data_externally.qmd)
 
@@ -61,7 +61,7 @@ Use salmon data package metadata files to describe your dataset, tables, columns
 
 - [Salmon data package specification](salmon-data-exchange-package.qmd)
 - [IRI and Identifier Policy](iri-identifier-policy.qmd)
-- [Salmon data package + SPSR intake path](ontology-data-package-gpt.qmd)
+- [Salmon data package + guided review + SPSR intake path](ontology-data-package-gpt.qmd)
 
 ### 3) Use implementation workflows
 - [Standardize Your Data](standardize-data.qmd)

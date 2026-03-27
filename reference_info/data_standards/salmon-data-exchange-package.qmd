@@ -17,6 +17,13 @@ execute:
 
 This page provides a DSU-hosted copy and overview. For canonical field definitions and version history, use the GitHub source above.
 
+::: {.callout-note}
+This page is **schema/reference**. For the actual package creation, review, and validation workflow, use the maintained `metasalmon` docs:
+
+- [metasalmon 5-Minute Quickstart](https://dfo-pacific-science.github.io/metasalmon/articles/metasalmon.html)
+- [metasalmon Publishing Data Packages](https://dfo-pacific-science.github.io/metasalmon/articles/data-dictionary-publication.html)
+:::
+
 # Overview
 
 The **salmon data package (SDP)** is a lightweight, frictionless-style specification for exchanging salmon datasets between scientists, assessment biologists, and data stewards.
@@ -259,6 +266,8 @@ metasalmon::validate_salmon_datapackage(
 
 Use `require_iris = TRUE` when you want the pre-flight check to fail on missing measurement IRIs.
 
+If you need the maintained end-to-end review loop around this validator, use the `metasalmon` workflow docs rather than duplicating that procedure here.
+
 Project-specific helper scripts should live in the repo that owns the workflow
 (for example, the CU escapement cookbook), not in the FADS Open Science Hub repo.
 
@@ -269,7 +278,7 @@ Use `value_type = "number"` for numeric measurements such as escapement counts. 
 Related implementation guidance:
 
 - [FSAR Data Standardization Workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd)
-- [Salmon data package + SPSR intake path](ontology-data-package-gpt.qmd)
+- [Salmon data package + guided review + SPSR intake path](ontology-data-package-gpt.qmd)
 - [CU/composite escapement estimates for package-first SPSR intake](../../cookbook/cu-composite-escapement-estimates.qmd)
 
 # Versioning and Backwards Compatibility

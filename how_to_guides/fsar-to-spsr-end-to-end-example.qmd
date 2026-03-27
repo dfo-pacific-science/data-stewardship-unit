@@ -42,27 +42,25 @@ BY,Brood Year,https://w3id.org/gcdfo/salmon#BroodYear
 Esc,Escapement,https://w3id.org/gcdfo/salmon#Escapement
 ```
 
-## Step 3 — Build minimal salmon data package metadata
+## Step 3 — Create the package with metasalmon
 
-Create the package in the canonical layout:
+Use the current `metasalmon` docs for the actual package creation and review loop:
 
-```text
-my-salmon-data-package/
-├── datapackage.json          # optional
-├── metadata/
-│   ├── dataset.csv
-│   ├── tables.csv
-│   ├── column_dictionary.csv
-│   └── codes.csv             # optional
-└── data/
-    └── cu_composite_escapement.csv
-```
+- [metasalmon 5-Minute Quickstart](https://dfo-pacific-science.github.io/metasalmon/articles/metasalmon.html)
+- [metasalmon Publishing Data Packages](https://dfo-pacific-science.github.io/metasalmon/articles/data-dictionary-publication.html)
 
-Reference: [Salmon data package specification](../reference_info/data_standards/salmon-data-exchange-package.qmd)
+That keeps package scaffolding, review artifacts, and package-native validation in one maintained place.
 
-## Step 4 — Validate before upload
+If you need the normative schema details or a manual starter scaffold, use the [Salmon data package specification](../reference_info/data_standards/salmon-data-exchange-package.qmd) and the [minimal starter package example](../reference_info/data_standards/examples/sdep-minimal-example.zip).
 
-Run local checks (structure + semantics) and fix issues before submission.
+## Step 4 — Finish review and validation before upload
+
+Run the `metasalmon` review loop before preparing the SPSR upload:
+
+- review `metadata/*.csv`
+- review any `README-review.txt` or `semantic_suggestions.csv` files created with the package
+- resolve placeholders or review-marked semantic values
+- run `metasalmon::validate_salmon_datapackage(pkg_path, require_iris = TRUE)` before deriving the upload files
 
 The package is the authoritative source. Do not wait until the SPSR upload step to discover missing metadata or term mismatches.
 

@@ -1,5 +1,5 @@
 ---
-title: "Salmon data package + SPSR intake path"
+title: "Salmon data package + guided review + SPSR intake path"
 format:
   html:
     toc: true
@@ -19,7 +19,12 @@ Use this page when your goal is to move from **mapped data** to a **submission-r
 ```
 
 ::: {.callout-note}
-This page is for **packaging and intake**.
+This page is for **packaging, optional guided review, and intake**.
+
+For the maintained package creation/review workflow, use the `metasalmon` docs:
+
+- [5-Minute Quickstart](https://dfo-pacific-science.github.io/metasalmon/articles/metasalmon.html)
+- [Publishing Data Packages](https://dfo-pacific-science.github.io/metasalmon/articles/data-dictionary-publication.html)
 
 If you need to propose new vocabulary terms or ontology changes, use [Controlled Vocabulary Governance Workflow](../../tutorials/support_controlled_vocabs.qmd).
 :::
@@ -28,17 +33,17 @@ If you need to propose new vocabulary terms or ontology changes, use [Controlled
 
 - Start with a **salmon data package (SDP)** as the source of truth.
 - The canonical package layout is **`metadata/` + `data/`**, with an optional root `datapackage.json`.
-- **metasalmon** is the validation gate before submission.
+- **metasalmon** is the canonical package creation, review, and validation workflow before submission.
 - SPSR wizard uploads and bulk uploads should converge on the **same package-first path**.
 - Current minimum route-scoped support story includes **CU/composite**, **SMU**, and **Population** routes.
-- Guided assistants can help draft mappings and metadata, but validation remains the quality gate.
+- Guided review tools such as **SMN-GPT** can help with ambiguity triage after the package exists, but validation remains the quality gate.
 
 ## Practical workflow
 
 1. Find canonical terms in [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd).
-2. Build `metadata/column_dictionary.csv` with full IRIs (no shortened or partial URIs).
-3. Assemble the package using the [Salmon data package specification](salmon-data-exchange-package.qmd).
-4. Validate locally with **metasalmon** or equivalent checks.
+2. Create the package with `metasalmon` (preferred) or assemble it manually to the specification if your project already owns that path.
+3. Review the generated package in the `metasalmon` package-native loop.
+4. Validate locally with `metasalmon::validate_salmon_datapackage(pkg_path, require_iris = TRUE)`.
 5. Choose the SPSR route scope that matches your data grain:
    - **CU/composite**
    - **SMU**
@@ -48,22 +53,12 @@ If you need to propose new vocabulary terms or ontology changes, use [Controlled
 
 For bulk uploads, use the same package-first flow. Do **not** maintain a separate spreadsheet-only bulk route that drifts away from the package metadata.
 
-## Canonical package layout
+## Package + review references
 
-Use this structure unless a destination workflow explicitly requires something else:
-
-```text
-my-salmon-data-package/
-├── datapackage.json          # optional
-├── metadata/
-│   ├── dataset.csv
-│   ├── tables.csv
-│   ├── column_dictionary.csv
-│   └── codes.csv             # optional
-└── data/
-    ├── table_1.csv
-    └── table_2.csv
-```
+- [Salmon data package specification](salmon-data-exchange-package.qmd)
+- [metasalmon 5-Minute Quickstart](https://dfo-pacific-science.github.io/metasalmon/articles/metasalmon.html)
+- [metasalmon Publishing Data Packages](https://dfo-pacific-science.github.io/metasalmon/articles/data-dictionary-publication.html)
+- [smn-gpt repository](https://github.com/dfo-pacific-science/smn-gpt)
 
 ## SPSR touchpoints
 
@@ -71,16 +66,6 @@ my-salmon-data-package/
 - Upload wizard: <https://spsr.dfo-mpo.gc.ca/wizard/1/>
 - Template package endpoint: <https://spsr.dfo-mpo.gc.ca/download_sdp_templates>
 - Repo: <https://github.com/dfo-pacific-science/salmon-population-summary-repository>
-
-## Recommended artifacts
-
-- `metadata/dataset.csv` for dataset-level metadata
-- `metadata/tables.csv` for table inventory and entities
-- `metadata/column_dictionary.csv` for column semantics and term links
-- `metadata/codes.csv` for controlled value sets when needed
-- `data/*.csv` for route-aligned source tables
-- optional root `datapackage.json`
-- route-scoped upload CSV(s) derived from the same package
 
 ## Validation gates
 

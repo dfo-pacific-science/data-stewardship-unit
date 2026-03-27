@@ -10,7 +10,7 @@ Use this workflow when you need to **add, revise, or align controlled terms** us
 ::: {.callout-note}
 This workflow is for **term governance**.
 
-If you are preparing a dataset package and uploading to SPSR, use [Salmon data package + SPSR intake path](../reference_info/data_standards/ontology-data-package-gpt.qmd).
+If you are preparing a dataset package and uploading to SPSR, use [Salmon data package + guided review + SPSR intake path](../reference_info/data_standards/ontology-data-package-gpt.qmd).
 :::
 
 ## Canonical source and namespace

@@ -15,11 +15,11 @@ This page is a high-level overview of the workflow. For complete package details
   <p class="semantic-system-eyebrow">DFO Pacific Science • Data Stewardship Unit</p>
   <h2>The front door for salmon data integration workflows</h2>
   <p>
-    Use one system, one order: ontology terms, package metadata, validation, assisted drafting, and package-first SPSR intake.
+    Use one system, one order: ontology terms, package metadata, metasalmon review, optional guided review, and package-first SPSR intake.
   </p>
   <div class="semantic-system-cta-row">
     <a class="semantic-system-cta semantic-system-cta-primary" href="../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd">Start my FSAR intake path</a>
-    <a class="semantic-system-cta" href="ontology-data-package-gpt.qmd">Go to salmon data package + SPSR intake path</a>
+    <a class="semantic-system-cta" href="ontology-data-package-gpt.qmd">Go to salmon data package + guided review + SPSR intake path</a>
   </div>
 </section>
 ```
@@ -50,13 +50,13 @@ This page is a high-level overview of the workflow. For complete package details
   <div class="semantic-system-arrow" aria-hidden="true">→</div>
   <div class="semantic-system-node" role="listitem">
     <h3>3) metasalmon</h3>
-    <p>Run quality and validation checks before intake.</p>
+    <p>Create, review, and validate the package before intake.</p>
     <a href="../../tools.qmd">Open tools page</a>
   </div>
   <div class="semantic-system-arrow" aria-hidden="true">→</div>
   <div class="semantic-system-node" role="listitem">
-    <h3>4) Salmon Data GPT (optional)</h3>
-    <p>Draft mappings and package metadata faster.</p>
+    <h3>4) Guided review (optional)</h3>
+    <p>Use SMN-GPT or another constrained assistant for ambiguity triage after the package exists.</p>
     <a href="ontology-data-package-gpt.qmd">See package-first intake guidance</a>
   </div>
   <div class="semantic-system-arrow" aria-hidden="true">→</div>
@@ -86,6 +86,6 @@ The diagram is conceptual. The current canonical layout groups metadata files un
 
 - [Start my FSAR intake path](../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd)
 - [FSAR Data Standardization Workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd)
-- [Salmon data package + SPSR intake path](ontology-data-package-gpt.qmd)
+- [Salmon data package + guided review + SPSR intake path](ontology-data-package-gpt.qmd)
 - [CU/composite escapement estimates for package-first SPSR intake](../../cookbook/cu-composite-escapement-estimates.qmd)
 - [The Semantic Salmon Data Ecosystem (deeper architecture)](semantic-salmon-data-ecosystem.qmd)

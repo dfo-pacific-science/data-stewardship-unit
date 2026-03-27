@@ -10,7 +10,7 @@ format:
 
 # Overview
 
-The **Semantic Salmon Data Ecosystem** (Salmon Data Integration System) connects standards, ontology terms, package metadata, validation tooling, and operational upload pathways so salmon data can move from local analysis into reusable systems.
+The **Semantic Salmon Data Ecosystem** (Salmon Data Integration System) connects standards, ontology terms, package metadata, validation tooling, optional guided review, and operational upload pathways so salmon data can move from local analysis into reusable systems.
 
 ```{=html}
 <div class="status-badge-row">
@@ -27,8 +27,8 @@ The **Semantic Salmon Data Ecosystem** (Salmon Data Integration System) connects
   <ol>
     <li><strong>DFO Salmon Ontology</strong> — canonical semantics</li>
     <li><strong>Salmon data package</strong> — canonical package structure</li>
-    <li><strong>metasalmon</strong> — validation and quality control</li>
-    <li><strong>Salmon Data GPT</strong> — optional drafting/acceleration assistant</li>
+    <li><strong>metasalmon</strong> — package creation, review, and quality control</li>
+    <li><strong>Guided review (optional)</strong> — SMN-GPT or another constrained assistant for ambiguity triage</li>
     <li><strong>SPSR</strong> — package-first operational intake path</li>
   </ol>
   <p><a href="semantic-salmon-system.qmd">Open the branded start page for this full path</a>.</p>
@@ -39,9 +39,9 @@ At a high level, the ecosystem has five working parts:
 
 1. **DFO Salmon Ontology** — canonical terms and semantics
 2. **Salmon data package (SDP)** — structured metadata packaging
-3. **Validation tooling (metasalmon, related checks)** — quality control
+3. **metasalmon and related checks** — package creation, review, and validation
 4. **SPSR (Salmon Population Summary Repository)** — intake and operational publishing path for many FSAR workflows
-5. **Salmon Data GPT / guided assistants (optional)** — acceleration layer for drafting mappings and metadata
+5. **Guided review tools (optional)** — acceleration layer for ambiguity triage after a package exists
 
 # 1. DFO Salmon Ontology (canonical semantic layer)
 
@@ -70,9 +70,14 @@ my-salmon-data-package/
 
 Spec reference: [Salmon data package specification](salmon-data-exchange-package.qmd) (canonical markdown: <https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md>)
 
-# 3. Validation tooling (quality layer)
+# 3. metasalmon + validation tooling (quality layer)
 
-Validation tooling checks package structure and semantic consistency before submission.
+`metasalmon` is the maintained package workflow for creating, reviewing, and validating Salmon Data Packages.
+
+Use the package docs when you need the actual workflow:
+
+- [metasalmon 5-Minute Quickstart](https://dfo-pacific-science.github.io/metasalmon/articles/metasalmon.html)
+- [metasalmon Publishing Data Packages](https://dfo-pacific-science.github.io/metasalmon/articles/data-dictionary-publication.html)
 
 Typical checks include:
 
@@ -97,17 +102,18 @@ Current working direction:
 - derive wizard or bulk upload files from the same package
 - support route-scoped intake beginning with **CU/composite**, **SMU**, and **Population**
 
-# 5. Guided assistants (optional acceleration)
+# 5. Guided review (optional acceleration)
 
-Assistant tools can help draft mappings and package metadata, but they do not replace validation or governance. They are best used as **drafting aids**.
+Assistant tools can help review a package, draft mappings, and triage possible ontology gaps, but they do not replace validation or governance. They are best used as **constrained review aids after the package exists**, not as a second source of truth.
 
 # 6. End-to-end flow
 
 1. Map terms to ontology IRIs
-2. Build salmon data package metadata in `metadata/`
-3. Validate package
-4. Generate the appropriate SPSR route-scoped upload from the package
-5. Iterate from validation or reviewer feedback
+2. Build a salmon data package
+3. Review + validate the package with `metasalmon`
+4. Use guided review only for ambiguity triage or candidate term proposals when needed
+5. Generate the appropriate SPSR route-scoped upload from the package
+6. Iterate from validation or reviewer feedback
 
 # 7. Why this matters
 
@@ -119,7 +125,7 @@ Assistant tools can help draft mappings and package metadata, but they do not re
 
 # 8. Suggested next reads
 
-- [Salmon data package + SPSR intake path](ontology-data-package-gpt.qmd)
+- [Salmon data package + guided review + SPSR intake path](ontology-data-package-gpt.qmd)
 - [FSAR to SPSR: End-to-End Example](../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd)
 - [CU/composite escapement estimates for package-first SPSR intake](../../cookbook/cu-composite-escapement-estimates.qmd)
 - [IRI and Identifier Policy](iri-identifier-policy.qmd)

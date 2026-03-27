@@ -2,6 +2,13 @@
 
 This folder is a minimal, runnable starter for the salmon data package (SDP).
 
+For the maintained package creation, review, and validation workflow, prefer the `metasalmon` docs:
+
+- <https://dfo-pacific-science.github.io/metasalmon/articles/metasalmon.html>
+- <https://dfo-pacific-science.github.io/metasalmon/articles/data-dictionary-publication.html>
+
+Use this folder when you need a manual starter scaffold or want to inspect the canonical file layout directly.
+
 ## Contents
 
 - `datapackage.json` (optional helper file)

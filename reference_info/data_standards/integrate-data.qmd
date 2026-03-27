@@ -113,7 +113,7 @@ Package the integrated output with:
 - code mappings (`codes.csv`)
 - integration README (logic + assumptions)
 
-Then continue to [Salmon data package + SPSR intake path](ontology-data-package-gpt.qmd) if this dataset is moving into SPSR/FSAR workflows.
+Then continue to [Salmon data package + guided review + SPSR intake path](ontology-data-package-gpt.qmd) if this dataset is moving into SPSR/FSAR workflows.
 
 </div>
 

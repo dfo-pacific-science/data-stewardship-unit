@@ -45,7 +45,7 @@ Use this when the dataset is moving into FSAR-oriented operational workflows.
 
 Canonical guidance:
 
-- [Salmon data package + SPSR intake path](ontology-data-package-gpt.qmd)
+- [Salmon data package + guided review + SPSR intake path](ontology-data-package-gpt.qmd)
 - [FSAR Data Standardization Workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd)
 
 ### External / public release path
@@ -78,5 +78,5 @@ If your near-term publishing task is a CU/composite escapement submission, use t
 ## Next Steps
 
 - [FSAR Data Standardization Workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd)
-- [Salmon data package + SPSR intake path](ontology-data-package-gpt.qmd)
+- [Salmon data package + guided review + SPSR intake path](ontology-data-package-gpt.qmd)
 - [Publishing Data Externally](../publishing_data_externally.qmd)

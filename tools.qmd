@@ -14,7 +14,7 @@ Operational intake and exploration platform for salmon population data, includin
 - Docs hub: <https://spsr.dfo-mpo.gc.ca/documentation/>
 - Upload wizard: <https://spsr.dfo-mpo.gc.ca/wizard/1/>
 - Repo: <https://github.com/dfo-pacific-science/salmon-population-summary-repository>
-- Package-first guidance: [Salmon data package + SPSR intake path](reference_info/data_standards/ontology-data-package-gpt.qmd)
+- Package-first guidance: [Salmon data package + guided review + SPSR intake path](reference_info/data_standards/ontology-data-package-gpt.qmd)
 
 ### DFO Salmon Ontology
 
@@ -31,14 +31,24 @@ Metadata package structure used across standards and intake workflows.
 
 - Spec overview: [Salmon data package specification](reference_info/data_standards/salmon-data-exchange-package.qmd)
 - Canonical markdown spec: <https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md>
-- Intake guidance: [Salmon data package + SPSR intake path](reference_info/data_standards/ontology-data-package-gpt.qmd)
+- Intake guidance: [Salmon data package + guided review + SPSR intake path](reference_info/data_standards/ontology-data-package-gpt.qmd)
 
 ### metasalmon
 
-R-based tooling for validating and working with salmon data package metadata.
+R-based tooling for creating, reviewing, validating, and working with salmon data package metadata.
 
+- Package docs: <https://dfo-pacific-science.github.io/metasalmon/>
+- Quickstart: <https://dfo-pacific-science.github.io/metasalmon/articles/metasalmon.html>
+- Publishing/review workflow: <https://dfo-pacific-science.github.io/metasalmon/articles/data-dictionary-publication.html>
 - Hub context: [R Packages](reference_info/tools/r_packages.qmd)
-- Typical validation target: `metadata/column_dictionary.csv`
+- Preferred validation path: run package-level checks such as `metasalmon::validate_salmon_datapackage()` against the package folder, not only the dictionary in isolation
+
+### SMN-GPT / guided review layer (optional)
+
+Optional assistant-facing layer for package review, ambiguity triage, and candidate term drafting after a package already exists.
+
+- Repo: <https://github.com/dfo-pacific-science/smn-gpt>
+- Use this after the package has been created in `metasalmon`, not instead of it
 
 ## Task-focused recipes
 
