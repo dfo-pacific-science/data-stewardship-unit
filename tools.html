@@ -98,10 +98,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-semantic-system" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Semantic System</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-data-integration-system" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Data Integration System</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-semantic-system">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-data-integration-system">    
         <li>
     <a class="dropdown-item" href="./reference_info/data_standards/semantic-salmon-system.html">
  <span class="dropdown-text">Start Here</span></a>
@@ -124,6 +124,10 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="./how_to_guides/fsar-data-standardization-workflow.html">
  <span class="dropdown-text">FSAR Data Standardization Workflow</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./cookbook/cu-composite-escapement-estimates.html">
+ <span class="dropdown-text">CU/composite escapement estimates for package-first SPSR intake</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./reference_info/data_standards/standardize-data.html">
@@ -302,7 +306,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./reference_info/data_standards/semantic-salmon-system.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Semantic Salmon System — Start Here</span></a>
+ <span class="menu-text">Salmon Data Integration System — Start Here</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -313,32 +317,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference_info/ontology/formal-documentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">GC DFO Salmon Ontology</span></a>
+  <a href="https://w3id.org/gcdfo/salmon" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology reference (WIDOCO)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference_info/ontology/conventions/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ontology Conventions Guidebook</span></a>
+  <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology contributor conventions (canonical)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference_info/ontology/class-vs-skos-decision-tree.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Class vs SKOS Decision Tree</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./reference_info/ontology/request-new-term.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How to Request a New Ontology Term</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./tutorials/support_controlled_vocabs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Controlled Vocabulary Governance Workflow</span></a>
+  <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/SUBMIT_REQUESTS_README.md" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology term requests</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -481,6 +473,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Cookbook</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cookbook/cu-composite-escapement-estimates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CU/composite escapement estimates for package-first SPSR intake</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -554,7 +552,9 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#salmon-data-package-sdp" id="toc-salmon-data-package-sdp" class="nav-link" data-scroll-target="#salmon-data-package-sdp">Salmon data package (SDP)</a></li>
   <li><a href="#metasalmon" id="toc-metasalmon" class="nav-link" data-scroll-target="#metasalmon">metasalmon</a></li>
+  <li><a href="#smn-gpt-guided-review-layer-optional" id="toc-smn-gpt-guided-review-layer-optional" class="nav-link" data-scroll-target="#smn-gpt-guided-review-layer-optional">SMN-GPT / guided review layer (optional)</a></li>
   </ul></li>
+  <li><a href="#task-focused-recipes" id="toc-task-focused-recipes" class="nav-link" data-scroll-target="#task-focused-recipes">Task-focused recipes</a></li>
   <li><a href="#internal-coordination-and-support" id="toc-internal-coordination-and-support" class="nav-link" data-scroll-target="#internal-coordination-and-support">Internal coordination and support</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/tools.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/tools.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -586,18 +586,21 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="core-platforms">Core platforms</h2>
 <section id="salmon-population-summary-repository-spsr" class="level3">
 <h3 class="anchored" data-anchor-id="salmon-population-summary-repository-spsr">Salmon Population Summary Repository (SPSR)</h3>
-<p>Operational intake and exploration platform for salmon population data, including wizard-based contribution flows.</p>
+<p>Operational intake and exploration platform for salmon population data, including package-first wizard and bulk contribution flows.</p>
 <ul>
 <li>Docs hub: <a href="https://spsr.dfo-mpo.gc.ca/documentation/" class="uri">https://spsr.dfo-mpo.gc.ca/documentation/</a></li>
 <li>Upload wizard: <a href="https://spsr.dfo-mpo.gc.ca/wizard/1/" class="uri">https://spsr.dfo-mpo.gc.ca/wizard/1/</a></li>
 <li>Repo: <a href="https://github.com/dfo-pacific-science/salmon-population-summary-repository" class="uri">https://github.com/dfo-pacific-science/salmon-population-summary-repository</a></li>
+<li>Package-first guidance: <a href="./reference_info/data_standards/ontology-data-package-gpt.html">Salmon data package + guided review + SPSR intake path</a></li>
 </ul>
 </section>
 <section id="dfo-salmon-ontology" class="level3">
 <h3 class="anchored" data-anchor-id="dfo-salmon-ontology">DFO Salmon Ontology</h3>
 <p>Canonical semantic source for terms and identifiers.</p>
 <ul>
-<li>WIDOCO docs: <a href="https://w3id.org/gcdfo/salmon" class="uri">https://w3id.org/gcdfo/salmon</a></li>
+<li>Formal docs (WIDOCO): <a href="https://w3id.org/gcdfo/salmon" class="uri">https://w3id.org/gcdfo/salmon</a></li>
+<li>Contributor conventions: <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md" class="uri">https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md</a></li>
+<li>Term requests: <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/SUBMIT_REQUESTS_README.md" class="uri">https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/SUBMIT_REQUESTS_README.md</a></li>
 <li>Repo: <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology" class="uri">https://github.com/dfo-pacific-science/dfo-salmon-ontology</a></li>
 </ul>
 </section>
@@ -610,16 +613,38 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Spec overview: <a href="./reference_info/data_standards/salmon-data-exchange-package.html">Salmon data package specification</a></li>
 <li>Canonical markdown spec: <a href="https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md" class="uri">https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md</a></li>
-<li>Intake guidance: <a href="./reference_info/data_standards/ontology-data-package-gpt.html">Salmon data package + SPSR intake path</a></li>
+<li>Intake guidance: <a href="./reference_info/data_standards/ontology-data-package-gpt.html">Salmon data package + guided review + SPSR intake path</a></li>
 </ul>
 </section>
 <section id="metasalmon" class="level3">
 <h3 class="anchored" data-anchor-id="metasalmon">metasalmon</h3>
-<p>R-based tooling for validating and working with salmon data package metadata.</p>
+<p>R-based tooling for creating, reviewing, validating, and working with salmon data package metadata.</p>
 <ul>
+<li>Package docs: <a href="https://dfo-pacific-science.github.io/metasalmon/" class="uri">https://dfo-pacific-science.github.io/metasalmon/</a></li>
+<li>Quickstart: <a href="https://dfo-pacific-science.github.io/metasalmon/articles/metasalmon.html" class="uri">https://dfo-pacific-science.github.io/metasalmon/articles/metasalmon.html</a></li>
+<li>Reusing standards + finding terms: <a href="https://dfo-pacific-science.github.io/metasalmon/articles/reusing-standards-salmon-data-terms.html" class="uri">https://dfo-pacific-science.github.io/metasalmon/articles/reusing-standards-salmon-data-terms.html</a></li>
+<li>Publishing/review workflow: <a href="https://dfo-pacific-science.github.io/metasalmon/articles/data-dictionary-publication.html" class="uri">https://dfo-pacific-science.github.io/metasalmon/articles/data-dictionary-publication.html</a></li>
+<li>Post-review publication: <a href="https://dfo-pacific-science.github.io/metasalmon/articles/post-review-package-publication.html" class="uri">https://dfo-pacific-science.github.io/metasalmon/articles/post-review-package-publication.html</a></li>
 <li>Hub context: <a href="./reference_info/tools/r_packages.html">R Packages</a></li>
+<li>Preferred validation path: run package-level checks such as <code>metasalmon::validate_salmon_datapackage()</code> against the package folder, not only the dictionary in isolation</li>
 </ul>
 </section>
+<section id="smn-gpt-guided-review-layer-optional" class="level3">
+<h3 class="anchored" data-anchor-id="smn-gpt-guided-review-layer-optional">SMN-GPT / guided review layer (optional)</h3>
+<p>Optional assistant-facing layer for package review, ambiguity triage, and candidate term drafting after a package already exists.</p>
+<ul>
+<li>Repo: <a href="https://github.com/dfo-pacific-science/smn-gpt" class="uri">https://github.com/dfo-pacific-science/smn-gpt</a></li>
+<li>Use this after the package has been created in <code>metasalmon</code>, not instead of it</li>
+</ul>
+</section>
+</section>
+<section id="task-focused-recipes" class="level2">
+<h2 class="anchored" data-anchor-id="task-focused-recipes">Task-focused recipes</h2>
+<ul>
+<li><a href="./how_to_guides/fsar-data-standardization-workflow.html">FSAR Data Standardization Workflow</a></li>
+<li><a href="./how_to_guides/fsar-to-spsr-end-to-end-example.html">FSAR to SPSR: End-to-End Example</a></li>
+<li><a href="./cookbook/cu-composite-escapement-estimates.html">CU/composite escapement estimates for package-first SPSR intake</a></li>
+</ul>
 </section>
 <section id="internal-coordination-and-support" class="level2">
 <h2 class="anchored" data-anchor-id="internal-coordination-and-support">Internal coordination and support</h2>

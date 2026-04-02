@@ -98,10 +98,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-semantic-system" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Semantic System</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-data-integration-system" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Data Integration System</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-semantic-system">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-data-integration-system">    
         <li>
     <a class="dropdown-item" href="../../../reference_info/data_standards/semantic-salmon-system.html">
  <span class="dropdown-text">Start Here</span></a>
@@ -124,6 +124,10 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="../../../how_to_guides/fsar-data-standardization-workflow.html">
  <span class="dropdown-text">FSAR Data Standardization Workflow</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../cookbook/cu-composite-escapement-estimates.html">
+ <span class="dropdown-text">CU/composite escapement estimates for package-first SPSR intake</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../../reference_info/data_standards/standardize-data.html">
@@ -302,7 +306,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../reference_info/data_standards/semantic-salmon-system.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Semantic Salmon System — Start Here</span></a>
+ <span class="menu-text">Salmon Data Integration System — Start Here</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -313,32 +317,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../reference_info/ontology/formal-documentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">GC DFO Salmon Ontology</span></a>
+  <a href="https://w3id.org/gcdfo/salmon" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology reference (WIDOCO)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../reference_info/ontology/conventions/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ontology Conventions Guidebook</span></a>
+  <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology contributor conventions (canonical)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../reference_info/ontology/class-vs-skos-decision-tree.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Class vs SKOS Decision Tree</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../reference_info/ontology/request-new-term.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How to Request a New Ontology Term</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../tutorials/support_controlled_vocabs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Controlled Vocabulary Governance Workflow</span></a>
+  <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/SUBMIT_REQUESTS_README.md" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology term requests</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -481,6 +473,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Cookbook</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../cookbook/cu-composite-escapement-estimates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CU/composite escapement estimates for package-first SPSR intake</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -540,19 +538,8 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#choose-property-type-correctly" id="toc-choose-property-type-correctly" class="nav-link active" data-scroll-target="#choose-property-type-correctly">Choose property type correctly</a></li>
-  <li><a href="#required-pattern" id="toc-required-pattern" class="nav-link" data-scroll-target="#required-pattern">Required pattern</a></li>
-  <li><a href="#domainrange-guidance" id="toc-domainrange-guidance" class="nav-link" data-scroll-target="#domainrange-guidance">Domain/range guidance</a></li>
-  <li><a href="#naming-convention" id="toc-naming-convention" class="nav-link" data-scroll-target="#naming-convention">Naming convention</a></li>
-  <li><a href="#alignment-guidance" id="toc-alignment-guidance" class="nav-link" data-scroll-target="#alignment-guidance">Alignment guidance</a></li>
-  <li><a href="#template-examples" id="toc-template-examples" class="nav-link" data-scroll-target="#template-examples">Template examples</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/reference_info/ontology/conventions/owl-properties.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/reference_info/ontology/conventions/owl-properties.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -576,77 +563,13 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Derived from canonical <code>docs/CONVENTIONS.md</code> in the <code>dfo-salmon-ontology</code> repo.</p>
-</div>
-</div>
-<section id="choose-property-type-correctly" class="level2">
-<h2 class="anchored" data-anchor-id="choose-property-type-correctly">Choose property type correctly</h2>
+<p>OWL property guidance now lives in the canonical ontology conventions file.</p>
 <ul>
-<li><code>owl:ObjectProperty</code> for links to another entity</li>
-<li><code>owl:DatatypeProperty</code> for literal values (numbers, strings, dates)</li>
+<li>Conventions: <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md" class="uri">https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md</a></li>
+<li>Formal ontology docs: <a href="https://w3id.org/gcdfo/salmon" class="uri">https://w3id.org/gcdfo/salmon</a></li>
 </ul>
-</section>
-<section id="required-pattern" class="level2">
-<h2 class="anchored" data-anchor-id="required-pattern">Required pattern</h2>
-<p>For either property type:</p>
-<ul>
-<li>declaration (<code>a owl:ObjectProperty</code> or <code>a owl:DatatypeProperty</code>)</li>
-<li><code>rdfs:label "..."@en</code></li>
-<li><code>IAO:0000115 "..."@en</code></li>
-<li><code>rdfs:isDefinedBy &lt;https://w3id.org/gcdfo/salmon&gt;</code></li>
-</ul>
-<p>Optional but recommended:</p>
-<ul>
-<li><code>IAO:0000119</code>, <code>dcterms:source</code>, <code>IAO:0000112</code></li>
-</ul>
-</section>
-<section id="domainrange-guidance" class="level2">
-<h2 class="anchored" data-anchor-id="domainrange-guidance">Domain/range guidance</h2>
-<p>Use <code>rdfs:domain</code> and <code>rdfs:range</code> conservatively.</p>
-<p>Global domain/range statements propagate broadly in OWL. If a constraint is contextual rather than universal, prefer class restrictions and/or SHACL validation.</p>
-</section>
-<section id="naming-convention" class="level2">
-<h2 class="anchored" data-anchor-id="naming-convention">Naming convention</h2>
-<p>Use lowerCamelCase from the subject perspective:</p>
-<ul>
-<li><code>aboutStock</code></li>
-<li><code>usesMethod</code></li>
-<li><code>hasMember</code></li>
-</ul>
-</section>
-<section id="alignment-guidance" class="level2">
-<h2 class="anchored" data-anchor-id="alignment-guidance">Alignment guidance</h2>
-<p>Before creating a new relation, check standard relation vocabularies (e.g., RO). Prefer reuse or alignment via:</p>
-<ul>
-<li><code>rdfs:subPropertyOf</code></li>
-<li><code>owl:equivalentProperty</code></li>
-</ul>
-<p>Avoid using <code>rdfs:seeAlso</code> as a semantic alignment substitute.</p>
-</section>
-<section id="template-examples" class="level2">
-<h2 class="anchored" data-anchor-id="template-examples">Template examples</h2>
-<pre class="turtle"><code>:aboutStock a owl:ObjectProperty ;
-  rdfs:label "about stock"@en ;
-  IAO:0000115 "Links a measurement or observation to the stock it describes."@en ;
-  rdfs:isDefinedBy &lt;https://w3id.org/gcdfo/salmon&gt; .
-
-:measurementValue a owl:DatatypeProperty ;
-  rdfs:label "measurement value"@en ;
-  IAO:0000115 "The recorded numeric value for a measurement."@en ;
-  rdfs:isDefinedBy &lt;https://w3id.org/gcdfo/salmon&gt; .</code></pre>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1057,7 +980,7 @@ Note
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/reference_info/ontology/conventions/owl-properties.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/reference_info/ontology/conventions/owl-properties.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/reference_info/ontology/conventions/owl-properties.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/reference_info/ontology/conventions/owl-properties.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This site was created with <a href="https://quarto.org/">Quarto</a> and is hosted with <a href="https://pages.github.com/">GitHub Pages</a>.</p>
 </div>

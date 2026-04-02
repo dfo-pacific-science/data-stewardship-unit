@@ -100,10 +100,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-semantic-system" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Semantic System</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-data-integration-system" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Data Integration System</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-semantic-system">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-data-integration-system">    
         <li>
     <a class="dropdown-item" href="../reference_info/data_standards/semantic-salmon-system.html">
  <span class="dropdown-text">Start Here</span></a>
@@ -126,6 +126,10 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="../how_to_guides/fsar-data-standardization-workflow.html">
  <span class="dropdown-text">FSAR Data Standardization Workflow</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../cookbook/cu-composite-escapement-estimates.html">
+ <span class="dropdown-text">CU/composite escapement estimates for package-first SPSR intake</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../reference_info/data_standards/standardize-data.html">
@@ -304,7 +308,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../reference_info/data_standards/semantic-salmon-system.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Semantic Salmon System — Start Here</span></a>
+ <span class="menu-text">Salmon Data Integration System — Start Here</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -315,32 +319,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference_info/ontology/formal-documentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">GC DFO Salmon Ontology</span></a>
+  <a href="https://w3id.org/gcdfo/salmon" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology reference (WIDOCO)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference_info/ontology/conventions/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ontology Conventions Guidebook</span></a>
+  <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology contributor conventions (canonical)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference_info/ontology/class-vs-skos-decision-tree.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Class vs SKOS Decision Tree</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../reference_info/ontology/request-new-term.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How to Request a New Ontology Term</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../tutorials/support_controlled_vocabs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Controlled Vocabulary Governance Workflow</span></a>
+  <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/SUBMIT_REQUESTS_README.md" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology term requests</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -483,6 +475,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Cookbook</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cookbook/cu-composite-escapement-estimates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CU/composite escapement estimates for package-first SPSR intake</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -617,11 +615,11 @@ ul.task-list li input[type="checkbox"] {
 <p>The Community of Practice also contributed to broader documentation and coordination. We improved visibility into the salmon data landscape through the salmon wiki, which helped make systems, datasets, and practices more legible to others. We also collaborated on a functional Qualark test fishery data system with Fraser Interior Area biologists, the Quantitative Assessment Methods Section, and the Pacific Salmon Commission. That work mattered not only as a product, but as an example of cross-team, cross-organization collaboration around a concrete scientific and operational need.</p>
 <p><strong>Shared standards and semantic foundations.</strong> A second major accomplishment was building stronger semantic and technical foundations for interoperable salmon data. Late in the unit’s lifespan, we also produced a Salmon Data Integration System that brings together several stewardship elements that are often treated separately: standards, data packaging, semantic precision, abstraction layers, automation, and AI-assisted mapping.</p>
 <p>One of the most persistent problems in salmon data is not just that datasets are stored in different places or use different formats. It is that the meaning of fields is often unclear, inconsistently documented, or defined differently across datasets. Two columns can look similar and mean different things. Two fields can mean the same thing and be labeled differently. Codes can be locally understood but opaque outside the originating team. Too much context gets abstracted away from the data and held only in the minds of technicians, biologists, and research scientists. That creates friction in sharing, integration, analysis, interpretation, reporting, and decision transparency. It is a form of sociotechnical data-system debt.</p>
-<p>The <a href="https://br-johnson.github.io/salmon-data-integration-system/">Salmon Data Integration System</a> was designed to address that problem by creating a more coherent workflow for standardizing and exchanging data. It includes the <a href="https://dfo-pacific-science.github.io/dfo-salmon-ontology/">DFO salmon ontology</a> and <a href="https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/data_standards/index.html">controlled vocabularies</a>, the <a href="https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md">Salmon Data Package specification</a>, the <a href="https://dfo-pacific-science.github.io/metasalmon/"><code>metasalmon</code> R package</a>, and the <a href="https://chatgpt.com/g/g-69375eab4f608191863e8c23313a6f9f-salmon-data-standardizer">Salmon Data GPT assistant</a>. Together, these components provide a shared semantic foundation, a structured packaging model, practical helper functions, and lower-friction support for mapping and standardization.</p>
+<p>The <a href="https://br-johnson.github.io/salmon-data-integration-system/">Salmon Data Integration System</a> was designed to address that problem by creating a more coherent workflow for standardizing and exchanging data. It includes the <a href="https://dfo-pacific-science.github.io/dfo-salmon-ontology/">DFO salmon ontology</a> and <a href="https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/data_standards/index.html">controlled vocabularies</a>, the <a href="https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md">Salmon Data Package specification</a>, the <a href="https://dfo-pacific-science.github.io/metasalmon/"><code>metasalmon</code> R package</a>, and the <a href="https://github.com/dfo-pacific-science/smn-gpt"><code>smn-gpt</code> guided assistant layer</a>. Together, these components provide a shared semantic foundation, a structured packaging model, practical helper functions, and lower-friction support for mapping and standardization.</p>
 <p>The ontology and controlled vocabulary gave us a canonical set of data standards and shared definitions. The point was not to create standards for their own sake, but to provide a common reference point so that data producers could describe their data in more consistent and interoperable ways. The Salmon Data Package specification provided the structure needed for the semantic precision of the ontology and controlled vocabulary to carry through into what datasets, tables, columns, and coded values actually mean. That structure matters because some tables and columns represent compound terms, entities, or properties, and their meaning cannot be captured clearly at the dataset level alone.</p>
 <p>A key strength of the specification is that it uses plain text CSV files, making it easy to inspect, work with, and process by both humans and machines. It supports reproducible data dictionaries and can be exported into XML for the Enterprise Data Hub, making publication to internal catalogues and the Open Government Portal much less manual.</p>
 <p>The <code>metasalmon</code> package made these workflows more usable in practice. It made it easier to build Salmon Data Packages, search for semantic mappings, validate content, and perform salmon-specific wrangling tasks that are useful in day-to-day work. In other words, it helped bridge the gap between standards on paper and standards in use. It reduced the amount of handwork required to package and standardize data and made the process more approachable for people already working in R-based workflows.</p>
-<p>The Salmon Data GPT added another layer of usability. It helps users compare their columns to existing standards, determine whether fields are equivalent to someone else’s, suggest candidate mappings, and identify where new terms may need to be added to the DFO salmon data standards. It effectively lowers the entry barrier for people who are not going to read an ontology document for fun on a Tuesday. That matters. AI is not the source of truth here, but it can make the standards much more accessible and much more actionable so long as a human stays in the loop to review, validate, and refine its outputs.</p>
+<p>The guided assistant layer around <code>metasalmon</code> added another layer of usability. In current form, it is better understood as <code>smn-gpt</code> or another constrained review assistant around a package that already exists, not as a second source of truth or a replacement for the package workflow. It helps users compare their columns to existing standards, determine whether fields are equivalent to someone else’s, suggest candidate mappings, and identify where new terms may need to be added to the DFO salmon data standards. It effectively lowers the entry barrier for people who are not going to read an ontology document for fun on a Tuesday. That matters. AI is not the source of truth here, but it can make the standards much more accessible and much more actionable so long as a human stays in the loop to review, validate, and refine its outputs.</p>
 <p><strong>Real products and services.</strong> A third accomplishment was demonstrating what good stewardship looks like in real products and services.</p>
 <p>The <a href="https://github.com/dfo-pacific-science/salmon-outlook-report">Salmon Outlook Report enhancements</a> improved a key reporting workflow through a more reproducible approach. The <a href="http://ci-bc-eos-2/">Salmon Population Summary Repository</a> created a clearer home for important fisheries management and wild salmon conservation data tied to Fisheries Act fish stock provisions and Wild Salmon Policy reporting in the Canadian Science Advisory Secretariat context. The <a href="https://dfo-pacific-science.github.io/data-stewardship-unit/fads-portfolio.html#modal-project-4">Genetic Results Database</a> improved access to molecular genetics lab outputs, including genetic stock identification and parental-based tagging data, in ways that strengthened transparency, versioning, findability, accessibility, and interoperability. The <a href="https://app.fabric.microsoft.com/Redirect?action=OpenReport&amp;appId=77d0b455-d761-4543-b126-999f29b0779f&amp;reportObjectId=2cc62024-3c0a-4bb8-b161-bec67f91d906&amp;ctid=1594fdae-a1d9-4405-915d-011467234338&amp;reportPage=28134eafb5d5b2d10df5&amp;pbi_source=appShareLink&amp;portalSessionId=7a41f3f6-47b9-4943-ae12-d0998bff6ee1">Fishery Operations System Data Explorer</a> gave users an intuitive way to explore, visualize, and export commercial salmon catch data, reducing both the barrier to obtaining clear summaries of what is happening in coastal British Columbia and the data-request burden on the FOS data custodian.</p>
 <p>What matters about these examples is not only that they exist. It is that they demonstrated that standards-based, reproducible, and more interoperable approaches can actually support meaningful salmon science and management needs. These were not toy examples. They were practical demonstrations of a different way of working.</p>
@@ -663,7 +661,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="a-practical-next-step" class="level2">
 <h2 class="anchored" data-anchor-id="a-practical-next-step">A practical next step</h2>
 <p>If there is one practical thing I would encourage people to do next, it is this:</p>
-<p>Take a snippet of a database schema or a data file that your team regularly publishes, shares, or struggles to interpret. Put it into the <a href="https://chatgpt.com/g/g-69375eab4f608191863e8c23313a6f9f-salmon-data-standardizer">Salmon Data GPT</a> and ask it to standardize it. Then use that output to create your first <a href="https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md">Salmon Data Package</a>. Review what terms are already standardized, identify what is not yet covered, and propose additions to the <a href="https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/data_standards/index.html">DFO salmon data standards</a> where needed.</p>
+<p>Take a snippet of a database schema or a data file that your team regularly publishes, shares, or struggles to interpret, and use the <a href="https://dfo-pacific-science.github.io/metasalmon/articles/metasalmon.html"><code>metasalmon</code> quickstart</a> to create a review-ready package first. If you need help with ambiguous mappings or possible term gaps, bring that package or a representative sample into <a href="https://github.com/dfo-pacific-science/smn-gpt"><code>smn-gpt</code></a> or another constrained guided assistant for review. Then inspect what terms are already standardized, identify what is not yet covered, and propose additions to the <a href="https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/data_standards/index.html">DFO salmon data standards</a> where needed.</p>
 <p>That may sound like a small exercise, but it gets at the heart of the issue. It forces clarity about meaning. It creates better metadata. It improves interoperability. It helps teams build shared language around their data rather than relying on local interpretation or memory. If enough teams start doing that, even incrementally, the region will be in a much better place for exchanging and reusing salmon data.</p>
 <p>For people outside DFO, I also hope this work helps make one thing more visible: there are a lot of good people inside the department working very hard in a difficult technological, administrative, and funding environment. The barriers to sharing data well are real. The red tape is real. The lack of clarity around delivery pathways and resourcing can be very real. But the effort to improve things is also real. My hope is that the work of the Data Stewardship Unit has made it easier for internal teams to share their work outward and easier for external partners to understand and engage with that work.</p>
 <p>The last year and a half did not solve salmon data stewardship in DFO. Nothing that tidy happened. But I do think we demonstrated something important: better salmon data practice is possible, and it is most effective when it is practical, embedded, standards-aware, and built with the science rather than simply layered on top of it.</p>
@@ -676,7 +674,7 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://br-johnson.github.io/salmon-data-integration-system/">Salmon Data Integration System</a></li>
 <li><a href="https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md">Salmon Data Package specification</a></li>
 <li><a href="https://dfo-pacific-science.github.io/metasalmon/"><code>metasalmon</code> R package</a></li>
-<li><a href="https://chatgpt.com/g/g-69375eab4f608191863e8c23313a6f9f-salmon-data-standardizer">Salmon Data GPT assistant</a></li>
+<li><a href="https://github.com/dfo-pacific-science/smn-gpt"><code>smn-gpt</code> guided assistant layer</a></li>
 <li><a href="http://ci-bc-eos-2/">Salmon Population Summary Repository</a></li>
 <li><a href="https://app.fabric.microsoft.com/Redirect?action=OpenReport&amp;appId=77d0b455-d761-4543-b126-999f29b0779f&amp;reportObjectId=2cc62024-3c0a-4bb8-b161-bec67f91d906&amp;ctid=1594fdae-a1d9-4405-915d-011467234338&amp;reportPage=28134eafb5d5b2d10df5&amp;pbi_source=appShareLink&amp;portalSessionId=7a41f3f6-47b9-4943-ae12-d0998bff6ee1">Fishery Operations System Data Explorer</a></li>
 <li><a href="https://github.com/dfo-pacific-science/salmon-outlook-report">Salmon Outlook report repository</a></li>

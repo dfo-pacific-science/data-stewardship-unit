@@ -98,10 +98,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-semantic-system" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Semantic System</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-data-integration-system" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Data Integration System</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-semantic-system">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-data-integration-system">    
         <li>
     <a class="dropdown-item" href="../../../reference_info/data_standards/semantic-salmon-system.html">
  <span class="dropdown-text">Start Here</span></a>
@@ -124,6 +124,10 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="../../../how_to_guides/fsar-data-standardization-workflow.html">
  <span class="dropdown-text">FSAR Data Standardization Workflow</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../cookbook/cu-composite-escapement-estimates.html">
+ <span class="dropdown-text">CU/composite escapement estimates for package-first SPSR intake</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../../reference_info/data_standards/standardize-data.html">
@@ -302,7 +306,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../reference_info/data_standards/semantic-salmon-system.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Semantic Salmon System — Start Here</span></a>
+ <span class="menu-text">Salmon Data Integration System — Start Here</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -313,32 +317,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../reference_info/ontology/formal-documentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">GC DFO Salmon Ontology</span></a>
+  <a href="https://w3id.org/gcdfo/salmon" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology reference (WIDOCO)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../reference_info/ontology/conventions/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ontology Conventions Guidebook</span></a>
+  <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology contributor conventions (canonical)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../reference_info/ontology/class-vs-skos-decision-tree.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Class vs SKOS Decision Tree</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../reference_info/ontology/request-new-term.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How to Request a New Ontology Term</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../tutorials/support_controlled_vocabs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Controlled Vocabulary Governance Workflow</span></a>
+  <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/SUBMIT_REQUESTS_README.md" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology term requests</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -481,6 +473,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Cookbook</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../cookbook/cu-composite-escapement-estimates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CU/composite escapement estimates for package-first SPSR intake</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -540,18 +538,8 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#minimal-provenance-pattern" id="toc-minimal-provenance-pattern" class="nav-link active" data-scroll-target="#minimal-provenance-pattern">Minimal provenance pattern</a></li>
-  <li><a href="#keep-identifiers-and-codes-distinct" id="toc-keep-identifiers-and-codes-distinct" class="nav-link" data-scroll-target="#keep-identifiers-and-codes-distinct">Keep identifiers and codes distinct</a></li>
-  <li><a href="#maintenance-cadence" id="toc-maintenance-cadence" class="nav-link" data-scroll-target="#maintenance-cadence">Maintenance cadence</a></li>
-  <li><a href="#quality-checks-before-merge" id="toc-quality-checks-before-merge" class="nav-link" data-scroll-target="#quality-checks-before-merge">Quality checks before merge</a></li>
-  <li><a href="#canonical-source-links" id="toc-canonical-source-links" class="nav-link" data-scroll-target="#canonical-source-links">Canonical source links</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/reference_info/ontology/conventions/provenance-maintenance.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/reference_info/ontology/conventions/provenance-maintenance.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -575,67 +563,13 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Derived from canonical <code>docs/CONVENTIONS.md</code> in the <code>dfo-salmon-ontology</code> repo.</p>
-</div>
-</div>
-<section id="minimal-provenance-pattern" class="level2">
-<h2 class="anchored" data-anchor-id="minimal-provenance-pattern">Minimal provenance pattern</h2>
-<p>Use these fields consistently:</p>
+<p>Provenance and maintenance guidance now lives in the canonical ontology conventions file.</p>
 <ul>
-<li><code>IAO:0000115</code> — term definition text (required)</li>
-<li><code>IAO:0000119</code> — textual source/citation for definition (optional)</li>
-<li><code>dcterms:source</code> — resolvable URI for source material (optional but preferred)</li>
-<li><code>rdfs:isDefinedBy &lt;https://w3id.org/gcdfo/salmon&gt;</code> (required)</li>
-</ul>
-</section>
-<section id="keep-identifiers-and-codes-distinct" class="level2">
-<h2 class="anchored" data-anchor-id="keep-identifiers-and-codes-distinct">Keep identifiers and codes distinct</h2>
-<ul>
-<li><code>dcterms:identifier</code> = textual internal identifier (when used)</li>
-<li><code>skos:notation</code> = scheme code (typed literal)</li>
-<li>labels are human-facing and should not carry machine IDs/codes</li>
-</ul>
-</section>
-<section id="maintenance-cadence" class="level2">
-<h2 class="anchored" data-anchor-id="maintenance-cadence">Maintenance cadence</h2>
-<p>For every material ontology update:</p>
-<ol type="1">
-<li>update/add terms with required annotations</li>
-<li>validate consistency and quality checks</li>
-<li>regenerate docs/release artifacts</li>
-<li>update DSU guidebook pages if conventions changed</li>
-<li>communicate downstream impact (salmon data package templates, SPSR guidance, validators)</li>
-</ol>
-</section>
-<section id="quality-checks-before-merge" class="level2">
-<h2 class="anchored" data-anchor-id="quality-checks-before-merge">Quality checks before merge</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">required annotation fields present</label></li>
-<li><label><input type="checkbox">provenance fields are meaningful (not placeholders)</label></li>
-<li><label><input type="checkbox">no duplicate concept labels with conflicting definitions</label></li>
-<li><label><input type="checkbox">hierarchy/scheme placement reviewed</label></li>
-<li><label><input type="checkbox">release notes prepared for user-facing changes</label></li>
-</ul>
-</section>
-<section id="canonical-source-links" class="level2">
-<h2 class="anchored" data-anchor-id="canonical-source-links">Canonical source links</h2>
-<ul>
-<li>Canonical file: <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md" class="uri">https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md</a></li>
-<li>Repository root: <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology" class="uri">https://github.com/dfo-pacific-science/dfo-salmon-ontology</a></li>
+<li>Conventions: <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md" class="uri">https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md</a></li>
+<li>Term requests: <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/SUBMIT_REQUESTS_README.md" class="uri">https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/SUBMIT_REQUESTS_README.md</a></li>
 </ul>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1046,7 +980,7 @@ Note
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/reference_info/ontology/conventions/provenance-maintenance.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/reference_info/ontology/conventions/provenance-maintenance.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/reference_info/ontology/conventions/provenance-maintenance.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/reference_info/ontology/conventions/provenance-maintenance.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This site was created with <a href="https://quarto.org/">Quarto</a> and is hosted with <a href="https://pages.github.com/">GitHub Pages</a>.</p>
 </div>

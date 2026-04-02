@@ -98,10 +98,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-semantic-system" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Semantic System</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-data-integration-system" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Data Integration System</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-semantic-system">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-data-integration-system">    
         <li>
     <a class="dropdown-item" href="../reference_info/data_standards/semantic-salmon-system.html">
  <span class="dropdown-text">Start Here</span></a>
@@ -124,6 +124,10 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="../how_to_guides/fsar-data-standardization-workflow.html">
  <span class="dropdown-text">FSAR Data Standardization Workflow</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../cookbook/cu-composite-escapement-estimates.html">
+ <span class="dropdown-text">CU/composite escapement estimates for package-first SPSR intake</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../reference_info/data_standards/standardize-data.html">
@@ -302,7 +306,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../reference_info/data_standards/semantic-salmon-system.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Semantic Salmon System — Start Here</span></a>
+ <span class="menu-text">Salmon Data Integration System — Start Here</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -313,32 +317,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference_info/ontology/formal-documentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">GC DFO Salmon Ontology</span></a>
+  <a href="https://w3id.org/gcdfo/salmon" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology reference (WIDOCO)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference_info/ontology/conventions/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ontology Conventions Guidebook</span></a>
+  <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology contributor conventions (canonical)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference_info/ontology/class-vs-skos-decision-tree.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Class vs SKOS Decision Tree</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../reference_info/ontology/request-new-term.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How to Request a New Ontology Term</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../tutorials/support_controlled_vocabs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Controlled Vocabulary Governance Workflow</span></a>
+  <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/SUBMIT_REQUESTS_README.md" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology term requests</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -481,6 +473,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Cookbook</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cookbook/cu-composite-escapement-estimates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CU/composite escapement estimates for package-first SPSR intake</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -573,21 +571,24 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Task-focused recipes for recurring data stewardship workflows.</p>
+<p>These recipes are intentionally short. They point back to the canonical workflow or reference page instead of duplicating the whole topic.</p>
+<p>For CU/composite escapement work, the maintained operational cookbook now lives in the separate <code>dfo-pacific-science/cu-escapement-data-cookbook</code> repo; the page here is just the FADS hub pointer.</p>
 <section id="current-recipes" class="level2">
 <h2 class="anchored" data-anchor-id="current-recipes">Current recipes</h2>
 <ul>
-<li><a href="../reference_info/data_standards/standardize-data.html">Standardize Your Data</a></li>
-<li><a href="../reference_info/data_standards/integrate-data.html">Integrate Data</a></li>
-<li><a href="../reference_info/data_standards/publish-data.html">Publish Your Data</a></li>
-<li><a href="../how_to_guides/fsar-data-standardization-workflow.html">FSAR Data Standardization Workflow</a></li>
+<li><a href="../cookbook/cu-composite-escapement-estimates.html">CU/composite escapement estimates for package-first SPSR intake</a> — shortest path for packaging and submitting CU or CU-composite escapement data.</li>
+<li><a href="../reference_info/data_standards/standardize-data.html">Standardize Your Data</a> — short entry recipe for turning source data into a standards-aligned package.</li>
+<li><a href="../reference_info/data_standards/integrate-data.html">Integrate Data</a> — join and harmonize multiple sources with explicit semantic mapping.</li>
+<li><a href="../reference_info/data_standards/publish-data.html">Publish Your Data</a> — choose the right internal or external release path.</li>
+<li><a href="../how_to_guides/fsar-data-standardization-workflow.html">FSAR Data Standardization Workflow</a> — full end-to-end operational workflow.</li>
 </ul>
 </section>
 <section id="coming-next" class="level2">
 <h2 class="anchored" data-anchor-id="coming-next">Coming next</h2>
 <ul>
 <li>salmon data package validation troubleshooting</li>
-<li>Controlled vocabulary request walkthrough</li>
-<li>Publication checklists by data class</li>
+<li>controlled vocabulary request walkthrough</li>
+<li>publication checklists by data class</li>
 </ul>
 
 

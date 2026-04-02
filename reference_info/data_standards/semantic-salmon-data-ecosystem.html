@@ -99,10 +99,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-semantic-system" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Semantic System</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-data-integration-system" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Data Integration System</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-semantic-system">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-data-integration-system">    
         <li>
     <a class="dropdown-item" href="../../reference_info/data_standards/semantic-salmon-system.html">
  <span class="dropdown-text">Start Here</span></a>
@@ -125,6 +125,10 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="../../how_to_guides/fsar-data-standardization-workflow.html">
  <span class="dropdown-text">FSAR Data Standardization Workflow</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../cookbook/cu-composite-escapement-estimates.html">
+ <span class="dropdown-text">CU/composite escapement estimates for package-first SPSR intake</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../reference_info/data_standards/standardize-data.html">
@@ -303,7 +307,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../reference_info/data_standards/semantic-salmon-system.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Semantic Salmon System — Start Here</span></a>
+ <span class="menu-text">Salmon Data Integration System — Start Here</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -314,32 +318,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/ontology/formal-documentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">GC DFO Salmon Ontology</span></a>
+  <a href="https://w3id.org/gcdfo/salmon" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology reference (WIDOCO)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/ontology/conventions/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ontology Conventions Guidebook</span></a>
+  <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology contributor conventions (canonical)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/ontology/class-vs-skos-decision-tree.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Class vs SKOS Decision Tree</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../reference_info/ontology/request-new-term.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How to Request a New Ontology Term</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../tutorials/support_controlled_vocabs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Controlled Vocabulary Governance Workflow</span></a>
+  <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/SUBMIT_REQUESTS_README.md" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology term requests</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -482,6 +474,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Cookbook</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../cookbook/cu-composite-escapement-estimates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CU/composite escapement estimates for package-first SPSR intake</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -552,9 +550,9 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#dfo-salmon-ontology-canonical-semantic-layer" id="toc-dfo-salmon-ontology-canonical-semantic-layer" class="nav-link" data-scroll-target="#dfo-salmon-ontology-canonical-semantic-layer"><span class="header-section-number">2</span> 1. DFO Salmon Ontology (canonical semantic layer)</a></li>
   <li><a href="#salmon-data-package-package-layer" id="toc-salmon-data-package-package-layer" class="nav-link" data-scroll-target="#salmon-data-package-package-layer"><span class="header-section-number">3</span> 2. Salmon data package (package layer)</a></li>
-  <li><a href="#validation-tooling-quality-layer" id="toc-validation-tooling-quality-layer" class="nav-link" data-scroll-target="#validation-tooling-quality-layer"><span class="header-section-number">4</span> 3. Validation tooling (quality layer)</a></li>
+  <li><a href="#metasalmon-validation-tooling-quality-layer" id="toc-metasalmon-validation-tooling-quality-layer" class="nav-link" data-scroll-target="#metasalmon-validation-tooling-quality-layer"><span class="header-section-number">4</span> 3. metasalmon + validation tooling (quality layer)</a></li>
   <li><a href="#spsr-operational-intake-layer" id="toc-spsr-operational-intake-layer" class="nav-link" data-scroll-target="#spsr-operational-intake-layer"><span class="header-section-number">5</span> 4. SPSR (operational intake layer)</a></li>
-  <li><a href="#guided-assistants-optional-acceleration" id="toc-guided-assistants-optional-acceleration" class="nav-link" data-scroll-target="#guided-assistants-optional-acceleration"><span class="header-section-number">6</span> 5. Guided assistants (optional acceleration)</a></li>
+  <li><a href="#guided-review-optional-acceleration" id="toc-guided-review-optional-acceleration" class="nav-link" data-scroll-target="#guided-review-optional-acceleration"><span class="header-section-number">6</span> 5. Guided review (optional acceleration)</a></li>
   <li><a href="#end-to-end-flow" id="toc-end-to-end-flow" class="nav-link" data-scroll-target="#end-to-end-flow"><span class="header-section-number">7</span> 6. End-to-end flow</a></li>
   <li><a href="#why-this-matters" id="toc-why-this-matters" class="nav-link" data-scroll-target="#why-this-matters"><span class="header-section-number">8</span> 7. Why this matters</a></li>
   <li><a href="#suggested-next-reads" id="toc-suggested-next-reads" class="nav-link" data-scroll-target="#suggested-next-reads"><span class="header-section-number">9</span> 8. Suggested next reads</a></li>
@@ -591,7 +589,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="overview" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Overview</h1>
-<p>The <strong>Semantic Salmon Data Ecosystem</strong> (Semantic Salmon System) connects standards, ontology terms, package metadata, validation tooling, and operational upload pathways so salmon data can move from local analysis into reusable systems.</p>
+<p>The <strong>Semantic Salmon Data Ecosystem</strong> (Salmon Data Integration System) connects standards, ontology terms, package metadata, validation tooling, optional guided review, and operational upload pathways so salmon data can move from local analysis into reusable systems.</p>
 <div class="status-badge-row">
   <span class="status-badge status-canonical">Canonical Architecture</span>
   <span class="status-badge status-active">Active Workflows</span>
@@ -602,10 +600,10 @@ ul.task-list li input[type="checkbox"] {
 <div class="semantic-entry">
   <ol>
     <li><strong>DFO Salmon Ontology</strong> — canonical semantics</li>
-    <li><strong>Salmon data package</strong> — package metadata structure</li>
-    <li><strong>metasalmon</strong> — validation and quality control</li>
-    <li><strong>Salmon Data GPT</strong> — optional drafting/acceleration assistant</li>
-    <li><strong>SPSR</strong> — operational intake path for many FSAR workflows</li>
+    <li><strong>Salmon data package</strong> — canonical package structure</li>
+    <li><strong>metasalmon</strong> — package creation, review, and quality control</li>
+    <li><strong>Guided review (optional)</strong> — SMN-GPT or another constrained assistant for ambiguity triage</li>
+    <li><strong>SPSR</strong> — package-first operational intake path</li>
   </ol>
   <p><a href="../../reference_info/data_standards/semantic-salmon-system.html">Open the branded start page for this full path</a>.</p>
 </div>
@@ -613,9 +611,9 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li><strong>DFO Salmon Ontology</strong> — canonical terms and semantics</li>
 <li><strong>Salmon data package (SDP)</strong> — structured metadata packaging</li>
-<li><strong>Validation tooling (metasalmon, related checks)</strong> — quality control</li>
+<li><strong>metasalmon and related checks</strong> — package creation, review, and validation</li>
 <li><strong>SPSR (Salmon Population Summary Repository)</strong> — intake and operational publishing path for many FSAR workflows</li>
-<li><strong>Salmon Data GPT / guided assistants (optional)</strong> — acceleration layer for drafting mappings and metadata</li>
+<li><strong>Guided review tools (optional)</strong> — acceleration layer for ambiguity triage after a package exists</li>
 </ol>
 </section>
 </section>
@@ -623,31 +621,40 @@ ul.task-list li input[type="checkbox"] {
 <h1 data-number="2"><span class="header-section-number">2</span> 1. DFO Salmon Ontology (canonical semantic layer)</h1>
 <p>The ontology provides shared definitions and persistent IRIs for key domain concepts.</p>
 <ul>
-<li>Canonical docs: <a href="../../reference_info/ontology/formal-documentation.html">GC DFO Salmon Ontology</a></li>
-<li>Contributor guidance: <a href="../../reference_info/ontology/conventions/index.html">Ontology Conventions Guidebook</a></li>
+<li>Canonical docs: <a href="https://w3id.org/gcdfo/salmon">GC DFO Salmon Ontology (WIDOCO)</a></li>
+<li>Contributor conventions: <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md">dfo-salmon-ontology/docs/CONVENTIONS.md</a></li>
 </ul>
 </section>
 <section id="salmon-data-package-package-layer" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> 2. Salmon data package (package layer)</h1>
 <p>The salmon data package standardizes package metadata without forcing one rigid dataset schema.</p>
-<p>Core files:</p>
-<ul>
-<li><code>dataset.csv</code></li>
-<li><code>tables.csv</code></li>
-<li><code>column_dictionary.csv</code></li>
-<li><code>codes.csv</code> (when controlled values apply)</li>
-</ul>
+<p>Canonical layout:</p>
+<pre class="text"><code>my-salmon-data-package/
+├── datapackage.json          # optional
+├── metadata/
+│   ├── dataset.csv
+│   ├── tables.csv
+│   ├── column_dictionary.csv
+│   └── codes.csv             # optional
+└── data/
+    └── *.csv</code></pre>
 <p>Spec reference: <a href="../../reference_info/data_standards/salmon-data-exchange-package.html">Salmon data package specification</a> (canonical markdown: <a href="https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md" class="uri">https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md</a>)</p>
 </section>
-<section id="validation-tooling-quality-layer" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> 3. Validation tooling (quality layer)</h1>
-<p>Validation tooling checks package structure and semantic consistency before submission.</p>
+<section id="metasalmon-validation-tooling-quality-layer" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 3. metasalmon + validation tooling (quality layer)</h1>
+<p><code>metasalmon</code> is the maintained package workflow for creating, reviewing, and validating Salmon Data Packages.</p>
+<p>Use the package docs when you need the actual workflow:</p>
+<ul>
+<li><a href="https://dfo-pacific-science.github.io/metasalmon/articles/metasalmon.html">metasalmon 5-Minute Quickstart</a></li>
+<li><a href="https://dfo-pacific-science.github.io/metasalmon/articles/data-dictionary-publication.html">metasalmon Publishing Data Packages</a></li>
+</ul>
 <p>Typical checks include:</p>
 <ul>
-<li>required columns/files present</li>
+<li>required columns and files present</li>
 <li>value types and requiredness</li>
 <li>IRI formatting and ontology-link consistency</li>
-<li>controlled vocabulary/code-list alignment</li>
+<li>controlled vocabulary and code-list alignment</li>
+<li>provenance completeness for transformed fields</li>
 </ul>
 </section>
 <section id="spsr-operational-intake-layer" class="level1" data-number="5">
@@ -659,20 +666,26 @@ ul.task-list li input[type="checkbox"] {
 <li>Templates endpoint: <a href="https://spsr.dfo-mpo.gc.ca/download_sdp_templates" class="uri">https://spsr.dfo-mpo.gc.ca/download_sdp_templates</a></li>
 <li>Repo: <a href="https://github.com/dfo-pacific-science/salmon-population-summary-repository" class="uri">https://github.com/dfo-pacific-science/salmon-population-summary-repository</a></li>
 </ul>
-<p>This creates a practical bridge from standards work to real upload and review workflows.</p>
+<p>Current working direction:</p>
+<ul>
+<li>use a <strong>package-first</strong> route</li>
+<li>derive wizard or bulk upload files from the same package</li>
+<li>support route-scoped intake beginning with <strong>CU/composite</strong>, <strong>SMU</strong>, and <strong>Population</strong></li>
+</ul>
 </section>
-<section id="guided-assistants-optional-acceleration" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> 5. Guided assistants (optional acceleration)</h1>
-<p>Assistant tools can help draft mappings and package metadata, but they do not replace validation or governance. They are best used as <strong>drafting aids</strong>.</p>
+<section id="guided-review-optional-acceleration" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> 5. Guided review (optional acceleration)</h1>
+<p>Assistant tools can help review a package, draft mappings, and triage possible ontology gaps, but they do not replace validation or governance. They are best used as <strong>constrained review aids after the package exists</strong>, not as a second source of truth.</p>
 </section>
 <section id="end-to-end-flow" class="level1" data-number="7">
 <h1 data-number="7"><span class="header-section-number">7</span> 6. End-to-end flow</h1>
 <ol type="1">
 <li>Map terms to ontology IRIs</li>
-<li>Build salmon data package metadata</li>
-<li>Validate package</li>
-<li>Upload via SPSR workflow (for applicable FSAR datasets)</li>
-<li>Iterate from validation/reviewer feedback</li>
+<li>Build a salmon data package</li>
+<li>Review + validate the package with <code>metasalmon</code></li>
+<li>Use guided review only for ambiguity triage or candidate term proposals when needed</li>
+<li>Generate the appropriate SPSR route-scoped upload from the package</li>
+<li>Iterate from validation or reviewer feedback</li>
 </ol>
 </section>
 <section id="why-this-matters" class="level1" data-number="8">
@@ -682,15 +695,16 @@ ul.task-list li input[type="checkbox"] {
 <li>more consistent semantics across teams</li>
 <li>cleaner FSAR-to-repository pathways</li>
 <li>better machine-readability for integration and downstream analytics</li>
+<li>fewer parallel spreadsheet-only workflows drifting away from canonical metadata</li>
 </ul>
 </section>
 <section id="suggested-next-reads" class="level1" data-number="9">
 <h1 data-number="9"><span class="header-section-number">9</span> 8. Suggested next reads</h1>
 <ul>
+<li><a href="../../reference_info/data_standards/ontology-data-package-gpt.html">Salmon data package + guided review + SPSR intake path</a></li>
 <li><a href="../../how_to_guides/fsar-to-spsr-end-to-end-example.html">FSAR to SPSR: End-to-End Example</a></li>
+<li><a href="../../cookbook/cu-composite-escapement-estimates.html">CU/composite escapement estimates for package-first SPSR intake</a></li>
 <li><a href="../../reference_info/data_standards/iri-identifier-policy.html">IRI and Identifier Policy</a></li>
-<li><a href="../../reference_info/ontology/class-vs-skos-decision-tree.html">Class vs SKOS Decision Tree</a></li>
-<li><a href="../../reference_info/ontology/request-new-term.html">How to Request a New Ontology Term</a></li>
 </ul>
 
 

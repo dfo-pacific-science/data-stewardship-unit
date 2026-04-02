@@ -98,10 +98,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-semantic-system" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Semantic System</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-data-integration-system" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Data Integration System</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-semantic-system">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-data-integration-system">    
         <li>
     <a class="dropdown-item" href="../reference_info/data_standards/semantic-salmon-system.html">
  <span class="dropdown-text">Start Here</span></a>
@@ -124,6 +124,10 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="../how_to_guides/fsar-data-standardization-workflow.html">
  <span class="dropdown-text">FSAR Data Standardization Workflow</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../cookbook/cu-composite-escapement-estimates.html">
+ <span class="dropdown-text">CU/composite escapement estimates for package-first SPSR intake</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../reference_info/data_standards/standardize-data.html">
@@ -302,7 +306,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../reference_info/data_standards/semantic-salmon-system.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Semantic Salmon System — Start Here</span></a>
+ <span class="menu-text">Salmon Data Integration System — Start Here</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -313,32 +317,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference_info/ontology/formal-documentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">GC DFO Salmon Ontology</span></a>
+  <a href="https://w3id.org/gcdfo/salmon" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology reference (WIDOCO)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference_info/ontology/conventions/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ontology Conventions Guidebook</span></a>
+  <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology contributor conventions (canonical)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference_info/ontology/class-vs-skos-decision-tree.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Class vs SKOS Decision Tree</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../reference_info/ontology/request-new-term.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How to Request a New Ontology Term</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../tutorials/support_controlled_vocabs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Controlled Vocabulary Governance Workflow</span></a>
+  <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/SUBMIT_REQUESTS_README.md" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology term requests</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -481,6 +473,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Cookbook</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cookbook/cu-composite-escapement-estimates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CU/composite escapement estimates for package-first SPSR intake</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -547,6 +545,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#recent-updates" id="toc-recent-updates" class="nav-link active" data-scroll-target="#recent-updates">Recent updates</a>
   <ul class="collapse">
+  <li><a href="#cucomposite-escapement-cookbook-surfaced" id="toc-cucomposite-escapement-cookbook-surfaced" class="nav-link" data-scroll-target="#cucomposite-escapement-cookbook-surfaced">2026-03 — CU/composite escapement cookbook surfaced</a></li>
   <li><a href="#reflection-from-data-stewardship-to-data-practice" id="toc-reflection-from-data-stewardship-to-data-practice" class="nav-link" data-scroll-target="#reflection-from-data-stewardship-to-data-practice">2026-03 — Reflection: From Data Stewardship to Data Practice</a></li>
   <li><a href="#ontology-documentation-consolidation" id="toc-ontology-documentation-consolidation" class="nav-link" data-scroll-target="#ontology-documentation-consolidation">2026-02 — Ontology documentation consolidation</a></li>
   <li><a href="#fsar-workflow-alignment-for-spsr" id="toc-fsar-workflow-alignment-for-spsr" class="nav-link" data-scroll-target="#fsar-workflow-alignment-for-spsr">2026-02 — FSAR workflow alignment for SPSR</a></li>
@@ -581,6 +580,14 @@ ul.task-list li input[type="checkbox"] {
 <p>This section tracks meaningful changes to standards, workflows, and documentation.</p>
 <section id="recent-updates" class="level2">
 <h2 class="anchored" data-anchor-id="recent-updates">Recent updates</h2>
+<section id="cucomposite-escapement-cookbook-surfaced" class="level3">
+<h3 class="anchored" data-anchor-id="cucomposite-escapement-cookbook-surfaced">2026-03 — CU/composite escapement cookbook surfaced</h3>
+<ul>
+<li>added a focused recipe for <a href="../cookbook/cu-composite-escapement-estimates.html">CU/composite escapement estimates for package-first SPSR intake</a></li>
+<li>linked the recipe from the standards hub, tools page, workflow pages, and portfolio content</li>
+<li>kept the detailed workflow guidance canonical instead of cloning it into a separate blog post</li>
+</ul>
+</section>
 <section id="reflection-from-data-stewardship-to-data-practice" class="level3">
 <h3 class="anchored" data-anchor-id="reflection-from-data-stewardship-to-data-practice">2026-03 — Reflection: From Data Stewardship to Data Practice</h3>
 <ul>
@@ -601,8 +608,8 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="fsar-workflow-alignment-for-spsr">2026-02 — FSAR workflow alignment for SPSR</h3>
 <ul>
 <li>clarified SPSR as a primary intake pathway for FSAR-oriented datasets</li>
-<li>added SPSR links in standards/workflow pages</li>
-<li>aligned package/intake guidance around salmon data package + wizard flow</li>
+<li>aligned guidance around the package-first salmon data package route</li>
+<li>updated workflow pages so wizard and bulk uploads trace back to the same package</li>
 </ul>
 </section>
 </section>

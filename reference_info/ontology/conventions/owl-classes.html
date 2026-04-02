@@ -98,10 +98,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-semantic-system" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Semantic System</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-data-integration-system" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Data Integration System</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-semantic-system">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-data-integration-system">    
         <li>
     <a class="dropdown-item" href="../../../reference_info/data_standards/semantic-salmon-system.html">
  <span class="dropdown-text">Start Here</span></a>
@@ -124,6 +124,10 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="../../../how_to_guides/fsar-data-standardization-workflow.html">
  <span class="dropdown-text">FSAR Data Standardization Workflow</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../cookbook/cu-composite-escapement-estimates.html">
+ <span class="dropdown-text">CU/composite escapement estimates for package-first SPSR intake</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../../reference_info/data_standards/standardize-data.html">
@@ -302,7 +306,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../reference_info/data_standards/semantic-salmon-system.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Semantic Salmon System — Start Here</span></a>
+ <span class="menu-text">Salmon Data Integration System — Start Here</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -313,32 +317,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../reference_info/ontology/formal-documentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">GC DFO Salmon Ontology</span></a>
+  <a href="https://w3id.org/gcdfo/salmon" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology reference (WIDOCO)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../reference_info/ontology/conventions/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ontology Conventions Guidebook</span></a>
+  <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology contributor conventions (canonical)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../reference_info/ontology/class-vs-skos-decision-tree.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Class vs SKOS Decision Tree</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../reference_info/ontology/request-new-term.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How to Request a New Ontology Term</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../tutorials/support_controlled_vocabs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Controlled Vocabulary Governance Workflow</span></a>
+  <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/SUBMIT_REQUESTS_README.md" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology term requests</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -481,6 +473,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Cookbook</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../cookbook/cu-composite-escapement-estimates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CU/composite escapement estimates for package-first SPSR intake</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -540,18 +538,8 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#required-pattern" id="toc-required-pattern" class="nav-link active" data-scroll-target="#required-pattern">Required pattern</a></li>
-  <li><a href="#authoring-template" id="toc-authoring-template" class="nav-link" data-scroll-target="#authoring-template">Authoring template</a></li>
-  <li><a href="#hierarchy-guidance" id="toc-hierarchy-guidance" class="nav-link" data-scroll-target="#hierarchy-guidance">Hierarchy guidance</a></li>
-  <li><a href="#common-mistakes-to-avoid" id="toc-common-mistakes-to-avoid" class="nav-link" data-scroll-target="#common-mistakes-to-avoid">Common mistakes to avoid</a></li>
-  <li><a href="#quick-quality-checks" id="toc-quick-quality-checks" class="nav-link" data-scroll-target="#quick-quality-checks">Quick quality checks</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/reference_info/ontology/conventions/owl-classes.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/reference_info/ontology/conventions/owl-classes.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -575,72 +563,13 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Derived from canonical <code>docs/CONVENTIONS.md</code> in the <code>dfo-salmon-ontology</code> repo.</p>
-</div>
-</div>
-<section id="required-pattern" class="level2">
-<h2 class="anchored" data-anchor-id="required-pattern">Required pattern</h2>
-<p>Every class should include:</p>
+<p>OWL class guidance now lives in the canonical ontology conventions file.</p>
 <ul>
-<li><code>a owl:Class</code></li>
-<li><code>rdfs:label "..."@en</code></li>
-<li><code>IAO:0000115 "..."@en</code></li>
-<li><code>rdfs:isDefinedBy &lt;https://w3id.org/gcdfo/salmon&gt;</code></li>
-</ul>
-<p>Optional but recommended:</p>
-<ul>
-<li><code>IAO:0000119</code> (text citation)</li>
-<li><code>dcterms:source</code> (resolvable source URI)</li>
-<li><code>IAO:0000112</code> (example usage)</li>
-</ul>
-</section>
-<section id="authoring-template" class="level2">
-<h2 class="anchored" data-anchor-id="authoring-template">Authoring template</h2>
-<pre class="turtle"><code>:ConservationUnit a owl:Class ;
-  rdfs:label "Conservation Unit"@en ;
-  IAO:0000115 "A biologically meaningful salmon management unit used for conservation and assessment."@en ;
-  rdfs:isDefinedBy &lt;https://w3id.org/gcdfo/salmon&gt; ;
-  IAO:0000119 "DFO policy source text"@en ;
-  dcterms:source &lt;https://example.org/source&gt; .</code></pre>
-</section>
-<section id="hierarchy-guidance" class="level2">
-<h2 class="anchored" data-anchor-id="hierarchy-guidance">Hierarchy guidance</h2>
-<ul>
-<li>Use <code>rdfs:subClassOf</code> for true “is-a” relationships.</li>
-<li>Use <code>owl:disjointWith</code> when classes are mutually exclusive.</li>
-<li>Use <code>owl:equivalentClass</code> only when meanings are truly identical.</li>
-</ul>
-</section>
-<section id="common-mistakes-to-avoid" class="level2">
-<h2 class="anchored" data-anchor-id="common-mistakes-to-avoid">Common mistakes to avoid</h2>
-<ul>
-<li>definition repeating label without adding meaning</li>
-<li>creating duplicate classes for the same concept</li>
-<li>using instance examples as class definitions</li>
-<li>mixing SKOS concept semantics into class axioms without design intent</li>
-</ul>
-</section>
-<section id="quick-quality-checks" class="level2">
-<h2 class="anchored" data-anchor-id="quick-quality-checks">Quick quality checks</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">clear singular label</label></li>
-<li><label><input type="checkbox">non-circular definition</label></li>
-<li><label><input type="checkbox">correct parent class</label></li>
-<li><label><input type="checkbox">provenance included when available</label></li>
+<li>Conventions: <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md" class="uri">https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md</a></li>
+<li>Formal ontology docs: <a href="https://w3id.org/gcdfo/salmon" class="uri">https://w3id.org/gcdfo/salmon</a></li>
 </ul>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1051,7 +980,7 @@ Note
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/reference_info/ontology/conventions/owl-classes.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/reference_info/ontology/conventions/owl-classes.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/reference_info/ontology/conventions/owl-classes.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/reference_info/ontology/conventions/owl-classes.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This site was created with <a href="https://quarto.org/">Quarto</a> and is hosted with <a href="https://pages.github.com/">GitHub Pages</a>.</p>
 </div>

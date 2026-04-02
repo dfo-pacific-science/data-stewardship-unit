@@ -134,10 +134,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-semantic-system" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Semantic System</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-data-integration-system" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Data Integration System</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-semantic-system">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-data-integration-system">    
         <li>
     <a class="dropdown-item" href="../../reference_info/data_standards/semantic-salmon-system.html">
  <span class="dropdown-text">Start Here</span></a>
@@ -160,6 +160,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li>
     <a class="dropdown-item" href="../../how_to_guides/fsar-data-standardization-workflow.html">
  <span class="dropdown-text">FSAR Data Standardization Workflow</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../cookbook/cu-composite-escapement-estimates.html">
+ <span class="dropdown-text">CU/composite escapement estimates for package-first SPSR intake</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../reference_info/data_standards/standardize-data.html">
@@ -338,7 +342,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../reference_info/data_standards/semantic-salmon-system.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Semantic Salmon System — Start Here</span></a>
+ <span class="menu-text">Salmon Data Integration System — Start Here</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -349,32 +353,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/ontology/formal-documentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">GC DFO Salmon Ontology</span></a>
+  <a href="https://w3id.org/gcdfo/salmon" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology reference (WIDOCO)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/ontology/conventions/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ontology Conventions Guidebook</span></a>
+  <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology contributor conventions (canonical)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reference_info/ontology/class-vs-skos-decision-tree.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Class vs SKOS Decision Tree</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../reference_info/ontology/request-new-term.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How to Request a New Ontology Term</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../tutorials/support_controlled_vocabs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Controlled Vocabulary Governance Workflow</span></a>
+  <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/SUBMIT_REQUESTS_README.md" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology term requests</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -517,6 +509,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Cookbook</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../cookbook/cu-composite-escapement-estimates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CU/composite escapement estimates for package-first SPSR intake</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -585,14 +583,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#design-goals" id="toc-design-goals" class="nav-link" data-scroll-target="#design-goals"><span class="header-section-number">2</span> Design Goals</a></li>
   <li><a href="#package-layout" id="toc-package-layout" class="nav-link" data-scroll-target="#package-layout"><span class="header-section-number">3</span> Package Layout</a></li>
   <li><a href="#identifiers-and-conventions" id="toc-identifiers-and-conventions" class="nav-link" data-scroll-target="#identifiers-and-conventions"><span class="header-section-number">4</span> Identifiers and Conventions</a></li>
-  <li><a href="#dataset.csv-schema" id="toc-dataset.csv-schema" class="nav-link" data-scroll-target="#dataset.csv-schema"><span class="header-section-number">5</span> <code>dataset.csv</code> Schema</a></li>
-  <li><a href="#tables.csv-schema" id="toc-tables.csv-schema" class="nav-link" data-scroll-target="#tables.csv-schema"><span class="header-section-number">6</span> <code>tables.csv</code> Schema</a></li>
-  <li><a href="#column_dictionary.csv-schema" id="toc-column_dictionary.csv-schema" class="nav-link" data-scroll-target="#column_dictionary.csv-schema"><span class="header-section-number">7</span> <code>column_dictionary.csv</code> Schema</a></li>
-  <li><a href="#codes.csv-schema" id="toc-codes.csv-schema" class="nav-link" data-scroll-target="#codes.csv-schema"><span class="header-section-number">8</span> <code>codes.csv</code> Schema</a></li>
-  <li><a href="#relationship-to-ontology-r-package-and-gpt" id="toc-relationship-to-ontology-r-package-and-gpt" class="nav-link" data-scroll-target="#relationship-to-ontology-r-package-and-gpt"><span class="header-section-number">9</span> Relationship to Ontology, R Package, and GPT</a></li>
-  <li><a href="#validation-workflow" id="toc-validation-workflow" class="nav-link" data-scroll-target="#validation-workflow"><span class="header-section-number">10</span> Validation Workflow</a></li>
-  <li><a href="#versioning-and-backwards-compatibility" id="toc-versioning-and-backwards-compatibility" class="nav-link" data-scroll-target="#versioning-and-backwards-compatibility"><span class="header-section-number">11</span> Versioning and Backwards Compatibility</a></li>
-  <li><a href="#implementation-notes" id="toc-implementation-notes" class="nav-link" data-scroll-target="#implementation-notes"><span class="header-section-number">12</span> Implementation Notes</a></li>
+  <li><a href="#metadatadataset.csv-schema" id="toc-metadatadataset.csv-schema" class="nav-link" data-scroll-target="#metadatadataset.csv-schema"><span class="header-section-number">5</span> <code>metadata/dataset.csv</code> Schema</a></li>
+  <li><a href="#metadatatables.csv-schema" id="toc-metadatatables.csv-schema" class="nav-link" data-scroll-target="#metadatatables.csv-schema"><span class="header-section-number">6</span> <code>metadata/tables.csv</code> Schema</a></li>
+  <li><a href="#metadatacolumn_dictionary.csv-schema" id="toc-metadatacolumn_dictionary.csv-schema" class="nav-link" data-scroll-target="#metadatacolumn_dictionary.csv-schema"><span class="header-section-number">7</span> <code>metadata/column_dictionary.csv</code> Schema</a></li>
+  <li><a href="#metadatacodes.csv-schema" id="toc-metadatacodes.csv-schema" class="nav-link" data-scroll-target="#metadatacodes.csv-schema"><span class="header-section-number">8</span> <code>metadata/codes.csv</code> Schema</a></li>
+  <li><a href="#relationship-to-spsr-intake" id="toc-relationship-to-spsr-intake" class="nav-link" data-scroll-target="#relationship-to-spsr-intake"><span class="header-section-number">9</span> Relationship to SPSR Intake</a></li>
+  <li><a href="#relationship-to-ontology-r-package-and-guided-assistants" id="toc-relationship-to-ontology-r-package-and-guided-assistants" class="nav-link" data-scroll-target="#relationship-to-ontology-r-package-and-guided-assistants"><span class="header-section-number">10</span> Relationship to Ontology, R Package, and Guided Assistants</a></li>
+  <li><a href="#validation-workflow" id="toc-validation-workflow" class="nav-link" data-scroll-target="#validation-workflow"><span class="header-section-number">11</span> Validation Workflow</a></li>
+  <li><a href="#versioning-and-backwards-compatibility" id="toc-versioning-and-backwards-compatibility" class="nav-link" data-scroll-target="#versioning-and-backwards-compatibility"><span class="header-section-number">12</span> Versioning and Backwards Compatibility</a></li>
+  <li><a href="#implementation-notes" id="toc-implementation-notes" class="nav-link" data-scroll-target="#implementation-notes"><span class="header-section-number">13</span> Implementation Notes</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/edit/main/reference_info/data_standards/salmon-data-exchange-package.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/blob/main/reference_info/data_standards/salmon-data-exchange-package.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -625,84 +624,117 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p><strong>Canonical markdown source:</strong> <a href="https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md" class="uri">https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md</a></p>
-<p>This page provides a DSU-hosted copy/overview. For canonical field definitions and version history, use the GitHub source above.</p>
+<p>This page provides a DSU-hosted copy and overview. For canonical field definitions and version history, use the GitHub source above.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This page is <strong>schema/reference</strong>. For the actual package creation, review, and validation workflow, use the maintained <code>metasalmon</code> docs:</p>
+<ul>
+<li><a href="https://dfo-pacific-science.github.io/metasalmon/articles/metasalmon.html">metasalmon 5-Minute Quickstart</a></li>
+<li><a href="https://dfo-pacific-science.github.io/metasalmon/articles/data-dictionary-publication.html">metasalmon Publishing Data Packages</a></li>
+</ul>
+</div>
+</div>
 <section id="overview" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Overview</h1>
 <p>The <strong>salmon data package (SDP)</strong> is a lightweight, frictionless-style specification for exchanging salmon datasets between scientists, assessment biologists, and data stewards.</p>
 <p>It is designed to:</p>
 <ul>
-<li>Be <strong>simple to adopt</strong> with Excel and CSV files.</li>
-<li>Be <strong>tool-friendly</strong> for R/Python packages and custom GPT assistants.</li>
-<li>Be <strong>ontology-aware</strong>, linking columns and codes to the <strong>DFO Salmon Ontology</strong> and related vocabularies.</li>
-<li>Be compatible with frictionless data packages and Darwin Core–style semantic layers without forcing a single rigid schema.</li>
+<li>be <strong>simple to adopt</strong> with Excel and CSV files</li>
+<li>be <strong>tool-friendly</strong> for R/Python packages and guided assistants</li>
+<li>be <strong>ontology-aware</strong>, linking columns and codes to the <strong>DFO Salmon Ontology</strong> and related vocabularies</li>
+<li>support package-first operational workflows such as SPSR intake without forcing one rigid dataset schema</li>
 </ul>
-<p>Each salmon data package instance is a small directory of CSV data files plus a set of metadata CSVs that describe the dataset, tables, columns, and controlled codes.</p>
+<p>Each salmon data package instance is a small directory of data files plus a set of metadata CSVs that describe the dataset, tables, columns, and controlled codes.</p>
 </section>
 <section id="design-goals" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Design Goals</h1>
 <ul>
-<li><strong>Interoperable but flexible</strong>: support multiple schemas (FSAR, SPSR-like, project-specific) while providing shared semantics via URIs.</li>
-<li><strong>FRICTIONLESS-compatible</strong>: align conceptually with frictionless/datapackage ideas so existing tooling can be reused or extended.</li>
-<li><strong>Ontology-linked</strong>: allow columns and codes to reference DFO Salmon Ontology and SKOS vocab IRIs.</li>
-<li><strong>Incremental adoption</strong>: existing tables can be wrapped in a package with minimal changes (no need to refactor everything at once).</li>
-<li><strong>Machine- and human-readable</strong>: scientists can work in spreadsheets; machines can consume the same metadata.</li>
+<li><strong>Interoperable but flexible</strong>: support multiple schemas (FSAR, SPSR-like, project-specific) while providing shared semantics via IRIs</li>
+<li><strong>FRICTIONLESS-compatible</strong>: align conceptually with frictionless and <code>datapackage.json</code> patterns so existing tooling can be reused or extended</li>
+<li><strong>Ontology-linked</strong>: allow columns and codes to reference DFO Salmon Ontology and SKOS vocab IRIs</li>
+<li><strong>Incremental adoption</strong>: existing tables can be wrapped in a package with minimal changes</li>
+<li><strong>Machine- and human-readable</strong>: scientists can work in spreadsheets; machines can consume the same metadata</li>
 </ul>
 </section>
 <section id="package-layout" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Package Layout</h1>
 <p>A salmon data package consists of:</p>
 <ul>
-<li>One <strong>root directory</strong> (e.g., <code>sdp_myproject/</code>) containing:
+<li>one <strong>root directory</strong> (for example, <code>sdp_myproject/</code>)</li>
+<li>an optional root <strong><code>datapackage.json</code></strong> for tooling that expects a frictionless-style entry file</li>
+<li>a <strong><code>metadata/</code></strong> directory containing:
 <ul>
-<li><code>dataset.csv</code> – dataset-level metadata.</li>
-<li><code>tables.csv</code> – one row per logical table.</li>
-<li><code>column_dictionary.csv</code> – one row per column in each table.</li>
-<li><code>codes.csv</code> – optional: controlled value lists and SKOS links.</li>
+<li><code>dataset.csv</code> — dataset-level metadata</li>
+<li><code>tables.csv</code> — one row per logical table</li>
+<li><code>column_dictionary.csv</code> — one row per column in each table</li>
+<li><code>codes.csv</code> — optional controlled value lists and SKOS links</li>
 </ul></li>
-<li>One or more <strong>data files</strong> (typically CSV) referenced from <code>tables.csv</code>, usually in a <code>data/</code> subdirectory.</li>
+<li>a <strong><code>data/</code></strong> directory containing one or more data tables referenced from <code>metadata/tables.csv</code></li>
 </ul>
 <p>Minimal example layout:</p>
-<ul>
-<li><code>dataset.csv</code></li>
-<li><code>tables.csv</code></li>
-<li><code>column_dictionary.csv</code></li>
-<li><code>codes.csv</code> (optional for fully numeric or unconstrained columns)</li>
-<li><code>data/your_table_1.csv</code></li>
-<li><code>data/your_table_2.csv</code></li>
-<li>etc.</li>
-</ul>
+<pre class="text"><code>sdp_myproject/
+├── datapackage.json          # optional
+├── metadata/
+│   ├── dataset.csv
+│   ├── tables.csv
+│   ├── column_dictionary.csv
+│   └── codes.csv             # optional
+└── data/
+    ├── your_table_1.csv
+    └── your_table_2.csv</code></pre>
 <p>Downloadable starter assets:</p>
 <ul>
 <li><a href="examples/sdep-minimal-example.zip">Minimal salmon data package example (zip)</a></li>
 <li><a href="https://github.com/dfo-pacific-science/data-stewardship-unit/tree/main/reference_info/data_standards/examples/sdep-minimal-example">Browse example package files</a></li>
 </ul>
-<p>The salmon data package specification does <strong>not</strong> prescribe a single canonical salmon schema. Instead, it standardizes the <strong>metadata</strong> about whatever schema a project uses and ties it to ontology and vocabularies.</p>
+<p>The salmon data package specification does <strong>not</strong> prescribe a single canonical salmon schema. Instead, it standardizes the <strong>metadata</strong> about whatever schema a project uses and ties it to ontology terms and vocabularies.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Older examples that place metadata CSVs at the package root should be treated as <strong>legacy layout</strong>. Use <code>metadata/</code> + <code>data/</code> for current work.</p>
+</div>
+</div>
 </section>
 <section id="identifiers-and-conventions" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Identifiers and Conventions</h1>
 <ul>
 <li><code>dataset_id</code>
 <ul>
-<li>Short string identifier unique within your organization or project (e.g., <code>fsar_spsr_chinook_2025</code>).</li>
-<li>Used to link rows across <code>dataset.csv</code>, <code>tables.csv</code>, <code>column_dictionary.csv</code>, and <code>codes.csv</code>.</li>
+<li>Short string identifier unique within your organization or project (for example, <code>fsar_spsr_chinook_2025</code>)</li>
+<li>Used to link rows across <code>metadata/dataset.csv</code>, <code>metadata/tables.csv</code>, <code>metadata/column_dictionary.csv</code>, and <code>metadata/codes.csv</code></li>
 </ul></li>
 <li><code>table_id</code>
 <ul>
-<li>Short ID unique within a dataset (e.g., <code>cu_year_index</code>, <code>survey_events</code>).</li>
+<li>Short ID unique within a dataset (for example, <code>cu_year_index</code>, <code>survey_events</code>)</li>
 </ul></li>
 <li><code>column_name</code>
 <ul>
-<li>Exact column name as it appears in the data file (e.g., <code>TOTAL_SPAWNERS</code>, <code>run_size_total</code>).</li>
+<li>Exact column name as it appears in the data file (for example, <code>TOTAL_SPAWNERS</code>, <code>run_size_total</code>)</li>
 </ul></li>
 <li>URIs / IRIs
 <ul>
-<li>Fields such as <code>dataset_iri</code>, <code>entity_iri</code>, <code>term_iri</code>, <code>concept_scheme_iri</code>, <code>unit_iri</code> should use persistent HTTP IRIs where available (e.g., w3id for DFO Salmon Ontology terms, vocabulary concepts, and units).</li>
+<li>Fields such as <code>dataset_iri</code>, <code>entity_iri</code>, <code>term_iri</code>, <code>concept_scheme_iri</code>, and <code>unit_iri</code> should use persistent HTTP IRIs where available</li>
 </ul></li>
 </ul>
 </section>
-<section id="dataset.csv-schema" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> <code>dataset.csv</code> Schema</h1>
-<p>One row per logical dataset (often one per salmon data package directory). Can describe multiple related tables.</p>
+<section id="metadatadataset.csv-schema" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> <code>metadata/dataset.csv</code> Schema</h1>
+<p>One row per logical dataset (often one per salmon data package directory). It can describe multiple related tables.</p>
 <p>Required columns:</p>
 <table class="caption-top table">
 <colgroup>
@@ -760,7 +792,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>license</td>
 <td>string</td>
 <td>yes</td>
-<td>License name or URL (e.g., <code>CC-BY-4.0</code>).</td>
+<td>License name or URL (for example, <code>CC-BY-4.0</code>).</td>
 </tr>
 <tr class="even">
 <td>temporal_start</td>
@@ -778,13 +810,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>spatial_extent</td>
 <td>string</td>
 <td>no</td>
-<td>Textual description of spatial coverage (e.g., CUs, regions, coordinates).</td>
+<td>Textual description of spatial coverage.</td>
 </tr>
 <tr class="odd">
 <td>dataset_type</td>
 <td>string</td>
 <td>no</td>
-<td>High-level type (e.g., <code>cu_year_index</code>, <code>survey_timeseries</code>, <code>benchmark</code>).</td>
+<td>High-level type (for example, <code>cu_year_index</code>, <code>survey_timeseries</code>).</td>
 </tr>
 <tr class="even">
 <td>dataset_iri</td>
@@ -802,12 +834,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 <p>Optional additional columns (implementation-specific):</p>
 <ul>
-<li><code>provenance_note</code> – narrative about data lineage.</li>
-<li><code>created</code> / <code>modified</code> – timestamps.</li>
+<li><code>provenance_note</code> — narrative about data lineage</li>
+<li><code>created</code> / <code>modified</code> — timestamps</li>
+<li><code>spec_version</code> — package spec version tag when needed</li>
 </ul>
 </section>
-<section id="tables.csv-schema" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> <code>tables.csv</code> Schema</h1>
+<section id="metadatatables.csv-schema" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> <code>metadata/tables.csv</code> Schema</h1>
 <p>One row per table in the package.</p>
 <p>Required columns:</p>
 <table class="caption-top table">
@@ -830,19 +863,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>dataset_id</td>
 <td>string</td>
 <td>yes</td>
-<td>References <code>dataset_id</code> in <code>dataset.csv</code>.</td>
+<td>References <code>dataset_id</code> in <code>metadata/dataset.csv</code>.</td>
 </tr>
 <tr class="even">
 <td>table_id</td>
 <td>string</td>
 <td>yes</td>
-<td>Short ID for the table (e.g., <code>cu_year_index</code>).</td>
+<td>Short ID for the table (for example, <code>cu_year_index</code>).</td>
 </tr>
 <tr class="odd">
 <td>file_name</td>
 <td>string</td>
 <td>yes</td>
-<td>Relative path to the data file (e.g., <code>data/cu_year_index.csv</code>).</td>
+<td>Relative path to the data file (for example, <code>data/cu_year_index.csv</code>).</td>
 </tr>
 <tr class="even">
 <td>table_label</td>
@@ -860,7 +893,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>entity_type</td>
 <td>string</td>
 <td>no</td>
-<td>Human-readable entity type (e.g., <code>CU-year index</code>, <code>survey event</code>).</td>
+<td>Human-readable entity type (for example, <code>CU-year index</code>, <code>survey event</code>).</td>
 </tr>
 <tr class="odd">
 <td>entity_iri</td>
@@ -872,19 +905,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>primary_key</td>
 <td>string</td>
 <td>no</td>
-<td>Comma-separated list of columns forming a primary key (e.g., <code>cu_id,year</code>).</td>
+<td>Comma-separated list of columns forming a primary key.</td>
 </tr>
 </tbody>
 </table>
 <p>Notes:</p>
 <ul>
-<li><code>entity_iri</code> should reference a class in the DFO Salmon Ontology (e.g., a CU-year index class, survey event class) when available.</li>
+<li><code>entity_iri</code> should reference a class in the DFO Salmon Ontology when available.</li>
 <li><code>primary_key</code> is advisory; it guides downstream validation and graph loading.</li>
 </ul>
 </section>
-<section id="column_dictionary.csv-schema" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> <code>column_dictionary.csv</code> Schema</h1>
-<p>One row per column in each table. This is the core of how the salmon data package links data columns to ontology and vocabularies.</p>
+<section id="metadatacolumn_dictionary.csv-schema" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> <code>metadata/column_dictionary.csv</code> Schema</h1>
+<p>One row per column in each table. This is the core of how the salmon data package links data columns to ontology terms and vocabularies.</p>
 <p>Required columns:</p>
 <table class="caption-top table">
 <colgroup>
@@ -906,13 +939,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>dataset_id</td>
 <td>string</td>
 <td>yes</td>
-<td>References <code>dataset_id</code> in <code>dataset.csv</code>.</td>
+<td>References <code>dataset_id</code> in <code>metadata/dataset.csv</code>.</td>
 </tr>
 <tr class="even">
 <td>table_id</td>
 <td>string</td>
 <td>yes</td>
-<td>References <code>table_id</code> in <code>tables.csv</code>.</td>
+<td>References <code>table_id</code> in <code>metadata/tables.csv</code>.</td>
 </tr>
 <tr class="odd">
 <td>column_name</td>
@@ -942,7 +975,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>value_type</td>
 <td>string</td>
 <td>yes</td>
-<td>Basic type: <code>integer</code>, <code>double</code>, <code>string</code>, <code>boolean</code>, <code>date</code>, <code>datetime</code>.</td>
+<td>Basic type: <code>integer</code>, <code>number</code>, <code>string</code>, <code>boolean</code>, <code>date</code>, <code>datetime</code>.</td>
 </tr>
 <tr class="even">
 <td>required</td>
@@ -954,25 +987,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>unit_label</td>
 <td>string</td>
 <td>no</td>
-<td>Human-readable unit label (e.g., <code>number of fish</code>, <code>proportion</code>).</td>
+<td>Human-readable unit label (for example, <code>number of fish</code>, <code>proportion</code>).</td>
 </tr>
 <tr class="even">
 <td>unit_iri</td>
 <td>string</td>
 <td>no</td>
-<td>IRI for the unit (e.g., UCUM or other unit ontology).</td>
+<td>IRI for the unit.</td>
 </tr>
 <tr class="odd">
 <td>term_iri</td>
 <td>string</td>
 <td>no</td>
-<td>IRI for the ontology term (e.g., measurement type, dimension, concept) from the DFO Salmon Ontology.</td>
+<td>IRI for the ontology term from the DFO Salmon Ontology.</td>
 </tr>
 <tr class="even">
 <td>term_type</td>
 <td>string</td>
 <td>no</td>
-<td>Type of ontology term (e.g., <code>owl_class</code>, <code>owl_object_property</code>, <code>skos_concept</code>).</td>
+<td>Type of ontology term (for example, <code>owl_class</code>, <code>owl_object_property</code>, <code>skos_concept</code>).</td>
 </tr>
 </tbody>
 </table>
@@ -993,7 +1026,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td><code>identifier</code></td>
-<td>Keys and IDs that identify rows/entities</td>
+<td>Keys and IDs that identify rows or entities</td>
 <td><code>cu_id</code>, <code>survey_event_id</code>, <code>record_id</code></td>
 </tr>
 <tr class="even">
@@ -1013,7 +1046,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td><code>attribute</code></td>
-<td>Descriptive attributes that are not IDs/time/measurements</td>
+<td>Descriptive attributes that are not IDs, time, or measurements</td>
 <td><code>waterbody_name</code>, <code>observer_name</code>, <code>population_name</code></td>
 </tr>
 </tbody>
@@ -1021,17 +1054,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Guidance:</p>
 <ul>
 <li>Use <code>column_role = "identifier"</code> for identifiers such as <code>cu_id</code>, <code>survey_event_id</code>, <code>POP_ID</code>.</li>
-<li>Use <code>column_role = "measurement"</code> for numeric quantities (e.g., escapement, run size, exploitation rate).</li>
-<li>Use <code>column_role = "temporal"</code> for time-related columns (e.g., year, date, datetime).</li>
-<li>Use <code>column_role = "categorical"</code> for columns with controlled vocabularies or enumerated values (e.g., species, run type, status codes).</li>
-<li>Use <code>column_role = "attribute"</code> for descriptive attributes that are not identifiers, measurements, temporal, or categorical (e.g., population name, waterbody name).</li>
-<li><code>term_iri</code> should reference a term in the DFO Salmon Ontology (e.g., measurement types, dimensions, concepts) when available.</li>
-<li><code>term_type</code> indicates the type of ontology term (e.g., <code>owl_class</code> for classes, <code>owl_object_property</code> for properties, <code>skos_concept</code> for SKOS concepts).</li>
+<li>Use <code>column_role = "measurement"</code> for numeric quantities such as escapement or run size.</li>
+<li>Use <code>column_role = "temporal"</code> for time-related columns such as year or date.</li>
+<li>Use <code>column_role = "categorical"</code> for columns with controlled vocabularies or enumerated values.</li>
+<li>Use <code>column_role = "attribute"</code> for descriptive attributes that do not fit the other roles.</li>
+<li><code>term_iri</code> should reference a term in the DFO Salmon Ontology when available.</li>
+<li><code>term_type</code> indicates the type of ontology term.</li>
 </ul>
 </section>
-<section id="codes.csv-schema" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> <code>codes.csv</code> Schema</h1>
-<p>Optional file used for columns that have controlled enumerated values (status codes, methods, gear, etc.). This is where SKOS vocabularies plug in.</p>
+<section id="metadatacodes.csv-schema" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> <code>metadata/codes.csv</code> Schema</h1>
+<p>Optional file used for columns that have controlled enumerated values (status codes, methods, gear, and so on). This is where SKOS vocabularies plug in.</p>
 <p>Each row corresponds to one code value for one column.</p>
 <p>Required columns:</p>
 <table class="caption-top table">
@@ -1054,13 +1087,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>dataset_id</td>
 <td>string</td>
 <td>yes</td>
-<td>References <code>dataset_id</code> in <code>dataset.csv</code>.</td>
+<td>References <code>dataset_id</code> in <code>metadata/dataset.csv</code>.</td>
 </tr>
 <tr class="even">
 <td>table_id</td>
 <td>string</td>
 <td>yes</td>
-<td>References <code>table_id</code> in <code>tables.csv</code>.</td>
+<td>References <code>table_id</code> in <code>metadata/tables.csv</code>.</td>
 </tr>
 <tr class="odd">
 <td>column_name</td>
@@ -1072,7 +1105,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>code_value</td>
 <td>string</td>
 <td>yes</td>
-<td>Stored value in the data (e.g., <code>R</code>, <code>Y</code>, <code>G</code>, <code>critical</code>, <code>adipose_intact</code>).</td>
+<td>Stored value in the data.</td>
 </tr>
 <tr class="odd">
 <td>code_label</td>
@@ -1090,19 +1123,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>concept_scheme_iri</td>
 <td>string</td>
 <td>no</td>
-<td>IRI of the SKOS concept scheme (e.g., the DFO Salmon Status scheme).</td>
+<td>IRI of the SKOS concept scheme.</td>
 </tr>
 <tr class="even">
 <td>term_iri</td>
 <td>string</td>
 <td>no</td>
-<td>IRI of the specific ontology term (SKOS concept or other) that <code>code_value</code> represents.</td>
+<td>IRI of the specific ontology term represented by <code>code_value</code>.</td>
 </tr>
 <tr class="odd">
 <td>term_type</td>
 <td>string</td>
 <td>no</td>
-<td>Type of ontology term (e.g., <code>skos_concept</code>, <code>owl_class</code>).</td>
+<td>Type of ontology term (for example, <code>skos_concept</code>, <code>owl_class</code>).</td>
 </tr>
 </tbody>
 </table>
@@ -1111,67 +1144,97 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>code_value</code> must match exactly the values present in the data table.</li>
 <li><code>code_label</code> and <code>code_description</code> can be used to auto-generate documentation.</li>
 <li><code>concept_scheme_iri</code> identifies the SKOS concept scheme containing the controlled vocabulary.</li>
-<li><code>term_iri</code> and <code>term_type</code> enable alignment with the larger salmon ontology and SKOS vocabularies, linking each code value to its corresponding ontology term.</li>
+<li><code>term_iri</code> and <code>term_type</code> align each coded value with the broader ontology.</li>
 </ul>
 </section>
-<section id="relationship-to-ontology-r-package-and-gpt" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Relationship to Ontology, R Package, and GPT</h1>
+<section id="relationship-to-spsr-intake" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Relationship to SPSR Intake</h1>
+<p>For current operational workflows, the salmon data package is the package-first staging format for SPSR contributions.</p>
+<p>Working expectation:</p>
+<ul>
+<li>prepare one salmon data package first</li>
+<li>choose the SPSR route scope that matches the table grain</li>
+<li>derive wizard or bulk upload files from the same package</li>
+<li>keep upload files and package metadata versioned together</li>
+</ul>
+<p>Minimum route-scoped support story currently starts with:</p>
+<ul>
+<li><strong>CU/composite</strong></li>
+<li><strong>SMU</strong></li>
+<li><strong>Population</strong></li>
+</ul>
+</section>
+<section id="relationship-to-ontology-r-package-and-guided-assistants" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Relationship to Ontology, R Package, and Guided Assistants</h1>
 <ul>
 <li>The <strong>ontology</strong> defines the formal semantics for:
 <ul>
-<li>measurement types, entities, dimensions, and concepts (via <code>term_iri</code> and <code>term_type</code>),</li>
-<li>entities (<code>entity_iri</code> in <code>tables.csv</code>),</li>
-<li>concept schemes (<code>concept_scheme_iri</code> in <code>codes.csv</code>).</li>
+<li>measurement types, entities, dimensions, and concepts (via <code>term_iri</code> and <code>term_type</code>)</li>
+<li>entities (<code>entity_iri</code> in <code>metadata/tables.csv</code>)</li>
+<li>concept schemes (<code>concept_scheme_iri</code> in <code>metadata/codes.csv</code>)</li>
 </ul></li>
-<li>The <strong>R package</strong> will:
+<li>The <strong>R package</strong> can:
 <ul>
-<li>read salmon data package metadata and data files,</li>
-<li>validate packages against this specification,</li>
-<li>join in ontology/vocabulary information,</li>
-<li>help reshape data into analysis-friendly tidy formats.</li>
+<li>read salmon data package metadata and data files</li>
+<li>validate packages against this specification</li>
+<li>join in ontology and vocabulary information</li>
+<li>help reshape data into analysis-friendly formats</li>
 </ul></li>
-<li>The <strong>custom GPT</strong> will:
+<li><strong>Guided assistants</strong> can:
 <ul>
-<li>help users draft <code>column_dictionary.csv</code> and <code>codes.csv</code>,</li>
-<li>suggest ontology-aligned IRIs and term types,</li>
-<li>assist in decomposing compound terms into multiple columns with appropriate roles and IRIs,</li>
-<li>propose package structures compliant with the salmon data package specification for new projects.</li>
+<li>help users draft <code>metadata/column_dictionary.csv</code> and <code>metadata/codes.csv</code></li>
+<li>suggest ontology-aligned IRIs and term types</li>
+<li>assist in decomposing compound terms into multiple columns with appropriate roles and IRIs</li>
+<li>propose package structures compliant with the salmon data package specification</li>
 </ul></li>
 </ul>
 </section>
-<section id="validation-workflow" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> Validation Workflow</h1>
-<p>Run validation locally before publishing.</p>
-<p>Typical local workflow (R):</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(metasalmon)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>pkg_path <span class="ot">&lt;-</span> <span class="st">"path/to/salmon-data-package"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">validate_dictionary</span>(<span class="fu">file.path</span>(pkg_path, <span class="st">"column_dictionary.csv"</span>))</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">validate_semantics</span>(<span class="fu">file.path</span>(pkg_path, <span class="st">"column_dictionary.csv"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="validation-workflow" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Validation Workflow</h1>
+<p>Run validation locally before publishing or intake.</p>
+<p>Generic R path:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>metasalmon<span class="sc">::</span><span class="fu">validate_salmon_datapackage</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"path/to/salmon-data-package"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">require_iris =</span> <span class="cn">FALSE</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Use <code>require_iris = TRUE</code> when you want the pre-flight check to fail on missing measurement IRIs.</p>
+<p>If you need the maintained end-to-end review loop around this validator, use the <code>metasalmon</code> workflow docs rather than duplicating that procedure here.</p>
+<p>Project-specific helper scripts should live in the repo that owns the workflow (for example, the CU escapement cookbook), not in the FADS Open Science Hub repo.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use <code>value_type = "number"</code> for numeric measurements such as escapement counts. Older examples that say <code>double</code> should be updated before running the current validator.</p>
+</div>
+</div>
 <p>Related implementation guidance:</p>
 <ul>
 <li><a href="../../how_to_guides/fsar-data-standardization-workflow.html">FSAR Data Standardization Workflow</a></li>
-<li><a href="../../reference_info/data_standards/ontology-data-package-gpt.html">Salmon data package + SPSR intake path</a></li>
+<li><a href="../../reference_info/data_standards/ontology-data-package-gpt.html">Salmon data package + guided review + SPSR intake path</a></li>
+<li><a href="../../cookbook/cu-composite-escapement-estimates.html">CU/composite escapement estimates for package-first SPSR intake</a></li>
 </ul>
 </section>
-<section id="versioning-and-backwards-compatibility" class="level1" data-number="11">
-<h1 data-number="11"><span class="header-section-number">11</span> Versioning and Backwards Compatibility</h1>
+<section id="versioning-and-backwards-compatibility" class="level1" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span> Versioning and Backwards Compatibility</h1>
 <ul>
-<li>Include a <code>spec_version</code> field in <code>dataset.csv</code> in future iterations if needed (e.g., <code>sdp-0.1.0</code>).</li>
-<li>New columns should be added in a backwards-compatible way:
-<ul>
-<li>existing tooling must continue to work when extra columns are present.</li>
-</ul></li>
+<li>Include a <code>spec_version</code> field in <code>metadata/dataset.csv</code> when needed.</li>
+<li>New columns should be added in a backwards-compatible way.</li>
 <li>Breaking changes to required columns or semantics should bump the major version.</li>
 </ul>
 </section>
-<section id="implementation-notes" class="level1" data-number="12">
-<h1 data-number="12"><span class="header-section-number">12</span> Implementation Notes</h1>
+<section id="implementation-notes" class="level1" data-number="13">
+<h1 data-number="13"><span class="header-section-number">13</span> Implementation Notes</h1>
 <ul>
 <li>CSV files should use UTF-8 encoding and a comma delimiter by default.</li>
-<li>Dates should follow ISO 8601 where possible (e.g., <code>YYYY-MM-DD</code>); years can be encoded as integers.</li>
-<li>R and Python tooling should treat missing optional columns as <code>NA</code>/<code>null</code> without failing.</li>
-<li>The spec is intentionally minimal; domain-specific extensions (e.g., FSAR/SPSR templates) can be layered on top as recommended profiles.</li>
+<li>Dates should follow ISO 8601 where possible (for example, <code>YYYY-MM-DD</code>); years can be encoded as integers.</li>
+<li>R and Python tooling should treat missing optional columns as <code>NA</code> or <code>null</code> without failing.</li>
+<li>The specification is intentionally minimal; domain-specific extensions (for example, SPSR route profiles) can be layered on top as recommended profiles.</li>
 </ul>
 
 

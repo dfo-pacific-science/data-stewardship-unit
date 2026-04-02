@@ -98,10 +98,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-semantic-system" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Semantic System</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-data-integration-system" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Data Integration System</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-semantic-system">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-data-integration-system">    
         <li>
     <a class="dropdown-item" href="../reference_info/data_standards/semantic-salmon-system.html">
  <span class="dropdown-text">Start Here</span></a>
@@ -124,6 +124,10 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="../how_to_guides/fsar-data-standardization-workflow.html">
  <span class="dropdown-text">FSAR Data Standardization Workflow</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../cookbook/cu-composite-escapement-estimates.html">
+ <span class="dropdown-text">CU/composite escapement estimates for package-first SPSR intake</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../reference_info/data_standards/standardize-data.html">
@@ -302,7 +306,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../reference_info/data_standards/semantic-salmon-system.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Semantic Salmon System — Start Here</span></a>
+ <span class="menu-text">Salmon Data Integration System — Start Here</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -313,32 +317,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference_info/ontology/formal-documentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">GC DFO Salmon Ontology</span></a>
+  <a href="https://w3id.org/gcdfo/salmon" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology reference (WIDOCO)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference_info/ontology/conventions/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ontology Conventions Guidebook</span></a>
+  <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology contributor conventions (canonical)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference_info/ontology/class-vs-skos-decision-tree.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Class vs SKOS Decision Tree</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../reference_info/ontology/request-new-term.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How to Request a New Ontology Term</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../tutorials/support_controlled_vocabs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Controlled Vocabulary Governance Workflow</span></a>
+  <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/SUBMIT_REQUESTS_README.md" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ontology term requests</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -481,6 +473,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Cookbook</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cookbook/cu-composite-escapement-estimates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CU/composite escapement estimates for package-first SPSR intake</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -546,11 +544,11 @@ ul.task-list li input[type="checkbox"] {
    
   <ul class="collapse">
   <li><a href="#scenario" id="toc-scenario" class="nav-link active" data-scroll-target="#scenario">Scenario</a></li>
-  <li><a href="#step-1-start-with-source-data-and-assumptions" id="toc-step-1-start-with-source-data-and-assumptions" class="nav-link" data-scroll-target="#step-1-start-with-source-data-and-assumptions">Step 1 — Start with source data and assumptions</a></li>
+  <li><a href="#step-1-start-with-source-data-assumptions-and-route-scope" id="toc-step-1-start-with-source-data-assumptions-and-route-scope" class="nav-link" data-scroll-target="#step-1-start-with-source-data-assumptions-and-route-scope">Step 1 — Start with source data, assumptions, and route scope</a></li>
   <li><a href="#step-2-map-fields-to-canonical-terms" id="toc-step-2-map-fields-to-canonical-terms" class="nav-link" data-scroll-target="#step-2-map-fields-to-canonical-terms">Step 2 — Map fields to canonical terms</a></li>
-  <li><a href="#step-3-build-minimal-salmon-data-package-metadata" id="toc-step-3-build-minimal-salmon-data-package-metadata" class="nav-link" data-scroll-target="#step-3-build-minimal-salmon-data-package-metadata">Step 3 — Build minimal salmon data package metadata</a></li>
-  <li><a href="#step-4-validate-before-upload" id="toc-step-4-validate-before-upload" class="nav-link" data-scroll-target="#step-4-validate-before-upload">Step 4 — Validate before upload</a></li>
-  <li><a href="#step-5-prepare-spsr-upload-files" id="toc-step-5-prepare-spsr-upload-files" class="nav-link" data-scroll-target="#step-5-prepare-spsr-upload-files">Step 5 — Prepare SPSR upload files</a></li>
+  <li><a href="#step-3-create-the-package-with-metasalmon" id="toc-step-3-create-the-package-with-metasalmon" class="nav-link" data-scroll-target="#step-3-create-the-package-with-metasalmon">Step 3 — Create the package with metasalmon</a></li>
+  <li><a href="#step-4-finish-review-and-validation-before-upload" id="toc-step-4-finish-review-and-validation-before-upload" class="nav-link" data-scroll-target="#step-4-finish-review-and-validation-before-upload">Step 4 — Finish review and validation before upload</a></li>
+  <li><a href="#step-5-prepare-the-spsr-route-scoped-upload-from-the-package" id="toc-step-5-prepare-the-spsr-route-scoped-upload-from-the-package" class="nav-link" data-scroll-target="#step-5-prepare-the-spsr-route-scoped-upload-from-the-package">Step 5 — Prepare the SPSR route-scoped upload from the package</a></li>
   <li><a href="#step-6-submit-and-iterate" id="toc-step-6-submit-and-iterate" class="nav-link" data-scroll-target="#step-6-submit-and-iterate">Step 6 — Submit and iterate</a></li>
   <li><a href="#deliverables-checklist" id="toc-deliverables-checklist" class="nav-link" data-scroll-target="#deliverables-checklist">Deliverables checklist</a></li>
   </ul>
@@ -578,55 +576,71 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This example shows one practical path from a local FSAR dataset to an SPSR upload-ready package.</p>
+<p>This example shows one practical path from a local FSAR dataset to a package-first SPSR upload.</p>
+<p>If you want the shortest recipe for escapement data, start here: <a href="../cookbook/cu-composite-escapement-estimates.html">CU/composite escapement estimates for package-first SPSR intake</a>.</p>
 <section id="scenario" class="level2">
 <h2 class="anchored" data-anchor-id="scenario">Scenario</h2>
-<p>You have a CU-level escapement time series and supporting metadata for an FSAR update.</p>
-<p>Goal: produce a validated package and submit through SPSR wizard.</p>
+<p>You have a <strong>CU/composite escapement time series</strong> and supporting metadata for an FSAR update.</p>
+<p>Goal: produce a validated salmon data package and submit through the SPSR route that matches the data grain.</p>
+<p>The same package-first pattern also applies when the route scope is <strong>SMU</strong> or <strong>Population</strong>.</p>
 </section>
-<section id="step-1-start-with-source-data-and-assumptions" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-start-with-source-data-and-assumptions">Step 1 — Start with source data and assumptions</h2>
+<section id="step-1-start-with-source-data-assumptions-and-route-scope" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-start-with-source-data-assumptions-and-route-scope">Step 1 — Start with source data, assumptions, and route scope</h2>
 <p>Record:</p>
 <ul>
 <li>source dataset file(s)</li>
 <li>temporal scope</li>
-<li>CU/SMU scope</li>
+<li>CU, composite, SMU, or Population scope</li>
+<li>intended SPSR route scope</li>
 <li>key transformations already applied</li>
 <li>known caveats</li>
 </ul>
 </section>
 <section id="step-2-map-fields-to-canonical-terms" class="level2">
 <h2 class="anchored" data-anchor-id="step-2-map-fields-to-canonical-terms">Step 2 — Map fields to canonical terms</h2>
-<p>Use <a href="../reference_info/ontology/formal-documentation.html">GC DFO Salmon Ontology documentation</a> to map core columns to canonical IRIs.</p>
+<p>Use <a href="https://w3id.org/gcdfo/salmon">GC DFO Salmon Ontology (WIDOCO)</a> plus the <a href="https://dfo-pacific-science.github.io/metasalmon/articles/reusing-standards-salmon-data-terms.html">metasalmon reusing-standards vignette</a> to map core columns to canonical IRIs.</p>
 <p>Create a simple mapping table:</p>
 <pre class="csv"><code>source_column,standard_label,standard_term_iri
 CU_code,Conservation Unit,https://w3id.org/gcdfo/salmon#ConservationUnit
 BY,Brood Year,https://w3id.org/gcdfo/salmon#BroodYear
 Esc,Escapement,https://w3id.org/gcdfo/salmon#Escapement</code></pre>
 </section>
-<section id="step-3-build-minimal-salmon-data-package-metadata" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-build-minimal-salmon-data-package-metadata">Step 3 — Build minimal salmon data package metadata</h2>
-<p>Create:</p>
+<section id="step-3-create-the-package-with-metasalmon" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-create-the-package-with-metasalmon">Step 3 — Create the package with metasalmon</h2>
+<p>Use the current <code>metasalmon</code> docs for the actual package creation and review loop:</p>
 <ul>
-<li><code>dataset.csv</code></li>
-<li><code>tables.csv</code></li>
-<li><code>column_dictionary.csv</code></li>
-<li><code>codes.csv</code> (if categorical values are present)</li>
+<li><a href="https://dfo-pacific-science.github.io/metasalmon/articles/metasalmon.html">metasalmon 5-Minute Quickstart</a></li>
+<li><a href="https://dfo-pacific-science.github.io/metasalmon/articles/data-dictionary-publication.html">metasalmon Publishing Data Packages</a></li>
+<li><a href="https://dfo-pacific-science.github.io/metasalmon/articles/post-review-package-publication.html">metasalmon Post-review publication</a></li>
 </ul>
-<p>Reference: <a href="../reference_info/data_standards/salmon-data-exchange-package.html">Salmon data package specification</a></p>
+<p>That keeps package scaffolding, review artifacts, and package-native validation in one maintained place.</p>
+<p>If you need the normative schema details or a manual starter scaffold, use the <a href="../reference_info/data_standards/salmon-data-exchange-package.html">Salmon data package specification</a> and the <a href="../reference_info/data_standards/examples/sdep-minimal-example.zip">minimal starter package example</a>.</p>
 </section>
-<section id="step-4-validate-before-upload" class="level2">
-<h2 class="anchored" data-anchor-id="step-4-validate-before-upload">Step 4 — Validate before upload</h2>
-<p>Run local checks (structure + semantics) and fix issues before submission.</p>
-</section>
-<section id="step-5-prepare-spsr-upload-files" class="level2">
-<h2 class="anchored" data-anchor-id="step-5-prepare-spsr-upload-files">Step 5 — Prepare SPSR upload files</h2>
-<p>Confirm that your upload file(s):</p>
+<section id="step-4-finish-review-and-validation-before-upload" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-finish-review-and-validation-before-upload">Step 4 — Finish review and validation before upload</h2>
+<p>Run the <code>metasalmon</code> review loop before preparing the SPSR upload:</p>
 <ul>
-<li>use the expected column naming/profile for your intake mode</li>
-<li>include required metadata context</li>
-<li>preserve traceability to source values</li>
+<li>review <code>metadata/*.csv</code></li>
+<li>review any <code>README-review.txt</code> or <code>semantic_suggestions.csv</code> files created with the package</li>
+<li>resolve placeholders or review-marked semantic values</li>
+<li>run <code>metasalmon::validate_salmon_datapackage(pkg_path, require_iris = TRUE)</code> before deriving the upload files</li>
 </ul>
+<p>The package is the authoritative source. Do not wait until the SPSR upload step to discover missing metadata or term mismatches.</p>
+</section>
+<section id="step-5-prepare-the-spsr-route-scoped-upload-from-the-package" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-prepare-the-spsr-route-scoped-upload-from-the-package">Step 5 — Prepare the SPSR route-scoped upload from the package</h2>
+<ol type="1">
+<li>Choose the route scope that matches the table grain:
+<ul>
+<li><strong>CU/composite</strong> for CU-level or combined CU composites</li>
+<li><strong>SMU</strong> for SMU-level rollups</li>
+<li><strong>Population</strong> for population-level rows</li>
+</ul></li>
+<li>Start from the current SPSR templates: <a href="https://spsr.dfo-mpo.gc.ca/download_sdp_templates" class="uri">https://spsr.dfo-mpo.gc.ca/download_sdp_templates</a></li>
+<li>Generate or align the upload CSV(s) from the same package metadata and data.</li>
+<li>Keep the route-scoped upload file(s) versioned with the package.</li>
+<li>If the submission is a <strong>bulk upload</strong>, use the same package-first path rather than a separate spreadsheet workflow.</li>
+</ol>
 <p>SPSR resources:</p>
 <ul>
 <li>docs: <a href="https://spsr.dfo-mpo.gc.ca/documentation/" class="uri">https://spsr.dfo-mpo.gc.ca/documentation/</a></li>
@@ -637,20 +651,23 @@ Esc,Escapement,https://w3id.org/gcdfo/salmon#Escapement</code></pre>
 <section id="step-6-submit-and-iterate" class="level2">
 <h2 class="anchored" data-anchor-id="step-6-submit-and-iterate">Step 6 — Submit and iterate</h2>
 <ol type="1">
-<li>Upload through wizard.</li>
+<li>Upload through the wizard or approved bulk route.</li>
 <li>Review validation output.</li>
-<li>Correct and resubmit as needed.</li>
-<li>Record accepted version and intake date.</li>
+<li>Correct the package and regenerate upload files if needed.</li>
+<li>Resubmit until intake checks pass.</li>
+<li>Record accepted version, intake date, and route notes.</li>
 </ol>
 </section>
 <section id="deliverables-checklist" class="level2">
 <h2 class="anchored" data-anchor-id="deliverables-checklist">Deliverables checklist</h2>
 <ul class="task-list">
 <li><label><input type="checkbox">mapped field table with canonical IRIs</label></li>
-<li><label><input type="checkbox">complete minimal salmon data package metadata files</label></li>
-<li><label><input type="checkbox">validated upload file(s)</label></li>
+<li><label><input type="checkbox">complete salmon data package metadata files in <code>metadata/</code></label></li>
+<li><label><input type="checkbox">validated data table(s) in <code>data/</code></label></li>
+<li><label><input type="checkbox">selected SPSR route scope documented</label></li>
+<li><label><input type="checkbox">route-scoped upload file(s) prepared from the package</label></li>
 <li><label><input type="checkbox">SPSR submission completed</label></li>
-<li><label><input type="checkbox">version/provenance notes archived</label></li>
+<li><label><input type="checkbox">version and provenance notes archived</label></li>
 </ul>
 
 
