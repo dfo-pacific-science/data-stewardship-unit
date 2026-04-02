@@ -121,6 +121,6 @@ Then continue to [Salmon data package + guided review + SPSR intake path](ontolo
 
 ## Next Steps
 
-- [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)
+- [GC DFO Salmon Ontology (WIDOCO)](https://w3id.org/gcdfo/salmon)
 - [Salmon data package specification](salmon-data-exchange-package.qmd)
 - [FSAR workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd)

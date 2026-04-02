@@ -22,7 +22,7 @@ Current SPSR direction is **package-first**. Build one salmon data package first
 - **I need to prepare data for an FSAR** → [FSAR Data Standardization Workflow](../../how_to_guides/fsar-data-standardization-workflow.qmd)
 - **I need to submit FSAR data to SPSR** → [FSAR to SPSR: End-to-End Example](../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd) and [Salmon data package + guided review + SPSR intake path](ontology-data-package-gpt.qmd)
 - **I need a focused CU/composite escapement recipe** → [CU/composite escapement estimates for package-first SPSR intake](../../cookbook/cu-composite-escapement-estimates.qmd)
-- **I need standard terms and definitions** → [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)
+- **I need standard terms and definitions** → [GC DFO Salmon Ontology (WIDOCO)](https://w3id.org/gcdfo/salmon)
 - **I need package structure/spec details** → [Salmon data package specification](salmon-data-exchange-package.qmd)
 - **I need canonical markdown spec source** → <https://github.com/dfo-pacific-science/smn-data-pkg/blob/main/SPECIFICATION.md>
 - **I need practical identifier rules** → [IRI and Identifier Policy](iri-identifier-policy.qmd)
@@ -38,9 +38,9 @@ Current SPSR direction is **package-first**. Build one salmon data package first
   - [FSAR to SPSR: End-to-End Example](../../how_to_guides/fsar-to-spsr-end-to-end-example.qmd)
   - [CU/composite escapement estimates for package-first SPSR intake](../../cookbook/cu-composite-escapement-estimates.qmd)
 - **Ontology contributor**
-  - [Ontology Conventions Guidebook](../ontology/conventions/index.qmd)
-  - [Class vs SKOS Decision Tree](../ontology/class-vs-skos-decision-tree.qmd)
-  - [How to Request a New Ontology Term](../ontology/request-new-term.qmd)
+  - [Contributor conventions](https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md)
+  - [Formal ontology docs](https://w3id.org/gcdfo/salmon)
+  - [Term requests](https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/SUBMIT_REQUESTS_README.md)
 - **Data steward/reviewer**
   - [Salmon data package + guided review + SPSR intake path](ontology-data-package-gpt.qmd)
   - [IRI and Identifier Policy](iri-identifier-policy.qmd)
@@ -51,10 +51,9 @@ Current SPSR direction is **package-first**. Build one salmon data package first
 ### 1) Controlled vocabularies and ontology
 Use these to anchor variable meaning to shared definitions and stable IRIs.
 
-- [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)
-- [Ontology Conventions Guidebook](../ontology/conventions/index.qmd)
-- [Class vs SKOS Decision Tree](../ontology/class-vs-skos-decision-tree.qmd)
-- [How to Request a New Ontology Term](../ontology/request-new-term.qmd)
+- [GC DFO Salmon Ontology (WIDOCO)](https://w3id.org/gcdfo/salmon)
+- [Contributor conventions](https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md)
+- [Term requests](https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/SUBMIT_REQUESTS_README.md)
 
 ### 2) Package your dataset with a salmon data package
 Use salmon data package metadata files to describe your dataset, tables, columns, and controlled codes.

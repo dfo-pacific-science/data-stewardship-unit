@@ -57,8 +57,8 @@ css: styles/custom.css
     </div>
     <p class="text-muted mb-2" style="font-size: 0.9rem;">Controlled vocabularies and ontology so salmon terms, code lists, and metadata stay aligned across projects.</p>
     <div class="mt-2 d-flex justify-content-between align-items-center">
-      <a href="https://dfo-pacific-science.github.io/dfo-salmon-ontology/" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Ontology (WIDOCO)</a>
-      <a href="https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/ontology/conventions/index.html" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Contributor Guidebook</a>
+      <a href="https://w3id.org/gcdfo/salmon" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Ontology (WIDOCO)</a>
+      <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Contributor Conventions</a>
     </div>
   </div>
 </div>
@@ -86,9 +86,9 @@ css: styles/custom.css
         <li>Supports ontology-aware data packages and code lists</li>
       </ul>
       <p>
-        <a href="https://dfo-pacific-science.github.io/dfo-salmon-ontology/" target="_blank" rel="noopener noreferrer">Ontology (WIDOCO)</a>
+        <a href="https://w3id.org/gcdfo/salmon" target="_blank" rel="noopener noreferrer">Ontology (WIDOCO)</a>
         &nbsp;|&nbsp;
-        <a href="https://dfo-pacific-science.github.io/data-stewardship-unit/reference_info/ontology/conventions/index.html" target="_blank" rel="noopener noreferrer">Contributor Guidebook</a>
+        <a href="https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md" target="_blank" rel="noopener noreferrer">Contributor Conventions</a>
       </p>
       <div class="portfolio-screenshot-container">
         <img src="images/data_projects/ontology.png" alt="GC DFO Salmon Ontology homepage" class="img-fluid" style="max-width: 100%; height: auto; border-radius: 4px;">
@@ -248,8 +248,8 @@ css: styles/custom.css
     </div>
     <p class="text-muted mb-2" style="font-size: 0.9rem;">R package for ontology-aware salmon data packages with unified semantic fields and code lists.</p>
     <div class="mt-2 d-flex justify-content-between align-items-center">
-      <a href="https://dfo-pacific-science.github.io/metasalmon/" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Documentation</a>
-      <a href="https://github.com/dfo-pacific-science/metasalmon" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">GitHub Repository</a>
+      <a href="https://dfo-pacific-science.github.io/metasalmon/articles/metasalmon.html" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Quickstart</a>
+      <a href="https://dfo-pacific-science.github.io/metasalmon/articles/reusing-standards-salmon-data-terms.html" target="_blank" rel="noopener noreferrer" class="text-muted" onclick="event.stopPropagation();">Reusing Standards</a>
     </div>
   </div>
 </div>
@@ -278,8 +278,16 @@ css: styles/custom.css
         <li>Clear ontology-gap handling with proposed terms and relationships (broader/narrower or superclass)</li>
       </ul>
       <p>
-        <a href="https://dfo-pacific-science.github.io/metasalmon/" target="_blank" rel="noopener noreferrer">
-          View Package
+        <a href="https://dfo-pacific-science.github.io/metasalmon/articles/metasalmon.html" target="_blank" rel="noopener noreferrer">
+          Open Quickstart
+        </a>
+        &nbsp;|&nbsp;
+        <a href="https://dfo-pacific-science.github.io/metasalmon/articles/reusing-standards-salmon-data-terms.html" target="_blank" rel="noopener noreferrer">
+          Reusing Standards
+        </a>
+        &nbsp;|&nbsp;
+        <a href="https://dfo-pacific-science.github.io/metasalmon/articles/data-dictionary-publication.html" target="_blank" rel="noopener noreferrer">
+          Publishing Workflow
         </a>
       </p>
       <div class="portfolio-screenshot-container">

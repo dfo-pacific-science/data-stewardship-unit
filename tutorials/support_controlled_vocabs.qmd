@@ -1,99 +1,26 @@
 ---
-title: "Controlled Vocabulary Governance Workflow"
+hub_index: false
+title: "Controlled Vocabulary Governance Resources"
 format: html
 redirect_from:
   - /documentation_hub/how_to_guides/support_controlled_vocabs
 ---
 
-Use this workflow when you need to **add, revise, or align controlled terms** used in salmon datasets, salmon data package metadata, and SPSR uploads.
+The FADS Open Science Hub no longer publishes a separate local ontology-governance workflow.
 
-::: {.callout-note}
-This workflow is for **term governance**.
+Use the canonical sources instead.
 
-If you are preparing a dataset package and uploading to SPSR, use [Salmon data package + guided review + SPSR intake path](../reference_info/data_standards/ontology-data-package-gpt.qmd).
-:::
+## If you are changing the ontology
 
-## Canonical source and namespace
+- Formal ontology docs (WIDOCO): <https://w3id.org/gcdfo/salmon>
+- Contributor conventions: <https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md>
+- Term request process: <https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/SUBMIT_REQUESTS_README.md>
 
-- Canonical ontology docs: [GC DFO Salmon Ontology](../reference_info/ontology/formal-documentation.qmd)
-- Canonical contributor conventions: [Ontology Conventions Guidebook](../reference_info/ontology/conventions/index.qmd)
-- Canonical namespace: `https://w3id.org/gcdfo/salmon#`
+## If you are reusing terms in a salmon data package
 
-## Step 1 — Identify candidate terms from real data
+- Reusing standards + finding terms: <https://dfo-pacific-science.github.io/metasalmon/articles/reusing-standards-salmon-data-terms.html>
+- Quickstart: <https://dfo-pacific-science.github.io/metasalmon/articles/metasalmon.html>
+- Publishing/review workflow: <https://dfo-pacific-science.github.io/metasalmon/articles/data-dictionary-publication.html>
+- Post-review publication: <https://dfo-pacific-science.github.io/metasalmon/articles/post-review-package-publication.html>
 
-For each candidate term, capture:
-
-- proposed label
-- plain-language definition
-- where it appears (column name, code list, method field)
-- expected usage context (FSAR, SPSR wizard, reporting)
-- source/provenance reference (document, method spec, report)
-
-## Step 2 — Check existing ontology and vocabularies first
-
-Before proposing anything new:
-
-1. Search WIDOCO for exact or close matches.
-2. Check existing concept schemes and synonyms.
-3. Decide whether your candidate is:
-   - existing term (reuse as-is)
-   - synonym/label variant (add lexical support)
-   - genuinely new concept (new term needed)
-
-## Step 3 — Choose the right modeling type
-
-- Use **OWL classes/properties** for domain entities and logical relations.
-- Use **SKOS concepts** for controlled code lists and enumerations.
-- Do not model the same concept as both OWL class and SKOS concept unless there is an explicit architecture decision.
-
-## Step 4 — Prepare a term request package
-
-Minimum required fields:
-
-- preferred label
-- definition (`IAO:0000115` for OWL or `skos:definition` for SKOS)
-- provenance (`IAO:0000119` and/or `dcterms:source` when available)
-- owner/theme/module
-- example usage
-- requested placement (parent class, scheme membership, broader term)
-
-## Step 5 — Review and decision
-
-Apply a light governance check:
-
-- no duplicate meaning
-- definition is testable and non-circular
-- naming is consistent
-- aligns with competency questions and downstream workflows
-- impact on salmon data package and SPSR workflows is documented
-
-## Step 6 — Implement and publish
-
-After approval:
-
-1. Add/update ontology term(s).
-2. Regenerate ontology docs and release artifacts.
-3. Update DSU docs if contributor guidance changed.
-4. Update downstream mappings/templates as needed.
-
-## Step 7 — Sync downstream systems (including SPSR)
-
-When term changes affect intake:
-
-- update salmon data package templates (`column_dictionary.csv`, `codes.csv` examples)
-- update SPSR upload guidance and controlled-value references
-- run one end-to-end test through SPSR wizard with the updated term usage
-
-Useful SPSR references:
-
-- Repo: <https://github.com/dfo-pacific-science/salmon-population-summary-repository>
-- In-app documentation hub: <https://spsr.dfo-mpo.gc.ca/documentation/>
-- Upload wizard: <https://spsr.dfo-mpo.gc.ca/wizard/1/>
-
-## Quick checklist
-
-- [ ] Existing term reuse checked first
-- [ ] Correct OWL vs SKOS modeling choice
-- [ ] Definition + provenance complete
-- [ ] Downstream salmon data package/SPSR impacts assessed
-- [ ] Docs and examples updated
+If you're preparing an FSAR/SPSR submission, continue here: [Salmon data package + guided review + SPSR intake path](../reference_info/data_standards/ontology-data-package-gpt.qmd).

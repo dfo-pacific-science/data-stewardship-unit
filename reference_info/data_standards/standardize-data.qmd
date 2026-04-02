@@ -24,7 +24,7 @@ This page is intentionally concise. For full package details or SPSR intake rule
 ## Start here
 
 1. **Map your columns to canonical terms**
-   - Use [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd)
+   - Use [GC DFO Salmon Ontology (WIDOCO)](https://w3id.org/gcdfo/salmon) and the [metasalmon reusing-standards vignette](https://dfo-pacific-science.github.io/metasalmon/articles/reusing-standards-salmon-data-terms.html)
    - Record the **full** IRI for each mapped field
 2. **Create a salmon data package**
    - Prefer the maintained `metasalmon` workflow: [5-Minute Quickstart](https://dfo-pacific-science.github.io/metasalmon/articles/metasalmon.html) and [Publishing Data Packages](https://dfo-pacific-science.github.io/metasalmon/articles/data-dictionary-publication.html)

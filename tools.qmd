@@ -20,7 +20,9 @@ Operational intake and exploration platform for salmon population data, includin
 
 Canonical semantic source for terms and identifiers.
 
-- WIDOCO docs: <https://w3id.org/gcdfo/salmon>
+- Formal docs (WIDOCO): <https://w3id.org/gcdfo/salmon>
+- Contributor conventions: <https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md>
+- Term requests: <https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/SUBMIT_REQUESTS_README.md>
 - Repo: <https://github.com/dfo-pacific-science/dfo-salmon-ontology>
 
 ## Packaging and validation
@@ -39,7 +41,9 @@ R-based tooling for creating, reviewing, validating, and working with salmon dat
 
 - Package docs: <https://dfo-pacific-science.github.io/metasalmon/>
 - Quickstart: <https://dfo-pacific-science.github.io/metasalmon/articles/metasalmon.html>
+- Reusing standards + finding terms: <https://dfo-pacific-science.github.io/metasalmon/articles/reusing-standards-salmon-data-terms.html>
 - Publishing/review workflow: <https://dfo-pacific-science.github.io/metasalmon/articles/data-dictionary-publication.html>
+- Post-review publication: <https://dfo-pacific-science.github.io/metasalmon/articles/post-review-package-publication.html>
 - Hub context: [R Packages](reference_info/tools/r_packages.qmd)
 - Preferred validation path: run package-level checks such as `metasalmon::validate_salmon_datapackage()` against the package folder, not only the dictionary in isolation
 

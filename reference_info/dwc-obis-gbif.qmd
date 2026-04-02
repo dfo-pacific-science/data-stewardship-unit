@@ -39,7 +39,7 @@ For salmon-specific semantics in this ecosystem:
 
 Canonical ontology entry point:
 
-- [GC DFO Salmon Ontology documentation](ontology/formal-documentation.qmd)
+- [GC DFO Salmon Ontology (WIDOCO)](https://w3id.org/gcdfo/salmon)
 
 ## Example field alignment
 

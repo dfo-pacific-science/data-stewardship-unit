@@ -31,7 +31,7 @@ Record:
 
 ## Step 2 — Map fields to canonical terms
 
-Use [GC DFO Salmon Ontology documentation](../reference_info/ontology/formal-documentation.qmd) to map core columns to canonical IRIs.
+Use [GC DFO Salmon Ontology (WIDOCO)](https://w3id.org/gcdfo/salmon) plus the [metasalmon reusing-standards vignette](https://dfo-pacific-science.github.io/metasalmon/articles/reusing-standards-salmon-data-terms.html) to map core columns to canonical IRIs.
 
 Create a simple mapping table:
 
@@ -48,6 +48,7 @@ Use the current `metasalmon` docs for the actual package creation and review loo
 
 - [metasalmon 5-Minute Quickstart](https://dfo-pacific-science.github.io/metasalmon/articles/metasalmon.html)
 - [metasalmon Publishing Data Packages](https://dfo-pacific-science.github.io/metasalmon/articles/data-dictionary-publication.html)
+- [metasalmon Post-review publication](https://dfo-pacific-science.github.io/metasalmon/articles/post-review-package-publication.html)
 
 That keeps package scaffolding, review artifacts, and package-native validation in one maintained place.
 

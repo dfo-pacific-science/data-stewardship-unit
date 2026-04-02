@@ -39,7 +39,7 @@ This page is a high-level overview of the workflow. For complete package details
   <div class="semantic-system-node" role="listitem">
     <h3>1) DFO Salmon Ontology</h3>
     <p>Use canonical term definitions and IRIs.</p>
-    <a href="../ontology/formal-documentation.qmd">Open ontology docs</a>
+    <a href="https://w3id.org/gcdfo/salmon">Open ontology docs</a>
   </div>
   <div class="semantic-system-arrow" aria-hidden="true">→</div>
   <div class="semantic-system-node" role="listitem">

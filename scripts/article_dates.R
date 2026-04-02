@@ -29,6 +29,14 @@ relative_path <- function(path, root = ".") {
   if (startsWith(path_abs, prefix)) sub(prefix, "", path_abs, fixed = TRUE) else sub("^\\./", "", path)
 }
 
+include_in_hub_index <- function(meta) {
+  flag <- meta$hub_index %||% meta$show_in_hub %||% meta$show_in_index
+  if (is.null(flag)) return(TRUE)
+  if (is.logical(flag)) return(isTRUE(flag))
+  value <- tolower(as.character(flag[1]))
+  !value %in% c("false", "no", "0")
+}
+
 run_git_lines <- function(args, root = ".") {
   old <- getwd(); on.exit(setwd(old), add = TRUE); setwd(root)
   out <- tryCatch(system2("git", args = args, stdout = TRUE, stderr = FALSE), error = function(e) character())
@@ -87,12 +95,13 @@ read_time_min <- function(path) {
 
 collect_article_entries <- function(dirs = c("how_to_guides", "reference_info", "tutorials", "deep_dives", "cookbook", "blog"), root = ".") {
   files <- unlist(lapply(dirs, function(d) if (dir.exists(file.path(root, d))) list.files(file.path(root, d), pattern = "\\.qmd$", recursive = TRUE, full.names = TRUE) else character()))
-  entries <- lapply(files, function(f) {
+  entries <- Filter(Negate(is.null), lapply(files, function(f) {
     rel <- relative_path(f, root)
     meta <- read_front_matter(f)
+    if (!include_in_hub_index(meta)) return(NULL)
     d <- resolve_article_dates(f, meta, root)
     list(path = rel, href = gsub("\\.qmd$", ".html", rel), title = meta$title %||% tools::toTitleCase(gsub("-", " ", tools::file_path_sans_ext(basename(f)))), type = path_type(rel), published_date = d$published_date, updated_date = d$updated_date, published_source = d$published_source, updated_source = d$updated_source, read_time = read_time_min(f))
-  })
+  }))
   df <- do.call(rbind, lapply(entries, as.data.frame, stringsAsFactors = FALSE))
   df$published_date <- as.Date(df$published_date); df$updated_date <- as.Date(df$updated_date)
   df <- df[order(df$updated_date, df$published_date, decreasing = TRUE), ]

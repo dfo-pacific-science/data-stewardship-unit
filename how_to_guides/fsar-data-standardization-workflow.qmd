@@ -21,8 +21,8 @@ If you want a concrete walkthrough, use the companion page: [FSAR to SPSR: End-t
 
 ## Step 2 — Map columns to canonical ontology terms
 
-1. Open [GC DFO Salmon Ontology documentation](../reference_info/ontology/formal-documentation.qmd).
-2. Map core variables (CU identifiers, year fields, key measurements).
+1. Use [GC DFO Salmon Ontology (WIDOCO)](https://w3id.org/gcdfo/salmon) to find canonical terms.
+2. Use the [metasalmon reusing-standards vignette](https://dfo-pacific-science.github.io/metasalmon/articles/reusing-standards-salmon-data-terms.html) for the maintained package-side lookup and reuse workflow.
 3. Record **full** canonical IRIs for mapped terms.
 
 ## Step 3 — Create a review-ready salmon data package
@@ -31,6 +31,7 @@ For the actual package build and review loop, use the canonical `metasalmon` doc
 
 - [metasalmon 5-Minute Quickstart](https://dfo-pacific-science.github.io/metasalmon/articles/metasalmon.html)
 - [metasalmon Publishing Data Packages](https://dfo-pacific-science.github.io/metasalmon/articles/data-dictionary-publication.html)
+- [metasalmon Post-review publication](https://dfo-pacific-science.github.io/metasalmon/articles/post-review-package-publication.html)
 
 Use the generated package folder as the working FSAR artifact. If you need the normative field definitions or manual file layout, use the [salmon data package specification](../reference_info/data_standards/salmon-data-exchange-package.qmd).
 

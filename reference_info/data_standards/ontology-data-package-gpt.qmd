@@ -26,7 +26,7 @@ For the maintained package creation/review workflow, use the `metasalmon` docs:
 - [5-Minute Quickstart](https://dfo-pacific-science.github.io/metasalmon/articles/metasalmon.html)
 - [Publishing Data Packages](https://dfo-pacific-science.github.io/metasalmon/articles/data-dictionary-publication.html)
 
-If you need to propose new vocabulary terms or ontology changes, use [Controlled Vocabulary Governance Workflow](../../tutorials/support_controlled_vocabs.qmd).
+If you need to propose new vocabulary terms or ontology changes, use the canonical ontology docs: [conventions](https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md) and [term requests](https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/SUBMIT_REQUESTS_README.md).
 :::
 
 ## Quick summary
@@ -40,7 +40,7 @@ If you need to propose new vocabulary terms or ontology changes, use [Controlled
 
 ## Practical workflow
 
-1. Find canonical terms in [GC DFO Salmon Ontology documentation](../ontology/formal-documentation.qmd).
+1. Find canonical terms in [GC DFO Salmon Ontology (WIDOCO)](https://w3id.org/gcdfo/salmon) and use the [metasalmon reusing-standards vignette](https://dfo-pacific-science.github.io/metasalmon/articles/reusing-standards-salmon-data-terms.html) for the maintained lookup flow.
 2. Create the package with `metasalmon` (preferred) or assemble it manually to the specification if your project already owns that path.
 3. Review the generated package in the `metasalmon` package-native loop.
 4. Validate locally with `metasalmon::validate_salmon_datapackage(pkg_path, require_iris = TRUE)`.
@@ -58,6 +58,7 @@ For bulk uploads, use the same package-first flow. Do **not** maintain a separat
 - [Salmon data package specification](salmon-data-exchange-package.qmd)
 - [metasalmon 5-Minute Quickstart](https://dfo-pacific-science.github.io/metasalmon/articles/metasalmon.html)
 - [metasalmon Publishing Data Packages](https://dfo-pacific-science.github.io/metasalmon/articles/data-dictionary-publication.html)
+- [metasalmon Post-review publication](https://dfo-pacific-science.github.io/metasalmon/articles/post-review-package-publication.html)
 - [smn-gpt repository](https://github.com/dfo-pacific-science/smn-gpt)
 
 ## SPSR touchpoints
@@ -88,4 +89,4 @@ Before upload, confirm:
 
 - [Semantic Salmon Data Ecosystem](semantic-salmon-data-ecosystem.qmd)
 - [Salmon data package specification](salmon-data-exchange-package.qmd)
-- [Controlled Vocabulary Governance Workflow](../../tutorials/support_controlled_vocabs.qmd)
+- [Controlled vocabulary resources](../../tutorials/support_controlled_vocabs.qmd)

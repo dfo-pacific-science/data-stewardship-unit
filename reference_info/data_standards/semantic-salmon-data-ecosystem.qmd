@@ -47,8 +47,8 @@ At a high level, the ecosystem has five working parts:
 
 The ontology provides shared definitions and persistent IRIs for key domain concepts.
 
-- Canonical docs: [GC DFO Salmon Ontology](../ontology/formal-documentation.qmd)
-- Contributor guidance: [Ontology Conventions Guidebook](../ontology/conventions/index.qmd)
+- Canonical docs: [GC DFO Salmon Ontology (WIDOCO)](https://w3id.org/gcdfo/salmon)
+- Contributor conventions: [dfo-salmon-ontology/docs/CONVENTIONS.md](https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md)
 
 # 2. Salmon data package (package layer)
 

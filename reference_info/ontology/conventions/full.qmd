@@ -1,15 +1,13 @@
 ---
-title: "Full Conventions (Canonical Source)"
+hub_index: false
+title: "Full conventions (canonical source)"
+format:
+  html:
+    toc: true
 ---
 
-This site keeps a curated, user-first conventions guide.
+This topic now lives only in the canonical ontology repo.
 
-For the complete and canonical source text, use:
-
-- <https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md>
-
-Repository:
-
-- <https://github.com/dfo-pacific-science/dfo-salmon-ontology>
-
-If there is any mismatch between DSU guidebook pages and the canonical file, treat the canonical file as authoritative.
+- Full conventions: <https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md>
+- Formal ontology docs: <https://w3id.org/gcdfo/salmon>
+- Term requests: <https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/SUBMIT_REQUESTS_README.md>

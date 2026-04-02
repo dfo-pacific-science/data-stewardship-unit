@@ -1,25 +1,19 @@
 ---
-title: "Ontology Conventions Guidebook"
+hub_index: false
+title: "Ontology contributor conventions"
+format:
+  html:
+    toc: true
 ---
 
-This guidebook is the user-first conventions guide for contributors working in the GC DFO Salmon Ontology ecosystem.
+The FADS site no longer keeps a local ontology guidebook.
 
-::: {.callout-note}
-Source note: this guidebook is derived from the canonical `docs/CONVENTIONS.md` file in the [`dfo-salmon-ontology`](https://github.com/dfo-pacific-science/dfo-salmon-ontology) repository. If there is any mismatch, treat the canonical file as the source of truth.
-:::
+Use the canonical contributor docs in the ontology repo:
 
-## Start here
+- Conventions: <https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/CONVENTIONS.md>
+- Formal ontology docs: <https://w3id.org/gcdfo/salmon>
+- Term requests: <https://github.com/dfo-pacific-science/dfo-salmon-ontology/blob/main/docs/SUBMIT_REQUESTS_README.md>
 
-- [Quick reference](quick-reference.qmd)
+For package-side term lookup and reuse, use the maintained `metasalmon` vignette:
 
-## Core modeling guidance
-
-- [Schema vs data (TBox vs ABox)](schema-vs-data.qmd)
-- [OWL classes](owl-classes.qmd)
-- [OWL properties](owl-properties.qmd)
-- [SKOS vocabularies](skos-vocabularies.qmd)
-- [Provenance and maintenance](provenance-maintenance.qmd)
-
-## Full single-page version
-
-- [Full conventions (canonical source)](full.qmd)
+- <https://dfo-pacific-science.github.io/metasalmon/articles/reusing-standards-salmon-data-terms.html>
